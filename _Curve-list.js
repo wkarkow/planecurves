@@ -4683,7 +4683,7 @@ const curveList = [
     eqFind: ["r^2=", "r^2 =", "theta"],
     imgSortKey: "282",
     images: {
-      canonical: "Images/Yinyang/Yinyang01-360.avif"
+      canonical: "Images/Yinyang/YinYang01-360.avif"
     }
   }
 ];
