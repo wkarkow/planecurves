@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power Function - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Power Function</h1>
+      <p class="short-description">Cartesian family \(y=k\cdot x^{a}\) with multiplier \(k\) and real exponent \(a\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/PowerFunc/PowerFunc01-360.avif"
+           data-caption="Power Function, k=1,a=-3(black),-2(red),-1(blue),-1/2(green),-1/3(orange),1/3(purple),1/2(cyan),1(brown),2(lime),3(magenta)"
+           alt="Power Function, k=1,a=-3(black),-2(red),-1(blue),-1/2(green),-1/3(orange),1/3(purple),1/2(cyan),1(brown),2(lime),3(magenta)">
+      <figcaption>
+        Power Function, k=1,a=
+        <span class="figcap-value" style="color:#000000">-3</span>,
+        <span class="figcap-value" style="color:#FF0000">-2</span>,
+        <span class="figcap-value" style="color:#0000FF">-1</span>,
+        <span class="figcap-value" style="color:#009600">-1/2</span>,
+        <span class="figcap-value" style="color:#FF9600">-1/3</span>,
+        <span class="figcap-value" style="color:#9600FF">1/3</span>,
+        <span class="figcap-value" style="color:#0096FF">1/2</span>,
+        <span class="figcap-value" style="color:#AA5555">1/span>,
+        <span class="figcap-value" style="color:#00FF00">2</span>,
+        <span class="figcap-value" style="color:#FF00FF">3</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Power Function Curve Cartesian equation:</div>
+      \[ y = k \cdot x^{a} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The power function \(y = k \cdot x^{a}\), where \(k\) is a nonzero constant and \(a\) is any real number, is a fundamental family of curves in mathematics. Special cases such as the parabola (\(a = 2\)) and hyperbola (\(a = -1\)) were studied by ancient Greek geometers in conic sections. The general analytic treatment of power functions emerged with the development of analytic geometry in the 17th century.<sup>1</sup></p>
+    <p>Power laws of this form describe many empirical relationships in the natural sciences and engineering. In astronomy, Kepler's third law states that the square of a planet's orbital period \(T\) is proportional to the cube of the semi-major axis \(a\) of its orbit (\(T^{2} \propto a^{3}\)). In biology, Kleiber's law (established in the 1930s) shows that an animal's basal metabolic rate scales with body mass \(M\) to approximately the \(\frac{3}{4}\) power.<sup>2</sup> In geophysics, the Gutenberg-Richter law models earthquake frequency as a power-law function of magnitude. In engineering applications, the wind-profile power law \(u(z) = u_{r}\bigl(\frac{z}{z_{r}}\bigr)^{\alpha}\) (with \(\alpha\) typically \(\frac{1}{7}\) over flat terrain) is standard for estimating wind speed variation with height in structural design, wind-turbine siting, and atmospheric dispersion modeling.<sup>3</sup> Power functions also govern scaling in fluid mechanics (e.g., certain drag forces), material strength versus size in structural engineering, and allometric relationships in biomechanics.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/power/powerf.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/power/powerf.html</a> (power function curve definition and properties)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Kleiber%27s_law" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Kleiber%27s_law</a> (Kleiber's law and biological scaling application)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Wind_profile_power_law" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Wind_profile_power_law</a> (wind engineering application)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:POWERFUNC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Power Function"
+        iq "y=k·xᵃ"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "k (multiplier)" 1.0)
+        fb (get_real 2 "a (exponent)" 0.5)
+        fc (get_keyword 0 "Real Imaginary" "Real or Imaginary values?" "Real")
+        fd (if (= fc "Real") T nil)
+        paramstep (/ xspan divcount)
+        paramstep (if (= (get_keyword 0 "Positive Negative" "Positive or Negative x values?" "Positive") "Positive") paramstep (- paramstep))
+        eq_display (strcat "\nk=" (rtos fa 2 4) ", a=" (rtos fb 2 4) ", " fc " values")
+        xc '(eval a2)
+        yc '(* fa (alt_expt (eval a2) fb fd))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:POWERFUNC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

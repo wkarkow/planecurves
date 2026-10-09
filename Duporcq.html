@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Duporcq Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Duporcq Curve</h1>
+      <p class="short-description">Family of orthogonal pursuit curves obtained by superposing a Newtonian central-force trajectory of eccentricity e with a uniform translation; the family comprises elliptic, two hyperbolic, and parabolic (Tschirnhausen cubic) members linked to Sturmian spirals.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Duporcq/Duporcq01-360.avif"
+           alt="Duporcq Curve, elliptic, a=1,e=0.01">
+      <figcaption>Duporcq Curve, elliptic, a=1,e=0.01</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq02-360.avif"
+           alt="Duporcq Curve, elliptic, a=1,e=0.1">
+      <figcaption>Duporcq Curve, elliptic, a=1,e=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq03-360.avif"
+           alt="Duporcq Curve, elliptic, a=1,e=0.25">
+      <figcaption>Duporcq Curve, elliptic, a=1,e=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq04-360.avif"
+           alt="Duporcq Curve, elliptic, a=1,e=0.5">
+      <figcaption>Duporcq Curve, elliptic, a=1,e=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq05-360.avif"
+           alt="Duporcq Curve, elliptic, a=1,e=0.75">
+      <figcaption>Duporcq Curve, elliptic, a=1,e=0.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq06-360.avif"
+           alt="Duporcq Curve, elliptic, a=1,e=0.9">
+      <figcaption>Duporcq Curve, elliptic, a=1,e=0.9</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq07-360.avif"
+           alt="Duporcq Curve, parabolic, a=1, e=1">
+      <figcaption>Duporcq Curve, parabolic, a=1, e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq08-360.avif"
+           alt="Duporcq Curve, hyperbolic minus, a=1,multiple values of e=">
+      <figcaption>
+        Duporcq Curve, hyperbolic minus, a=1,e=
+        <span class="figcap-value" style="color:#000000">1.05</span>,
+        <span class="figcap-value" style="color:#FF0000">1.1</span>,
+        <span class="figcap-value" style="color:#0000FF">1.25</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">1.75</span>,
+        <span class="figcap-value" style="color:#9600FF">2.0</span>,
+        <span class="figcap-value" style="color:#0096FF">2.25</span>,
+        <span class="figcap-value" style="color:#AA5555">2.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.75</span>,
+        <span class="figcap-value" style="color:#FF00FF">3.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duporcq/Duporcq09-360.avif"
+           alt="Duporcq Curve, hyperbolic plus, a=1,multiple values of e">
+      <figcaption>
+        Duporcq Curve, hyperbolic plus, a=1,e=
+        <span class="figcap-value" style="color:#000000">1.05</span>,
+        <span class="figcap-value" style="color:#FF0000">1.1</span>,
+        <span class="figcap-value" style="color:#0000FF">1.25</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">1.75</span>,
+        <span class="figcap-value" style="color:#9600FF">2.0</span>,
+        <span class="figcap-value" style="color:#0096FF">2.25</span>,
+        <span class="figcap-value" style="color:#AA5555">2.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.75</span>,
+        <span class="figcap-value" style="color:#FF00FF">3.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Duporcq Curve elliptic parametric equations:</div>
+      \[ x = \dfrac{a}{\sqrt{1-e^{2}}}(e u - \sin u),\quad y = a(-e + \cos u) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Duporcq Curve parabolic parametric equations:</div>
+      \[ x = a(u^{3} - 3u),\quad y = 3a(1 - u^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Duporcq Curve hyperbolic minus parametric equations:</div>
+      \[ x = \dfrac{a}{\sqrt{e^{2}-1}}(\sinh u - e u),\quad y = a(\cosh u - e) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Duporcq Curve hyperbolic plus parametric equations:</div>
+      \[ x = \dfrac{a}{\sqrt{e^{2}-1}}(\sinh u + e u),\quad y = a(\cosh u + e) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Duporcq curves form a family of plane curves defined by the geometric property that the element of arc length is a constant multiple e of the segment cut by the normals at the ends of that arc on a fixed base line. Ernest Duporcq (1873–1903) and A. Mannheim examined these curves in papers published in 1902 in <em>Nouvelles Annales de Mathématiques</em>.<sup>1</sup> F. Balitrand (1914) and especially M. Egan (1919) supplied the complete analytic solution by expressing the curves as the result of superposing a Newtonian central-force trajectory (a conic of eccentricity \( e \) ) with a uniform translation orthogonal to the focal axis.<sup>2</sup> C. Masurel (2014) revisited the family through Gregory’s transformation, deriving explicit Cartesian parametric equations for all four regimes of e together with elementary arc-length formulas and the precise link to the associated Sturmian spirals defined by \( R_c = e ρ \).<sup>3</sup></p>
+    <p>Geometrically the curves are the trajectories of a pursuer that always moves perpendicular to the line of sight to a pursuee traveling in a straight line at constant speed; they are therefore classified as orthogonal pursuit curves (sometimes called crab curves). The case \(e = 0\) reduces to an ordinary circle; the parabolic case \(e = 1\) yields Tschirnhausen’s cubic as the Duporcq curve and the Norwich spiral as its Sturmian counterpart, with the pole of the Norwich spiral rolling on a line tracing the cubic.<sup>4</sup> The hyperbolic branches \((e &gt; 1)\) produce two distinct families distinguished by the sign in the parametric expressions.</p>
+    <p>Real-life applications in engineering and the natural sciences are chiefly kinematic. The roulette and glissette constructions that generate the Duporcq curves from Sturmian spirals appear in classical mechanism theory, where rolling or sliding contact between curves is used to produce prescribed motions in cams, gears, and linkages. The orthogonal-pursuit interpretation supplies a geometric model for certain constant-bearing navigation or interception problems, although documented modern engineering deployments of the specific parametric forms remain limited.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="http://christophe.masurel.free.fr/pdf/Duporcq%20Sturm%20curves%209.pdf" target="_blank" rel="noopener noreferrer">http://christophe.masurel.free.fr/pdf/Duporcq%20Sturm%20curves%209.pdf</a> (Masurel 2014; parametric equations, arc length, Gregory transformation)</li>
+      <li><a href="https://archive.numdam.org/item/NAM_1902_4_2__161_1/" target="_blank" rel="noopener noreferrer">https://archive.numdam.org/item/NAM_1902_4_2__161_1/</a> (original Duporcq/Mannheim 1902 paper)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/duporcq/duporcq.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/duporcq/duporcq.shtml</a> (pursuit interpretation, special cases, and kinematic context)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/tschirnhausen/tschirnhausen.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/tschirnhausen/tschirnhausen.shtml</a> (Tschirnhausen cubic and Norwich spiral as the e=1 pair)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DUPORCQ (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Duporcq Curve"
+        iq ""
+        dcl "DUPORCQ"
+        opt '("Elliptic" "Hyperbolic minus" "Hyperbolic plus" "Parabolic")
+        kw 0
+        mode 'polar
+        dpr "# of divisions per turn"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((= kw 0)
+     (princ "x=(a/sqrt(1-e²))*(e*u-sin(u)), y=a*(-e+cos(u))")
+     (setq fa (get_real 2 "a (scale factor)" 1.0)
+           fb (get_boundr 0 "e (&lt;1)" 0.5 nil 1.0 nil nil)
+           xc '(* (/ fa (sqrt (- 1.0 (* fb fb)))) (- (* fb (eval a2)) (sin (eval a2))))
+           yc '(* fa (+ (* -1.0 fb) (cos (eval a2))))))
+    ((= kw 1)
+     (princ "x=(a/sqrt(e²-1))*(sinh(u)-e*u), y=a*(cosh(u)-e)")
+     (setq fa (get_real 2 "a (scale factor)" 1.0)
+           fb (get_boundr 2 "e (&gt;1)" 1.5 1.0 nil nil nil)
+           xc '(* (/ fa (sqrt (- (* fb fb) 1.0))) (- (sinh (eval a2)) (* fb (eval a2))))
+           yc '(* fa (- (cosh (eval a2)) fb))))
+    ((= kw 2)
+     (princ "x=(a/sqrt(e²-1))*(sinh(u)+e*u), y=a*(cosh(u)+e)")
+     (setq fa (get_real 2 "a (scale factor)" 1.0)
+           fb (get_boundr 2 "e (&gt;1)" 1.5 1.0 nil nil nil)
+           xc '(* (/ fa (sqrt (- (* fb fb) 1.0))) (+ (sinh (eval a2)) (* fb (eval a2))))
+           yc '(* fa (+ (cosh (eval a2)) fb))))
+    ((= kw 3)
+     (princ "x=a*(u³-3*u), y=3*a*(1-u²)")
+     (setq fa (get_real 2 "a (scale factor)" 1.0)
+           fb 1.0
+           xc '(* fa (- (expt (eval a2) 3) (* 3.0 (eval a2))))
+           yc '(* 3.0 fa (- 1.0 (expt (eval a2) 2))))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", e=" (rtos fb 2 4))
+        skm '(nil T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DUPORCQ)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

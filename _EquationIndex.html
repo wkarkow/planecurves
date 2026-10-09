@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Equation Lookup - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    /* Add eqSortKey + equation fields to _Curve-list.js entries as new curves are completed.*/
+    .index-container {
+      max-width: 1600px;
+      margin: 8px auto;
+    }
+    .index-container h2 {
+      margin: 0 0 12px 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .list-meta {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .search-box {
+      width: 100%;
+      max-width: 360px;
+      padding: 8px 12px;
+      font-size: 1rem;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      margin-bottom: 18px;
+    }
+    .eq-grid {
+      display: grid;
+      grid-template-columns: minmax(140px, 220px) 1fr;
+      gap: 8px 8px;
+      align-items: start;
+    }
+    .eq-name {
+      font-weight: 500;
+      color: #333;
+      font-size: 1.02rem;
+      padding-top: 2px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    .eq-name a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .eq-name a:hover {
+      text-decoration: underline;
+    }
+    .eq-math {
+      font-size: 1.02rem;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      color: #222;
+    }
+    .eq-math .katex {
+      font-size: 1.02rem !important;
+    }
+    .eq-note {
+      grid-column: 1 / -1;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <nav class="main-nav left-nav">
+      <a href="_Main.html">Home</a>
+      <a href="_CurveIndex.html">Curve Lookup</a>
+      <a href="_AliasIndex.html">Alias Lookup</a>
+    </nav>
+    <h2 class="site-title">
+      <a href="_Main.html">Plane Curves with AutoCAD</a>
+    </h2>
+    <nav class="main-nav right-nav">
+      <span class="nav-current">Equation Lookup</span>
+      <a href="_ImageIndex.html">Image Lookup</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-title-block">
+      <h1>Equation Lookup</h1>
+      <p class="short-description">
+        Filter equations using ASCII math style for a particular term. 
+        Examples: y =, sqrt, cos^2, sin(t), dx/dt, k^2, J_1, alpha, theta, phi, rho, a x (spaces separate variables).
+      </p>
+    </div>
+  </section>
+
+  <div class="index-container">
+    <div class="list-meta">
+      <span id="eq-count"></span> equations · Only curves with documented equations appear.
+    </div>
+
+    <input type="text" id="search-input" class="search-box" placeholder="Filter by equation in text form..." aria-label="Filter the equation list">
+
+    <div id="eq-grid" class="eq-grid"></div>
+
+
+  </div>
+</main>
+
+<script src="_Curve-list.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const grid = document.getElementById("eq-grid");
+    const countEl = document.getElementById("eq-count");
+    const searchInput = document.getElementById("search-input");
+
+    if (typeof curveList === "undefined" || !Array.isArray(curveList)) {
+      grid.innerHTML = "<div style='color:#c00; grid-column:1/-1;'>Error: _Curve-list.js not loaded or invalid.</div>";
+      return;
+    }
+
+    // Filter to curves that have both eqSortKey and equation defined
+    let eqCurves = curveList.filter(c => c.eqSortKey && typeof c.equation === "string" && c.equation.length > 0);
+
+    if (eqCurves.length === 0) {
+    grid.innerHTML = "<div style='color:#555; grid-column:1/-1;'>No equations documented yet. Add curves with eqSortKey + equation in _Curve-list.js. Populate eqFind for filtering.</div>";
+    if (countEl) countEl.textContent = "0";
+    return;
+    }
+
+    // Sort by eqSortKey (numeric-aware string compare so 001, 002, 010 sort correctly)
+    eqCurves.sort((a, b) => a.eqSortKey.localeCompare(b.eqSortKey, undefined, { numeric: true, sensitivity: "base" }));
+
+    function renderList(filteredCurves) {
+      grid.innerHTML = "";
+      if (filteredCurves.length === 0) {
+        const note = document.createElement("div");
+        note.style.gridColumn = "1 / -1";
+        note.innerHTML = "<em>No matching equations found.</em>";
+        grid.appendChild(note);
+        return;
+      }
+      filteredCurves.forEach(curve => {
+        // Left column: name with link
+        const nameDiv = document.createElement("div");
+        nameDiv.className = "eq-name";
+        nameDiv.innerHTML = `<a href="${curve.filename}">${curve.title}</a>`;
+
+        // Right column: equation (raw LaTeX source wrapped for KaTeX)
+        const mathDiv = document.createElement("div");
+        mathDiv.className = "eq-math";
+        // Use \( ... \) for inline rendering; long expressions will wrap via CSS
+        mathDiv.innerHTML = `\\( ${curve.equation} \\)`;
+
+        grid.appendChild(nameDiv);
+        grid.appendChild(mathDiv);
+      });
+
+      // Render all KaTeX after DOM insertion
+      if (typeof renderMathInElement === "function") {
+        renderMathInElement(grid, {
+          delimiters: [
+            { left: "\\(", right: "\\)", display: false }
+          ],
+          throwOnError: false
+        });
+      }
+    }
+
+    // Initial render
+    renderList(eqCurves);
+    if (countEl) {
+      countEl.textContent = eqCurves.length;
+    }
+
+    // Live filter (single-letter searches use word boundaries for cleanliness)
+    if (searchInput) {
+      searchInput.addEventListener("input", function() {
+        const term = searchInput.value.toLowerCase().trim();
+        if (!term) {
+          renderList(eqCurves);
+          return;
+        }
+        const filtered = eqCurves.filter(c => {
+          if (!Array.isArray(c.eqFind)) return false;
+
+          return c.eqFind.some(entry => {
+            if (typeof entry !== "string") return false;
+            const text = entry.toLowerCase();
+
+            // Single letter (e.g. "t", "x", "y") → use word boundaries
+            if (term.length === 1) {
+              const regex = new RegExp(`\\b${term}\\b`, "i");
+              return regex.test(text);
+            }
+
+            // Normal substring match for longer terms ("dt", "theta", "cos^2", etc.)
+            return text.includes(term);
+          });
+        });
+        renderList(filtered);
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delaunay Roulette - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Delaunay Roulette</h1>
+      <p class="short-description">The locus of a focus of a conic section (ellipse or hyperbola) that rolls without slipping along a straight line.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Delaunay/Delaunay01-360.avif"
+           alt="Delaunay Roulette, elliptic, a=4,b=1">
+      <figcaption>Delaunay Roulette, elliptic, a=4,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay02-360.avif"
+           alt="Delaunay Roulette, elliptic, a=3.5,b=1.5">
+      <figcaption>Delaunay Roulette, elliptic, a=3.5,b=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay03-360.avif"
+           alt="Delaunay Roulette, elliptic, a=3,b=2">
+      <figcaption>Delaunay Roulette (elliptic), a=2, b=1.8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay04-360.avif"
+           alt="Delaunay Roulette, elliptic, a=2.75,b=2.25">
+      <figcaption>Delaunay Roulette, elliptic, a=2.75,b=2.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay05-360.avif"
+           alt="Delaunay Roulette, elliptic, a=2.5,b=2.5">
+      <figcaption>Delaunay Roulette, elliptic, a=2.5,b=2.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay06-360.avif"
+           alt="Delaunay Roulette, elliptic, a=2.25,b=2.75">
+      <figcaption>Delaunay Roulette, elliptic, a=2.25,b=2.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay07-360.avif"
+           alt="Delaunay Roulette, elliptic, a=2,b=3">
+      <figcaption>Delaunay Roulette (elliptic), a=2,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay08-360.avif"
+           alt="Delaunay Roulette, elliptic, a=1.5,b=3.5">
+      <figcaption>Delaunay Roulette, elliptic, a=1.5,b=3.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay09-360.avif"
+           alt="Delaunay Roulette, elliptic, a=1,b=4">
+      <figcaption>Delaunay Roulette, elliptic, a=1,b=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay10-360.avif"
+           alt="Delaunay Roulette, semicircular limit, R=1">
+      <figcaption>Delaunay Roulette, semicircular limit, R=1, 5 humps</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay11-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=4,b=1">
+      <figcaption>Delaunay Roulette, hyperbolic, a=4,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay12-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=3.5,b=1.5">
+      <figcaption>Delaunay Roulette, hyperbolic, a=3.5,b=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay13-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=3,b=2">
+      <figcaption>Delaunay Roulette (hyperbolic), a=2, b=1.8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay14-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=2.75,b=2.25">
+      <figcaption>Delaunay Roulette, hyperbolic, a=2.75,b=2.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay15-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=2.5,b=2.5">
+      <figcaption>Delaunay Roulette, hyperbolic, a=2.5,b=2.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay16-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=2.25,b=2.75">
+      <figcaption>Delaunay Roulette, hyperbolic, a=2.25,b=2.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay17-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=2,b=3">
+      <figcaption>Delaunay Roulette (hyperbolic), a=2,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay18-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=1.5,b=3.5">
+      <figcaption>Delaunay Roulette, hyperbolic, a=1.5,b=3.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delaunay/Delaunay19-360.avif"
+           alt="Delaunay Roulette, hyperbolic, a=1,b=4">
+      <figcaption>Delaunay Roulette, hyperbolic, a=1,b=4</figcaption>
+    </figure>
+
+
+   </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Delaunay Roulette differential equation:</div>
+      \[ \left( \dfrac{dy}{dx} \right)^{2} = \dfrac{(y+a+c)(y+a-c)(y-a+c)(-y+a+c)}{(y^{2}-b^{2})^{2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Elliptic case:</div>
+      \[ c = \sqrt{a^{2}-b^{2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic case:</div>
+      \[ c = \sqrt{a^{2}+b^{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Delaunay roulette, also known as the nodary in its hyperbolic form, was introduced by the French astronomer and mathematician Charles-Eugène Delaunay (1816–1872) in 1841.<sup>1</sup> Delaunay, who later became a member of the Académie des Sciences and Director of the Paris Observatory, derived the curve while studying the locus traced by a focus of a conic section (ellipse or hyperbola) rolling without slipping along a straight line. The elliptic case corresponds to an ellipse rolling on its major axis, the hyperbolic case (nodary) to a hyperbola, and the parabolic limit reduces to the catenary (already covered as a separate entry). In 1861 the Finnish mathematician Ernst Lindelöf extended the analysis.<sup>1</sup> The curve is the meridian of a surface of revolution having constant mean curvature.<sup>1</sup> These Delaunay surfaces arise naturally in the calculus of variations and satisfy the condition that their mean curvature is everywhere equal to a constant.</p>
+    <p>Real-life applications occur in engineering and the natural sciences wherever constant-mean-curvature surfaces model physical interfaces. In capillary physics and fluid mechanics, Delaunay roulettes describe the shape of static liquid bridges (pendular bridges) between two parallel plates or coaxial cylinders, a configuration encountered in microgravity experiments, ink-jet printing, and porous-media flow.<sup>2,3</sup> The nodary profile accurately predicts the stable shape of a liquid bridge under surface-tension forces, allowing engineers to calculate the maximum stable volume before breakup. Similar profiles appear in the design of capillary tubes and in the study of soap films and minimal surfaces. No other widespread engineering uses (e.g., gears or cams) have been documented beyond these fluid-mechanics contexts. See the Mathcurve link for how the curves can be generated, particularly the gif with “marching hyperbolas”. The Delaunay roulettes are also a natural manifestation of elliptic integrals.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/delaunay/delaunay.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/delaunay/delaunay.shtml</a> (history, definition, elliptic/hyperbolic cases, link to constant-mean-curvature surfaces)</li>
+      <li><a href="https://www.researchgate.net/publication/267037823_Roulettes_of_conics_Delaunay_surfaces_and_applications" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/267037823_Roulettes_of_conics_Delaunay_surfaces_and_applications</a> (liquid-bridge applications)</li>
+      <li><a href="https://www.epj-conferences.org/articles/epjconf/abs/2017/09/epjconf162703/epjconf162703.html" target="_blank" rel="noopener noreferrer">https://www.epj-conferences.org/articles/epjconf/abs/2017/09/epjconf162703/epjconf162703.html</a> (experimental use for pendular liquid bridges)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>;DELAUNAY.lsp - started 02/21/26
+
+(defun C:DELAUNAY (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 x1 y1 a2 x2 y2 eq_display
+                     fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw fx fy y1 y2 ym dy dx)
+  (defun DLRN_RAD (y a c / r)
+    (setq r (* (+ y a c) (+ y a (- c)) (+ y (- a) c) (+ (- y) a c)))
+    (max 0.0 r))
+  (defun DLRN_DXDY (y a b c / rad den)
+    (setq rad (DLRN_RAD y a c))
+    (if (&lt;= rad 1e-12)
+      0.0
+      (progn
+        (setq den (sqrt rad))
+        (/ (- (* b b) (* y y)) den))))
+  (defun DLRN_RESET ()
+    (setq fe nil ff 0 fg 0.0 fh 0.0 fi 0.0 fj 0.0 fk 0.0 fl 0.0 fm 0 fn 0.0 fo 0 fp 0.0))
+  (defun DELA_F (ang e)
+    (sqrt (- 1.0 (* e e (cos ang) (cos ang)))))
+  (setq id "Delaunay Roulette"
+        iq "Various forms: elliptic, semicircular limit, hyperbolic"
+        dcl "DELAUNAY"
+        opt '("Elliptic" "Semicircular limit" "Hyperbolic")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 1800
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((= kw 0)
+     (setq fa (get_real 6 "a (ellipse major semi-axis)" 3.0)
+           fb (get_real 6 "b (ellipse minor semi-axis)" 2.0))
+     (if (&lt; fa fb) (setq fc fa fa fb fb fc))
+     (setq fc (sqrt (- (* fa fa) (* fb fb)))
+           fd (/ fc fa)
+           fe 0.0
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", e=" (rtos fd 2 4))
+           yc '(* fb (sqrt (/ (- 1.0 (* fd (cos (eval a2)))) (+ 1.0 (* fd (cos (eval a2)))))))
+           xc '(progn 
+                 (setq ff (eval a2))
+                 (if (&lt; ff 0.0)
+                   (progn (setq fe 0.0 ff 0.0))
+                   (progn 
+                     (setq fg (+ a1 (* 0.5 paramstep)) fh (* (/ paramstep 6.0) (+ (DELA_F a1 fd) (* 4.0 (DELA_F fg fd)) (DELA_F ff fd))))
+                     (setq fe (+ fe (* fa fh)))))
+                 (- fe (* fc (sin ff) (sqrt (/ (- 1.0 (* fd (cos ff))) (+ 1.0 (* fd (cos ff))))))))))
+    ((= kw 1)
+     (setq fa (get_real 6 "R (semicircle radius)" 1.0)
+           fb (/ (get_real 6 "number of humps" 5.0) 2.0)
+           eq_display (strcat "\nR=" (rtos fa 2 4) ", humps=" (itoa (fix (* 2 fb))))
+           xc '(progn 
+                 (setq fs (* fb (eval a2))
+                       ft (fix (/ fs pi))
+                       fu (- fs (* pi ft)))
+                 (+ (* 2.0 fa ft) (* fa (- 1.0 (cos fu)))))
+           yc '(progn 
+                 (setq fv (* fa (sin fu)))
+                 (if (&lt; (abs fv) 1e-9) 0.0 fv))))
+    ((= kw 2)
+     (DLRN_RESET)
+     (setq fa (get_real 2 "a (hyperbola semi-axis)" 3.0)
+           fb (get_real 2 "b (hyperbola semi-axis)" 2.0)
+           fc (sqrt (+ (* fa fa) (* fb fb)))
+           fw (- fc fa)
+           fx (+ fa fc)
+           fy (- fx fw)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", ymin=" (rtos fw 2 4) ", ymax=" (rtos fx 2 4))
+           xc
+       '(- (progn
+             (setq fq (eval a2)
+                   fr (* 2.0 pi))
+             (if (&lt; fq 0.0)
+               (progn
+                 (DLRN_RESET)
+                 (setq ff 1
+                       fg fw
+                       fk fw
+                       fe fq)
+                 fj)
+               (if (and fe (&lt;= (abs (- fq fe)) 1e-12))
+                 fj
+                 (progn
+                   (setq fe fq)
+                   (if (= fo 1)
+                     (progn
+                       (setq ff 2
+                             fi fp
+                             fg fx
+                             fh 0.0
+                             fo 0)))
+                   (if (= fo 2)
+                     (progn
+                       (setq fm (1+ fm)
+                             fn fp
+                             ff 1
+                             fi fn
+                             fg fw
+                             fh 0.0
+                             fk fw
+                             fj fn
+                             fo 0)))
+                   (setq fs (- fq (* fr fm)))
+                   (if (and (= ff 1) (&gt;= fs (- pi (* 0.75 paramstep))))
+                     (progn
+                       (if (= fl 0.0) (setq fl (- fh)))
+                       (setq fp (+ fn fh)
+                             fg fx
+                             fk fx
+                             fj (+ fn fh)
+                             fo 1)
+                       fj)
+                     (if (and (= ff 2) (&gt;= fs (- fr (* 0.75 paramstep))))
+                       (progn
+                         (if (= fl 0.0) (setq fl (- fh)))
+                         (setq fp (* -2.0 fl (1+ fm))
+                               fg fw
+                               fk fw
+                               fj (+ fi (- fh))
+                               fo 2)
+                         fj)
+                       (progn
+                         (if (= ff 1)
+                           (setq y2 (+ fw (* fy (/ fs pi))))
+                           (setq y2 (- fx (* fy (/ (- fs pi) pi)))))
+                         (if (or (&lt;= (abs (- y2 fw)) 1e-10) (&lt;= (abs (- y2 fx)) 1e-10))
+                           (progn
+                             (setq fg y2
+                                   fk y2
+                                   fj (+ fi (if (= ff 1) fh (- fh))))
+                             fj)
+                           (progn
+                             (setq y1 fg
+                                   ym (* 0.5 (+ y1 y2))
+                                   dy (- y2 y1)
+                                   dx (* (/ dy 6.0) (+ (DLRN_DXDY y1 fa fb fc) (* 4.0 (DLRN_DXDY ym fa fb fc)) (DLRN_DXDY y2 fa fb fc)))
+                                   fh (+ fh dx)
+                                   fg y2
+                                   fk y2
+                                   fj (+ fi (if (= ff 1) fh (- fh))))
+                             fj))))))))))
+           yc 'fk)))
+  (setq skm '(T T T)
+        a1 (- paramstep)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DELAUNAY)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

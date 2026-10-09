@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exponential Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Exponential Curve</h1>
+      <p class="short-description">Family of curves of the form y = a·e^{b·x^c} that unifies ordinary exponential growth and decay, the Gaussian bell, stretched exponentials, super-Gaussians, inverse-square and reciprocal forms used in population growth, radioactive decay, laser beams, and material relaxation.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Exponential/Exponential01-360.avif"
+           alt="Exponential Decay, half-life=1,a=5,b=-0.6931,c=1">
+      <figcaption>Exponential Decay, half-life=1,a=5,b=-0.6931,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential02-360.avif"
+           alt="Exponential Decay thru (2,2),a=5,b=0.4581,c=1">
+      <figcaption>Exponential Decay thru (2,2),a=5,b=0.4581,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential03-360.avif"
+           alt="Exponential Decay thru (2,2),(4,1),a=4,b=-0.3466,c=1">
+      <figcaption>Exponential Decay thru (2,2),(4,1),a=4,b=-0.3466,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential04-360.avif"
+           alt="Exponential Gaussian Curve, 75% at (2,2),a=5,b=-0.0719,c=2">
+      <figcaption>Exponential Gaussian Curve, 75% at (2,2),a=5,b=-0.0719,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential05-360.avif"
+           alt="Exponential Gaussian Curve, FWHM=2,a=5,b=-0.6931,c=2">
+      <figcaption>Exponential Gaussian Curve, FWHM=2,a=5,b=-0.6931,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential06-360.avif"
+           alt="Exponential Gaussian Curve, Area=10,a=5,b=-1.5708,c=2">
+      <figcaption>Exponential Gaussian Curve, Area=10,a=5,b=-1.5708,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential07-360.avif"
+           alt="Exponential Gaussian Curve, Beam width=3,a=5,b=-0.2222,c=2">
+      <figcaption>Exponential Gaussian Curve, Beam width=3,a=5,b=-0.2222,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential08-360.avif"
+           alt="Exponential Gaussian Curve, 1pt (2,2),a=5,b=-0.2291,c=2">
+      <figcaption>Exponential Gaussian Curve, 1pt (2,2),a=5,b=-0.2291,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential09-360.avif"
+           alt="Exponential Gaussian Curve, σ=1,a=5,b=-0.5,c=2">
+      <figcaption>Exponential Gaussian Curve, σ=1,a=5,b=-0.5,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential10-360.avif"
+           alt="Exponential Gaussian Curve, 2pt (2,2),(4,1),a=2.5198,b=-0.0578,c=2">
+      <figcaption>Exponential Gaussian Curve, 2pt (2,2),(4,1),a=2.5198,b=-0.0578,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential11-360.avif"
+           alt="Exponential Growth Curve, Principle=1,rate=0.05a=1,b=0.0488,c=1,FV at 5.0=1.2763">
+      <figcaption>Exponential Growth Curve, Principle=1,a=1,b=0.0488,c=1,FV at 5.0=1.2763</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential12-360.avif"
+           alt="Exponential Growth Curve, PV=1,FV=1.5,a=1,b=0.0811,c=1,rate=8.4472%">
+      <figcaption>Exponential Growth Curve, PV=1,FV=1.5,a=1,b=0.0811,c=1,rate=8.4472%</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential13-360.avif"
+           alt="Exponential Growth Curve, TFR=1.599,US 340.1 mil pop,a=3.401,b=-0.0103,c=1,Final pop=323 mil">
+      <figcaption>Exponential Growth Curve, TFR=1.599,US 340.1 mil pop,a=3.401,b=-0.0103,Final pop=323 mil</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential14-360.avif"
+           alt="Exponential Growth Curve,Start-end pop=340.1→360 mil,a=3.401,b=-0.0114,c=1,TFR=2.9943">
+      <figcaption>Exponential Growth Curve,Start-end pop=340.1→360 mil,a=3.401,b=-0.0114,c=1,TFR=2.9943</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential15-360.avif"
+           alt="Exponential Growth Curve,Birth rate=11.4,Death=8.8,a=3.401,b=-0.0026,c=1,Final pop=344.6 mil">
+      <figcaption>Exponential Growth Curve, Birth rate=11.4, Death=8.8,a=3.401,b=-0.0026,c=1,Final pop=344.6 mil</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential16-360.avif"
+           alt="Exponential Growth Curve, Doubling time=5,a=1,b=0.1386,c=1">
+      <figcaption>Exponential Growth Curve, Doubling time=5,a=1,b=0.1386,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential17-360.avif"
+           alt="Exponential Growth Curve, 2pt (2,2),(4,3.6),a=?,b=0.1682,c=1"> ">
+      <figcaption>Exponential Growth Curve, 2pt (2,2),(4,3.6),a=?,b=0.1682,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential18-360.avif"
+           alt="Exponential Inverse Square Curve, known a=1,b=1,c=-2">
+      <figcaption>Exponential Inverse Square Curve, known a=1,b=1,c=-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential19-360.avif"
+           alt="Exponential Inverse Square Curve, known a=1,b=-1,c=-2">
+      <figcaption>Exponential Inverse Square Curve, known a=1,b=-1,c=-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential20-360.avif"
+           alt="Exponential Inverse Square Curve, 1pt (3,1.6),asymptote=2.0,a=2,b=-2.0083,c=-2">
+      <figcaption>Exponential Inverse Square Curve, 1pt (3,1.6),asymptote=2.0,a=2,b=-2.0083,c=-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential21-360.avif"
+           alt="Exponential Inverse Square Curve, 1pt (3,1.6),known b=0.5,a=1.5135,b=0.5,c=-2">
+      <figcaption>Exponential Inverse Square Curve, 1pt (3,1.6),known b=0.5,a=1.5135,b=0.5,c=-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential22-360.avif"
+           alt="Exponential Inverse Square Curve, 2pt (1,1.2),(3,1.6),a=1.6586,b=-0.3236,c=0.5">
+      <figcaption>Exponential Inverse Square Curve, 2pt (1,1.2),(3,1.6),a=1.6586,b=-0.3236,c=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential23-360.avif"
+           alt="Exponential Reciprocal Curve, known a=1,b=1">
+      <figcaption>Exponential Reciprocal Curve, known a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential24-360.avif"
+           alt="Exponential Reciprocal Curve, known a=1,b=-1">
+      <figcaption>Exponential Reciprocal Curve, known a=1,b=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential25-360.avif"
+           alt="Exponential Reciprocal Curve, 1pt (1,2.8),Asymptote=2.0,a=1,b=-0.3365,c=-1">
+      <figcaption>Exponential Reciprocal Curve, 1pt (1,2.8),Asymptote=2.0,a=1,b=-0.3365,c=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential26-360.avif"
+           alt="Exponential Reciprocal Curve, 1pt (3,1.6),known b=1.0,a=1.1465,b=1,c=-1">
+      <figcaption>Exponential Reciprocal Curve, 1pt (3,1.6),known b=1.0,a=1.1465,b=1,c=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential27-360.avif"
+           alt="Exponential Reciprocal Curve, 2pt (1,2.8),(3,1.6),a=1.2095,b=0.8394,c=-1">
+      <figcaption>Exponential Reciprocal Curve, 2pt (1,2.8),(3,1.6),a=1.2095,b=0.8394,c=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential28-360.avif"
+           alt="Exponential Stretched Curve, a=1,τ=1,multiple values of β">
+      <figcaption>
+        xponential Stretched Curve, a=1,τ=1,β=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>,
+        <span class="figcap-value" style="color:#9600FF">5.0</span>
+      </figcaption>
+    </figure>    <figure>
+      <img src="images/Exponential/Exponential29-360.avif"
+           alt="Exponential Gaussian Reflected Curve, σ=1,a=5,b=-0.5,c=2">
+      <figcaption>Exponential Gaussian Reflected Curve, σ=1,a=5,b=-0.5,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential30-360.avif"
+           alt="Exponential Super-GaussianCurve, a=5,w=2.0,m=0.25(black),0.5(red),1.0(blue),2.0(green),3.0(orange),5.0(purple)">
+      <figcaption>Exponential Super-GaussianCurve, a=5,w=2.0,m=0.25(black),0.5(red),1.0(blue),2.0(green),3.0(orange),5.0(purple)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential30-360.avif"
+           alt="Exponential Super-Gaussian Curve, a=5,w=2.0,multiple values of m">
+      <figcaption>
+        Exponential Super-Gaussian Curve, a=5,w=2.0,m=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>,
+        <span class="figcap-value" style="color:#9600FF">5.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Generalized Exponential equation:</div>
+      \[ y = a \cdot e^{b x^{c}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Before formal mathematics, exponential-like growth was observed in practical contexts: unchecked population increase, compound interest in commerce, and bacterial or mold growth in food. Ancient Greek mathematicians (e.g., Euclid, Archimedes) knew of geometric progressions (ratios repeatedly multiplied), but they did not connect them to a continuous curve. Islamic mathematics (9th–11th c.): Al-Khwarizmi and others worked extensively with powers and roots in algebra. They developed rules equivalent to manipulating exponentials, but again without explicit function-curve language. In 1614, John Napier published <em>Mirifici Logarithmorum Canonis Descriptio</em>, introducing logarithms.<sup>1</sup> His central motivation was to simplify astronomical and navigational calculations. Napier’s work implicitly described exponential relations: logarithms are inverses of exponential growth. Ten years later, Henry Briggs popularized the use of base-10 logarithms. Briggs collaborated with Napier and published extensive logarithmic tables. At this stage, “exponential” was not yet a named function, but the groundwork was laid: a continuous function whose rate of increase is proportional to its current value. In 1637, René Descartes in <em>La Géométrie</em> explored curves generated by algebraic and transcendental functions. Although he did not write the exponential function explicitly, he admitted non-algebraic functions into analytic geometry. Isaac Newton in the 1660s–1670s worked extensively with series expansions. Newton derived power series for \(e^x\), sine, cosine, and logarithm, showing the exponential could be represented analytically. Jacob Bernoulli subsequently studied compound interest and discovered the constant \(e\). In analyzing growth of \((1 + 1/n)^n\) as \(n→∞\), he essentially uncovered the natural exponential base. In the early 1700s, Leonhard Euler put the theory on a rigorous footing, defining \(e^x\) as the unique function equal to its own derivative,<sup>1</sup> unifying exponential growth/decay with logarithms as its inverse, and introducing \(e^{iπ}+1=0\) in 1748, revealing the deep connection between exponentials and trigonometric functions. In the 19th century, Cauchy, Fourier, and Laplace used exponential functions extensively in analysis, particularly in solutions of differential equations, heat flow, and probability. By the late 19th century, radioactive decay was found to follow an exponential law,<sup>1</sup> cementing the role of exponentials in modeling natural processes.</p>
+    <p>The general form \(y=a\cdot e^{b x^{c}}\) unifies these models. For \(c=1\) the curve is ordinary exponential growth or decay. For \(c=2\) it becomes the Gaussian bell curve.<sup>2,3</sup> Fractional or non-integer c produces the stretched exponential (Kohlrausch function).<sup>4</sup> Higher-order \(c\) yields super-Gaussian profiles.<sup>5</sup></p>
+    <p>Applications span engineering and the natural sciences. The code options cover population growth and compound interest (kw 2), radioactive decay and capacitor discharge (kw 0), statistical distributions and heat diffusion (kw 1), laser beam shaping and particle-beam focusing (kw 1 and kw 6), signal apodization in optics and electronics, relaxation in polymers and glassy systems (kw 5), thermal activation and loss, chemical reaction rates, and specialized decay models such as inverse-square (kw 3) and reciprocal (kw 4) forms used in certain diffusion and attenuation processes.</p>
+    <p>There are now a host of applications that can be modeled using the following code with options amenable to population growth, compound interest, radioactive decay, capacitor discharge, statistics, optics, heat distribution, laser beam shaping, signal apodization (smoothing), relaxation in polymers and glassy systems, thermal activation and loss, chemical reaction rates, and particle beam focusing, among others.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/ExponentialFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ExponentialFunction.html</a> (history and general equations)</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponential.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponential.html</a> (exponential curves overview)</li>
+      <li><a href="https://mathworld.wolfram.com/GaussianFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/GaussianFunction.html</a> (Gaussian history and optics/signal-processing applications)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Stretched_exponential_function" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Stretched_exponential_function</a> (Kohlrausch history and materials science applications)</li>
+      <li><a href="https://www.rp-photonics.com/flat_top_beams.html" target="_blank" rel="noopener noreferrer">https://www.rp-photonics.com/flat_top_beams.html</a> (super-Gaussian beam applications in laser processing and manufacturing)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code></code>(defun C:EXPONENTIAL  (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                         restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg kw2 p1 p2 xstep)
+  (setq id "Exponential"
+        iq "y=a·e^b(x)^c"
+        dcl "EXPONENTIAL"
+        opt '("Decay" "Gaussian Bell" "Growth" "Inverse Square" "Reciprocal" "Stretched" "Super-Gaussian" "New Values")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        eq_prompt "\nExponential, y=a·e^b(x)^c: ")
+  (cond
+    ((eq kw 0)
+     (setq kw2 (get_keyword 0 "Halflife Onepoint Twopoints" "Known entities: initial + Half-life, initial + One point, Two points" "Halflife"))
+     (cond
+       ((eq kw2 "Halflife")
+        (setq fa (get_real 2 (strcat eq_prompt "Initial quantity a") 100.0)
+              fb (get_real 2 (strcat eq_prompt "Half-life b") 1.0)
+              fc 1
+              fb (if (> fb 0) (- 0 fb))
+              fb (/ (log 2) fb)))
+       ((eq kw2 "Onepoint")
+        (setq fa (get_real 2 (strcat eq_prompt "Initial quantity a") 100.0)
+              fc 1
+              p1 (get_boundpt "Single point on curve (not axes)" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              fb (/ (log (/ y1 fa)) x1)))
+       ((eq kw2 "Twopoints")
+        (setq fc 1
+              p1 (get_boundpt "1st point on curve (not axes)" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              p2 (get_boundpt "2nd point on curve (not axes)" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x2 (get_xspan basept xaxisangle p2)
+              y2 (get_yspan basept xaxisangle p2)
+              fb (/ (log (/ y2 y1)) (- x2 x1))
+              fa (/ y1 (exp (* fb x1))))))
+     (setq eq_display (strcat "\ny= " (rtos fa 2 4) "·e^" (rtos fb 2 4) "(x)")))              
+   ((eq kw 1)
+     (setq kw2 (get_keyword 0 "perCent FWHM Normalized Optics onePoint Sigma Twopoints"
+                              "options: perCent, FWHM (signal processing), Normalized (area), Optics (w), onePoint, Sigma, Twopoints" "onePoint"))
+     (cond
+       ((eq kw2 "perCent")
+        (setq fa (get_real 2 (strcat eq_prompt "Peak height a") 1.0)
+              p1 (get_boundpt "Point with known fractional value" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              fb (get_boundr 6 "Fractional value (0-1):" 0.5 0 1.0 nil nil)
+              fc 2
+              fb (/ (log fb) (* x1 x1))))
+       ((eq kw2 "FWHM")
+        (setq fa (get_real 2 (strcat eq_prompt "Peak height a") 1.0)
+              fb (get_real 6 (strcat eq_prompt "Full Width at Half-Maximum (FWHM)") 1.0)
+              fc 2
+              fb (/ (* -4.0 (log 2)) (* fb fb))))
+       ((eq kw2 "Normalized")
+        (setq fa (get_real 2 (strcat eq_prompt "Peak height a") 1.0)
+              fb (get_real 6 (strcat eq_prompt "Area under curve") 1.0)
+              fc 2
+              fb (/ (* -2.0 pi fa fa) (* fb fb))))
+       ((eq kw2 "Optics")
+        (setq fa (get_real 2 (strcat eq_prompt "Peak height a") 1.0)
+              fb (get_real 6 (strcat eq_prompt "Beam radius w (1/e^2)") 1.0)
+              fc 2
+              fb (/ -2.0 (* fb fb))))
+       ((eq kw2 "onePoint")
+        (setq fa (get_real 2 (strcat eq_prompt "Peak height a") 1.0)
+              p1 (get_boundpt "Point on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              fc 2
+              fb (/ (log (/ y1 fa)) (* x1 x1))))
+       ((eq kw2 "Sigma")
+        (setq fa (get_real 2 (strcat eq_prompt "Peak height a") 1.0)
+              fb (get_real 6 (strcat eq_prompt "Sigma") 1.0)
+              fc 2
+              fb (/ (- 1) (* 2 (* fb fb)))))
+       ((eq kw2 "Twopoints")
+        (setq p1 (get_boundpt "Closer of 2 points on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              p2 (get_boundpt "Farther of 2 points on curve" "Division point" divpt basept x1 nil nil 0 y1 nil)
+              x2 (get_xspan basept xaxisangle p2)
+              y2 (get_yspan basept xaxisangle p2)
+              fc 2
+              fb (/ (log (/ y2 y1)) (- (* x2 x2) (* x1 x1)))
+              fa (* y1 (exp (* -1.0 fb (* x1 x1)))))))
+    (setq eq_display (strcat "\ny= " (rtos fa 2 4) "·e^" (rtos fb 2 4) "(x^2)"))
+    (prompt (strcat "\nσ = " (rtos (sqrt (/ -1.0 (* 2 fb))) 2 4))))
+   ((eq kw 2)
+     (setq kw2 (get_keyword 0 (strcat "Principal-rate-time principal-time-futureValue totalFertilityrate "
+                              "start-Endpopulation popBirth-deathrates start-Doubling Twopoints")
+                              (strcat "options: Principal-rate-time, principal-time-futureValue, totalFertilityrate,"
+                                      " start-Endpopulation, popBirth-deathrates, start-Doubling, Twopoints") "Principal-rate-time"))
+     (cond
+       ((eq kw2 "Principal-rate-time")
+        (setq fa (get_real 6 (strcat eq_prompt "Principal value ") 100.0)
+              fd (get_real 6 (strcat eq_prompt "Interest rate per year (or other period such as month):") 0.05)
+              fe (get_real 6 (strcat eq_prompt "Number of years (or other period such as months):") 10.0)
+              fb (log (1+ fd))
+              xstep (/ fe divcount)
+              fc 1)
+        (prompt (strcat "\nFuture value after " (rtos fe 2 4) " periods = " (rtos (* fa (exp (* fb fe))) 2 4))))
+       ((eq kw2 "principal-time-futureValue")
+        (setq fa (get_real 6 (strcat eq_prompt "Principal value ") 100.0)
+              fd (get_real 6 (strcat eq_prompt "Future value ") 200.0)
+              fe (get_real 6 (strcat eq_prompt "Number of years (or other period such as months):") 10.0)
+              fb (/ (log (/ fd fa)) fe)
+              xstep (/ fe divcount)
+              fc 1)
+        (prompt (strcat "\nInterest rate per period = " (rtos (* 100 (- (exp fb) 1)) 2 4) "%")))
+       ((eq kw2 "totalFertilityrate")
+        (setq fa (get_real 6 (strcat eq_prompt "Starting population (in units such as 100 millions): ") 3.401)
+              fd (get_real 6 (strcat eq_prompt "Total fertility rate TFR (avg # children per woman, sub-replacement ~ 2.1)") 1.599)
+              fe (get_real 6 (strcat eq_prompt "Survival to end of reproductive years (0-1): ") 0.95)
+              ff (get_real 6 (strcat eq_prompt "Female birth fraction (per male + female births): ") 0.4889)
+              fg (get_real 6 (strcat eq_prompt "Number of years until final population (29 years = 1 generation):") 10.0)
+              fb (/ (log (* fd ff fe)) 29.0)
+              xstep (/ fg divcount)
+              fc 1)
+        (prompt (strcat "\nFinal population at the end of " (rtos fg 2 4) " generations (each ~ 29 years, no net migration)= " (rtos (* fa (exp (* fb fg))) 2 4))))
+       ((eq kw2 "start-Endpopulation")
+        (setq fa (get_real 6 (strcat eq_prompt "Starting population (in units such as 100 millions): ") 3.401)
+              fd (get_real 6 (strcat eq_prompt "Final population (in units such as 100 millions): ") 3.6)
+              fe (get_real 6 (strcat eq_prompt "Survival to end of reproductive years (0-1): ") 0.95)
+              ff (get_real 6 (strcat eq_prompt "Female birth fraction (per male + female births): ") 0.4889)
+              fg (get_real 6 (strcat eq_prompt "Number of years until final population (29 years = 1 generation):") 10.0)
+              fb (/ (log (/ fd fa)) fg)
+              xstep (/ fg divcount)
+              fc 1)
+        (prompt (strcat "\nTotal fertility rate = " (rtos (/ (exp (* fb 29.0)) (* ff fe)) 2 4) " per woman")))
+       ((eq kw2 "popBirth-deathrates")
+        (setq fa (get_real 6 (strcat eq_prompt "Starting population (in units such as 100 millions): ") 3.401)
+              fd (get_real 6 (strcat eq_prompt "Birth rate per 1000 population (in years): ") 11.4)
+              fe (get_real 6 (strcat eq_prompt "Death rate per 1000 population(in years): ") 8.8)
+              ff (get_real 6 (strcat eq_prompt "Number of years until final population:") 10.0)
+              fb (/ (- fd fe) 1000.0)
+              xstep (/ ff divcount)
+              fc 1)
+        (prompt (strcat "\nFinal population after " (rtos ff 2 2) " years: " (rtos (* fa (exp (* fb ff))) 2 4))))
+       ((eq kw2 "start-Doubling")
+        (setq fa (get_real 6 (strcat eq_prompt "Starting value: ") 1.0)
+              fd (get_real 6 (strcat eq_prompt "Doubling time (in x units): ") 1.0)
+              fb (/ (log 2.0) fd)
+              xstep (/ fd divcount)
+              fc 1))
+       ((eq kw2 "Twopoints")
+        (setq p1 (get_boundpt "Closer of 2 points on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              p2 (get_boundpt "Farther of 2 points on curve" "Division point" divpt basept x1 nil nil y1 nil nil)
+              x2 (get_xspan basept xaxisangle p2)
+              y2 (get_yspan basept xaxisangle p2)
+              fc 1
+              fb (/ (log (/ y2 y1)) (- x2 x1))
+              fa (* y1 (exp (* -1.0 fb x1))))))
+     (setq eq_display (strcat "\ny= " (rtos fa 2 4) "·e^" (rtos fb 2 4) "(x)"))) 
+   ((eq kw 3)
+     (setq kw2 (get_keyword 0 "known-a-and-B one-point-Asymptote One-point-b-value Twopoints"
+                              "y=a·e^(b/x^2) options: known-a-and-B, one-point-Asymptote, One-point-b-value, Twopoints" "known-a-and-B"))
+     (cond
+       ((eq kw2 "known-a-and-B")
+        (setq fa (get_real 2 (strcat eq_prompt "Initial value a") 1.0)
+              fb (get_real 2 (strcat eq_prompt "Rate parameter b (positive → blowup at 0, negative → vanish at 0)") 1.0)
+              fc -2.0))
+       ((eq kw2 "one-point-Asymptote")
+        (setq fa (get_real 2 (strcat eq_prompt "Horizontal asymptote a as x -> ∞") 1.0)        
+              p1 (get_boundpt "Point on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              fb (* x1 x1 (log (/ y1 fa)))
+              fc -2.0))
+       ((eq kw2 "One-point-b-value")
+        (setq p1 (get_boundpt "Point on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              fb (get_real 2 (strcat eq_prompt " b curvature value") 1.0)
+              fa (* y1 (exp (/ (- fb) (* x1 x1))))
+              fc -2.0))       
+       ((eq kw2 "Twopoints")
+        (setq p1 (get_boundpt "1st point on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              p2 (get_boundpt "2nd point on curve (x2 ≠ x1)" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x2 (get_xspan basept xaxisangle p2)
+              y2 (get_yspan basept xaxisangle p2)
+              fb (/ (log (/ y2 y1)) (- (/ 1.0 x2 x2) (/ 1.0 x1 x1)))
+              fa (* y1 (exp (/ (- fb) (* x1 x1))))
+              fc -2.0))) 
+     (setq eq_display (strcat "\ny= " (rtos fa 2 4) "·e^" (rtos (- 0.0 fb) 2 4) "/(x^2)")))
+   ((eq kw 4)
+     (setq kw2 (get_keyword 0 "known-a-and-B one-point-Asymptote One-point-b-value Twopoints"
+                              "y=a·e^(b/x^2) options: known-a-and-B, one-point-Asymptote, One-point-b-value, Twopoints" "known-a-and-B"))
+     (cond
+       ((eq kw2 "known-a-and-B")
+        (setq fa (get_real 2 (strcat eq_prompt "Initial value a") 1.0)
+              fb (get_real 2 (strcat eq_prompt "Rate parameter b (positive → blowup at 0, negative → vanish at 0)") 1.0)
+              fc -1.0))
+       ((eq kw2 "one-point-Asymptote")
+        (setq fa (get_real 2 (strcat eq_prompt "Horizontal asymptote a as x -> ∞") 1.0)        
+              p1 (get_boundpt "Point on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              fb (* x1 (log (/ y1 fa)))
+              fc -1.0))
+       ((eq kw2 "One-point-b-value")
+        (setq p1 (get_boundpt "Point on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              fb (get_real 2 (strcat eq_prompt " b curvature value") 1.0)
+              fa (* y1 (exp (/ (- fb) x1)))
+              fc -1.0))       
+       ((eq kw2 "Twopoints")
+        (setq p1 (get_boundpt "1st point on curve" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x1 (get_xspan basept xaxisangle p1)
+              y1 (get_yspan basept xaxisangle p1)
+              p2 (get_boundpt "2nd point on curve (x2 ≠ x1)" "Division point" divpt basept 0 nil nil 0 nil nil)
+              x2 (get_xspan basept xaxisangle p2)
+              y2 (get_yspan basept xaxisangle p2)
+              fb (/ (log (/ y2 y1)) (- (/ 1.0 x2) (/ 1.0 x1)))
+              fa (* y1 (exp (/ (- fb) x1)))
+              fc -1.0))) 
+     (setq eq_display (strcat "\ny= " (rtos fa 2 4) "·e^" (rtos (- 0.0 fb) 2 4) "/x")))
+   ((eq kw 5)
+    (setq fa (get_real 2 (strcat eq_prompt "Initial quantity a") 1.0)
+          fd (get_real 6 (strcat eq_prompt "Characteristic time of decay τ (time to 1/e)") 1.0)
+          fc (get_real 6 (strcat eq_prompt "Stretching exponent β (stretched <1, exponential 1, compresssed >1, nl distribution 2)") 1.0)
+          fb (/ -1.0 (avoid_zero (alt_expt fd fc nil)))
+          eq_display (strcat "\ny= " (rtos fa 2 4) "·e^-(x/" (rtos fd 2 4) ")^" (rtos fc 2 4))))
+   ((eq kw 6)
+    (setq fa (get_real 2 (strcat eq_prompt "Initial quantity a") 1.0)
+          fd (get_real 6 (strcat eq_prompt "Width parameter σ") 1.0)
+          fe (get_real 6 (strcat eq_prompt "Order m (ordinary Gaussian 1, broader top >1)") 1.0)
+          fc (* 2 fe)
+          fb (/ -1.0 (avoid_zero (alt_expt fd fc nil)))
+          eq_display (strcat "\ny= " (rtos fa 2 4) "·e^-(x/" (rtos fd 2 4) ")^2·" (rtos fe 2 4))))
+   ((eq kw 7)
+    (setq fa (get_real 2 (strcat eq_prompt "Scale factor a") 1.0)
+	    fb (get_real 2 (strcat eq_prompt "Exponent rate b (sign sets growth/decay)") 1.0)
+          fc (get_real 2 (strcat eq_prompt "Exponent power c (shape control)") 1.0))
+    (setq eq_display (strcat "\ny= " (rtos fa 2 4) "·e^" (rtos fb 2 4) "(x)^" (rtos fc 2 4)))))
+  (setq xc '(eval a2)
+        yc '(* fa (exp (avoid_zero (* fb (alt_expt (eval a2) fc nil)))))
+        paramstep (/ xspan divcount)
+        skm (if (or (eq kw 1) (eq kw 5) (eq kw 6)) '(nil T T) '(T T T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:EXPONENTIAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

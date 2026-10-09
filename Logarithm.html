@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logarithm - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Logarithm</h1>
+      <p class="short-description">Graph of the logarithm function and its scaled and shifted variants (natural log, common log, decibels, diminishing returns, log-time creep, and a four-parameter generalization).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Logarithm/Logarithm01-360.avif"
+           alt="Logarithm, Canonical ln, a=1,b=1">
+      <figcaption>Logarithm, Canonical ln, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logarithm/Logarithm02-360.avif"
+           alt="Logarithm, Base-10 log, a=1,b=1">
+      <figcaption>Logarithm, Base-10 log, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logarithm/Logarithm03-360.avif"
+           alt="Logarithm, Decibel amplitude ratio, b=1">
+      <figcaption>Logarithm, Decibel amplitude ratio, b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logarithm/Logarithm04-360.avif"
+           alt="Logarithm, Diminishing returns, a=1,b=1">
+      <figcaption>Logarithm, Diminishing returns, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logarithm/Logarithm05-360.avif"
+           alt="Logarithm, Log-time creep, a=1,t₀=2,d=1">
+      <figcaption>Logarithm, Log-time creep, a=1,t₀=2,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logarithm/Logarithm06-360.avif"
+           alt="Logarithm, Generalized, a=0.5,b=1.5,c=2.0,d=-0.5">
+      <figcaption>Logarithm, Generalized, a=0.5,b=1.5,c=2.0,d=-0.5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Logarithm curve Cartesian equation:</div>
+      \[ y = a \cdot \ln(x/b) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Base-10 logarithm Cartesian equation:</div>
+      \[ y = a \cdot \log_{10}(x/b) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Decibel Cartesian equation:</div>
+      \[ y = 20 \cdot \log_{10}(x/b)\ \text{(amplitude ratio)}\quad\text{or}\quad y = 10 \cdot \log_{10}(x/b)\ \text{(power ratio)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Diminishing returns Cartesian equation:</div>
+      \[ y = a \cdot \ln\bigl(1 + x/b\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Log-time creep Cartesian equation:</div>
+      \[ y = a \cdot \ln(t/t_{0}) + d \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized logarithmic Cartesian equation:</div>
+      \[ y = a \cdot \ln(bx + c) + d \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The logarithmic curve<sup>1</sup> is the graph of the logarithm function or its scaled and shifted variants. Scottish mathematician John Napier published the first logarithm tables in 1614 in <em>Mirifici Logarithmorum Canonis Descriptio</em>, with the explicit goal of turning the difficult operations of multiplication and division into addition and subtraction. Henry Briggs later refined the concept with common (base-10) logarithms<sup>2</sup>, which proved even more practical for computation and led to widespread use of logarithm tables and slide rules by engineers, surveyors, and astronomers until the advent of electronic calculators. The shape compresses large numeric ranges into a manageable scale and appears throughout mathematics, physics, and engineering wherever quantities vary over many orders of magnitude.<sup>3</sup></p>
+    <p>The canonical natural logarithm \( y = a \cdot \ln(x/b) \)<sup>3</sup> (with vertical scale \( a \) and reference point \( b \) where the curve crosses the x-axis) is useful in numerical methods (error reduction versus iteration count) and performance modeling (gains versus added resources). The base-10 form \( y = a \cdot \log_{10}(x/b) \)<sup>4</sup> was historically tied to common logarithm tables and slide rules and is used in scaling where powers of ten are natural, such as component values in electronics (resistors, capacitors, frequency response plotted in decades) and certain physical quantities such as concentrations and pressures.</p>
+    <p>The decibel scale \( y = 20 \cdot \log_{10}(x/b) \) (amplitude ratio) or \( y = 10 \cdot \log_{10}(x/b) \) (power ratio) originated in telecommunications and is standard in acoustics for sound pressure level and intensity, in electronics for signal strength and gain, and in signal-to-noise ratio calculations. Doubling the amplitude gives approximately +6.02 dB; the scale matches approximately logarithmic human perception of loudness.</p>
+    <p>The form \( y = a \cdot \ln(1 + x/b) \) models diminishing returns, with parameter \( b \) setting the knee scale (the x-value where the curve visibly bends from steep to flattened). For small \( b \) the curve is nearly linear; for large \( b \) additional gains slow markedly. It appears in engineering yield-versus-input processes and resource-efficiency models.</p>
+    <p>The expression \( y = a \cdot \ln(t/t_{0}) + d \) models log-time creep in materials science, where strain or deformation grows approximately linearly with the logarithm of time under constant load (observed in metals, polymers, and concrete at moderate temperatures and stresses). This is critical for long-term settlement analysis of structures and foundations.</p>
+    <p>The generalized form \( y = a \cdot \ln(bx + c) + d \) encompasses the previous options and allows maximum flexibility: \( b \) and \( c \) position the vertical asymptote and control steepness, while \( d \) shifts the curve vertically to fit empirical data. A further classical application of the logarithmic profile is the constant-pressure tower, whose generating meridian is a logarithmic curve.<sup>1</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/logarithmic/courbelogarithmique.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/logarithmic/courbelogarithmique.shtml</a> (definition, equation, and constant-pressure tower profile application)</li>
+      <li><a href="https://mathworld.wolfram.com/Logarithm.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Logarithm.html</a> (logarithm definition, history overview, and common/natural forms)</li>
+      <li><a href="https://mathworld.wolfram.com/NaturalLogarithm.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/NaturalLogarithm.html</a> (natural logarithm and engineering uses)</li>
+      <li><a href="https://mathworld.wolfram.com/CommonLogarithm.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CommonLogarithm.html</a> (common logarithm and computational applications)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LOGARITHM (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd kw2 xstep)
+  (setq id "Logarithm"
+        iq ""
+        dcl "LOGARITHM"
+        opt '("Canonical ln" "Base-10 log" "Decibels" "Diminishing returns" "Log-time creep" "Generalized 4-term")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nCanonical natural log y = a·ln(x/b)")
+    (setq fa (get_real 2 "a (vertical scale)" 1.0)
+          fb (get_real 6 "b (x-axis intercept)" 1.0)
+          fc 0.0
+          fd 0.0
+          fb (/ 1.0 fb)))
+   ((eq kw 1)
+    (princ "\nBase-10 log: y = a·log10(x/b)")
+    (setq fa (get_real 2 "a (vertical scale)" 1.0)
+          fb (get_real 6 "b (x-axis intercept)" 1.0)
+          fc 0.0
+          fd 0.0
+          fa (/ fa (log 10.0))
+          fb (/ 1.0 fb)))
+   ((eq kw 2)
+    (princ "\nDecibels: y = 10·log10(x/b)")
+    (setq kw2 (get_keyword 0 "Power Amplitude" "Power or Amplitude?" "Amplitude")
+          fa (if (= kw2 "Power") 10.0 20.0)
+          fb (get_real 6 "b (reference x at 0 dB)" 1.0)
+          fc 0.0
+          fd 0.0
+          fa (/ fa (log 10.0))
+          fb (/ 1.0 fb)))
+   ((eq kw 3)
+    (princ "\nDiminishing returns: y = a·ln(1 + x/b)")
+    (setq fa (get_real 2 "a (response scale)" 1.0)
+          fb (get_real 6 "b (x scale for knee)" 1.0)
+          fc 0.0
+          fd 0.0
+          fd (- (* fa (log fb)))
+          fc fb
+          fb 1.0))
+   ((eq kw 4)
+    (princ "\nLog-time creep: y = a·ln(t/t₀) + d")
+    (setq fa (get_real 2 "a (amplitude): " 1.0)
+          fb (get_real 6 "b (reference time t₀): " 1.0)
+          fd (get_real 0 "d (baseline offset): " 0.0)
+          fc fb
+          fb 1.0
+          fd (- fd (* fa (log fc)))
+          fc 0.0))
+   ((eq kw 5)
+    (princ "\nLogarithmic curve: y = a·ln(bx + c) + d")
+    (setq fa (get_real 2 "a (vertical scale)" 1.0)
+          fb (get_real 6 "b (horizontal scale)" 1.0)
+          fc (get_real 4 "c (horizontal shift)" 0.0)
+          fd (get_real 0 "d (vertical shift)" 0.0))))
+  (setq eq_display (strcat "a=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(+ (* fa (log (+ (* fb (eval a2)) fc))) fd)
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 paramstep
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LOGARITHM)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

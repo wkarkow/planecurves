@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bean Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bean Curve</h1>
+      <p class="short-description">Cundy–Rollett bean and the Wassenaar lima bean families of quartic plane curves with bean-like or lima-bean shapes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Bean/Bean01-360.avif" alt="Cundy-Rowlatt bean, a=1">
+      <figcaption>Cundy-Rowlatt bean, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean02-360.avif" alt="Wassenaar bean, a=3,b=3">
+      <figcaption>Wassenaar bean, a=3,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean03-360.avif" alt="Generalized Wassenaar bean, a=0.1,b=3">
+      <figcaption>Generalized Wassenaar bean, a=0.1,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean04-360.avif" alt="Generalized Wassenaar bean, a=0.5,b=3">
+      <figcaption>Generalized Wassenaar bean, a=0.5,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean05-360.avif" alt="Generalized Wassenaar bean, a=1,b=3">
+      <figcaption>Generalized Wassenaar bean, a=1,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean06-360.avif" alt="Generalized Wassenaar bean, a=2,b=3">
+      <figcaption>Generalized Wassenaar bean, a=2,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean07-360.avif" alt="Generalized Wassenaar bean, a=5,b=3">
+      <figcaption>Generalized Wassenaar bean, a=5,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean08-360.avif" alt="Generalized Wassenaar bean, a=10,b=3">
+      <figcaption>Generalized Wassenaar bean, a=10,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean09-360.avif" alt="Generalized Wassenaar bean, a=100,b=3">
+      <figcaption>Generalized Wassenaar bean, a=100,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean10-360.avif" alt="Generalized Wassenaar bean, a=3,b=1">
+      <figcaption>Generalized Wassenaar bean, a=3,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean11-360.avif" alt="Generalized Wassenaar bean, a=3,b=2">
+      <figcaption>Generalized Wassenaar bean, a=3,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean12-360.avif" alt="Generalized Wassenaar bean, a=3,b=5">
+      <figcaption>Generalized Wassenaar bean, a=3,b=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean13-360.avif" alt="Generalized Wassenaar bean, a=3,b=10">
+      <figcaption>Generalized Wassenaar bean, a=3,b=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean14-360.avif" alt="Generalized Wassenaar bean, a=3,b=100">
+      <figcaption>Generalized Wassenaar bean, a=3,b=100</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean15-360.avif" alt="Generalized Wassenaar bean, a=2,b=4">
+      <figcaption>Generalized Wassenaar bean, a=2,b=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean16-360.avif" alt="Generalized Wassenaar bean, a=4,b=4">
+      <figcaption>Generalized Wassenaar bean, a=4,b=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean17-360.avif" alt="Generalized Wassenaar bean, a=8,b=8">
+      <figcaption>Generalized Wassenaar bean, a=8,b=8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bean/Bean18-360.avif" alt="Generalized Wassenaar bean, a=15,b=4">
+      <figcaption>Generalized Wassenaar bean, a=15,b=4</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Bean Curve (Cundy–Rollett) Cartesian equation:</div>
+      \[ x^{4} + x^{2} y^{2} + y^{4} = a x (x^{2} + y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bean Curve (Cundy–Rollett) polar equation:</div>
+      \[ r = \frac{a \cos(\theta)}{\cos^{4}(\theta) + \sin^{4}(\theta) + \cos^{2}(\theta) \cdot \sin^{2}(\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bean Curve (Wassenaar) implicit equation:</div>
+      \[ (x^{2} + y^{2})^{2} = a (x^{3} + y^{3}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bean Curve (Wassenaar) polar equation:</div>
+      \[ r = \sin^{3}(\theta) + \cos^{3}(\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Wassenaar polar equation:</div>
+      \[ r = \sin^{a}(\theta) + \cos^{b}(\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>There are several distinct curves referred to as “bean curves.” The first was introduced by H. Martyn Cundy and A. P. Rollett in their <em>Mathematical Models</em> (1961; revised 1989),<sup>1</sup> where it appeared as an “interesting quartic” labeled simply “bean.” This curve has since been analyzed for properties such as horizontal and vertical tangents, enclosed area, centroid, and perimeter.<sup>2</sup> The Cundy–Rollett bean curve also serves as the boundary for bean-shaped billiards in studies of classical and quantum chaos. These billiards are used to examine out-of-time-order correlators (OTOC), eigenfunction scarring, and spectral statistics that distinguish chaotic from integrable behavior.<sup>3</sup> Originally presented as a model for applied geometry, plotting software, and mathematical illustration, it remains primarily of academic and visual interest beyond these specialized physics applications.</p>
+    <p>A second quartic plane curve—often called the “lima bean”—is distinct from the Cundy–Rollett form. This variant was highlighted by Eric Weinstein’s MathWorld and attributed to Wassenaar.<sup>4</sup> While lacking a formal origin in classical literature, it is appreciated for its smooth, organic form. Its only known real-world application appears in a rotated form used by the Japanese company Massada Eyewear for asymmetrical nose pad design.<sup>5</sup> In generalized form, the exponents <em>a</em> and <em>b</em> control how much the curve is pressed inward from a circle toward a right-angle figure, with <em>a</em> affecting the vertical part and <em>b</em> the horizontal part. The parity of <em>a</em> and <em>b</em> also influences the overall shape.<sup>6</sup></p>
+    <p>No other widespread applications in engineering or the natural sciences were identified. The curves serve primarily as illustrative examples in algebraic geometry and as visually engaging subjects for CAD plotting and mathematical recreation.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>H. M. Cundy and A. P. Rollett, <em>Mathematical Models</em>, Clarendon Press (1961, revised 1989), p. 72 (original source).</li>
+      <li><a href="https://mathworld.wolfram.com/BeanCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/BeanCurve.html</a> (Cundy–Rollett properties: tangents, area, centroid, perimeter).</li>
+      <li><a href="https://arxiv.org/abs/2501.08389" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2501.08389</a> (bean-shaped billiards, OTOC and quantum chaos studies).</li>
+      <li><a href="https://mathworld.wolfram.com/BeanCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/BeanCurve.html</a> (Wassenaar lima bean attribution).</li>
+      <li><a href="https://www.massadaeyewear.com/collections/optical/requisite" target="_blank" rel="noopener noreferrer">Massada Eyewear</a> (asymmetrical nose pad design application).</li>
+      <li><a href="https://www.2dcurves.com/higher/highergb.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/higher/highergb.html</a> (generalized bean curve form details).</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BEAN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                 divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb)
+  (setq id "Bean Curve"
+        iq (strcat "Cundy-Rowlatt: r=a·cos(θ)/(cos⁴(θ)+sin⁴(θ)+cos²(θ)·sin²(θ)) / Wassenaar/generalized: r=sinᵃ(θ)+cosᵇ(θ)")
+        dcl "BEAN"
+        opt '("Cundy_Rowlatt" "Wassenaar 'Lima Bean'")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "a (scaling parameter)" 1.0)
+           eq_display (strcat "\nr = " (rtos fa 2 4) "·cos(θ) / (cos⁴(θ) + sin⁴(θ) + cos²(θ)·sin²(θ))")
+           rval '(/ (* fa (cos (eval a2))) (+ (alt_expt (cos (eval a2)) 4 T) (alt_expt (sin (eval a2)) 4 T)
+                 (* (alt_expt (cos (eval a2)) 2 T) (alt_expt (sin (eval a2)) 2 T))))))
+    ((eq kw 1)
+     (setq fa (get_real 2 "a (exponent on sin(θ))" 3.0)
+           fb (get_real 2 "b (exponent on cos(θ))" 3.0)
+           eq_display (strcat "\nr = sin^" (rtos fa 2 4) "(θ) + cos^" (rtos fb 2 4) "(θ)")
+           rval '(+ (alt_expt (sin (eval a2)) fa nil) (alt_expt (cos (eval a2)) fb nil))
+           paramstep (/ paramstep 2.0))))
+  (setq xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BEAN)</code></pre>
+  </section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

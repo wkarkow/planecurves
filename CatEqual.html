@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catenary of Equal Strength - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Catenary of Equal Strength</h1>
+      <p class="short-description">The plane curve traced by a flexible inextensible chain or cable whose linear density varies proportionally to local tension, producing uniform tensile stress; it also gives the ideal profile for an arch of equal compressive strength.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/CatEqual/CatEqual01-360.avif"
+           alt="Catenary of Equal Strength, a=5">
+      <figcaption>Catenary of Equal Strength, a=5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Catenary of Equal Strength Cartesian equation:</div>
+      \[ y = -\dfrac{a}{\pi} \ln\left(\cos\left(\dfrac{\pi x}{a}\right)\right), \quad \left| x \right| &lt; \dfrac{a}{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The catenary of equal strength, also called Coriolis’ catenary or the curve of the log cosine, was studied by Finck and Bobillier in 1826 and independently by Davies Gilbert in 1826 and by Gaspard-Gustave Coriolis in 1836.<sup>1,2</sup> It describes the shape taken by an inextensible flexible massive wire hanging from two fixed points when its linear mass density is proportional to the local tension at each point. This produces uniform tensile stress along the entire length, so the wire is not more likely to break at one point than at another.<sup>1</sup> When inverted, the curve gives the profile of a vault or arch without overload that carries load in pure compression.<sup>3</sup> By the 19th century, the curve appeared in engineering literature under names such as “arches of equal resistance” and “chains of equal strength,” reflecting its role in optimizing material usage in load-bearing structures.<sup>3,4</sup></p>
+    <p>In practical terms, the curve represents the ideal profile of a cable whose thickness is tapered so that no section is overstressed or underutilized. Near the supports, where forces are smaller, the cable can be thinner; near midspan, where forces are greatest, it becomes thicker. The same principle applies to arches: an inverted equal-strength catenary with variable thickness distributes compressive forces uniformly, minimizing the risk of localized failure. This concept has been discussed in suspension bridge theory, tapered mooring lines, and anchor cables, where efficient material distribution is critical.<sup>3,4</sup> It is rarely implemented exactly due to manufacturing constraints and the preference for uniform sections but remains an important theoretical model in structural optimization. Unlike the standard catenary, which is symmetric and extends indefinitely in both directions, the equal-strength catenary has a finite domain, running from −a/2 &lt; x &lt; a/2, because beyond that the cosine term vanishes and the logarithm diverges. This reflects the physical limitation: a real cable cannot be extended indefinitely under equal stress conditions; it reaches a natural endpoint where its cross-section would vanish.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/chainettedegaleresistance/chainettedegaleresistance.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/chainettedegaleresistance/chainettedegaleresistance.shtml</a> (history, equation, vault profile)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Catenary" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Catenary</a> (Coriolis/Gilbert references and derivation)</li>
+      <li><a href="https://mathworld.wolfram.com/Catenary.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Catenary.html</a> (historical context of catenaries and Bernoulli studies)</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponential.html#catenary" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponential.html#catenary</a> (engineering interpretation and applications of catenary variants)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CATEQUAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Catenary of Equal Strength"
+        iq "y=(-a/π)·ln(cos(πx/a))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "\na (half-span): " 5.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(eval a2)
+        yc '(* (/ (- fa) pi) (log (max (cos (/ (* pi (eval a2)) fa)) 1e-10)))
+        paramstep (/ fa divcount)
+        skm '(T nil T)
+        a1 (- (* 0.5 fa))
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CATEQUAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

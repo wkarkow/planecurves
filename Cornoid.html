@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cornoid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cornoid Curve</h1>
+      <p class="short-description">A sextic algebraic plane curve; the orthoptic curve of the Maltese cross.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Cornoid/Cornoid01-360.avif"
+           alt="Cornoid Curve, a=1">
+      <figcaption>Cornoid Curve, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Cornoid implicit equation:</div>
+      \[ (x^{2} + y^{2})^{3} + a^{2}(3x^{4} - 6x^{2}y^{2} - 5y^{4}) + 8a^{4}y^{2} - 4a^{6} = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cornoid parametric equations:</div>
+      \[ x = a \cos(t)\cos(2t),\quad y = a \sin(t)(2 + \cos(2t)) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The cornoid curve<sup>1,2,3</sup>, studied by the Salvadoran engineer and mathematician Alberto Sánchez in 1895, is a sextic algebraic plane curve. Sánchez provided its geometric construction: given a circle of radius a centered at the origin and a horizontal line intersecting that circle at points P and P', the cornoid is the locus of the projection M of P onto the line through P' parallel to the radius OP. The cornoid is also the orthoptic curve of the Maltese cross<sup>3</sup>, the locus of points from which two perpendicular tangents can be drawn to the Maltese cross. As a sixth-degree algebraic curve it has been examined in classical algebraic geometry, including studies of rational curves and computer-aided geometric design.</p>
+    <p>Real-life applications in engineering and the natural sciences are not documented in the primary mathematical references. The curve remains of theoretical interest.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Cornoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cornoid.html</a> (parametric equations, algebraic form, arc length, areas).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cornoid/cornoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cornoid/cornoid.shtml</a> (history, geometric construction).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/orthoptic/orthoptic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/orthoptic/orthoptic.shtml</a> (orthoptic of Maltese cross).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CORNOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Cornoid Curve"
+        iq "x=a·cos(t)·cos(2t), y=a·sin(t)·(2+cos(2t))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(* fa (cos (eval a2)) (cos (* 2 (eval a2))))
+        yc '(* fa (sin (eval a2)) (+ 2 (cos (* 2 (eval a2)))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CORNOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

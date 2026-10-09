@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Base of the Slider-Crank Mechanism - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Base of the Slider-Crank Mechanism</h1>
+      <p class="short-description">Kinematic polar locus of the base point in a slider-crank linkage, derived from crank length a and connecting-rod length b.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/BaseSlider/BaseSlider01-360.avif"
+           alt="Base of the Slider-Crank Mechanism, a=1,b=4,3,2,1.75,1.5,1.25,1.1,1.05                           "
+      <figcaption>
+        Base of the Slider-Crank Mechanism, a=1,b=
+        <span class="figcap-value" style="color:#0000FF">4</span>,
+        <span class="figcap-value" style="color:#FF0000">3</span>,
+        <span class="figcap-value" style="color:#000000">2</span>,
+        <span class="figcap-value" style="color:#FF9600">1.75</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.25</span>,
+        <span class="figcap-value" style="color:#AA5555">1.1</span>,
+        <span class="figcap-value" style="color:#00FF00">1.05</span>,
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/BaseSlider/BaseSlider02-360.avif"
+           alt="Base of the Slider-Crank Mechanism, a=1,b=1,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1"
+      <figcaption>
+        Base of the Slider-Crank Mechanism, a=1,b=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.9</span>,
+        <span class="figcap-value" style="color:#0000FF">0.8</span>,
+        <span class="figcap-value" style="color:#009600">0.7</span>,
+        <span class="figcap-value" style="color:#FF9600">0.6</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.4</span>,
+        <span class="figcap-value" style="color:#AA5555">0.3</span>,
+        <span class="figcap-value" style="color:#00FF00">0.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.1</span>,
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="https://mathcurve.com/courbes2d.gb/base/basebiellemanivelle.shtml" target="_blank" rel="noopener noreferrer">
+        <img src="images/BaseSlider/BaseSlider03-360.gif"
+             alt="Base of the Slider-Crank Mechanism – animated mechanism from mathcurve.com"
+             class="external"
+             data-skip-modal>
+      </a>
+      <figcaption>Base of the Slider-Crank Mechanism – animated mechanism from mathcurve.com</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Base of the Slider-Crank Mechanism polar equation:</div>
+      \[ r = a \pm \frac{\sqrt{b^{2} - a^{2} \sin^{2} \theta }}{\cos \theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Base of the Slider-Crank Mechanism<sup>1</sup> is a kinematic locus rather than a classical named curve from 18th or 19th century pure geometry. It arises directly from the geometry of a slider-crank linkage, tracing points along the extended crank line projected perpendicularly to the slider path. With crank length a and connecting-rod length b, its defining polar equation follows from elementary trigonometry applied to the positions of the crank and rod.</p>
+    <p>The underlying slider-crank mechanism has ancient roots, with early variants appearing in Hellenistic water-lifting devices and the Hierapolis sawmill of the 3rd century CE.<sup>2</sup> It was fully formalized and widely applied during the Industrial Revolution; engineers such as James Watt refined crank-and-linkage systems for steam engines. By the 19th century, slider-crank kinematics formed a standard topic in machine design and analytical mechanics.</p>
+    <p>This mechanism ranks among the most common in engineering. Real applications include internal combustion engines, where the piston converts rotary crank motion into linear motion (and vice versa), steam engines, reciprocating compressors and pumps, mechanical presses and shapers, and piston-driven actuators in industrial machinery. Although most engineering work focuses on displacement, velocity, and acceleration of the slider rather than the specific polar locus, plotting the base curve in CAD provides valuable geometric insight. It clearly shows limiting positions, symmetry, and the transitions that occur when b approaches or drops below a.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/base/basebiellemanivelle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/base/basebiellemanivelle.shtml</a> (definition, polar equation, mechanism history, and special cases)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Slider-crank_linkage" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Slider-crank_linkage</a> (history and engineering applications)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BASESLIDER (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       restartflag rval xc yc a1 a2 x1 y1 x2 y2 eq_display id iq dcl opt kw mode dpr dct dpt span fa fb fc fd fe)
+  (princ "Base of the Slider-Crank Mechanism")
+  (setq id "Base of the Slider-Crank Mechanism"
+        iq "r=a±√(b²-a²·sin²(θ))/cos(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        fa (get_real 2 "a (crank length)" 1.0)
+        fb (get_real 2 "b (rod length)" 2.0)
+        fc (if (and (< fb fa) (>= (abs (- fb fa)) 1e-9)) (asin (/ fb fa)) nil)
+        span (if fc (* (/ fc pi) 180.0) 360)
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fe (get_keyword 0 "Plus Minus" "Plus or Minus branch?" "Plus")
+        fd (if (= fe "Plus") 1.0 -1.0)
+        eq_display (strcat "\nSlider-Crank Base: r=" (rtos fa 2 4) "±√(" (rtos fb 2 4) "^2-" (rtos fa 2 4) "^2·sin^2(θ))/cos(θ)")
+        rval '(if (< (abs (- fb fa)) 1e-9) (if (= fd 1.0) (* 2.0 fa) 0.0) (+ fa (* fd (/ (if (<= (- (* fb fb) (* fa fa (sin (eval a2))
+              (sin (eval a2)))) 1e-9) 0.0 (alt_expt (- (* fb fb) (* fa fa (sin (eval a2)) (sin (eval a2)))) 0.5 T)) (avoid_zero (cos (eval a2)))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BASESLIDER)</code></pre>
+  </section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

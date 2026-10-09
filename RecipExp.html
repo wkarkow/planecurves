@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reciprocal Exponential Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Reciprocal Exponential Curve</h1>
+      <p class="short-description">The transformed exponential \( y = a \cdot e^{b/x} \) has a vertical asymptote at \( x = 0 \) and a horizontal asymptote at \( y = a \).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/RecipExp/RecipExp01-360.avif"
+           alt="Reciprocal Exponential Curve, a=1, multiple values of b">
+      <figcaption>
+        Reciprocal Exponential Curve, a=1,b=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>,
+        <span class="figcap-value" style="color:#0096FF">4.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/RecipExp/RecipExp02-360.avif"
+           data-caption="b=0.5(black),1(red),1.5(blue),2(green),2.5(orange),3(purple),3.5(cyan); a=1, Positive"
+           alt="Reciprocal Exponential Curve, multiple values of a,b=1,">
+      <figcaption>
+        Reciprocal Exponential Curve, a=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>,
+        <span class="figcap-value" style="color:#0096FF">4.0</span>,
+        b=1
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Reciprocal Exponential Curve Cartesian equation:</div>
+      \[ y = a \cdot e^{b/x} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The reciprocal exponential curve<sup>1</sup>, of the form \( y = a \cdot e^{b/x} \), is a transformed exponential function that exhibits a vertical asymptote at \( x = 0 \) and a horizontal asymptote at \( y = a \) (for positive \( a \) and \( b \)). For negative \( x \) the function approaches 0. It does not have classical origins but functions as a modern empirical model that arises naturally in calculus teaching as an example of one-sided limits, chain-rule differentiation, and asymptotic behavior.</p>
+    <p>In the natural sciences it appears in quantum mechanics. For a system of harmonic oscillators the proportion of population in quantum state \( n + 1 \) relative to state \( n \), plotted against temperature, follows this curve.<sup>2</sup> In engineering it serves as the reciprocal exponential cost–tolerance function, capturing the nonlinear rise in manufacturing cost as dimensional tolerances tighten; this model supports statistical tolerance allocation that minimizes total production cost while meeting design specifications for multi-part assemblies.<sup>3</sup> It has also been applied as an approximation to indentation load–depth curves during materials characterization<sup>4</sup> and to regression modeling of shear-strength properties in clay and silt embankment soils within geotechnical engineering.<sup>5</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialr.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialr.html</a> (definition, curve properties, and quantum-mechanical application)</li>
+      <li><a href="https://archive.org/download/IntroductionToSolidStatePhysics/81060415-Introduction-to-Solid-State-Physics-8th-Edition-by-Charles-Kittel.pdf" target="_blank" rel="noopener noreferrer">https://archive.org/download/IntroductionToSolidStatePhysics/81060415-Introduction-to-Solid-State-Physics-8th-Edition-by-Charles-Kittel.pdf</a> (pp. 106-107, quantum harmonic oscillator state populations vs. temperature)</li>
+      <li><a href="https://journals.sagepub.com/doi/abs/10.1177/0954405412473720" target="_blank" rel="noopener noreferrer">https://journals.sagepub.com/doi/abs/10.1177/0954405412473720</a> (cost-tolerance function and statistical tolerance allocation in manufacturing)</li>
+      <li><a href="https://www.mdpi.com/2073-4352/7/10/258" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2073-4352/7/10/258</a> (approximation of indentation load–depth curves in materials science)</li>
+      <li><a href="https://rosap.ntl.bts.gov/view/dot/16970/dot_16970_DS1.pdf" target="_blank" rel="noopener noreferrer">https://rosap.ntl.bts.gov/view/dot/16970/dot_16970_DS1.pdf</a> (shear strength modeling of clay and silt soils in geotechnical engineering)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RECIPEXP (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Reciprocal Exponential Curve"
+        iq "y=a·e^{b/x}"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (y-scale multiplier)" 1.0)
+        fb (get_real 2 "b (exponent numerator)" 1.0)
+        fc (if (eq (get_keyword 0 "Positive Negative" "Positive or Negative x?" "Positive") "Positive") T nil)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(* fa (exp (/ fb (avoid_zero (eval a2)))))
+        paramstep (/ xspan divcount)
+        paramstep (if fc paramstep (- paramstep))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:RECIPEXP)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

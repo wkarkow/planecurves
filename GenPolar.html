@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GenPolar Curve - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>GenPolar Curve</h1>
+      <p class="short-description">An experimental twenty-parameter generalized polar form constructed as the sum of two independent powered trigonometric terms.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/GenPolar/GenPolar01-360.avif"
+           alt="GenPolar, a1=0,b1=1,c1=0.5,d1=90,e1=1, a2=1,b2=0,c2=0,d2=0,e2=1, a3=0,b3=0.55,c3=-2,d3=90,e3=1, a4=0,b4=1,c4=0.5,d4=0,e4=-1">
+      <figcaption>GenPolar, a1=0,b1=1,c1=0.5,d1=90,e1=1, a2=1,b2=0,c2=0,d2=0,e2=1, a3=0,b3=0.55,c3=-2,d3=90,e3=1, a4=0,b4=1,c4=0.5,d4=0,e4=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GenPolar/GenPolar02-360.avif"
+           alt="GenPolar, a1=1,b1=1,c1=3,d1=180,e1=1, a2=1,b2=0,c2=1,d2=0,e2=1, a3=1,b3=1,c3=7,d3=0,e3=1, a4=1,b4=0,c4=1,d4=0,e4=1">
+      <figcaption>GenPolar, a1=1,b1=1,c1=3,d1=180,e1=1, a2=1,b2=0,c2=1,d2=0,e2=1, a3=1,b3=1,c3=7,d3=0,e3=1, a4=1,b4=0,c4=1,d4=0,e4=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GenPolar/GenPolar03-360.avif"
+           alt="Mathcurve Conchoid, compare to image 2">
+      <figcaption><a href="https://mathcurve.com/courbes2d.gb/conchoid/conchoid.shtml" target="_blank" rel="noopener noreferrer">Mathcurve Conchoid</a>, compare to image 2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GenPolar/GenPolar04-360.avif"
+           alt="GenPolar, a1=0,b1=1,c1=3,d1=90,e1=1, a2=1,b2=0,c2=5,d2=45,e2=1, a3=1,b3=1,c3=5,d3=90,e3=1, a4=0,b4=1,c4=2.5,d4=0,e4=-1">
+      <figcaption>GenPolar, a1=0,b1=1,c1=3,d1=90,e1=1, a2=1,b2=0,c2=5,d2=45,e2=1, a3=1,b3=1,c3=5,d3=90,e3=1, a4=0,b4=1,c4=2.5,d4=0,e4=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GenPolar/GenPolar05-360.avif"
+           alt="GenPolar, a1=0,b1=1,c1=3,d1=90,e1=1.5, a2=1,b2=0,c2=5,d2=45,e2=0.5, a3=1,b3=1,c3=5,d3=90,e3=1, a4=0,b4=1,c4=2.5,d4=0,e4=-1, imaginary, reflected">
+      <figcaption>GenPolar, a1=0,b1=1,c1=3,d1=90,e1=1.5, a2=1,b2=0,c2=5,d2=45,e2=0.5, a3=1,b3=1,c3=5,d3=90,e3=1, a4=0,b4=1,c4=2.5,d4=0,e4=-1, imaginary, reflected</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">GenPolar equation:</div>
+      \[ r = \dfrac{(a_1 + b_1\sin(c_1\theta + d_1))^{e_1}}{(a_2 + b_2\cos(c_2\theta + d_2))^{e_2}} + \dfrac{(a_3 + b_3\sin(c_3\theta + d_3))^{e_3}}{(a_4 + b_4\cos(c_4\theta + d_4))^{e_4}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The GenPolar equation is an experimental generalized polar form developed specifically for curve exploration in AutoCAD. It is constructed as the sum of two independent powered trigonometric terms, each with its own numerator and denominator, and provides twenty independent parameters that can be varied to produce hybrid lobe combinations and internal offsets such as the conchoid shown in the accompanying images. Generalized polar equations that are not tied to any single canonical named curve are relatively rare in the classical literature. One prominent modern example is the Superformula<sup>1</sup> introduced by Johan Gielis in 2003, which uses a single compact expression with adjustable exponents and multipliers to generate a vast array of natural and abstract shapes. Another is the unified polar equation for all conic sections<sup>2</sup>, \( r = \frac{e\cdot d}{1-e\cdot\cos(\theta-\beta)} \). Conchoids themselves constitute a broad general class: given any base curve with polar equation \( r_0(\theta) \), the conchoid with constant modulus \( k \) has the polar form \( r = r_0(\theta) \pm \frac{k}{\cos\phi} \), where \( \phi \) is the angle from the pole to the base point.<sup>3</sup> The images produced by GenPolar include a precise re-creation of the first conchoid figure displayed on mathcurve.com. That reference page defines conchoids in general terms but does not supply the explicit equation for the particular example image shown.<sup>3</sup></p>
+    <p>No specific real-life applications in engineering or the natural sciences have been identified for this exact twenty-parameter GenPolar parametrization. Generalized polar equations of various kinds, however, appear in antenna radiation-pattern modeling, the approximation of certain symmetric biological forms (such as petal or shell outlines), and computer-aided geometric design when a compact parametric representation is needed.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://doi.org/10.3732/ajb.90.3.333" target="_blank" rel="noopener noreferrer">https://doi.org/10.3732/ajb.90.3.333</a> (Gielis J. Superformula. Am. J. Botany 2003).</li>
+      <li><a href="https://web.ma.utexas.edu/users/m408s/m408d/CurrentWeb/LM10-6-3.php" target="_blank" rel="noopener noreferrer">https://web.ma.utexas.edu/users/m408s/m408d/CurrentWeb/LM10-6-3.php</a> (unified polar equation for all conic sections).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/conchoid/conchoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/conchoid/conchoid.shtml</a> (general conchoid polar definition and examples, images).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GENPOLAR (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                   id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu)
+  (setq id "GenPolar"
+        iq "r=((a₁+b₁·sin(c₁·θ+d₁))ᵉ¹/(a₂+b₂·cos(c₂·θ+d₂))ᵉ²)+((a₃+b₃·sin(c₃·θ+d₃))ᵉ³/(a₄+b₄·cos(c₄·θ+d₄))ᵉ⁴)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a₁ (constant offset in first sin numerator term)" 1.0)
+        fb (get_real 0 "b₁ (amplitude of first sin numerator term)" 1.0)
+        fc (get_real 0 "c₁ (frequency multiplier of θ in first sin numerator term)" 1.0)
+        fd (get_real 0 "d₁ (phase shift of first sin numerator term, degrees)" 0.0)
+        fe (get_real 0 "e₁ (exponent of first sin numerator term)" 1.0)
+        ff (get_real 0 "a₂ (constant offset in first cos denominator term)" 1.0)
+        fg (get_real 0 "b₂ (amplitude of first cos denominator term)" 0.0)
+        fh (get_real 0 "c₂ (frequency multiplier of θ in first cos denominator term)" 1.0)
+        fi (get_real 0 "d₂ (phase shift of first cos denominator term, degrees)" 0.0)
+        fj (get_real 0 "e₂ (exponent of first cos denominator term)" 1.0)
+        fk (get_real 0 "a₃ (constant offset in second sin numerator term)" 0.0)
+        fl (get_real 0 "b₃ (amplitude of second sin numerator term)" 0.0)
+        fm (get_real 0 "c₃ (frequency multiplier of θ in second sin numerator term)" 1.0)
+        fn (get_real 0 "d₃ (phase shift of second sin numerator term, degrees)" 0.0)
+        fo (get_real 0 "e₃ (exponent of second sin numerator term)" 1.0)
+        fp (get_real 0 "a₄ (constant offset in second cos denominator term)" 1.0)
+        fq (get_real 0 "b₄ (amplitude of second cos denominator term)" 0.0)
+        fr (get_real 0 "c₄ (frequency multiplier of θ in second cos denominator term)" 1.0)
+        fs (get_real 0 "d₄ (phase shift of second cos denominator term, degrees)" 0.0)
+        ft (get_real 0 "e₄ (exponent of second cos denominator term)" 1.0)
+        fu (get_keyword 0 "Real Imaginary" "Real or Imaginary values allowed for exponents?" "Real")
+        eq_display (strcat "\na1=" (rtos fa 2 4) ", b1=" (rtos fb 2 4) ", c1=" (rtos fc 2 4) ", d1=" (rtos fd 2 4) ", e1=" (rtos fe 2 4) "\na2=" (rtos ff 2 4)
+                           ", b2=" (rtos fg 2 4) ", c2=" (rtos fh 2 4) ", d2=" (rtos fi 2 4) ", e2=" (rtos fj 2 4) "\na3=" (rtos fk 2 4) ", b3=" (rtos fl 2 4)
+                           ", c3=" (rtos fm 2 4) ", d3=" (rtos fn 2 4) ", e3=" (rtos fo 2 4) "\na4=" (rtos fp 2 4) ", b4=" (rtos fq 2 4) ", c4=" (rtos fr 2 4)
+                           ", d4=" (rtos fs 2 4) ", e4=" (rtos ft 2 4) ", " fu)
+        rval '(+ (/ (alt_expt (+ fa (* fb (sin (+ (* fc (eval a2)) (* fd (/ pi 180.0)))))) fe (eq fu "Imaginary")) (avoid_zero (alt_expt (+ ff (* fg (cos (+
+              (* fh (eval a2)) (* fi (/ pi 180.0)))))) fj (eq fu "Imaginary")))) (/ (alt_expt (+ fk (* fl (sin (+ (* fm (eval a2)) (* fn (/ pi 180.0)))))) fo
+              (eq fu "Imaginary")) (avoid_zero (alt_expt (+ fp (* fq (cos (+ (* fr (eval a2)) (* fs (/ pi 180.0)))))) ft (eq fu "Imaginary")))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GENPOLAR)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

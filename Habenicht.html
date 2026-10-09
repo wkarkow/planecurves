@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habenicht Trefoil - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Habenicht Trefoil</h1>
+      <p class="short-description">A decorative polar curve forming a three-lobed trefoil in its classical form.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Habenicht/Habenicht01-360.avif"
+           alt="Habenicht Trefoil, Kidney Bean Curve,a=1,b=1,c=1,d=2,e=0,f=1,g=0">
+      <figcaption>Habenicht Trefoil, Kidney Bean Curve, a=1,b=1,c=1,d=2,e=0,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht02-360.avif"
+           alt="Habenicht Trefoil Bow Tie Curve, a=1,b=2,c=1,d=2,e=0,f=0,g=0">
+      <figcaption>Habenicht Trefoil, Bow Tie Curve, a=1,b=2,c=1,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht03-360.avif"
+           alt="Habenicht Trefoil, a=1,b=3,c=1,d=2,e=0,f=0,g=0">
+      <figcaption>Habenicht Trefoil, a=1,b=3,c=1,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht04-360.avif"
+           alt="Habenicht Trefoil, Four-Leaf Clover Curve, a=1,b=4,c=1,d=2,e=0,f=0,g=0">
+      <figcaption>Habenicht Trefoil, Four-Leaf Clover Curve, a=1,b=4,c=1,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht05-360.avif"
+           alt="Habenicht Trefoil, a=1,b=5,c=1,d=2,e=0,f=0,g=0">
+      <figcaption>Habenicht Trefoil, a=1,b=5,c=1,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht06-360.avif"
+           alt="Habenicht Trefoil, a=1,b=0.5,c=1,d=2,e=0,f=0,g=0">
+      <figcaption>Habenicht Trefoil, a=1,b=0.5,c=1,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht07-360.avif"
+           alt="Habenicht Trefoil, a=1,b=1.5,c=1,d=2,e=0,f=0,g=0">
+      <figcaption>Habenicht Trefoil, a=1,b=1.5,c=1,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht08-360.avif"
+           alt="Habenicht Trefoil, a=1,b=2.5,c=1,d=2,e=0,f=0,g=0">
+      <figcaption>Habenicht Trefoil, a=1,b=2.5,c=1,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht09-360.avif"
+           alt="Generalized Habenicht Trefoil, a=1,b=3,c=2,d=2,e=0,f=0,g=0">
+      <figcaption>Generalized Habenicht Trefoil, a=1,b=3,c=2,d=2,e=0,f=0,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht10-360.avif"
+           alt="Generalized Habenicht Trefoil, a=1,b=3,c=1,d=3,e=0.1,f=2,g=12">
+      <figcaption>Generalized Habenicht Trefoil, a=1,b=3,c=1,d=3,e=0.1,f=2,g=12</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Habenicht/Habenicht11-360.avif"
+           alt="Generalized Habenicht Trefoil, a=1,b=4,c=1,d=3,e=0.1,f=2,g=16">
+      <figcaption>Generalized Habenicht Trefoil, a=1,b=4,c=1,d=3,e=0.1,f=2,g=16</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Habenicht Trefoil polar equation:</div>
+      \[ r = 1 + \cos(n\theta) + \sin^{2}(n\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot \bigl(1 + \cos(b\theta) + c \cdot |\sin(b\theta)|^{d} + e \cdot |\sin(g\theta)|^{f}\bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Habenicht trefoil<sup>1</sup>, a decorative polar curve, appears on MathCurve in the “Decorative Curves” entry under the name “Habenicht trefoil,” with a citation to Henri Brocard (1845–1922), p. 100. However, in the 1919 edition of <em>Courbes géométriques remarquables</em> by Henri Brocard and T. Lemoyne, the name “Habenicht” does not appear in searchable form, and the precise origin of the attribution remains unclear. It is possible that the citation refers to an earlier edition or alternate pagination. Brocard, whose primary contributions include the Brocard points of a triangle and the Brocard angle, assembled extensive bibliographies of plane curves, many of which held more aesthetic than analytic value. The Habenicht trefoil appears among ornamental forms valued for their multi-lobed, flower-like symmetry produced by trigonometric combinations in polar coordinates. The generalized version provided here extends the original by introducing independent multipliers, exponents, and frequencies on the absolute-value sine terms, preserving the three-lobed trefoil symmetry for appropriate parameter choices while permitting controlled sharpening or elaboration of individual lobes. For integer values of <em>n</em>, the curve exhibits <em>n</em>-fold rotational symmetry; when \(n=3\), it forms a three-lobed trefoil figure.</p>
+    <p>Searches of standard mathematical curve databases, including the primary references for plane curves, identify no documented real-life applications of the Habenicht trefoil or its generalizations in engineering or the natural sciences. Its recorded context remains strictly that of a decorative or ornamental curve.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml</a> (Habenicht trefoil history, classification, reference to Brocard 1895)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HABENICHT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb fc fd fe ff fg)
+  (setq id "Generalized Habenicht Trefoil"
+        iq "r=a·(1+cos(bθ)+c·|sin(bθ)|ᵈ+e·|sin(gθ)|ᶠ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (cos frequency)" 3.0)
+        fc (get_real 2 "c (sin1 multiplier)" 1.0)
+        fd (get_real 2 "d (sin1 exponent)" 2.0)
+        fe (get_real 0 "e (sin2 multiplier)" 0.0)
+        ff (get_real 0 "f (sin2 exponent)" 0.0)
+        fg (get_real 0 "g (sin2 frequency)" 0.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", e=" (rtos fe 2 4)
+                           ", f=" (rtos ff 2 4) ", g=" (rtos fg 2 4))
+        rval '(* fa (+ 1 (cos (* fb (eval a2))) (* fc (alt_expt (abs (sin (* fb (eval a2)))) fd T)) (* fe (alt_expt (abs (sin (* fg (eval a2)))) ff T))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HABENICHT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cassinian Curve - Plane Curveswith AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cassinian Curve</h1>
+      <p class="short-description">A plane algebraic curve of degree 2n generalizing the Cassini ovals to n-gon foci.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CassCurve/CassCurve01-360.avif"
+           alt="Cassinian Curve, n=3,multiple values of e"
+           data-caption="Cassinian Curve, a=1,n=3,e=0.7(black),0.8(red),0.9(blue),0.95(green),0.99(orange),0.999(purple),1.0(cyan),1.001(brown),1.01(lime),1.05(magenta),1.20(teal),1.50(plum)">
+      <figcaption>
+        Cassinian Curve, a=1,n=3,e=
+        <span class="figcap-value" style="color:#000000">0.7</span>,
+        <span class="figcap-value" style="color:#FF0000">0.8</span>,
+        <span class="figcap-value" style="color:#0000FF">0.9</span>,
+        <span class="figcap-value" style="color:#009600">0.95</span>,
+        <span class="figcap-value" style="color:#FF9600">0.99</span>,
+        <span class="figcap-value" style="color:#9600FF">0.999</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0</span>,
+        <span class="figcap-value" style="color:#AA5555">1.001</span>,
+        <span class="figcap-value" style="color:#00FF00">1.01</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.05</span>,
+        <span class="figcap-value" style="color:#009696">1.20</span>,
+        <span class="figcap-value" style="color:#960096">1.50</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/CassCurve/CassCurve02-360.avif"
+            alt="Cassinian Curve, n=5,multiple values of e"
+           data-caption="Cassinian Curve, a=1,n=5,e=0.7(black),0.8(red),0.9(blue),0.95(green),0.99(orange),0.999(purple),1.0(cyan),1.001(brown),1.01(lime),1.05(magenta),1.20(teal),1.50(plum)">
+      <figcaption>
+        Cassinian Curve, a=1,n=5,e=
+        <span class="figcap-value" style="color:#000000">0.7</span>,
+        <span class="figcap-value" style="color:#FF0000">0.8</span>,
+        <span class="figcap-value" style="color:#0000FF">0.9</span>,
+        <span class="figcap-value" style="color:#009600">0.95</span>,
+        <span class="figcap-value" style="color:#FF9600">0.99</span>,
+        <span class="figcap-value" style="color:#9600FF">0.999</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0</span>,
+        <span class="figcap-value" style="color:#AA5555">1.001</span>,
+        <span class="figcap-value" style="color:#00FF00">1.01</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.05</span>,
+        <span class="figcap-value" style="color:#009696">1.20</span>,
+        <span class="figcap-value" style="color:#960096">1.50</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cassinian Curve polar equation:</div>
+      \[ r = a \left( \cos (n \theta) \pm \sqrt{ e^{2 n} - \sin^{2} (n \theta) } \right)^{1/n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Cassinian curve<sup>1,2</sup> is the locus of points P such that the geometric mean of the distances from P to n fixed foci is constant. For n = 2 this reduces to the classic Cassini oval, first investigated in 1680 by Giovanni Domenico Cassini (1625–1712), the Italian-French astronomer and director of the Paris Observatory. Cassini examined the curve while studying the relative motions of the Earth and the Sun, considering whether the Sun might travel around the Earth on such an oval with the Earth at one focus. The general n–focus form was later studied by Serret in 1843<sup>2</sup>. The curve is algebraic of degree 2n and is also known as an isodynamic line<sup>1</sup>. In the polar formulation used here, the integer parameter n controls the angular frequency of the curve, producing n–fold rotational symmetry. The resulting shapes resemble Cassinian ovals replicated and interwoven around a circle, with lobes evenly spaced at angles 2π/n. This construction represents only a very small and highly idealized subset of possible multi-focus Cassinian-type loci. Arbitrary placement of three or more foci generally produces curves with no closed-form polar representation and with far less symmetry than those shown here.</p>
+    <p>Real-life applications occur in engineering and the natural sciences<sup>3</sup>. In nuclear physics, generalized Cassinian ovals model nuclear shapes and the potential-energy surfaces that govern nuclear fission processes<sup>3</sup>. In radiolocation and acoustics, the geometry describes the detection zones of bistatic radar and sonar systems, where a separated transmitter and receiver define a Cassini-shaped coverage region; this informs the placement of multistatic sensors such as sonobuoys for underwater surveillance<sup>3</sup>. In industrial engineering the curves guide optimal packing arrangements of objects for storage and transportation<sup>3</sup>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cassinienne/cassinienne.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cassinienne/cassinienne.shtml</a> (definition, polar equation, and isodynamic line)</li>
+      <li><a href="https://mathworld.wolfram.com/CassiniOvals.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CassiniOvals.html</a> (history of Cassini and Serret)</li>
+      <li><a href="https://www.mdpi.com/2073-8994/16/3/334" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2073-8994/16/3/334</a> (nuclear physics, radiolocation, and industrial packing applications)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CASSCURVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                      id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 x1 y1 a2 x2 y2 rval fa fb fc fd fe ff fg fh fi)
+  (setq id "Cassinian Curve"
+        iq "r=a·(cos(nθ)±sqrt(e^(2n)-sin²(nθ)))^(1/n)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 60
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "\na (scale): " 1.0)
+        fb (get_integer 6 "\nn (integer lobes): " 3)
+        fc (get_real 6 "\ne (shape,&lt;1=separate ovals,1=lemniscate,&gt;1=multilobed): " 0.99)
+        fh '(eval a2))
+  (cond
+    ((&lt; fc 1.0)
+     (setq fe (/ (asin (alt_expt fc fb T)) fb)
+           ff '(if (&lt;= (eval a2) (* 2.0 fe)) (+ (- fe) (eval a2)) (- (* 3.0 fe) (eval a2)))
+           fg '(if (&lt;= (eval a2) (* 2.0 fe)) 1.0 -1.0)
+           fh '(eval ff)
+           rval '(progn (setq fi (- (alt_expt fc (* 2.0 fb) T) (alt_expt (sin (* fb (eval ff))) 2.0 T))) (if (&lt; (abs fi) 1e-12) (* fa (alt_expt (cos
+                 (* fb (eval ff))) (/ 1.0 fb) T)) (* fa (alt_expt (+ (cos (* fb (eval ff))) (* (eval fg) (alt_expt fi 0.5 T))) (/ 1.0 fb) T))))
+           paramstep (/ (* 4.0 fe) divcount)))
+    ((= fc 1.0)
+     (setq fe (* 4 fb)
+           divcount (* fe (fix (/ (+ divcount fe -1) fe)))
+           rval '(if (&lt; (abs (cos (* fb (eval a2)))) 1e-12) 0.0 (* fa (alt_expt (+ (cos (* fb (eval a2))) (alt_expt (- (alt_expt fc (* 2.0 fb) T)
+                 (alt_expt (sin (* fb (eval a2))) 2.0 T)) 0.5 T)) (/ 1.0 fb) T)))
+           paramstep (/ (* 2.0 pi) divcount)))
+    ((&gt; fc 1.0)
+     (setq rval '(* fa (alt_expt (+ (cos (* fb (eval a2))) (alt_expt (- (alt_expt fc (* 2.0 fb) T) (alt_expt (sin (* fb (eval a2))) 2.0 T)) 0.5 T)) (/ 1.0 fb) T)))))
+  (setq eq_display (strcat "\nr=" (rtos fa 2 4) "·(cos(" (itoa fb) "θ)±sqrt(" (rtos fc 2 4) "^(" (itoa (* 2 fb)) ")-sin²(" (itoa fb) "θ)))^(1/" (itoa fb) ")")
+        xc '(* (eval rval) (cos (eval fh)))
+        yc '(* (eval rval) (sin (eval fh)))
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (if (&lt; (abs (- fc 1.0)) 1e-12) (command "pedit" "m" plineents "" "d" ""))
+  (if (&lt; fc 1.0) (command "-array" plineents "" "p" basept fb 360.0 ""))
+  (princ))
+(C:CASSCURVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

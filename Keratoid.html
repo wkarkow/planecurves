@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keratoid Cusp - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Keratoid Cusp</h1>
+      <p class="short-description">A parametric family of plane curves that exhibit keratoid (first-kind) cusps.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Keratoid/Keratoid01-360.avif"
+           alt="Keratoid Cusp, a=3,b=2">
+      <figcaption>Keratoid Cusp, a=3,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Keratoid/Keratoid02-360.avif"
+           data-caption="Keratoid Cusp, a=3.0(black),2.5(red),2.0(blue),1.5(green),1.0(orange),0.5(purple), b=2"
+           alt="Keratoid Cusp, a=3.0(black),2.5(red),2.0(blue),1.5(green),1.0(orange),0.5(purple), b=2">
+      <figcaption>
+        Keratoid Cusp, a=
+        <span class="figcap-value" style="color:#000000">3.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.5</span>,
+        <span class="figcap-value" style="color:#0000FF">2.0</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        b=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Keratoid/Keratoid03-360.avif"
+           data-caption="Keratoid Cusp, a=3.0,b=3.0(black),2.5(red),2.0(blue),1.5(green),1.0(orange),0.5(purple)"
+           alt="Keratoid Cusp, a=3.0,b=3.0(black),2.5(red),2.0(blue),1.5(green),1.0(orange),0.5(purple)">
+      <figcaption>
+        Keratoid Cusp, a=3.0,b=
+        <span class="figcap-value" style="color:#000000">3.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.5</span>,
+        <span class="figcap-value" style="color:#0000FF">2.0</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Keratoid Cusp implicit equation:</div>
+      \[ y^{2} = x^{2} y + x^{5} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Keratoid Cusp parametric equations:</div>
+      \[ x = t(t-1),\quad y = t^{3}(t-1)^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = t(t-1),\quad y = t^{a}(t-1)^{b} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The keratoid cusp<sup>1</sup> is a type of singular point (cusp of the first kind or first species) on a plane algebraic curve. At such a point the two branches meet along a common tangent line but lie on opposite sides of that tangent, resembling the shape of a horn. The name “keratoid” comes from the Greek <em>keras</em> for horn. French mathematician Louis-Benjamin Francoeur (1773–1849), professor at the École Polytechnique and author of widely used textbooks on mathematics and astronomy, introduced the term in 1809 to distinguish this first-kind cusp from the ramphoid<sup>2</sup> (second-kind) cusp, in which both branches approach the tangent from the same side. A standard algebraic example of a curve exhibiting such a cusp is the quintic given in Cartesian form. The parametric equations employed in the AutoLISP code generate a family of cuspidal curves by varying the real exponents a and b. These parameters control the opening angle and sharpness at the cusps that occur when t = 0 and t = 1. The positive and negative limbs (selected via the dialog) simply reverse the direction of parameter advance to trace the desired branch without altering the underlying geometry. Such curves serve as concrete illustrations in differential calculus for examining points where the derivative is undefined and where the usual rules for tangents must be applied with care.</p>
+    <p>No real-life applications in engineering or the natural sciences were identified for the keratoid cusp itself. It remains a classical example used in algebraic geometry and calculus education to demonstrate the classification of singular points on plane curves.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/KeratoidCusp.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/KeratoidCusp.html</a> (quintic algebraic example and properties).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ramphoid/ramphoide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ramphoid/ramphoide.shtml</a> (history of keratoid and ramphoid cusp terminology by Francoeur 1809).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:KERATOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Keratoid Cusp"
+        iq "x=t·(t-1), y=tᵃ·(t-1)ᵇ"
+        dcl "KERATOID"
+        opt '("Positive limb" "Negative limb")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (power of t)" 3.0)
+        fb (get_real 2 "b (power of (t-1))" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(* (eval a2) (- (eval a2) 1))
+        yc '(* (alt_expt (eval a2) fa nil) (alt_expt (- (eval a2) 1) fb nil))
+        paramstep (if (eq kw 1) (- paramstep) paramstep)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:KERATOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

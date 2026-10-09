@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elastic Catenary - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Elastic Catenary</h1>
+      <p class="short-description">The shape taken by a flexible elastic cable of uniform cross-section hanging under its own weight between two fixed supports.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/ElasticCat/ElasticCat01-360.avif"
+           alt="Elastic Catenary Free-run, w₀=1,H=10,half-span=9.98,unstretched cable length=10,multiple values of EA,compared with catenary">
+      <figcaption>
+        Elastic Catenary Free-run, w₀=1,H=10,half-span=9.98,unstretched cable length=10,EA=
+        <span class="figcap-value" style="color:#000000">1000</span>,
+        <span class="figcap-value" style="color:#FF0000">200</span>,
+        <span class="figcap-value" style="color:#0000FF">80</span>,
+        <span class="figcap-value" style="color:#009600">40</span>,
+        <span class="figcap-value" style="color:#FF9600">20</span>,
+        <span class="figcap-value" style="color:#9600FF">15</span>,
+        <span class="figcap-value" style="color:#0096FF">10</span>,
+        compared with
+        <span class="figcap-value" style="color:#AA5555">catenary</span>
+
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCat/ElasticCat02-360.avif"
+           alt="Elastic Catenary Unstretched vs span, w₀=1,H=10,EA=1000,half-span=10,multiple values of unstretched cable length">
+      <figcaption>
+        Elastic Catenary Unstretched vs span, w₀=1,H=10,EA=1000,half-span=10,unstretched cable length=
+        <span class="figcap-value" style="color:#000000">10</span>,
+        <span class="figcap-value" style="color:#FF0000">10.33</span>,
+        <span class="figcap-value" style="color:#0000FF">10.67</span>,
+        <span class="figcap-value" style="color:#009600">11</span>,
+        <span class="figcap-value" style="color:#FF9600">11.33</span>,
+        <span class="figcap-value" style="color:#9600FF">11.67</span>,
+        <span class="figcap-value" style="color:#0096FF">12</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCat/ElasticCat03-360.avif"
+           alt="Elastic Catenary Span+Sag, w₀=1,H=10,EA=1000,half-span=10, multiple values of sag, H, and unstretched cable length">
+      <figcaption>
+        Elastic Catenary Span+Sag, w₀=1,H=10,EA=1000,half-span=10, sag;H;unstretched cable length=
+        <span class="figcap-value" style="color:#000000">1;47.96;9.6027</span>,
+        <span class="figcap-value" style="color:#FF0000">2;24.76;10.0072</span>,
+        <span class="figcap-value" style="color:#0000FF">3;16.89;10.3901</span>,
+        <span class="figcap-value" style="color:#009600">4;12.97;10.8404</span>,
+        <span class="figcap-value" style="color:#FF9600">5;10.64;11.3650</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Elastic Catenary differential equations:</div>
+      \[ \dfrac{dV}{ds_{0}} = w_{0},\quad \dfrac{dx}{ds_{0}} = \dfrac{H}{\sqrt{H^{2}+V^{2}}} + \dfrac{H}{EA},\quad \dfrac{dy}{ds_{0}} = \dfrac{V}{\sqrt{H^{2}+V^{2}}} + \dfrac{V}{EA} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The elastic catenary<sup>1,2</sup> is the shape taken by a flexible, elastic cable or wire of uniform cross-section hanging under its own weight between two fixed points, allowing for stretch according to Hooke’s law. While the classical (inextensible) catenary was correctly solved mathematically in 1691 by Christiaan Huygens, Gottfried Wilhelm Leibniz and Johann Bernoulli, the elastic variant that incorporates axial extensibility was studied by Finck and Bobillier in 1826<sup>3</sup>.</p>
+    <p>The governing differential relations follow from equilibrium of forces and the linear elastic extension of the cable. These equations are widely used when the change in length due to tension is not negligible. Modern treatments often express the governing equations in terms of the axial stiffness EA, emphasizing that the product of elastic modulus and cross-sectional area, not either quantity alone, controls stretching.</p>
+    <p>Real-life applications occur mainly in civil, structural, and offshore engineering. The elastic catenary model is fundamental in the design and analysis of mooring lines and steel catenary risers for floating oil platforms and floating wind turbines<sup>3</sup>, where accurate prediction of sag, tension, and stretch is critical for system performance and fatigue life. Anchor chains and synthetic mooring lines have finite unstretched lengths and significant elasticity. Given a water depth and horizontal offset, engineers evaluate how much restoring force and vertical clearance result from deploying a fixed length of line. In this setting, the unstretched length and span are known, while sag and tension follow from equilibrium, precisely the scenario modeled by the “Unstretched vs Span” mode. Elastic effects are also important in overhead lines and guy wires, particularly when accounting for temperature change. As a cable warms or cools, its effective unstretched length changes, altering both sag and tension while the supports remain fixed. Sag–tension tables used in utility engineering are built on elastic catenary principles, even when simplified parabolic approximations are employed for routine calculations. In temporary rigging, lifting slings, and safety cables, the available cable length is often fixed by fabrication or certification. Engineers and technicians must determine whether a given span can be achieved safely and what tensions will develop. In such cases, sag is evaluated rather than prescribed, and elastic stretch may supply a significant portion of the required reach. The elastic catenary also appears in architectural tension structures, cable-supported roofs, and lightweight bridges, where material efficiency and visual form are both influenced by axial deformation. Conversely, in clearance-driven problems—such as ensuring minimum ground clearance under a suspended line—the desired sag may be specified first, and the required cable length and tension are then determined. This corresponds to the “Span + Sag” formulation.</p>
+    <p>The following code is based on a set of standard engineering assumptions. The cable lies in a vertical plane and is subjected only to its own weight. The gravitational load is taken as a uniform weight per unit unstretched length, denoted w<sub>0</sub> (force per unit length). The cable is assumed to be linearly elastic in axial extension, characterized by its axial stiffness EA (force). Bending stiffness is neglected, so the cable carries only tension. The cross-section is constant along the length, so problems of “equal strength” are excluded. The configuration is quasi-static, with no dynamic effects. Under these assumptions, the elastic catenary does not admit a simple closed-form solution. Instead, the geometry follows from a coupled system of differential equations written with respect to the unstretched arc-length parameter s<sub>0</sub>. The vertical component of tension increases linearly with unstretched length, dV/ds<sub>0</sub> = w<sub>0</sub>, while the horizontal and vertical coordinates satisfy dx/ds<sub>0</sub> = H/√(H<sup>2</sup>+V<sup>2</sup>) + H/EA, dy/ds<sub>0</sub> = V/√(H<sup>2</sup>+V<sup>2</sup>) + V/EA. Here H is the horizontal component of tension, which remains constant along the cable, and V(s<sub>0</sub>) is the vertical component. The additional terms involving EA account for axial stretching of the cable. Integration begins at the lowest point of the cable, where the initial conditions are x(0) = 0, y(0) = 0, V(0) = 0, with H &gt; 0 supplied by the user or determined by an outer iteration. The code implements a stateful, step-by-step numerical integration of these equations, updating the tension components and coordinates incrementally along the cable. When geometric constraints are imposed, such as a prescribed span, a prescribed sag, or a prescribed unstretched length, auxiliary “shooting method” solvers are used to adjust the unknown parameters. Depending on the selected mode, the solver iterates on horizontal tension, unstretched length, or both, until the required end conditions are satisfied.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/chainette/chainetteelastique.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/chainette/chainetteelastique.shtml</a> (definition, history, and differential equation)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Catenary" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Catenary</a> (elastic catenary section and parametric form)</li>
+      <li><a href="https://asmedigitalcollection.asme.org/offshoremechanics/article/146/4/042001/1196925/Novel-Exact-Solution-of-Elastic-Catenary-and" target="_blank" rel="noopener noreferrer">https://asmedigitalcollection.asme.org/offshoremechanics/article/146/4/042001/1196925/Novel-Exact-Solution-of-Elastic-Catenary-and</a> (offshore mooring)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ELASTICCAT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag id iq
+                       dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv)
+
+(defun xend (a / b c d e f g h)
+  (setq c (- paramstep)
+        d (* fa c)
+        e 0.0
+        f 0.0
+        g 1
+        b 0)
+  (while (&lt; b divcount)
+    (setq c (+ c paramstep)
+          d (+ d (* fa paramstep)))
+    (if (= g 1)
+      (setq g 0)
+      (progn
+        (setq h (alt_expt (+ (* a a) (* d d)) 0.5 nil)
+              e (+ e (* paramstep (+ (/ a h) (/ a fb))))
+              f (+ f (* paramstep (+ (/ d h) (/ d fb)))))))
+    (setq b (1+ b)))
+  (list e f))
+
+(defun solx (a b / c d e f g h)
+  (setq c 1e-6
+        d (max b c)
+        e (car (xend d))
+        f 0)
+  (while (and (&lt; e a) (&lt; f 50))
+    (setq d (* 2.0 d)
+          e (car (xend d))
+          f (1+ f)))
+  (setq f 0)
+  (while (&lt; f 32)
+    (setq g (* 0.5 (+ c d))
+          h (car (xend g)))
+    (if (&lt; h a) (setq c g) (setq d g))
+    (setq f (1+ f)))
+  d)
+
+(defun ylo (a b c / d e)
+  (setq paramstep (/ a (float (1- divcount))))
+  (setq d (solx b c))
+  (setq fn d
+        e (xend d))
+  (cadr e))
+
+  (setq id "Elastic Catenary"
+        iq "dV/ds₀=w₀ , dx/ds₀=H/T + H/EA , dy/ds₀=V/T + V/EA where T=√(H²+V²)"
+        dcl "ELASTICCAT"
+        opt '("Free-run" "Unstretched vs span" "Span+Sag")
+        kw 0
+        mode 'param
+        dpr "# of divisions in half-span"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "w0 (weight per unstretched length)" 1.0)
+        fb (get_real 6 "EA (axial stiffness)" 1000.0))
+  (cond
+    ((eq kw 0)
+     (setq fc (get_real 6 "H (horizontal tension at low point)" 10.0)
+           fd (get_real 6 "Unstretched segment length)" 0.02)
+           paramstep fd
+           fq (* (1- divcount) paramstep)
+           eq_display (strcat "\nElastic Catenary: w0=" (rtos fa 2 4) ", EA=" (rtos fb 2 4) ", H=" (rtos fc 2 4) ", half-span=" (rtos fq 2 4)
+                              ", unstretched segment length=" (rtos paramstep 2 6) ", # of segments=" (itoa divcount))))
+    ((eq kw 1)
+     (setq fo (get_real 6 "half-span" 15.0)
+           fq (get_boundr 6 "Unstretched half-length" nil fo nil T nil)
+           fc (get_real 6 "Initial H (horizontal tension) guess" 10.0))
+     (setq paramstep (/ fq (float (1- divcount))))
+     (setq fc (solx fo fc))
+     (setq eq_display (strcat "\nElastic Catenary: w0=" (rtos fa 2 4) ", EA=" (rtos fb 2 4) ", half-span=" (rtos fo 2 4) ", unstretched half-length="
+                              (rtos fq 2 4) ", H=" (rtos fc 2 6) ", unstretched segment length=" (rtos paramstep 2 6) ", # of segments=" (itoa divcount))))
+    (T
+     (setq fo (get_real 6 "half-span" 15.0)
+           fp (get_real 6 "Sag (support height to low point)" 1.0)
+           fc (get_real 6 "Initial H guess" 10.0)
+           eq_display (strcat "\nElastic Catenary: w0=" (rtos fa 2 4) ", EA=" (rtos fb 2 4) ", half-span=" (rtos fo 2 4) ", sag=" (rtos fp 2 4))
+           fr (* 0.2 fo)
+           fs fo
+           ft (ylo fr fo fc)
+           fu (ylo fs fo fc)
+           fv 0)
+     (while (and (&gt; ft fp) (&lt; fv 40))
+       (setq fr (* 0.5 fr)
+             ft (ylo fr fo fc)
+             fv (1+ fv)))
+     (setq fv 0)
+     (while (and (&lt; fu fp) (&lt; fv 40))
+       (setq fs (* 1.5 fs)
+             fu (ylo fs fo fc)
+             fv (1+ fv)))
+     (if (or (&gt; ft fp) (&lt; fu fp))
+       (progn
+         (setq fq fo
+               paramstep (/ fq (float (max 1 (1- divcount))))
+               fc (max 1e-6 fc)
+               eq_display (strcat eq_display "\n unable to bracket sag with current w0/EA. Try different Sag, EA, or Initial H.")))
+       (progn
+         (setq fv 0)
+         (while (&lt; fv 30)
+           (setq fq (* 0.5 (+ fr fs)))
+           (if (&lt; (ylo fq fo fc) fp) (setq fr fq) (setq fs fq))
+           (setq fv (1+ fv)))
+         (setq fq fs
+               paramstep (/ fq (float (max 1 (1- divcount))))
+               fc fn
+               eq_display (strcat eq_display ", unstretched half-length=" (rtos fq 2 4) ", Hsol=" (rtos fc 2 6)
+                                  ", unstretched segment length=" (rtos paramstep 2 6) ", # of segments=" (itoa divcount)))))))
+  (setq fe fa
+        ff fb
+        fg fc
+        fh (- paramstep)
+        fi (* fe fh)
+        fj 0.0
+        fk 0.0
+        fl 1
+        a2 '(progn (setq fh (+ fh paramstep) fi (+ fi (* fe paramstep))) (if (= fl 1) (progn (setq fl 0) fh) (progn (setq fm (alt_expt (+ (* fg fg)
+            (* fi fi)) 0.5 nil) fj (+ fj (* paramstep (+ (/ fg fm) (/ fg ff)))) fk (+ fk (* paramstep (+ (/ fi fm) (/ fi ff))))) fh)))
+        xc 'fj
+        yc 'fk
+        skm '(nil T T)
+        a1 0.0
+        x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc)
+        restartflag nil)
+  (cc))
+(C:ELASTICCAT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Periapsis Precession Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Periapsis Precession Spiral</h1>
+      <p class="short-description">A polar plot of a precessing elliptical orbit.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Periapsis/Periapsis01-360.avif"
+           alt="Periapsis Precession Spiral, p=1,e=0.25,Δω=5°,ω₀=0°,10 orbits">
+      <figcaption>Periapsis Precession Spiral, p=1,e=0.25,Δω=5°,ω₀=0°,10 orbits</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Periapsis/Periapsis02-360.avif"
+           alt="Periapsis Precession Spiral, p=1,e=0.25,Δω=5°,ω₀=0°,73 orbits">
+      <figcaption>Periapsis Precession Spiral, p=1,e=0.25,Δω=5°,ω₀=0°,73 orbits</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Periapsis/Periapsis03-360.avif"
+           alt="Periapsis Precession Spiral, p=1,e=0.5,Δω=10°,ω₀=0°,37 orbits">
+      <figcaption>Periapsis Precession Spiral, p=1,e=0.5,Δω=10°,ω₀=0°,37 orbits</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Periapsis/Periapsis04-360.avif"
+           alt="Periapsis Precession Spiral, p=1,e=0.75,Δω=20°,ω₀=0°,19 orbits">
+      <figcaption>Periapsis Precession Spiral, p=1,e=0.75,Δω=20°,ω₀=0°,19 orbits</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Periapsis Precession Curve polar equation:</div>
+      \[ r = \dfrac{p}{1+e\cdot\cos\left(\dfrac{\theta-\omega_{0}}{1+\Delta\omega/360}\right)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Equivalent form with frequency factor \(k\):</div>
+      \[ r = \dfrac{p}{1+e\cdot\cos\bigl(k(\theta-\omega_{0})\bigr)},\qquad k=\dfrac{1}{1+\Delta\omega/360} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Apsidal precession is the gradual rotation of the line connecting the apsides (periapsis and apoapsis) of an elliptical orbit. The Periapsis Precession Spiral provides a simple polar parameterization to visualize and plot such precessing orbits over multiple revolutions, producing rosette-like patterns. Isaac Newton first analyzed this effect mathematically in his <em>Principia Mathematica</em> (1687) via the theorem of revolving orbits, applying it to the Moon and planets under inverse-square forces.<sup>1</sup> In 1859 Urbain Le Verrier identified an anomalous excess advance in Mercury’s perihelion (approximately 43 arcseconds per century) after subtracting all Newtonian planetary perturbations.<sup>2</sup> This residual was explained exactly by Albert Einstein in 1915 within general relativity, providing one of the earliest quantitative tests of the theory.<sup>3</sup></p>
+    <p>In engineering and the natural sciences the effect is routinely modeled for artificial satellites whose orbits experience apsidal precession from Earth’s oblateness; highly elliptical Molniya orbits, for example, are placed at a critical inclination of 63.4° so that the argument of perigee remains stationary, enabling continuous high-latitude coverage.<sup>4</sup> Apsidal precession is also one component of the Milankovitch cycles, where Earth’s orbital parameter changes (including a ~112&nbsp;000-year apsidal precession cycle) alter the seasonal and latitudinal distribution of solar insolation and have driven long-term climate variations including glacial-interglacial cycles.<sup>5</sup></p>
+    <p>In the AutoLISP routine, \(p\) is the scale (semi-latus rectum, default 1), \(e&lt;1\) is the eccentricity (default 0.25), \(\Delta\omega\) is the periapsis advance in degrees per orbit with the positive sign prograde (default 5), and \(\omega_0\) is the initial periapsis direction in degrees (default 0). The frequency factor is computed as \(k=1/(1+\Delta\omega/360)\). The polar radius uses \(1+e\cos(k(\theta-\omega_0))\) in the denominator; a vanishing denominator is blocked by the usual <code>avoid_zero</code> guard. The trace is drawn in polar mode over one 360° span of the parameter; repeating the command or increasing the drawn span shows the accumulating rosette.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Newton%27s_theorem_of_revolving_orbits" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Newton%27s_theorem_of_revolving_orbits</a> (Newton’s analysis of apsidal precession)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Apsidal_precession" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Apsidal_precession</a> (Le Verrier’s Mercury observation)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Tests_of_general_relativity" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Tests_of_general_relativity</a> (Einstein 1915 explanation)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Molniya_orbit" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Molniya_orbit</a> (satellite engineering application)</li>
+      <li><a href="https://science.nasa.gov/science-research/earth-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/" target="_blank" rel="noopener noreferrer">https://science.nasa.gov/science-research/earth-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/</a> (Milankovitch cycles component)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PERIAPSIS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                    restartflag xspan id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq id "Periapsis Precession Spiral"
+        iq "r=p/(1+e·cos(k(θ-ω₀))), k=1/(1+Δω/360)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "p (scale / semi-latus rectum)" 1.0)
+        fb (get_real 2 "e (eccentricity, <1)" 0.25)
+        fc (get_real 2 "Δω (° per orbit, + = prograde)" 5.0)
+        fd (get_real 2 "ω₀ (initial periapsis direction in °)" 0.0)
+        fe (/ 1.0 (+ 1.0 (/ fc 360.0)))
+        ff (* fd (/ pi 180.0))
+        eq_display (strcat "\np=" (rtos fa 2 4) ", e=" (rtos fb 2 4) ", Δω=" (rtos fc 2 4) ", ω₀=" (rtos fd 2 4))
+        rval '(/ fa (avoid_zero (+ 1.0 (* fb (cos (* fe (- (eval a2) ff)))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PERIAPSIS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eight Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Eight Curve</h1>
+      <p class="short-description">A quartic algebraic curve that crosses itself at the origin to form a figure-eight or infinity-symbol path.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/EightCurve/EightCurve01-360.avif"
+           alt="Eight Curve, a=1,b=1,c=1,d=1">
+      <figcaption>Eight Curve, a=1,b=1,c=1,d=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Eight Curve implicit equation:</div>
+      \[ x^{4} = a^{2}(x^{2} - y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Eight Curve parametric equations:</div>
+      \[ x = a \cdot \sin(\theta),\quad y = a \cdot \sin(\theta) \cdot \cos(\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Eight Curve polar equation:</div>
+      \[ r^{2} = a^{2} \cdot \sec^{4}(\theta)\cos(2\theta) \]
+
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = a \cdot \sin^{b}(\theta),\quad y = a \cdot \sin^{c}(\theta)\cos^{d}(\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Eight Curve<sup>1,2</sup>, also known as the lemniscate of Gerono or figure-eight curve, is a quartic algebraic curve that crosses itself at the origin to form a path resembling the numeral 8 lying on its side or the infinity symbol ∞. The curve was studied by Grégoire de Saint-Vincent in 1647 and by Gabriel Cramer in 1750. It received its modern name from Aubry in 1895 in honor of the French mathematician Camille-Christophe Gerono (1799–1891). Gerono co-founded the Nouvelles Annales de Mathématiques, a prominent French mathematics journal intended for students and teachers, alongside Olry Terquem. The journal was notable for promoting accessible mathematics during a period of increasing specialization in the field. Leibniz referenced a related figure-eight curve in a 1691 letter to Huygens, giving rise to the occasional alternative name lemniscate of Huygens. The parametric form implemented in the AutoLISP code offers a generalized family of powered curves that includes the classic Eight Curve when the exponents b = c = d = 1. Its equation is similar to that of the dumbbell curve.</p>
+    <p>In engineering, linkage mechanisms have been synthesized to generate the curve for use in textile machinery, mechanical toys, and precision curve-drawing instruments.<sup>3</sup> As a special 1:2 Lissajous curve, it also appears in vibration analysis and oscilloscope-based frequency/phase comparison.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/gerono/gerono.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/gerono/gerono.shtml</a> (history, equations, constructions).</li>
+      <li><a href="https://mathworld.wolfram.com/EightCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/EightCurve.html</a> (equations, properties).</li>
+      <li><a href="https://iopscience.iop.org/article/10.1088/1757-899X/514/1/012035" target="_blank" rel="noopener noreferrer">https://iopscience.iop.org/article/10.1088/1757-899X/514/1/012035</a> (mechanisms that generate the curve for engineering use).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:EIGHTCURVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd)
+  (setq id "Eight Curve"
+        iq "x=a·sinᵇ(θ), y=a·sinᶜ(θ)·cosᵈ(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (x sin exponent)" 1.0)
+        fc (get_real 2 "c (y sin exponent)" 1.0)
+        fd (get_real 2 "d (y cos exponent)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(* fa (alt_expt (sin (eval a2)) fb nil))
+        yc '(* fa (alt_expt (sin (eval a2)) fc nil) (alt_expt (cos (eval a2)) fd nil))
+        maxdraw (if (or (&lt; fb 0) (&lt; fc 0) (&lt; fd 0)) (get_real 2 "Maximum x and y values allowed?" 1e5) 1e5)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:EIGHTCURVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

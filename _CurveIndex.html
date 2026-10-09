@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curve Index - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+  <style>
+    /* Index-specific refinements for clean professional list */
+    .index-container {
+      max-width: 1800px;
+      margin: 24px auto;
+      padding: 0 12px;
+    }
+    .index-container h2 {
+      margin: 0 0 12px 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    #curve-list {
+  list-style: decimal;
+  padding-left: 4px;
+  margin: 0;
+  line-height: 1.45;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(60, auto);   /* ← Add this */
+  grid-auto-flow: column;                 /* ← Keep this */
+  column-gap: 16px;
+  row-gap: 1px;
+  list-style-position: inside;
+}
+    #curve-list li {
+      margin-bottom: 2px;
+    }
+    #curve-list a {
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 1.02rem;
+    }
+    #curve-list a.done {
+      color: #009600;
+      font-weight: 500;
+    }
+    #curve-list a:hover {
+      text-decoration: underline;
+    }
+    .img-count {
+      font-size: 0.9rem;
+      color: #666;
+      margin-left: 6px;
+    }
+    .list-meta {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .search-box {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 16px auto;
+      padding: 8px 12px;
+      font-size: 1rem;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Primary nav ribbon -->
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <span class="nav-current">Curve Lookup</span>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="curve-header">
+      <div class="curve-nav">
+        <a href="_Main.html">Home</a>
+      </div>
+      <div class="curve-title-block">
+        <h1>Curve Lookup</h1>
+        <p class="short-description">List of all curves. Click any entry to open its dedicated page. Green entries have working pages; blue entries are pending.</p>
+      </div>
+    </section>
+
+    <div class="index-container">
+      <div class="list-meta">
+        <span id="curve-count"></span> curves · 
+        <span id="image-count"></span> images total · 
+        sorted alphabetically · use Ctrl+F or the filter box below for quick lookup
+      </div>
+
+      <input type="text" id="search-input" class="search-box" placeholder="Filter curves by name..." aria-label="Filter the curve list">
+
+      <ol id="curve-list"></ol>
+    </div>
+  </main>
+
+  <script src="_Curve-list.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.getElementById("curve-list");
+      const countEl = document.getElementById("curve-count");
+      const searchInput = document.getElementById("search-input");
+
+      if (typeof curveList === "undefined" || !Array.isArray(curveList)) {
+        container.innerHTML = "<li style='color:#c00;'>Error: _Curve-list.js not loaded or invalid.</li>";
+        return;
+      }
+
+      // Sort alphabetically by title (localeCompare handles apostrophes, spaces, case)
+      const sortedCurves = [...curveList].sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: "base" }));
+
+      // Render the list
+      function renderList(filteredCurves) {
+        container.innerHTML = "";
+        let totalImages = 0;
+
+        filteredCurves.forEach(curve => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = curve.filename;
+          a.textContent = curve.title;
+
+          if (curve.done) a.classList.add("done");
+
+          // Calculate image count from images object
+          const imgCount = (typeof curve.imgCount === "number")
+            ? curve.imgCount
+            : (curve.images ? Object.keys(curve.images).length : 0);
+          totalImages += imgCount;
+          if (imgCount > 0) {
+            const span = document.createElement("span");
+            span.className = "img-count";
+            span.textContent = `(${imgCount} image${imgCount === 1 ? '' : 's'})`;
+            a.appendChild(span);
+          }
+
+          li.appendChild(a);
+          container.appendChild(li);
+        });
+
+        // Update totals
+        countEl.textContent = filteredCurves.length;
+        document.getElementById("image-count").textContent = totalImages;
+      }
+
+      // Initial render
+      renderList(sortedCurves);
+
+      // Client-side filter (simple, no extra dependencies)
+      searchInput.addEventListener("input", function() {
+        const term = searchInput.value.toLowerCase().trim();
+        if (!term) {
+          renderList(sortedCurves);
+          return;
+        }
+        const filtered = sortedCurves.filter(c => c.title.toLowerCase().includes(term));
+        renderList(filtered);
+      });
+
+      // Optional: focus search on page load for power users (engineers often keyboard-driven)
+      // searchInput.focus(); // commented; enable only if desired
+    });
+  </script>
+</body>
+</html>

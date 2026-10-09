@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gear Curve - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Gear Curve</h1>
+      <p class="short-description">A closed polar curve resembling a gear with n evenly spaced rounded teeth.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Gear/Gear01-360.avif"
+           alt="Gear Curve, a=1,b=5,n=12">
+      <figcaption>Gear Curve, a=1,b=5,n=12</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gear/Gear02-360.avif"
+           alt="Gear Curve, a=2,b=3,n=12">
+      <figcaption>Gear Curve, a=2,b=3,n=12</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gear/Gear03-360.avif"
+           alt="Gear Curve, a=4,b=3,n=36">
+      <figcaption>Gear Curve, a=4,b=3,n=36</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gear/Gear04-360.avif"
+           alt="Gear Curve, a=1,b=5,n=2">
+      <figcaption>Gear Curve, a=1,b=5,n=2</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Gear Curve polar equation:</div>
+      \[ r = a + \dfrac{1}{b}\tanh\bigl(b\sin(n\theta)\bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Gear Curve<sup>1,2</sup> is a parametric plane curve that produces a closed polar outline resembling a gear with n evenly spaced teeth. It is constructed using the hyperbolic tangent function to modulate the radius smoothly between a base value and small positive/negative excursions, yielding rounded tooth profiles without discontinuities. Standard mathematical references introduce it without attribution to any specific mathematician or discovery event; it first appears in modern curve atlases and software as an example of transcendental functions applied to gear-like forms.</p>
+    <p>No real-life applications in engineering or the natural sciences are documented for this exact curve. Involute gear profiles (most common in mechanical gears today) were advanced by Leonhard Euler. They have the property of consistent tooth engagement, regardless of the mating gears’ specifics in terms of relative number of teeth. Their advantage is in reducing the number of gear shapes needed to match others and be kept in inventory. Cycloidal profiles persist in specialized applications like clocks and timepieces due to having fewer points of contact than involute gear teeth as the gears mesh. In the history of gear manufacture, the invention of specialized gear-shaping machinery by Edwin R. Fellows in the late 19th century revolutionized mass gear production. His machines employed gear-like cutters to generate accurate gear teeth and were critical in automotive and wartime manufacturing. During WWII, H. E. Merritt, a mechanical engineer, documented many of the mathematical challenges in gear behavior and transmission systems in seminal works like <em>Gears</em>. The Gear Curve remains an illustrative construct used in mathematics education and parametric plotting demonstrations.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/GearCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/GearCurve.html</a> (definition, equation, and plots)</li>
+      <li><a href="http://users.math.uoc.gr/~pamfilos/eGallery/problems/GearCurve.html" target="_blank" rel="noopener noreferrer">http://users.math.uoc.gr/~pamfilos/eGallery/problems/GearCurve.html</a> (equation confirmation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GEAR (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                 xspan restartflag rval xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc id iq dcl opt kw mode dpr dct dpt span)
+  (setq id "Gear Curve"
+        iq "r=a+(1/b)·tanh(b·sin(n·θ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (mean gear radius (inner + 1/2 tooth))" 1.0)
+        fb (get_real 2 "b (tooth sharpness, larger = squarer)" 5.0)
+        fc (get_integer 6 "n (tooth count)" 12)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", n=" (itoa fc))
+        rval '(+ fa (/ (tanh (* fb (sin (* fc (eval a2))))) fb))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GEAR)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

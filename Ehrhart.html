@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ehrhart Egg - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ehrhart Egg</h1>
+      <p class="short-description">A closed convex curve (triellipse) defined as the locus of points whose summed distances to three fixed collinear foci equal a constant k approximating a hen’s egg.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Ehrhart/Ehrhart01-360.avif"
+           alt="Ehrhart Egg, b=0.2,c=1,k=2.2">
+      <figcaption>Ehrhart Egg, b=0.2,c=1,k=2.2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ehrhart/Ehrhart02-360.avif"
+           alt="Ehrhart Egg, multiple values of b,c=1,k=2.2">
+      <figcaption>
+        Ehrhart Egg, b=
+        <span class="figcap-value" style="color:#000000">-0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">-0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">-0.3</span>,
+        <span class="figcap-value" style="color:#009600">-0.2</span>,
+        <span class="figcap-value" style="color:#FF9600">-0.1</span>,
+        <span class="figcap-value" style="color:#9600FF">0.0</span>,
+        <span class="figcap-value" style="color:#0096FF">0.1</span>,
+        <span class="figcap-value" style="color:#AA5555">0.2</span>,
+        <span class="figcap-value" style="color:#00FF00">0.3</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.4</span>,
+        <span class="figcap-value" style="color:#009696">0.5</span>,
+        c=1,k=2.2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ehrhart/Ehrhart03-360.avif"
+           alt="Ehrhart Egg, b=0.2,c=1,multiple values of k">
+      <figcaption>
+        Ehrhart Egg, b=0.2,c=1,k=
+        <span class="figcap-value" style="color:#000000">1.8</span>,
+        <span class="figcap-value" style="color:#FF0000">1.9</span>,
+        <span class="figcap-value" style="color:#0000FF">2.0</span>,
+        <span class="figcap-value" style="color:#009600">2.1</span>,
+        <span class="figcap-value" style="color:#FF9600">2.2</span>,
+        <span class="figcap-value" style="color:#9600FF">2.3</span>,
+        <span class="figcap-value" style="color:#0096FF">2.4</span>,
+        <span class="figcap-value" style="color:#AA5555">2.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.6</span>,
+        <span class="figcap-value" style="color:#FF00FF">2.7</span>,
+        <span class="figcap-value" style="color:#009696">2.8</span>
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Ehrhart Egg implicit polar equation:</div>
+      \[ r + \sqrt{r^{2}-2\cdot b\cdot r\cdot\sin(\theta)+b^{2}} + \sqrt{r^{2}-2\cdot c\cdot r\cdot\sin(\theta)+c^{2}} = k \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Ehrhart egg<sup>1</sup>, also known as a triellipse or three-foci hyperellipse, is a closed convex curve defined as the locus of points where the sum of distances to three fixed foci equals a constant value k. French mathematician Eugène Ehrhart (1906–2000), a high school teacher who conducted independent research in geometry and combinatorics, introduced this specific curve in 1957. Ehrhart chose collinear foci and parameters that approximate the averaged shape of a real hen’s egg based on statistical measurements. The broader family of multifocal ellipses (n-ellipses or polyellipses), of which the triellipse is a special case, traces back to Ehrenfried Walther von Tschirnhaus in 1686 and to a mechanical string-construction method published by James Clerk Maxwell in 1846<sup>2</sup>.</p>
+    <p>In the natural sciences the Ehrhart egg serves as a practical mathematical model for avian egg morphology. Biologists have used it and closely related triellipses to quantify and compare egg shapes across bird species, aiding studies in ornithology, developmental biology, and evolutionary morphology. No documented applications in engineering fields appear in the primary curve-reference sources.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml</a> (Ehrhart egg definition and 1957 parameters)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/multiellipse/multiellipse.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/multiellipse/multiellipse.shtml</a> (multifocal ellipse history, Tschirnhaus 1686, Maxwell 1846)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:EHRHART (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo)
+  (setq id "Ehrhart Egg"
+        iq "r + √(r²-2·b·r·sin(θ)+b²)+√(r²-2·c·r·sin(θ)+c²)=k"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "b (B focus at (0,b))" 0.2)
+        fb (get_real 6 "c (C focus at (0,c))" 1.0)
+        fc (get_real 6 "k (sum distance constant)" 2.2)
+        eq_display (strcat "\nb=" (rtos fa 2 4) ", c=" (rtos fb 2 4) ", k=" (rtos fc 2 4))
+        xc '(progn
+              (setq fd (eval a2)
+                    fe (cos fd)
+                    ff (sin fd)
+                    fg fa
+                    fh fb
+                    fi fc
+                    fj 0.0
+                    fk (avoid_zero fi)
+                    fl 0)
+              (while (and (< fl 24) (< (+ fk (sqrt (max 0.0 (+ (* fk fk) (* -2.0 fk fg ff) (* fg fg)))) (sqrt (max 0.0 (+ (* fk fk) (* -2.0 fk fh ff) (* fh fh))))) fi))
+                (setq fk (* 2.0 fk)
+                      fl (1+ fl)))
+              (setq fl 0)
+              (while (< fl 48) 
+                (setq fm (* 0.5 (+ fj fk))
+                      fn (- (+ fm (sqrt (max 0.0 (+ (* fm fm) (* -2.0 fm fg ff) (* fg fg)))) (sqrt (max 0.0 (+ (* fm fm) (* -2.0 fm fh ff) (* fh fh))))) fi))
+                (if (<= fn 0.0)
+                  (setq fj fm)
+                  (setq fk fm))
+                (setq fl (1+ fl)))
+              (setq fo fj)
+              (* fo fe))
+        yc '(* fo ff)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:EHRHART)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

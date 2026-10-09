@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bernoullian Quartic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bernoullian Quartic</h1>
+      <p class="short-description">Locus of midpoints between two concentric circles of inner (a) and outer (b) radii whose enclosed area equals that of the inner circle, πa².</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/BernoulliQ/BernoulliQ01-360.avif"
+           alt="Bernoullian Quartic, a=2,b=2">
+      <figcaption>Bernoullian Quartic, a=2,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/BernoulliQ/BernoulliQ02-360.avif"
+           alt="Bernoullian Quartic, a=2,b=3">
+      <figcaption>Bernoullian Quartic, a=2,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/BernoulliQ/BernoulliQ03-360.avif"
+           alt="Bernoullian Quartic, a=2,b=5">
+      <figcaption>Bernoullian Quartic, a=2,b=5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Bernoullian Quartic implicit equation:</div>
+      \[ x^{2} y^{2} = \left( \left( \frac{a + b}{2} \right)^{2} - y^{2} \right) \left( y^{2} - \left( \frac{a - b}{2} \right)^{2} \right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bernoullian Quartic parametric equations:</div>
+      \[ x = \frac{ a \cos(\theta) + \sqrt{ b^{2} - a^{2} \sin^{2}(\theta) } }{2} , \quad y = a \sin(\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Bernoullian quartic<sup>1</sup> was studied by Jakob Bernoulli in 1687 and by Gottfried Wilhelm Leibniz in 1696<sup>1</sup>. Jakob Bernoulli (1654–1705) was a Swiss mathematician from the prominent Bernoulli family in Basel; he contributed foundational ideas to the early development of calculus, geometry, and the calculus of variations<sup>1</sup>.</p>
+    <p>This algebraic curve of degree 4 is the polizonal median (locus of midpoints) between two concentric circles of radii a (inner) and b (outer, with b ≥ a). A useful property for drafters and engineers is that the total area enclosed by the curve equals the area of the smaller circle, πa². The curve can be generated mechanically with a slider-crank linkage by tracing the path of a point attached to the connecting rod when the geometry produces the concentric circular paths<sup>1</sup>.</p>
+    <p>Applications in engineering and the natural sciences are limited but directly relevant to mechanism design. The primary documented use is in kinematics of slider-crank mechanisms, the core linkage found in steam engines, internal-combustion engines, reciprocating pumps, and compressors<sup>2</sup>, as well as drawing machines and pantographs, especially in the 18th–19th centuries. These convert rotary motion to linear (or vice versa) and trace the curve as a coupler path<sup>2</sup>. No widespread modern uses in structures, fluid flow, or optics were identified beyond this classical mechanical context.</p>
+    <p>Issues that must be addressed include stress accumulation at points of high curvature (particularly at the "pinch" near the origin), inertial wear due to alternating accelerations at the lobes of the curve, and torque irregularities, since the mechanical advantage of the crank varies nonlinearly along the path. These challenges can lead to material fatigue, making such linkages less preferred in high-speed industrial systems.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/bernoulli/bernoulli.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/bernoulli/bernoulli.shtml</a> (history, polizonal property, and mechanical generation)</li>
+      <li><a href="https://www.academia.edu/76624290/Design_FlowChart_of_Slider_Crank_Mechanisms_and_Applications" target="_blank" rel="noopener noreferrer">https://www.academia.edu/76624290/Design_FlowChart_of_Slider_Crank_Mechanisms_and_Applications</a> (slider-crank kinematics showing the curve)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BERNOULLIQ (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xstep restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Bernoullian Quartic"
+        iq "x=[a·cos(θ)+√(b²-a²·sin²(θ))]/2,y=a·sin(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (inner semicircle radius)" 2.0)
+        fb (get_boundr 2 "b (outer semicircle radius, >=a)" (+ fa 1.0) fa nil T nil)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(/ (+ (* fa (cos (eval a2))) (alt_expt (max 0.0 (- (* fb fb) (* fa fa (sin (eval a2)) (sin (eval a2))))) 0.5 nil)) 2)
+        yc '(* fa (sin (eval a2)))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BERNOULLIQ)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

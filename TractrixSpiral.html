@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tractrix Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Tractrix Spiral</h1>
+      <p class="short-description">A transcendental spiral in which the tangent drawn toward the pole has constant length.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/TractrixSpiral/TractrixSpiral01-360.avif"
+           alt="Tractrix Spiral, a=1">
+      <figcaption>Tractrix Spiral, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Tractrix Spiral parametric equations:</div>
+      \[ r = a\cos(t),\quad \theta = \tan(t) - t \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Tractrix Spiral<sup>1,2</sup>, also known as the polar tractrix or complicated tractrix, is a transcendental curve that emerged from early eighteenth-century studies of the tractrix and tangent-length problems in polar coordinates. It was examined by Christiaan Huygens and Pierre Varignon in 1704 and by Roger Cotes in 1722; additional analysis was contributed by Giard in 1862. The name “tractrix spiral” was given by G. Teixeira. Other designations include polar tractrix and complicated tractrix. In contrast to the classical tractrix, which maintains a constant length of the tangent segment drawn to its straight-line asymptote, the tractrix spiral is defined by a constant polar tangent: from any point on the curve the length of the tangent drawn toward the pole remains fixed. The parametrization used for plotting is noted for its direct similarity to the standard parametric equations of the tractrix itself.<sup>1</sup> The curve also stands in specific geometric relations with other classical curves—it is the evolute of Catalan’s curve, the inverse of the circle involute with respect to its center, and the negative pedal of the hyperbolic spiral with respect to its center, although these connections remain primarily of mathematical interest.</p>
+    <p>A documented engineering application uses one of the curve’s kinematic properties. When the tractrix spiral slides along a straight line while maintaining contact at a fixed point, its pole traces a circle. This solution to the circular-glissette problem was historically employed to determine the shaped rods that guide the gates of certain canals.<sup>1</sup></p>
+    <p>Note: Raising the initial division count or adding segments via the interactive prompt produces additional inner loops and tighter definition near the origin. Because the polar angle advances more rapidly in the inner region, however, excessive segments added in one pass can cause the angular step between consecutive points to exceed 180°. The subsequent PEDIT Fit then generates aberrant loops. Add segments incrementally, inspect the result after each addition, or begin with a higher initial division count to remain within stable fitting limits.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/spiraletractrice/spiraletractrice.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/spiraletractrice/spiraletractrice.shtml</a> (history, equations, properties, and canal-gate application)</li>
+      <li><a href="https://mathworld.wolfram.com/TractrixSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/TractrixSpiral.html</a> (alternative names and parametric forms)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TRACTRIXSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                           divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb skm)
+  (setq id "Tractrix Spiral"
+        iq "r=a·cos(t), θ=tan(t)-t"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions (higher adds loops)"
+        dct 2000
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale factor)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(* fa (cos (eval a2)) (cos (- (tan (eval a2)) (eval a2))))
+        yc '(* fa (cos (eval a2)) (sin (- (tan (eval a2)) (eval a2))))
+        paramstep (/ 1.4 divcount)
+        divcount (fix (* divcount 1.11))
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TRACTRIXSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

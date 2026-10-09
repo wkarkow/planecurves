@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stirrup Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Stirrup Curve</h1>
+      <p class="short-description">A plane algebraic curve given by \((x^{2}-1)^{2}=y^{2}(y-1)(y-2)(y+5)\) with eight real branches that together form a stirrup-shaped figure.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Stirrup/Stirrup01-360.avif"
+           alt="Stirrup Curve">
+      <figcaption>Stirrup Curve</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Stirrup Curve implicit equation:</div>
+      \[ (x^{2} - 1)^{2} = y^{2}(y - 1)(y - 2)(y + 5) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Stirrup Curve Cartesian equation:</div>
+      \[ x = \pm\sqrt{1 \pm \sqrt{y^{2}(y - 1)(y - 2)(y + 5)}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Stirrup Curve<sup>1,2</sup> is a quartic plane curve presented in standard references on special algebraic curves. It is defined by the implicit equation shown below. When rearranged as a polynomial in y it becomes a quintic, placing it among other higher-degree examples such as the Burnside curve and butterfly catastrophe curve in collections of plane curves.</p>
+    <p>It has no known practical applications.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/StirrupCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/StirrupCurve.html</a> (defining equation and classification)</li>
+      <li><a href="https://mathworld.wolfram.com/QuinticCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/QuinticCurve.html</a> (placement among quintic examples)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:STIRRUP (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 yspan)
+  (setq id "Stirrup Curve"
+        iq "(x²-1)²=y²(y-1)(y-2)(y+5)"
+        dcl "STIRRUP"
+        opt '("Upper outer wing" "Upper inner wing" "Upper kidney" "Outer kidney" "Bottom kidney" "Spade tip" "Spade body" "Spade bottom")
+        kw 0
+        mode 'param
+        dpr "# of divisions to y-span of division point"
+        dct 500
+        dpt '(1.0 4.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((= kw 0)
+     (princ "\nUpper outer wing"))
+    ((= kw 1)
+     (princ "\nUpper inner wing"))
+    ((= kw 2)
+     (princ "\nUpper kidney"))
+    ((= kw 3)
+     (princ "\nOuter kidney"))
+    ((= kw 4)
+     (princ "\nBottom kidney"))
+    ((= kw 5)
+     (princ "\nSpade tip"))
+    ((= kw 6)
+     (princ "\nSpade body"))
+    ((= kw 7)
+     (princ "\nSpade bottom")))
+  (setq eq_display (strcat "\nbranch=" (itoa kw))
+        xc (cond
+             ((= kw 0)
+              '(alt_expt (+ 1.0 (alt_expt (max (* (eval a2) (eval a2) (- (eval a2) 1.0) (- (eval a2) 2.0) (+ (eval a2) 5.0)) 0.0) 0.5 nil)) 0.5 nil))
+             ((= kw 1)
+              '(alt_expt (max (- 1.0 (alt_expt (max (* (eval a2) (eval a2) (- (eval a2) 1.0) (- (eval a2) 2.0) (+ (eval a2) 5.0)) 0.0) 0.5 nil)) 0.0) 0.5 nil))
+             ((or (= kw 2) (= kw 5))
+              '(if (&lt; (abs (- (eval a2) 1.0)) 1e-8) 1.0 (alt_expt (max (- 1.0 (alt_expt (max (* (eval a2) (eval a2) (- (eval a2) 1.0) (- (eval a2) 2.0)
+               (+ (eval a2) 5.0)) 0.0) 0.5 nil)) 0.0) 0.5 nil)))
+             ((or (= kw 3) (= kw 6))
+              '(if (&lt; (abs (+ (eval a2) 5.0)) 1e-8) 1.0 (if (&lt; (abs (eval a2)) 1e-8) 1.0 (alt_expt (+ 1.0 (alt_expt (max (* (eval a2) (eval a2) (- (eval a2) 1.0)
+               (- (eval a2) 2.0) (+ (eval a2) 5.0)) 0.0) 0.5 nil)) 0.5 nil))))
+             ((= kw 4)
+              '(if (or (&lt; (abs (eval a2)) 1e-8) (&lt; (abs (+ (eval a2) 0.27070653)) 1e-8)) (if (&lt; (abs (eval a2)) 1e-8) 1.0 0.0) (alt_expt (max (- 1.0 (alt_expt (max
+               (* (eval a2) (eval a2) (- (eval a2) 1.0) (- (eval a2) 2.0) (+ (eval a2) 5.0)) 0.0) 0.5 nil)) 0.0) 0.5 nil)))
+             ((= kw 7)
+              '(if (&lt; (abs (+ (eval a2) 4.99904697)) 1e-8) 0.0 (alt_expt (max (- 1.0 (alt_expt (max (* (eval a2) (eval a2) (- (eval a2) 1.0) (- (eval a2) 2.0)
+               (+ (eval a2) 5.0)) 0.0) 0.5 nil)) 0.0) 0.5 nil)))
+             (T '0.0))
+        yc (cond ((or (= kw 2) (= kw 3) (= kw 4) (= kw 5) (= kw 6) (= kw 7)) '(if (&lt; (abs (- (eval a2) 1.0)) 1e-8) 1.0 (if (&lt; (abs (+ (eval a2) 5.0)) 1e-8) -5.0 (eval a2)))) (T '(eval a2)))
+        yspan (get_yspan basept xaxisangle divpt)
+        span (cond ((= kw 0) (- (/ yspan 1.0) 2.0)) ((= kw 1) 0.0333) ((= kw 2) 0.2447) ((= kw 3) 1.0) ((= kw 4) 0.27070653) ((= kw 5) 0.481164) ((= kw 6) -5.0)
+             ((= kw 7) 0.00095303) (T (/ yspan 1.0)))
+        paramstep (/ span divcount)
+        skm '(nil T T)
+        a1 (cond ((= kw 0) 2.0) ((= kw 1) 2.0) ((= kw 2) 0.7553) ((= kw 3) 0.0) ((= kw 4) -0.27070653) ((= kw 5) 0.0) ((= kw 6) 0.0) ((= kw 7) -5.0) (T 0.0))
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:STIRRUP)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalan Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Catalan Curve</h1>
+      <p class="short-description">Polar curve r = a / (1 − θ²) arising as a circular glissette with acusped origin and asymptotic branches as θ approaches ±1.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Catalan/Catalan01-360.avif"
+           alt="Catalan Curve, a=1">
+      <figcaption>Catalan Curve, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Catalan/Catalan02-360.avif"
+           alt="Catalan Curve, a=1 (magnified near origin)">
+      <figcaption>Catalan Curve, a=1 (magnified near origin)</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Catalan Curve polar equation:</div>
+      \[ r = \frac{a}{1 - \theta^{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Catalan's curve<sup>1,2</sup> was introduced by the Franco-Belgian mathematician Eugène Charles Catalan (1814–1894) in his 1856 paper "Note sur la théorie des roulettes."<sup>2</sup> It addresses the problem of finding a curve that rolls without slipping on a straight line while a fixed point in its plane traces a circle tangent to that line. This classifies it as a circular roulette or glissette. The curve also satisfies the condition where the arc length s = ρθ, with initial condition ρ = 1 at θ = 0. Differentiating it leads to a differential equation whose solutions include the circle and Catalan's curve as the nontrivial solution. It is additionally the evolute of the tractrix spiral.<sup>1</sup></p>
+    <p>Real-life applications in engineering and the natural sciences are limited. The curve appears in theoretical studies of kinematics involving rolling curves and roulettes, but no widespread practical uses in mechanisms, optics, or other applied fields were identified beyond its mathematical significance in curve theory.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/catalan/catalan.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/catalan/catalan.shtml</a> (history, equations, and rolling property)</li>
+      <li><a href="http://christophe.masurel.free.fr/pdf/CatalansCurve-PartVI.pdf" target="_blank" rel="noopener noreferrer">http://christophe.masurel.free.fr/pdf/CatalansCurve-PartVI.pdf</a> (detailed 1856 paper analysis, evolute relation, and roulette applications)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CATALAN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw rval fa)
+  (setq id "Catalan Curve"
+        iq "r = a / (1 - θ²)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "\nCatalan curve: r=a/(1-θ²), a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(* fa (/ 1.0 (- 1.0 (* (eval a2) (eval a2)))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 20.0)
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CATALAN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

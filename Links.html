@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Links Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Links Curve</h1>
+      <p class="short-description">A quartic algebraic plane curve with a tacnode at the origin, where two branches meet with the same tangent and higher-order contact.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Links/Links01-360.avif"
+           alt="Links Curve, a=1">
+      <figcaption>Links Curve, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Links Curve implicit equation:</div>
+      \[ (x^{2} + y^{2} - 3x)^{2} = 4x^{2}(2 - x) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Links Curve polar equation:</div>
+      \[ r = a \cdot \cos(\theta)\left(3 - 2\cos^{2}(\theta) \pm 2\sqrt{(1 - \cos^{2}(\theta))(2 - \cos^{2}(\theta))}\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Links curve<sup>1</sup> is a quartic algebraic plane curve, placing it in the same family as other degree-4 curves such as the bifolium or piriform, where the equation can be plotted directly or converted to polar form for rotational symmetry studies. The curve features a tacnode at the origin, a singularity where two branches meet with identical tangent direction and higher-order contact, producing a point of smooth self-touching rather than a cusp or crossing. In practical terms, the tacnode behaves like a point where the curve “kisses” itself without penetrating. The curve encloses an outer envelope that contains an inner loop, both symmetric about the x-axis in the standard positioning.</p>
+    <p>The curve appears without earlier named discoverer or specific mathematician attribution in the literature. It is catalogued as one of many illustrative plane curves in the third edition of <em>Mathematical Models</em> (1989) by H. Martyn Cundy and A. P. Rollett.<sup>2</sup> Cundy, a mathematics professor who taught at the University of Malawi, and Rollett, an educator, compiled the volume as a practical handbook for constructing physical wire or string models of curves to demonstrate geometric properties in classrooms. On page 72 the Links curve is presented alongside other quartics suitable for such tactile teaching aids, emphasizing visual inspection of singularities like the tacnode and the enclosed regions.</p>
+    <p>No real-life applications in engineering or the natural sciences were identified in available sources.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/LinksCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/LinksCurve.html</a> (quartic definition, tacnode at origin, outer/inner areas, Cartesian equation)</li>
+      <li>Cundy, H. and Rollett, A. <em>Mathematical Models</em>, 3rd ed. Stradbroke, England: Tarquin Pub., p. 72, 1989 (inclusion in physical modeling reference)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LINKS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc rval)
+  (setq id "Links Curve"
+        iq "r=a·cos(θ)·((3-2·cos²(θ)±2·√((1-cos²(θ))·(2-cos²(θ)))))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in half-curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_keyword 0 "Positive Negative" "Positive or Negative branch?" "Positive")
+        fc (if (eq fb "Positive") 1.0 -1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(* fa (cos (eval a2)) (+ 3 (* -2 (* (cos (eval a2)) (cos (eval a2)))) (* fc 2 (sqrt (* (- 1 (* (cos (eval a2)) (cos (eval a2))))
+              (- 2 (* (cos (eval a2)) (cos (eval a2)))))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LINKS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

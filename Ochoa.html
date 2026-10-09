@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ochoa Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ochoa Curve</h1>
+      <p class="short-description">A smooth cubic elliptic curve given by the specific Diophantine equation \( 3y^{2} = 2x^{3} + 386x^{2} + 256x - 58195 \).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Ochoa/Ochoa01-360.avif"
+           alt="Ochoa Curve, equally scaled">
+      <figcaption>Ochoa Curve, equally scaled</figcaption>
+    </figure>
+    <figure>
+      <a href="https://mathworld.wolfram.com/OchoaCurve.html" target="_blank" rel="noopener">
+        <img src="images/Ochoa/Ochoa02-360.avif" alt="Ochoa curve image from Wolfram MathWorld, unequally scaled"></a>
+      <figcaption>Ochoa curve image from Wolfram MathWorld, unequally scaled</figcaption>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Ochoa Curve Cartesian equation:</div>
+      \[ 3y^{2} = 2x^{3} + 386x^{2} + 256x - 58195 \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Ochoa Curve<sup>1</sup> is an elliptic curve defined by the specific cubic Diophantine equation \( 3y^{2} = 2x^{3} + 386x^{2} + 256x - 58195 \). “Elliptic” curves arose historically from problems involving elliptic integrals, not from ellipses themselves. When mathematicians in the 18th and 19th centuries tried to evaluate arc lengths of ellipses and related curves, they encountered integrals that could not be expressed using elementary functions. Inverting those integrals led naturally to a special class of smooth cubic algebraic curves, which are what are now called elliptic curves. Independently of that later theory, Isaac Newton had already studied cubic curves of the form \( y^{2} = ax^{3} + bx^{2} + cx + d \) in his classification of plane algebraic curves. He referred to these as diverging parabolas and grouped them by their visible geometry: ovals, bells, cusps, and crossings. From Newton’s geometric point of view, many curves that are now called elliptic curves were simply particular, well-behaved members of this broader cubic family. The modern term elliptic curve was applied later, once it was understood that only the smooth (nonsingular) cubics, those with no cusps or self-intersections, possess the special algebraic and analytical structure connected to elliptic integrals. An elliptic curve has the equation \( y^{2} = \) (cubic in \( x \)), which must be smooth everywhere with no sharp points or crossings. When these conditions are met, the curve naturally splits into real components such as closed ovals or open bell-shaped branches. It is a well-behaved cubic that admits real square-root solutions over certain \( x \)-intervals. Spanish mathematician J. Ochoa Melida introduced the general class of such equations in 1978.<sup>2</sup> For engineers, architects, and draftsmen accustomed to plotting algebraic relations in AutoCAD, this curve is simply a smooth cubic graph in the plane; the challenge lies in locating the exact integer coordinate points \( (x, y) \) that satisfy the equation without any rounding error—much like finding precise snap points on a complex spline. The curve drew wider notice in number-theory circles when R. K. Guy discussed it in 1990.<sup>3</sup> In 1994 R. J. Stroeker and B. M. M. de Weger<sup>4</sup> gave a complete list of its twenty-three integer solutions (counting each pair of positive and negative \( y \)-values separately). They showed that standard Thue-equation methods fail for this particular curve and instead used lower bounds on linear forms in elliptic logarithms to locate every integer point exactly. In mathematics and computer science more broadly, elliptic curves play a central role in number theory and cryptography. The Ochoa curve is cited in that literature because its 23 integer solutions are unusually numerous for elliptic curves in general. Its three real roots on the \( x \) axis are at \( -191.538\ldots \), \( -13.077\ldots \) and \( 11.616\ldots \). Unlike many curves in this book, its \( x \) and \( y \) domains are quite large (see images below).</p>
+    <p>No applications of the Ochoa Curve in engineering or the natural sciences appear in the published literature. Its sole documented importance is in pure mathematics as a case study of an elliptic curve whose integer solutions resist elementary techniques.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/OchoaCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/OchoaCurve.html</a> (definition, Weierstrass form, and list of all 23 integer solutions)</li>
+      <li>Ochoa Melida, J. “La ecuación diofántica \( y^{2} = x^{3} + x^{2} - 2x - 1 \).” <em>Gaceta Matem.</em> 139–141, 1978 (original proposal of the Diophantine equation)</li>
+      <li><a href="https://cms.math.ca/wp-content/uploads/crux-pdfs/Crux_v16n03_Mar.pdf" target="_blank" rel="noopener noreferrer">https://cms.math.ca/wp-content/uploads/crux-pdfs/Crux_v16n03_Mar.pdf</a> (discussion in number-theory context)</li>
+      <li><a href="https://projecteuclid.org/journals/experimental-mathematics/volume-3/issue-3/On-elliptic-Diophantine-equations-that-defy-Thues-method--the/em/1048515872.pdf" target="_blank" rel="noopener noreferrer">https://projecteuclid.org/journals/experimental-mathematics/volume-3/issue-3/On-elliptic-Diophantine-equations-that-defy-Thues-method--the/em/1048515872.pdf</a> (analysis using elliptic logarithms)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:OCHOA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Ochoa Curve"
+        iq "3y²=2x³+386x²+256x-58195"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 100
+        dpt '(100.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (if (eq (get_keyword 0 "Oval Bell" "region = Oval (left) or Bell (right)" "Oval") "Bell") nil T)
+        eq_display (strcat "3y^2 = 2x^3 + 386x^2 + 256x - 58195" (if fa ", region: Oval" ", region: Bell") ",  y = +sqrt((2x^3 + 386x^2 + 256x - 58195)/3)")
+        paramstep (if fa (/ (- -13.0777026382266 -191.5385997951396) (1- divcount)) (/ xspan divcount))
+        fb '(/ (+ (* 2.0 (expt (eval a2) 3.0)) (* 386.0 (expt (eval a2) 2.0)) (* 256.0 (eval a2)) -58195.0) 3.0)
+        xc '(eval a2)
+        yc '(alt_expt (if (&lt; (abs (eval fb)) 1e-8) 0.0 (eval fb)) 0.5 T)
+        skm '(T nil T)
+        a1 (- (if fa -191.5385997951396 11.6163024333650) paramstep)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:OCHOA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Epitrochoid Evolute - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Epitrochoid Evolute</h1>
+      <p class="short-description">The locus of the centers of curvature of an epitrochoid.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute01-360.avif"
+           alt="a=1,b=1/8,c=2, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=2, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute02-360.avif"
+           alt="a=1,b=1/8,c=1, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=1, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute03-360.avif"
+           alt="a=1,b=1/8,c=0.5, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=0.5, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute04-360.avif"
+           alt="a=1,b=1/8,c=0.05, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=0.05, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute05-360.avif"
+           alt="a=1,b=1/8,c=1/9, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=1/9, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute06-360.avif"
+           alt="a=1,b=1/8,c=9, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=9, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute07-360.avif"
+           alt="a=1,b=1/8,c=12, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=12, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute08-360.avif"
+           alt="a=1,b=1/8,c=0.08, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=0.08, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute09-360.avif"
+           alt="a=1,b=1/8,c=0.03, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=1/8,c=0.03, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute10-360.avif"
+           alt="a=1,b=2,c=4/3, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=2,c=4/3, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute11-360.avif"
+           alt="a=1,b=0.5,c=5/4, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=0.5,c=5/4, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EpitrochoidEvolute/EpitrochoidEvolute12-360.avif"
+           alt="a=1,b=2/3,c=13/9, Epitrochoid versus Evolute">
+      <figcaption>
+        a=1,b=2/3,c=13/9, 
+        <span class="figcap-value" style="color:#000000">Epitrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Epitrochoid Evolute parametric equations:</div>
+      \[ x=\dfrac{a \cdot c (a+b)\bigl(c-b\cos(\frac{a\theta}{b})\bigr)\cos\theta+b\bigl(b-c\cos(\frac{a\theta}{b})\bigr)\cos\bigl(\frac{(a+b)\theta}{b}\bigr)}{b^{3}+(a+b)c^{2}-b(a+2b)c\cos(\frac{a\theta}{b})} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label"></div>
+      \[ y=\dfrac{a \cdot c (a+b)\bigl(c-b\cos(\frac{a\theta}{b})\bigr)\sin\theta+b\bigl(b-c\cos(\frac{a\theta}{b})\bigr)\sin\bigl(\frac{(a+b)\theta}{b}\bigr)}{b^{3}+(a+b)c^{2}-b(a+2b)c\cos(\frac{a\theta}{b})} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The epitrochoid evolute<sup>1</sup> is the locus of the centers of curvature of an epitrochoid, a roulette traced by a point attached to a circle of radius b rolling externally about a fixed circle of radius a with the tracing point offset by distance h from the center of the rolling circle. The underlying epitrochoid was first depicted by Albrecht Dürer in 1525 in his book <em>Instruction in Measurement with Compasses and Straight Edge</em><sup>2</sup>, where construction lines for related curves resembled spider webs. Subsequent mathematicians including Girard Desargues (1640), Christiaan Huygens (1679), Gottfried Leibniz, Isaac Newton (1686), and the Bernoulli family investigated roulette curves of this family<sup>3</sup>. No separate historical account credits a specific individual with first deriving or naming the evolute of the epitrochoid; it follows directly from the general definition of an evolute as the envelope of the normal lines to the parent curve. The radius of curvature for a parametric curve can be computed via basic differential calculus concepts (first and second derivatives with respect to the parameter), and the evolute point is displaced from the original point along the normal by that radius value. The epitrochoid evolute, while rich, was likely too complex for hand calculation or graphic construction in pre-calculus times. It is only with modern algebra and calculus tools that the full parametric form becomes feasible to derive or analyze. In the equations above, \(a\) = fixed radius, \(b\) = rolling radius, \(c\) = offset of the parent epitrochoid.</p>
+    <p>No real-life applications in engineering or the natural sciences were identified for the epitrochoid evolute.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/EpitrochoidEvolute.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/EpitrochoidEvolute.html</a> (definition, parametric equations, and relation to epitrochoid).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Epitrochoid/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Epitrochoid/</a> (Dürer 1525 depiction and early mathematical study of epitrochoids).</li>
+      <li><a href="https://mathworld.wolfram.com/Epitrochoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Epitrochoid.html</a> (timeline of epitrochoid study by Desargues, Huygens, Leibniz, Newton, and Bernoulli family).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:EPITROCHOIDEVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                               xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe)
+  (setq id "Epitrochoid Evolute"
+        iq "x=[a·c·(a+b)·(c-b·cos(a·θ/b))·cos(t)+b·(b-c·cos(a·θ/b))·cos((a+b)·θ/b)]/[b³+(a+b)·c²-b·(a+2·b)·c·cos(a·θ/b)]
+\ny=[a·c·(a+b)·(c-b·cos(a·θ/b))·sin(θ)+b·(b-c·cos(a·θ/b))·sin((a+b)·θ/b)]/[b³+(a+b)·c²-b·(a+2·b)·c·cos(a·θ/b)]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_dist 6 "a (radius of base circle)" 1.0 basept)
+        fb (get_dist 6 "b (radius of rolling circle)" 1.0 (list fa 0.0))
+        fc (get_dist 6 "c (offset distance of rolling circle)" fb (list fa 0.0))
+        eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4))
+        fd '(/ (+ (* fa fc (+ fa fb) (- fc (* fb (cos (/ (* fa (eval a2)) fb)))) (cos (eval a2))) (* fb (- fb (* fc (cos (/ (* fa (eval a2)) fb))))
+            (cos (/ (* (+ fa fb) (eval a2)) fb)))) (avoid_zero (+ (* fb fb fb) (* (+ fa fb) fc fc) (* -1 fb (+ fa (* 2 fb)) fc (cos (/ (* fa (eval a2)) fb))))))
+        fe '(/ (+ (* fa fc (+ fa fb) (- fc (* fb (cos (/ (* fa (eval a2)) fb)))) (sin (eval a2))) (* fb (- fb (* fc (cos (/ (* fa (eval a2)) fb)))) (sin (/ (*
+            (+ fa fb) (eval a2)) fb)))) (avoid_zero (+ (* fb fb fb) (* (+ fa fb) fc fc) (* -1 fb (+ fa (* 2 fb)) fc (cos (/ (* fa (eval a2)) fb))))))
+        xc '(if (and (< (abs (eval fd)) 1e-9) (< (abs (eval fe)) 1e-9)) (* (cos (eval a2)) (/ (+ (* fa fa) (* fa fb) 1) (+ fa (* 2 fb)))) (eval fd))
+        yc '(if (and (< (abs (eval fd)) 1e-9) (< (abs (eval fe)) 1e-9)) (* (sin (eval a2)) (/ (+ (* fa fa) (* fa fb) 1) (+ fa (* 2 fb)))) (eval fe))
+        maxdraw (if (and (>= fc (/ (* fb fb) (+ fa fb))) (<= fc fb)) (get_real 2 "Maximum x and y values allowed?" 50) 1e5)
+        skm (if (and (>= fc (/ (* fb fb) (+ fa fb))) (<= fc fb)) '(T T T T) '(T T T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:EPITROCHOIDEVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

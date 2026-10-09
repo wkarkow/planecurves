@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Knot Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Knot Curve</h1>
+      <p class="short-description">A quartic plane algebraic curve with two parametric branches using nested radicals, shaped like an overhand knot.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Knot/Knot01-360.avif"
+           data-caption="Knot Curve, 1st branch(black), 2nd branch(red)"
+           alt="Knot Curve, 1st branch(black), 2nd branch(red)">
+      <figcaption>
+        Knot Curve,
+        <span class="figcap-value" style="color:#000000">1st branch</span>,
+        <span class="figcap-value" style="color:#FF0000">2nd branch</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Knot Curve implicit equation:</div>
+      \[ (x^{2} - 1)^{2} = y^{2}(3 + 2y) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Knot Curve parametric equations:</div>
+      \[ y = t,\quad x = \pm\sqrt{1 \pm t\sqrt{3 + 2t}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Knot Curve<sup>1,2</sup>, named by H. Martyn Cundy and A. P. Rollett, is a quartic plane curve (an algebraic curve whose defining equation is a polynomial of total degree 4 in the coordinates x and y). It appears as an illustrative example in their book <em>Mathematical Models</em>. The curve is defined implicitly by (x^{2} − 1)^{2} = y^{2}(3 + 2y). This equation produces a closed figure with a central region and two side regions, horizontal tangents at the x-intercepts (0,0) and (1,0), and vertical tangents at the y-intercepts (0,½) and (1,−1). The two mirrored branches plotted by the parametric code (with y = t and the combinations of signs inside the nested square roots) trace the entire curve exactly once over the chosen domain, providing a computationally efficient form for AutoCAD drafting without needing to solve the quartic algebraically at each step. The total area enclosed by the curve equals ⅙.</p>
+    <p>No real-life applications in engineering or the natural sciences were identified in the primary curve references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/KnotCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/KnotCurve.html</a> (Cartesian equation, intercepts, tangents, area)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quartickn.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quartickn.html</a> (naming by Cundy and Rollett)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:KNOT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo
+                   paramstep divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2)
+  (setq id "Knot Curve"
+        iq ""
+        dcl "KNOT"
+        opt '("1st branch" "2nd branch")
+        kw 0
+        mode 'param
+        dpr "# of divisions"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq xc  '(alt_expt (+ 1.0 (* (eval a2) (alt_expt (+ 3.0 (* 2.0 (eval a2))) 0.5 T))) 0.5 T)))
+    ((eq kw 1)
+     (setq xc  '(alt_expt (- 1.0 (* (eval a2) (alt_expt (+ 3.0 (* 2.0 (eval a2))) 0.5 T))) 0.5 T))))
+  (setq eq_display "\nKnot curve: y(t)=t, x(t)=sqrt(1±t·sqrt(3+2t)"
+        paramstep (/ 1.0 180.0)
+        yc '(eval a2)
+        skm '(nil T T)
+        a1 -1.5
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:KNOT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loriga Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Loriga Curve</h1>
+      <p class="short-description">The locus of points at which the inverse-square illumination from \(n\) identical point sources equals the illumination those same \(n\) sources would produce if they were all placed at the origin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Loriga/Loriga01-360.avif"
+           alt="Loriga Curve, a=1,n=3">
+      <figcaption>Loriga Curve, a=1,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga02-360.avif"
+           alt="Loriga Curve, a=1,n=4">
+      <figcaption>Loriga Curve, a=1,n=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga03-360.avif"
+           alt="Loriga Curve, a=1,n=5">
+      <figcaption>Loriga Curve, a=1,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga04-360.avif"
+           alt="Loriga Curve, a=1,n=6">
+      <figcaption>Loriga Curve, a=1,n=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga05-360.avif"
+           alt="Loriga Curve, a=1,n=7">
+      <figcaption>Loriga Curve, a=1,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga06-360.avif"
+           alt="Loriga Curve, a=1,n=8">
+      <figcaption>Loriga Curve, a=1,n=8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga07-360.avif"
+           alt="Loriga Curve, a=1,n=9">
+      <figcaption>Loriga Curve, a=1,n=9</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga08-360.avif"
+           alt="Loriga Curve, a=1,n=10">
+      <figcaption>Loriga Curve, a=1,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Loriga/Loriga09-360.avif"
+           data-caption="Loriga Curve, a=1,n=20, circle in red(red)"
+           alt="Loriga Curve, a=1,n=20, circle in red(red)">
+      <figcaption>
+        Loriga Curve, a=1,n=20,
+        <span class="figcap-value" style="color:#FF0000">circle in red</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Loriga Curve punctual equation:</div>
+      \[ \dfrac{n}{r^{2}} = \sum_{k=0}^{n-1}\dfrac{1}{r^{2}+a^{2}-2ar\cos(\theta-2\pi k/n)} \]
+    </div>
+
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Loriga curve arises from a geometric optics problem concerning the superposition of illumination from multiple identical point sources.<sup>1</sup> Given a point \(O\) in the plane and \(n\) identical punctual light sources \(A_{k}\), the curve is the locus of points \(M\) at which the illumination produced by the \(n\) sources at \(A_{k}\) equals the illumination that would be produced if all \(n\) sources were concentrated at \(O\). Illumination from a point source is inversely proportional to the square of the distance, so the condition is the punctual equation \(n/\lvert OM\rvert^{2}=\sum 1/\lvert A_{k}M\rvert^{2}\). The curve takes its name from this illumination-balancing construction rather than from one fixed algebraic degree. It was studied by the Spanish mathematician Juan Jacobo Durán Loriga (1854–1911) in 1910 and is recorded in Teixeira’s treatise on special plane curves.<sup>1,2</sup></p>
+    <p>When the sources sit at the vertices of a regular \(n\)-gon of radius \(a\) centered at \(O\), rotational symmetry produces a structured algebraic locus. Three sources give a quartic (the Loriga quartic); four sources give a sextic (the Loriga sextic). Those two cases admit closed polar forms in \(r\) and \(\cos(n\theta)\). For \(n=3\) the inflection points lie on the circle through the sources. For larger \(n\) the same definition still applies, but clearing denominators produces polynomials that grow rapidly in degree, so the curve is more naturally treated as an implicit polar locus and solved numerically, which is what the AutoLISP implementation does. A compact polar template of the form \(r^{2n-2}+2a^{n-2}r^{n}\cos(n\theta)+a^{2n-4}r^{2}-a^{2n-2}=0\) coincides with the illumination locus only for \(n=3\); it is not a substitute for the sum at higher \(n\).<sup>1</sup> The \(n=3\) quartic is sometimes compared visually with the Klein quartic; related inverse-square families include the isophonic (Cayley oval) curves and, more generally, Goursat curves.<sup>1</sup></p>
+    <p>From an applications standpoint the curves are primarily of theoretical interest as loci defined by an inverse-square superposition law. They are a geometric analogue of equal-influence or equipotential curves generated by a discrete set of sources, in the same spirit as level sets of a gravitational or electrostatic field of point masses or charges. In the regular-polygon case they show how a simple physical balance condition produces high-degree algebraic curves with \(n\)-fold rotational symmetry. The two-source case \(n=2\) reduces to a hyperbola whose asymptotes are fixed by the source geometry. That reduction is mathematically correct, but a hyperbola is not unique to the Loriga construction and lacks the closed angular coverage present for \(n\geq 3\). For that reason, and to avoid degenerate polar plotting, the implementation here restricts the construction to regular configurations with three or more sources.</p>
+    <p>No separate engineering device or manufacturing application of the named Loriga locus itself was identified in the sources consulted. The underlying inverse-square balance is the same principle used when lighting engineers draw isolux (equal-illumination) contours for arrays of lamps, but those workplace contours are not the Loriga curve unless the comparison illumination is specifically that of all lamps stacked at one point.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/loriga/loriga.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/loriga/loriga.shtml</a> (definition, history, polar and complex equations).</li>
+      <li>Teixeira, F. G. <em>Traité des Courbes Spéciales Remarquables Planes et Gauches</em>, Vol. III, p. 52 (citation given by MathCurve).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LORIGA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh)
+  (defun L_B (a / b c d)
+    (setq d nil b 0)
+    (while (&lt; b a)
+     (setq c (* 2.0 pi (/ (float b) (float a)))
+           d (cons (list (cos c) (sin c)) d)
+           b (1+ b)))
+    (reverse d))
+  (defun L_F (a b / c d e f g h i j k l)
+    (setq c (* a a)
+          d (* fa fa)
+          e (cos b)
+          f (sin b)
+          g 0.0)
+    (foreach h fc
+     (setq i (car h)
+           j (cadr h)
+           k (+ (* e i) (* f j))
+           l (+ c d (* -2.0 fa a k))
+           g (+ g (/ 1.0 (avoid_zero l)))))
+    (- (/ (float fb) (avoid_zero c)) g))
+  (defun L_R (a / b c d e f g h i)
+    (setq b (* 20.0 fa)
+          c 240
+          d nil
+          e 0
+          f (* 1e-6 fa)
+          g (L_F f a))
+    (while (&lt; e c)
+     (setq h (* b (/ (float (1+ e)) (float c)))
+           i (L_F h a))
+     (if (&lt; (* g i) 0.0)
+      (setq d (cons (list f h g i) d)))
+     (setq f h g i e (1+ e)))
+    (reverse d))
+  (defun L_S (a b / c d e f g h i)
+    (setq c (nth 0 b) d (nth 1 b) e (nth 2 b) f (nth 3 b) i 0)
+    (while (&lt; i 40)
+     (setq g (/ (+ c d) 2.0)
+           h (L_F g a))
+     (if (&lt; (* e h) 0.0)
+      (setq d g f h)
+      (setq c g e h))
+     (setq i (1+ i)))
+    (/ (+ c d) 2.0))
+  (defun L_P (a / b c d e f g h i j k)
+    (setq b (L_R a))
+    (if (not b)
+     fd
+     (progn
+      (setq e nil f 1e99)
+      (foreach c b
+        (setq d (L_S a c)
+              g (* d (cos a)) h (* d (sin a))
+              i (- g fg) j (- h fh)
+              k (+ (* i i) (* j j)))
+        (if (&lt; k f) (setq f k e d)))
+      e)))
+  (defun L_T (th / r)
+    (if (and fe (= th fe)) ff
+     (progn
+      (if (not fd) (setq fd fa))
+      (if (not fg) (setq fg 0.0 fh 0.0))
+      (setq r (L_P th)
+            fd r
+            fe th
+            ff (list (* r (cos th)) (* r (sin th)))
+            fg (car ff)
+            fh (cadr ff))
+      ff)))
+  (setq id "Loriga Curve"
+        iq "n/r²=Σ_{k=0}^{n-1}1/(r²+a²-2·a·r·cos(θ-2πk/n))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (source radius)" 1.0)
+        fb (get_boundi 6 "n (number of sources >=3)" 3 3 nil T nil)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (itoa fb))
+        fc (L_B fb)
+        fd fa
+        fe nil
+        ff nil
+        fg nil
+        fh nil
+        skm '(T T T)
+        a1 0.0
+        a2 '(+ a1 paramstep)
+        x1 (car (L_T a1))
+        y1 (cadr (L_T a1))
+        x2 '(car (L_T (eval a2)))
+        y2 '(cadr (L_T (eval a2)))
+        xc '(eval x2)
+        yc '(eval y2))
+  (cc))
+(C:LORIGA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

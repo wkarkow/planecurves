@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lituus - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Lituus</h1>
+      <p class="short-description">A plane curve with polar equation \( r = a\,\theta^{-1/2} \), one of the classical power-law spirals; the inverse of Fermat’s spiral with respect to the origin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Lituus/Lituus01-360.avif"
+           alt="Lituus, a=1">
+      <figcaption>Lituus, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Lituus/Lituus02-360.avif"
+           alt="Lituus, a=2">
+      <figcaption>Lituus, a=2</figcaption>
+    </figure>
+    <figure>
+      <a href="https://en.wikipedia.org/wiki/Ionic_order#/media/File:Capiteles_de_la_fachada_este_del_Erecte%C3%B3n,_Atenas,_Grecia,_2019_06.jpg" target="_blank" rel="noopener">
+        <img src="images/Lituus/Lituus03-360.avif" alt="Ionic capital from Wikipedia">
+      </a>
+      <figcaption>Ionic capital from Wikipedia</figcaption>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Lituus polar equation:</div>
+      \[ r = \dfrac{a}{\sqrt{\theta}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Lituus<sup>1,2</sup>, named after the ancient Roman lituus (a curved augural staff or bishop’s crosier), was studied by Roger Cotes (1682–1716) and described in his posthumous collection <em>Harmonia Mensurarum</em> (1722). Cotes, a Cambridge professor known for editing Newton’s <em>Principia</em>, introduced the curve. Colin Maclaurin gave it its name in the same volume. The Latin word denotes a bent staff or crook—specifically the curved staff of an augur or a bishop’s crosier—and the curve’s long sweeping arm resembles that shape closely enough that the name remained. Historically, the Lituus is the locus of a point on a rotating radius such that the area of the circular sector it sweeps out remains constant. In the modern classification of spirals, the Lituus is one of the power-law polar spirals of the form \( r = a\theta^{n} \) where \( n = -\frac{1}{2} \). It is the inverse curve with respect to the origin of Fermat’s spiral, \( r = a\sqrt{\theta} \). Geometrically, the Lituus has two branches (for positive and negative \( r \)) which both wind toward the origin as \( \theta \) increases, while the arm flares off to infinity as \( \theta \to 0 \). A frequently cited property is that each additional turn adds less radial change than the previous one, because radius and angle are linked by the inverse square-root law.</p>
+    <p>Real-life applications in engineering and the natural sciences are limited. The curve appears in the volutes of Ionic capitals in classical architecture.<sup>3</sup> No additional uses were identified in standard mathematical references.</p>
+    <p>Also see the Spiral entry for more generalized spiral options.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Lituus.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Lituus.html</a> (history and equations)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Lituus/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Lituus/</a> (history and Cotes biography)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/lituus/lituus.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/lituus/lituus.shtml</a> (properties and Ionic capitals)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LITUUS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display fa fb fc p1 rval xc yc skm a1 a2 x1 y1 x2 y2)
+  (setq id "Lituus"
+        iq "r=a·θ^{-0.5}"
+        dcl "LITUUS"
+        opt '("a value" "curve point")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "a (scale)" 1.0)))
+    ((eq kw 1)
+     (setq p1 (get_point 0 "Point on curve" (polar basept xaxisangle 1.0) basept)
+           fb (get_real 0 "# of extra revolutions to point" 0)
+           fc (+ (* fb 2.0 pi) (- (angle basept p1) xaxisangle))
+           fc (if (eq (alt_expt fc -0.5 T) 0) (alt_expt (+ (* (1+ fb) 2.0 pi) (- (angle basept p1) xaxisangle)) -0.5 T) (alt_expt fc -0.5 T))
+           fa (/ (distance basept p1) fc))))
+  (setq eq_display (strcat "\na= " (rtos fa 2 4))
+        rval '(* fa (alt_expt (eval a2) -0.5 nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LITUUS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinusoidal Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sinusoidal Spiral</h1>
+      <p class="short-description">A family of plane curves with polar equation \( r^{n}=a^{n}\cos(n\theta) \), where most members are closed algebraic curves rather than true spirals.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SinSpiral/SinSpiral01-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=2,Lemniscate of Bernoulli">
+      <figcaption>Sinusoidal Spiral, a=1,n=2,Lemniscate of Bernoulli</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral02-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=3,Kiepert Curve">
+      <figcaption>Sinusoidal Spiral, a=1,n=3,Kiepert Curve</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral03-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=4">
+      <figcaption>Sinusoidal Spiral, a=1,n=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral04-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=5">
+      <figcaption>Sinusoidal Spiral, a=1,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral05-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=6">
+      <figcaption>Sinusoidal Spiral, a=1,n=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral06-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=7">
+      <figcaption>Sinusoidal Spiral, a=1,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral07-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=1/2, Cardioid">
+      <figcaption>Sinusoidal Spiral, a=1,n=1/2, Cardioid</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral08-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=3/2">
+      <figcaption>Sinusoidal Spiral, a=1,n=3/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral09-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=3/2,+Imaginary">
+      <figcaption>Sinusoidal Spiral, a=1,n=3/2,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral10-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=5/2">
+      <figcaption>Sinusoidal Spiral, a=1,n=5/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral11-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=5/2,+Imaginary">
+      <figcaption>Sinusoidal Spiral, a=1,n=5/2,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral12-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=7/2">
+      <figcaption>Sinusoidal Spiral, a=1,n=7/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral13-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=1/3,Cayley's sextic">
+      <figcaption>Sinusoidal Spiral, a=1,n=1/3,Cayley's sextic</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral14-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=2/3">
+      <figcaption>Sinusoidal Spiral, a=1,n=2/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral15-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=2/3,+Imaginary">
+      <figcaption>inusoidal Spiral, a=1,n=2/3,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral16-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=4/3">
+      <figcaption>Sinusoidal Spiral, a=1,n=4/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral17-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=4/3,+Imaginary">
+      <figcaption>Sinusoidal Spiral, a=1,n=4/3,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral18-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=5/3">
+      <figcaption>Sinusoidal Spiral, a=1,n=5/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral19-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=1/4">
+      <figcaption>Sinusoidal Spiral, a=1,n=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral20-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=13/4">
+      <figcaption>Sinusoidal Spiral, a=1,n=13/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral21-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=13/4,+Imaginary">
+      <figcaption>Sinusoidal Spiral, a=1,n=13/4,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral22-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-2,Rectangular Hyperbola">
+      <figcaption>Sinusoidal Spiral, a=1,n=-2,Rectangular Hyperbola</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral23-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-3,Humbert cubic">
+      <figcaption>Sinusoidal Spiral, a=1,n=-3,Humbert cubic</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral24-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-4">
+      <figcaption>Sinusoidal Spiral, a=1,n=-4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral25-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-1/2,Parabola">
+      <figcaption>Sinusoidal Spiral, a=1,n=-1/2,Parabola</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral26-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-1/3,Tschirnhausen cubic">
+      <figcaption>Sinusoidal Spiral, a=1,n=-1/3,Tschirnhausen cubic</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral27-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-1/4">
+      <figcaption>Sinusoidal Spiral, a=1,n=-1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral28-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-3/2">
+      <figcaption>Sinusoidal Spiral, a=1,n=-3/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral29-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-3/2,+Imaginary">
+      <figcaption>Sinusoidal Spiral, a=1,n=-3/2,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral30-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-5/2">
+      <figcaption>Sinusoidal Spiral, a=1,n=-5/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral31-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-2/3">
+      <figcaption>Sinusoidal Spiral, a=1,n=-2/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral32-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-2/5">
+      <figcaption>Sinusoidal Spiral, a=1,n=-2/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral33-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-2/7">
+      <figcaption>Sinusoidal Spiral, a=1,n=-2/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral34-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-1/13">
+      <figcaption>Sinusoidal Spiral, a=1,n=-1/13</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral35-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-13/4">
+      <figcaption>Sinusoidal Spiral, a=1,n=-13/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral36-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-13/4,+Imaginary">
+      <figcaption>Sinusoidal Spiral, a=1,n=-13/4,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral37-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-11/10">
+      <figcaption>Sinusoidal Spiral, a=1,n=-11/10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral38-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=-6/5">
+      <figcaption>Sinusoidal Spiral, a=1,n=-6/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinSpiral/SinSpiral39-360.avif"
+           alt="Sinusoidal Spiral, a=1,n=26/3">
+      <figcaption>Sinusoidal Spiral, a=1,n=26/3</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Sinusoidal Spiral polar equation:</div>
+      \[ r^{n} = a^{n}\cos(n\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Equivalent solved form:</div>
+      \[ r = a\bigl[\cos(n\theta)\bigr]^{1/n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The sinusoidal spiral<sup>1,2,3,4</sup> is a family of plane curves defined in polar coordinates by the equation below, where \( a \) is a positive constant and \( n \) is any nonzero rational number. Despite the name, most members of the family are closed algebraic curves rather than true spirals with continuously increasing radius. The curves were first studied by the Scottish mathematician Colin Maclaurin in 1718. Maclaurin (1698–1746), a professor at the University of Edinburgh and a leading figure in the development of calculus, included these curves in his geometric investigations. The name “sinusoidal spiral” was introduced later by the French mathematician Haton de la Goupillière in 1857. A notable feature of the family is that many well-known classical curves arise as special cases for particular rational values of \( n \). These include the circle (\( n = 1 \)), cardioid (\( n = \tfrac{1}{2} \)), lemniscate of Bernoulli (\( n = 2 \)), parabola (\( n = -\tfrac{1}{2} \)), rectangular hyperbola (\( n = -2 \)), Tschirnhausen cubic (\( n = -\tfrac{1}{3} \)) and Cayley’s sextic (\( n = \tfrac{1}{3} \)). The generalized Kiepert entry uses a rearranged equation giving rise to the same set of curves. There is also a code option to include imaginary as negative values.</p>
+    <p>In classical mechanics the sinusoidal spiral describes the trajectory of a particle moving under a central force whose magnitude is proportional to a power of the radial distance \( r \). In geometry the curves also appear as field lines of certain complex potentials and as planar projections of the asymptotic lines of the Plücker conoid. The sinusoidal spiral bent crystal dispersion method has also been used in improving X-ray spectroscopy resolution.<sup>5</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/SinusoidalSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/SinusoidalSpiral.html</a> (definition, history, and special cases)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/spiralesinusoidale/spiralesinusoidale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/spiralesinusoidale/spiralesinusoidale.shtml</a> (definition, history, mechanics application, and geometric properties)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Sinusoidal_spiral" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Sinusoidal_spiral</a> (overview, special cases, and central-force trajectory)</li>
+      <li><a href="https://www.2dcurves.com/spiral/spirals.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spirals.html</a> (definition and special cases)</li>
+      <li><a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-33-6-13269" target="_blank" rel="noopener noreferrer">https://opg.optica.org/oe/fulltext.cfm?uri=oe-33-6-13269</a> (use in X-ray spectroscopy)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SINSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                      xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc maxdraw skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Sinusoidal Spiral"
+        iq "rⁿ=aⁿ·cos(nθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (maximum radius)" 1.0)
+        fb (get_real 2 "n (shape/spiral parameter)" 4.0)
+        fc (get_keyword 0 "Real Imaginary" "Real or Imaginary values allowed?" "Real")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (rtos fb 2 4) ", " fc " values")
+        fd nil
+        rval '(progn (setq fe (cos (* fb (eval a2)))) (if (and (eq fc "Real") (&lt; fb 0.0) fd (minusp (* fd fe))) (setq restartflag T)) (setq fd fe)
+              (if (and (eq fc "Real") (&gt; fb 0.0) (&lt;= fe 1e-9)) 0.0 (* fa (alt_expt fe (/ 1.0 fb) (eq fc "Real")))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SINSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

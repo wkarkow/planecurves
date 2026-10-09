@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gaussian Bell Curve - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Gaussian Bell Curve</h1>
+      <p class="short-description">The classic normal-distribution bell curve central to statistics, error theory, laser-beam intensity profiles, signal processing, and Six Sigma quality control.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/GaussianBell/GaussianBell01-360.avif"
+           alt="Gaussian Bell Curve, σ=1,a=5,μ=0">
+      <figcaption>Gaussian Bell Curve, σ=1,a=5,μ=0</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Gaussian Bell Curve Cartesian equation:</div>
+      \[ y = A e^{-\dfrac{(x-\mu)^{2}}{2\sigma^{2}}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Gaussian function in its familiar bell-shaped form, \( y = A e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}} \), emerged in the late 18th and early 19th centuries in the context of astronomy and probability.<sup>1,2</sup> In 1733, Abraham de Moivre in his study of games of chance derived an approximation to the binomial distribution using an exponential of a quadratic form. This was an early anticipation of the bell curve. Carl Friedrich Gauss formalized the bell curve in 1809 as the law of error while analyzing errors in astronomical observations. His publication <em>Theoria Motus Corporum Coelestium</em> laid out the mathematics of the “normal distribution” as the most probable distribution of observational errors.<sup>1</sup> From Gauss’s name the curve gained its enduring label: the Gaussian distribution. In 1812, Pierre-Simon Laplace demonstrated that the sum of a large number of independent random variables tends toward this distribution, foreshadowing what became the central limit theorem. By the mid-19th century, the Gaussian curve was recognized as the canonical distribution of errors and variations, bridging astronomy, geodesy, and probability.</p>
+    <p>The Gaussian bell curve has become one of the most widely used mathematical forms in science and engineering. It is the cornerstone of modern statistics, describing measurement errors, biological trait distributions such as heights and blood pressure, and many naturally occurring variations. In physics and engineering, it models the intensity profile of laser beams (TEM<sub>00</sub> mode),<sup>3</sup> thermal noise in electronics, diffusion processes, and heat spreading. Gaussian filters are widely used in signal and image processing to smooth data while preserving overall shape. It also appears in pharmacokinetics for certain drug concentration profiles and forms the basis of the Six Sigma quality control methodology in manufacturing where the process mean is separated from specification limits by at least six standard deviations, implying a defect rate of less than 3.4 per million opportunities. Approximately 68% of values fall within ±1σ, ∼95% within ±2σ, and ∼99.7% within ±3σ so that controlling σ is equivalent to controlling variability.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/GaussianFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/GaussianFunction.html</a> (history of Gaussian distribution and de Moivre/Gauss/Laplace contributions)</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialg.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialg.html</a> (exponential curves overview including Gaussian case)</li>
+      <li><a href="https://www.rp-photonics.com/gaussian_beams.html" target="_blank" rel="noopener noreferrer">https://www.rp-photonics.com/gaussian_beams.html</a> (Gaussian beams in laser optics and engineering applications)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>Gaussian Bell AutoLISP: see <a href="Exponential.html">Exponential</a>.</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

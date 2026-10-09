@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Syntractrix - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Syntractrix</h1>
+      <p class="short-description">The locus of a point held at a constant distance along the tangent to a tractrix as the point of tangency moves.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Syntractrix/Syntractrix01-360.avif"
+           alt="Syntractrix, a=1,multiple values of k">
+      <figcaption>
+        Syntractrix, a=1,k=
+        <span class="figcap-value" style="color:#000000">-2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">-1.5</span>,
+        <span class="figcap-value" style="color:#0000FF">-1.0</span>,
+        <span class="figcap-value" style="color:#009600">-0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">0.0</span>,
+        <span class="figcap-value" style="color:#9600FF">0.25</span>,
+        <span class="figcap-value" style="color:#0096FF">0.5</span>,
+        <span class="figcap-value" style="color:#AA5555">1.0</span>,
+        <span class="figcap-value" style="color:#00FF00">1.5</span>,
+        <span class="figcap-value" style="color:#FF00FF">2.0</span>,
+        <span class="figcap-value" style="color:#009696">2.5</span>,
+        <span class="figcap-value" style="color:#960096">3.0</span>,
+        a = 1
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Syntractrix Curve parametric equations:</div>
+      \[ x = a\bigl(t - k\tanh(t)\bigr),\qquad y = a\cdot k\cdot\operatorname{sech}(t) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The syntractrix<sup>1</sup> (also known as the convict’s curve, Poleni’s curve, or <em>courbe des forçats</em>) is the locus of a point situated at a constant distance along the tangent to a tractrix as the point of tangency moves along the generating curve. It arose in the 18th century as a natural companion to the tractrix, which Christiaan Huygens had investigated in the late 17th century for pursuit problems and mechanical navigation aids. Giovanni Poleni examined the curve in 1729 while developing a mechanical device for computing logarithms that employed tractrix geometry.<sup>2</sup> Leonhard Euler classified the special case corresponding to parameter \(k = 2\) in 1744 as the seventh species of elastica in his foundational variational treatment of elastic rods.<sup>3</sup> The name “syntractrix” (emphasizing its “accompanying” relation to the tractrix) was introduced by Jacopo Riccati around 1755 and further developed by Vincenzo Riccati in 1757.<sup>2</sup> In the nineteenth century the curve entered systematic algebraic geometry. Dionysius Lardner derived its Cartesian equation and discussed its equitangential properties in his 1823 <em>A System of Algebraic Geometry</em>.<sup>4</sup> James Joseph Sylvester later connected it to broader classes of higher plane curves through tangential and involute relations.<sup>2</sup> George Salmon presented its parametric equations in the 1879 edition of <em>A Treatise on the Higher Plane Curves</em>.<sup>5</sup></p>
+    <p>Documented applications center on mechanical analog computation and the modeling of constrained rigid-body motion. Poleni’s 1729 instrument used the curve to generate logarithms mechanically. The parametric family also describes the paths traced by points fixed at various distances along a rigid rod when one end moves at constant speed along a straight line and another point traces a tractrix; the special case \(k = 2\) corresponds to the classical “galley-slave” or convict-pulled wagon model in which the two ends move at equal speeds. Modern interpretations appear in non-holonomic path planning for wheeled vehicles and robots, where the curve models the trajectory of points on a vehicle whose front wheels follow a prescribed path under no-skid constraints.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/syntractrice/syntractrice.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/syntractrice/syntractrice.shtml</a> (modern parametric presentation and geometric construction).</li>
+      <li><a href="https://grokipedia.com/page/syntractrix" target="_blank" rel="noopener noreferrer">https://grokipedia.com/page/syntractrix</a> (citing Poleni, Riccati, Sylvester references).</li>
+      <li><a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-103.pdf" target="_blank" rel="noopener noreferrer">https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-103.pdf</a> (Levien, R. “The elastica: a mathematical history”, Euler 1744 classification as elastica species 7).</li>
+      <li><a href="https://books.google.com/books?id=0zUDAAAAQAAJ&pg=PA261" target="_blank" rel="noopener noreferrer">https://books.google.com/books?id=0zUDAAAAQAAJ&pg=PA261</a> (Lardner, D. “A System of Algebraic Geometry”, Cartesian equation and equitangential properties).</li>
+      <li><a href="https://archive.org/details/treatisehigherpl00salmrich/page/n315/mode/2up" target="_blank" rel="noopener noreferrer">https://archive.org/details/treatisehigherpl00salmrich/page/n315/mode/2up</a> (Salmon, G. “A Treatise on the Higher Plane Curves”, parametric form derived from the tractrix).</li>      
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SYNTRACTRIX (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Syntractrix"
+        iq "x=a(t-k·tanh(t)), y=a·k·sech(t)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions in curve"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (tractrix peak height = a·k)" 1.0)
+        fb (get_real 0 "k (offset distance multiplier)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        paramstep (/ xspan divcount)
+        xc '(* fa (- (eval a2) (* fb (TANH (eval a2)))))
+        yc '(* fa fb (/ 1.0 (COSH (eval a2))))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SYNTRACTRIX)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

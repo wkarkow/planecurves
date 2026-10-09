@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conchal Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Conchal Curve</h1>
+      <p class="short-description">A circular quartic algebraic curve such that the product of the distance from points to a fixed point (−a, 0) and the distance to the fixed line x = a equals the constant c².</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Conchal/Conchal01-360.avif"
+           alt="Conchal, a=2,multiple values of c"
+      <figcaption>
+        Conchal, a=2,c=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">0.75</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">1.25</span>,
+        <span class="figcap-value" style="color:#FF9600">1.5</span>,
+        <span class="figcap-value" style="color:#9600FF">1.75</span>,
+        <span class="figcap-value" style="color:#0096FF">2.0</span>,
+        <span class="figcap-value" style="color:#AA5555">2.25</span>,
+        <span class="figcap-value" style="color:#00FF00">2.5</span>,
+        <span class="figcap-value" style="color:#FF00FF">2.75</span>,
+        <span class="figcap-value" style="color:#009696">3.0</span>,
+        <span class="figcap-value" style="color:#960096">3.25</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Conchal implicit equation:</div>
+      \[ ((x - a)^2 + y^2)(x + a)^2 = c^4 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Conchal explicit equation:</div>
+      \[ y = \pm \frac{\sqrt{(c^2 + a^2 - x^2)(c^2 - a^2 + x^2)}}{x + a} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Conchal curve<sup>1</sup>, studied by German mathematician Oskar Schlömilch in 1878 and by G. Huber in 1895, takes its name from the Latin <em>cochlea</em> (snail or shell). It is the locus of points M for which the product of the distance from M to a fixed point F (−a, 0) and the distance from M to the fixed line x = a equals a constant c². This geometric definition produces a circular quartic algebraic curve whose shape varies with the relative sizes of the parameters a and c. When 0 &lt; c &lt; a the curve consists of two infinite branches asymptotic to the line x = −a together with a closed oval component. When c = a the curve is rational, the origin becomes a double point, and one branch includes a loop. When c &gt; a the curve consists of two infinite branches with the same vertical asymptote x = −a.</p>
+    <p>No documented applications of the Conchal curve in engineering or the natural sciences were identified in standard mathematical references.</p>
+    <p>Due to portions of the curve on both sides of the x = −a asymptote, to obtain the full curve one must run the code three times according to the domain prompts (Right, Farleft, Nearleft).</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/conchale/conchale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/conchale/conchale.shtml</a> (history, geometric definition, parameter-dependent shapes, and equation).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CONCHAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff maxdraw)
+  (setq id "Conchal Curve"
+        iq "y=±√((c²+a²−x²)(c²−a²+x²))/(x+a)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in curve"
+        dct 100
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (asymptote at x = −a)" 2.0)
+        fb (get_real 2 "c (shell size parameter)" 2.0)
+        kw (get_keyword 0 "Right Farleft Nearleft" "Right, Farleft, or Nearleft domain?: " "Right")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", c=" (rtos fb 2 4))
+        fc (alt_expt (+ (* fa fa) (* fb fb)) 0.5 T)
+        fd (if (&gt; fa fb) (alt_expt (- (* fa fa) (* fb fb)) 0.5 T) 0.0)
+        fe (cond ((and (&lt; fb fa) (eq kw "Right")) fd) ((eq kw "Farleft") (- fc)) ((and (&gt;= fb fa) (eq kw "Nearleft")) (- fa))
+           ((and (&lt; fb fa) (eq kw "Nearleft")) (- fa)) (T 0.0))
+        ff (cond ((and (&lt; fb fa) (eq kw "Right")) (- fc fd)) ((eq kw "Farleft") (- fc fa)) ((and (&gt;= fb fa) (eq kw "Nearleft")) fa)
+           ((and (&lt; fb fa) (eq kw "Nearleft")) (- fa fd)) (T fc))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 100)
+        paramstep (/ ff divcount)
+        xc '(+ fe (eval a2))
+        yc '(/ (if (&lt; (abs (setq fc (* (+ (* fb fb) (* fa fa) (- (* (setq fd (+ fe (eval a2))) fd))) (+ (* fb fb) (- (* fa fa)) (* fd fd))))) 1e-9)
+            0.0 (alt_expt fc 0.5 T)) (avoid_zero (+ fd fa)))
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CONCHAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

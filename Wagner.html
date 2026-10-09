@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wagner Vapor Pressure Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Wagner Vapor Pressure Curve</h1>
+      <p class="short-description">Saturation pressure of ordinary water along the liquid–vapor curve from the triple point to the critical point, explicit in pressure.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Wagner/Wagner01-360.avif"
+           data-full="images/Wagner/Wagner01-1600.avif"
+           alt="Wagner Vapor Pressure Curve, Metric (K/MPa)">
+      <figcaption>Wagner Vapor Pressure Curve, Metric (K/MPa), a₁=−7.85951783, a₂=1.84408259, a₃=−11.7866497, a₄=22.6807411, a₅=−15.9618719, a₆=1.80122502, Tmax=647.096, Pc=22.064, Tmin=273.15</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Wagner/Wagner02-360.avif"
+           data-full="images/Wagner/Wagner02-1600.avif"
+           alt="Wagner Vapor Pressure Curve, US Customary (F/psi)">
+      <figcaption>Wagner Vapor Pressure Curve, US Customary (F/psi), a₁=−7.85951783, a₂=1.84408259, a₃=−11.7866497, a₄=22.6807411, a₅=−15.9618719, a₆=1.80122502, Tmax=647.096, Pc=3200.79, Tmin=273.15</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Wagner Vapor Pressure Curve Cartesian equation:</div>
+      \[ \ln\left(\dfrac{P}{P_{c}}\right) = \dfrac{T_{c}}{T}\left(a_{1}\tau + a_{2}\tau^{1.5} + a_{3}\tau^{3} + a_{4}\tau^{3.5} + a_{5}\tau^{4} + a_{6}\tau^{7.5}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Auxiliary variable:</div>
+      \[ \tau = 1 - \dfrac{T}{T_{c}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Pressure-explicit form (as drawn):</div>
+      \[ P = P_{c}\exp\!\left[\dfrac{T_{c}}{T}\left(a_{1}\tau + a_{2}\tau^{1.5} + a_{3}\tau^{3} + a_{4}\tau^{3.5} + a_{5}\tau^{4} + a_{6}\tau^{7.5}\right)\right] \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The saturation vapor pressure equation for ordinary water substance now in widespread international use was developed by A. Saul and W. Wagner and first published in 1987.<sup>1</sup> It provides a compact, highly accurate empirical correlation for the vapor pressure along the liquid–vapor coexistence curve from the triple point to the critical point. The original coefficients were determined by fitting to selected high-quality experimental data available at the time. In 1993, W. Wagner and A. Pruß revised the equation and its coefficients to bring all temperatures into agreement with the International Temperature Scale of 1990 (ITS-90).<sup>2</sup> This revised form was subsequently adopted as an auxiliary equation within the development of the IAPWS-95 formulation, the current international scientific standard for the thermodynamic properties of water.<sup>3</sup> The equation is a six-term polynomial in the auxiliary variable \(\tau = 1 - T_{r}\) (where \(T_{r} = T/T_{c}\)) multiplied by the factor \(T_{c}/T\) inside the exponential. It was deliberately constructed to reproduce the singular behavior of the vapor pressure near the critical point while remaining numerically stable and accurate over the entire liquid–vapor range. Because it is explicit in pressure as a function of temperature, it is computationally convenient for engineering calculations and is widely implemented in steam-table software, process simulators, and scientific computing libraries.</p>
+    <p>Real-life applications are extensive in engineering and the natural sciences. In power-plant engineering the equation (or the larger IAPWS-95 formulation of which it is a part) is used to calculate steam properties for boiler design, turbine performance, Rankine-cycle efficiency, and condenser calculations. In chemical and process engineering it supplies saturation pressures for distillation, evaporation, and phase-equilibrium computations involving aqueous systems. Refrigeration and air-conditioning industries rely on it for refrigerant-side property evaluations and psychrometric calculations. In meteorology and atmospheric science the equation (often in the closely related Wagner–Pruß or Goff–Gratch forms) underpins humidity, dew-point, and cloud-physics models. It also appears in geochemistry, planetary science, and desalination-process design wherever accurate water-phase equilibrium data are required.</p>
+    <p>The routine offers Metric (K/MPa) and US Customary (F/psi). Temperature is carried in kelvin in both modes. Dialog defaults are the 1993 ITS-90 coefficients. On the drawing, metric \(x = (T - T_{\min})/10\) and \(y = P\) in MPa; US \(x\) is degrees Fahrenheit divided by 10 and \(y\) is \(P\) in psi divided by 100, so a critical pressure near 22 MPa or 3200 psi does not dominate the viewport. The code symbol \(\nu\) is the same auxiliary variable as \(\tau\).</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://doi.org/10.1063/1.555787" target="_blank" rel="noopener noreferrer">https://doi.org/10.1063/1.555787</a> A. Saul and W. Wagner, International Equations for the Saturation Properties of Ordinary Water Substance, J. Phys. Chem. Ref. Data 16, 893 (1987) (original correlation and coefficients).</li>
+      <li><a href="https://doi.org/10.1063/1.555926" target="_blank" rel="noopener noreferrer">https://doi.org/10.1063/1.555926</a> W. Wagner and A. Pruß, International Equations for the Saturation Properties of Ordinary Water Substance. Revised according to the International Temperature Scale of 1990. Addendum to J. Phys. Chem. Ref. Data 16, 893 (1987), J. Phys. Chem. Ref. Data 22, 783 (1993) (ITS-90 revision).</li>
+      <li><a href="https://doi.org/10.1063/1.1461829" target="_blank" rel="noopener noreferrer">https://doi.org/10.1063/1.1461829</a> W. Wagner and A. Pruß, The IAPWS Formulation 1995 for the Thermodynamic Properties of Ordinary Water Substance for General and Scientific Use, J. Phys. Chem. Ref. Data 31, 387 (2002) (context within the modern IAPWS standard).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:WAGNER (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                 divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 
+                 fa fb fc fd fe ff fg fh fi)
+  (setq id "Wagner Vapor Pressure Curve (Water)"
+        iq "ew = Pc·e^[(Tc/T)·(a₁ν + a₂ν^1.5 + a₃ν^3 + a₄ν^3.5 + a₅ν^4 + a₆ν^7.5)]"
+        dcl "WAGNER"
+        opt '("Metric (K/MPa)" "US Customary (F/psi)")
+        kw 0
+        mode 'param
+        dpr "# of divisions in curve"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a₁" -7.85951783)
+        fb (get_real 2 "a₂" 1.84408259)
+        fc (get_real 2 "a₃" -11.7866497)
+        fd (get_real 2 "a₄" 22.6807411)
+        fe (get_real 2 "a₅" -15.9618719)
+        ff (get_real 2 "a₆" 1.80122502)
+        fg (get_real 2 "Tmax" 647.096)
+        fh (get_real 2 "Pc (mPa if metric, psi if US)" (if (eq kw 0) 22.064 3200.79))
+        fi (get_real 2 "Tmin" 273.15)
+        fj (if (eq kw 0) fh (* fh 0.01))
+        eq_display (strcat "\na₁=" (rtos fa 2 8) ", a₂=" (rtos fb 2 8) ", a₃=" (rtos fc 2 7) ", a₄=" (rtos fd 2 7) ", a₅=" (rtos fe 2 7)
+                    ", a₆=" (rtos ff 2 8) ", Tmax=" (rtos fg 2 3) ", Pc=" (rtos fh 2 3) ", Tmin=" (rtos fi 2 2))
+        xc (if (eq kw 0) '(/ (- (eval a2) fi) 10.0) '(/ (+ 32.0 (* (- (eval a2) fi) 1.8)) 10.0))
+        yc '(* fj (exp (* (/ fg (eval a2)) (+ (* fa (- 1.0 (/ (eval a2) fg))) (* fb (alt_expt (- 1.0 (/ (eval a2) fg)) 1.5 nil)) (* fc (alt_expt (- 1.0 (/ (eval a2) fg)) 3.0 nil))
+            (* fd (alt_expt (- 1.0 (/ (eval a2) fg)) 3.5 nil)) (* fe (alt_expt (- 1.0 (/ (eval a2) fg)) 4.0 nil)) (* ff (alt_expt (- 1.0 (/ (eval a2) fg)) 7.5 nil))))))
+        paramstep (/ (* 10.0 (/ (- fg fi) 10.0)) divcount)
+        skm '(T T T)
+        a1 fi
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:WAGNER)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

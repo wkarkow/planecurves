@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whirl Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Whirl Curve</h1>
+      <p class="short-description">A nest of regular \(n\)-gons, each scaled by a constant factor \(s\) and rotated so that the vertices of one copy lie on the sides of the copy before it.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Whirl/Whirl01-360.avif"
+           alt="Whirl Curve, n=3,s=0.95,shrink">
+      <figcaption>Whirl Curve, n=3,s=0.95,shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl02-360.avif"
+           alt="Whirl Curve, n=4,s=0.95,shrink">
+      <figcaption>Whirl Curve, n=4,s=0.95,shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl03-360.avif"
+           alt="Whirl Curve, n=5,s=0.95,shrink">
+      <figcaption>Whirl Curve, n=5,s=0.95,shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl04-360.avif"
+           alt="Whirl Curve, n=6,s=0.95,shrink">
+      <figcaption>Whirl Curve, n=6,s=0.95,shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl05-360.avif"
+           alt="Whirl Curve, n=7,s=0.95,shrink">
+      <figcaption>Whirl Curve, n=7,s=0.95,shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl06-360.avif"
+           alt="Whirl Curve, n=8,s=0.95,shrink">
+      <figcaption>Whirl Curve, n=8,s=0.95,shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl07-360.avif"
+           alt="Whirl Curve, n=6,s=1/cos(pi/6),shrink">
+      <figcaption>Whirl Curve, n=6,s=1/cos(π/6),shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl08-360.avif"
+           alt="Whirl Curve, n=7,s=1/cos(pi/7),shrink">
+      <figcaption>Whirl Curve, n=7,s=1/cos(π/7),shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl09-360.avif"
+           alt="Whirl Curve, n=8,s=1/cos(pi/8),shrink">
+      <figcaption>Whirl Curve, n=8,s=1/cos(π/8),shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl10-360.avif"
+           alt="Whirl Curve, n=17,s=0.99,shrink">
+      <figcaption>Whirl Curve, n=17,s=0.99,shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl11-360.avif"
+           alt="Whirl Curve, n=17,s=1/cos(pi/17),shrink">
+      <figcaption>Whirl Curve, n=17,s=1/cos(π/17),shrink</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Whirl/Whirl12-360.avif"
+           alt="Whirl Curve, n=3,s=0.75,shrink">
+      <figcaption>Whirl Curve, n=3,s=0.75,shrink</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Whirl Curve equation:</div>
+      \[ \theta = \dfrac{\pi}{n} - \arccos\left(\dfrac{\cos(\pi/n)}{s}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Grow, vertex contact:</div>
+      \[ s = \dfrac{1}{\cos(\pi/n)}, \quad \theta = -\dfrac{\pi}{n} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">First circumradius (side \(a\)):</div>
+      \[ R = \dfrac{a}{2\sin(\pi/n)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Level \(m\), vertex \(k\), before axis rotation:</div>
+      \[ r_{m} = R\, s^{m}, \quad \phi_{m,k} = m\theta + \dfrac{2\pi k}{n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>A whirl is a geometric figure constructed by nesting a sequence of regular polygons having the same number of sides \(n\), each scaled by a constant factor and rotated relative to its predecessor so that the vertices of each successive polygon lie on the sides of the preceding one.<sup>1</sup> The vertices of the entire family therefore trace \(n\) discrete logarithmic spirals. This construction arises directly from the classic \(n\)-mice (or bugs) pursuit problem: \(n\) agents placed at the vertices of a regular \(n\)-gon simultaneously pursue one another at constant speed. Their successive positions at equal time intervals form a shrinking and rotating regular \(n\)-gon whose vertices follow logarithmic spirals and meet at the center.<sup>2</sup> The discrete polygonal figure with scale factor \(s\) obtained by connecting these positions is the whirl. A related but distinct iterative nesting, in which each polygon is scaled so that its incircle coincides with the circumcircle of the previous copy and successive polygons are rotated by \(\pi/n\), is described separately in the literature on nested polygons.<sup>3</sup> The continuous pursuit problem itself dates to at least the late nineteenth century. Miller posed a three-mice version in 1871; Lucas stated the three-dogs problem in 1877, which Brocard solved the same year. The problem and its logarithmic-spiral solutions were later popularized through Martin Gardner’s columns and books. Generalizations to irregular polygons and differing speeds were given by Bernhart in 1959.<sup>2</sup></p>
+    <p>Real-life applications in engineering and the natural sciences are primarily illustrative and didactic. The underlying continuous mice problem has served as a model in pursuit-evasion theory, differential games, and certain robotic navigation or coverage algorithms (bug algorithms). Logarithmic spirals appear in contexts such as biological pursuit trajectories and some path-planning geometries, but the specific discrete polygonal whirl remains chiefly a tool for visualizing self-similar nesting and the discrete sampling of log spirals.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Whirl.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Whirl.html</a> (definition of whirl, connection to mice problem and logarithmic spirals).</li>
+      <li><a href="https://mathworld.wolfram.com/MiceProblem.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/MiceProblem.html</a> (history of the pursuit problem, paths, and formation of the whirl figure).</li>
+      <li><a href="https://mathworld.wolfram.com/NestedPolygon.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/NestedPolygon.html</a> (related but distinct incircle-circumcircle nesting construction).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:WHIRL (/ fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw)
+
+(defun m_p (a b c d e f g / h i j k l)
+  (setq l nil h 0)
+  (while (< h c)
+    (setq i (+ b (* h (/ (* 2.0 pi) c)))
+          j (* a (cos i))
+          k (* a (sin i))
+          l (cons (list (+ d (* j f) (- (* k g))) (+ e (* k f) (* j g))) l)
+          h (1+ h)))
+  (setq l (reverse l))
+  (entmake (append (list '(0 . "LWPOLYLINE") ' (100 . "AcDbEntity") '(67 . 0) '(410 . "Model") (cons 8 (getvar "clayer")) '(62 . 256) '(100 . "AcDbPolyline") (cons 90 c) '(70 . 1) '(43 . 0.0) '(38 . 0.0) '(39 . 0.0))
+                   (mapcar '(lambda (p) (cons 10 p)) l) '((210 0.0 0.0 1.0)))))
+
+  (if (not (load "Curvecore.lsp" nil)) (progn (prompt "\nError: CURVECORE.LSP not found in support path.") (exit)))
+  (setq fv (get_point 0 "Center of whirl" '(0.0 0.0) nil)
+        fw (get_angle 0 "X-axis angle (degrees)" 0.0 fv)
+        fa (cos fw)
+        fb (sin fw)
+        fc (car fv)
+        fd (cadr fv)
+        fe (get_integer 6 "n (number of sides, >=3)" 4)
+        ff (get_keyword 0 "Grow Shrink" "Grow or Shrink?" "Shrink")
+        fg (cos (/ pi fe))
+        fh (/ 1.0 fg)
+        fi (get_real 2 "Initial side length" 1.0)
+        fj (if (eq ff "Grow") "vertex contact at " "smallest contact at ")
+        fk (if (eq ff "Grow") fh fg)
+        fl (get_real 2 (strcat "s (scale factor per level, " fj (rtos fk 2 4) ")") fk))
+  (if (and (eq ff "Grow") (< (abs (- fl fh)) 1e-6)) (setq fm (- (/ pi fe))) (setq fn (min 1.0 (/ fg fl)) fm (- (/ pi fe) (acos fn))))
+  (setq fo (/ fi (* 2.0 (sin (/ pi fe))))
+        fp (get_integer 6 "Initial number of nested polygons" 10))
+  (princ (strcat "\nWhirl: n=" (itoa fe) ", init side=" (rtos fi 2 4) ", s=" (rtos fl 2 4) ", θ=" (rtos (* 180.0 (/ fm pi)) 2 2) "°"))
+  (setq fq fo
+        fr 0.0
+        fs 0)
+  (repeat fp (m_p fq fr fe fc fd fa fb) (setq fq (* fq fl) fr (+ fr fm) fs (1+ fs)))
+  (setq ft T)
+  (while ft
+    (setq fu (get_integer 4 (strcat "\nTotal polygons = " (itoa fs) " Additional inner polygons to add (0=quit)") 5))
+    (if (<= fu 0) (setq ft nil) (progn (repeat fu (m_p fq fr fe fc fd fa fb) (setq fq (* fq fl) fr (+ fr fm) fs (1+ fs))))))
+  (princ "\nWhirl complete.") (princ))
+(C:WHIRL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

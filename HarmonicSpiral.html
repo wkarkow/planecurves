@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonic Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Harmonic Spiral</h1>
+      <p class="short-description">Polar spirals that combine classical Archimedean (Poinsot) or logarithmic growth with a sinusoidal modulation of the radius.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral01-360.avif"
+           alt="Harmonic Spiral, Poinsot proportional, a=1,b=1,A=0.15,N=8,φ=0°">
+      <figcaption>Harmonic Spiral, Poinsot proportional, a=1,b=1,A=0.15,N=8,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral02-360.avif"
+           alt="Harmonic Spiral, Poinsot proportional, a=1,b=1,A=0.15,N=8,φ=90°">
+      <figcaption>Harmonic Spiral, Poinsot proportional, a=1,b=1,A=0.15,N=8,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral03-360.avif"
+           alt="Harmonic Spiral, Poinsot proportional, a=1,b=0.5,A=0.15,N=8,φ=90°">
+      <figcaption>Harmonic Spiral, Poinsot proportional, a=1,b=0.5,A=0.15,N=8,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral04-360.avif"
+           alt="Harmonic Spiral, Poinsot constant, a=0.01,b=1,r₀=2,A=0.2,N=24,φ=0°">
+      <figcaption>Harmonic Spiral, Poinsot constant, a=0.01,b=1,r₀=2,A=0.2,N=24,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral05-360.avif"
+           alt="Harmonic Spiral, Poinsot constant, a=0.01,b=1,r₀=0.2,A=0.2,N=24,φ=90°">
+      <figcaption>Harmonic Spiral, Poinsot constant, a=0.01,b=1,r₀=0.2,A=0.2,N=24,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral06-360.avif"
+           alt="Harmonic Spiral, Poinsot constant, a=0.01,b=2,r₀=0.2,A=0.2,N=24,φ=90°">
+      <figcaption>Harmonic Spiral, Poinsot constant, a=0.01,b=2,r₀=0.2,A=0.2,N=24,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral07-360.avif"
+           alt="Harmonic Spiral, Logarithmic proportional, a=0.1,k=0.1,r₀=2,A=0.15,N=16,φ=0°">
+      <figcaption>Harmonic Spiral, Logarithmic proportional, a=0.1,k=0.1,r₀=2,A=0.15,N=16,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral08-360.avif"
+           alt="Harmonic Spiral, Logarithmic proportional, a=0.2,k=0.05,r₀=2,A=0.15,N=16,φ=0°">
+      <figcaption>Harmonic Spiral, Logarithmic proportional, a=0.2,k=0.05,r₀=2,A=0.15,N=16,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral09-360.avif"
+           alt="Harmonic Spiral, Logarithmic proportional, a=0.5,k=0.05,r₀=0.5,A=0.15,N=16,φ=0°">
+      <figcaption>Harmonic Spiral, Logarithmic proportional, a=0.5,k=0.05,r₀=0.5,A=0.15,N=16,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral10-360.avif"
+           alt="Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=2,A=0.2,N=4,φ=90°">
+      <figcaption>Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=2,A=0.2,N=4,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral11-360.avif"
+           alt="Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=0.2,A=0.2,N=1,φ=90°">
+      <figcaption>Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=0.2,A=0.2,N=1,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral12-360.avif"
+           alt="Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=0.2,A=0.2,N=1/3,φ=90°">
+      <figcaption>Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=0.2,A=0.2,N=1/3,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmonicSpiral/HarmonicSpiral13-360.avif"
+           alt="Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=0.2,A=0.2,N=36,φ=90°">
+      <figcaption>Harmonic Spiral, Logarithmic constant, a=0.01,k=0.1,r₀=0.2,A=0.2,N=36,φ=90°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Harmonic Proportional Poinsot Spiral:</div>
+      \[ r = a\,\theta^{b}\,(1 + A\cdot\sin(N\theta + \varphi)) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Harmonic Constant Poinsot Spiral:</div>
+      \[ r = r_{0} + a\,\theta^{b} + A\cdot\sin(N\theta + \varphi) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Harmonic Proportional Logarithmic Spiral:</div>
+      \[ r = (r_{0} + a\cdot e^{k\theta})\,(1 + A\cdot\sin(N\theta + \varphi)) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Harmonic Constant Logarithmic Spiral:</div>
+      \[ r = r_{0} + a\cdot e^{k\theta} + A\cdot\sin(N\theta + \varphi) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Harmonic Spiral variants combine features of classical spirals with a sinusoidal modulation of the radius. The proportional forms build upon the Archimedean spiral, known since Archimedes (c. 287–212 BCE), where radius grows linearly with angle.<sup>1</sup> The logarithmic forms trace their origins to René Descartes and later Jakob Bernoulli, who named the equiangular spiral <em>spira mirabilis</em> for its self-similar growth property.<sup>2</sup> Louis Poinsot (1777–1859), a French mathematician, studied related spiral trajectories in central force problems, although his namesake spirals use hyperbolic functions.<sup>3</sup> The addition of the harmonic term \(A \cdot \sin(N\theta + \varphi)\) introduces periodic undulations, creating wavy or rippled spirals.</p>
+    <p>In engineering and the natural sciences, modulated spirals have practical uses. In telecommunications, spiral modulation techniques employ complex spiral waveforms in the complex plane to achieve higher spectral efficiency than traditional periodic modulation.<sup>4</sup> In optics and photonics, radial phase-modulated spiral zone plates and spiral phase elements generate structured light beams, including autofocusing and multi-spiral beams useful for optical trapping and laser processing.<sup>5</sup> Sinusoidal corrugated tube structures, sharing the periodic radial variation concept, are widely applied in mechanical engineering for controlled energy absorption during impacts, such as in vehicle crashworthiness components.<sup>6</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/spirale/spirale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/spirale/spirale.shtml</a> (Archimedean spiral history)</li>
+      <li><a href="https://mathworld.wolfram.com/LogarithmicSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/LogarithmicSpiral.html</a> (logarithmic spiral history)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/poinsot/poinsot.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/poinsot/poinsot.shtml</a> (Poinsot spirals and central force context)</li>
+      <li><a href="https://www.astrapi-corp.com/spiral-modulation/" target="_blank" rel="noopener noreferrer">https://www.astrapi-corp.com/spiral-modulation/</a> (spiral modulation in telecommunications)</li>
+      <li><a href="https://opg.optica.org/abstract.cfm?uri=oe-31-24-40620" target="_blank" rel="noopener noreferrer">https://opg.optica.org/abstract.cfm?uri=oe-31-24-40620</a> (modulated spiral beams in optics)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1359836825006651" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/abs/pii/S1359836825006651</a> (sinusoidal structures for energy absorption)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HARMONICSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                           restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff rval)
+  (setq id "Harmonic Spiral"
+        iq ""
+        dcl "HARMONICSPIRAL"
+        opt '("Poinsot proportional" "Poinsot constant" "Logarithmic proportional" "Logarithmic constant")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nHarmonic Proportional Poinsot Spiral: r = a·θᵇ·(1 + A·sin(Nθ + φ))")
+    (setq fa (get_real 2 "a (scale): " 1.0)
+          fb (get_real 2 "b (theta exponent): " 1.0)
+          fc (get_real 2 "A (wave proportion): " 0.15)
+          fd (get_real 6 "N (waves per rev): " 8.0)
+          fe (get_real 2 "φ (phase in °): " 0.0)
+          eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", A= " (rtos fc 2 4) ", N= " (rtos fd 2 4) ", φ= " (rtos fe 2 4) "°")
+          rval  '(* (* fa (alt_expt (avoid_zero (eval a2)) fb nil)) (+ 1.0 (* fc (sin (+ (* fd (eval a2)) (* pi (/ fe 180.0)))))))))
+   ((eq kw 1)
+    (princ "\nHarmonic Constant Poinsot Spiral: r = r₀ + a·θᵇ + A·sin(Nθ + φ)")
+    (setq fa (get_real 2 "a (spiral loop spacing): " 0.01)
+          fb (get_real 2 "b (theta exponent): " 1.0)
+          fc (get_real 2 "r₀ (radial offset at 0°): " 2.0)
+          fd (get_real 2 "A (wave height): " 0.2)
+          fe (get_real 6 "N (waves per rev): " 24.0)
+          ff (get_real 2 "φ (phase in °): " 0.0)
+          eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", r₀= " (rtos fc 2 4) ", A= " (rtos fd 2 4) ", N= " (rtos fe 2 4) ", φ= " (rtos ff 2 4) "°")
+          rval '(+ fc (* fa (alt_expt (eval a2) fb nil)) (* fd (sin (+ (* fe (eval a2)) (* pi (/ ff 180.0))))))))
+   ((eq kw 2)
+    (princ "\nHarmonic Proportional Logarithmic Spiral: r = (r₀ + a·exp(kθ))·(1 + A·sin(Nθ + φ))")
+    (setq fa (get_real 2 "a (exp scale): " 0.1)
+          fb (get_real 2 "k (growth per rev): " 0.1)
+          fc (get_real 2 "r₀ (radial offset at 0°): " 2.0)
+          fd (get_real 2 "A (wave proportion): " 0.15)
+          fe (get_real 6 "N (waves per rev): " 24.0)
+          ff (get_real 2 "φ (phase in °): " 0.0)
+          eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", r₀= " (rtos fc 2 4) ", A= " (rtos fd 2 4) ", N= " (rtos fe 2 4) ", φ= " (rtos ff 2 4) "°")
+          rval  '(* (+ fc (* fa (exp (* fb (eval a2))))) (+ 1.0 (* fd (sin (+ (* fe (eval a2)) (* pi (/ ff 180.0)))))))))
+   ((eq kw 3)
+    (princ "\nHarmonic Constant Logarithmic Spiral: r = r₀ + a·exp(kθ) + A·sin(Nθ + φ)")
+    (setq fa (get_real 2 "a (exp scale): " 0.01)
+          fb (get_real 2 "k (growth rate): " 0.1)
+          fc (get_real 2 "r₀ (radial offset at 0°): " 2.0)
+          fd (get_real 2 "A (wave height): " 0.2)
+          fe (get_real 6 "N (waves per rev): " 24.0)
+          ff (get_real 2 "φ (phase in °): " 0.0)
+          eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", r₀= " (rtos fc 2 4) ", A= " (rtos fd 2 4) ", N= " (rtos fe 2 4) ", φ= " (rtos ff 2 4) "°")
+          rval '(+ fc (* fa (exp (* fb (eval a2)))) (* fd (sin (+ (* fe (eval a2)) (* pi (/ ff 180.0)))))))))
+  (setq xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HARMONICSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

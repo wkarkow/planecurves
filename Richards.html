@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Richards Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Richards Curve</h1>
+      <p class="short-description">A flexible S-shaped generalized logistic growth curve whose shape parameter \(\nu\) moves the inflection toward the lower or the upper horizontal asymptote.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Richards/Richards01-360.avif"
+           alt="Richards Curve, A=0,K=10,C=1,Q=1,multiple values of B,ν=1">
+      <figcaption>
+        Richards Curve, A=0,K=10,C=1,Q=1,B=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">4.0</span>,
+        <span class="figcap-value" style="color:#FF9600">-0.25</span>,
+        <span class="figcap-value" style="color:#9600FF">-0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">-1.0</span>,
+        <span class="figcap-value" style="color:#AA5555">-4.0</span>,
+        ν=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Richards/Richards02-360.avif"
+           data-caption="ν=0.25(black),0.5(red),0.75(blue),1(green),1.25(orange),1.5(purple),1.75(cyan),2(brown); A=0, K=1, C=1, Q=1, B=1, Positive"
+           alt="Richards Curve, A=0,K=10,C=1,Q=1,B=1, multiple values of ν">
+      <figcaption>
+        Richards Curve, A=0,K=10,C=1,Q=1,B=1,ν=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">4.0</span>,
+        <span class="figcap-value" style="color:#0096FF">8.0</span>,
+        <span class="figcap-value" style="color:#AA5555">16.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Richards Curve Cartesian equation:</div>
+      \[ y = A + \dfrac{K-A}{\bigl(C + Q\, e^{-B t}\bigr)^{1/\nu}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Inflection time (when \(C\nu&gt;0\), \(Q&gt;0\), \(B\neq 0\)):</div>
+      \[ t_{\mathrm{inf}} = \dfrac{1}{B}\ln\dfrac{Q}{C\nu} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Logistic special case (\(\nu=Q=C=1\), \(A=0\)):</div>
+      \[ y = \dfrac{K}{1+e^{-B t}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Richards curve, also known as the generalized logistic function, was proposed by F. J. Richards in his 1959 paper “A Flexible Growth Function for Empirical Use” published in the Journal of Experimental Botany.<sup>1</sup> Richards, a British plant physiologist, introduced the function to provide a more flexible S-shaped model for empirical growth data than the standard logistic or Gompertz curves. The independent variable \(t\) represents time. The asymmetry parameter \(\nu\) (often denoted as the shape parameter) allows the inflection point to lie closer to either the lower or upper horizontal asymptote, a feature absent in the symmetric logistic case (\(\nu = 1\), \(Q = 1\)) and the Gompertz limit (\(\nu \to 0^{+}\)).</p>
+    <p>Real-life applications are well documented in the natural sciences and related engineering fields. In biology and forestry it models plant height, tree diameter, weight gain, and stand-yield predictions.<sup>2</sup> In oncology it describes tumor growth dynamics. In epidemiology the curve has been applied to cumulative disease incidence, including SARS, dengue, Ebola, and COVID-19 case trajectories.<sup>3</sup> Additional engineering use appears in pavement deterioration modeling where sigmoidal growth accurately captures long-term performance decay under traffic loading.<sup>4</sup> No other mathematical or physical applications outside these domains were identified in the reviewed sources.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://academic.oup.com/jxb/article/10/2/290/528209" target="_blank" rel="noopener noreferrer">https://academic.oup.com/jxb/article/10/2/290/528209</a> (original 1959 paper by F. J. Richards)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Generalised_logistic_function" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Generalised_logistic_function</a> (history, equation, special cases, and applications in biology/forestry)</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8631260/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC8631260/</a> (epidemiological modeling including COVID-19)</li>
+      <li><a href="https://vtechworks.lib.vt.edu/bitstream/handle/10919/56599/Ercisli_S_T_2015.pdf" target="_blank" rel="noopener noreferrer">https://vtechworks.lib.vt.edu/bitstream/handle/10919/56599/Ercisli_S_T_2015.pdf</a> (pavement deterioration curves)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RICHARDS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                     id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl)
+(defun r_s (a / b c)
+  (if (not a)
+    nil
+    (progn
+      (setq b (entnext a))
+      (if b
+        (progn
+          (setq c (entget b))
+          (if (= (cdr (assoc 0 c)) "VERTEX")
+            (cdr (assoc 10 c))
+            nil))
+        nil))))
+(defun r_e (a / b c d)
+  (if (not a)
+    nil
+    (progn
+      (setq b (entnext a) d nil)
+      (while b
+        (setq c (entget b))
+        (if (= (cdr (assoc 0 c)) "VERTEX")
+          (setq d (cdr (assoc 10 c))))
+        (setq b (entnext b))
+        (if (and b (wcmatch (cdr (assoc 0 (entget b))) "SEQEND"))
+          (setq b nil)))
+      d)))
+  (setq id "Richards Curve"
+        iq "Y=A+(K-A)/(C+Q·e^(-B·t))^(1/ν)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "A (lower asymptote)" 0.0)
+        fb (get_real 2 "K (upper asymptote)" 10.0)
+        fc (get_real 2 "C" 1.0)
+        fd (get_real 2 "Q" 2.0)
+        fe (get_real 2 "B (growth rate parameter)" 1.0)
+        ff (get_real 2 "ν (asymmetry/shape parameter)" 1.0)
+        fg (get_keyword 0 "Positive Negative" "Positive or Negative direction from inflection point?" "Positive")
+        fh (if (and (&gt; (* fc ff) 0.0) (&gt; fd 0.0) (not (= fe 0.0))) (/ (log (/ fd (* fc ff))) fe) 0.0)
+        eq_display (strcat "\nA=" (rtos fa 2 4) ", K=" (rtos fb 2 4) ", C=" (rtos fc 2 4) ", Q=" (rtos fd 2 4) ", B=" (rtos fe 2 4) ", ν=" (rtos ff 2 4))
+        xc '(- (eval a2) fh)
+        yc '(+ fa (/ (- fb fa) (alt_expt (+ fc (* fd (exp (* (- fe) (eval a2))))) (/ 1.0 ff) nil)))
+        paramstep (/ xspan divcount)
+        paramstep (if (eq fg "Negative") (- paramstep) paramstep)
+        skm '(T T T)
+        a1 fh
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc)
+        fi (entlast))
+  (cc)
+  (setq fj (entlast))
+  (if (and fi fj (not (eq fi fj)))
+    (progn
+      (setq fk (r_s fj))
+      (setq prev_start (r_s fi))
+      (if (and fk prev_start (equal fk prev_start 1e-6))
+        (if (eq "Yes" (get_keyword 0 "Yes No" "Join to previous entity?" "No"))
+          (command "pedit" fi "j" fj "" "")))))
+  (princ))
+(C:RICHARDS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

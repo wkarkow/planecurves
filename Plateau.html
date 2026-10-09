@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plateau Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Plateau Curve</h1>
+      <p class="short-description">A trigonometric parametric family producing algebraic curves whose number of branches depends on the ratio of frequencies \(m\) and \(n\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Plateau/Plateau01-360.avif"
+           alt="Plateau Curve, a=1,m=3,n=1">
+      <figcaption>Plateau Curve, a=1,m=3,n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau02-360.avif"
+           alt="Plateau Curve, a=1,m=4,n=1">
+      <figcaption>Plateau Curve, a=1,m=4,n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau03-360.avif"
+           alt="Plateau Curve, a=1,m=5,n=1">
+      <figcaption>Plateau Curve, a=1,m=5,n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau04-360.avif"
+           alt="Plateau Curve, a=1,m=6,n=1">
+      <figcaption>Plateau Curve, a=1,m=6,n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau05-360.avif"
+           alt="Plateau Curve, a=1,m=7,n=1">
+      <figcaption>Plateau Curve, a=1,m=7,n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau06-360.avif"
+           alt="Plateau Curve, a=1,m=7,n=2">
+      <figcaption>Plateau Curve, a=1,m=7,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau07-360.avif"
+           alt="Plateau Curve, a=1,m=7,n=3">
+      <figcaption>Plateau Curve, a=1,m=7,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau08-360.avif"
+           alt="Plateau Curve, a=1,m=7,n=4">
+      <figcaption>Plateau Curve, a=1,m=7,n=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau09-360.avif"
+           alt="Plateau Curve, a=1,m=7,n=5">
+      <figcaption>Plateau Curve, a=1,m=7,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau10-360.avif"
+           alt="Plateau Curve, a=1,m=7,n=6">
+      <figcaption>Plateau Curve, a=1,m=7,n=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau11-360.avif"
+           alt="Plateau Curve, a=1,m=13,n=12">
+      <figcaption>Plateau Curve, a=1,m=13,n=12</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Plateau/Plateau12-360.avif"
+           alt="Plateau Curve, a=1,m=12,n=1">
+      <figcaption>Plateau Curve, a=1,m=12,n=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Plateau Curve parametric equations:</div>
+      \[ x = a\dfrac{\sin((m+n)t)}{\sin((m-n)t)},\quad y = 2a\dfrac{\sin(mt)\sin(nt)}{\sin((m-n)t)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Circular degeneration when \(m=2n\):</div>
+      \[ (x-a)^{2}+y^{2}=4a^{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Plateau curve<sup>1,2,3</sup>, named after Joseph Antoine Ferdinand Plateau (1801–1883), a Belgian physicist and mathematician, is a family of parametric plane curves. Plateau is best known for his pioneering experiments with soap films that established Plateau’s laws on the geometry of soap films and for stating Plateau’s problem on minimal surfaces. He also investigated a variety of special plane curves, including this trigonometric parametric family. The curve is defined for positive scaling factor \(a\) and parameters \(m\) and \(n\) where \(m\neq n\) (to avoid division by zero). When \(m=2n\), the curve degenerates to a circle centered at \((a,0)\) with radius \(2a\). For other integer ratios \(m/n\), the curve produces closed algebraic curves whose number of branches depends on the ratio. The parametric form provides a straightforward way to generate and study these shapes using basic trigonometric identities familiar from calculus.</p>
+    <p>No real-life applications of this specific plane curve in engineering or the natural sciences were identified in primary mathematical references. Its significance remains within the mathematical cataloging of parametric and trigonometric curves.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/PlateauCurves.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PlateauCurves.html</a> (equations, degeneration to circle, and properties)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Plateau/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Plateau/</a> (history and parametric equation)</li>
+      <li><a href="https://www.2dcurves.com/trig/trigsm.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/trig/trigsm.html</a> (naming after Plateau and context within trigonometric curves)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PLATEAU (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd)
+  (setq id "Plateau Curve"
+        iq "x=a·sin((m+n)t)/sin((m-n)t),y=2·a·sin(mt)·sin(nt)/sin((m-n)t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in the parameter domain"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 6 "m (outer frequency)" 3.0)
+        fc (get_real 6 "n (inner frequency, ≠ m to avoid division by zero)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", m=" (rtos fb 2 4) ", n=" (rtos fc 2 4))
+        xc '(progn (setq fd (sin (* (- fb fc) (eval a2)))) (if (&lt; (abs fd) 1e-9) (if (and (&lt; (abs (sin (* (+ fb fc) (eval a2)))) 1e-9) (&lt; (abs (- (cos (*
+            (- fb fc) (eval a2))) (cos (* (+ fb fc) (eval a2))))) 1e-9)) (* fa (/ (* (+ fb fc) (cos (* (+ fb fc) (eval a2)))) (* (- fb fc) (avoid_zero
+            (cos (* (- fb fc) (eval a2))))))) (+ maxdraw 1.0)) (* fa (/ (sin (* (+ fb fc) (eval a2))) fd))))
+        yc '(progn (setq fd (sin (* (- fb fc) (eval a2)))) (if (&lt; (abs fd) 1e-9) (if (and (&lt; (abs (sin (* (+ fb fc) (eval a2)))) 1e-9) (&lt; (abs (- (cos (*
+            (- fb fc) (eval a2))) (cos (* (+ fb fc) (eval a2))))) 1e-9)) 0.0 (+ maxdraw 1.0)) (* 2.0 fa (/ (* (sin (* fb (eval a2))) (sin (* fc (eval a2)))) fd))))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 15.0)
+        paramstep (/ (/ pi (abs (- fb fc))) 0.5 divcount)
+        skm '(T T T)
+        a1 (/ pi -2.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PLATEAU)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

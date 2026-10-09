@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poisson Distribution - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Poisson Distribution</h1>
+      <p class="short-description">Four Poisson distribution plots: the discrete probability mass function, a Gaussian approximation of that mass function, the cumulative distribution function, and a Gaussian approximation of the cumulative function.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Poisson/Poisson01-360.avif"
+           data-caption="Poisson Probability Mass Function (PMF)(black), Gaussian PMF(red), λ=4,a=100"
+           alt="Poisson Probability Mass Function (PMF)(black), Gaussian PMF(red), λ=4,a=100">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Poisson Probability Mass Function (PMF)</span>,
+        <span class="figcap-value" style="color:#FF0000">Gaussian PMF</span>,
+        λ=4,a=100
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poisson/Poisson02-360.avif"
+           data-caption="PMF(black),Gaussian PMF(red),CDF(blue),Gaussian CDF(green), λ=4,a=100"
+           alt="PMF(black),Gaussian PMF(red),CDF(blue),Gaussian CDF(green), λ=4,a=100">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">PMF</span>,
+        <span class="figcap-value" style="color:#FF0000">Gaussian PMF</span>,
+        <span class="figcap-value" style="color:#0000FF">CDF</span>,
+        <span class="figcap-value" style="color:#009600">Gaussian CDF</span>,
+        λ=4,a=100
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poisson/Poisson03-360.avif"
+           data-caption="PMF(black),Gaussian PMF(red), λ=25,a=100"
+           alt="PMF(black),Gaussian PMF(red), λ=25,a=100">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">PMF</span>,
+        <span class="figcap-value" style="color:#FF0000">Gaussian PMF</span>,
+        λ=25,a=100
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poisson/Poisson04-360.avif"
+           data-caption="PMF(black),Gaussian PMF(red),CDF(blue),Gaussian CDF(green), λ=25,a=100"
+           alt="PMF(black),Gaussian PMF(red),CDF(blue),Gaussian CDF(green), λ=25,a=100">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">PMF</span>,
+        <span class="figcap-value" style="color:#FF0000">Gaussian PMF</span>,
+        <span class="figcap-value" style="color:#0000FF">CDF</span>,
+        <span class="figcap-value" style="color:#009600">Gaussian CDF</span>,
+        λ=25,a=100
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poisson/Poisson05-360.avif"
+           data-caption="PMF(black),Gaussian PMF(red), λ=50,a=100"
+           alt="PMF(black),Gaussian PMF(red), λ=50,a=100">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">PMF</span>,
+        <span class="figcap-value" style="color:#FF0000">Gaussian PMF</span>,
+        λ=50,a=100
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poisson/Poisson06-360.avif"
+           data-caption="PMF(black),Gaussian PMF(red),CDF(blue),Gaussian CDF(green), λ=50,a=100"
+           alt="PMF(black),Gaussian PMF(red),CDF(blue),Gaussian CDF(green), λ=50,a=100">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">PMF</span>,
+        <span class="figcap-value" style="color:#FF0000">Gaussian PMF</span>,
+        <span class="figcap-value" style="color:#0000FF">CDF</span>,
+        <span class="figcap-value" style="color:#009600">Gaussian CDF</span>,
+        λ=50,a=100
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Probability Mass Function (PMF):</div>
+      \[ y = a \cdot \dfrac{\lambda^{x}\, e^{-\lambda}}{x!},\quad x=0,1,2,\ldots \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Gaussian PMF Approximation:</div>
+      \[ y \approx \dfrac{a}{\sqrt{2\pi\lambda}}\, e^{-\frac{(x-\lambda)^{2}}{2\lambda}},\quad \mu=\lambda,\; \sigma^{2}=\lambda \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cumulative Distribution Function (CDF):</div>
+      \[ y = a \cdot e^{-\lambda} \sum_{i=0}^{\lfloor x \rfloor} \dfrac{\lambda^{i}}{i!} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Gaussian CDF Approximation:</div>
+      \[ y = a \cdot \Phi\!\left(\dfrac{x+0.5-\lambda}{\sqrt{\lambda}}\right),\quad \Phi(x)=\int_{-\infty}^{x} \dfrac{1}{\sqrt{2\pi}}\, e^{-\frac{t^{2}}{2}}\, dt \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ramanujan’s Approximation:</div>
+      \[ n! \approx \sqrt{\pi}\left(\dfrac{n}{e}\right)^{n}\bigl(8n^{3}+4n^{2}+n+\tfrac{1}{30}\bigr)^{\frac{1}{6}},\quad\text{approximates } n!=\Gamma(n+1)\text{ for non-integers} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Poisson distribution<sup>1,2</sup>, named after the French mathematician, physicist, and engineer Siméon Denis Poisson (1781–1840), gives the probability of a given number of independent events occurring in a fixed interval of time or space when those events happen at a known constant average rate and independently of the time since the last event. Poisson first presented the distribution in 1837 in his treatise <em>Recherches sur la probabilité des jugements en matière criminelle et en matière civile</em>, where he derived it as the limiting case of the binomial distribution for a very large number of trials with a very small probability of success on each trial while their product λ remains constant. An earlier related idea had appeared in Abraham de Moivre’s work, but Poisson’s formal treatment established the distribution that now bears his name. To compute non-integer values for the smooth rather than step-wise curves, Ramanujan’s factorial approximation did not arise from extending Stirling’s series term by term. Instead, it appears to have been constructed by folding multiple asymptotic corrections into a single algebraic expression, so that its expansion matches the known behavior of \(\ln(n!)\) to unusually high order. This reflects Ramanujan’s characteristic style: recognizing patterns first and encoding them compactly, often without formal derivation. It is used in this code for the PMF and CMF functions.</p>
+    <p>Real-life applications of the Poisson distribution are well established in engineering and the natural sciences. In physics it models radioactive decay counts and the arrival of photons or elementary particles at detectors; the same model applies in nuclear physics experiments and in astronomy for the number of cosmic-ray events or stars counted in a sky region. In engineering it is used for reliability analysis to predict the number of defects per unit length or area in manufactured items, the frequency of system failures, and the arrival rates of calls at telephone exchanges or vehicles at traffic signals. Biologists apply it to count rare mutations or the number of organisms found in a fixed volume of habitat.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/PoissonDistribution.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PoissonDistribution.html</a> (definition, equations, and limit of binomial)</li>
+      <li><a href="https://www.2dcurves.com/discrete/discretepo.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/discrete/discretepo.html</a> (history and nuclear-physics application)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Siméon_Denis_Poisson" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Siméon_Denis_Poisson</a> (biography and 1837 treatise)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:POISSON (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                    xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (defun p_e (a / b c d e )
+    (setq b (abs a)
+          c  (if (&lt; a 0.0) -1.0 1.0)
+          d (/ 1.0 (+ 1.0 (* 0.3275911  b)))
+          e (* d (+ 0.254829592 (* d (+ -0.284496736 (* d (+ 1.421413741 (* d (+ -1.453152027  (* d 1.061405429))))))))))
+    (* c (- 1.0 (* e (exp (- (* b b)))))))
+  (setq id "Poisson Distribution"
+        iq ""
+        dcl "POISSON"
+        opt '("Probability Mass Function" "Gaussian PMF Approximation" "Cumulative Distribution Function" "Gaussian CDF Approximation")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 100
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nProbability Mass Function: y=a·λˣe^(-λ)/x!")
+    (setq fa (get_real 6 "λ (mean rate ≈ peak x-location)" 4.0)
+          fb (get_real 6 "a (Vertical scale factor)" 100.0)
+          eq_display (strcat "\nλ=" (rtos fa 2 4) ", a=" (rtos fb 2 4))
+          paramstep 1.0
+          fc 1.0
+          x1 -1.0
+          x2 x1
+          y1 (* fb (exp (- fa)))
+          x2 '(+ x1 (* fc paramstep))
+          yc '(* fb (progn (if (&lt; x1 0.0) (setq fc 1.0) (setq fc (- 1.0 fc))) (if (&lt; x1 1.0) (exp (- fa)) (exp (- (* x1 (log fa)) fa (+ (* 0.5 (log pi))
+              (* x1 (log x1)) (- x1) (* (/ 1.0 6.0) (log (+ (* 8.0 x1 x1 x1) (* 4.0 x1 x1) x1 (/ 1.0 30.0))))))))))))
+   ((eq kw 1)
+    (princ "\nGaussian PMF Approximation: y=a·(1/√(2πλ))·e^(-(x-λ)²/(2λ))")
+    (setq fa (get_real 6 "λ (mean rate = mean = variance)" 4.0)
+          fb (get_real 6 "a (Vertical scale factor)" 100.0)
+          eq_display (strcat "\nλ=" (rtos fa 2 4) ", a=" (rtos fb 2 4))
+          paramstep (/ xspan divcount)
+          xc '(eval a2)
+          yc '(* fb (/ 1.0 (sqrt (* 2.0 pi fa))) (exp (/ (- (* (- (eval x2) fa) (- (eval x2) fa))) (* 2.0 fa))))
+          x1 0
+          x2 x1
+          y1 (eval yc)
+          x2 '(+ x1 paramstep)))
+   ((eq kw 2)
+    (princ "\nCumulative Distribution Function (CDF): y=a·e^(-λ)∑λ^i/i!, i=0 to ⌊x⌋")
+    (setq fa (get_real 6 "λ (mean rate)" 4.0)
+          fb (get_real 6 "a (CDF asymptote)" 100.0)
+          eq_display (strcat "\nλ=" (rtos fa 2 4) ", a=" (rtos fb 2 4))
+          paramstep 1.0
+          fc 1.0
+          fd 0.0
+          x1 -1.0
+          y1 (* fb (exp (- fa)))
+          x2 '(+ x1 (* fc paramstep))
+          yc '(progn (if (&lt; x1 0.0) (progn (setq fc 1.0) (setq fd (* fb (exp (- fa)))) fd) (progn (if (= fc 0.0) (setq fd (+ fd (* fb (if (&lt; x1 1.0) (exp (- fa)) (exp (- (* x1
+              (log fa)) fa (+ (* 0.5 (log pi)) (* x1 (log x1)) (- x1) (* (/ 1.0 6.0) (log (+ (* 8.0 x1 x1 x1) (* 4.0 x1 x1) x1 (/ 1.0 30.0)))))))))))) (setq fc (- 1.0 fc)) fd)))))
+   ((eq kw 3)
+    (princ "\nGaussian CDF Approximation: y=a·Φ((x+0.5-λ)/√λ)")
+    (setq fa (get_real 6 "λ (mean = variance)" 4.0)
+          fb (get_real 6 "a (CDF asymptote)" 100.0)
+          eq_display (strcat "\nλ=" (rtos fa 2 4) ", a=" (rtos fb 2 4))
+          paramstep (/ xspan divcount)
+          xc '(eval a2)
+          yc '(* fb (* 0.5 (+ 1.0 (p_e (/ (- (+ (eval x2) 0.5) fa) (sqrt (* 2.0 fa)))))))
+          x1 0
+          x2 x1
+          y1 (eval yc)
+          x2 '(+ x1 paramstep))))
+  (setq xc '(eval a2)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        a2 '(+ a1 paramstep)
+        y2 '(eval yc))
+  (cc)
+  (setq fe (getvar "cmdecho"))
+  (setvar "cmdecho" 0)
+  (if (or (eq kw 0) (eq kw 2)) (command "pedit" "l" "d" ""))
+  (setvar "cmdecho" fe)
+  (princ))
+(C:POISSON)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

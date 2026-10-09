@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fermat Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Fermat Spiral</h1>
+      <p class="short-description">A plane curve with polar equation r = a √θ,  producing constant area between consecutive turns.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Fermat/Fermat01-360.avif"
+           alt="Fermat Spiral, a=1, mirrored 'opposite'">
+      <figcaption>Fermat Spiral, a=1, mirrored 'opposite'</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fermat/Fermat02-360.avif"
+           alt="Fermat Spiral, a=1 from 0-90°, reflected, polar array of 32 copies">
+      <figcaption>Fermat Spiral, a=1 from 0-90°, reflected, polar array of 32 copies</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fermat/Fermat03-360.avif"
+           alt="Fermat Spiral pattern, Encyclopaedia Britannica">
+      <figcaption>Fermat Spiral pattern, Encyclopaedia Britannica, <a href="https://www.britannica.com/plant/sunflower-plant" target="_blank" rel="noopener noreferrer">https://www.britannica.com/plant/sunflower-plant</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Fermat Spiral polar equation:</div>
+      \[ r = a \sqrt{\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Fermat spiral<sup>1,2</sup>, also known as the parabolic spiral, is a plane curve studied by Menelaus of Alexandria toward the end of the first century and discussed by Pierre de Fermat in 1636. Fermat (1601–1665), a French mathematician whose work included analytic geometry and number theory, examined the curve in his spiral investigations, finding that the area between any two consecutive full turns around the origin remains constant<sup>3</sup>. This differs from the Archimedean spiral (constant spacing between turns) and the logarithmic spiral (radius grows proportionally with angle). Unlike the Archimedean spiral (r = aθ), which was known since antiquity (Archimedes, ca. 225 BCE), Fermat’s spiral grows more slowly because the radius increases with the square root of angle, rather than proportionally, making it the slowest-growing spiral of the classical family r ∼ θ<sup>n</sup>. The curve appeared in Fermat’s work on tangents and quadratures, part of his early contributions to the calculus of variations, predating Newton and Leibniz.</p>
+    <p>Real-life applications exist in the natural sciences and engineering. In botany, the Fermat spiral models phyllotaxis—the arrangement of florets in composite flowers such as sunflowers and daisies, where seeds pack efficiently at angles near the golden ratio<sup>4</sup>. When seeds are placed along a Fermat spiral at equal angular increments—especially when the angle is the golden angle (~137.5°)—the packing achieves nearly uniform density without radial gaps. This optimizes sunlight capture and seed packing, a principle often cited as a natural instance of mathematical optimization. In computer graphics, Fermat spirals are used in generating sunflower patterns, radial layouts, and even distribution algorithms. They provide an efficient way to scatter points inside a disk with uniform density—useful in rendering, sampling, and visual effects. In electrical engineering, the constant-area property enables construction of variable capacitors with linear capacitance change during rotation. Concentrated solar power plants use Fermat spiral layouts for heliostat mirrors to improve light collection efficiency while reducing land footprint<sup>3</sup>. Antenna arrays based on the Fermat spiral achieve lower side-lobe levels for better performance in radar and imaging systems<sup>5</sup>. Additional engineering uses include smooth curvature-continuous path planning for autonomous marine vehicles and continuous toolpaths in additive manufacturing (3D printing) for efficient layer filling without sharp direction changes<sup>6</sup>.</p>
+    <p>Also see the Spiral entry for more generalized spiral options and the Chrysanthemum entry for a sunflower with petals.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/fermat/fermatspirale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/fermat/fermatspirale.shtml</a> (history by Menelaus and Fermat 1636; parabolic spiral)</li>
+      <li><a href="https://www.2dcurves.com/spiral/spiralf.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spiralf.html</a> (Fermat Spiral 1636; dual spiral note)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Fermat%27s_spiral" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Fermat%27s_spiral</a> (constant-area property; phyllotaxis, variable capacitors, solar plants)</li>
+      <li><a href="https://www.sciencenews.org/article/fermats-natural-spirals" target="_blank" rel="noopener noreferrer">https://www.sciencenews.org/article/fermats-natural-spirals</a> (phyllotaxis modeling in sunflowers/daisies)</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9693571/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC9693571/</a> (antenna array design for side-lobe reduction)</li>
+      <li><a href="https://www.nature.com/articles/s41467-022-34368-5" target="_blank" rel="noopener noreferrer">https://www.nature.com/articles/s41467-022-34368-5</a> (Marangoni-driven self-coiling patterns with Fermat spirals in microfluidics/materials applications)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FERMAT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                   restartflag rval id iq dcl opt kw mode dpr dct span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa)
+  (setq id "Fermat Spiral"
+        iq "r=a·√θ"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(* fa (sqrt (eval a2)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:FERMAT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

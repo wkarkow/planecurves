@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stirling Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Stirling Curve</h1>
+      <p class="short-description">The graph of Stirling’s approximation to \(\Gamma(x+1)\) and therefore to \(n!\) at positive integers.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Stirling/Stirling01-360.avif"
+           alt="Stirling Curve">
+      <figcaption>Stirling Curve</figcaption>
+    </figure>
+    <figure>
+      <a href="https://en.wikipedia.org/wiki/Stirling%27s_approximation" target="_blank" rel="noopener noreferrer">
+        <img src="images/Stirling/Stirling02-360.avif"
+             alt="Comparison of Stirling's approximation with the factorial from Wikipedia"
+             class="external"
+             data-skip-modal>
+      </a>
+      <figcaption>Comparison of Stirling's approximation with the factorial from Wikipedia</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Stirling Curve Cartesian equation:</div>
+      \[ y \approx \sqrt{2\pi x}\cdot\left(\dfrac{x}{e}\right)^{x} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Stirling approximation<sup>1,2</sup>, named after James Stirling (1692–1770) who published it in <em>Methodus Differentialis</em> (1730), is an asymptotic formula for large \(n!\) that extends directly to the gamma function as \(\Gamma(x+1)\approx\sqrt{2\cdot\pi\cdot x}\cdot(x/e)^{x}\). Abraham de Moivre had given a related but incomplete form in 1721 with the \(n^{n+1/2}\,e^{-n}\) factor and an approximate constant. The gamma function \(\Gamma(z)\) itself, the continuous extension of the factorial where \(\Gamma(n+1)=n!\) for positive integer \(n\), arose in 1729 letters between Daniel Bernoulli, Christian Goldbach, and Leonhard Euler.<sup>3</sup> Euler supplied both the infinite product and the integral definition \(\Gamma(z)=\int_{0}^{\infty} t^{z-1}e^{-t}\,dt\) (for real part of \(z&gt;0\)), the latter interpretable by an engineer as the area under an exponential decay curve scaled by the power \(t^{z-1}\). The plotted equation therefore approximates \(\Gamma(x+1)\), not \(\Gamma(x)\). This shift accounts for Wikipedia-style graphs showing the true gamma curve near 1 at the point labeled \(x=0\) (because \(\Gamma(1)=0!=1\) exactly), while the Stirling curve starts near 0 there; the approximation is asymptotically valid for large \(x\) and deviates markedly for small values. Deficiencies of Stirling include its poor accuracy near \(x=0\) (limit 0 versus true \(\Gamma(1)=1\) or the pole of \(\Gamma(z)\to+\infty\) as \(z\to 0^{+}\)), the fact that its full series is asymptotic (terms improve accuracy only up to an optimal point then diverge), and the need for boundary clamps or added terms (such as the \(1/(12x)\) correction) for usable plots or computations. Higher-order forms or Robbins’ bounds address this for practical engineering work.</p>
+    <p>Real-life applications of the gamma function appear throughout engineering and the natural sciences. In statistics the gamma distribution models waiting times between Poisson events such as earthquakes or service intervals in queuing systems. Quantum physics employs gamma in wave-function normalizations and integrals over exponentially decaying potentials.<sup>3</sup> Astrophysics uses it for stellar nucleosynthesis rates and radiation transport. Fluid dynamics applies gamma and related beta functions to turbulence modeling and boundary-layer integrals. In reliability engineering and numerical analysis it supports computation of special functions for design software<sup>4</sup>; Stirling’s formula itself supplies the large-\(n!\) estimates needed for binomial probability calculations, entropy in statistical mechanics of large particle systems, and worst-case analysis of comparison-based sorting algorithms in computer engineering.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/StirlingsApproximation.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/StirlingsApproximation.html</a> (history, equations, limitations, gamma relation)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Stirling%27s_approximation" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Stirling%27s_approximation</a> (de Moivre/Stirling details, gamma extension, computer-science application)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Gamma_function" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Gamma_function</a> (Euler/Bernoulli history, physics/statistics/fluid applications)</li>
+      <li><a href="https://mathworld.wolfram.com/GammaFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/GammaFunction.html</a> (integral definition, engineering uses in numerical methods)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:STIRLING (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2)
+  (setq id "Stirling Curve"
+        iq "y≈√(2·π·x)·(x/e)ˣ"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        eq_display "\nStirling approximation"
+        xc '(eval a2)
+        yc '(if (<= (eval a2) 1e-9) 0.0 (* (sqrt (* 2.0 pi (eval a2))) (alt_expt (/ (eval a2) (exp 1.0)) (eval a2) nil)))
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:STIRLING)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

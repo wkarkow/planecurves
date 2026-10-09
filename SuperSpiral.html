@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Super Spiral</h1>
+      <p class="short-description">A polar curve that multiplies the classical logarithmic spiral by a Gielis-style factor \(\bigl(\lvert\cos(b\theta)\rvert^{c}+\lvert\sin(b\theta)\rvert^{d}\bigr)^{f}\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral01-360.avif"
+           alt="Super Spiral, a=0.05,b=3,c=1,d=1,f=1">
+      <figcaption>Super Spiral, a=0.05,b=3,c=1,d=1,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral02-360.avif"
+           alt="Super Spiral, a=0.05,b=3,c=1,d=3,f=1">
+      <figcaption>Super Spiral, a=0.05,b=3,c=1,d=3,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral03-360.avif"
+           alt="Super Spiral, a=0.05,b=2,c=0.5,d=1,f=1">
+      <figcaption>Super Spiral, a=0.05,b=2,c=0.5,d=1,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral04-360.avif"
+           alt="Super Spiral, a=0.05,b=0.5,c=0.5,d=1,f=1">
+      <figcaption>Super Spiral, a=0.05,b=0.5,c=0.5,d=1,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral05-360.avif"
+           alt="Super Spiral, a=0.05,b=0.25,c=0.5,d=-2,f=1.5">
+      <figcaption>Super Spiral, a=0.05,b=0.25,c=0.5,d=-2,f=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral06-360.avif"
+           alt="Super Spiral, a=0.05,b=0.25,c=0.5,d=-2,f=-1">
+      <figcaption>Super Spiral, a=0.05,b=0.25,c=0.5,d=-2,f=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral07-360.avif"
+           alt="Super Spiral, a=0.05,b=3,c=2/3,d=2/3,f=-0.5">
+      <figcaption>Super Spiral, a=0.05,b=3,c=2/3,d=2/3,f=-0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral08-360.avif"
+           alt="Super Spiral, a=0.05,b=3,c=5,d=5,f=-2">
+      <figcaption>Super Spiral, a=0.05,b=3,c=5,d=5,f=-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral09-360.avif"
+           alt="Super Spiral, a=0.05,b=3,c=5,d=1,f=-1">
+      <figcaption>Super Spiral, a=0.05,b=3,c=5,d=1,f=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperSpiral/SuperSpiral10-360.avif"
+           alt="Super Spiral, a=0.005,b=3,c=2/3,d=2/3,f=-0.5">
+      <figcaption>Super Spiral, a=0.005,b=3,c=2/3,d=2/3,f=-0.5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Super Spiral polar equation:</div>
+      \[ r = e^{a\theta}\bigl(\lvert\cos(b\theta)\rvert^{c} + \lvert\sin(b\theta)\rvert^{d}\bigr)^{f} \]
+    </div>
+    
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Super Spiral<sup>1</sup> is a polar curve that extends the classical logarithmic (equiangular or Bernoulli) spiral by modulating the radial growth with a periodic term derived from the Gielis superformula. The underlying logarithmic spiral \( r = ae^{k\theta} \) was first investigated in the 17th century by René Descartes, who identified its constant-angle property with respect to the radius vector. Jakob Bernoulli later studied its self-similar scaling (the curve looks the same at every scale) and named it <em>spira mirabilis</em>; Leonhard Euler provided further analytic treatment in the 18th century. In nature the logarithmic spiral approximates the growth of certain mollusc shells (measured cross-sections of the chambered nautilus follow the equiangular property closely) and appears in plant phyllotaxis, where successive leaf or seed primordia are positioned at angles related to the golden ratio, itself linked to logarithmic spiral geometry.<sup>2</sup> In 2003 Johan Gielis introduced the superformula, a generalization of Gabriel Lamé’s 1818 superellipse that replaces a single exponent with separate exponents on cosine and sine terms together with a rotational symmetry parameter. Gielis and subsequent workers applied the same transformation principle to the logarithmic spiral, producing the super spiral as a further generalization that allows controlled angular modulation of the exponential growth. The curve therefore inherits the self-similar scaling of the classical logarithmic spiral while adding the expressive power of the Gielis modulation, enabling families of spirals whose local “thickness” or radial excursion varies periodically with angle. Gielis continued this line of inquiry in a 2020 paper that connects super-spirals to curvature, allometry and Finsler geometry.<sup>3</sup></p>
+    <p>Real-life applications exist in both the natural sciences and engineering. In quantitative biology and morphology the Gielis framework (including its spiral extensions) supplies parametric models for organic forms whose spiral elements exhibit modulated radial growth, such as certain shells, horns or plant axes; these models have been used to fit measured outlines and to quantify developmental variation. In engineering and computer-aided geometric design (CAGD), super-spirals and their curvature properties have been studied for the generation of fair (monotone-curvature) curves required in industrial styling. Curves with controlled curvature variation are valued in automotive body design, consumer-product surfacing and aesthetic surface modeling because they produce visually smooth reflections and avoid unwanted inflection or oscillation. Recent differential-geometric work has placed the super-spiral in a similarity-geometry setting that yields new classes of planar curves with monotone curvature, directly supporting CAD algorithms for high-quality curve and surface design.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/spiral/spirallos.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spirallos.html</a> (curve definition, statement that it is an extension of the logarithmic spiral and Gielis generalization)</li>
+      <li><a href="https://bsapubs.onlinelibrary.wiley.com/doi/10.3732/ajb.90.3.333" target="_blank" rel="noopener noreferrer">https://bsapubs.onlinelibrary.wiley.com/doi/10.3732/ajb.90.3.333</a> (Gielis 2003 introduction of the superformula, application to shapes)</li>
+      <li><a href="https://doi.org/10.2991/gaf.k.200124.001" target="_blank" rel="noopener noreferrer">https://doi.org/10.2991/gaf.k.200124.001</a> (Gielis 2020 discussion of super-spirals, connections to allometry and geometry)</li>
+      <li><a href="https://www.mdpi.com/2227-7390/8/5/762" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2227-7390/8/5/762</a> (applications of super-spiral constructions to monotone-curvature curves in log-aesthetic surface design)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SUPERSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       restartflag rval id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd ff maxdraw)
+  (setq id "Super Spiral"
+        iq "r=e^{aθ}(|cos(bθ)|ᶜ+|sin(bθ)|ᵈ)^ᶠ"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (eᵃ exponent)" 0.05)
+        fb (get_real 2 "b (θ multiplier)" 3.0)
+        fc (get_real 2 "c (|cos(bθ)| exponent)" 1.0)
+        fd (get_real 2 "d (|sin(bθ)| exponent)" 1.0)
+        ff (get_real 2 "f (outer exponent)" 1.0)
+        fg (get_keyword 0 "Curved Decurved" "\nCurved or Decurved?" "Curved")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", f=" (rtos ff 2 4))
+        maxdraw (if (or (&lt; fc 0) (&lt; fd 0)) (get_real 2 "Maximum x and y values allowed?" 100) nil)
+        rval '(* (exp (* fa (eval a2))) (alt_expt (+ (alt_expt (abs (cos (* fb (eval a2)))) fc T) (alt_expt (abs (sin (* fb (eval a2)))) fd T)) ff T))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm (if (eq fg "Curved") '(T T T) '(T T T T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SUPERSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

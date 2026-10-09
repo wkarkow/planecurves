@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cassinian Oval - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cassinian Oval</h1>
+      <p class="short-description">A quartic algebraic curve; locus of points P such that the product of distances from P to two fixed foci is constant.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Cassinian/Cassinian01-360.avif"
+           alt="Cassinian Oval, a=1, multiple values of b"
+      <figcaption>
+        Cassinian Oval, a=1,b=
+        <span class="figcap-value" style="color:#000000">1.001</span>,
+        <span class="figcap-value" style="color:#FF0000">1.02</span>,
+        <span class="figcap-value" style="color:#0000FF">1.2</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2</span>,
+        <span class="figcap-value" style="color:#9600FF">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cassinian/Cassinian02-360.avif"
+           alt="Cassinian Oval, multiple values of a<b"
+      <figcaption>
+        Cassinian Oval, a;b=
+        <span class="figcap-value" style="color:#000000">0.5;0.505</span>,
+        <span class="figcap-value" style="color:#FF0000">1;1.01</span>,
+        <span class="figcap-value" style="color:#0000FF">2;2.02</span>,
+        <span class="figcap-value" style="color:#009600">3;3.03</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cassinian/Cassinian03-360.avif"
+           alt="Cassinian Oval, multiple values of a=b"
+      <figcaption>
+        Cassinian Oval, a=b=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cassinian/Cassinian04-360.avif"
+           alt="Cassinian Oval,a=1,multiple values of b"
+      <figcaption>
+        Cassinian Oval, a=1, b=
+        <span class="figcap-value" style="color:#000000">0.995</span>,
+        <span class="figcap-value" style="color:#FF0000">0.99</span>,
+        <span class="figcap-value" style="color:#0000FF">0.95</span>,
+        <span class="figcap-value" style="color:#009600">0.9</span>,
+        <span class="figcap-value" style="color:#FF9600">0.8</span>,
+        <span class="figcap-value" style="color:#9600FF">0.6</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cassinian/Cassinian05-360.avif"
+           alt="Multiple θ Oval, a=1,c=3,multiple values of b"
+      <figcaption>
+        Multiple θ Oval, a=1,c=3,b=
+        <span class="figcap-value" style="color:#000000">1.001</span>,
+        <span class="figcap-value" style="color:#FF0000">1.02</span>,
+        <span class="figcap-value" style="color:#0000FF">1.2</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cassinian/Cassinian06-360.avif"
+           alt="Multiple θ Oval, a=1,c=5,multiple values of b"
+      <figcaption>
+        Multiple θ Oval, a=1,c=5,b=
+        <span class="figcap-value" style="color:#000000">1.001</span>,
+        <span class="figcap-value" style="color:#FF0000">1.02</span>,
+        <span class="figcap-value" style="color:#0000FF">1.2</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+<section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cassinian Oval implicit equation:</div>
+      \[ [(x - a)^{2} + y^{2}][(x + a)^{2} + y^{2}] = b^{4} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cassinian Oval polar equation:</div>
+      \[ r^{4} - 2 a^{2} r^{2} \cos(2\theta) = b^{4} - a^{4} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Multiple θ polar equation:</div>
+      \[ r^{4} - 2 a^{2} r^{2} \cos(c\theta) = b^{4} - a^{4} \]
+    </div>
+  </section>
+
+  <section>
+<h2>History and Applications</h2>
+    <p>The Cassinian oval¹,², also known as the Cassini oval, was first investigated by the Italian-French astronomer Giovanni Domenico Cassini (1625–1712) in 1680. While studying the relative motions of the Earth and the Sun, Cassini proposed that the Sun traveled around the Earth along one of these ovals, with the Earth located at one focus. This model appeared in his son Jean Cassini’s 1740 work <em>Éléments d’astronomie</em>. Although ultimately superseded by Keplerian ellipses, the curve remains an important quartic plane curve. The Cassinian oval is the locus of points P such that the product of the distances from P to two fixed foci is constant.</p>
+    <p>Real-life applications include radar and sonar engineering, where the constant signal-to-noise ratio contours and detection zones of bistatic and multistatic systems are described by Cassini ovals³. In biophysics, Cassini ovals provide a useful mathematical approximation for the axisymmetric meridional profile of human red blood cells⁴, enabling calculations of volume, surface area, and elastic energy. They also appear as equipotential lines in certain electrostatic and magnetostatic configurations involving two parallel wires.</p>
+    <p>Depending on the ratio b/a, the shape of the curve can vary significantly:    <ul>
+      <li>If b &lt; a, the curve forms two disjoint loops.</li>
+      <li>If b = a, the curve becomes the Lemniscate of Bernoulli, a special figure-eight shape.</li>
+      <li>If b &gt; a, the curve is a single, connected, peanut- or oval-shaped loop.</li>
+      <li>If (2θ) is replaced by (cθ) and b &gt; a, one has the option of creating a single loop with multiple foci.</li>
+    </ul></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/CassiniOvals.html " target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CassiniOvals.html </a> (history)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cassini/cassini.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cassini/cassini.shtml</a> (history)</li>
+      <li><a href="https://www.mdpi.com/2073-8994/16/3/334" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2073-8994/16/3/334</a> (radar applications)</li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/6883214" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/6883214</a> (red blood cell modeling)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CASSINIAN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb fc)
+  (setq id "Cassinian Oval"
+        iq "r=a·(cos(cθ)+√((b/a)⁴-sin²(cθ)))½  [b&gt;a]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (focal distance along X)" 1.0)
+        fb (get_boundr 6 (strcat "b (must be &gt; " (rtos fa 2 4) ")") (* 1.05 fa) fa nil nil nil)
+        fc (get_integer 6 "c (θ multiplier; 2=classical)" 2)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (itoa fc))
+        rval '(alt_expt (* fa fa (+ (cos (* fc (eval a2))) (if (&lt;= (- (expt (/ fb fa) 4) (expt (sin (* fc (eval a2))) 2)) 1e-9) 0.0
+              (alt_expt (max (- (expt (/ fb fa) 4) (expt (sin (* fc (eval a2))) 2)) 0.0) 0.5 nil)))) 0.5 nil)
+        xc '(* (cos (eval a2)) (eval rval))
+        yc '(* (sin (eval a2)) (eval rval))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CASSINIAN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

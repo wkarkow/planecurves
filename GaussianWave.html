@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gaussian Wave Packet - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Gaussian Wave Packet</h1>
+      <p class="short-description">A localized oscillatory waveform formed by a Gaussian envelope modulating a sinusoidal carrier.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/GaussianWave/GaussianWave01-360.avif"
+           alt="Gaussian Wave Packet, A=1,σ=1,x₀=0,k=8,φ=0">
+      <figcaption>Gaussian Wave Packet, A=1,σ=1,x₀=0,k=8,φ=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GaussianWave/GaussianWave02-360.avif"
+           alt="Gaussian Wave Packet, A=1,σ=0.5,x₀=0,k=8,φ=0°">
+      <figcaption>Gaussian Wave Packet, A=1,σ=0.5,x₀=0,k=8,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GaussianWave/GaussianWave03-360.avif"
+           alt="Gaussian Wave Packet, A=1,σ=0.5,x₀=0,k=8,φ=90°">
+      <figcaption>Gaussian Wave Packet, A=1,σ=0.5,x₀=0,k=8,φ=90°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Gaussian Wave Packet Cartesian equation:</div>
+      \[ y = A \, e^{-\dfrac{(x-x_{0})^{2}}{2\sigma^{2}}} \cos\bigl(k(x-x_{0})+\phi\bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Gaussian wave packet<sup>1,2</sup> is a localized wave disturbance formed by a Gaussian envelope modulating a sinusoidal carrier. Wave packet concepts date to the mid-19th century, with William Rowan Hamilton proposing group velocity in 1839 and Lord Rayleigh providing a complete treatment in his 1877 <em>Theory of Sound</em>. Erwin Schrödinger introduced wave packets in 1926 shortly after publishing his wave equation, using them to represent localized quantum states. Charles Galton Darwin analyzed the time evolution of a free Gaussian wave packet for an unbound electron under the Schrödinger equation in 1927. The Gaussian form is analytically tractable because its Fourier transform is another Gaussian, and it saturates the Heisenberg uncertainty principle.</p>
+    <p>In engineering and the natural sciences, Gaussian wave packets model dispersive propagation and particle localization. In quantum mechanics they serve as initial conditions for simulations of free-particle spreading, scattering, and tunneling.<sup>3</sup> In optics they underpin Gaussian beam profiles for laser propagation in precision machining, fiber-optic systems, and medical imaging devices. In medical ultrasound they shape diagnostic pulses to enhance axial resolution in vascular imaging.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Wave_packet" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Wave_packet</a> (history of wave packets, Hamilton, Rayleigh, Schrödinger, Darwin)</li>
+      <li><a href="https://mathworld.wolfram.com/FourierTransformGaussian.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FourierTransformGaussian.html</a> (Gaussian Fourier properties)</li>
+      <li><a href="https://sites.astro.caltech.edu/~golwala/ph125ab/ph125_notes_l15.pdf" target="_blank" rel="noopener noreferrer">https://sites.astro.caltech.edu/~golwala/ph125ab/ph125_notes_l15.pdf</a> (Gaussian wave packet initial state, time evolution, and uncertainty principle)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GAUSSIANWAVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                         divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq id "Gaussian Wave Packet"
+        iq "y=A·exp(-((x-x₀)²)/(2σ²))·cos(k(x-x₀)+φ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "A (Peak height): " 1.0)
+        fb (get_real 6 "σ (Sigma): " 1.0)
+        fc (get_real 2 "x₀ (Center): " 0.0)
+        fd (get_real 2 "k (visible waves/σ): " 8.0)
+        fe (get_real 2 "φ (Phase in °): " 0.0)
+        ff fb
+        fb (/ -1.0 (* 2.0 (* fb fb)))
+        eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4) ", d= " (rtos fd 2 4) ", e= " (rtos fe 2 4))
+        xc '(eval a2)
+        yc '(* fa (exp (* fb (alt_expt (- (eval a2) fc) 2.0 nil))) (cos (+ (* (/ fd (avoid_zero ff)) (- (eval a2) fc)) (* fe (/ pi 180.0)))))
+        paramstep (/ xspan divcount)
+        skm '(nil T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GAUSSIANWAVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

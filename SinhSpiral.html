@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinh Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sinh Spiral</h1>
+      <p class="short-description">A plane curve whose coordinates are the sum or difference of two logarithmic spirals of opposite growth rate.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SinhSpiral/SinhSpiral01-360.avif"
+           alt="Sinh Spiral, a=1,b=0.1">
+      <figcaption>Sinh Spiral, a=1,b=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinhSpiral/SinhSpiral02-360.avif"
+           alt="Sinh Spiral, a=1,b=0.1, mirrored">
+      <figcaption>Sinh Spiral, a=1,b=0.1, mirrored</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SinhSpiral/SinhSpiral03-360.avif"
+           alt="Sinh Spiral, a=1,b=0.05">
+      <figcaption>Sinh Spiral, a=1,b=0.05</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 220px;">
+    <div class="equation-line">
+      <div class="equation-label">Sinh Spiral polar equation:</div>
+      \[ r = a \cdot \sinh(b\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Sinh Spiral, defined by the polar equation \( r = a \cdot \sinh(b\theta) \), is the polar reciprocal of one specific case in the family of Cotes’ spirals first described by Roger Cotes in 1722.<sup>1</sup> Cotes analyzed orbits under an inverse-cube central force law and obtained the general family \( \tfrac{1}{r} = A \cdot f(k\theta + \epsilon) \), where \( f \) is one of five functions: cosh, exponential, sinh, linear, or cosine. The sinh case \( \tfrac{1}{r} = A \cdot \sinh(k\theta + \epsilon) \) inverts directly (by replacing \( r \) with \( \tfrac{1}{r} \)) to \( r = a \cdot \sinh(b\theta) \) after rescaling constants and absorbing any phase shift into \( b\theta \). In modern differential geometry the curve appears explicitly under the name “sinh spiral.” Polyakov (2014) defines its parametric form as \( x(\sigma) = \cos(\sigma)\sinh(\beta\sigma) \), \( y(\sigma) = \sin(\sigma)\sinh(\beta\sigma) \) and shows that its coordinates are the sum or difference of those of two logarithmic spirals with growth rates of opposite sign.<sup>2</sup> Li et al. (2014) classify the Sinh Spiral (together with its cosh and related companions) as a hypersurface possessing constant Möbius curvature of the form \( \kappa = \tfrac{1}{c\cdot\sinh(s)} \).<sup>3</sup></p>
+    <p>Real-life applications are confined to theoretical physics and pure mathematics. In celestial mechanics the broader Cotes family (including the reciprocal sinh form) describes possible particle trajectories under an idealized inverse-cube central force, a model that appears in certain short-range gravitational or electrostatic problems. In contemporary geometry the curve serves as a test case for curvature-invariant classification and for constructing families of curves that remain unchanged under affine transformations, results applied in the design of smooth motion primitives for robotics and computer animation.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_spirals" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/List_of_spirals</a> (Cotes’ spiral family and inverse-cube central force)</li>
+      <li><a href="https://arxiv.org/pdf/1409.0675" target="_blank" rel="noopener noreferrer">https://arxiv.org/pdf/1409.0675</a> (Polyakov 2014 – parametric definition, relation to logarithmic spirals, affine differential geometry)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0001870814000413" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S0001870814000413</a> (Li et al. 2014 – constant Möbius curvature classification)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SINHSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                       restartflag rval xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb)
+  (setq id "Sinh Spiral"
+        iq "r=a·sinh(b·θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (growth factor)" 0.1)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        rval '(* fa (sinh (* fb (eval a2))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SINHSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

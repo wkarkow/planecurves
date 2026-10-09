@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Michaelis–Menten Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Michaelis–Menten Curve</h1>
+      <p class="short-description">The hyperbolic saturation of enzyme reaction velocity with substrate concentration, together with its double-reciprocal Lineweaver–Burk line.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Michaelis/Michaelis01-360.avif"
+           data-caption="Michaelis–Menten Curve(black), Lineweaver-Burk Curve(green), Vmax=5,Km=1,S=10"
+           alt="Michaelis–Menten Curve(black), Lineweaver-Burk Curve(green), Vmax=5,Km=1,S=10">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Michaelis–Menten Curve</span>,
+        <span class="figcap-value" style="color:#009600">Lineweaver-Burke Curve</span>,
+        Vmax=5,Km=1,S=10
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Michaelis/Michaelis02-360.avif"
+           data-caption="Michaelis–Menten Curve(black), Lineweaver-Burk Curve(green), curve pt (0.9,1.5),Vmax=5,Km=2.1000,S=10"
+           alt="Michaelis–Menten Curve(black), Lineweaver-Burk Curve(green), curve pt (0.9,1.5),Vmax=5,Km=2.1000,S=10"
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Michaelis–Menten Curve</span>,
+        <span class="figcap-value" style="color:#009600">Lineweaver-Burke Curve</span>,
+        curve pt (0.9,1.5),Vmax=5,Km=2.1000,S=10
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Michaelis/Michaelis03-360.avif"
+           data-caption="Michaelis–Menten Curve, Vmax=5,Km=0.1(black),0.5(red),1.0(blue),5.0(green),10(orange),20(purple),50(cyan),100(brown),S=10"
+           alt="Michaelis–Menten Curve, Vmax=5,Km=0.1(black),0.5(red),1.0(blue),5.0(green),10(orange),20(purple),50(cyan),100(brown),S=10">
+      <figcaption>
+        Michaelis–Menten Curve, Vmax=5,Km=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">5.0</span>,
+        <span class="figcap-value" style="color:#FF9600">10</span>,
+        <span class="figcap-value" style="color:#9600FF">20</span>,
+        <span class="figcap-value" style="color:#0096FF">50</span>,
+        <span class="figcap-value" style="color:#AA5555">100</span>,
+        S=10
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Michaelis–Menten equation:</div>
+      \[ v = \dfrac{V_{\max}\, S}{K_{m}+S} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Lineweaver–Burk equation:</div>
+      \[ \dfrac{1}{v} = \dfrac{K_{m}}{V_{\max}}\,\dfrac{1}{S} + \dfrac{1}{V_{\max}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Michaelis-Menten equation<sup>1,2</sup>, named after Leonor Michaelis (1875–1949) and Maud Menten (1879–1960), describes the rate of enzyme-catalyzed reactions as a function of substrate concentration. Michaelis, a German biochemist, and Menten, a Canadian physician-chemist, published the work in 1913, expanding Victor Henri’s 1902 observations on invertase kinetics. Their model assumes rapid, reversible formation of an enzyme-substrate complex followed by irreversible product formation, yielding the hyperbolic relationship shown in the first equation below. At low substrate concentration [S] the initial velocity \(v\) rises nearly linearly; at high [S] it saturates at the maximum velocity \(V_{\max}\). The Michaelis constant \(K_{m}\) equals the substrate concentration at half \(V_{\max}\) and reflects enzyme-substrate affinity.</p>
+    <p>Hans Lineweaver and Dean Burk introduced the double-reciprocal (Lineweaver-Burk) transformation in 1934<sup>3</sup>, converting the hyperbolic Michaelis-Menten relation into the linear form in the second equation below. This plot of \(\frac{1}{v}\) versus \(\frac{1}{[S]}\) yields a straight line whose y-intercept is \(\frac{1}{V_{\max}}\) and x-intercept is \(-\frac{1}{K_{m}}\), simplifying graphical determination of the kinetic constants with data available at the time.</p>
+    <p>Real-life applications are widespread in the natural sciences. In biochemistry and pharmacology the equations quantify enzyme efficiency for drug-metabolizing enzymes such as cytochrome P450, enabling prediction of drug clearance rates, dosing regimens, and metabolic drug-drug interactions in clinical practice.<sup>4</sup> In medical diagnostics they underpin enzyme assays for liver function tests and disease biomarkers. In biotechnology they guide optimization of industrial enzymes used in food processing, brewing, dairy production, and biofuel manufacture. In environmental engineering the same kinetics model bioremediation processes that employ microbial enzymes to degrade pollutants in soil and water. The framework remains the standard for analyzing enzyme inhibition in research and product development.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Michaelis–Menten_kinetics" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Michaelis–Menten_kinetics</a> (history, equation, Henri background)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Lineweaver–Burk_plot" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Lineweaver–Burk_plot</a> (Lineweaver-Burk history and linear form)</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4624389/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC4624389/</a> (century review of enzyme kinetic analysis and applications)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S2213020914000627" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S2213020914000627</a> (one-hundred-year perspective on Michaelis-Menten kinetics)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:MICHAELIS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc p1)
+  (setq id "Michaelis"
+        iq ""
+        dcl "MICHAELIS"
+        opt '("Michaelis, parameters" "Michaelis, unknown k" "Lineweaver, parameters" "Lineweaver, unknown k")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nMichaelis-Menten: v(S)=Vmax·S/(Km+S), ")
+    (setq fa (get_real 2 "\nVmax" 1.0)
+          fb (get_real 2 "\nKm" 1.0)
+          fc (get_real 6 "\nSmax (end of x-domain)" 10.0)
+          yc '(/ (* fa (eval a2)) (+ fb (eval a2)))
+          eq_display (strcat "\nVmax=" (rtos fa 2 4) ", Km=" (rtos fb 2 4) ", Smax=" (rtos fc 2 4))))
+   ((eq kw 1)
+    (princ "\nMichaelis-Menten: solve Km from one point, ")
+    (setq fa (get_real 6 "\nVmax" 1.0)
+          fc (get_real 6 "\nSmax (end of x-domain)" 10.0)
+          p1 (get_boundpt "Pick curve point (S,v)" nil nil basept 0.0 nil nil 0.0 fa nil)
+          x1 (get_xspan basept xaxisangle p1)
+          y1 (get_yspan basept xaxisangle p1)
+          fb (- (/ (* fa x1) y1) x1)
+          eq_display (strcat "\nVmax=" (rtos fa 2 4) ", Km=" (rtos fb 2 4) ", Smax=" (rtos fc 2 4) ", Km solved from point:" "\nS=" (rtos x1 2 4) ", v=" (rtos y1 2 4))
+          yc '(/ (* fa (eval a2)) (+ fb (eval a2)))))
+   ((eq kw 2)
+    (princ "\nLineweaver-Burk:  1/v=(Km/Vmax)(1/S)+1/Vmax, ")
+    (setq fa (get_real 6 "\nVmax" 1.0)
+          fb (get_real 2 "\nKm" 1.0)
+          fc (get_real 6 "\n(1/S)max (end of x-domain)" 10.0)
+          eq_display (strcat "\nVmax=" (rtos fa 2 4) ", Km=" (rtos fb 2 4) ", Xmax=" (rtos fc 2 4))
+          yc '(+ (* (/ fb fa) (eval a2)) (/ 1.0 fa))))
+   ((eq kw 3)
+    (princ "\nLineweaver-Burk: solve Km from one point, ")
+    (setq fa (get_real 6 "\nVmax" 1.0)
+          fc (get_real 6 "\n(1/S)max (end of x-domain)" 10.0)
+          p1 (get_boundpt "Pick curve point (S,v)" nil nil basept 0.0 nil nil 0.0 fa nil)
+          x1 (get_xspan basept xaxisangle p1)
+          y1 (get_yspan basept xaxisangle p1)
+          fb (* fa (- (/ 1.0 y1) (/ 1.0 fa)) x1)
+          eq_display (strcat "\nVmax=" (rtos fa 2 4) ", Km=" (rtos fb 2 4) ", Xmax=" (rtos fc 2 4) ", Km solved from point: S=" (rtos x1 2 4) ", v=" (rtos y1 2 4))
+          yc '(+ (* (/ fb fa) (eval a2)) (/ 1.0 fa)))))
+  (setq xc '(eval a2)
+        paramstep (/ fc divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:MICHAELIS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

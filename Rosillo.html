@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rosillo Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Rosillo Curve</h1>
+      <p class="short-description">A rational quartic locus defined from a circle of radius \(a\) and two points \(B=(b,0)\) and \(C=(c,0)\) on a diameter: the line through \(M\) perpendicular to that diameter meets the circle at \(P\), and \(BM\) is parallel to \(CP\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Rosillo/Rosillo01-360.avif"
+           alt="Rosillo Curve, a=1,b=-1,c=3">
+      <figcaption>Rosillo Curve, a=1,b=-1,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo02-360.avif"
+           alt="Rosillo Curve, a=1,b=0,c=3">
+      <figcaption>Rosillo Curve, a=1,b=0,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo03-360.avif"
+           alt="Rosillo Curve, a=1,b=1,c=3">
+      <figcaption>Rosillo Curve, a=1,b=1,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo04-360.avif"
+           alt="Rosillo 'Egg', a=1,b=2,c=3">
+      <figcaption>RRosillo 'Egg', a=1,b=2,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo05-360.avif"
+           alt="Rosillo Curve, a=1,b=1,c=0.5">
+      <figcaption>Rosillo Curve, a=1,b=1,c=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo06-360.avif"
+           alt="Rosillo Curve, a=1,b=1,c=0, conchoid of Nicomedes">
+      <figcaption>Rosillo Curve, a=1,b=1,c=0, conchoid of Nicomedes</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo07-360.avif"
+           alt="Rosillo Curve, a=1,b=2,c=0">
+      <figcaption>Rosillo Curve, a=1,b=2,c=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo08-360.avif"
+           alt="Rosillo Curve, a=1,b=1,c=-1, cissoid of Diocles">
+      <figcaption>Rosillo Curve, a=1,b=1,c=-1, cissoid of Diocles</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo09-360.avif"
+           alt="Rosillo Curve, a=1,b=0,c=-1, right strophoid">
+      <figcaption>Rosillo Curve, a=1,b=0,c=-1, right strophoid</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo10-360.avif"
+           alt="Rosillo Curve, a=1,b=4,c=3">
+      <figcaption>Rosillo Curve, a=1,b=4,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo11-360.avif"
+           alt="Rosillo Curve, a=1,b=1.5,c=5">
+      <figcaption>Rosillo Curve, a=1,b=1.5,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rosillo/Rosillo12-360.avif"
+           alt="Rosillo Curve, a=3,b=1,c=5">
+      <figcaption>Rosillo Curve, a=3,b=1,c=5</figcaption>
+    </figure>    
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Rosillo Curve parametric equations:</div>
+      \[ x = a\cos(t),\qquad y = \dfrac{(b-a\cos(t))\,a\sin(t)}{c-a\cos(t)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rosillo Curve Cartesian equation:</div>
+      \[ y^{2}(c-x)^{2} = (b-x)^{2}(a^{2}-x^{2}) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Rosillo curve was studied by the mathematician Nicolas Rosillo in 2009.<sup>1</sup> Rosillo, who has contributed to mathematics education through innovative methods like gamified “Escape Room” activities for teaching topics such as algebra and geometry during the COVID-19 lockdown, defined this curve geometrically. It is the locus of points \(M\) such that, given a circle of radius \(a\) centered at the origin and points \(B\) at \((b,0)\) and \(C\) at \((c,0)\) on the x-axis, the line perpendicular to the x-axis through \(M\) intersects the circle at point \(P\), and the line \(BM\) is parallel to \(CP\). This yields the parametric equations \(x = a\cos(t)\), \(y = \dfrac{(b-a\cos(t))\,a\sin(t)}{c-a\cos(t)}\), or the implicit form \(y^{2}(c-x)^{2} = (b-x)^{2}(a^{2}-x^{2})\), a rational quartic curve. Depending on \(c\)’s position relative to the circle, the curve’s shape varies: if \(|c|&lt;|a|\) (\(C\) inside), it features a vertical asymptote at \(x=c\) where \(y\) approaches \(\pm\infty\), often with a cusp at \(B\) if \(b=a\) or \(b=-a\); if \(|c|&gt;|a|\) (\(C\) outside), it forms a closed loop resembling a heart, egg, tear, or dissymmetric figure-eight, again cuspidal at \(B\) on the circle. Special cases link it to classical curves; for \(c=0\) (\(C\) at center), it reduces to a conchoid of Nicomedes with pole \(B\), directrix perpendicular to the x-axis through \(C\), and constant distance \(a\); for \(C\) on the circle, it decomposes into a line and a cubic; if \(B\) opposes \(C\) diametrically, a cissoid of Diocles; if \(B\) is at center, a right strophoid. These connections highlight its place in algebraic geometry, where derivatives reveal cusps (infinite slope) and asymptotes (undefined at denominators near zero), while integrals could compute enclosed areas, though no specific historical computations are noted.</p>
+    <p>No real-life applications in engineering or natural sciences were found for the Rosillo curve itself, despite searches across mathematical encyclopedias and academic sources. Its recent origin limits documented uses, though related curves like the conchoid have historical roles in angle trisection and optics (focusing light rays). The primary source for this information is the Encyclopedia of Plane Curves at mathcurve.com; no additional sources confirmed applications. Rotating the curve about its axis generates surfaces of revolution, but this remains theoretical.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/rosillo/rosillo.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/rosillo/rosillo.shtml</a> (history, geometric definition, parametric/implicit equations, and special cases)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ROSILLO (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   restartflag id iq dcl opt kw mode dpr dpt span xc yc a1 a2 x1 y1 x2 y2 eq_display fa fb fc maxdraw)
+  (setq id "Rosillo Curve"
+        iq "x=a·cos(t), y=(b-a·cos(t))a·sin(t)/(c-a·cos(t))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (circle radius)" 1.0)
+        fb (get_real 0 "b (position of B)" 2.0)
+        fc (get_real 0 "c (position of C)" 3.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        maxdraw (get_real 2 "Maximum y value allowed?" 10.0)
+        xc '(* fa (cos (eval a2)))
+        yc '(/ (* (- fb (* fa (cos (eval a2)))) fa (sin (eval a2))) (avoid_zero (- fc (* fa (cos (eval a2))))))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ROSILLO)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

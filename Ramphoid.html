@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ramphoid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ramphoid Curve</h1>
+      <p class="short-description">A plane algebraic quartic with a ramphoid (beak-like, second-kind) cusp at the origin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Ramphoid/Ramphoid01-360.avif"
+           alt="Generalized Ramphoid Curve, a=1,b=2,c=0,d=1">
+      <figcaption>Generalized Ramphoid Curve, a=1,b=2,c=0,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ramphoid/Ramphoid02-360.avif"
+           alt="Generalized Ramphoid Curve, a=2,b=3,c=1,d=2">
+      <figcaption>Generalized Ramphoid Curve, a=2,b=3,c=1,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ramphoid/Ramphoid03-360.avif"
+           alt="Ramphoid Curve, a=1,b=4,c=2,d=3">
+      <figcaption>Ramphoid Curve, a=1,b=4,c=2,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ramphoid/Ramphoid04-360.avif"
+           alt="Generalized Ramphoid Curve, a=1,b=5,c=3,d=4">
+      <figcaption>Generalized Ramphoid Curve, a=1,b=5,c=3,d=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ramphoid/Ramphoid05-360.avif"
+           alt="Generalized Ramphoid Curve, a=1,b=6,c=4,d=5">
+      <figcaption>Generalized Ramphoid Curve, a=1,b=6,c=4,d=5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Ramphoid Curve parametric equations:</div>
+      \[ x = a\cdot t^{4},\qquad y = a(t^{2}+t^{3}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = a\cdot t^{b},\qquad y = a(t^{c}+t^{d}) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The ramphoid curve<sup>1,2</sup>, also known as the ramphoid cusp, is a plane algebraic curve featuring a cuspidal point of the second kind. In this type of cusp the two branches of the curve lie on the same side of the common tangent line at the singular point, which distinguishes it from ordinary cusps like the semicubical parabola. Leonhard Euler proposed the curve in 1744 in a letter to Gabriel Cramer dated October 20, 1744. Euler presented it to demonstrate that such cusps could exist in algebraic curves, contrary to Cramer’s earlier belief that they could not. This led Cramer to include the concept in his 1750 treatise <em>Introduction à l'analyse des lignes courbes algébriques</em>, crediting Euler to illustrate “beak-like reversal” in quartics. The 1744–1745 correspondence resolved tensions between geometric intuition and algebraic analysis, with Euler noting how equations reveal singularities geometry might miss. In 1750, Cramer debated Jean d'Alembert on “inflection points” in quartics, where tangents intersect four times, defending their algebraic reality via series expansions and noting “invisible” inflections at origins visible only through calculation. Cramer's approach shifted from 1744 geometric refutations to 1750 algebraic proofs in the era's debate on visualizing versus computing singularities in plane curves. “Ramphoid” means “bird’s beak,” from the Greek <em>ramphos</em> and was coined in 1809 by the French mathematician Louis-Benjamin Francoeur, who also named cusps of the first kind “keratoid.”</p>
+    <p>In algebraic geometry the ramphoid cusp serves as the simplest example of a second-order cusp. Real-life applications in engineering or the natural sciences for this specific curve are not documented. Its value remains theoretical, primarily in the study of singular points of plane algebraic curves.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ramphoid/ramphoide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ramphoid/ramphoide.shtml</a> (history, Euler 1744 letter to Cramer, name origin by Francoeur)</li>
+      <li><a href="https://mathworld.wolfram.com/RamphoidCusp.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/RamphoidCusp.html</a> (definition of ramphoid cusp)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RAMPHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Ramphoid Curve"
+        iq "x=a·tᵇ, y=a·(tᶜ+tᵈ)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (x exponent)" 4.0)
+        fc (get_real 0 "c (y first exponent)" 2.0)
+        fd (get_real 2 "d (y second exponent)" 3.0)
+        fe (get_keyword 0 "Positive Negative" "Positive or Negative t?" "Positive")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(* fa (alt_expt (eval a2) fb nil))
+        yc '(* fa (+ (alt_expt (eval a2) fc nil) (alt_expt (eval a2) fd nil)))
+        paramstep (/ (alt_expt (/ xspan fa) (/ 1.0 fb) nil) divcount)
+        paramstep (if (eq fe "Negative") (- paramstep) paramstep)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:RAMPHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

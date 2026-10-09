@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Involute of a Circle - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Involute of a Circle</h1>
+      <p class="short-description">The locus of the free end of a taut string as it is unwound from a fixed circle of radius a.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/InvoluteCircle/InvoluteCircle01-360.avif"
+           data-caption="Involute of a Circle a=1(black), Archimedean spiral a=pi/2;b=1(red)"
+           alt="Involute of a Circle a=1(black), Archimedean spiral a=pi/2;b=1(red)">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Involute of a Circle a=1</span>,
+        <span class="figcap-value" style="color:#FF0000">Archimedean spiral a=pi/2;b=1</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvoluteCircle/InvoluteCircle02-360.avif"
+           data-caption="First rotation, Involute of a Circle a=1(black), Archimedean spiral a=pi/2;b=1(red)"
+           alt="First rotation, Involute of a Circle a=1(black), Archimedean spiral a=pi/2;b=1(red)">
+      <figcaption>
+        First rotation, 
+        <span class="figcap-value" style="color:#000000">Involute of a Circle a=1</span>,
+        <span class="figcap-value" style="color:#FF0000">Archimedean spiral a=pi/2;b=1</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Involute of a Circle parametric equations:</div>
+      \[ x = a(\cos\phi + \phi\sin\phi),\quad y = a(\sin\phi - \phi\cos\phi) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The involute of a circle was first described by Christiaan Huygens in the 1650s while he was seeking a curve that would produce a perfectly uniform pendulum.<sup>1</sup> He found that if a flexible cord is unwound from a circle under tension, the end of the cord traces a precise curve whose normal at every point is tangent to the base circle. Huygens used this property to design the cycloidal pendulum, a clock escapement in which the bob swings along an isochronous cycloid, enforced by cheeks shaped as the involute of a circle.<sup>2</sup> By the late 17th and early 18th centuries, the involute became an important object of study in classical differential geometry, where it is defined as the locus of a point on a taut string unwound from a base curve. The circle’s involute became the canonical example due to its tractability and its relationship to uniformly varying curvature. Its modern parametric form was formalized in the 19th century as differential calculus and curvature theory matured.<sup>3</sup></p>
+    <p>The most significant engineering use of the involute is its role as the fundamental profile for spur, helical, and internal gears. Two involute teeth maintain a constant velocity ratio despite slight changes in center distance because the common normal at every point of contact is tangent to the base circle. This produces true conjugate action, uniform angular speed, and low sensitivity to small positional errors, properties that no earlier gear form possessed. Nearly all modern gear systems use involute profiles for these reasons.<sup>4</sup> Involute curves appear in cam design (particularly rise-fall cam segments), where the involute’s constant normal direction simplifies force transmission. They also arise in belt/rope-wrapping problems, wrinkling mechanics, and motion-transfer devices where a constant pressure angle is desired. The geometry of a rope or cable unwinding from a cylinder follows the same involute construction. This form appears in winches, hoists, marine rigging modeling, and cable payout systems where tensioned spools produce near-involute trajectories. For large unwinding angles, the involute approaches the form of an Archimedean spiral. This asymptotic behavior is sometimes used in machining when an exact involute is replaced by a spiral toolpath over regions where the difference is negligible at engineering tolerance levels.<sup>2</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/CircleInvolute.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CircleInvolute.html</a> (history and Huygens pendulum application).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/developpantedecercle/developpantedecercle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/developpantedecercle/developpantedecercle.shtml</a> (definition, parametric equations, geometry, applications).</li>
+      <li><a href="https://www.2dcurves.com/spiral/spirali.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spirali.html</a> (parametric form and mechanical relations).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Involute" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Involute</a> (gear applications and constant velocity ratio).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:INVOLUTECIRCLE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                           divpt restartflag xspan id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Involute of Circle"
+        iq "x=a·(cos(φ)+φ·sin(φ)), y=a·(sin(φ)-φ·cos(φ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (circle radius)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(* fa (+ (cos (eval a2)) (* (eval a2) (sin (eval a2)))))
+        yc '(* fa (- (sin (eval a2)) (* (eval a2) (cos (eval a2)))))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:INVOLUTECIRCLE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

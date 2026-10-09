@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exponential Decay - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Exponential Decay</h1>
+      <p class="short-description">The pure exponential decay curve arising as the solution of first-order linear ODEs; models radioactive decay, capacitor discharge, Newton’s law of cooling, drug elimination, and attenuation processes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Exponential/Exponential01-360.avif"
+           alt="Exponential Decay, half-life=1,a=5,b=-0.6931,c=1">
+      <figcaption>Exponential Decay, half-life=1,a=5,b=-0.6931,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential02-360.avif"
+           alt="Exponential Decay thru (2,2),a=5,b=0.4581,c=1">
+      <figcaption>Exponential Decay thru (2,2),a=5,b=0.4581,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Exponential/Exponential03-360.avif"
+           alt="Exponential Decay thru (2,2),(4,1),a=4,b=-0.3466,c=1">
+      <figcaption>Exponential Decay thru (2,2),(4,1),a=4,b=-0.3466,c=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Exponential Decay Cartesian equation:</div>
+      \[ N(t) = N_{0} e^{-\lambda t} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Cartesian equation:</div>
+      \[ y = a \cdot e^{b x^{c}} \quad \text{so } N_{0}=a,\ \lambda=-b,\ c=1 \text{ and } t_{1/2}=\dfrac{\ln 2}{\lambda} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The recognition of exponential decay lagged behind that of exponential growth, though mathematically the two are just sign-reversals in the exponent. Early interest in decay came from physics and natural philosophy rather than commerce. By the mid-17th century, Pierre de Fermat and Christiaan Huygens had considered problems of cooling and damping, though without explicit exponential formulations. The decisive step came with Isaac Newton’s law of cooling in 1701, which stated that the rate of temperature loss is proportional to the difference between an object’s temperature and that of its environment<sup>1</sup>. This was one of the first explicit “decay laws,” and its solution is an exponential decrease.</p>
+    <p>In the 18th century, Euler and Daniel Bernoulli explored damping of oscillatory systems (e.g., pendulums in air), introducing exponential decay factors into solutions of differential equations<sup>2</sup>. This placed decay on equal footing with growth in analytic mechanics: both arose naturally as solutions to first-order linear ordinary differential equations. During the 19th century, exponential decay became central in two broad domains, probability and physics. In the realm of statistics, Simeon Denis Poisson and others used exponential laws to model waiting times and survival functions, laying groundwork for reliability theory and actuarial science. And in physics, Joseph Fourier’s Analytical Theory of Heat, published in 1822, showed that heat diffusion produced exponential damping of higher Fourier modes<sup>3</sup>. Similarly, in acoustics and optics, attenuation of sound and light in media was modeled with exponential loss.</p>
+    <p>The turn of the 20th century brought the most famous physical example: radioactivity. Between 1902 and 1903, Ernest Rutherford and Frederick Soddy discovered that radioactive substances decay at a rate proportional to the amount present, defining the half-life, \( t_{1/2} \)<sup>4</sup>. This placed exponential decay at the heart of nuclear physics, radiometric dating, and medical imaging, as for example in the \( T_{1} \) and \( T_{2} \) relaxation times that govern MRI image creation. Since then, exponential decay has been recognized as the universal fingerprint of processes governed by a constant relative rate of loss. It now appears across physics, engineering, and beyond, from capacitor discharge in electronics to attenuation of seismic waves, chemical kinetics, and pharmacokinetics<sup>5</sup>.</p>
+    <p>Applications of exponential decay are widespread in engineering and the natural sciences. They include radioactive decay and radiometric dating in geology, drug elimination and pharmacokinetics in medicine, RC circuit discharge in electronics, Newton’s law of cooling in thermal engineering, and attenuation processes in acoustics and optics.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling</a> (Newton’s law of cooling 1701)</li>
+      <li><a href="https://mathworld.wolfram.com/ExponentialFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ExponentialFunction.html</a> (Euler and Bernoulli damping contributions)</li>
+      <li><a href="https://archive.org/details/analyticaltheory00fourrich" target="_blank" rel="noopener noreferrer">https://archive.org/details/analyticaltheory00fourrich</a> (Fourier Analytical Theory of Heat 1822)</li>
+      <li><a href="https://www.lindahall.org/experience/digital-exhibitions/the-atomic-age/01-atomic-timeline/a-early-discoveries/" target="_blank" rel="noopener noreferrer">https://www.lindahall.org/experience/digital-exhibitions/the-atomic-age/01-atomic-timeline/a-early-discoveries/</a> (Rutherford radioactive decay)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Exponential_decay" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Exponential_decay</a> (applications in capacitor discharge, pharmacokinetics, chemical kinetics)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>Exponential Decay AutoLISP: see <a href="Exponential.html">Exponential</a>.</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

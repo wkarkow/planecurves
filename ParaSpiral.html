@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabolic Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Parabolic Spiral</h1>
+      <p class="short-description">A member of the Archimedean family with polar equation \(r=a+b\sqrt{\theta}\). The special case \(a=0\) is Fermat’s spiral. Radius grows with the square root of polar angle; in the Fermat case the area between successive turns is constant.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/ParaSpiral/ParaSpiral01-360.avif"
+           alt="Parabolic Spiral, a=1,b=1">
+      <figcaption>Parabolic Spiral, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParaSpiral/ParaSpiral02-360.avif"
+           data-caption="Parabolic Spiral, a=1(black),b=1(black),Fermat Spiral, a=1(red)"
+           alt="Parabolic Spiral, a=1(black),b=1(black),Fermat Spiral, a=1(red)">
+      <figcaption>
+        Parabolic Spiral, 
+        <span class="figcap-value" style="color:#000000">a=1</span>,
+        <span class="figcap-value" style="color:#000000">b=1</span>,
+        Fermat Spiral, 
+        <span class="figcap-value" style="color:#FF0000">a=1</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParaSpiral/ParaSpiral03-360.avif"
+           alt="Parabolic Spiral, a=-1,b=1">
+      <figcaption>Parabolic Spiral, a=-1,b=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Parabolic Spiral polar equation:</div>
+      \[ r = a + b\sqrt{\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The parabolic spiral, with polar equation \(r=a+b\sqrt{\theta}\), is a member of the Archimedean family of plane spirals. Pierre de Fermat described the special case \(r=b\sqrt{\theta}\) (when \(a=0\)) in 1636 in a letter to Marin Mersenne while examining areas and tangents of curves.<sup>1</sup> The general offset form was studied by Jacob Bernoulli in 1691.<sup>2</sup> A property useful to engineers follows from the polar area formula \(A=\frac{1}{2}\int r^{2}\,d\theta\). For the basic Fermat case the area between successive turns remains constant, independent of starting angle, because the \(r^{2}\) term grows linearly with \(\theta\). The offset \(a\) shifts the starting radius but preserves the overall spiral character.</p>
+    <p>Real-life applications in engineering and the natural sciences are documented primarily for the Fermat special case and extend to the general parabolic spiral. In electrical engineering the constant-area property is used in variable-capacitor designs where rotating plates follow the spiral to produce linear capacitance change with angle.<sup>3</sup> In renewable-energy engineering the same spiral guides efficient heliostat-mirror layouts in concentrated solar-power plants to optimize light concentration.<sup>2</sup> In the natural sciences the curve models phyllotaxis, the spiral arrangement of seeds or florets in sunflowers and daisies, where successive elements follow approximate parabolic spirals.</p>
+    <p>Also see Fermat Spiral.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/spiral/spiralf.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spiralf.html</a> (Fermat 1636 history)</li>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/spiraleparabolic/spiraleparabolic.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/spiraleparabolic/spiraleparabolic.shtml</a> (Bernoulli 1691, general equation, engineering and natural-science)</li>
+      <li><a href="https://mathworld.wolfram.com/FermatsSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FermatsSpiral.html</a> (properties and capacitor reference via Fermat spiral)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PARASPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                       xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb rval)
+  (setq id "Parabolic Spiral"
+        iq "r=a+b·sqrt(𝛉)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (offset radius)" 0.0)
+        fb (get_real 2 "b (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        rval '(+ fa (* fb (alt_expt (eval a2) 0.5 nil)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PARASPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

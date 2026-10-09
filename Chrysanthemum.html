@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chrysanthemum Curve - Plane Curve with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Chrysanthemum Curve</h1>
+      <p class="short-description">A dense, radially symmetric polar curve resembling a chrysanthemum.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Chrysanthemum/Chrysanthemum01-360.avif"
+           alt="Chrysanthemum Curve">
+      <figcaption>Chrysanthemum Curve</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Chrysanthemum Curve polar equation:</div>
+      \[ r = 5\left[1 + \sin\left(\frac{11\theta}{5}\right)\right] - 4\sin^{4}\left(\frac{17\theta}{3}\right) \cdot \sin^{8}\left[2\cos(3\theta) - 28\theta\right], \quad 0 \leq \theta \leq 21\pi \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Chrysanthemum Curve is attributed to Temple H. Fay<sup>1,2</sup>, a late-20th-century American mathematician whose work focused on mathematical modeling, numerical methods, and the visualization of complex parametric and polar curves. Fay is best known for introducing the Butterfly Curve in his 1989 paper<sup>3</sup> "The Butterfly Curve" published in <em>The American Mathematical Monthly</em>, a piece that helped spark broader interest in visually rich, non-classical curves defined through trigonometric combinations. His work reflects a shift from classical analytic curves such as conics and roulettes toward curves constructed for their structural and visual complexity using modern computational tools. Fay's contributions sit at the intersection of recreational mathematics and applied numerical analysis. In addition to his curve work, he explored computational sensitivity in "A Study in Step Size" (1997)<sup>4</sup>, emphasizing how numerical step selection affects accuracy and stability in iterative calculations. This perspective is directly relevant to curve plotting: many of Fay's curves, including the Chrysanthemum, depend on dense sampling of oscillatory trigonometric expressions, where insufficient resolution can distort the geometry. His work therefore bridges theory and computation, highlighting how modern visualization relies not just on equations but on careful numerical implementation.</p>
+    <p>The Chrysanthemum Curve itself is not derived from a classical geometric construction but from layered trigonometric modulation, where terms such as sin(kθ) and powers like sin^n(·) act as frequency and amplitude shapers. This produces petal-like structures through interference of periodic components, analogous in principle to Fourier synthesis, where complex shapes arise from combinations of simpler oscillations. The result is a dense, radially symmetric structure resembling a natural flower, demonstrating how relatively simple trigonometric building blocks can generate highly intricate forms.</p>
+    <p>Although Fay originated the curve, its widespread recognition is due largely to Paul Bourke, who published detailed renderings and parameterizations on his visualization site. Bourke's work did not introduce new mathematics but played a crucial role in dissemination, making the curve accessible to engineers, programmers, and educators.</p>
+    <p>In terms of applications, the Chrysanthemum Curve has no known direct engineering or physical use. Unlike curves such as the catenary or cycloid, it does not arise from an optimization principle or physical constraint. Its importance lies instead in computational mathematics and visualization: it serves as a benchmark example for testing plotting algorithms, parametric resolution strategies, and numerical stability in highly oscillatory systems. The AutoCAD image here consists of 60,480 vertices.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://paulbourke.net/geometry/chrysanthemum/" target="_blank" rel="noopener noreferrer">https://paulbourke.net/geometry/chrysanthemum/</a> (equation, attribution to Fay).</li>
+      <li><a href="https://mathworld.wolfram.com/ButterflyCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ButterflyCurve.html</a> (Fay's authorship and related curve context).</li>
+     <li><a href="https://www.jstor.org/stable/2325155" target="_blank" rel="noopener noreferrer">Temple H. Fay, “The Butterfly Curve,” <em>American Mathematical Monthly</em> 96 (1989): 442–443</a> (Temple Fay's original 1989 paper).</li>
+      <li><a href="https://www.tandfonline.com/doi/abs/10.1080/0025570X.1997.11996513" target="_blank" rel="noopener noreferrer">Temple H. Fay, “A Study in Step Size,” <em>Mathematics Magazine</em> 70 (1997)</a> (publisher link behind paywall; discusses numerical step-size selection and its effect on accuracy/stability in iterative calculations, directly relevant to dense plotting of oscillatory curves like the Chrysanthemum).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>; CHRYSANTHEMUM.LSP - started 6/4/25
+
+(defun C:CHRYSANTHEMUM (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                          id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2)
+  (setq id "Chrysanthemum"
+        iq "r=5·[1+sin(11θ/5)]-4·sin⁴(17θ/3)·sin⁸[2·cos(3θ)-28θ]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in half-curve"
+        dct 30240
+        dpt nil
+        span 3780
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        eq_display "\nr=5·[1+sin(11θ/5)]-4·sin⁴(17θ/3)·sin⁸[2·cos(3θ)-28θ]"
+        rval '(- (* 5 (+ 1 (sin (/ (* 11 (eval a2)) 5.0)))) (* 4 (expt (sin (/ (* 17 (eval a2)) 3.0)) 4)
+              (expt (sin (- (* 2 (cos (* 3 (eval a2)))) (* 28 (eval a2)))) 8)))
+        xc '(* (cos (eval a2)) (eval rval))
+        yc '(* (sin (eval a2)) (eval rval))
+        skm '(T T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CHRYSANTHEMUM)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

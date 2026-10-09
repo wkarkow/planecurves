@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rational Bicircular Quartic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Rational Bicircular Quartic</h1>
+      <p class="short-description">A plane algebraic curve of degree four that passes twice through circular points at infinity and has one additional real singularity at the origin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/RatBicircular/RatBicircular01-360.avif"
+           alt="Rational Bicircular Quartic, multiple values of a,b=1,c=0,d=1,e=1">
+      <figcaption>
+        Rational Bicircular Quartic, a=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.25</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">2.0</span>,
+        b=1,c=0,d=1,e=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular02-360.avif"
+           alt="Rational Bicircular Quartic, a=1,b=1,d=1, multiple values of c and e">
+      <figcaption>
+        Rational Bicircular Quartic, a=1,b=1,d=1,
+        <span class="figcap-value" style="color:#000000">c=0,e=1</span>,
+        <span class="figcap-value" style="color:#FF0000">c=0.25,e=7/6</span>,
+        <span class="figcap-value" style="color:#0000FF">c=0.5,e=4/3</span>,
+        <span class="figcap-value" style="color:#009600">c=0.75,e=16/7</span>,
+        <span class="figcap-value" style="color:#FF9600">c=1.0,e=1</span>,
+        <span class="figcap-value" style="color:#9600FF">c=1.5,e=-4/5</span>,
+        <span class="figcap-value" style="color:#0096FF">c=2,e=-1/3</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular03-360.avif"
+           alt="Rational Bicircular Quartic, a=1,b=1,c=0,multiple values of d,e=1">
+      <figcaption>
+        Rational Bicircular Quartic, a=1,b=1,c=0,d=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.25</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">2.0</span>,
+        e=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular04-360.avif"
+           alt="Rational Bicircular Quartic, a=1,b=1,c=0,d=1, multiple values of e">
+      <figcaption>
+        Rational Bicircular Quartic, a=1,b=1,c=0,d=1,e=
+        <span class="figcap-value" style="color:#000000">-1.0 (+imaginary)</span>,
+        <span class="figcap-value" style="color:#FF0000">0.01</span>,
+        <span class="figcap-value" style="color:#0000FF">0.25</span>,
+        <span class="figcap-value" style="color:#009600">0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">0.75</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">1.25</span>,
+        <span class="figcap-value" style="color:#AA5555">1.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular05-360.avif"
+           alt="Rational Bicircular Quartic, a=0.5,b=1,c=4,d=0.5,e=0.5 (real)">
+      <figcaption>Rational Bicircular Quartic, a=0.5,b=1,c=4,d=0.5,e=0.5 (real)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular06-360.avif"
+           alt="Rational Bicircular Quartic, a=0.75,b=1,c=3.5,d=0.5,e=-0.0120 (real)">
+      <figcaption>Rational Bicircular Quartic, a=0.75,b=1,c=3.5,d=0.5,e=-0.0120 (real)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular07-360.avif"
+           alt="Rational Bicircular Quartic, a=0.75,b=1,c=3.5,d=0.5,e=-0.0120 (+imaginary)">
+      <figcaption>Rational Bicircular Quartic, a=0.75,b=1,c=3.5,d=0.5,e=-0.0120 (+imaginary)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular08-360.avif"
+           alt="Rational Bicircular Quartic, a=0.5,b=1,c=4,d=1,e=-0.6 (real)">
+      <figcaption>Rational Bicircular Quartic, a=0.5,b=1,c=4,d=1,e=-0.6 (real)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular09-360.avif"
+           alt="Rational Bicircular Quartic, a=0.5,b=1,c=4,d=1,e=-0.6 (+imaginary)">
+      <figcaption>Rational Bicircular Quartic, a=0.5,b=1,c=4,d=1,e=-0.6 (+imaginary)</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/RatBicircular/RatBicircular10-360.avif"
+           alt="Rational Bicircular Quartic, a=0.5,b=1,c=0.6,d=0.4,e=-1.0 (real) ">
+      <figcaption>Rational Bicircular Quartic, a=0.5,b=1,c=0.6,d=0.4,e=-1.0 (real)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular11-360.avif"
+           alt="Rational Bicircular Quartic, a=0.5,b=1,c=0.6,d=0.4,e=-1.0 (+imaginary)">
+      <figcaption>Rational Bicircular Quartic, a=0.5,b=1,c=0.6,d=0.4,e=-1.0 (+imaginary)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular12-360.avif"
+           alt="Rational Bicircular Quartic, a=0.9,b=0.2,c=0.3,d=0.4,e=0.5 (real)">
+      <figcaption>Rational Bicircular Quartic, a=0.9,b=0.2,c=0.3,d=0.4,e=0.5 (real)
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/RatBicircular/RatBicircular13-360.avif"
+           alt="Rational Bicircular Quartic, a=1,b=0,c=1,d=1,e=1 (real)">
+      <figcaption>Rational Bicircular Quartic, a=1,b=0,c=1,d=1,e=1 (real)
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Rational Bicircular Quartic Curve Cartesian equation:</div>
+      \[ (x^{2} + y^{2} - c x - d y)^{2} = a^{2} x^{2} + e b^{2} y^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rational Bicircular Quartic Curve polar equation:</div>
+      \[ r = c \cdot \cos(\theta) + d \cdot \sin(\theta) \pm \sqrt{a^{2}\cos^{2}(\theta) + e \cdot b^{2}\sin^{2}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The rational bicircular quartic<sup>1,2</sup> is a plane algebraic curve of degree four that passes twice through the circular points at infinity and has one additional real singularity at a finite point (taken here as the origin). It belongs to the family of bicircular quartics, which were systematically classified and studied by John Casey in his 1871 memoir “On Bicircular Quartics.” These curves admit several equivalent geometric constructions: they are the pedals of centered conics with respect to a fixed point, the inverses of conics with respect to a point not on the conic (when the inversion power is zero), the envelopes of circles whose diameters join the fixed point to points on a centered conic, and the cissoids of two circles. Depending on parameters such as the value of e relative to the critical value derived from a, b, and c, the singularity at the origin is acnodal (isolated point), crunodal (node with distinct tangents), or cuspidal. Special cases include the limaçon of Pascal (and its special case, the cardioid) when the deferent conic is a circle, and Booth curves such as the lemniscate of Bernoulli when the fixed point is the center of the conic.</p>
+    <p>In engineering and the natural sciences, rational bicircular quartics define contour plots of generalized Cassini surfaces used to model full-field primary astigmatism magnitude data in perturbed double-plane symmetric optical systems with circular pupils.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/quarticbicirculairerationnelle/quarticbicirculairerationnelle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/quarticbicirculairerationnelle/quarticbicirculairerationnelle.shtml</a> (definitions, properties, geometry)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticbc.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticbc.html</a> (bicircular and rational forms)</li>
+      <li><a href="https://opg.optica.org/josaa/abstract.cfm?uri=josaa-37-12-1999" target="_blank" rel="noopener noreferrer">https://opg.optica.org/josaa/abstract.cfm?uri=josaa-37-12-1999</a> (application in optical aberrations/astigmatism)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RATBICIRCULAR (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                          restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh)
+  (setq id "Rational Bicircular Quartic"
+        iq "r=c·cos(θ)+d·sin(θ)+√(a²·cos²(θ)+e·b²·sin²(θ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a" 1.0)
+        fb (get_real 0 "b (no cusp @ 0): " 1.0)
+        fc (get_real 0 (strcat "c (no cusp if |c| = " (rtos fa 2 4) ")") 0.0)
+        fd (get_real 0 "d (larger circularizes): " 1.0)
+        fh (- (* fa fa) (* fc fc))
+        fg (if (and (/= fb 0.0) (/= fh 0.0)) (/ (* fa fa fd fd) (* fb fb fh)) nil)
+        fe (get_real 0 (if fg (strcat ", e (" (if (&gt; fh 0.0) "acnodal &gt;, crunodal &lt;, cuspidal = " "acnodal &lt;, crunodal &gt;, cuspidal = ") (rtos fg 2 4) "): ") "e") (if fg fg 1.0))
+        ff (get_keyword 0 "Real Imaginary" "\n  sqrt mode [Real/Imaginary] &lt;Real&gt;: " "Real")
+        eq_display (strcat "\na = " (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", e=" (rtos fe 2 4))
+        rval '(+ (* fc (cos (eval a2))) (* fd (sin (eval a2))) (alt_expt (+ (* fa fa (cos (eval a2)) (cos (eval a2))) (* fe fb fb (sin (eval a2)) (sin (eval a2)))) 0.5 (if (= ff "Real") T nil)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:RATBICIRCULAR)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

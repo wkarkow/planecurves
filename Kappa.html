@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kappa Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Kappa Curve</h1>
+      <p class="short-description">A classical rational quartic plane curve amounting to a radial cotangent.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Kappa/Kappa01-360.avif"
+           alt="Kappa Curve, a=1,b=1,c=1">
+      <figcaption>Kappa Curve, a=1,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kappa/Kappa02-360.avif"
+           alt="Generalized Kappa Curve, a=1,b=1,c=2, 'Windmill Curve'">
+      <figcaption>Generalized Kappa Curve, a=1,b=1,c=2, 'Windmill Curve'</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kappa/Kappa03-360.avif"
+           alt="Generalized Kappa Curve, a=1,b=0.5,c=3">
+      <figcaption>Generalized Kappa Curve, a=1,b=0.5,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kappa/Kappa04-360.avif"
+           alt="Generalized Kappa Curve, a=1,b=0.25,c=2.1">
+      <figcaption>Generalized Kappa Curve, a=1,b=0.25,c=2.1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Kappa Curve implicit equation:</div>
+      \[ (x^{2} + y^{2})y^{2} = a^{2}x^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Kappa Curve polar equation:</div>
+      \[ r = a \cdot \cot(\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot \cot^{b}(c\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Kappa curve<sup>1,2,3,4</sup>, also known as Gutschoven’s curve, was first studied by Gérard van Gutschoven around 1662. It is remembered as one of the early examples in which Isaac Barrow applied rudimentary methods of the developing calculus to determine the tangent to a curve. The curve was subsequently studied by Isaac Newton and Johann Bernoulli, as well as by René François de Sluze. Its Greek-letter name comes from its resemblance to a handwritten κ when plotted in Cartesian coordinates. Geometrically, the classical form is the locus of a point P such that the distance from the origin to P equals the length of a segment cut by a rotating line through the origin intersecting a fixed horizontal line at a constant distance a from the origin.<sup>2</sup> It is a rational quartic algebraic curve and the radial curve of the tractrix; it is also a special case of a nodal curve. The AutoLISP code generalizes the classical polar equation to the powered and scaled form shown above, allowing exploration of variants by varying the exponent b and multiplier c.</p>
+    <p>No prominent real-life applications in engineering or the natural sciences were identified for the Kappa curve in standard mathematical references. Its significance remains primarily historical and pedagogical in the development of algebraic curves and early calculus.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/KappaCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/KappaCurve.html</a> (history and equations).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/kappa/kappa.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/kappa/kappa.shtml</a> (history, equations, geometric construction).</li>
+      <li><a href="https://www.2dcurves.com/quartic/quartick.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quartick.html</a> (locus definition and history).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Kappa_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Kappa_curve</a> (history and formulation).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:KAPPA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                  restartflag id iq dcl opt kw mode dpr dct dpt span rval xc yc skm maxdraw a1 a2 x1 y1 x2 y2 eq_display fa fb fc)
+  (setq id "Kappa Curve"
+        iq "r=a·cotᵇ(cθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (exponent)" 1.0)
+        fc (get_real 2 "c (θ multiplier)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        rval '(* fa (alt_expt (/ (cos (* fc (eval a2))) (avoid_zero (sin (* fc (eval a2))))) fb nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 50)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:KAPPA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

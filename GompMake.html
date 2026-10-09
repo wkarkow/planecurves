@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gompertz-Makeham - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Gompertz-Makeham</h1>
+      <p class="short-description">The probability density and cumulative distribution functions (PDF & CDF) of the Gompertz–Makeham distribution, which extends the classical Gompertz model of adult mortality by adding a constant background hazard λ.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/GompMake/GompMake01-360.avif"
+           alt="Gompertz-Makeham PDF, α=0.0001,β=0.1,λ=0, grid spacing=10, y value multiplied by 1000 for scale, (36.8,69.1) peak predicts 3.68% deaths in 69th year">
+      <figcaption>Gompertz-Makeham PDF, α=0.0001,β=0.1,λ=0, grid spacing=10, y value multiplied by 1000 for scale, (36.8,69.1) peak predicts 3.68% deaths in 69th year</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompMake/GompMake02-360.avif"
+           alt="Gompertz-Makeham CDF, α=0.0001,β=0.1,λ=0, grid spacing=10, y value multiplied by 100 for scale, Median survival at age X=65.4">
+      <figcaption>Gompertz-Makeham CDF, α=0.0001,β=0.1,λ=0, grid spacing=10, y value multiplied by 100 for scale, Median survival at age X=65.4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompMake/GompMake03-360.avif"
+           alt="Gompertz-Makeham PDF,multiple values of α,β=0.1,λ=0">
+      <figcaption>
+        Gompertz-Makeham PDF, α=
+        <span class="figcap-value" style="color:#000000">0.001</span>,
+        <span class="figcap-value" style="color:#FF0000">0.0003161</span>,
+        <span class="figcap-value" style="color:#0000FF">0.0001</span>,
+        <span class="figcap-value" style="color:#009600">0.0000316</span>,
+        β=0.1,λ=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompMake/GompMake04-360.avif"
+           alt="Gompertz-Makeham CDF,multiple values of α,β=0.1,λ=0, Median survival at age (X)=42.5(black),54.0(red),65.4(blue),76.9(green)">
+      <figcaption>
+        Gompertz-Makeham CDF, α=
+        <span class="figcap-value" style="color:#000000">0.001</span>,
+        <span class="figcap-value" style="color:#FF0000">0.0003161</span>,
+        <span class="figcap-value" style="color:#0000FF">0.0001</span>,
+        <span class="figcap-value" style="color:#009600">0.0000316</span>,
+        β=0.1,λ=0, Median survival at age (X)= 
+        <span class="figcap-value" style="color:#000000">42.5</span>,
+        <span class="figcap-value" style="color:#FF0000">54.0</span>,
+        <span class="figcap-value" style="color:#0000FF">65.4</span>,
+        <span class="figcap-value" style="color:#009600">76.9</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompMake/GompMake05-360.avif"
+           alt="Gompertz-Makeham PDF, for the same peak xₘ, multiple values of α and β, λ=0">
+      <figcaption>
+        Gompertz-Makeham PDF, for the same peak xₘ, α=
+        <span class="figcap-value" style="color:#000000">0.00095097</span>,
+        <span class="figcap-value" style="color:#FF0000">0.00031850</span>,
+        <span class="figcap-value" style="color:#0000FF">0.00010001</span>,
+        <span class="figcap-value" style="color:#009600">0.00003014</span>,
+        <span class="figcap-value" style="color:#9600FF">0.000008834</span>,
+        β=
+        <span class="figcap-value" style="color:#000000">0.06</span>,
+        <span class="figcap-value" style="color:#FF0000">0.08</span>,
+        <span class="figcap-value" style="color:#0000FF">0.1</span>,
+        <span class="figcap-value" style="color:#009600">0.12</span>,
+        <span class="figcap-value" style="color:#9600FF">0.14</span>,        
+        λ=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompMake/GompMake06-360.avif"
+           alt="Gompertz-Makeham PDF, α=0.0001,β=0.1,multiple values of λ">
+      <figcaption>
+        Gompertz-Makeham PDF, α=0.0001,β=0.1,λ=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.002</span>,
+        <span class="figcap-value" style="color:#0000FF">0.004</span>,
+        <span class="figcap-value" style="color:#009600">0.006</span>,
+        <span class="figcap-value" style="color:#9600FF">0.008</span>,
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 480px;">
+    <div class="equation-line">
+      <div class="equation-label">Gompertz-Makeham Probability Density Function Cartesian equation:</div>
+      \[ y = (\alpha e^{\beta x} + \lambda)\, e^{\bigl(-\lambda x - \frac{\alpha}{\beta}(e^{\beta x}-1)\bigr)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Gompertz-Makeham Cumulative Distribution Function Cartesian equation:</div>
+      \[ y = 1 - e^{\bigl(-\lambda x - \frac{\alpha}{\beta}(e^{\beta x}-1)\bigr)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Gompertz–Makeham law of mortality<sup>1,2,3</sup> describes the age pattern of death rates. In 1825 the English actuary and mathematician Benjamin Gompertz (1779–1865) published an analysis showing that the force of mortality increases exponentially with age after adulthood. In 1860 the actuary William Makeham generalized the model by adding a constant term λ to represent deaths from external causes that affect all ages equally, such as accidents and infections. The resulting law expresses the force of mortality as the sum of an exponentially increasing intrinsic (aging) component and a constant background component. It became a standard model in actuarial science and demography and has remained in use for adult mortality patterns between roughly ages 30 and 85.</p>
+    <p>The force of mortality μ(x) is the instantaneous rate of death at age x (the derivative of the negative log of the survival function). From μ(x) the survival function is obtained by integration, yielding the probability density function (PDF) and cumulative distribution function (CDF). The model fits observed human mortality data well in the adult range and has been applied to compare aging rates across populations and species.</p>
+    <p>Real-life applications abound in engineering and the natural sciences. In actuarial science it is used for constructing life tables and for pricing life insurance and pension products. In demography and gerontology it models adult mortality schedules. In biodemography it studies the biology of senescence and aging processes. In reliability engineering it serves as a parametric model for failure rates in biological and technical systems.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Gompertz–Makeham_law_of_mortality" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Gompertz–Makeham_law_of_mortality</a> (history, equations, applications)</li>
+      <li><a href="https://mathworld.wolfram.com/GompertzCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/GompertzCurve.html</a> (Gompertz 1825 law in actuarial science)</li>
+      <li><a href="https://mathworld.wolfram.com/MakehamCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/MakehamCurve.html</a> (Makeham 1860 extension)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GOMPMAKE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Gompertz-Makeham"
+        iq ""
+        dcl "GOMPMAKE"
+        opt '("PDF" "CDF")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 600
+        dpt '(120.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (if (= kw 0)
+    (princ "\nPDF: f(x)=(α·e^(β·x)+λ)·exp(-λ·x-(α/β)·(e^(β·x)-1))")
+    (princ "\nCDF: F(x)=1-exp(-λ·x-(α/β)·(e^(β·x)-1))"))
+  (setq fa (get_real 6 "α (Gompertz peak position)" 0.0001)
+        fb (get_real 6 "β (Gompertz shape parameter)" 0.1)
+        fc (get_real 4 "λ (Makeham background risk)" 0.0)
+        eq_display (strcat "\nα=" (rtos fa 2 4) ", β=" (rtos fb 2 4) ", λ=" (rtos fc 2 4)))
+  (setq xc '(eval a2)
+        yc (if (= kw 0)
+             '(* 1000 (+ (* fa (exp (* fb (eval a2)))) fc) (exp (- (+ (* fc (eval a2)) (* (/ fa (avoid_zero fb)) (- (exp (* fb (eval a2))) 1.0))))))
+             '(* 100 (- 1.0 (exp (- (+ (* fc (eval a2)) (* (/ fa (avoid_zero fb)) (- (exp (* fb (eval a2))) 1.0))))))))
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GOMPMAKE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

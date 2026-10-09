@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trifolium - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Trifolium</h1>
+      <p class="short-description">A three-leaved algebraic curve of degree four, generated as the pedal of a deltoid with respect to a point inside the deltoid.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Trifolium/Trifolium01-360.avif"
+           alt="Trifolium, r=1,a=0,b=0">
+      <figcaption>Trifolium, r=1,a=0,b=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium02-360.avif"
+           alt="Trifolium, r=1,multiple values of a,b=0">
+      <figcaption>
+        Trifolium, r=1,a=
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>,
+        <span class="figcap-value" style="color:#009696">1.0</span>,
+        b=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium03-360.avif"
+           alt="Trifolium, r=1,a=0,multiple values of b">
+      <figcaption>
+        Trifolium, r=1,a=0,b=
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>,
+        <span class="figcap-value" style="color:#009696">1.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium04-360.avif"
+           alt="Trifolium, r=1,multiple values of a,b=0">
+      <figcaption>
+        Trifolium, r=1,a=
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>,
+        <span class="figcap-value" style="color:#009696">1.0</span>,
+        b=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium05-360.avif"
+           alt="Trifolium, r=1,a=0.5,b=sqrt(3)/2">
+      <figcaption>Trifolium, r=1,a=0.5,b=√(3)/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium06-360.avif"
+           alt="Trifolium, r=1,a=-0.5,b=sqrt(3)/2">
+      <figcaption>Trifolium, r=1,a=-0.5,b=√(3)/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium07-360.avif"
+           alt="Trifolium, r=1,a=1,b=sqrt(3)">
+      <figcaption>Trifolium, r=1,a=1,b=√(3)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium08-360.avif"
+           alt="Trifolium, r=1,a=-1,b=0">
+      <figcaption>Trifolium, r=1,a=-1,b=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trifolium/Trifolium09-360.avif"
+           alt="Trifolium, r=1,multiple values of a,b=0">
+      <figcaption>
+        Trifolium, r=1,a=
+        <span class="figcap-value" style="color:#000000">-1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">-1.1</span>,
+        <span class="figcap-value" style="color:#0000FF">-1.2</span>,
+        <span class="figcap-value" style="color:#009600">-1.3</span>,
+        <span class="figcap-value" style="color:#FF9600">-1.4</span>,
+        <span class="figcap-value" style="color:#9600FF">-1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">-1.6</span>,
+        <span class="figcap-value" style="color:#AA5555">-1.7</span>,
+        <span class="figcap-value" style="color:#00FF00">-1.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">-1.9</span>,
+        <span class="figcap-value" style="color:#009696">-2.0</span>,
+        <span class="figcap-value" style="color:#960096">-3.0</span>,
+        <span class="figcap-value" style="color:#969600">-4.0</span>,
+        <span class="figcap-value" style="color:#9696FF">-5.0</span>,
+        b=0
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Trifolium implicit equation:</div>
+      \[ (x^{2}+y^{2})^{2} = (x^{2}+y^{2})(ax+by) + rx(x^{2}-3y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Trifolium polar equation:</div>
+      \[ \rho = r \cdot \cos(3\theta) + a \cdot \cos(\theta) + b \cdot \sin(\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Trifolium<sup>1,2</sup>, a three-leaved algebraic curve of degree four, was studied by G. de Longchamps in 1887<sup>3</sup> and by Brocard in 1891. It belongs to the broader family of folia and is generated geometrically as the pedal of a deltoid, a three-cusped hypocycloid, taken with respect to an arbitrary point inside the deltoid. When the chosen pedal point lies at the deltoid’s center, the result is the regular centered trifolium whose three leaves meet at the origin. For any other interior pedal point the triple point (the location where the three leaves intersect and three distinct tangents meet) is displaced from the origin, producing a translated but otherwise identical three-leaved shape.</p>
+    <p>The polar and Cartesian equations coded for this entry are the general forms that describe the entire family. The parameters \( a \) and \( b \) directly set the coordinates of the triple point relative to the chosen origin, so every rigid translation of the classic three-leaved curve is included. The special case \( a = b = 0 \) recovers precisely the regular trifolium already treated in the related <a href="Folium.html">Folium</a> entry. This generality distinguishes the present implementation from treatments limited to the centered rose form.</p>
+    <p>Documented applications in engineering and the natural sciences remain limited; the curve has functioned chiefly as a classical object in algebraic geometry and the study of pedals and envelopes. Modern mathematical work continues to examine algebraic properties of its offsets, but no widespread practical uses in mechanisms, optics, or other technical fields have been established.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trifolium/trifolium.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trifolium/trifolium.shtml</a> (distinction between translated trifolia when the pedal point is at the deltoid center).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Trifolium/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Trifolium/</a> (Longchamps 1887 and Brocard 1891 studies).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Trifolium_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Trifolium_curve</a> (Longchamps as the first to study the curve).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TRIFOLIUM (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     restartflag rval id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc)
+  (setq id "Trifolium"
+        iq "ρ=r·cos(3θ)+a·cos(θ)+b·sin(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 720
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "r (triple-term scale)" 1.0)
+        fb (get_real 2 "a (x-offset coefficient)" 0.0)
+        fc (get_real 2 "b (y-offset coefficient)" 0.0)
+        eq_display (strcat "\nr=" (rtos fa 2 4) ", a=" (rtos fb 2 4) ", b=" (rtos fc 2 4)))
+  (setq rval '(+ (* fa (cos (* 3.0 (eval a2)))) (* fb (cos (eval a2))) (* fc (sin (eval a2))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TRIFOLIUM)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

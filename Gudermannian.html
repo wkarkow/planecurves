@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gudermannian Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Gudermannian Curve</h1>
+      <p class="short-description">Graph of the Gudermannian function, the classical real-valued bridge between trigonometric and hyperbolic functions; supplies the vertical coordinate of the Mercator map projection.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Gudermannian/Gudermannian01-360.avif"
+           alt="Gudermannian Curve, a=2">
+      <figcaption>Gudermannian Curve, a=2</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Gudermannian Curve Cartesian equation:</div>
+      \[ y = 2a \cdot \arctan\bigl(\tanh(x/2)\bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Gudermannian curve<sup>1,2</sup> is the graph of the Gudermannian function. German mathematician Christoph Gudermann (1798–1852) developed key relations between trigonometric and hyperbolic functions in the early nineteenth century. British mathematician Arthur Cayley named the function the “Gudermannian” in 1862.</p>
+    <p>The function provides a direct, real-valued bridge between the two families of functions. Engineers and draftsmen who have worked with basic calculus will recognize that it converts expressions involving hyperbolic sine, cosine, and tangent into the corresponding ordinary trigonometric functions (and vice versa) without complex numbers. For example, \(\sin(\mathrm{gd}(x)) = \tanh(x)\) and \(\tan(\mathrm{gd}(x)) = \sinh(x)\). This relation once allowed construction of hyperbolic-function tables from ordinary trigonometric tables. In differential form, \(\frac{d}{dx}\mathrm{gd}(x) = \mathrm{sech}(x)\) so its slope is tied to the hyperbolic secant. His formulation anticipated later developments in elliptic integrals and modular functions, though Gudermann himself did not fully pursue them. The graph of \( y = \mathrm{gd}(x) \) is S-shaped, passes through the origin with central symmetry about (0,0), and approaches horizontal asymptotes at \(\pm a \frac{\pi}{2}\). This makes it visually and functionally similar to the logistic and arctangent curves often used in growth and saturation models.</p>
+    <p>Its primary real-life application is in cartography and navigation through the Mercator projection. The inverse Gudermannian function supplies the vertical map coordinate (isometric latitude) from geographic latitude. This scaling makes rhumb lines—paths of constant compass bearing—plot as straight lines on the chart, a feature that has been essential for accurate marine navigation since the projection’s introduction in 1569.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Gudermannian.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Gudermannian.html</a> (definition, history, Mercator projection)</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialgu.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialgu.html</a> (curve form and representation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GUDERMANNIAN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo
+                         paramstep divpt restartflag xspan id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa xstep)
+  (setq id "Gudermannian Curve"
+        iq "y=2·a·atan(tanh(x/2))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (y-scale factor)" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(eval a2)
+        yc '(* 2.0 fa (atan (tanh (/ (eval a2) 2.0))))
+        paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GUDERMANNIAN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

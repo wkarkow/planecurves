@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Squircle - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Squircle</h1>
+      <p class="short-description">Two incompatible equal-axis quartics that share the same name: the superellipse and the Fernández-Guasti quartic that interpolates from a circle  to a square.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Squircle/Squircle01-360.avif"
+           alt="Squircle, Superellipse version, a=1">
+      <figcaption>Squircle, Superellipse version, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Squircle/Squircle02-360.avif"
+           data-caption="s=0(black),0.2(red),0.4(blue),0.6(green),0.8(orange),0.9(purple),1(cyan); k=1"
+           alt="Squircle, Guasti version, k=1, multiple values of s">
+      <figcaption>
+        Squircle, Guasti version, k=1,s=
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">0.9</span>,
+        <span class="figcap-value" style="color:#9600FF">0.95</span>,
+        <span class="figcap-value" style="color:#0096FF">0.999</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Squircle SuperEllipse Cartesian equation:</div>
+      \[ x^{4} + y^{4} = a^{4} \]
+    </div>
+    <div class="equation-line">
+    <div class="equation-label">Squircle SuperEllipse parametric equations:</div>
+      \[ x = a\,\mathrm{sgn}(\cos t)\,|\cos t|^{1/2},\quad y = a\,\mathrm{sgn}(\sin t)\,|\sin t|^{1/2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Squircle Guasti implicit equation:</div>
+      \[ s^{2}\left(\dfrac{x^{2}}{k^{2}}\right)\left(\dfrac{y^{2}}{k^{2}}\right) - \left(\dfrac{x^{2}}{k^{2}} + \dfrac{y^{2}}{k^{2}}\right) + 1 = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Squircle Guasti parametric equations:</div>
+      \[ x = t,\quad y = k\sqrt{\dfrac{k^{2}-t^{2}}{k^{2}-s^{2}t^{2}}},\quad t\in[-k,k] \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The term squircle refers to two incompatible curves. The first is a special case of the superellipse with \(a = b\) and exponent 4, given by \(x^{4} + y^{4} = a^{4}\). Details of this form and its properties are provided in the Superellipse entry.<sup>1</sup> The second definition, commonly called the Fernández-Guasti squircle, was introduced by Mexican physicist Manuel Fernández-Guasti in his paper on the analytic geometry of certain rectilinear figures.<sup>2</sup> This quartic algebraic curve provides a continuous transition from a circle when the squareness parameter \(s = 0\) to a square when \(s = 1\). Fernández-Guasti and colleagues later used the name squircle in a 2005 paper examining LCD pixel geometry and the resulting far-field diffraction patterns.<sup>3</sup></p>
+    <p>Real-life applications of the Fernández-Guasti squircle appear in optics. It models the geometry of LCD pixels and the far-field diffraction patterns produced by square or near-square apertures, improving accuracy over pure circle or square models in the design and analysis of optical systems and displays.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Squircle.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Squircle.html</a> (history and definitions of both squircles)</li>
+      <li><a href="https://luz.izt.uam.mx/mfg/arti/90-94/agrec-ijmest92.pdf" target="_blank" rel="noopener noreferrer">https://luz.izt.uam.mx/mfg/arti/90-94/agrec-ijmest92.pdf</a> (Fernandez Guasti, M. 1992, original paper on Cartesian quartic with squareness parameter )</li>
+      <li><a href="https://luz.izt.uam.mx/mfg/arti/00-05/lcdpix-optik05.pdf" target="_blank" rel="noopener noreferrer">https://luz.izt.uam.mx/mfg/arti/00-05/lcdpix-optik05.pdf</a> (Fernandez Guasti, M. 2005, paper naming squircle with optics application)</li>    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SQUIRCLE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Squircle"
+        iq ""
+        dcl "SQUIRCLE"
+        opt '("Superellipse version" "Guasti version")
+        kw 0
+        mode 'param
+        dpr "# of divisions"
+        dct 360
+        dpt '(1.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (if (= kw 0)
+    (progn
+      (princ "\nSuperellipse version: x^4 + y^4 = a^4")
+      (setq fa (get_real 2 "a (scale)" 1.0)
+            eq_display (strcat "\na=" (rtos fa 2 4))
+            xc '(* fa (if (&lt; (cos (eval a2)) 0.0) -1.0 1.0) (alt_expt (abs (cos (eval a2))) 0.5 nil))
+            yc '(* fa (if (&lt; (sin (eval a2)) 0.0) -1.0 1.0) (alt_expt (abs (sin (eval a2))) 0.5 nil))
+            paramstep (/ (* 2.0 pi) divcount)
+            a1 0.0))
+    (progn
+      (princ "\nGuasti version: s²(x²/k²)(y²/k²)-((x²/k²)+(y²/k²))+1=0")
+      (setq fa (get_real 2 "k (scale)" 1.0)
+            fb (get_boundr 4 "s (squareness, 0=circle, 1=square)" 0.5 0.0 1.0 T nil)
+            eq_display (strcat "\nk=" (rtos fa 2 4) ", s=" (rtos fb 2 4))
+            xc '(eval a2)
+            yc '(* fa (if (&lt; (abs (- (* fa fa) (* fb fb (* (eval a2) (eval a2))))) 1e-8) 1.0 (alt_expt (/ (- (* fa fa) (* (eval a2) (eval a2)))
+                (avoid_zero (- (* fa fa) (* fb fb (* (eval a2) (eval a2)))))) 0.5 nil)))
+            a1 (- fa)
+            paramstep (/ (* 2.0 fa) divcount))))
+  (setq skm (if (eq kw 1) (if (&gt; fb 0.99) '(T nil T T) '(T nil T)) '(T T T))
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SQUIRCLE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

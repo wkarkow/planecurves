@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cranioid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cranioid Curve</h1>
+      <p class="short-description">A quartic plane curve resembling a skull or eye shape.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Cranioid/Cranioid01-360.avif"
+           alt="Cranioid, a=1,b=1,c=1,d=2,multiple values of p=q"
+      <figcaption>
+        Cranioid, a=1,b=1,c=1,d=2,p=q=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>,
+        <span class="figcap-value" style="color:#009696">0.99</span>,
+        <span class="figcap-value" style="color:#960096">0.99999999</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cranioid/Cranioid02-360.avif"
+           alt="Cranioid, a=1,b=1,multiple values of c,d=2,p=q=0.8"
+      <figcaption>
+        Cranioid, a=1,b=1,c=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.2</span>,
+        <span class="figcap-value" style="color:#0000FF">0.4</span>,
+        <span class="figcap-value" style="color:#009600">0.6</span>,
+        <span class="figcap-value" style="color:#FF9600">0.8</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">1.2</span>,
+        <span class="figcap-value" style="color:#AA5555">1.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">4.0</span>,
+        <span class="figcap-value" style="color:#009696">7.5</span>,
+        <span class="figcap-value" style="color:#960096">10</span>,
+        d=2,p=q=0.8
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cranioid/Cranioid03-360.avif"
+           alt="Cranioid, a=1,b=1,c=1,p=0.8,d=2,multiple values of q"
+      <figcaption>
+        Cranioid, a=1,b=1,c=1,p=0.8,d=2,q=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>,
+        <span class="figcap-value" style="color:#009696">0.99</span>,
+        <span class="figcap-value" style="color:#960096">0.99999999</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cranioid/Cranioid04-360.avif"
+           alt="Cranioid, a=1,b=1,c=1,p=q=0.8,multiple values of d"
+      <figcaption>
+        Cranioid, a=1,b=1,c=1,p=q=0.8,d=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.2</span>,
+        <span class="figcap-value" style="color:#0000FF">0.4</span>,
+        <span class="figcap-value" style="color:#009600">0.6</span>,
+        <span class="figcap-value" style="color:#FF9600">0.8</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">1.2</span>,
+        <span class="figcap-value" style="color:#AA5555">1.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">4.0</span>,
+        <span class="figcap-value" style="color:#009696">7.5</span>,
+        <span class="figcap-value" style="color:#960096">10</span>
+      </figcaption>
+    </figure>        
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cranioid polar equation:</div>
+      \[ r = a \cdot \sin(\theta) + b \sqrt{1 - p \cdot \cos^{2}(\theta)} + c \sqrt{1 - q \cdot \cos^{2}(\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot \sin(\theta) + b \sqrt{1 - p \cdot \cos^{2}(\theta)} + c \sqrt{1 - q \cdot \cos^{d}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Cranioid curve<sup>1,2</sup> derives its name from the Greek word κρανίον (kranion), meaning “skull.” It is also known as the eyeball curve. The curve is a quartic plane curve defined in polar coordinates. Standard mathematical references list the equation and examples of its plotted forms but provide no detailed discovery history or attribution to a specific mathematician. As 2DCurves.com<sup>2</sup> notes, “It occurs that authors add a term \( [c \sqrt{1−q \cdot cos^2(θ)}] \) to the polar formula of the curve. In my opinion this adds obsolete complexity and parameters to the formula.” In execution, no matter the difference between p and q, the shape created is that of the higher of the two numbers. Therefore, to avoid this, the equation used below has been modified, where d introduces an inequality between the two roots with unexpected results.</p>
+    <p>No applications in engineering or the natural sciences are documented in primary curve compendia.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Cranioid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cranioid.html</a> (polar equation and etymology)</li>
+      <li><a href="https://www.2dcurves.com/trig/trigcr.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/trig/trigcr.html</a> (alternative name and quartic classification)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CRANIOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq id "Cranioid"
+        iq "r=a·sin(θ)+b·√(1-p·cos²(θ))+c·√(1-q·cosᵈ(θ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fb (get_real 6 "b (horizontal bulge size)" 1.0)
+        fc (get_real 6 "c (horizontal bulge size)" 1.0)
+        fa (get_boundr 6 "a (vertical height size)" 1.0 nil (+ fb fc) nil nil)
+        fd (get_real 6 "d (exponent on cos term)" 2.0)
+        fe (get_boundr 6 "p (side flatness)" 0.8 0.0 1.0 T T)
+        ff (get_boundr 6 "q (side flatness)" 0.8 0.0 1.0 T T)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", p=" (rtos fe 2 4) ", q=" (rtos ff 2 4))
+        rval '(+ (* fa (sin (eval a2))) (* fb (sqrt (- 1.0 (* fe (alt_expt (cos (eval a2)) 2 nil))))) (* fc (sqrt (- 1.0 (* ff (alt_expt (cos (eval a2)) fd nil))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CRANIOID)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

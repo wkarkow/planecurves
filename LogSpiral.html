@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logarithmic Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Logarithmic Spiral</h1>
+      <p class="short-description">A plane curve whose tangent makes a constant angle with the radius vector and any scaled copy coincides with a rotated copy of the same curve.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/LogSpiral/LogSpiral01-360.avif"
+           alt="Logarithmic Spiral, a=1,b=0.2">
+      <figcaption>Logarithmic Spiral, a=1,b=0.2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/LogSpiral/LogSpiral02-360.avif"
+           alt="Logarithmic Spiral, a=1,b=0.1">
+      <figcaption>Logarithmic Spiral, a=1,b=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/LogSpiral/LogSpiral03-360.avif"
+           data-caption="Logarithmic Spiral thru curve point at (1.2,2.7),a=1,b=0.9781(black),0.1482(blue),0.0802(green)"
+           alt="Logarithmic Spiral thru curve point at (1.2,2.7),a=1,b=0.9781(black),0.1482(blue),0.0802(green)">
+      <figcaption>
+        Logarithmic Spiral thru curve point at (1.2,2.7),a=1,b=
+        <span class="figcap-value" style="color:#000000">0.9781</span>,
+        <span class="figcap-value" style="color:#0000FF">0.1482</span>,
+        <span class="figcap-value" style="color:#009600">0.0802</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Logarithmic Spiral polar equation:</div>
+      \[ r = a \cdot e^{b\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The logarithmic spiral<sup>1,2,3</sup>, also known as the equiangular spiral, Bernoulli spiral, or historically <em>spira mirabilis</em>, was first studied by René Descartes in 1638. Evangelista Torricelli independently investigated the curve and determined its arc length. Jacob Bernoulli systematically studied it in the late 17th century and was particularly fascinated by its self-similarity: any radial enlargement reproduces the same curve shifted outward exactly. Bernoulli requested that the logarithmic spiral be engraved on his tombstone with the inscription “Eadem mutata resurgo” (“Though changed, I remain the same”), highlighting its invariance under dilation. The engraver mistakenly carved an Archimedean spiral instead. The name “logarithmic spiral” was given by Varignon. The curve maintains a constant angle between the radius vector and the tangent at every point. This geometric property, together with the fact that a fixed increase in polar angle produces a constant multiplicative change in radius, distinguishes the logarithmic spiral from all other spirals. It is also self-similar under combined rotation and scaling.</p>
+    <p>In the natural sciences the logarithmic spiral approximates many biological growth patterns, including certain shells, horns, and the arrangement of seeds in sunflowers and scales in pine cones (phyllotaxis). In physics it describes the path of a charged particle moving perpendicular to a uniform magnetic field. In engineering the self-similar and equiangular properties are used in the design of logarithmic spiral antennas, which exhibit broadband impedance characteristics. Variations of the curve appear in the volute housings of centrifugal compressors and turbomachinery to guide fluid flow with minimal separation. The spiral also arises in ballistics and orbital mechanics as a limiting trajectory when angular momentum decreases under resistive forces. Note that while often popularly associated with the nautilus shell, the actual nautilus shell has an expansion rate that changes gradually with growth stage and is therefore better described by a sequence of approximating spirals rather than a single exact logarithmic spiral. Similarly, the so-called Fibonacci spiral is an approximation constructed from quarter-circle arcs and does not possess the continuous curvature or constant angle of the true logarithmic spiral.</p>
+    <p>Also see the Spiral entry for more generalized spiral options.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/LogarithmicSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/LogarithmicSpiral.html</a> (history and equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/logarithmic/logarithmic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/logarithmic/logarithmic.shtml</a> (history and properties)</li>
+      <li><a href="https://www.2dcurves.com/spiral/spirallo.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spirallo.html</a> (history, applications, and equiangular property)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LOGSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe p1)
+  (setq id "Logarithmic Spiral"
+        iq "r=a·exp(b·θ)"
+        dcl "LOGSPIRAL"
+        opt '("a,b values" "curve point")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           fb (get_real 2 "b (growth rate)" 0.2)
+           paramstep (if (eq (get_keyword 0 "Outward Inward" "direction of curve = Outward or Inward" "Outward") "Inward") (- paramstep) paramstep)))
+    ((eq kw 1)
+     (setq fa 1.0
+           fd (* (get_real 2 "rotation offset in °" 0.0) (/ pi 180.0))
+           p1 (get_point 0 "Curve point" (polar basept xaxisangle 1.0) basept)
+           fc (get_real 0 "# of extra revolutions to point" 0)
+           paramstep (if (eq (get_keyword 0 "Outward Inward" "direction of curve = Outward or Inward" "Outward") "Inward") (- paramstep) paramstep)
+           fe (+ (- (- (angle basept p1) xaxisangle) fd) (* 2.0 pi fc))
+           fb (/ (log (distance basept p1)) (avoid_zero fe)))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        rval '(* fa (exp (* fb (eval a2))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LOGSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yin-Yang Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Yin-Yang Curve</h1>
+      <p class="short-description">A bounded polar spiral resembling the traditional taijitu that is a slightly different figure built from circular arcs.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Yinyang/Yinyang01-360.avif"
+           data-full="images/Yinyang/Yinyang01-1600.avif"
+           alt="Yin-Yang Curve, a=1">
+      <figcaption>Yin-Yang Curve, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">YinYang Curve polar equation:</div>
+      \[ r^{2} = \dfrac{\theta}{a+\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The familiar yin–yang symbol (more precisely the taijitu) originates in ancient Chinese philosophy and cosmology.<sup>1</sup> Its conceptual roots appear in early Daoist thought and in the I Ching (Book of Changes)<sup>2</sup>, where yin and yang represent complementary dualities: dark/light, passive/active, earth/heaven, contraction/expansion. The now-standard circular diagram, with interlocking black and white “fish” shapes each containing a seed of the other, became visually standardized during the Song dynasty (10th–13th century)<sup>3</sup>, particularly in Neo-Confucian cosmological diagrams. Importantly, the traditional taijitu is not defined by a single canonical algebraic equation; it is a geometric emblem whose boundary can be constructed by combinations of circular arcs.<sup>1</sup> The curve that has the polar equation \(r^{2}=\theta/(a+\theta)\) is a modern mathematical spiral that captures the visual logic of mutual interpenetration through its asymptotic behavior, in the spirit of decorative spirals catalogued by R. Ferréol.<sup>4</sup> It uses a continuously increasing polar radius rather than stitched circular arcs. This equation defines a polar spiral with distinctive asymptotic behavior. The curve begins at the origin with square-root growth. For small \(\theta\) (near the center), \(r\approx\sqrt{\theta/a}\). As \(\theta\) becomes large, \(r\) approaches 1 (when \(a=1\)), so the spiral winds outward but never exceeds a fixed circular boundary. By comparison, the Fermat spiral \(r^{2}=k\theta\) grows without limit, though its growth is also square-root-like.<sup>5</sup> This curve therefore resembles the Fermat spiral near the origin but differs in its global structure: it approaches a fixed radius asymptotically rather than expanding indefinitely. In practical terms for plotting, the radial growth slows steadily, causing the curve to pack more tightly against the limiting circle after many turns.</p>
+    <p>No specific applications of this exact curve in engineering or the natural sciences have been documented in available sources. It remains primarily of mathematical interest as an example of a bounded polar spiral, useful for CAD illustration of asymptotic behavior and decorative patterns.</p>
+    <p>Also see the <a href="Fermat.html">Fermat Spiral</a>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Taijitu" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Taijitu</a> (cultural and philosophical origins of the yin-yang/taijitu symbol)</li>
+      <li>Standard references on Daoist cosmology and the I Ching (e.g., academic histories of Chinese philosophy)</li>
+      <li>References on Song dynasty Neo-Confucian diagrams and taijitu standardization (historical surveys of Chinese science and symbolism)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml</a> (R. Ferréol 2006 modern decorative Yin-Yang and related spirals)</li>
+      <li><a href="https://mathworld.wolfram.com/FermatsSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FermatsSpiral.html</a> (Fermat spiral definition, properties, and comparison of growth)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:YINYANG (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xstep restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Yin-Yang Curve"
+        iq "r²=θ/(a+θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (radius)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(if (< (/ (eval a2) (+ fa (eval a2))) 0.0) 0.0 (sqrt (/ (eval a2) (+ fa (eval a2)))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:YINYANG)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

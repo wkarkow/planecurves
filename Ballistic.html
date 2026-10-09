@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ballistic Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ballistic Curve</h1>
+      <p class="short-description">Trajectory of a projectile under constant gravity with linear drag force proportional to velocity (Stokes regime).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Ballistic/Ballistic01-360.avif"
+           alt="Ballistic Curve – family of trajectories for different linear drag coefficients k">
+      <figcaption>
+        Ballistic Curve, v₀=100,φ₀=45°,k=
+        <span class="figcap-value" style="color:#000000">1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.875</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">0.50</span>,
+        <span class="figcap-value" style="color:#FF9600">0.375</span>,
+        <span class="figcap-value" style="color:#9600FF">0.25</span>,
+        <span class="figcap-value" style="color:#0096FF">0.175</span>,
+        <span class="figcap-value" style="color:#AA5555">0.125</span>,
+        <span class="figcap-value" style="color:#00FF00">0.10</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.05</span>,
+        <span class="figcap-value" style="color:#000000">0.01</span>,
+        g=9.81
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ballistic/Ballistic02-360.avif"
+           alt="Ballistic Curve – family of trajectories for different initial velocities v0">
+      <figcaption>
+        Ballistic Curve, v₀=
+        <span class="figcap-value" style="color:#000000">100</span>,
+        <span class="figcap-value" style="color:#FF0000">80</span>,
+        <span class="figcap-value" style="color:#0000FF">60</span>,
+        <span class="figcap-value" style="color:#009600">40</span>,
+        <span class="figcap-value" style="color:#FF9600">20</span>,
+        φ₀=45°,k=0.25,g = 9.81
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Ballistic Curve Cartesian equation:</div>
+      \[ y = \frac{b}{a}x + c \ln\left(1 - \frac{x}{a}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ballistic Curve parametric equations:</div>
+      \[ x = \frac{v_0 \cos\phi_0}{k} (1 - e^{-kt}), \quad y = \left( \frac{v_0 \sin\phi_0}{k} + \frac{g}{k^2} \right) (1 - e^{-kt}) - g t \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The ballistic curve with linear drag describes the trajectory of a projectile under uniform gravity and a drag force proportional to velocity, \( F_{\text{drag}} = -kv \) (where \( k \) is the drag coefficient, often incorporating mass in simplified models).<sup>1</sup> This regime applies at low Reynolds numbers (Re ≪ 1), where viscous forces dominate inertia, leading to Stokes flow.<sup>2</sup> Jean Bernoulli, Leonhard Euler, and Adrien-Marie Legendre explored linear resistance in fluid motion during the 1700s.<sup>3</sup> George Gabriel Stokes formalized the linear drag law for spheres in 1851 by solving the low-Reynolds-number limit of the Navier–Stokes equations, yielding \( F_{\text{drag}} = 6\pi\eta r v \) (Stokes' law, where \( \eta \) is viscosity, \( r \) is radius).<sup>2</sup> This work advanced understanding of creeping flows, though earlier contributions from Newton (quadratic resistance via momentum transfer) laid groundwork for drag modeling. Let \( a = v_0 \cos\phi_0 / k \), \( b = v_0 \sin\phi_0 / k + g / k^2 \), and \( c = g / k^2 \) where initial velocity \( v_0 \), launch angle \( \phi_0 \), drag coefficient \( k \), and gravity \( g \). The curve has a vertical asymptote at \( x = a \). This equation does <strong>not</strong> apply to larger than microscopic objects. For larger objects, see the <strong>Braked Parabola Curve</strong>.</p>
+    <p>Applications abound in engineering and natural sciences: microscopic particles in air or water (pollen grains, oil droplets, fine aerosols, settling dust, microbe motion in fluids), and small water droplets or ice crystals in clouds.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/parabole/parabole.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/parabole/parabole.shtml</a> (Cartesian and parametric forms, vertical asymptote)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Stokes%27_law" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Stokes%27_law</a> (Stokes' law, low-Re regime, \( F = 6\pi\eta r v \))</li>
+      <li><a href="https://galileo-unbound.blog/2019/10/28/george-stokes-law-of-drag/" target="_blank" rel="noopener noreferrer">https://galileo-unbound.blog/2019/10/28/george-stokes-law-of-drag/</a> (historical development by Bernoulli, Euler, Legendre, and Stokes 1851)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BALLISTIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk)
+  (setq id "Ballistic Curve (Linear Drag)"
+        iq "x=a(1−e⁻ᵘ), y=b(1−e⁻ᵘ)− c·u, u=k·t"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to landing point"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "v0 (initial speed)" 100.0)
+        fb (get_real 2 "φ₀ (launch angle, degrees)" 45.0)
+        fc (get_real 2 "k (drag coefficient, 1/s)" 0.25)
+        fd (get_real 2 "g (gravity, m/s² downward)" 9.81)
+        eq_display (strcat "\nv0=" (rtos fa 2 4) ", φ₀=" (rtos fb 2 4) "°, k=" (rtos fc 2 4) ", g=" (rtos fd 2 4))
+        fb (* pi (/ fb 180.0))
+        fe (/ fa fc)
+        ff (/ fd (* fc fc))
+        fg (+ (* fe (sin fb)) ff)
+        fh 0.01
+        fi (* 0.999 (/ fg ff)))
+  (while (> (- fi fh) 1e-9)
+    (setq fj (/ (+ fh fi) 2.0)
+          fk (- (* fg (- 1.0 (exp (- fj)))) (* ff fj)))
+    (if (> fk 0.0)
+      (setq fh fj)
+      (setq fi fj)))
+  (setq paramstep (/ (/ (+ fh fi) 2.0) divcount)
+        xc '(* (* fe (cos fb)) (- 1.0 (exp (- (eval a2)))))
+        yc '(- (* fg (- 1.0 (exp (- (eval a2))))) (* ff (eval a2)))
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BALLISTIC)</code></pre>
+  </section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

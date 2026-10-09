@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Syntrepent - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Syntrepent</h1>
+      <p class="short-description">A mating pitch curve that rolls without slip on a circle whose hub lies on the circle, both members rotating about fixed centers.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Syntrepent/Syntrepent01-360.avif"
+           alt="Syntrepent, a=1,n=1">
+      <figcaption>Syntrepent, a=1,n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Syntrepent/Syntrepent02-360.avif"
+           alt="Syntrepent, a=1,n=2">
+      <figcaption>Syntrepent, a=1,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Syntrepent/Syntrepent03-360.avif"
+           alt="Syntrepent, a=1,n=3">
+      <figcaption>Syntrepent, a=1,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Syntrepent/Syntrepent04-360.avif"
+           alt="Syntrepent, a=1,n=4">
+      <figcaption>Syntrepent, a=1,n=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Syntrepent/Syntrepent05-360.avif"
+           alt="Syntrepent, a=1,n=5">
+      <figcaption>Syntrepent, a=1,n=5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Syntrepent parametric equations:</div>
+      \[ r = a\bigl(k - \cos t\bigr),\qquad \theta(t) = \int \frac{\cos t}{\cos t - k}\, dt \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Distance between rotational centers:</div>
+      \[ d = ka \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">For a number of lobes \(= n\):</div>
+      \[ k = -\dfrac{n+1}{\sqrt{2n+1}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The syntrepent curves,<sup>1</sup> literally “curves that turn together,” are pairs of mating pitch curves (profiles) designed so that two gears or mechanisms roll on each other without slipping while rotating about fixed centers (hubs). The term was introduced by the French geometer Auguste Miquel in 1838 in his studies of contact curves and roulettes; Leonhard Euler had earlier explored related properties of rolling curves and their envelopes in the context of mechanism geometry.<sup>2</sup> These curves satisfy the fundamental kinematic requirement that the arc lengths traversed along each profile remain equal at every instant of contact, a condition that follows directly from the no-slip condition and can be expressed through a definite integral that accumulates the angular displacement of one curve relative to the other.</p>
+    <p>Real-life applications appear throughout mechanical engineering wherever periodic, non-uniform angular velocity is required without auxiliary cams or linkages. Non-circular gears whose pitch curves belong to the syntrepent or limaçon family are employed in agricultural machinery (for example, parallelogram planting mechanisms that use denatured Pascal-limaçon gears to produce precise, asymmetric insertion motions),<sup>4</sup> in packaging and printing equipment for synchronized variable-speed transport, in textile and light-industry drives needing smooth speed modulation within each revolution, and in specialized speed-control transmissions such as historical logarithmic-spiral “varistart” systems.<sup>1</sup> Because one member can remain a conventional circular gear, manufacturing complexity is reduced while the custom syntrepent mate supplies the exact kinematic law. The same rolling-without-slip principle underlies certain cam designs and, at the limit of infinite hub distance, the classic wheel-and-road contact problem.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/engrenage/engrenage.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/engrenage/engrenage.shtml</a> (definition, etymology, Euler studies, circle and limaçon mating examples)</li>
+      <li>Miquel (1838) and Euler’s roulette investigations, as summarized at the above URL (historical origin of the concept)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Non-circular_gear" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Non-circular_gear</a> (kinematics of conjugate pitch curves and the integral no-slip condition)</li>
+      <li><a href="https://ojs30.sv-jme.eu/index.php/sv-jme/article/view/1517" target="_blank" rel="noopener noreferrer">https://ojs30.sv-jme.eu/index.php/sv-jme/article/view/1517</a> (agricultural planting mechanisms using denatured Pascal-limaçon gears)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SYNTREPENT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                       divpt xstep id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb fc fd fe ff fg fh)
+  (setq id "Syntrepent"
+        iq "r=a(k-cos(t)), θ=∫[cos(t)/(cos(t)-k)]dt"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_integer 6 "n (number of lobes)" 4)
+        fc (- (/ (1+ fb) (sqrt (1+ (* fb 2.0)))))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (itoa fb))
+        fd 0.0
+        ff nil
+        fe '(/ (cos (eval a2)) (avoid_zero (- (cos (eval a2)) fc)))
+        rval '(* fa (- fc (cos (eval a2))))
+        xc '(progn (setq fg a3) (if (>= fg (- (* 2.0 pi fb) paramstep)) (* fa (- fc 1.0)) (progn (if ff (setq fh (- fg ff) fd (+ fd (* fh (eval fe)))
+            ff fg) (setq ff fg)) (* (eval rval) (cos fd)))))
+        yc '(progn (setq fg a3) (if (>= fg (- (* 2.0 pi fb) paramstep)) 0.0 (* (eval rval) (sin fd))))
+        divcount (1+ (* fb divcount))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SYNTREPENT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

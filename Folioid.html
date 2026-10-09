@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Folioid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Folioid</h1>
+      <p class="short-description">A polar curve that generalizes the rose curves through an eccentricity parameter e.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Folioid/Folioid01-360.avif"
+           alt="Folioid, a=1,e=0.25,n=3">
+      <figcaption>Folioid, a=1,e=0.25,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid02-360.avif"
+           alt="Folioid shape of Norelco razor head">
+      <figcaption>Folioid shape of Norelco razor head</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid03-360.avif"
+           alt="Folioid, a=1,e=0.5,n=3">
+      <figcaption>Folioid, a=1,e=0.5,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid04-360.avif"
+           alt="Folioid, a=1,e=0.75,n=3">
+      <figcaption>Folioid, a=1,e=0.75,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid05-360.avif"
+           alt="Folioid, a=1,e=1.0,n=3">
+      <figcaption>Folioid, a=1,e=1.0,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid06-360.avif"
+           alt="Folioid, a=1,e=1.5,n=3">
+      <figcaption>Folioid, a=1,e=1.5,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid07-360.avif"
+           alt="Folioid, a=1,e=3.0,n=3">
+      <figcaption>Folioid, a=1,e=3.0,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid08-360.avif"
+           alt="Folioid, a=1,e=2.0,n=1/2">
+      <figcaption>Folioid, a=1,e=2.0,n=1/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid09-360.avif"
+           alt="Folioid, a=1,e=2.0,n=1/3">
+      <figcaption>Folioid, a=1,e=2.0,n=1/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid10-360.avif"
+           alt="Folioid, a=1,e=2.0,n=1/4">
+      <figcaption>Folioid, a=1,e=2.0,n=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid11-360.avif"
+           alt="Folioid, a=1,e=2.0,n=1/5">
+      <figcaption>Folioid, a=1,e=2.0,n=1/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid12-360.avif"
+           alt="Folioid, a=1,e=2.0,n=1/6">
+      <figcaption>Folioid, a=1,e=2.0,n=1/6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid13-360.avif"
+           alt="Folioid, a=1,e=2.0,n=1/7">
+      <figcaption>Folioid, a=1,e=2.0,n=1/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid14-360.avif"
+           alt="Folioid, a=1,e=2.0,n=2/7">
+      <figcaption>Folioid, a=1,e=2.0,n=2/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid15-360.avif"
+           alt="Folioid, a=1,e=2.0,n=3/7">
+      <figcaption>Folioid, a=1,e=2.0,n=3/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid16-360.avif"
+           alt="Folioid, a=1,e=2.0,n=4/7">
+      <figcaption>Folioid, a=1,e=2.0,n=4/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid17-360.avif"
+           alt="Folioid, a=1,e=2.0,n=5/7">
+      <figcaption>Folioid, a=1,e=2.0,n=5/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid18-360.avif"
+           alt="Folioid, a=1,e=2.0,n=6/7">
+      <figcaption>Folioid, a=1,e=2.0,n=6/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid19-360.avif"
+           alt="Folioid, a=1,e=2.0,n=15/7">
+      <figcaption>Folioid, a=1,e=2.0,n=15/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid20-360.avif"
+           alt="Folioid, a=1,e=1/sin(π/7),n=15/7">
+      <figcaption>Folioid, a=1,e=1/sin(π/7),n=15/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid21-360.avif"
+           alt="Folioid, a=1,e=1/sin(π/14),n=15/7">
+      <figcaption>Folioid, a=1,e=1/sin(π/14),n=15/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid22-360.avif"
+           alt="Folioid, a=1,e=1/sin(2π/7),n=15/7">
+      <figcaption>Folioid, a=1,e=1/sin(2π/7),n=15/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid23-360.avif"
+           alt="Folioid, a=1,e=1/sin(3π/7),n=15/7">
+      <figcaption>Folioid, a=1,e=1/sin(3π/7),n=15/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid24-360.avif"
+           alt="Folioid, a=1,e=1/sin(π/3),n=7/3">
+      <figcaption>Folioid, a=1,e=1/sin(π/3),n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid25-360.avif"
+           alt="Folioid, a=1,e=1/sin(3π/49),n=7/3">
+      <figcaption>Folioid, a=1,e=1/sin(3π/49),n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid26-360.avif"
+           alt="Folioid, a=1,e=1/sin(3π/21),n=7/3">
+      <figcaption>Folioid, a=1,e=1/sin(3π/21),n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid27-360.avif"
+           alt="Folioid, a=1,e=1/sin(π/7),n=7/3">
+      <figcaption>Folioid, a=1,e=1/sin(π/7),n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid28-360.avif"
+           alt="Folioid, a=1,e=1/sin(2π/5),n=6/5">
+      <figcaption>Folioid, a=1,e=1/sin(2π/5),n=6/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid29-360.avif"
+           alt="Folioid, a=1,e=1/sin(π/5),n=6/5">
+      <figcaption>Folioid, a=1,e=1/sin(π/5),n=6/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid30-360.avif"
+           alt="Folioid, a=1,e=2,n=6/5">
+      <figcaption>Folioid, a=1,e=2,n=6/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid31-360.avif"
+           alt="Folioid, a=1,e=3,n=6/5">
+      <figcaption>Folioid, a=1,e=3,n=6/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid32-360.avif"
+           alt="Folioid, a=1,e=4,n=6/5">
+      <figcaption>Folioid, a=1,e=4,n=6/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid33-360.avif"
+           alt="Folioid, a=1,e=10,n=6/5">
+      <figcaption>Folioid, a=1,e=10,n=6/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid34-360.avif"
+           alt="Folioid, a=1,e=2,n=7/1">
+      <figcaption>Folioid, a=1,e=2,n=7/1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid35-360.avif"
+           alt="Folioid, a=1,e=2,n=5/1">
+      <figcaption>Folioid, a=1,e=2,n=5/1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folioid/Folioid36-360.avif"
+           alt="Folioid, a=1,e=2,n=6/1">
+      <figcaption>Folioid, a=1,e=2,n=6/1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Folioid polar equation:</div>
+      \[ r = a\bigl(e\cdot\cos(n\theta)\pm\sqrt{1-e^{2}\sin^{2}(n\theta)}\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Special case e = 1 (rose):</div>
+      \[ r = 2a\cos(n\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">When e &gt; 1:</div>
+      \[ n = \dfrac{p}{q}\quad\text{(integers }p,q\text{ in lowest terms)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The folioid curve was first studied by the Dutch mathematician P. van Geer in 1918 and subsequently discussed by Gino Loria.<sup>1</sup> This polar curve forms a versatile family that generalizes the rose curves through an eccentricity parameter e. When e = 1, the folioid reduces directly to a rose curve. For e &lt; 1 the lobes are less indented, while e &gt; 1 produces multiple separate closed loops, the number depending on whether n = p/q has odd or even numerator and denominator. The “Extended” mode treats the square root term by a signed real continuation, converting negative radicands into reflected real values; this causes the otherwise imaginary branches to appear as additional real petals, yielding fully closed rosette forms for artistic purposes. The total angular span required for full closure in Extended mode is governed by θ<sub>close</sub> ≈ (2q<sup>2</sup>/p)·(π/arcsin(1/e)), where θ<sub>close</sub> is measured in multiples of π. With the default sampling of 180 segments per π, the predicted segment count is segments ≈ 180·θ<sub>close</sub>/π.</p>
+    <p>In the natural sciences, folioid-shaped projections have been employed in the study of phyllotaxis, the arrangement of leaves, petals, and florets on plant stems. Botanists model the shoot apical meristem as a cone and project primordia onto the transverse plane, yielding folioid outlines that help explain self-organizing spiral patterns observed in plants.<sup>2</sup> No applications in engineering were identified in available sources.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/folioide/folioide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/folioide/folioide.shtml</a> (history, polar equation, properties, special cases for e, and geometric construction).</li>
+      <li><a href="https://pdh.w3.uvm.edu/research/papers/other/1996/douady1996.pdf" target="_blank" rel="noopener noreferrer">https://pdh.w3.uvm.edu/research/papers/other/1996/douady1996.pdf</a> (phyllotaxis application of folioid projection on conical apex).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FOLIOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                    id iq dcl opt kw mode dpr dct dpt span rval xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd fe ff fg fh fi fj fk kw)
+  (setq id "Folioid"
+        iq "r=a·(e·cos(nθ)±√(1-e²·sin²(nθ)))"
+        dcl "FOLIOID"
+        opt '("e<1" "e=1, Rose" "e>1")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)			                                 			
+     (setq fa (get_real 6 "\na (scale): " 1.0)
+           fb (get_boundr 2 "\ne (<1, smaller = less indented): " 0.5 0.0 1.0 nil nil)
+           fc (get_real 6 "\nn (# of petals): " 3.0)
+           fd 1
+           eq_display (strcat "\na=" (rtos fa 2 4) ", e=" (rtos fb 2 4) ", n=" (rtos fc 2 4))
+           rval '(* fa (+ (* fb (cos (* fc (eval a2)))) (alt_expt (- 1.0 (* fb fb (sin (* fc (eval a2))) (sin (* fc (eval a2))))) 0.5 nil)))
+           a1 0))
+   ((eq kw 1)				                                   
+    (setq fa (get_real 6 "\na (scale): " 1.0)
+          fc (get_real 6 "\nn (# of petals): " 3.0)
+          fd 1
+          eq_display (strcat "\na=" (rtos fa 2 4) ", e=1, n=" (rtos fc 2 4))
+          rval '(* 2.0 fa (cos (* fc (eval a2))))
+          a1 0))
+  ((eq kw 2)				                                    		
+   (setq fa (get_real 6 "\na (scale): " 1.0)
+         fb (get_boundr 2 "\ne (>1, pushes lobes farther out): " 2.0 1.0 nil nil nil)
+         fc (get_integer 6 "\np (integer numerator, n lobes = p/q): " 3)
+         fd (get_integer 6 "\nq (integer denominator, n lobes = p/q): " 1)
+         fe (get_keyword 0 "Canonical Extended" "\n Canonical or Extended θ-span mode? " "Canonical")
+         ff (if (= fe "Canonical") (get_keyword 0 "Plus Minus" "\nPlus or Minus branch? " "Plus") "Plus")
+         fg (asin (/ 1.0 fb))
+         fh (/ (float fc) fd)
+         fi (if (= fe "Canonical") (* fg (/ (float fd) fc)) (* fg fh))
+         paramstep (/ (* 2.0 fi) divcount)
+         a1 (- fi)
+         eq_display (strcat "\na=" (rtos fa 2 4) ", e=" (rtos fb 2 4) ", p=" (itoa fc) ", q=" (itoa fd))
+         rval (if (= ff "Plus") '(* fa (+ (* fb (cos (* fh (eval a2)))) (if (< (abs (- 1.0 (* fb fb (sin (* fh (eval a2))) (sin (* fh (eval a2)))))) 1e-5)
+              0.0 (alt_expt (- 1.0 (* fb fb (sin (* fh (eval a2))) (sin (* fh (eval a2))))) 0.5 nil)))) '(* fa (- (* fb (cos (* fh (eval a2)))) (if (<
+              (abs (- 1.0 (* fb fb (sin (* fh (eval a2))) (sin (* fh (eval a2)))))) 1e-5) 0.0 (alt_expt (- 1.0 (* fb fb (sin (* fh (eval a2))) (sin (* fh
+              (eval a2))))) 0.5 nil))))))))
+  (setq xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (setq fj (gcd fc fd)
+        fc (/ fc fj)
+        fd (/ fd fj))
+  (setq fk (if (and (= 1 (rem fc 2)) (= 1 (rem fd 2))) fc (* 2 fc)))
+  (if (and (eq kw 2) (eq fe "Canonical")) (command "ARRAY" plineents "" "P" basept fk "" "")) (princ))
+(C:FOLIOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

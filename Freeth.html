@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Freeth Curve - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Freeth Curve</h1>
+      <p class="short-description">A family of strophoids of a circle with the pole at the center and a fixed point on the circumference.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Freeth/Freeth01-360.avif"
+           alt="Freeth Curve, a=1,n=4 (Freeth nephroid)">
+      <figcaption>Freeth Curve, a=1,n=4 (Freeth nephroid)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth02-360.avif"
+           alt="Freeth Curve, a=1,n=3 (Limacon trisectrix)">
+      <figcaption>Freeth Curve, a=1,n=3 (Limacon trisectrix)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth03-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=5">
+      <figcaption>Generalized Freeth Curve, a=1,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth04-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=6">
+      <figcaption>Generalized Freeth Curve, a=1,n=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth05-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=8">
+      <figcaption>Generalized Freeth Curve, a=1,n=8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth06-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=20">
+      <figcaption>Generalized Freeth Curve, a=1,n=20</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth07-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=1.2, Spider Curve">
+      <figcaption>Generalized Freeth Curve, a=1,n=1.2, Spider Curve</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth08-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=1.4">
+      <figcaption>Generalized Freeth Curve, a=1,n=1.4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth09-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=2.6">
+      <figcaption>Generalized Freeth Curve, a=1,n=2.6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth10-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=0.25">
+      <figcaption>Generalized Freeth Curve, a=1,n=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth11-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=0.125">
+      <figcaption>Generalized Freeth Curve, a=1,n=0.125</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Freeth/Freeth12-360.avif"
+           alt="Generalized Freeth Curve, a=1,n=0.95">
+      <figcaption>Generalized Freeth Curve, a=1,n=0.95</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Freeth’s Nephroid polar equation:</div>
+      \[ r = a\bigl(1 + 2\sin(\theta/2)\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = \dfrac{a}{n}\dfrac{\sin\bigl(n\theta/(n-1)\bigr)}{\sin\bigl(\theta/(n-1)\bigr)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Freeth curve, named after the Reverend Thomas J. Freeth (1819–1904)<sup>1,2</sup> , an English mathematician and clergyman, was first described by him in a communication to the London Mathematical Society in 1878 titled “The Nephroid, Heptagon, &amp;c.”<sup>1,3</sup> Freeth presented it as part of a family of strophoids of a circle, with the pole at the center of the circle and a fixed point on the circumference. The parameter \(n\) generates the family: \(n = 3\) produces the limaçon trisectrix, \(n=4\) yields the kidney-shaped Freeth’s nephroid, and as \(n\) tends to infinity the curve approaches the cochleoid.<sup>1,3</sup> A key geometric property of the \(n=4\) case (Freeth’s nephroid) arises at the triple point of self-intersection. A line through the origin parallel to the y-axis intersects the curve again at a point Q such that the angle formed with the x-axis is exactly \( \frac{3\pi}{7} \). This relationship supplies a construction for a regular heptagon that cannot be achieved with compass and straightedge alone.<sup>3</sup></p>
+    <p>Real-life applications in engineering and the natural sciences are documented in two specialized contexts. In robotics kinematics, the nephroid serves as a prescribed trajectory for a 3-RRR planar parallel robot, allowing precise path-tracking studies of position, velocity, acceleration, and jerk.<sup>4</sup> In control-systems engineering, the nephroid of Freeth appears as the exact shape of certain Nyquist plots that arise from specific linear transfer functions; engineers use this shape when applying the Nyquist stability criterion to assess closed-loop system margins without further algebraic reduction.<sup>5</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/freeth/nephroiddefreeth.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/freeth/nephroiddefreeth.shtml</a> (history, generalization for parameter n, heptagon construction).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Freeths/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Freeths/</a> (biography of T. J. Freeth).</li>
+      <li><a href="https://mathworld.wolfram.com/FreethsNephroid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FreethsNephroid.html</a> (history, polar equation, heptagon construction).</li>
+      <li><a href="https://iopscience.iop.org/article/10.1088/1742-6596/1671/1/012002" target="_blank" rel="noopener noreferrer">https://iopscience.iop.org/article/10.1088/1742-6596/1671/1/012002</a> (robotics trajectory application).</li>
+      <li><a href="https://scsolutions.com/wp-content/uploads/Theshapesofnyquistplots.pdf" target="_blank" rel="noopener noreferrer">https://scsolutions.com/wp-content/uploads/Theshapesofnyquistplots.pdf</a> (Nyquist-plot application in control engineering).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FREETH (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                   xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb)
+  (setq id "Freeth Curve"
+        iq "r=a·sin(nθ/(n-1))/(n·sin(θ/(n-1)))"
+        dcl "FREETH"
+        opt '("Freeth nephroid" "Limacon trisectrix" "New Values")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (scale): " 1.0))
+  (cond
+    ((eq kw 0)
+       (setq fb 4.0))
+    ((eq kw 1)
+       (setq fb 3.0))
+    ((eq kw 2)
+       (setq fb 1.0)
+       (while (= fb 1.0)
+              (setq fb (get_real 6 "\nn (Loop factor, must not be 1.0, nephroid=4): " 4.0)))))
+  (setq eq_display (strcat "\na= " (rtos fa 2 4) ", n= " (rtos fb 2 4))
+        rval '(if (eq (sin (/ (eval a2) (- fb 1.0))) 0.0) fa (/ (* fa (sin (/ (* fb (eval a2)) (- fb 1.0)))) (* fb (sin (/ (eval a2) (- fb 1.0))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 20.0)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:FREETH)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

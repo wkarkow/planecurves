@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sine Summation Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sine Summation Curve</h1>
+      <p class="short-description">Graph of \( y = a\cdot\sin(x)+b\cdot\sin(c\cdot x) \), the two-term superposition of a base sinusoid and a second frequency.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SineSum/SineSum01-360.avif"
+           alt="Sine Summation Curve, a=5,b=2.5,c=2">
+      <figcaption>Sine Summation Curve, a=5,b=2.5,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum02-360.avif"
+           alt="Sine Summation Curve, a=5,b=2.5,c=3">
+      <figcaption>Sine Summation Curve, a=5,b=2.5,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum03-360.avif"
+           alt="Sine Summation Curve, a=5,b=2.5,c=4">
+      <figcaption>Sine Summation Curve, a=5,b=2.5,c=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum04-360.avif"
+           alt="Sine Summation Curve, a=5,b=2.5,c=5">
+      <figcaption>Sine Summation Curve, a=5,b=2.5,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum05-360.avif"
+           alt="Sine Summation Curve, 6.6 cents,1 Hz,a=20,b=20,c=1.0038">
+      <figcaption>Sine Summation Curve, 6.6 cents,1 Hz,a=20,b=20,c=1.0038</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum06-360.avif"
+           alt="Sine Summation Curve, 13.2 cents,2 Hz,a=20,b=20,c=1.0077">
+      <figcaption>Sine Summation Curve, 13.2 cents,2 Hz,a=20,b=20,c=1.0077"</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum07-360.avif"
+           alt="Sine Summation Curve, 19.8 cents,2 Hz,a=20,b=20,c=1.0115">
+      <figcaption>Sine Summation Curve, 19.8 cents,2 Hz,a=20,b=20,c=1.0115</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum08-360.avif"
+           alt="Sine Summation Curve, C + C#,a=10,b=10,c=1.0595">
+      <figcaption>Sine Summation Curve, C + C#,a=10,b=10,c=1.0595</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum09-360.avif"
+           alt="Sine Summation Curve, C + D,a=10,b=10,c=1.1225">
+      <figcaption>Sine Summation Curve, C + D,a=10,b=10,c=1.1225</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum10-360.avif"
+           alt="Sine Summation Curve, C + D#,a=10,b=10,c=1.1892">
+      <figcaption>Sine Summation Curve, C + D#,a=10,b=10,c=1.1892</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum11-360.avif"
+           alt="Sine Summation Curve, C + E,a=10,b=10,c=1.2599">
+      <figcaption>Sine Summation Curve, C + E,a=10,b=10,c=1.2599</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum12-360.avif"
+           alt="Sine Summation Curve, C + F,a=10,b=10,c=1.3348">
+      <figcaption>Sine Summation Curve, C + F,a=10,b=10,c=1.3348</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum13-360.avif"
+           alt="Sine Summation Curve, C + F#,a=10,b=10,c=1.4142">
+      <figcaption>Sine Summation Curve, C + F#,a=10,b=10,c=1.4142</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum14-360.avif"
+           alt="Sine Summation Curve, C + G,a=10,b=10,c=1.4983">
+      <figcaption>Sine Summation Curve, C + G,a=10,b=10,c=1.4983</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum15-360.avif"
+           alt="Sine Summation Curve, C + G#,a=10,b=10,c=1.5874">
+      <figcaption>Sine Summation Curve, C + G#,a=10,b=10,c=1.6818</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum16-360.avif"
+           alt="Sine Summation Curve, C + A,a=10,b=10,c=1.6818">
+      <figcaption>Sine Summation Curve, C + A,a=10,b=10,c=1.6818</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum17-360.avif"
+           alt="Sine Summation Curve, C + A#,a=10,b=10,c=1.7818">
+      <figcaption>Sine Summation Curve, C + A#,a=10,b=10,c=1.7818</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum18-360.avif"
+           alt="Sine Summation Curve, C + B,a=10,b=10,c=1.8877">
+      <figcaption>Sine Summation Curve, C + B,a=10,b=10,c=1.8877</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineSum/SineSum19-360.avif"
+           alt="Sine Summation Curve, C + C',a=10,b=10,c=2.0">
+      <figcaption>Sine Summation Curve, C + C',a=10,b=10,c=2.0</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Sine Summation Curve Cartesian equation:</div>
+      \[ y = a \cdot \sin(x) + b \cdot \sin(c \cdot x) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The ancient Greek philosopher Pythagoras (c. 570–495 BCE) and his followers are credited with the first systematic realization that harmonious musical intervals correspond to simple integer ratios of vibrating string lengths (or frequencies).<sup>1</sup> Using a monochord, they identified the octave as 2:1, the perfect fifth as 3:2, and the perfect fourth as 4:3. These ratios led to equal-tempered tuning and the Fourier decomposition of musical tones. The sine summation curve illustrates the superposition of two pure sine waves, the basis for understanding musical tones as composite waveforms.<sup>2</sup> The principle that any complex periodic wave can be expressed as a sum of sines traces to Joseph Fourier’s 1822 work on heat conduction, but its direct application to sound and music was developed by Hermann von Helmholtz in his 1863 treatise <em>On the Sensations of Tone</em>.<sup>3</sup> Helmholtz demonstrated that the ear perceives the fundamental frequency as pitch while the specific pattern and strengths of higher harmonics determine timbre, the quality that distinguishes a flute from a trumpet playing the same note. When the two frequencies are very close (beat branch), the amplitude envelope modulates slowly at the difference frequency, producing the “wow-wow” pattern used by piano tuners to achieve precise equal temperament.<sup>4</sup> When the frequencies follow equal-tempered ratios (scale-note branch), the visual clash or smoothness corresponds to the musical ear’s judgment of dissonance versus consonance, with perfect intervals such as the octave (\( c = 2 \)) closing exactly while others remain quasi-periodic.</p>
+    <p>The human ear performs an operation that is mathematically equivalent to a continuous Fourier analysis on the incoming pressure waveform.<sup>5</sup> Any periodic (or quasi-periodic) sound pressure signal reaching the eardrum can be decomposed, by Fourier’s theorem, into a sum of pure sine waves of different frequencies, amplitudes, and phases. The equation above is the simplest two-term case of that decomposition. Inside the cochlea, the basilar membrane acts as a mechanical frequency analyzer. Different locations along its length have different stiffness and mass, so each segment resonates most strongly at one particular frequency. When the composite pressure wave (our plotted \( y \)) travels through the fluid in the cochlea, it excites each resonant segment in proportion to the amplitude of the sine component at that segment’s characteristic frequency. Hair cells at those locations fire nerve impulses whose rate encodes the strength of that particular frequency component. The auditory cortex then receives a set of parallel signals that are essentially the Fourier coefficients of the original waveform. It does not “see” the time-domain shape you plot in AutoCAD; it receives the frequency-domain spectrum. That spectrum—specifically which harmonics are present and their relative amplitudes—determines the perceived timbre. The fundamental frequency tells the brain the pitch; the pattern of higher harmonics (integer multiples of that fundamental) tells it “flute” versus “trumpet,” even though both instruments may be playing the same middle C. In playing two notes together, due to the irrational frequency ratio built into equal temperament, the combined waveform never repeats exactly except for octaves, yet the human brain perceives certain ratios as pleasing.</p>
+    <p>Real-life applications are central to audio engineering and musical instrument design. Oscilloscope displays of these summed waveforms allow technicians to verify electronic synthesizer outputs and amplifier fidelity. Piano and organ tuning relies on counting beat rates to set the \( 2^{1/12} \) semitone spacing. In psychoacoustics, controlled summation experiments quantify consonance and help design concert-hall acoustics. The same principle underlies digital audio processing, where additive synthesis generates instrument sounds and removes unwanted beats in mixing consoles.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Pythagorean_tuning" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Pythagorean_tuning</a> (Pythagoras and integer-ratio harmonics)</li>
+      <li><a href="https://www.2dcurves.com/trig/triga.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/trig/triga.html</a> (source equation and trigonometric summation plots)</li>
+      <li><a href="https://mathworld.wolfram.com/FourierSeries.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FourierSeries.html</a> (Fourier decomposition of musical tones)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Piano_tuning" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Piano_tuning</a> (acoustic beats and piano tuning applications)</li>
+      <li><a href="https://www.nature.com/articles/416087a" target="_blank" rel="noopener noreferrer">https://www.nature.com/articles/416087a</a> (inner ear performs mechanical Fourier transform; Smith et al., Nature 2002)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SINESUM (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                   id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Sine Summation Curve"
+        iq "y=a·sin(x)+b·sin(c·x)"
+        dcl "SINESUM"
+        opt '("Overtone" "Beat" "C#" "D" "D#" "E" "F" "F#" "G" "G#" "A" "A#" "B" "C'")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 1260
+        dpt '(63.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (amplitude of base note — middle C)" 5.0))
+  (cond
+    ((eq kw 0)
+     (setq fc (get_boundi 6 "c (overtone number &gt;= 2)" 2 2 nil T nil)))
+    ((eq kw 1)
+     (setq fd (get_real 2 "offset in cents (≈6.6 for ~1 Hz beat)" 6.6)
+           fc (alt_expt 2.0 (/ fd 1200.0) nil)))
+    (T
+     (setq fd (cond
+                ((eq kw 2) 1) ((eq kw 3) 2) ((eq kw 4) 3)
+                ((eq kw 5) 4) ((eq kw 6) 5) ((eq kw 7) 6) ((eq kw 8) 7)
+                ((eq kw 9) 8) ((eq kw 10) 9) ((eq kw 11) 10) ((eq kw 12) 11)
+                ((eq kw 13) 12))
+           fc (alt_expt 2.0 (/ fd 12.0) nil))))
+  (setq fb (get_real 2 "b (amplitude of 2nd frequency)" (* fa 0.5))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        xc '(eval a2)
+        yc '(+ (* fa (sin (eval a2))) (* fb (sin (* fc (eval a2)))))
+        paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SINESUM)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

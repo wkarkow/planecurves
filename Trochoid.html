@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trochoid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Trochoid</h1>
+      <p class="short-description">The plane curve traced by a point fixed at a distance \( d \) from the center of a circle of radius \( R \) that rolls without slipping along a straight line.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Trochoid/Trochoid01-360.avif"
+           alt="Trochoid, R=1,d=0.5,curtate">
+      <figcaption>Trochoid, R=1,d=0.5,curtate</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid02-360.avif"
+           alt="Trochoid, R=1,d=1,cycloid">
+      <figcaption>Trochoid, R=1,d=1,cycloid</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid03-360.avif"
+           alt="Trochoid, R=1,d=1.5,prolate">
+      <figcaption>Trochoid, R=1,d=1.5,prolate</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid04-360.avif"
+           alt="Trochoid, R=1,d=2">
+      <figcaption>Trochoid, R=1,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid05-360.avif"
+           alt="Trochoid, R=1,d=π">
+      <figcaption>Trochoid, R=1,d=π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid06-360.avif"
+           alt="Trochoid, R=1,d≈4.60333885 where d=sec(α), tan(α)=α+π, loops touch">
+      <figcaption>Trochoid, R=1,d≈4.60333885 where d=sec(α), tan(α)=α+π, loops touch</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid07-360.avif"
+           alt="Trochoid, R=1,d=2π">
+      <figcaption>Trochoid, R=1,d=2π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid08-360.avif"
+           alt="Trochoid, R=1,d≈7.78970577 where d=sec(α), tan(α)=α+2π, loops touch">
+      <figcaption>Trochoid, R=1,d≈7.78970577 where d=sec(α), tan(α)=α+2π, loops touch</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid09-360.avif"
+           alt="Trochoid, R=1,d=3π">
+      <figcaption>Trochoid, R=1,d=3π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trochoid/Trochoid10-360.avif"
+           alt="Trochoid, R=1,d≈10.94987987 where d=sec(α), tan(α)=α+3π, loops touch">
+      <figcaption>Trochoid, R=1,d≈10.94987987 where d=sec(α), tan(α)=α+3π, loops touch</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Trochoid/Trochoid11-360.avif"
+           alt="Trochoid, R=1,d≈14.10169533 where d=sec(α), tan(α)=α+4π, loops touch">
+      <figcaption>Trochoid, R=1,d≈14.10169533 where d=sec(α), tan(α)=α+4π, loops touch</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Trochoid parametric equations:</div>
+      \[ x = R \cdot t - d \cdot \sin(t),\quad y = R - d \cdot \cos(t) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The trochoid, from the Greek <em>trokhos</em> (wheel), is the plane curve traced by a point fixed at a distance \( d \) from the center of a circle of radius \( R \) that rolls without slipping along a straight line. It was studied by Albrecht Dürer in 1525 and by Ole Rømer in 1674.<sup>1</sup> The special case \( d = R \) is the cycloid, named by Galileo circa 1599 and intensively investigated throughout the seventeenth century because it solved two of the era’s major problems in mechanics and the calculus. Gilles Personne de Roberval found the area under one arch in 1634; Christopher Wren determined the arc length in 1658; Christiaan Huygens established its tautochrone property (isochronous small and large oscillations) in 1673, enabling improved pendulum clocks; and Johann Bernoulli used it to solve the brachistochrone problem (curve of fastest descent) in 1696.<sup>2</sup> The shape of the trochoid depends on the ratio \( d/R \): when \( d < R \) the curve is a curtate cycloid (flattened arches); when \( d = R \) it is the classic cycloid with cusps on the baseline; when \( d > R \) it is a prolate cycloid possessing loops whose number of self-intersections grows with increasing \( d \).<sup>1,3</sup> Certain discrete ratios produce loops that touch exactly on the baseline; for \( R = 1 \) these occur near 4.6 and 7.8.<sup>1</sup></p>
+    <p>Real-life applications in engineering and the natural sciences center on the cycloid and its trochoid generalizations. Huygens exploited the tautochrone property for precision timekeeping. In fluid power, trochoidal (gerotor) profiles are standard in positive-displacement pumps used for coolant and lubricant circulation in machine tools, ships, wind-turbine gearboxes, and food-processing equipment.<sup>4</sup> Cycloidal and trochoidal drive mechanisms appear in precision gearing, robotics actuators, and ship propulsion systems such as the Voith-Schneider propeller, whose blades follow trochoidal paths to enable omnidirectional thrust without a conventional rudder.<sup>4</sup></p>
+    <p>Real-life applications in engineering and the natural sciences include the use of the cycloid as the tautochrone curve in Huygens’ pendulum clocks and as the brachistochrone in variational problems.<sup>3</sup> Trochoidal paths are traced by blades in the Voith-Schneider propeller, enabling omnidirectional thrust through combined ship translation and controlled rotary pitch.<sup>4</sup> Trochoidal lobe profiles are standard in gerotor pumps for positive-displacement fluid transfer in machine tools, marine, wind-turbine, and food-processing equipment.<sup>5</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trochoid/trochoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trochoid/trochoid.shtml</a> (Greek etymology; Dürer 1525 and Rømer 1674; parametric equations)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Cycloid" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Cycloid</a> (Galileo naming; Roberval area, Wren arc length, Huygens tautochrone, Bernoulli brachistochrone)</li>
+      <li><a href="https://mathworld.wolfram.com/Trochoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Trochoid.html</a> (parametric equations; curtate/cycloid/prolate taxonomy)</li>
+      <li><a href="https://www.2dcurves.com/roulette/roulettec.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/roulettec.html</a> (history confirmation; prolate/curtate descriptions; Voith-Schneider propeller)</li>
+      <li><a href="https://www.nopgroup.com/en/products/trochoid/" target="_blank" rel="noopener noreferrer">https://www.nopgroup.com/en/products/trochoid/</a> (trochoid/gerotor pumps in machine tools, marine, wind power, and food machinery)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TROCHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Trochoid"
+        iq "x=R·t-d·sin(t), y=R-d·cos(t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions per arch)"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "R (rolling radius and base height)" 1.0)
+        fb (get_real 2 "d (distance from center roller)" 1.0)
+        eq_display (strcat "\nR=" (rtos fa 2 4) ", d=" (rtos fb 2 4))
+        xc '(- (* fa (eval a2)) (* fb (sin (eval a2))))
+        yc '(- fa (* fb (cos (eval a2))))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TROCHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

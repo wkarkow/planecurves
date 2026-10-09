@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hydrogen 2p - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hydrogen 2p</h1>
+      <p class="short-description">Constant-C level curves of the hydrogen 2p orbital probability density in a planar slice arising from the exact solution of the Schrödinger equation.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Hydrogen2P/Hydrogen2P01-360.avif"
+           alt="Hydrogen 2p Contour, Z=1,multiple values of C">
+      <figcaption>
+        Hydrogen 2p Contour, Z=1,C=
+        <span class="figcap-value" style="color:#000000">0.001</span>,
+        <span class="figcap-value" style="color:#FF0000">0.01</span>,
+        <span class="figcap-value" style="color:#0000FF">0.1</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.15</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hydrogen2P/Hydrogen2P02-360.avif"
+           alt="Helium 2p Contour, Z=2,multiple values of C">
+      <figcaption>
+        Helium 2p Contour, Z=2,C=
+        <span class="figcap-value" style="color:#000000">0.001</span>,
+        <span class="figcap-value" style="color:#FF0000">0.01</span>,
+        <span class="figcap-value" style="color:#0000FF">0.1</span>,
+        <span class="figcap-value" style="color:#009600">0.2</span>,
+        <span class="figcap-value" style="color:#FF9600">0.5</span>,
+        <span class="figcap-value" style="color:#9600FF">0.54</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hydrogen2P/Hydrogen2P03-360.avif"
+           alt="Lithium 2p Contour, Z=3,multiple values of C">
+      <figcaption>
+        Lithium 2p Contour, Z=3,C=
+        <span class="figcap-value" style="color:#000000">0.001</span>,
+        <span class="figcap-value" style="color:#FF0000">0.01</span>,
+        <span class="figcap-value" style="color:#0000FF">0.1</span>,
+        <span class="figcap-value" style="color:#009600">0.2</span>,
+        <span class="figcap-value" style="color:#FF9600">0.22</span>,
+        <span class="figcap-value" style="color:#9600FF">0.24</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hydrogen2P/Hydrogen2P04-360.avif"
+           alt="Beryllium 2p Contour, Z=4,multiple values of C">
+      <figcaption>
+        Beryllium 2p Contour, Z=4,C=
+        <span class="figcap-value" style="color:#000000">0.001</span>,
+        <span class="figcap-value" style="color:#FF0000">0.01</span>,
+        <span class="figcap-value" style="color:#0000FF">0.1</span>,
+        <span class="figcap-value" style="color:#009600">0.11</span>,
+        <span class="figcap-value" style="color:#FF9600">0.12</span>,
+        <span class="figcap-value" style="color:#9600FF">0.13</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Hydrogen 2p orbital wavefunction:</div>
+      \[ \psi_{2p} \propto r \, e^{-r/(2a_{0})} \cos\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Probability density (basis of contour form):</div>
+      \[ |\psi|^{2} \propto r^{2} e^{-(Z/a_{0})r} \cos^{2}\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hydrogen 2p Orbital Contour Curve:</div>
+      \[ y^{2} e^{-({Z/2})\sqrt{x^{2}+y^{2}}} = C, \quad \text {where } (a_{0}=1) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The hydrogen 2p orbital arises from the exact solution of the Schrödinger equation for the hydrogen atom, first obtained by Erwin Schrödinger in 1926.<sup>1</sup> This work marked a turning point in physics by replacing classical orbital trajectories with wavefunctions that describe probability distributions. The hydrogen atom, consisting of a single electron bound to a nucleus by Coulomb attraction, became the first system for which a full quantum-mechanical solution could be written in closed form.<sup>1,2</sup> Schrödinger’s solution showed that electron states are characterized by discrete quantum numbers, with the 2p orbital corresponding to principal quantum number \(n=2\) and angular momentum quantum number \(l=1\).<sup>1,2</sup></p>
+    <p>The mathematical form of the 2p orbital separates into a radial part and an angular part. The angular dependence is proportional to \(\cos \theta\), which creates two lobes aligned along an axis with a nodal plane at \(\theta=\dfrac{\pi}{2}\).<sup>2,3</sup> This nodal plane where the wavefunction is exactly zero is one of the defining physical features of p orbitals.<sup>2,3</sup> The radial part includes an exponential decay term \(e^{-r/(2a_{0})}\), where \(a_{0}\) is the Bohr radius, establishing the natural length scale of the atom.<sup>1,2</sup> Together, these components produce a probability density proportional to \(r^{2} e^{-2kr} \cos^{2}\theta\), which is the origin of the contour equation used in this entry.<sup>2</sup> The constant-C contours plotted in the code represent level sets of this probability density in a 2D slice, while textbook “orbital shapes” typically depict qualitative isosurfaces or angular distributions rather than exact level sets.<sup>2,3</sup></p>
+    <p>In practical terms, the hydrogen 2p orbital is foundational to multiple areas of science and engineering. In atomic spectroscopy, transitions involving the 2p state (such as 1s → 2p) produce characteristic spectral lines, including the prominent Lyman and Balmer series, which are used to identify elements in laboratory plasmas and astronomical observations.<sup>4</sup> The angular structure of p orbitals governs chemical bonding in molecules: p orbitals combine to form directional bonds (e.g., σ and π bonds), which determine molecular geometry and reactivity.<sup>3</sup> In quantum chemistry and solid-state physics, p-like orbitals contribute to band structures in semiconductors and play a role in the electronic properties of materials.<sup>3</sup> Beyond chemistry and spectroscopy, the mathematical structure of hydrogenic orbitals serves as a model system across physics. In quantum mechanics education, the hydrogen atom is the canonical example for introducing eigenfunctions, operators, and separation of variables.<sup>1,2</sup> In computational physics and engineering, hydrogen-like wavefunctions are used as basis functions in methods such as Hartree–Fock and density functional theory for approximating multi-electron systems.<sup>3</sup> Even in fields such as plasma physics and astrophysics, hydrogen orbital transitions are used to interpret emission spectra from stars and interstellar gas clouds.<sup>4</sup></p>
+    <p>Thus, while the plotted contours in this entry represent a simplified 2D projection, they are directly rooted in one of the most important exact solutions in physics. They provide a bridge between the abstract mathematics of quantum mechanics and the observable structure of atoms, spectra, and chemical bonds.<sup>1,2,3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://chem.libretexts.org/Courses/Grinnell_College/CHM_363%3A_Physical_Chemistry_1_(Grinnell_College)/02%3A_Atomic_Structure/2.01%3A_The_Schrodinger_Wave_Equation_for_the_Hydrogen_Atom" target="_blank" rel="noopener noreferrer">https://chem.libretexts.org/.../The_Schrodinger_Wave_Equation_for_the_Hydrogen_Atom</a> (exact wavefunction and 2D slice illustration).</li>
+      <li><a href="https://winter.group.shef.ac.uk/orbitron/atomic_orbitals/2p/2p_equations.html" target="_blank" rel="noopener noreferrer">https://winter.group.shef.ac.uk/orbitron/atomic_orbitals/2p/2p_equations.html</a> (radial and full wavefunction equations).</li>
+      <li><a href="https://pubs.acs.org/doi/10.1021/ed500470q" target="_blank" rel="noopener noreferrer">https://pubs.acs.org/doi/10.1021/ed500470q</a> (parametric contour equations for AutoCAD-style plotting in chemistry visualization).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Hydrogen_spectral_series" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Hydrogen_spectral_series</a> (Lyman and Balmer series; astronomical applications of hydrogen emission and absorption lines in stellar and interstellar spectra).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HYDROGEN2P (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fb fa fd fe ff fh fi fg fj fk)
+  (setq id "Hydrogen2p"
+        iq "y²·exp(-(Z/2)·√(x²+y²)) = C"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to radial span"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_integer 6 "Z (nuclear charge, 1=H, 2=He, 3=Li, etc.)" 1)
+        fb (/ fa 2.0)
+        fc (get_boundr 6 (strcat "C (contour level &lt; " (rtos (/ 4.0 (* (exp 2.0) (* fb fb))) 2 4) ")") 0.2 0.0 (/ 4.0 (* (exp 2.0) (* fb fb))) nil T)
+        eq_display (strcat "\nZ=" (itoa fa) ", C=" (rtos fc 2 4))
+        fd (/ 2.0 fb)
+        fe 0.0
+        ff fd
+        fg 0)
+  (while (and (&lt; fg 80) (&gt; (- ff fe) 1e-12))
+    (setq fh (/ (+ fe ff) 2.0)
+          fi (- (* fh fh) (* fc (exp (* fb fh)))))
+    (if (&lt; fi 0.0) (setq fe fh) (setq ff fh))
+    (setq fg (1+ fg)))
+  (setq fj (/ (+ fe ff) 2.0)
+        fe fd
+        ff (* fd 4.0)
+        fg 0)
+  (while (and (&lt; fg 80) (&gt; (- (* ff ff) (* fc (exp (* fb ff)))) 0.0))
+    (setq ff (* ff 2.0))
+    (setq fg (1+ fg)))
+  (if (&gt; ff 1e7) (setq ff 1e7))
+  (setq fg 0)
+  (while (and (&lt; fg 80) (&gt; (- ff fe) 1e-12))
+    (setq fh (/ (+ fe ff) 2.0)
+          fi (- (* fh fh) (* fc (exp (* fb fh)))))
+    (if (&gt; fi 0.0) (setq fe fh) (setq ff fh))
+    (setq fg (1+ fg)))
+  (setq fk (/ (+ fe ff) 2.0)
+        xc '(if (&lt;= (- (* (eval a2) (eval a2)) (* fc (exp (* fb (eval a2))))) 1e-8) 0.0 (alt_expt (- (* (eval a2) (eval a2)) (* fc (exp (* fb (eval a2))))) 0.5 nil))
+        yc '(alt_expt (* fc (exp (* fb (eval a2)))) 0.5 nil)
+        paramstep (/ (- fk fj) divcount)
+        a1 fj
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HYDROGEN2P)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

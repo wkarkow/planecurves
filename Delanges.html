@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delanges Sectrix - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Delanges Sectrix</h1>
+      <p class="short-description">A rational circular quartic; a trisectrix that is the polar inverse of Dürer’s folium.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Delanges/Delanges01-360.avif"
+           alt="Delanges Trisectrix, a=1,n=2">
+      <figcaption>Delanges Trisectrix, a=1,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delanges/Delanges02-360.avif"
+           alt="Delanges Sectrix, a=1,n=3">
+      <figcaption>Delanges Sectrix, a=1,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delanges/Delanges03-360.avif"
+           alt="Delanges Sectrix, a=1,n=4">
+      <figcaption>Delanges Sectrix, a=1,n=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delanges/Delanges04-360.avif"
+           alt="Delanges Sectrix, a=1,n=5">
+      <figcaption>Delanges Sectrix, a=1,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delanges/Delanges05-360.avif"
+           alt="Delanges Sectrix, a=1,n=6">
+      <figcaption>Delanges Sectrix, a=1,n=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delanges/Delanges06-360.avif"
+           alt="Delanges Sectrix, a=1,n=7">
+      <figcaption>Delanges Sectrix, a=1,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delanges/Delanges07-360.avif"
+           alt="Delanges Sectrix, a=1,n=24">
+      <figcaption>Delanges Sectrix, a=1,n=24</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Delanges/Delanges08-360.avif"
+           alt="Delanges Sectrix, a=1,n=25">
+      <figcaption>Delanges Sectrix, a=1,n=25</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Delanges Trisectrix implicit equation:</div>
+      \[ (x^{2} + y^{2} - 2a^{2})^{2} = x^{2}(x^{2} + y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Delanges Trisectrix polar equation:</div>
+      \[ r = \dfrac{a}{\cos(\theta/2)} \quad \text{or} \quad r = a \sec(\theta/2) \]
+    </div>
+        <div class="equation-line">
+      <div class="equation-label">Delanges Sectrix polar equation:</div>
+      \[ r = \dfrac{a}{\cos(\theta/n)} \quad \text{or} \quad r = a \sec(\theta/n) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Delanges trisectrix<sup>1</sup>, also known as the Delanges sectrix<sup>1</sup>, was studied by the Italian engineer and mathematician Paolo Delanges (ca. 1750–1810). He presented it in his 1783 publication <em>La Trisegante, nuova curva e pensieri sulla Formula Cardanica</em><sup>2</sup>. The curve is a rational circular quartic that belongs to the family of sectrix curves, which solve the graphical problem of dividing an arbitrary angle into any integer number of equal parts. The Delanges form specifically acts as a trisectrix<sup>1</sup>. The sectrix for a given n is an (n+1)-sectrix.</p>
+    <p>It is the polar inverse (with respect to the origin) of Dürer’s folium<sup>1</sup>. The curve was rediscovered in 1878 by the American mathematician Hillhouse, who constructed a mechanical tracer to draw it<sup>2</sup>. A geometric construction begins with a circle of radius 2a centered at the origin and a fixed line through the origin; the locus of point M satisfies the trisection property that the angle at the origin formed by M is one-third the angle formed by a related point on the circle<sup>1</sup>.</p>
+    <p>Real-life applications in engineering and the natural sciences are limited and historical. The curve supported the design of mathematical instruments and mechanical linkages for precise angle division in classical geometric constructions and drafting tools<sup>2</sup>. No major contemporary uses in fields such as optics, structural mechanics, or biological modeling are documented.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/delanges/delanges.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/delanges/delanges.shtml</a> (history, properties, inverse relation to Dürer folium, trisection construction)</li>
+      <li><a href="https://ijgeometry.com/wp-content/uploads/2022/01/9.-122-137.pdf" target="_blank" rel="noopener noreferrer">https://ijgeometry.com/wp-content/uploads/2022/01/9.-122-137.pdf</a> (biographical details on Delanges, Hillhouse, mechanical tracer, Cartesian form)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DELANGES (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span rval xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb)
+  (setq id "Delanges Sectrix"
+        iq "r=a/cos(θ/n)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "n (angle divisor, 2 for trisectrix)" 2.0)
+        eq_display (strcat "\nr=" (rtos fa 2 4) ", n=" (rtos fb 2 4))
+        rval '(/ fa (avoid_zero (cos (/ (eval a2) fb))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DELANGES)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

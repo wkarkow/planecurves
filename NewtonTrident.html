@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Newton's Trident - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Newton's Trident</h1>
+      <p class="short-description">A cubic plane curve with four infinite branches, the y-axis as an asymptote to two of those branches, and one or three intersections with the x-axis.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/NewtonTrident/NewtonTrident01-360.avif"
+           data-caption="Newton's Trident, a=3.0(black),2.0(red),1.0(blue),0.5(green),0.25(orange),b=0,c=0,d=1"
+           alt="Newton's Trident, a=3.0(black),2.0(red),1.0(blue),0.5(green),0.25(orange),b=0,c=0,d=1">
+      <figcaption>
+        Newton's Trident, a=
+        <span class="figcap-value" style="color:#000000">3.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">0.25</span>,
+        b=0,c=0,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/NewtonTrident/NewtonTrident02-360.avif"
+           data-caption="Newton's Trident, a=1,b=2.0(black),1.0(red),0.0(blue),-1.0(green),-2.0(orange),c=0,d=1"
+           alt="Newton's Trident, a=1,b=2.0(black),1.0(red),0.0(blue),-1.0(green),-2.0(orange),c=0,d=1">
+      <figcaption>
+        Newton's Trident, a=1,b=
+        <span class="figcap-value" style="color:#000000">2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">0.0</span>,
+        <span class="figcap-value" style="color:#009600">-1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">-2.0</span>,
+        c=0,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/NewtonTrident/NewtonTrident03-360.avif"
+           data-caption="Newton's Trident, a=1,b=1,c=2.0(black),1.0(red),0.0(blue),-1.0(green),-2.0(orange),d=1"
+           alt="Newton's Trident, a=1,b=1,c=2.0(black),1.0(red),0.0(blue),-1.0(green),-2.0(orange),d=1">
+      <figcaption>
+        Newton's Trident, a=1,b=1,c=
+        <span class="figcap-value" style="color:#000000">2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">0.0</span>,
+        <span class="figcap-value" style="color:#009600">-1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">-2.0</span>,
+        d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/NewtonTrident/NewtonTrident04-360.avif"
+           data-caption="Newton's Trident, a=1,b=0,c=0,d=3.0(black),2.0(red),1.0(blue),0.5(green),0.25(orange)"
+           alt="Newton's Trident, a=1,b=0,c=0,d=3.0(black),2.0(red),1.0(blue),0.5(green),0.25(orange)">
+      <figcaption>
+        Newton's Trident, a=1,b=0,c=0,d=
+        <span class="figcap-value" style="color:#000000">3.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">0.25</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Newton's Trident implicit equation:</div>
+      \[ xy = a x^{3} + b x^{2} + c x + d \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Newton's Trident Cartesian equation:</div>
+      \[ y = a x^{2} + b x + c + \dfrac{d}{x} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Newton's Trident<sup>1,2,3</sup>, or the parabola of Descartes (although it is not a parabola), is a cubic plane curve. It was investigated by Isaac Newton (1643–1727) who developed calculus, and by René Descartes (1596–1650), the French philosopher and mathematician who founded analytic geometry. Newton gave the curve its name “trident” because of its characteristic three-pronged fork-like shape. He classified it as the 66th species in his systematic study of 72 types of cubic curves<sup>4</sup> (though he missed six cases), which appeared in <em>Curves by Sir Isaac Newton</em> within John Harris’s <em>Lexicon Technicum</em> (London, 1710). Newton noted that the curve cuts the x-axis in either one or three points, possesses four infinite branches (“legs”), and has the y-axis as an asymptote to two of those branches extending in opposite directions.</p>
+    <p>No real-life applications are documented in the primary mathematical references on plane curves.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Trident/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Trident/</a> (history, Newton classification, and properties)</li>
+      <li><a href="https://mathworld.wolfram.com/TridentofNewton.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/TridentofNewton.html</a> (definition, properties, and classification)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trident/trident.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trident/trident.shtml</a> (geometric interpretation)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubict.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubict.html</a> (classification notes)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:NEWTONTRIDENT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                          xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Newton's Trident"
+        iq "y=a·x²+b·x+c+d/x"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (x² coefficient)" 1.0)
+        fb (get_real 2 "b (x coefficient)" 0.0)
+        fc (get_real 2 "c (constant term)" 0.0)
+        fd (get_real 2 "d (1/x coefficient)" 1.0)
+        fe (get_keyword 0 "Positive Negative" "Positive or Negative direction?" "Positive")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(eval a2)
+        yc '(+ (* fa (eval a2) (eval a2)) (* fb (eval a2)) fc (/ fd (avoid_zero (eval a2))))
+        paramstep (/ xspan divcount)
+        paramstep (if (eq fe "Negative") (- paramstep) paramstep)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:NEWTONTRIDENT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

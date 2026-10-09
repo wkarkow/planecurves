@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dipole Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Dipole Curve</h1>
+      <p class="short-description">Equipotential lines of an electrostatic dipole or orthogonal trajectories of magnetic dipole field lines.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Dipole/Dipole01-360.avif"
+           alt="Dipole Curve, a=0.25,0.5,0.75,1.0,1.25,1.5,1.75,2.0">
+      <figcaption>Dipole Curve, a=0.25,0.5,0.75,1.0,1.25,1.5,1.75,2.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Dipole/Dipole02-360.avif"
+           alt="Double Egg Curve, a=0.25,0.5,0.75,1.0,1.25,1.5,1.75,2.0">
+      <figcaption>
+        Double Egg Curve, a=
+        <span class="figcap-value" style="color:#FF0000">0.25,0.5,0.75,1.0,1.25,1.5,1.75,2.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Dipole/Dipole03-360.avif"
+           alt="Magnetic dipole + field lines">
+      <figcaption>
+        Magnetic dipole 
+        <span class="figcap-value" style="color:#FF0000">+ field lines</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Dipole Curve polar equation:</div>
+      \[ r^{2} = a^{2} \cos(\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Dipole Curve Cartesian equation:</div>
+      \[ (x^{2} + y^{2})^{3} = a^{4} x^{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The dipole curve, also known as the curve of equal attraction or [John] Playfair curve, represents the equipotential lines surrounding an electrostatic dipole formed by two equal and opposite charges separated by an infinitesimal distance<sup>1</sup>. It is a special case of Clairaut’s curve. The curve is orthogonal to the electric field lines of the dipole<sup>1,2</sup>. In magnetostatics it likewise supplies the orthogonal trajectories to the field lines of a magnetic dipole. This property has direct relevance in modeling the Earth’s magnetic field<sup>1,3</sup>. It is also the meridian of the surface of equal attraction and thus applies to two-body gravitational potentials in the dipole approximation<sup>1</sup>. Mathcurve.com points out that the field lines perpendicular to the dipole curves are the double eggs.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In electromagnetism and potential theory the curve defines equipotential surfaces used in the design of electrostatic instruments, sensors, and high-voltage equipment. In geophysics the analogous curves aid studies of planetary magnetic fields as well as surfaces of equal gravitational or electrostatic attraction<sup>1</sup>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/dipole/dipole.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/dipole/dipole.shtml</a> (electrostatic equipotentials, magnetic dipole orthogonality, gravitational potentials)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Electric_dipole_moment" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Electric_dipole_moment</a> (electrostatic equipotentials)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Magnetic_dipole" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Magnetic_dipole</a> (magnetic dipole)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DIPOLE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo
+                   paramstep restartflag rval id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa)
+  (setq id "Dipole Curve"
+        iq "r²=a²·cos(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around curve"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(* fa (if (<= (cos (eval a2)) 1e-9) 0.0 (alt_expt (cos (eval a2)) 0.5 nil)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(nil T T T)
+        a1 (- (/ pi 2.0))
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DIPOLE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

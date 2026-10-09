@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weibull Distribution - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Weibull Distribution</h1>
+      <p class="short-description">Two-parameter lifetime model drawn as four Cartesian graphs: probability density, cumulative distribution, quantile (inverse CDF), and hazard (failure rate).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Weibull/Weibull01-360.avif"
+           alt="Weibull Distribution PDF, multiple values of k, λ=0.5>
+      <figcaption>
+        Weibull Distribution PDF,k=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.5</span>,
+        <span class="figcap-value" style="color:#9600FF">2.0</span>,
+        <span class="figcap-value" style="color:#0096FF">2.5</span>,
+        <span class="figcap-value" style="color:#AA5555">3.0</span>,
+        <span class="figcap-value" style="color:#00FF00">3.5</span>,
+        <span class="figcap-value" style="color:#FF00FF">4.0</span>,
+        <span class="figcap-value" style="color:#009696">4.5</span>,
+        <span class="figcap-value" style="color:#960096">5.0</span>,
+        λ=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Weibull/Weibull02-360.avif"
+           alt="Weibull Distribution PDF,k=2, multiple values of λ">
+      <figcaption>
+        Weibull Distribution PDF,k=2,λ=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.25</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.75</span>,
+        <span class="figcap-value" style="color:#AA5555">2.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Weibull/Weibull03-360.avif"
+           alt="Weibull Distribution k=5,λ=2,PDF,CDF,Quantile,Hazard">
+      <figcaption>
+        Weibull Distribution k=5,λ=2,
+        <span class="figcap-value" style="color:#000000">PDF</span>,
+        <span class="figcap-value" style="color:#FF0000">CDF</span>,
+        <span class="figcap-value" style="color:#0000FF">Quantile</span>,
+        <span class="figcap-value" style="color:#009600">Hazard</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 500px;">
+    <div class="equation-line">
+      <div class="equation-label">Weibull Distribution Probability Density Function equation:</div>
+      \[ y = \dfrac{k}{\lambda}\left(\dfrac{x}{\lambda}\right)^{k-1} e^{-(x/\lambda)^{k}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Weibull Distribution Cumulative Distribution Function equation:</div>
+      \[ y = 1 - e^{-(x/\lambda)^{k}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Weibull Distribution Quantile Function (inverse CDF) equation:</div>
+      \[ y = \lambda\left(-\ln(1 - p)\right)^{1/k} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Weibull Distribution Hazard Function (failure rate) equation:</div>
+      \[ y = \dfrac{k}{\lambda}\left(\dfrac{x}{\lambda}\right)^{k-1} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Weibull distribution is named after the Swedish engineer and mathematician Waloddi Weibull (1887–1979).<sup>1</sup> He presented a detailed treatment of the distribution in 1939 while studying the strength of materials and fatigue phenomena. Although a similar functional form had been applied earlier by Rosin and Rammler (1933) to particle-size distributions, Weibull emphasized its usefulness for modeling “weakest-link” failures in engineering components.<sup>2</sup> He brought the distribution to wider attention in the English-speaking technical community with his 1951 paper “A Statistical Distribution Function of Wide Applicability,” published in the ASME Journal of Applied Mechanics.<sup>3</sup> The paper initially met with skepticism from statisticians, but practical adoption was advanced by Dorian Shainin, Leonard Johnson, and the U.S. Air Force, which funded further development of Weibull methods for aircraft reliability through the 1970s.<sup>4</sup> The distribution is mathematically identical to the Type III extreme-value distribution for minima, a relationship clarified by Gumbel.<sup>5</sup></p>
+    <p>In engineering the Weibull distribution has become the standard model for time-to-failure and lifetime data. The shape parameter \(k\) (commonly denoted \(\beta\)) has direct physical interpretation: values less than 1 indicate early or infant-mortality failures, \(k = 1\) corresponds to random (constant-hazard) failures, and values greater than 1 indicate wear-out or aging mechanisms.<sup>6</sup> This interpretability, together with straightforward graphical plotting techniques on Weibull paper, enables engineers to identify dominant failure modes, forecast remaining life, plan preventive maintenance, and perform warranty and life-cycle cost analyses with relatively small data sets.<sup>4</sup> The distribution is routinely applied to mechanical components such as bearings and gears, electronic assemblies, and structural elements whose failure is governed by the weakest-link principle.<sup>7</sup> In the wind-energy industry the two-parameter Weibull distribution is the accepted model for characterizing wind-speed variability; fitted parameters are used to estimate annual energy production, select turbine designs, and assess site suitability.<sup>8</sup> The same distribution appears in materials science for brittle fracture strength and in medical and actuarial statistics for survival and time-to-event modeling.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Weibull_distribution" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Weibull_distribution</a> (naming, history overview, and equations)</li>
+      <li><a href="https://mathworld.wolfram.com/WeibullDistribution.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/WeibullDistribution.html</a> (origins in fatigue data and weakest-link interpretation)</li>
+      <li><a href="https://asmedigitalcollection.asme.org/appliedmechanics/article/18/3/293/1106672/A-Statistical-Distribution-Function-of-Wide" target="_blank" rel="noopener noreferrer">https://asmedigitalcollection.asme.org/appliedmechanics/article/18/3/293/1106672/A-Statistical-Distribution-Function-of-Wide</a> (Weibull ASME paper)</li>
+      <li><a href="https://www.quanterion.com/wp-content/uploads/2023/12/NWH_Chap1.pdf" target="_blank" rel="noopener noreferrer">https://www.quanterion.com/wp-content/uploads/2023/12/NWH_Chap1.pdf</a> (practical adoption history, Shainin, Johnson, and U.S. Air Force use, advantages for small-sample reliability analysis)</li>
+      <li><a href="https://reliamag.com/articles/weibull-analysis/" target="_blank" rel="noopener noreferrer">https://reliamag.com/articles/weibull-analysis/</a> (historical development and engineering context)</li>
+      <li><a href="https://accendoreliability.com/why-weibull-is-so-popular/" target="_blank" rel="noopener noreferrer">https://accendoreliability.com/why-weibull-is-so-popular/</a> (shape-parameter interpretation and reliability applications)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0266892023000656" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/abs/pii/S0266892023000656</a> (Weibull use in wind-turbine reliability)</li>
+      <li><a href="https://www.mdpi.com/2071-1050/15/20/15087" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2071-1050/15/20/15087</a> (wind-speed modeling for energy production)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:WEIBULL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb skm)
+  (setq id "Weibull Distribution"
+        iq ""
+        dcl "WEIBULL"
+        opt '("PDF" "CDF" "Quantile" "Hazard")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (princ (cond ((= kw 0) "\nPDF equation: f(x)=(k/λ)·(x/λ)^(k-1)·e^{-(x/λ)^k}")
+               ((= kw 1) "\nCDF equation: F(x)=1-e^{-(x/λ)^k}")
+               ((= kw 2) "\nQuantile equation: Q(p)=λ·(-ln(1-p))^(1/k)")
+               ((= kw 3) "\nHazard equation: h(x)=(k/λ)·(x/λ)^(k-1)")))
+  (setq fa (get_real 2 "k (shape )" 5.0)
+        fb (get_real 2 "λ (x-scale)" 2.0)
+        eq_display (strcat "\nk=" (rtos fa 2 4) ", λ=" (rtos fb 2 4))
+        paramstep (/ xspan divcount))
+  (cond ((= kw 0)
+         (setq xc '(eval a2)
+               yc '(* (/ fa fb) (alt_expt (/ (max (eval a2) 1e-15) fb) (- fa 1.0) nil) (exp (* -1.0 (alt_expt (/ (eval a2) fb) fa nil))))))
+        ((= kw 1)
+         (setq xc '(eval a2)
+               yc '(- 1.0 (exp (* -1.0 (alt_expt (/ (eval a2) fb) fa nil))))))
+        ((= kw 2)
+         (setq paramstep (/ 1.0 divcount)
+               xc '(eval a2)
+               yc '(* fb (alt_expt (* -1.0 (log (max (- 1.0 (eval a2)) 1e-12))) (/ 1.0 fa) nil))))
+        ((= kw 3)
+         (setq xc '(eval a2)
+               yc '(* (/ fa fb) (alt_expt (/ (max (eval a2) 1e-9) fb) (- fa 1.0) nil)))))
+  (setq skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:WEIBULL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

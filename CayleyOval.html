@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cayley Oval - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cayley Oval</h1>
+      <p class="short-description">A bicircular quartic plane algebraic curve of an equipotential contour for two equal point sources in electrostatics or gravitation.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CayleyOval/CayleyOval01-360.avif"
+           alt="Cayley Oval, a=0.5,multiple values of b"
+      <figcaption>
+        Cayley Oval, a=0.5,b=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.2</span>,
+        <span class="figcap-value" style="color:#0000FF">0.3</span>,
+        <span class="figcap-value" style="color:#009600">0.4</span>,
+        <span class="figcap-value" style="color:#FF9600">0.5</span>,
+        <span class="figcap-value" style="color:#9600FF">0.6</span>,
+        <span class="figcap-value" style="color:#0096FF">0.7</span>,
+        <span class="figcap-value" style="color:#AA5555">0.8</span>,
+        <span class="figcap-value" style="color:#00FF00">0.9</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Cayley Oval parametric equations:</div>
+      \[ x = \frac{b^{2} \cos(2t)}{a \sin^{4}(2t)}, \quad y = \pm \sqrt{ \frac{b^{2}}{4 \cos^{4}(t)} - (x - a)^{2} }, \quad 0 < t < \frac{\pi}{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Cayley Oval is named after Arthur Cayley, a leading figure in 19th-century algebraic geometry who helped classify higher-degree plane curves and their invariants<sup>1</sup>. Although it appears in mathematical literature as a bicircular quartic, its deeper origin lies in the study of potential theory, where curves arise naturally as level sets of physical fields.</p>
+    <p>In particular, the Cayley Oval can be interpreted as a planar equipotential curve associated with two equal point sources. During the 18th and 19th centuries, mathematicians investigating electrostatics and gravitation examined such level curves to understand how scalar potentials vary in space<sup>2</sup>. Unlike conic sections—defined by linear relations in distances to foci—the Cayley Oval involves higher-order combinations of those distances, producing a quartic relation that allows for closed, lens-like shapes depending on the chosen potential level.</p>
+    <p>The primary physical interpretation of the Cayley Oval is as an equipotential contour. In electrostatics, the potential of a point charge varies as V ∝ 1/r, and equipotential curves represent locations of equal potential energy. For two equal charges, certain constant-potential contours form closed ovals, one of which corresponds to the Cayley Oval<sup>2,3</sup>. Because gravitational potential has the same inverse-distance dependence, Φ ∝ −1/r, the same geometry applies directly to gravity. The Cayley Oval can therefore be interpreted as a constant gravitational potential curve for two equal masses. In this context it separates regions of space with different energy levels; the gravitational field (force) is everywhere normal to the curve, and objects do not move along the curve, but instead accelerate across it. This places the Cayley Oval within the same conceptual framework as zero-velocity curves and energy boundaries in classical mechanics<sup>4</sup>. While actual trajectories are determined by Newton’s laws, the equipotential geometry defines how potential energy converts into kinetic energy. A well-known cultural example appears in <em>The Moon Is a Harsh Mistress</em>, where projectiles (“rods from God”) exploit gravitational potential energy by falling through Earth’s gravitational field<sup>5</sup>.</p>
+    <p>In engineering contexts the curve illustrates the geometry of equipotential surfaces in field problems (electrostatic shielding, gravitational assist trajectories, or potential flow analogs). It remains primarily of interest in classical algebraic geometry and as a teaching example of how quartic relations emerge from simple physical inverse-square laws.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://arxiv.org/html/2505.21028v1" target="_blank" rel="noopener noreferrer">https://arxiv.org/html/2505.21028v1</a> (equations with variations).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cayleyovale/cayleyovale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cayleyovale/cayleyovale.shtml</a> (history and equations).</li>
+      <li><a href="https://www.2dcurves.com/octic/octicc.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/octic/octicc.html</a> (history, equipotential lines in electromagnetic/gravitational fields).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Equipotential" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Equipotential</a> (general theory and physics context).</li>
+      <li><a href="https://en.wikipedia.org/wiki/The_Moon_Is_a_Harsh_Mistress" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/The_Moon_Is_a_Harsh_Mistress</a> (gravitational energy concept and application analogy).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CAYLEYOVAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc)
+  (defun CR (a b c / d e f g h)
+    (setq d (sin (* 2.0 c))
+          e (cos (* 2.0 c))
+          f (cos c)
+          g (/ (* b b e) (avoid_zero (* a (alt_expt d 4 nil))))
+          h (- (/ (* b b 0.25) (avoid_zero (alt_expt f 4 nil))) (alt_expt (- g a) 2 nil)))
+    h)
+  (defun CB (a b c d e / f g h i j)
+    (setq f (cr a b c)
+          g (cr a b d))
+    (if (< (abs f) e) c
+      (if (< (abs g) e) d
+        (progn
+          (setq j 0)
+          (while (< j 60)
+            (setq h (* 0.5 (+ c d))
+                  i (cr a b h))
+            (if (< (abs i) e)
+              (setq c h d h j 60)
+              (if (< (* f i) 0.0)
+                (setq d h g i)
+                (setq c h f i)))
+            (setq j (1+ j)))
+          (* 0.5 (+ c d))))))
+  (defun CF (a b c / d e f g h i j k l)
+    (setq d 1e-6
+          e 2000
+          g d
+          i (cr a b g)
+          k nil
+          l nil
+          f 1)
+    (while (and (<= f e) (or (not k) (not l)))
+      (setq h (+ d (* (/ (- (/ pi 2.0) (* 2.0 d)) e) f))
+            j (cr a b h))
+      (cond
+        ((and (not k) (< (* i j) 0.0)) (setq k (cb a b g h c)))
+        ((and k (not l) (< (* i j) 0.0)) (setq l (cb a b g h c))))
+      (setq g h
+            i j
+            f (1+ f)))
+    (if (and k l) (list k l) nil))
+  (setq id "Cayley Oval"
+        iq "x=b²·cos(2t)/(a·sin⁴(2t)), y=±√(b²/(4·cos⁴(t))-(x-a)²)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions for parameter t"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (half separation between foci)" 0.5)
+        fb (get_real 2 "b (mean distance to each focus)" 1.0)
+        fc (cf fa fb 1e-9))
+  (if (not fc)
+    (progn (prompt "\nCayley Oval: could not bracket real-branch endpoints.") (exit)))
+  (setq paramstep (/ (- (cadr fc) (car fc)) divcount)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(/ (* fb fb (cos (* 2.0 (eval a2)))) (avoid_zero (* fa (alt_expt (sin (* 2.0 (eval a2))) 4 nil))))
+        yc '(if (< (abs (- (/ (* fb fb 0.25) (avoid_zero (alt_expt (cos (eval a2)) 4 nil))) (alt_expt (- (eval xc) fa) 2 nil))) 1e-9) 0.0
+            (alt_expt (- (/ (* fb fb 0.25) (avoid_zero (alt_expt (cos (eval a2)) 4 nil))) (alt_expt (- (eval xc) fa) 2 nil)) 0.5 T))
+        a1 (car fc)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CAYLEYOVAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

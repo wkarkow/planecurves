@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nodal Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Nodal Curve</h1>
+      <p class="short-description">A polar family whose self-crossings are nodes with two distinct tangent directions.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/NodalCurve/NodalCurve01-360.avif"
+           alt="Nodal 'Kappa' Curve, a=1,b=1,c=1">
+      <figcaption>Nodal 'Kappa' Curve, a=1,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve02-360.avif"
+           alt="Nodal 'Windmill' Curve, a=1,b=1,c=2">
+      <figcaption>Nodal 'Windmill' Curve, a=1,b=1,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve03-360.avif"
+           alt="Nodal Curve, a=1,b=1,c=3">
+      <figcaption>Nodal Curve, a=1,b=1,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve04-360.avif"
+           alt="Nodal Right Strophoid Curve, a=1,b=1,c=1/2">
+      <figcaption>Nodal Right Strophoid Curve, a=1,b=1,c=1/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve05-360.avif"
+           alt="Nodal Curve, a=1,b=1,c=3/2">
+      <figcaption>Nodal Curve, a=1,b=1,c=3/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve06-360.avif"
+           alt="Nodal Curve, a=1,b=1,c=5/2">
+      <figcaption>Nodal Curve, a=1,b=1,c=5/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve07-360.avif"
+           alt="Nodal Curve, a=1,b=1,c=1/4">
+      <figcaption>Nodal Curve, a=1,b=1,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve08-360.avif"
+           alt="Nodal Curve, a=1,b=1,c=2/3">
+      <figcaption>Nodal Curve, a=1,b=1,c=2/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve09-360.avif"
+           alt="Nodal Curve, a=1,b=1,c=5/4">
+      <figcaption>Nodal Curve, a=1,b=1,c=5/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve10-360.avif"
+           alt="Generalized Curve, a=1,b=2,c=1/4">
+      <figcaption>Generalized Curve, a=1,b=2,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve11-360.avif"
+           alt="Generalized Curve, a=1,b=1/2,c=1/4">
+      <figcaption>Generalized Curve, a=1,b=1/2,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve12-360.avif"
+           alt="Generalized Curve, a=1,b=1/4,c=1/4">
+      <figcaption>Generalized Curve, a=1,b=1/4,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve13-360.avif"
+           alt="Generalized Curve, a=1,b=4,c=1/4">
+      <figcaption>Generalized Curve, a=1,b=4,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve14-360.avif"
+           alt="Generalized Curve, a=0.5,b=1/2,c=3/2">
+      <figcaption>Generalized Curve, a=0.5,b=1/2,c=3/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/NodalCurve/NodalCurve15-360.avif"
+           alt="Generalized Curve, a=2, b=1/4, c=5/4">
+      <figcaption>Generalized Curve, a=2, b=1/4, c=5/4</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Nodal Curve equation:</div>
+      \[ r = a \cdot \tan(n\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized equation:</div>
+      \[ r = a \cdot \tan^{b}(c\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The nodal curve was studied by the French mathematician and engineer Jules de La Gournerie in 1851.<sup>1,2</sup> The term “nodal” is descriptive, not commemorative. In classical algebraic geometry a node is a singular point where the curve crosses itself with two distinct tangent directions. This distinguishes nodal curves from cuspidal curves, where the two tangents coincide. The general polar form given above produces the family of nodal curves. The parameter \( a \) simply scales the figure. The exponent \( b \) controls the opening rate of the branches and the asymptotic behavior. The multiplier \( c \) of \( \theta \) determines the angular spacing of the branches; when \( c \) is rational with numerator \( p \) and denominator \( q \), the curve consists of a finite number of branches (\( 2p \) or \( p \) depending on the parity of \( q \)) that close after an appropriate multiple of \( 2\pi \). For integer values of \( b \) the curve is algebraic of degree \( 2b + 2 \). The base branch appears for \( \theta \) near 0; as \( \theta \) passes through multiples of \( \pi/(2c) \) the tangent function changes sign and the radius vector returns to the origin from a new direction, creating the node. The curve also possesses an infinite branch extending outward. This polar family is the Brocard transform of the kappa curve when the pole is placed at the center of the kappa. All nodal curves are stereographic projections of the Clelia curve.</p>
+    <p>No direct applications in engineering or the natural sciences are documented in the standard curve compendia.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/noeud/noeud.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/noeud/noeud.shtml</a> (history, polar equation, Brocard transform of kappa, branch structure)</li>
+      <li><a href="https://www.2dcurves.com/higher/higherno.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/higher/higherno.html</a> (La Gournerie 1851, algebraic degree, specific cases such as kappa for b=1 and windmill for b=2)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:NODALCURVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Nodal Curve"
+        iq "r=a·tanᵇ(cθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (exponent)" 1.0)
+        fc (get_real 2 "c (θ multiplier)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        rval '(* fa (alt_expt (/ (sin (* fc (eval a2))) (avoid_zero (cos (* fc (eval a2))))) fb nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 10.0)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:NODALCURVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

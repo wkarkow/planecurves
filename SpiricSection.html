@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spiric Section - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Spiric Section</h1>
+      <p class="short-description">A bicircular quartic formed by cutting a torus with a plane parallel to its axis.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SpiricSection/SpiricSection01-360.avif"
+           alt="Spiric Section, a=1,c=3,multiple values of r">
+      <figcaption>
+        Spiric Section, a=1,c=3,r=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">1.75</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.25</span>,
+        <span class="figcap-value" style="color:#0096FF">2.5</span>,
+        <span class="figcap-value" style="color:#AA5555">2.75</span>,
+        <span class="figcap-value" style="color:#00FF00">3.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">3.25</span>,
+        <span class="figcap-value" style="color:#009696">3.5</span>,
+        <span class="figcap-value" style="color:#960096">3.75</span>,
+        <span class="figcap-value" style="color:#969600">3.90</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SpiricSection/SpiricSection02-360.avif"
+           alt="Spiric Section, a=3,c=3,multiple values of r">
+      <figcaption>
+        Spiric Section, a=3,c=3,r=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.5</span>,
+        <span class="figcap-value" style="color:#0096FF">3.0</span>,
+        <span class="figcap-value" style="color:#AA5555">3.5</span>,
+        <span class="figcap-value" style="color:#00FF00">4.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">4.5</span>,
+        <span class="figcap-value" style="color:#009696">5.0</span>,
+        <span class="figcap-value" style="color:#960096">5.5</span>,
+        <span class="figcap-value" style="color:#969600">5.95</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SpiricSection/SpiricSection03-360.avif"
+           alt="Spiric Section, a=3,c=1,multiple values of r">
+      <figcaption>
+        Spiric Section, a=3,c=1,r=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.25</span>,
+        <span class="figcap-value" style="color:#009600">0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">0.75</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">2.0</span>,
+        <span class="figcap-value" style="color:#00FF00">2.5</span>,
+        <span class="figcap-value" style="color:#FF00FF">3.0</span>,
+        <span class="figcap-value" style="color:#009696">3.5</span>,
+        <span class="figcap-value" style="color:#960096">3.75</span>,
+        <span class="figcap-value" style="color:#969600">3.90</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Spiric Section Cartesian equation:</div>
+      \[ (x^{2}+y^{2}+r^{2}+c^{2}-a^{2})^{2}=4c^{2}(x^{2}+r^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Spiric Section parametric equations:</div>
+      \[ x=\sqrt{(c+a\cos t)^{2}-r^{2}},\qquad y=a\sin t \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The spiric section<sup>1,2</sup>, also known as the spiric of Perseus, is the plane curve formed by cutting a torus with a plane parallel to its axis of symmetry. Perseus, a Greek mathematician active around 150 BC, first studied these curves while examining sections of a “spira” (torus). The resulting quartic is one of the classical toric sections; its shape depends on the torus parameters (tube radius \(a\), distance from origin to tube center \(c\)) and the cutting-plane offset \(r\). For engineers and draftsmen the curve is most easily understood as the 2-D trace left when a circular tube is sliced by a flat plane. When \(c &gt; a\) the torus is a ring and the section is a single closed loop. When \(c = a\) the tube touches the axis and the section becomes a lemniscate-like figure. When \(c &lt; a\) the torus is a spindle and the section consists of two separate closed loops (outer and inner branches). The parametric form given below directly follows from parametrizing the circular tube cross-section and projecting the intersection back onto the drawing plane; it is algebraically equivalent to the implicit Cartesian equation for all real values of the parameters.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In photoelasticity the spiric section models stress patterns visible in transparent models under polarized light.<sup>3</sup> In quantum mechanics the same algebraic form describes the probability density contours of electrons confined in double quantum dots.<sup>4</sup> The curve also appears in certain optical systems that employ toroidal mirrors or lenses.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/SpiricSection.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/SpiricSection.html</a> (history, torus construction, equations, special cases including Cassini ovals)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Spiric/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Spiric/</a> (MacTutor history of Perseus, 150 BC, and torus-plane intersections)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/spiricdeperseus/spiricdeperseus.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/spiricdeperseus/spiricdeperseus.shtml</a> (spiric of Perseus definition, isoptic property, photoelasticity application)</li>
+      <li><a href="https://www.statisticshowto.com/spiric-section-definition-examples/" target="_blank" rel="noopener noreferrer">https://www.statisticshowto.com/spiric-section-definition-examples/</a> (quantum mechanics Double Quantum Dot application)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Spiric_section" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Spiric_section</a> (toric sections overview and relation to hippopedes/Cassini ovals)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SPIRICSECTION (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                          restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd  fe ff fg fh fi fj)
+  (setq id "Spiric Section"
+        iq "x=√[(c+a·cos(t))²−r²], y=a·sin(t)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions in half-curve"
+        dct 720
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (tube radius)" 1.0)
+        fb (get_real 2 "c (distance from origin to tube center)" 3.0)
+        fc (get_real 0 "r (cutting plane y-offset)" 0.5)
+        fg (abs fc)
+        ff (/ (- fg fb) fa)
+        fe (cond ((&lt;= ff -1.0) pi) ((&gt;= ff 1.0) 0.0) (T (acos ff)))
+        fj (and (&lt; fb fa) (&lt;= fg (- fa fb)))
+        fd (if fj (get_keyword 0 "Outer Inner" "draw Inner or Outer branch?" "Outer") "Outer")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", c=" (rtos fb 2 4) ", r=" (rtos fc 2 4) ", branch=" fd)
+        xc '(if (&lt;= (- (alt_expt (+ fb (* fa (cos (eval a2)))) 2 nil) (* fc fc)) 1e-9) 0.0 (alt_expt (- (alt_expt (+ fb (* fa (cos (eval a2)))) 2 nil) (* fc fc)) 0.5 nil))
+        yc '(* fa (sin (eval a2))))
+  (if (eq fd "Outer") (setq paramstep (/ (* 2.0 fe) divcount) a1 (- fe)) (progn (setq fh (/ (- (- fg) fb) fa) fi (acos fh) paramstep (/ (- (* 2.0 pi) (* 2.0 fi)) divcount) a1 fi)))
+  (setq a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc)
+        skm '(nil T T))
+  (cc)
+  (princ))
+(C:SPIRICSECTION)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

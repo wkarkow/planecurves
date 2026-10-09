@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dahlia Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Dahlia Curve</h1>
+      <p class="short-description">A multi-ring epicycloid-based curve with radially stretched and width-modulated petals arranged in concentric rings with half-petal angular offsets, designed to model the dahlia flower.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Dahlia/Dahlia01-360.avif"
+           alt="Dahlia Curve, R=1,p=18,L=0.5,w=1 (outer petals) R=0.001,p=72,L=1,w=1 (inner stamen)">
+      <figcaption>Dahlia Curve, R=1,p=18,L=0.5,w=1 (outer petals) R=0.001,p=72,L=1,w=1 (inner stamen)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Dahlia/Dahlia02-360.avif"
+           alt="Sunflower, R=0.5,p=24,L=2.0,w=1 (outer petals), Fermat spiral, a=0.4,θ=90°,mirrored,polar array of 32 (inner seeds)">
+      <figcaption>Sunflower, R=0.5,p=24,L=2.0,w=1 (outer petals), Fermat spiral, a=0.4,θ=90°,mirrored,polar array of 32 (inner seeds)</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Dahlia petal parametric equations:</div>
+      \[ x = \left(R + s\left[r_e^{(w)}(\theta) - R\right]\right) \dfrac{x_e^{(w)}(\theta)}{r_e^{(w)}(\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label"></div>
+      \[ y = \left(R + s\left[r_e^{(w)}(\theta) - R\right]\right) \dfrac{y_e^{(w)}(\theta)}{r_e^{(w)}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>In light of the wonderful Butterfly and Chrysanthemum curves by Temple H. Fay, the Dahlia curve is an attempt to model the dahlia flower that consists of elliptical petals arranged in concentric epicycloid rings. To do this the code is conceived in the following stages:</p>
+    <ol>
+      <li>Start with a basic epicycloid curve to create a ring of petals with a parameters for inner ring diameter and petal count per ring.</li>
+      <li>Modify the petal geometry by radially stretching the loops to resemble petals with parameters to stretch the petal length for all rings.</li>
+      <li>Modify it further by including a parameter to change petal width.</li>
+      <li>Stack rings concentrically with parameters of beginning radius for the petals as a whole, inner ring radius for each ring, subsequently adding rings with a half-petal angular offset per ring.</li>
+      <li>Clip the inner portions of subsequent rings that overlap the previous rings.</li>
+      <li>Use the code with new parameters to create a central fill design.</li>
+    </ol>
+    <p>Deriving the equations:</p>
+    <ol>
+      <li>For an epicycloid, \( x_e(\theta) = (R + r)\cos\theta - r\cos\left(\dfrac{R + r}{r}\theta\right) \), \( y_e(\theta) = (R + r)\sin\theta - r\sin\left(\dfrac{R + r}{r}\theta\right) \).</li>
+      <li>For a base circle of radius \( R \) and rolling circle radius \( r \), if the ratio \( \dfrac{R}{r} \) is an integer, the number of petals (or cusps) is \( p = \dfrac{R}{r} + 1 \).</li>
+      <li>This epicycloid equation is modified to simplify calculation by redefining \( p = \dfrac{R}{r} \) instead so that \( (R + r) = \dfrac{(p + 1)R}{p} \). In this modified form, \( r \) is no longer a true rolling circle radius, and the petals are slightly widened in order to create exactly \( p \) petals rather than \( p + 1 \).</li>
+      <li>Substituting this modified \( r = \dfrac{R}{p} \) into (1) gives \( x_e(\theta) = \dfrac{(p + 1)R}{p}\cos\theta - \dfrac{R}{p}\cos((p + 1)\theta) \), \( y_e(\theta) = \dfrac{(p + 1)R}{p}\sin\theta - \dfrac{R}{p}\sin((p + 1)\theta) \).</li>
+      <li>For realism, to stretch the petals beyond the base circle, the radial distance is computed as \( r_e(\theta) = \sqrt{x_e^{2}(\theta) + y_e^{2}(\theta)} \), enabling a scaling factor to be applied to the portion of the curve lying beyond the base radius \( R \).</li>
+      <li>To create elongated petals, a target petal tip length \( L \) (beyond the base radius \( R \)) is defined. The additional distance beyond \( R \) is scaled relative to the maximum epicycloid radius \( R_{\max} \) using \( s = \dfrac{L - R}{R_{\max} - R} \) where \( r_e(\theta) \) is the unmodified epicycloid radius. The final radial distance is then \( r(\theta) = R + s[r_e(\theta) - R] \).</li>
+      <li>To give each petal a more realistic, narrower shape, the cosine and sine components are raised to a width factor \( w &gt; 0 \). The modified base functions are \( x_e^{(w)}(\theta) = \dfrac{(p + 1)R}{p}\cos^{w}\theta - \dfrac{R}{p}\cos^{w}((p + 1)\theta) \), \( y_e^{(w)}(\theta) = \dfrac{(p + 1)R}{p}\sin^{w}\theta - \dfrac{R}{p}\sin^{w}((p + 1)\theta) \). The radius calculation from step 5 becomes \( r_e^{(w)}(\theta) = \sqrt{x_e^{(w)2}(\theta) + y_e^{(w)2}(\theta)} \).</li>
+      <li>The fully adjusted Dahlia petal curve is given by:
+        \[ x(\theta) = \left(R + s\left[r_e^{(w)}(\theta) - R\right]\right) \dfrac{x_e^{(w)}(\theta)}{r_e^{(w)}(\theta)} \]
+        \[ y(\theta) = \left(R + s\left[r_e^{(w)}(\theta) - R\right]\right) \dfrac{y_e^{(w)}(\theta)}{r_e^{(w)}(\theta)} \]
+        where:<br>
+        \( R \) = base circle radius (fa in code), \( p \) = number of petals (fb in code), \( L \) = petal tip length (or radius) (fc in code)<br>
+        \( w \) = width exponent (fd in code), \( s \) = scaling factor as computed above
+      </li>
+    </ol>
+    <p>A note: The user is given the option to clip portions of subsequent rings plotted inside previous rings. At best depending on the radius chosen, the clipping will be a bit too short or too long. At a typical visual scale, the automated clipping will be good enough if one selects the intersection between the previous petal and a new petal drawn before completing the new ring. But for ultimate precision, use the Trim command. This was not automated due to the slow processing when hundreds or thousands of segments are in play for intact rings but becomes less of a problem once the rings are interrupted by clipping. </p>
+  </section>
+
+    <section>
+    <h2>References</h2>
+    <p>This curve is the author's creation, no references sought.</p>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DAHLIA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                  id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 a3 x3 y3 prev_a1 prev_x1 prev_y1 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr)
+  (setq id "Dahlia"
+        iq ""
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "R (inner ring radius)" 1.0)
+        fb (get_boundi 6 "p (# of petals per ring, 3-100)" 18 3 100 T T)
+        fc (get_boundr 6 "L (petal length)" 0.5 0.1 20.0 T T)
+        fd (get_boundr 6 "w (petal width exponent, 0.1-10)" 1.0 0.1 10.0 T T)
+        eq_display (strcat "\nR=" (rtos fa 2 4) ", p=" (itoa fb) ", L=" (rtos fc 2 4) ", w=" (rtos fd 2 4))
+        fe (/ (* (+ fb 1) fa) fb)
+        ff (/ fa fb)
+        fg (+ fb 1)
+        fh (/ fc (alt_expt (- (* (/ (+ fb 2.0) fb) fa) fa) fd nil))
+        fi '(- (* fe (cos (eval a2))) (* ff (cos (* fg (eval a2)))))
+        fj '(- (* fe (sin (eval a2))) (* ff (sin (* fg (eval a2)))))
+        fk '(alt_expt (+ (* (eval fi) (eval fi)) (* (eval fj) (eval fj))) 0.5 nil)
+        xc '(* (/ (+ fa (* fh (alt_expt (- (eval fk) fa) fd nil))) (eval fk)) (eval fi))
+        yc '(* (/ (+ fa (* fh (alt_expt (- (eval fk) fa) fd nil))) (eval fk)) (eval fj))
+        fl nil
+        a1 (- paramstep)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (prompt baseinfo)
+  (prompt eq_display)
+  (setvar "osmode" 0)
+  (repeat divcount
+    (setq a3 (eval a2)
+          x3 (eval x2)
+          y3 (eval y2)
+          prev_a1 a1
+          prev_x1 x1
+          prev_y1 y1
+          a1 a3
+          x1 x3
+          y1 y3)
+    (if (not fl)
+      (progn
+        (command "pline" (list (+ x0 (* x3 cosangle) (- (* y3 sinangle))) (+ y0 (* y3 cosangle) (* x3 sinangle))))
+        (setq fl T))
+      (command (list (+ x0 (* x3 cosangle) (- (* y3 sinangle))) (+ y0 (* y3 cosangle) (* x3 sinangle))))))
+  (if fl
+    (command "" "pedit" "l" "c" "f" ""))
+  (setq fm (get_keyword 0 "Yes No" "Add next ring?" "No"))
+  (while (eq fm "Yes")
+    (setq fn fa
+          fo fc
+          fa (get_real 6 (strcat "\nR (inner ring radius for next ring) <" (rtos (+ fn (/ fo 2.0)) 2 4) ">: ") (+ fn (/ fo 2.0)))
+          fc (get_real 6 (strcat "\nL (petal length for next ring) <" (rtos fc 2 4) ">: ") fc)
+          fe (/ (* (+ fb 1) fa) fb)
+          ff (/ fa fb)
+          fg (+ fb 1)
+          fh (/ fc (alt_expt (- (* (/ (+ fb 2.0) fb) fa) fa) fd nil))
+          fi '(- (* fe (cos (eval a2))) (* ff (cos (* fg (eval a2)))))
+          fj '(- (* fe (sin (eval a2))) (* ff (sin (* fg (eval a2)))))
+          fk '(alt_expt (+ (* (eval fi) (eval fi)) (* (eval fj) (eval fj))) 0.5 nil)
+          xc '(* (/ (+ fa (* fh (alt_expt (- (eval fk) fa) fd nil))) (eval fk)) (eval fi))
+          yc '(* (/ (+ fa (* fh (alt_expt (- (eval fk) fa) fd nil))) (eval fk)) (eval fj))
+          xaxisangle (+ xaxisangle (/ pi fb)))
+    (command "snap" "r" basept (* 180 (/ xaxisangle pi)))
+    (setq cosangle (cos xaxisangle)
+          sinangle (sin xaxisangle)
+          fp (fix (/ divcount (* 2 fb)))
+          a1 (- paramstep)
+          a2 a1
+          x1 (eval xc)
+          y1 (eval yc)
+          a2 '(+ a1 paramstep)
+          x2 '(eval xc)
+          y2 '(eval yc)
+          fl nil)
+    (repeat fp
+      (setq a3 (eval a2)
+            x3 (eval x2)
+            y3 (eval y2)
+            prev_a1 a1
+            prev_x1 x1
+            prev_y1 y1
+            a1 a3
+            x1 x3
+            y1 y3)
+      (if (not fl)
+        (progn
+          (command "pline" (list (+ x0 (* x3 cosangle) (- (* y3 sinangle))) (+ y0 (* y3 cosangle) (* x3 sinangle))))
+          (setq fl T))
+        (command (list (+ x0 (* x3 cosangle) (- (* y3 sinangle))) (+ y0 (* y3 cosangle) (* x3 sinangle))))))
+    (if fl (command ""))
+    (setvar "snapmode" 0)
+    (setq fq (getdist '(0.0 0.0) "\nPick intersection radius for clipping this ring's petals: "))
+    (command "erase" "last" "")
+    (setq a1 (- paramstep)
+          a2 a1
+          x1 (eval xc)
+          y1 (eval yc)
+          a2 '(+ a1 paramstep)
+          x2 '(eval xc)
+          y2 '(eval yc)
+          fl nil)
+    (repeat divcount
+      (setq a3 (eval a2)
+            x3 (eval x2)
+            y3 (eval y2)
+            prev_a1 a1
+            prev_x1 x1
+            prev_y1 y1
+            a1 a3
+            x1 x3
+            y1 y3
+            fr (alt_expt (+ (* x3 x3) (* y3 y3)) 0.5 nil))
+      (if (< fr fq)
+        (progn
+          (if fl
+            (progn
+              (command "")
+              (setq fl nil))))
+        (progn
+          (if (not fl)
+            (progn
+              (command "pline" (list (+ x0 (* x3 cosangle) (- (* y3 sinangle))) (+ y0 (* y3 cosangle) (* x3 sinangle))))
+              (setq fl T))
+            (command (list (+ x0 (* x3 cosangle) (- (* y3 sinangle))) (+ y0 (* y3 cosangle) (* x3 sinangle))))))))
+    (if fl
+      (command "" "pedit" "l" "c" "f" ""))
+    (setq fm (get_keyword 0 "Yes No" "Add next ring?" "No")))
+  (setvar "osmode" os)
+  (setvar "orthomode" om)
+  (setvar "snapmode" sm)
+  (setvar "snapbase" sb)
+  (setvar "snapang" sa)
+  (setvar "cmdecho" cd)
+  (princ))
+(C:DAHLIA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

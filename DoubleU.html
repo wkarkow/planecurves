@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Double-U Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Double-U Curve</h1>
+      <p class="short-description">Image of a circle under axial inversion; two unbounded "U" branches with vertical asymptotes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/DoubleU/DoubleU01-360.avif"
+           alt="Double-U Curve, a=1">
+      <figcaption>Double-U Curve, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Double-U Curve parametric equations:</div>
+      \[ x = a \cdot \sin(t),\quad y = a \cdot \sec(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Double-U Curve Cartesian equation:</div>
+      \[ y = \dfrac{a^{2}}{\sqrt{a^{2} - x^{2}}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Double-U curve<sup>1</sup>, listed on Mathcurve with the description “image of the circle by an axial inversion,” is not associated with a classical named mathematician but arises from 19th-century developments in inversion geometry and reciprocal transformations. During that period, mathematicians studying geometric transformations—particularly those related to potential theory and conformal mapping—investigated how simple figures such as circles change under operations involving reciprocal distance. While circular inversion became the dominant formalism, axial inversion represents a simpler directional variant: distances measured perpendicular to a fixed line are replaced by their reciprocals. Applying this operation to a circle using one of its diameters produces the Double-U shape, converting the bounded circular form into two unbounded branches separated by vertical asymptotes.</p>
+    <p>Although primarily of geometric interest, the curve serves as an illustration of reciprocal barrier behavior: bounded figures may become unbounded under inversion, and finite distances may map to asymptotic growth. In lubrication theory, pressure in a thin fluid film can increase approximately as \( p \propto 1/h \) as the film thickness \( h \) approaches zero, creating a strong resistance to contact—effectively a “soft barrier.” Similar reciprocal structures appear in electrostatics and optimization penalties where a quantity diverges as a boundary is approached. Its functional form \( y = 1/\sqrt{a^{2}-x^{2}} \) is similar to the probability density of the arcsine distribution, \( 1/(\pi\sqrt{x(1-x)}) \).<sup>2</sup> In physics, that distribution describes the proportion of time a particle in simple harmonic motion spends near a given position between its amplitude limits. It also governs the arcsine law in Brownian motion<sup>3</sup>, the probability distribution of the time a one-dimensional random walk or diffusion process spends positive, and appears in random-walk theory more generally<sup>4</sup>. In engineering and metrology contexts involving cyclic or sinusoidal processes, the same \( 1/(\pi\sqrt{x(1-x)}) \) dependence models the statistical distribution of phase-related measurements under bounded oscillatory conditions.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/double_u/double_u.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/double_u/double_u.shtml</a> (definition and axial inversion description)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Arcsine_distribution" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Arcsine_distribution</a> (definition, density function, and relation to the curve shape)</li>
+      <li><a href="https://ocw.mit.edu/courses/18-366-random-walks-and-diffusion-fall-2006/cb36a29377805f94de0b717c9b017f52_lec14_06.pdf" target="_blank" rel="noopener noreferrer">https://ocw.mit.edu/courses/18-366-random-walks-and-diffusion-fall-2006/cb36a29377805f94de0b717c9b017f52_lec14_06.pdf</a> (Brownian motion)</li>
+      <li><a href="https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)/05%3A_Special_Distributions/5.19%3A_The_Arcsine_Distribution" target="_blank" rel="noopener noreferrer">https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)/05%3A_Special_Distributions/5.19%3A_The_Arcsine_Distribution</a> (physics applications including harmonic motion)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DOUBLEU (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Double-U Curve"
+        iq "x=a·sin(t), y=a·sec(t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt '(5.0 0.0)
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(* fa (sin (eval a2)))
+        yc '(* fa (sec (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DOUBLEU)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Witch of Agnesi - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Witch of Agnesi</h1>
+      <p class="short-description">Symmetric bell with a horizontal asymptote, drawn as x = a tan(t), y = b [cos(t)]^c.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Witch/Witch01-360.avif"
+           alt="Witch of Agnesi, classic,a=1,b=1,c=2">
+      <figcaption>Witch of Agnesi, classic,a=1,b=1,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Witch/Witch02-360.avif"
+           alt="Witch of Agnesi, Cauchy PDF,a=1,b=1/pi,c=2">
+      <figcaption>Witch of Agnesi, Cauchy PDF,a=1,b=1/π,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Witch/Witch03-360.avif"
+           alt="Witch of Agnesi, multiple values of a,b=1,c=2">
+      <figcaption>
+        Witch of Agnesi,a=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>,
+        <span class="figcap-value" style="color:#0096FF">4.0</span>,
+        b=1,c=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Witch/Witch04-360.avif"
+           alt="Witch of Agnesi, a=1,multiple values of b,c=2">
+      <figcaption>
+        Witch of Agnesi, a=1,b=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>,
+        <span class="figcap-value" style="color:#0096FF">4.0</span>,
+        c=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Witch/Witch05-360.avif"
+           alt="Witch of Agnesi, a=1,b=4,multiple values of c">
+      <figcaption>
+        Witch of Agnesi, a=1,b=4,c=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>,
+        <span class="figcap-value" style="color:#9600FF">4.0</span>,
+        <span class="figcap-value" style="color:#0096FF">5.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Witch/Witch06-360.avif"
+           alt="Witch of Agnesi, b=4, multiple combinations of a and c">
+      <figcaption>
+        Witch of Agnesi, b=4,
+        <span class="figcap-value" style="color:#000000">a=0.25,c=0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">a=0.5,c=1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">a=1.0,c=2.0</span>,
+        <span class="figcap-value" style="color:#009600">a=1.5,c=3.0</span>,
+        <span class="figcap-value" style="color:#FF9600">a=2.0,c=4.0</span>,
+        <span class="figcap-value" style="color:#9600FF">a=2.5,c=5.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 400px;">
+    <div class="equation-line">
+      <div class="equation-label">Witch of Agnesi Curve Cartesian equation:</div>
+      \[ y = \dfrac{b \, a^{2}}{a^{2} + x^{2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Cartesian equations:</div>
+      \[ y = \dfrac{b \, a^{c}}{(a^{2} + x^{2})^{c/2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Witch of Agnesi Curve parametric equations:</div>
+      \[ x = a \cdot \tan(t), \quad y = b \cdot \cos(t)^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = a \cdot \tan(t), \quad y = b \cdot \cos(t)^{c} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Witch of Agnesi<sup>1,2,3</sup>, named after Maria Gaetana Agnesi (1718–1799), is a plane curve that she presented in her 1748 calculus textbook <em>Instituzioni analitiche ad uso della gioventù italiana</em>, the first major calculus work written by a woman. The curve had been studied earlier by Pierre de Fermat around 1630 and by Guido Grandi in 1703. Agnesi called it <em>versiera</em>, a nautical term for a rope that turns a sail or a versed sine curve; the English name “witch” arose from a mistranslation of <em>versiera</em> as <em>avversiera</em> (“she-devil”) by John Colson in 1801.</p>
+    <p>The same functional form appears in the natural sciences and engineering as the Lorentzian (or Cauchy) profile. In physics it models resonance phenomena in electrical circuits, where power dissipation near the resonant frequency follows this symmetric bell shape that falls off with distance from the peak. The identical shape describes the intensity distribution of spectral lines in optics and spectroscopy<sup>4</sup>, giving the characteristic linewidth caused by natural (homogeneous) broadening or pressure effects; the same Lorentzian profile governs line shapes in nuclear magnetic resonance (NMR) spectra because the Fourier transform of an exponential free-induction decay is Lorentzian.<sup>5</sup> In particle physics the Breit–Wigner distribution, which is mathematically a Lorentzian, describes the energy distribution of resonant particles.</p>
+    <p>As the probability density function of the Cauchy distribution, the curve is used in hydrology to model extreme events such as annual maximum one-day rainfalls and river discharges, where heavy tails capture the higher probability of rare, catastrophic floods compared with normal distributions. In signal processing and communications engineering the Cauchy distribution models noise and interference that exhibit occasional large spikes. The curve also approximates the cross-section of smooth hills and serves as a generic topographic obstacle in mathematical modeling of fluid flow; solitary waves in deep water can take this shape as well.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/WitchofAgnesi.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/WitchofAgnesi.html</a> (history and equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/agnesi/agnesi.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/agnesi/agnesi.shtml</a> (history, Cauchy probability function)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubicr.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubicr.html</a> (history, resonance curve naming)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Cauchy_distribution" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Cauchy_distribution</a> (spectroscopy, NMR, hydrology, resonance applications)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Spectral_line_shape" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Spectral_line_shape</a> (Lorentzian line shapes in NMR and optics)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:WITCH (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Witch of Agnesi"
+        iq "x=fa·tan(t), y=fb·(cos(t))^{fc}"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions to x-span of division point"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (horizontal scale / width control)" 1.0)
+        fb (get_real 2 "b (peak height, 1/π for Cauchy Distribution if a=1)" 0.31830988618)
+        fc (get_real 2 "c (exponent on cos(t); higher values narrow the peak, 2 for Cauchy Distribution)" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        xc '(* fa (tan (eval a2)))
+        yc '(* fb (alt_expt (cos (eval a2)) fc nil))
+        skm '(T nil T)
+        a1 (/ pi -2.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:WITCH)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

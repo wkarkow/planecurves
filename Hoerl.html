@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoerl Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hoerl Curve</h1>
+      <p class="short-description">A power-exponential product curve that starts at the origin, rises to a single peak at x = b/c, and then decays exponentially to zero.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Hoerl/Hoerl01-360.avif"
+           alt="Hoerl Curve, a=5,multiple values of b, c=1">
+      <figcaption>
+        Hoerl Curve, a=5,b=
+        <span class="figcap-value" style="color:#000000">4.0</span>,
+        <span class="figcap-value" style="color:#FF0000">3.5</span>,
+        <span class="figcap-value" style="color:#0000FF">3.0</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        c=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hoerl/Hoerl02-360.avif"
+           alt="Hoerl Curve, a=5,b=4,multiple values of c">
+      <figcaption>
+        Hoerl Curve, a=5,b=4,c=
+        <span class="figcap-value" style="color:#000000">1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.2</span>,
+        <span class="figcap-value" style="color:#0000FF">1.4</span>,
+        <span class="figcap-value" style="color:#009600">1.6</span>,
+        <span class="figcap-value" style="color:#FF9600">1.8</span>,
+        <span class="figcap-value" style="color:#9600FF">2.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Hoerl Curve Cartesian equation:</div>
+      \[ y = a \, x^{b} \, e^{-c x} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Hoerl curve<sup>1</sup>, also known as the Hoerl function, takes the form \( y = a \cdot x^{b} \cdot e^{-c x} \). It is named after statistician Arthur E. Hoerl, who presented practical methods for fitting curves of this type to data in the 1954 Chemical Business Handbook.<sup>2</sup> The function combines a power-law term with exponential decay. For positive \(a, b\), and \(c\), the curve starts at the origin, rises with an initially increasing then decreasing positive slope to a single peak at \(x=\frac{b}{c}\), and then decays exponentially toward zero as \(x\) grows large. This shape arises directly from the competing effects of the power term (which can accelerate early growth) and the exponential decay (which dominates at larger \(x\)).</p>
+    <p>In engineering and the natural sciences the curve serves as a standard parametric model for data that exhibit a rise followed by exponential tail-off. Actuarial science employs it extensively for stochastic claims reserving in general insurance.<sup>3</sup> There the shape matches the typical pattern of incremental claim payments over development periods: payments increase rapidly at first and then decline. In physics, the specific case \(a=-1\) (with \(x\) replaced by distance) appears in models of the strong nuclear force between nucleons.<sup>1</sup> In acoustics and psychoacoustics, the case \(a=1\) contributes to auditory filter models that describe frequency selectivity in the human inner ear; when summed with an exponential term it yields the rounded-exponential (roex) filter.<sup>1</sup> The reciprocal of the Hoerl curve describes vapor-pressure relationships in thermodynamics.<sup>1</sup> In agriculture and ecology, it describes growth rates constrained by nutrient depletion or competition. In forestry, it models annual biomass increment versus tree age. In reliability studies, it can approximate unimodal hazard functions where a failure rate first increases and then decreases. It endures mainly as a flexible empirical model rather than any fundamental law.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialho.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialho.html</a> (definition as Hoerl curve; strong nuclear force, auditory filters, vapor-pressure curve)</li>
+      <li><a href="https://a100.gov.bc.ca/pub/eirs/viewDocumentDetail.do?fromStatic=true&repository=BDP&documentId=15298" target="_blank" rel="noopener noreferrer">https://a100.gov.bc.ca/pub/eirs/viewDocumentDetail.do?fromStatic=true&repository=BDP&documentId=15298</a> (Hoerl's equation for curve-fitting, p. 60 of pdf)</li>
+      <li><a href="https://www.researchgate.net/publication/228480205_Stochastic_Claims_Reserving_in_General_Insurance" target="_blank" rel="noopener noreferrer">England, P.D. and Verrall, R.J. (2002) “Stochastic Claims Reserving in General Insurance,” <em>British Actuarial Journal</em> 8(3): 443–518</a> (actuarial run-off modeling with Hoerl/gamma curve, p.13 of pdf)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HOERL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Hoerl Curve"
+        iq "y=a·xᵇ·e^(-c·x)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(20.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (power)" 2.0)
+        fc (get_real 2 "c (decay)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        xc '(eval a2)
+        yc '(* fa (alt_expt (eval a2) fb nil) (exp (- (* fc (eval a2)))))
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HOERL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

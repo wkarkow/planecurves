@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lintearia - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Lintearia</h1>
+      <p class="short-description">The equilibrium profile of a rectangular, flexible, inextensible, weightless sheet hung between two parallel bars at the same height and filled with water to the bar level; a member of the elastica family in which curvature is proportional to depth.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Lintearia/Lintearia01-360.avif"
+           data-caption="Lintearia, a=1,k=0.0(black),0.1(red),0.2(blue),0.3(green),0.4(orange),0.5(purple),0.6(cyan),0.7(brown),0.8(lime),0.9(magenta),1.0(teal),1.5(plum)"
+           alt="Lintearia, a=1,k=0.0(black),0.1(red),0.2(blue),0.3(green),0.4(orange),0.5(purple),0.6(cyan),0.7(brown),0.8(lime),0.9(magenta),1.0(teal),1.5(plum)">
+      <figcaption>
+        Lintearia, a=1,k=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>,
+        <span class="figcap-value" style="color:#009696">0.95</span>,
+        <span class="figcap-value" style="color:#960096">0.999</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Lintearia/Lintearia02-360.avif"
+           data-caption="Lintearia, a=1,k=0.0(black),-0.1(red),-0.2(blue),-0.3(green),-0.4(orange),-0.5(purple),-0.6(cyan),-0.7(brown),-0.8(lime),-0.9(magenta),-1.0(teal),-1.5(plum)"
+           alt="Lintearia, a=1,k=0.0(black),-0.1(red),-0.2(blue),-0.3(green),-0.4(orange),-0.5(purple),-0.6(cyan),-0.7(brown),-0.8(lime),-0.9(magenta),-1.0(teal),-1.5(plum)">
+      <figcaption>
+        Lintearia, a=1,k=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">-0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">-0.2</span>,
+        <span class="figcap-value" style="color:#009600">-0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">-0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">-0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">-0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">-0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">-0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">-0.9</span>,
+        <span class="figcap-value" style="color:#009696">-1.0</span>,
+        <span class="figcap-value" style="color:#CC6600">-1.5</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Lintearia parametric equations:</div>
+      \[ x=\dfrac{a}{2}\int_{0}^{t}\dfrac{\cos u}{\sqrt{\cos u-k}}\,du,\qquad y=-a\sqrt{\cos t-k} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The lintearia curve<sup>1,2</sup> was posed and solved by Jacques Bernoulli in 1692. He named it <em>lintearia</em> after the Latin <em>linteum</em>, a linen cloth. It describes the equilibrium profile taken by a rectangular, flexible, inextensible, and weightless tarpaulin (or linen sheet) suspended between two parallel horizontal bars at the same height and filled with water up to the level of the supporting bars in a uniform gravitational field. Two vertical planes limit the sideways flow of water. The hydrostatic pressure increases linearly with depth, producing a curvature directly proportional to that depth. In the parametric equations used here, the parameter <em>k</em> controls the sag: smaller <em>k</em> produces deeper, more pronounced curvature. The same curve is identical to a member of the classical elastic-rod family, also known as the elastica.<sup>2,3</sup> The elastic curve itself arises when a thin elastic rod is bent in a plane by end moments or forces such that its curvature remains proportional to distance from a fixed directrix line. Bernoulli’s solution for the lintearia thus provided one of the earliest exact treatments of what later became known as the elastica problem.</p>
+    <p>The radicand \(\cos t-k\) is non-negative only for \(|t|\le\arccos k\) with \(k&lt;1\). The AutoLISP routine remaps that interval onto a fixed parameter span of 180° by setting the integration variable equal to \(\arccos(k)\sin c\) with \(c\) running from \(-\pi/2\) to \(\pi/2\), so the full open profile is drawn without the user having to compute the cutoff angle. Scale factor \(a\) sets overall size; \(k\) sets shape. As \(k\) approaches 1 the sag vanishes and the profile flattens toward the waterline. As \(k\) decreases the trough deepens.</p>
+    <p>Real-life applications occur where flexible membranes or sheets enclose liquid under gravity or where thin elastic elements bend under load. The primary documented case is the tarpaulin itself: any hanging, water-filled flexible rectangular container assumes this exact profile.<sup>1</sup> The underlying mechanics also govern the cross-section of certain hydrostatic loading problems on membranes and the equilibrium shape of related 3D surfaces such as dangling drops. The broader elastic-curve family, of which the lintearia is a special instance, supplies the exact shape assumed by bent elastic rods or splines under controlled end conditions; this has been used in mechanical analysis of flexible members in structures and in the historical development of variational methods that underpin modern spline-based design tools.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/chainette/bachette.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/chainette/bachette.shtml</a> (history, physical tarpaulin model, and parametrization)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/linteaire/linteaire.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/linteaire/linteaire.shtml</a> (elastic-curve equivalence and curvature proportionality)</li>
+      <li><a href="https://escholarship.org/uc/item/5pz1r4vg" target="_blank" rel="noopener noreferrer">https://escholarship.org/uc/item/5pz1r4vg</a> (inclusion of elastica / lintearia in spline design)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LINTEARIA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      divpt xspan restartflag maxdraw id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+
+  (defun LIN_Y (a b c / d)
+    (setq d (- (cos (* (acos b) (sin c))) b))
+    (if (< (abs d) 1e-12) 0.0 (* (- a) (alt_expt (if (< d 1e-12) 1e-12 d) 0.5 T))))
+  
+  (defun LIN_X (a b c / d e f g h i j k)
+    (setq d  (if (< c 0.0) -1.0 1.0)
+          e    0.0
+          f (abs c)
+          k  0.0)
+    (while (< e f)
+      (setq g (/ paramstep 4.0))
+      (if (> (+ e g) f) (setq g (- f e)))
+      (setq h (* d (+ e (* 0.5 g)))
+            i     (cos (* (acos b) (sin h)))
+            j   (- i b))
+      (if (< j 1e-12) (setq j 1e-12))
+      (setq k (+ k (* (* 0.5 a (/ i (alt_expt j 0.5 T)) (acos b) (cos h)) g)))
+      (setq e (+ e g)))
+    (* d k))  
+  
+  (setq id "Lintearia"
+        iq "x=(a/2)∫(cos(u)/√(cos(u)-k))du, y=-a√(cos(t)-k)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (scale)" 1.0)
+        fb (get_boundr 0 "k (smaller = deeper, must be < 1)" 0.5 nil 1.0 nil nil)
+        eq_display (strcat "\nLintearia: a=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        xc '(LIN_X fa fb (eval a2))
+        yc '(LIN_Y fa fb (eval a2))
+        skm '(T T T)
+        a1 (/ pi -2.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LINTEARIA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

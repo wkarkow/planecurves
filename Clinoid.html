@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clinoid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Clinoid Curve</h1>
+      <p class="short-description">The general solution to the differential equation a²y'' = y; a shifted exponential curve with catenary as a member.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Clinoid/Clinoid01-360.avif"
+           alt="Clinoid, a=4,b=2,c=1">
+      <figcaption>Clinoid, a=4,b=2,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Clinoid/Clinoid02-360.avif"
+           alt="Clinoid, a=2,b=2,c=1">
+      <figcaption>Clinoid, a=2,b=2,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Clinoid/Clinoid03-360.avif"
+           alt="Clinoid, a=2,b=1,c=2">
+      <figcaption>Clinoid, a=2,b=1,c=2</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Clinoid Cartesian equation:</div>
+      \[ y = b \cdot e^{(x + x_0)/a} + c \cdot e^{-(x + x_0)/a} \quad \text{where} \quad x_0 = \frac{a}{2} \ln\left(\frac{c}{b}\right) \]
+    </div>
+
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The clinoid was studied and named by Heinzerling in 1869<sup>1</sup>, with its name derived from the Greek klínê, meaning “to lean,” reflecting the apparent inclination of the curve when plotted without recentering. The curve arises as the general solution to the second-order differential equation a²y'' = y, one of the simplest linear relationships in which curvature is directly proportional to displacement. This places the clinoid among a fundamental class of curves studied throughout the 18th and 19th centuries as calculus matured into a tool for describing physical systems. Unlike many named curves tied to a single geometric construction, the clinoid is best understood as a family of solutions, of which the catenary is the symmetric special case. When the parameters satisfy b = c = a/2, the equation reduces to the classical catenary y = a · cosh(x/a), the curve of a hanging chain.<sup>2,3</sup> The clinoid therefore represents the general, shifted form of the catenary, in which the axis of symmetry is displaced horizontally by x₀ = (a/2) ln(c/b). This shift gives the curve its characteristic “lean” when expressed relative to an arbitrary origin, though internally it retains perfect bilateral symmetry about its own axis.</p>
+    <p>Real-life applications arise wherever steady-state or equilibrium systems obey relations of the form y'' ∝ y. In structural engineering, the lateral shape of an elastic column under axial load, as well as the deformation of beams or rails supported by continuous elastic foundations, follows governing equations that locally reduce to this form. In physics, one-dimensional electric and gravitational potentials in certain regimes satisfy second-derivative-proportional-to-value relations, producing exponential or hyperbolic cosine profiles. In chemical engineering, steady-state diffusion with first-order reaction or absorption leads to concentration distributions of the same mathematical type. In special relativity, the spacetime trajectory of a particle under constant proper acceleration follows a cosh-based geometry, providing a direct physical realization of the curve. Similarly, in electromagnetic theory, evanescent fields in waveguides and transmission systems decay according to second-order equations proportional to the field itself. In all such cases, the resulting spatial or geometric profiles take the form of exponential combinations equivalent to the clinoid, without being named as such.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>Heinzerling (1869). Study and naming of the clinoid curve as the general solution to a²y'' = y.</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/clinoid/clinoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/clinoid/clinoid.shtml</a> — history, naming, equation, and catenary relationship.</li>
+      <li><a href="https://mathworld.wolfram.com/Catenary.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Catenary.html</a> — catenary relationship and cosh form.</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialhc.html#catenary" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialhc.html#catenary</a> — exponential and related curve families.</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CLINOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd)
+  (setq id "Clinoid"
+        iq "y=b·e^(x/a)+c·e^(-x/a)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 1000
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (exponent divisor)" 2.0)
+        fb (get_real 6 "b (right-branch weight)" (/ fa 1.0))
+        fc (get_real 6 "c (left-branch weight)" (/ fa 2.0))
+        x0 (* 0.5 fa (log (/ fc fb)))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        xc '(eval a2)
+        yc '(+ (* fb (exp (/ (+ (eval a2) x0) fa))) (* fc (exp (/ (- (+ (eval a2) x0)) fa))))
+        paramstep (/ xspan divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CLINOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

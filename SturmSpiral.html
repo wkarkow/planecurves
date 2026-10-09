@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sturm Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sturm Spiral</h1>
+      <p class="short-description">Plane curves whose radius of curvature at every point is proportional to the distance from a fixed point (the origin).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral01-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=1,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=1,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral02-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=2,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=2,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral03-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=3,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=3,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral04-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=4,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=4,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral05-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=5,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=5,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral06-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=6,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=6,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral07-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=7,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=7,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral08-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=8,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=8,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral09-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=9,n=10">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=9,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral10-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=1,n=7">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=1,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral11-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=2,n=7">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=2,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral12-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=3,n=7">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=3,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral13-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=4,n=7">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=4,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral14-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=5,n=7">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=5,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral15-360.avif"
+           alt="Sturm Spiral, elliptic, a=1,m=6,n=7">
+      <figcaption>Sturm Spiral, elliptic, a=1,m=6,n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral16-360.avif"
+           alt="Sturm Spiral, Norwich, discrete, a=1,180 vertices per π">
+      <figcaption>Sturm Spiral, Norwich, discrete, a=1,180 vertices per π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral17-360.avif"
+           alt="Sturm Spiral, Norwich, continuous, a=1">
+      <figcaption>Sturm Spiral, Norwich, continuous, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral18-360.avif"
+           alt="Sturm Spiral, Norwich, a=1, discrete vs continuous,180 vertices per π">
+      <figcaption>
+        Sturm Spiral, Norwich, a=1,
+        <span class="figcap-value" style="color:#000000">discrete</span>,
+        versus
+        <span class="figcap-value" style="color:#FF0000">continuous</span>,
+        180 vertices per π
+    </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral19-360.avif"
+           alt="Sturm Spiral, Norwich, a=1, discrete vs continuous,3600 vertices per π">
+      <figcaption>
+        Sturm Spiral, Norwich, a=1,
+        <span class="figcap-value" style="color:#000000">discrete</span>,
+        versus
+        <span class="figcap-value" style="color:#FF0000">continuous</span>,
+        3600 vertices per π
+    </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral20-360.avif"
+           alt="Sturm Spiral, hyperbolic, a=1,multiple values of e">
+      <figcaption>
+        Sturm Spiral, hyperbolic, a=1,e=
+        <span class="figcap-value" style="color:#000000">2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.4</span>,
+        <span class="figcap-value" style="color:#009600">1.3</span>,
+        <span class="figcap-value" style="color:#FF9600">1.2</span>,
+        <span class="figcap-value" style="color:#9600FF">1.1(mirrored)</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0(mirrored)</span>,
+        a = 1 hyperbolic
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral21-360.avif"
+           alt="Sturm Spiral, hyperbolic a=1,e=1.05 mirrored">
+      <figcaption>Sturm Spiral, hyperbolic a=1,e=1.05 mirrored</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SturmSpiral/SturmSpiral22-360.avif"
+           alt="Sturm Spiral, hyperbolic a=1,e=1.01 mirrored">
+      <figcaption>Sturm Spiral, hyperbolic a=1,e=1.01 mirrored</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Sturm Spiral parametric equations:</div>
+      \[
+      \begin{aligned}
+      x &= a\Bigl(\cos\bigl(\tfrac{m}{n}t-\sqrt{1-(\tfrac{m}{n})^{2}}\bigr)\cos t+\tfrac{m}{n}\sin\bigl(\tfrac{m}{n}t\bigr)\sin t\Bigr)\\
+      y &= a\Bigl(\cos\bigl(\tfrac{m}{n}t-\sqrt{1-(\tfrac{m}{n})^{2}}\bigr)\sin t-\tfrac{m}{n}\sin\bigl(\tfrac{m}{n}t\bigr)\cos t\Bigr)
+      \end{aligned}
+      \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sturm Spiral parametric Norwich spiral equations:</div>
+      \[ r=\dfrac{a}{\cos^{2}t},\qquad \theta=\tan t-2t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sturm Spiral parametric hyperbolic equations:</div>
+      \[
+      \begin{aligned}
+      x &= a\bigl(\cosh(t\sqrt{e^{2}-1}+e)\cos t-\sqrt{e^{2}-1}\sin(t\sqrt{e^{2}-1})\sin t\bigr)\\
+      y &= a\bigl(\cosh(t\sqrt{e^{2}-1}+e)\sin t+\sqrt{e^{2}-1}\sin(t\sqrt{e^{2}-1})\cos t\bigr)
+      \end{aligned}
+      \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Sturm spirals<sup>1,2</sup> (also called Sturmian spirals) are the plane curves defined by the property that the radius of curvature \(R\) at every point is proportional to the distance \(\rho\) from a fixed point, conventionally taken as the origin so that \(R=e\rho\) where \(e\) is a constant. The special case \(e=1\) is known as the Norwich spiral. The ranges \(0&lt;e&lt;1\) and \(e&gt;1\) are conventionally termed the elliptic and hyperbolic members of the family, respectively. The defining curvature–distance relation was placed in a systematic differential-geometric framework in the late twentieth and early twenty-first centuries. Mladenov and collaborators embedded the classical Sturm spirals into a one-parameter family, derived their intrinsic equations, and obtained parametric representations for the three cases.<sup>3</sup> Earlier contributions by Duporcq (1902), Mannheim (1902), Balitrand (1914), and Egan (1919) established important connections between Sturmian spirals and Duporcq curves, including the fact that the roulette of the pole of a Sturmian spiral on a straight line is a Duporcq curve.<sup>4</sup></p>
+    <p>The parametric representations used here follow the conventional forms for the three cases. The sign in the phase term inside the trigonometric or hyperbolic function (\(\pm e\)) is an arbitrary conventional choice that arises from integration of the curvature condition. Both the minus and plus signs are mathematically legitimate and produce variants of the curve. The elliptic implementation retains the minus sign, while the hyperbolic implementation uses the plus sign to align with common published diagrams. In the hyperbolic case the curve exhibits a characteristic inflectional transition (a local change in the sign or stationary behavior of curvature) as the hyperbolic stretching term becomes dominant; this feature is intrinsic to the family when \(e&gt;1\) and becomes more pronounced with larger values of \(e\). It turns out that the elliptic member of the Sturm family is the special hypotrochoid whose parameters are fixed by the curvature condition \(R=e\rho\) with \(e&lt;1\). In the Norwich spiral case due to exponentially growing distances between vertices, curve-fitting becomes increasingly distorted with 173 vertices in image 18, out of 180 vertices per π and is much smoother in image 19 with 3600 vertices per π.</p>
+    <p>Real applications in engineering and the natural sciences are primarily theoretical. The family provides explicit examples of curves whose curvature is a prescribed function of position and appears in studies of generalized elastic rods and in the classification of plane curves with curvature depending only on distance from a fixed point.<sup>5</sup> Concrete practical uses remain modest compared with the clothoid or logarithmic spiral, although the curvature-distance relation has conceptual value in problems involving variable-stiffness beams and in certain trajectory or optical-design contexts where curvature must scale with radial distance.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sturm/sturm.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sturm/sturm.shtml</a> (definition and parametric forms of the Sturm family)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sturm/spirale_sturm.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sturm/spirale_sturm.shtml</a> (Norwich spiral equations and relationship)</li>
+      <li>I.M. Mladenov et al., “On the Generalized Sturmian Spirals,” <em>Comptes Rendus de l’Académie Bulgare des Sciences</em> 64 (2011) (systematic embedding into a one-parameter family and derivation of intrinsic equations)</li>
+      <li><a href="http://christophe.masurel.free.fr/pdf/Duporcq%20Sturm%20curves%209.pdf" target="_blank" rel="noopener noreferrer">http://christophe.masurel.free.fr/pdf/Duporcq%20Sturm%20curves%209.pdf</a> (historical mention by Sturm in 1857 and connections to Duporcq curves)</li>
+      <li>I. Castro et al., “New Plane Curves with Curvature Depending on Distance from a Point,” <em>Mediterranean Journal of Mathematics</em> (2017) (context of curves whose curvature depends only on distance from a fixed point)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:STURMSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                        id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe fg fh fi fj)
+  (setq id "Sturm Spiral"
+        iq ""
+        dcl "STURMSPIRAL"
+        opt '("Elliptic" "Norwich spiral" "Hyperbolic")
+        kw 0
+        mode 'polar
+        dpr "# of divisions per turn"
+        dct 180
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0))
+  (cond
+    ((= kw 0)
+     (princ "\nx=a·(cos((m/n)·t-e)·cos(t)+(m/n)·sin((m/n)·t)·sin(t)), y=a·(cos((m/n)·t-e)·sin(t)-(m/n)·sin((m/n)·t)·cos(t))")
+     (setq fb (get_real 6 "m" 1.0)
+           fc (get_boundr 6 "n" (1+ fb) fb nil nil nil)
+           fd (/ fb fc)
+           fe (sqrt (- 1.0 (* fd fd)))
+           xc '(* fa (+ (* (cos (- (* fd (eval a2)) fe)) (cos (eval a2))) (* fd (sin (* fd (eval a2))) (sin (eval a2)))))
+           yc '(* fa (- (* (cos (- (* fd (eval a2)) fe)) (sin (eval a2))) (* fd (sin (* fd (eval a2))) (cos (eval a2)))))
+           eq_display (strcat "\na=" (rtos fa 2 4) ", m=" (rtos fb 2 4) ", n=" (rtos fc 2 4))
+           skm '(T T T))
+     (if (and (&lt; (abs (- fb (fix fb))) 1e-9) (&lt; (abs (- fc (fix fc))) 1e-9) (not (zerop (fix fc))))
+         (progn
+           (setq ff (fix fb) fg (fix fc)
+                 fh (gcd (abs ff) (abs fg))
+                 fi (/ fg fh)
+                 fj (* 2 (fix (+ 0.5 (* (/ (if (and (not (zerop (rem (/ ff fh) 2))) (not (zerop (rem fi 2)))) fi (* fi 2)) 2.0) divcount))))
+                 divcount fj)
+           (princ (strcat "\nSuggested segments for closure: " (itoa fj) "\n")))))
+    ((= kw 1)
+     (princ "\nNorwich: r=a/cos²(t), theta=tan(t)-2t, t=0 to π/2 + mirror bottom\n")
+     (setq fb (get_keyword 0 "Fit-curve Discrete" "Fit-curve or Discrete?" "Fit-curve")
+           xc '(* (/ fa (* (avoid_zero (cos (eval a2))) (avoid_zero (cos (eval a2))))) (cos (- (tan (eval a2)) (* 2.0 (eval a2)))))
+           yc '(* (/ fa (* (avoid_zero (cos (eval a2))) (avoid_zero (cos (eval a2))))) (sin (- (tan (eval a2)) (* 2.0 (eval a2)))))
+           paramstep (* paramstep 0.5)
+           divcount (fix (* divcount 0.95))
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           skm (if (eq fb "Fit-curve") '(T nil T) '(T nil T T))))
+    (T
+     (princ "\nx=a·(cosh(q·t+e)·cos(t)-q·sin(q·t)·sin(t)), y=a·(cosh(q·t+e)·sin(t)+q·sin(q·t)·cos(t)), q=sqrt(e²-1)\n")
+     (setq fb (get_boundr 6 "e (&gt;1)" 1.05 1.0 nil nil nil)
+           fd (sqrt (- (* fb fb) 1.0))
+           xc '(* fa (- (* (cosh (+ (* fd (eval a2)) fb)) (cos (eval a2))) (* fd (sin (* fd (eval a2))) (sin (eval a2)))))
+           yc '(* fa (+ (* (cosh (+ (* fd (eval a2)) fb)) (sin (eval a2))) (* fd (sin (* fd (eval a2))) (cos (eval a2)))))
+           eq_display (strcat "\na=" (rtos fa 2 4) ", e=" (rtos fb 2 4) ", q=" (rtos fd 2 4))
+           skm '(T nil T))))
+  (setq a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:STURMSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

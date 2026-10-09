@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conchoid of the Circle - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Conchoid of the Circle</h1>
+      <p class="short-description">The locus of points at fixed distance along a ray rotating about a pole placed a distance from the center of a base circle, with two branches.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/ConchCircle/ConchCircle01-360.avif"
+           alt="Conchoid of Circle, a=2,b=1,k=0.75,multiple values of l">
+      <figcaption>
+        Conchoid of Circle, a=2,b=1,k=0.75,l=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">2.0</span>,
+        <span class="figcap-value" style="color:#009600">3.0</span>,
+        <span class="figcap-value" style="color:#FF9600">4.0</span>,
+        <span class="figcap-value" style="color:#9600FF">5.0</span>,
+        <span class="figcap-value" style="color:#0096FF">6.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ConchCircle/ConchCircle02-360.avif"
+           alt="Conchoid of Circle, multiple values of a">
+      <figcaption>
+        Conchoid of Circle, a=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.5</span>,
+        <span class="figcap-value" style="color:#0096FF">3.0</span>,
+        b=1,k=0.75,l=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ConchCircle/ConchCircle03-360.avif"
+           alt="Conchoid of Circle, a=2,b=1,multiple values of k">
+      <figcaption>
+        Conchoid of Circle, a=2,b=1,k=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.25</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.75</span>,
+        l=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ConchCircle/ConchCircle04-360.avif"
+           alt="Conchoid of Circle, a=12/7,b=1,k=0.75,l=3">
+      <figcaption>Conchoid of Circle, a=12/7,b=1,k=0.75,l=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ConchCircle/ConchCircle05-360.avif"
+           alt="Conchoid of Circle, a=2,b=1,k=0.5,l=3">
+      <figcaption>Conchoid of Circle, a=2,b=1,k=0.5,l=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ConchCircle/ConchCircle06-360.avif"
+           alt="Generalized Conchoid of Circle, a=2,b=2,k=0.5,l=3">
+      <figcaption>Generalized Conchoid of Circle, a=2,b=2,k=0.5,l=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ConchCircle/ConchCircle07-360.avif"
+           alt="Generalized Conchoid of Circle, a=2,b=3,k=0.5,l=3">
+      <figcaption>Generalized Conchoid of Circle, a=2,b=3,k=0.5,l=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ConchCircle/ConchCircle08-360.avif"
+           alt="Generalized Conchoid of Circle, a=0.5,b=2.0 vs 3.0,k=0.5,l=3">
+      <figcaption>
+        Generalized Conchoid of Circle, a=0.5,b=
+        <span class="figcap-value" style="color:#000000">2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">3.0</span>,
+        k=0.5,l=3
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Conchoid of the Circle polar equation:</div>
+      \[ r = a \cdot \left( \cos(\theta) \pm \sqrt{k^{2} - \sin^{2}(\theta)} \right) \pm l \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot \left( \cos(b\theta) \pm \sqrt{k^{2} - \sin^{2}(b\theta)} \right) \pm l \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The conchoid of a circle<sup>1,2</sup> is a member of the general family of conchoids. The general construction was invented by the ancient Greek mathematician Nicomedes around 180 BC to address the classical problems of duplicating the cube and trisecting an angle. The specific case arises when the base curve is a circle with center O and radius b = k · a, the pole is placed at point A a distance a from O, and the constant modulus (fixed distance along each ray) is l · a.</p>
+    <p>The curve has the mechanical interpretation of the trajectory traced by a point fixed on a connecting rod that is forced to slide through the fixed pole A while another point on the rod moves along the circle.<sup>1</sup> Each closed curve is formed by the ± branches meeting where the square-root term vanishes. A complete AutoCAD implementation requires four plot runs: select the right- or left-hand curve, then select the (+) or (−) square-root branch to generate each half.</p>
+    <p>Real-life applications are found in engineering and the natural sciences. In engineering the mechanical construction itself models constrained motion in linkages, providing a basis for designing mechanisms that convert circular input into specific output paths. In the natural sciences the curve appears in analysis: domains bounded by a conchoid of the circle have been used to test and prove properties in the Pompeiu problem (whether vanishing integrals over all rotations of a domain imply the function itself vanishes).<sup>3</sup> No further documented applications in other branches of engineering or the natural sciences were located.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/conchoiddecercle/conchoiddecercle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/conchoiddecercle/conchoiddecercle.shtml</a> (definition, equation, and mechanical construction).</li>
+      <li><a href="https://www.2dcurves.com/derived/conchoidcircle.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/derived/conchoidcircle.html</a> (conchoid of a circle equations and special cases).</li>
+      <li><a href="https://www.jstor.org/stable/2001671" target="_blank" rel="noopener noreferrer">https://www.jstor.org/stable/2001671</a> (use of conchoid-of-circle domain in the Pompeiu problem).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CONCHCIRCLE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                        id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl)
+  (setq id "Conchoid of the Circle"
+        iq "r=a·(cos(bθ)±sqrt(k²-sin²(bθ)))±l"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (scale)" 2.0)
+        fb (get_real 2 "b (angle multiplier)" 1.0)
+        fc (get_real 4 "k (branch height / domain limit)" 0.75)
+        fd (get_real 0 "l (offset)" 3.0)
+        fe (get_keyword 0 "Right Left" "Right or Left loop?" "Right")
+        ff (get_keyword 0 "Positive Negative" "Positive or Negative square root?" "Positive")
+        fg (if (eq ff "Positive") 1.0 -1.0)
+        eq_display (strcat "\nr=" (rtos fa 2 4) "·(cos(" (rtos fb 2 4) "θ)" (if (> fg 0.0) "+" "-") "sqrt(" (rtos fc 2 4) "^2-sin^2(" (rtos fb 2 4) "θ)))" (rtos fd 2 4))
+        fh (if (<= fc 1.0) (asin fc) (* 2.0 (atan 1.0)))
+        fi (* 8.0 (atan 1.0))
+        fj (* 4.0 (atan 1.0))
+        fk (if (<= fc 1.0) (if (eq fe "Right") (/ (- fh) fb) (/ (- fj fh) fb)) 0.0)
+        fl (if (<= fc 1.0) (if (eq fe "Right") (/ fh fb) (/ (+ fj fh) fb)) (/ fi fb))
+        paramstep (/ (- fl fk) divcount)
+        rval '(+ (* fa (+ (cos (* fb (eval a2))) (* fg (if (< (- (* fc fc) (* (sin (* fb (eval a2))) (sin (* fb (eval a2))))) 1e-9) 0.0
+              (alt_expt (- (* fc fc) (* (sin (* fb (eval a2))) (sin (* fb (eval a2))))) 0.5 T))))) fd)
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 fk
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CONCHCIRCLE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

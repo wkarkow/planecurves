@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyperbola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hyperbola</h1>
+      <p class="short-description">Classical conic section of two open branches whose asymptotes meet at the center; defined by the constant difference of distances to two fixed foci.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Hyperbola/Hyperbola01-360.avif"
+           alt="Hyperbola from curve point and asymptote">
+      <figcaption>Hyperbola from curve point and asymptote</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola02-360.avif"
+           alt="Hyperbola from asymptote and focus">
+      <figcaption>Hyperbola from asymptote and focus</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola03-360.avif"
+           alt="Hyperbola from asymptote and vertex">
+      <figcaption>Hyperbola from asymptote and vertex</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola04-360.avif"
+           alt="Hyperbola from focus and curve point">
+      <figcaption>Hyperbola from focus and curve point</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola05-360.avif"
+           alt="Hyperbola from focus and vertex">
+      <figcaption>Hyperbola from focus and vertex</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola06-360.avif"
+           alt="Hyperbola from vertex and curve point">
+      <figcaption>Hyperbola from vertex and curve point</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola07-360.avif"
+           alt="Hyperbola, origin known, two points">
+      <figcaption>Hyperbola, origin known, two curve points</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola08-360.avif"
+           alt="Hyperbola, x-axis known, three points">
+      <figcaption>Hyperbola, x-axis known, three curve points</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola09-360.avif"
+           alt="Hyperbola, y-axis known, three points">
+      <figcaption>Hyperbola, y-axis known, three curve points</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola10-360.avif"
+           alt="Hyperbola, rotation known, four points">
+      <figcaption>Hyperbola, rotation known, four curve points</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hyperbola/Hyperbola11-360.avif"
+          data-caption="a=1, b=0.5(black),1(red),1.5(blue),2(green),2.5(orange),3(purple)"
+          alt="Hyperbola, a=1, b=0.5 to 3">
+      <figcaption>
+        a = 1, b =
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2</span>,
+        <span class="figcap-value" style="color:#FF9600">2.5</span>,
+        <span class="figcap-value" style="color:#9600FF">3</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Hyperbola Cartesian equation:</div>
+      \[ \dfrac{y^{2}}{a^{2}} - \dfrac{x^{2}}{b^{2}} = 1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbola Parametric equations:</div>
+      \[ x = t,\quad y = ±a\sqrt{1 + \left(\dfrac{t}{b}\right)^{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The hyperbola, one of the three classical conic sections, was first studied in special rectangular form by Menaechmus around 350 BC in connection with the problem of duplicating the cube. Euclid and Aristaeus later wrote on the general hyperbola but examined only one branch. Apollonius of Perga (c. 262–190 BC), known as “the Great Geometer,” gave the curve its name (from the Greek ὑπερβολή, hyperbolē, “excess”) and provided the first comprehensive treatment in his eight-book treatise <em>Conics</em>. Apollonius showed that the hyperbola, ellipse, and parabola are all obtainable as plane sections of the same right circular cone and was the first to study both branches systematically. Pappus later added the focus-directrix property. In its canonical form, the curve consists of two symmetric, open branches whose asymptotes meet at the center. The constant-difference property—that the difference of distances from any point on the curve to its two foci is constant—defines it geometrically, while its reflection property makes it the counterpart of the ellipse in optics: rays directed toward one focus are reflected as if they came from the other. Historically, the hyperbola gained importance in the 17th century when Kepler showed that bodies under inverse-square forces could follow hyperbolic orbits, and when Descartes and Newton used it in analytic geometry and celestial mechanics. Later, its rectangular form <em>xy</em> = <em>c</em> appeared in early studies of inverse proportionality, logarithmic scales, and asymptotic behavior.</p>
+    <p>In engineering and the natural sciences the hyperbola has several established applications. Hyperboloid cooling towers, generated by rotating a hyperbola about its conjugate axis, are standard in nuclear and coal-fired power plants; their double-curved form provides exceptional structural rigidity and wind resistance while minimizing material use. Navigation systems such as LORAN exploit the curve’s bifocal definition—the set of points for which the absolute difference of distances to two fixed foci is constant—to locate position from measured time differences of radio signals. In optics the reflection property of the hyperbola (a ray directed toward one focus reflects as if coming from the other) is employed in Cassegrain telescopes, where a hyperbolic secondary mirror directs light precisely to the focal point. Hyperbolic orbits also describe the escape trajectories of comets and other bodies with positive total energy in gravitational fields. Additionally, in analytic modeling the curve underlies the hyperbolic functions sinh and cosh, used to describe catenaries, suspension-bridge cables, and many nonlinear growth and stress relationships.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Hyperbola.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Hyperbola.html</a> (history, naming, orbital applications, reflection property)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/hyperbole/hyperbole.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/hyperbole/hyperbole.shtml</a> (Apollonius etymology, LORAN navigation, Cassegrain optics)</li>
+      <li><a href="https://www.2dcurves.com/conicsection/conicsectionh.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/conicsection/conicsectionh.html</a> (historical development, Apollonius, naming)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HYPERBOLA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan xstep restartflag
+                      id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 maxdraw dcl_id dcl_pos dcl_opts p1 px1 py1 p2 px2 py2 p3 px3
+                      py3 p4 px4 py4 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu b2 x1p y1p x2p y2p x3p y3p x4p y4p)
+  (setq id "Hyperbola"
+        iq "y²/a²-x²/b²=1"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        paramstep (/ xspan divcount))
+  (setq dcl_id (load_dialog "Hyperbola.dcl") dcl_pos '(1680 0)) (if (&lt; dcl_id 0) (exit))
+  (if (not (new_dialog "HYPERBOLA" dcl_id "" dcl_pos)) (exit))
+  (setq dcl_opts '("curve pt,asymptote" "asymptote,focus" "asymptote,vertex" "focus,curve pt" "focus,vertex" "vertex,curve pt"
+                   "origin known,2 pt" "x-axis known,3 pt" "y-axis known,3 pt" "rota'n known,4 pt" "a, b values"))
+  (start_list "list_col") (mapcar 'add_list dcl_opts) (end_list)
+  (setq kw 0)
+  (set_tile "list_col" "0")
+  (action_tile "list_col" "(setq kw (atoi $value))")
+  (start_dialog)
+  (unload_dialog dcl_id)
+  (cond
+    ((eq kw 0)
+     (setq p1 (get_boundpt "Curve point" "Division point" divpt basept 0 nil T 0 nil T)
+           px1 (get_xspan basept xaxisangle p1)
+           py1 (get_yspan basept xaxisangle p1)
+           px2 0
+           py2 1)
+     (while (&gt;= (abs py2) (abs (* px2 (/ py1 px1))))
+             (setq p2 (get_boundpt "Asymptote point (from 0,0)" "Division point" divpt basept 0 nil T 0 nil T)
+                   px2 (get_xspan basept xaxisangle p2)
+                   py2 (get_yspan basept xaxisangle p2)))
+     (setq fb (sqrt (abs (- (/ (* py1 py1 px2 px2) (* py2 py2)) (* px1 px1))))
+           fa (/ (* fb py2) px2)))
+    ((eq kw 1)
+     (command "ortho" "on")
+     (setq p1 (get_boundpt "Focal point on y axis, not at 0,0" nil nil basept nil nil nil 0 nil T))
+     (command "ortho" "off")
+     (setq p2 (get_point 2 "Asymptote point (from 0,0)" divpt basept)
+           py1 (get_yspan basept xaxisangle p1)
+           px2 (get_xspan basept xaxisangle p2)
+           py2 (get_yspan basept xaxisangle p2)
+           fb (/ (* py1 px2) (sqrt (+ (* px2 px2) (* py2 py2))))
+           fa (/ (* fb py2) px2)))
+    ((eq kw 2)
+     (setq p1 (get_boundpt "Asymptote point" "Division point" divpt basept 0 nil T 0 nil T))
+     (command "ortho" "on")
+     (setq p2 (get_boundpt "Vertex point" "" nil basept nil nil nil 0 nil T)
+           px1 (get_xspan basept xaxisangle p1)
+           py1 (get_yspan basept xaxisangle  p1)
+           fa (get_yspan basept xaxisangle  p2)
+           fb (/ (* fa px1) py1))
+     (command "ortho" "off"))
+    ((eq kw 3)
+     (command "ortho" "on")
+     (setq p1 (get_boundpt "Focal point" "" nil basept nil nil nil 0 nil T)
+           py1 (get_yspan basept xaxisangle p1))
+     (command "ortho" "off")
+     (setq p2 (get_boundpt "Curve point" "Division point" divpt basept 0 nil T 0 nil T)
+           px2 (get_xspan basept xaxisangle p2)
+           py2 (get_yspan basept xaxisangle p2)
+           fc (distance basept p2)
+           fb (sqrt (/ (+ (* py1 py1) (- (* fc fc)) (sqrt (+ (expt (+ (* fc fc) (- (* py1 py1))) 2) (* 4 py1 py1 px2 px2)))) 2))
+           fa (sqrt (- (* py1 py1) (* fb fb)))
+           fa (if (minusp py2) (- fa) fa)))
+    ((eq kw 4)
+     (command "ortho" "on")
+     (setq p1 (get_boundpt "Vertex point" "" nil basept nil nil nil 0 nil T)
+           py1 (get_yspan basept xaxisangle p1)
+           p2 (get_boundpt "Focal point" "" nil basept nil nil nil py1 nil T)
+           py2 (get_yspan basept xaxisangle p2))
+     (command "ortho" "off")
+     (setq fa py1
+           fb (sqrt (abs (- (* py2 py2) (* py1 py1))))))
+    ((eq kw 5)
+     (command "ortho" "on")
+     (setq p1 (get_boundpt "Vertex point" "" nil basept nil nil nil 0 nil T)
+           py1 (get_yspan basept xaxisangle p1))
+     (command "ortho" "off")
+     (setq p2 (get_boundpt "Curvepoint" "Division point" divpt basept 0 nil T py1 nil T)
+           px2 (get_xspan basept xaxisangle p2)
+           py2 (get_yspan basept xaxisangle p2)
+           fa py1
+           fb (/ (* py1 px2) (sqrt (abs (- (* py2 py2) (* py1 py1)))))))
+    ((eq kw 6)
+     (setq p1 (get_boundpt "1st curve point" "Division point" divpt basept 0 nil T 0 nil T)
+           px1 (get_xspan basept xaxisangle p1)
+           py1 (get_yspan basept xaxisangle p1)
+           px2 1
+           py2 0)
+     (while (not (or (and (&lt; (abs px2) (abs px1)) (&lt; (abs py2) (abs py1)) (&gt;= (abs py2) (abs (* px2 (/ py1 px1)))))
+                     (and (&gt; (abs px2) (abs px1)) (&gt; (abs py2) (abs py1)) (&lt;= (abs py2) (abs (* px2 (/ py1 px1)))))))
+             (setq p2 (get_boundpt "2nd curve point" "Division point" divpt basept 0 nil T 0 nil T)
+                   px2 (get_xspan basept xaxisangle p2)
+                   py2 (get_yspan basept xaxisangle p2)))
+     (setq fb (sqrt (abs (/ (- (* px1 px1 py2 py2) (* px2 px2 py1 py1)) (- (* py1 py1) (* py2 py2)))))
+           fa (/ (* fb py1) (sqrt (abs (+ (* px1 px1) (* fb fb)))))))
+    ((eq kw 7)
+     (setq p1 (get_boundpt "1st curve point" "Division point" divpt basept nil nil nil 0 nil T)
+           px1 (get_xspan basept xaxisangle p1)
+           py1 (get_yspan basept xaxisangle p1)
+           p2 (get_boundpt "2nd curve point" "" nil basept nil nil nil 0 nil T)
+           px2 (get_xspan basept xaxisangle p2)
+           py2 (get_yspan basept xaxisangle p2)
+           fc (* py1 py1)
+           fd (* py2 py2)
+           ff (* px1 px1)
+           fg (* px2 px2)
+           fj nil)
+         (while (null fj)
+             (setq	p3 (get_boundpt "3rd curve point" "" nil basept nil nil nil 0 nil T)
+                   px3 (get_xspan basept xaxisangle p3)
+                   py3 (get_yspan basept xaxisangle p3)
+                   fe (* py3 py3)
+                   fh (* px3 px3)
+                   fi (/ (+ (* fc (- fg fh)) (* fd (- fh ff)) (* fe (- ff fg))) (* 2.0 (+ (* fc (- px2 px3)) (* fd (- px3 px1)) (* fe (- px1 px2)))))
+                   fk (- (* fd (expt (- px1 fi) 2.0)) (* fc (expt (- px2 fi) 2.0))))
+             (if (= fk 0.0)
+                 (progn
+                   (prompt "\nTo avoid division by zero, pick a farther left/right 3rd point.")
+                   (setq fj nil))
+                 (progn
+                   (if (and (&gt; (/ (- (expt (- px1 fi) 2.0) (expt (- px2 fi) 2.0)) fk) 0.0) (&gt; (/ (- fc fd) fk) 0.0))
+                       (setq fj T)
+                       (progn
+                         (prompt "\nThose 3 points imply an ellipse for this axis. Pick a different third point (farther left or right).")
+                         (setq fj nil))))))
+         (setq x0 (+ x0 (* fi cosangle))
+               y0 (+ y0 (* fi sinangle))
+               fb (sqrt (abs (/ (- (* fc (expt (- px2 fi) 2)) (* fd (expt (- px1 fi) 2.0))) (- fd fc))))
+               fa (/ (* fb py1) (sqrt (abs (+ (* fb fb) (expt (- px1 fi) 2.0)))))))
+    ((eq kw 8)
+     (setq p1 (get_boundpt "1st curve point" "Division point" divpt basept 0 nil T nil nil nil)
+           px1 (get_xspan basept xaxisangle p1)
+           py1 (get_yspan basept xaxisangle p1)
+           p2 (get_boundpt "2nd curve point" "" nil basept 0 nil T nil nil nil)
+           px2 (get_xspan basept xaxisangle p2)
+           py2 (get_yspan basept xaxisangle p2)
+           fc (* py1 py1)
+           fd (* py2 py2)
+           ff (* px1 px1)
+           fg (* px2 px2)
+           fj nil)
+     (while (null fj)
+            (setq	p3 (get_boundpt "3rd curve point" "" nil basept 0 nil T nil nil nil)
+                  px3 (get_xspan basept xaxisangle p3)
+                  py3 (get_yspan basept xaxisangle p3)
+                  fe (* py3 py3)
+                  fh (* px3 px3)
+                  fi (/ (+ (* ff (- fe fd)) (* fg (- fc fe)) (* fh (- fd fc))) (* 2.0 (+ (* ff (- py3 py2)) (* fg (- py1 py3)) (* fh (- py2 py1)))))
+                  fk (- (* (expt (- py2 fi) 2.0) ff)	(* (expt (- py1 fi) 2.0) fg)))
+            (if (= fk 0.0)
+                (progn
+                  (prompt "\nTo avoid division by zero, pick a higher or lower 3rd point.")
+                  (setq fj nil))
+                (progn
+                  (if (and (&gt; (/ (- ff fg) fk) 0.0) (&gt; (/ (- (expt (- py1 fi) 2.0) (expt (- py2 fi) 2.0)) fk) 0.0))
+                      (setq fj T)
+                      (progn
+                        (prompt "\nThose 3 points imply an ellipse for this axis. Pick a different third point.")
+                        (setq fj nil))))))
+     (setq x0 (- x0 (* fi sinangle))
+           y0 (+ y0 (* fi cosangle))
+           fa (sqrt (abs (/ (- (* ff (expt (- py2 fi) 2.0)) (* fg (expt (- py1 fi) 2.0))) (- ff fg))))
+           fb (/ (* fa px1) (sqrt (abs (- (* fa fa) (expt (- py1 fi) 2.0)))))))
+    ((eq kw 9)
+     (setq fu 1e-3 fp nil)
+     (while (not fp)
+       (setq p1 (get_point 1 "1st curve point" nil basept)
+             px1 (get_xspan basept xaxisangle p1)
+             py1 (get_yspan basept xaxisangle p1)
+             p2 (get_point 1 "2nd curve point" nil basept)
+             px2 (get_xspan basept xaxisangle p2)
+             py2 (get_yspan basept xaxisangle p2)
+             p3 (get_point 1 "3rd curve point" nil basept)
+             px3 (get_xspan basept xaxisangle p3)
+             py3 (get_yspan basept xaxisangle p3)
+             p4 (get_point 1 "4th curve point" nil basept)
+             px4 (get_xspan basept xaxisangle p4)
+             py4 (get_yspan basept xaxisangle p4)
+             fc (* px1 px1)  fd (* px2 px2)  fe (* px3 px3)  ff (* px4 px4)
+             fg (* py1 py1)  fh (* py2 py2)  fi (* py3 py3)  fj (* py4 py4)
+             fk (/ (+ (* fc fh (- py3 py4)) (* fc fi (- py4 py2)) (* fc fj (- py2 py3)) (* fd fg (- py4 py3)) (* fd fi (- py1 py4)) (* fd fj (- py3 py1))
+                      (* fe fg (- py2 py4)) (* fe fh (- py4 py1)) (* fe fj (- py1 py2)) (* ff fg (- py3 py2)) (* ff fh (- py1 py3)) (* ff fi (- py2 py1)))
+                   (* 2.0 (+ (* px1 py2 (- fj fi)) (* px1 py3 (- fh fj)) (* px1 py4 (- fi fh)) (* px2 py1 (- fi fj)) (* px2 py3 (- fj fg)) (* px2 py4 (- fg fi))
+                             (* px3 py1 (- fj fh)) (* px3 py2 (- fg fj)) (* px3 py4 (- fh fg)) (* px4 py1 (- fh fi)) (* px4 py2 (- fi fg)) (* px4 py3 (- fg fh)))))
+             fl (expt (- px1 fk) 2.0)
+             fm (expt (- px2 fk) 2.0)
+             fn (expt (- px3 fk) 2.0)
+             fo (/ (+ (* fl (- fi fh)) (* fm (- fg fi)) (* fn (- fh fg))) (* 2.0 (+ (* fl (- py3 py2)) (* fm (- py1 py3)) (* fn (- py2 py1)))))
+             fa (sqrt (abs (/ (- (* fl (expt (- py2 fo) 2.0)) (* fm (expt (- py1 fo) 2.0))) (- fl fm))))
+             fb (/ (* fa (- px1 fk)) (sqrt (abs (- (* fa fa) (expt (- py1 fo) 2.0)))))
+             a2 (* fa fa) b2 (* fb fb)
+             x1p (- px1 fk) y1p (- py1 fo)
+             x2p (- px2 fk) y2p (- py2 fo)
+             x3p (- px3 fk) y3p (- py3 fo)
+             x4p (- px4 fk) y4p (- py4 fo)
+             fq (- (/ (* y1p y1p) a2) (/ (* x1p x1p) b2))
+             fr (- (/ (* y2p y2p) a2) (/ (* x2p x2p) b2))
+             fs (- (/ (* y3p y3p) a2) (/ (* x3p x3p) b2))
+             ft (- (/ (* y4p y4p) a2) (/ (* x4p x4p) b2)))
+       (if (and (&lt; (abs (- fq 1.0)) fu) (&lt; (abs (- fr 1.0)) fu) (&lt; (abs (- fs 1.0)) fu) (&lt; (abs (- ft 1.0)) fu))
+           (progn
+             (setq x0 (+ x0 (* fk cosangle) (- (* fo sinangle)))
+                   y0 (+ y0 (* fo cosangle) (* fk sinangle))
+                   fp T))
+           (progn
+             (prompt "\nNo hyperbola possible with those 4 points. Pick any of the four differently and try again.")
+             (setq fp nil)))))
+    ((eq kw 10)
+     (setq fa (get_real 2 "a value" 1.0)
+           fb (get_real 2 "b value" 1.0))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(* fa (sqrt (1+ (/ (expt (eval a2) 2) (* fb fb)))))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HYPERBOLA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

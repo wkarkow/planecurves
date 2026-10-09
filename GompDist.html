@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gompertz Distribution - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Gompertz Distribution</h1>
+      <p class="short-description">The probability density function (PDF) and cumulative distribution function (CDF) of the Gompertz distribution, a continuous probability distribution that models adult human mortality and other processes in which the force of failure rises exponentially with age or time.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/GompDist/GompDist01-360.avif"
+           data-caption="Gompertz Distribution PDF, b=1,η=0.1(black),0.25(red),0.5(blue),0.75(green),1(orange),2(purple),3(cyan),4(brown)"
+           alt="Gompertz Distribution PDF, b=1,η=0.1(black),0.25(red),0.5(blue),0.75(green),1(orange),2(purple),3(cyan),4(brown)">
+      <figcaption>
+        Gompertz Distribution PDF, b=1,η=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        <span class="figcap-value" style="color:#AA5555">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompDist/GompDist02-360.avif"
+           data-caption="Gompertz Distribution PDF, b=0.1(black),0.25(red),0.5(blue),0.75(green),1(orange),2(purple),3(cyan),4(brown),η=1"
+           alt="Gompertz Distribution PDF, b=0.1(black),0.25(red),0.5(blue),0.75(green),1(orange),2(purple),3(cyan),4(brown),η=1">
+      <figcaption>
+        Gompertz Distribution PDF, b=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        <span class="figcap-value" style="color:#AA5555">4</span>,
+        η=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompDist/GompDist03-360.avif"
+           alt="Gompertz Distribution PDF,multiple values of b,η=0.1">
+      <figcaption>
+        Gompertz Distribution PDF, b=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        <span class="figcap-value" style="color:#AA5555">4</span>,
+        η=0.1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompDist/GompDist04-360.avif"
+           alt="Gompertz Distribution CDF, b=1,multiple values of η">
+      <figcaption>
+        Gompertz Distribution CDF, b=1,η=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        <span class="figcap-value" style="color:#AA5555">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompDist/GompDist05-360.avif"
+           alt="Gompertz Distribution CDF,multiple values of b,η=1">
+      <figcaption>
+        Gompertz Distribution CDF, b=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        <span class="figcap-value" style="color:#AA5555">4</span>,
+        η=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GompDist/GompDist06-360.avif"
+           data-caption="Gompertz Distribution CDF, b=0.1(black),0.25(red),0.5(blue),0.75(green),1(orange),2(purple),3(cyan),4(brown),η=0.1"
+           alt="Gompertz Distribution CDF,multiple values of b,η=0.1">
+      <figcaption>
+        Gompertz Distribution CDF, b=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        <span class="figcap-value" style="color:#AA5555">4</span>,
+        η=0.1
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Gompertz Probability Density Function Cartesian equation:</div>
+      \[ y = b \cdot \eta \cdot e^{(\eta + b x - \eta e^{b x})} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Gompertz Cumulative Distribution Function Cartesian equation:</div>
+      \[ y = 1 - e^{(-\eta \cdot (e^{b x} - 1))} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Gompertz distribution<sup>1,2</sup> named after Benjamin Gompertz (1779–1865), an English actuary and self-taught mathematician elected Fellow of the Royal Society in 1819, is a continuous probability distribution that models adult lifespans. In his 1825 paper Gompertz analyzed death records from England, France and Sweden for ages roughly 20 to 60 and observed that the force of mortality increases exponentially with age. This produced a simple analytic expression for the survival function that became fundamental to life-table construction and premium calculations in actuarial science, leading to the development of probability density (PDF) and cumulative distribution (CDF) functions. These functions remain standard tools wherever exponential age-dependent failure or survival is observed.</p>
+    <p>Real-life applications are established in demography and actuarial science for modeling human adult mortality and constructing life tables used in insurance. Biology and gerontology apply it to survival analysis of organisms or cells. Hydrology uses the Gompertz distribution to model extreme events such as annual maximum one-day rainfalls and river discharges. Computer scientists employ it to describe failure rates of computer code.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Gompertz_distribution" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Gompertz_distribution</a> (history, eta-form equations, and applications)</li>
+      <li><a href="https://royalsocietypublishing.org/doi/abs/10.1098/rstl.1825.0026" target="_blank" rel="noopener noreferrer">https://royalsocietypublishing.org/doi/abs/10.1098/rstl.1825.0026</a> (original 1825 Gompertz paper)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GOMPDIST (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Gompertz Distribution"
+        iq ""
+        dcl "GOMPDIST"
+        opt '("PDF" "CDF")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (if (= kw 1) (princ "\nCDF: y=1-exp(-η·(e^{b·x}-1))") (princ "\nPDF: b·η·exp(η+b·x-η·e^{b·x})"))
+  (setq fa (get_real 6 "b (rate, peak height)" 1.0)
+        fb (get_real 6 "η (shape, farther peak from 1 → 0)" 1.0)
+        eq_display (strcat "\nb=" (rtos fa 2 4) ", η=" (rtos fb 2 4)))
+  (if (= kw 1) (setq yc '(- 1.0 (exp (* (- fb) (- (exp (* fa (eval a2))) 1.0))))) (setq yc '(* fa fb (exp (+ fb (* fa (eval a2)) (* (- fb) (exp (* fa (eval a2)))))))))
+  (setq paramstep (/ xspan divcount)
+        skm '(T T T)
+        xc '(eval a2)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GOMPDIST)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

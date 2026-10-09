@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catastrophic Sine Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Catastrophic Sine Curve</h1>
+      <p class="short-description">Several Cartesian curves exhibiting rapid oscillations of increasing frequency as x approaches a singularity.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CatSine/CatSine01-360.avif"
+           alt="Catastrophic Sine Equation 1, a=1">
+      <figcaption>Catastrophic Sine Equation 1, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine02-360.avif"
+           alt="Catastrophic Sine Equation 1, zoomed near 0,0, decurved">
+      <figcaption>Catastrophic Sine Equation 1, zoomed near 0,0, decurved</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine03-360.avif"
+           alt="Catastrophic Sine Equation 1, zoomed near 0,0, if not decurved">
+      <figcaption>Catastrophic Sine Equation 1, zoomed near 0,0, if not decurved</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine04-360.avif"
+           alt="Catastrophic Sine Equation 2, a=1,b=4,c=1">
+      <figcaption>Catastrophic Sine Equation 2, a=1,b=4,c=1</figcaption>
+    </figure>
+    <figure>
+       <img src="images/CatSine/CatSine05-360.avif"
+           alt="Catastrophic Sine Equation 2, a=1,b=4,c=1, zoomed near 0,0, decurved">   
+      <figcaption>Catastrophic Sine Equation 2, a=1,b=4,c=1, zoomed near 0,0, decurved</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine06-360.avif"
+           alt="Catastrophic Sine Equation 3, a=1,b=1">
+      <figcaption>Catastrophic Sine Equation 3, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine07-360.avif"
+           alt="Catastrophic Sine Equation 3, a=1,b=1, zoomed near 0,0, decurved, 200 points per unit x">
+      <figcaption>Catastrophic Sine Equation 3, a=1,b=1, zoomed near 0,0, decurved, 200 points per unit x</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine08-360.avif"
+           alt="Catastrophic Sine Equation 3, a=1,b=1, zoomed near 0,0, decurved, 10,000 points per unit x">
+      <figcaption>Catastrophic Sine Equation 3, a=1,b=1, zoomed near 0,0, decurved, 10,000 points per unit x</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine09-360.avif"
+           alt="Catastrophic Sine Equation 4, a=1,b=0">
+      <figcaption>Catastrophic Sine Equation 4, a=1,b=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine10-360.avif"
+           alt="Catastrophic Sine Equation 5, a=1,b=0.5,c=0,d=-0.5,e=4,f=0,g=1">
+      <figcaption>Catastrophic Sine Equation 5, a=1,b=0.5,c=0,d=-0.5,e=4,f=0,g=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine11-360.avif"
+           alt="Catastrophic Sine Equation 5, a=1,b=1,c=0.01,d=-2,e=4,f=0,g=1">
+      <figcaption>Catastrophic Sine Equation 5, a=1,b=1,c=0.01,d=-2,e=4,f=0,g=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CatSine/CatSine12-360.avif"
+           alt="Catastrophic Sine Equation 5, a=1,b=1,c=0.01,d=-2,e=4,f=0,g=1, zoomed near 0,0">
+      <figcaption>Catastrophic Sine Equation 5, a=1,b=1,c=0.01,d=-2,e=4,f=0,g=1, zoomed near 0,0</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">Catastrophic Sine-1 Cartesian equation:</div>
+      \[ y = a x \sin\left(\frac{1}{x}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Catastrophic Sine-2 Cartesian equation:</div>
+      \[ y = a \sin(b x) \sin\left(\frac{1}{c x}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Catastrophic Sine-3 Cartesian equation:</div>
+      \[ y = a x^{b} \sin\left(\frac{1}{x}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Catastrophic Sine-4 Cartesian equation:</div>
+      \[ y = a (x + b) \sin(x) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Catastrophic Sine-5 Cartesian equation:</div>
+      \[ y = a (b x + c)^{d} \sin^{g}(e x + f) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Catastrophic Sine Curve is not a classical named curve from early geometry, but rather a modern family of functions constructed from oscillatory and singular behaviors studied in real analysis and differential equations. Its conceptual roots lie in functions such as y = x · sin(1/x), which became widely discussed in 19th–20th century analysis as examples of functions that are continuous yet exhibit extreme oscillatory behavior near a point. These functions are often used to illustrate subtle distinctions between continuity, differentiability, and convergence in calculus.<sup>1,2</sup></p>
+    <p>As x → 0, the term sin(1/x) oscillates infinitely often, while the prefactor x forces the amplitude toward zero. This produces a curve with infinitely many increasingly compressed lobes—an early example of what would later be described as non-uniform convergence behavior.<sup>2</sup> This equation can be generalized as y = sin(ax) · sin(1/(bx)) and y = x<sup>n</sup> · sin(1/x), and domains are restricted to appropriate values to avoid singularities. The “catastrophic” interpretation arises when the structure is modified to include growing amplitudes, such as y = (x + a) sin(x)<sup>3</sup>, or more generally, y = a(bx + c)<sup>d</sup> · sin<sup>g</sup>(ex + f). These forms connect directly to solutions of second-order differential equations of the type y'' + a²y = b cos(ωx), which describe forced oscillatory systems.<sup>4</sup> In such systems, if damping is absent, energy input can cause oscillations to grow without bound, a phenomenon related to resonance and, in extreme cases, structural or dynamic failure.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. The growing-amplitude form and its underlying differential equation model resonant vibrations in undamped forced harmonic oscillators. When a periodic driving force matches the natural frequency of a mass-spring system, bridge, or machine component, the amplitude increases linearly with time until failure occurs. Examples include vibration analysis of rotating machinery, vehicle suspensions, and civil structures where resonance must be avoided to prevent catastrophic structural collapse.<sup>5,6</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Sine.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Sine.html</a> (properties of sine and oscillatory behavior)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Continuous_function" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Continuous_function</a> (examples including x · sin(1/x))</li>
+      <li><a href="https://www.2dcurves.com/trig/trigca.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/trig/trigca.html</a> (definitions, equations, and differential equation)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Harmonic_oscillator#Driven_harmonic_oscillators" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Harmonic_oscillator#Driven_harmonic_oscillators</a> (forced oscillation equation and resonance)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Mechanical_resonance" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Mechanical_resonance</a> (resonance in forced vibrations, engineering examples including bridges and machinery)</li>
+      <li><a href="https://vibrationresearch.com/resources/resonance-factor-of-2-rule/" target="_blank" rel="noopener noreferrer">https://vibrationresearch.com/resources/resonance-factor-of-2-rule/</a> (resonance leading to failure in structures and machinery)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CATSINE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xstep xspan
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 dcl_id dcl_pos dcl_opts fa fb fc fd fe ff fg)
+  (setq id "Catastrophic Sine Curve"
+        iq "y=a·sin(bx)·sin(1/(cx))"
+        dcl "CATSINE"
+        opt '("a·x·sin(1/x)"
+              "a·sin(bx)·sin(1/(cx))"
+              "a·xᵇ·sin(1/x)"
+              "a·(x+b)·sin(x)"
+              "a·(bx+c)ᵈ·sin(ex+f)ᵍ")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "a (vertical scale)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           yc '(* fa (eval a2) (sin (/ 1.0 (avoid_zero (eval a2)))))))
+    ((eq kw 1)
+     (setq fa (get_real 2 "a (vertical scale)" 1.0)
+           fb (get_real 2 "b (outer oscillation frequency)" 1.0)
+           fc (get_real 2 "c (inner singular frequency scale)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+           yc '(* fa (sin (* fb (eval a2))) (sin (/ 1.0 (avoid_zero (* fc (eval a2))))))))
+    ((eq kw 2)
+     (setq fa (get_real 2 "a (vertical scale)" 1.0)
+           fb (get_real 2 "b (power of x, envelope growth)" 2.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+           yc '(* fa (alt_expt (eval a2) fb nil) (sin (/ 1.0 (avoid_zero (eval a2)))))))
+    ((eq kw 3)
+     (setq fa (get_real 2 "a (overall scale)" 1.0)
+           fb (get_real 2 "b (horizontal amplitude offset)" 0.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+           yc '(* fa (+ (eval a2) fb) (sin (eval a2)))))
+    ((eq kw 4)
+     (setq fa (get_real 2 "a (overall scale)" 1.0)
+           fb (get_real 2 "b (x scale inside envelope)" 1.0)
+           fc (get_real 0 "c (x offset inside envelope)" 0.0)
+           fd (get_real 2 "d (envelope exponent)" 1.0)
+           fe (get_real 2 "e (sine frequency)" 1.0)
+           ff (* (get_real 0 "f (phase shift in degrees)" 0.0) (/ pi 180.0))
+           fg (get_real 0 "g (sine exponent)" -2.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4)
+                              ", e=" (rtos fe 2 4) ", f=" (rtos ff 2 4) ", g=" (rtos fg 2 4))
+           yc '(* fa (alt_expt (+ (* fb (eval a2)) fc) fd nil) (alt_expt (sin (+ (* fe (eval a2)) ff)) fg nil)))))
+  (setq paramstep (/ xspan divcount)
+        skm '(T T T T)
+        a1 0
+        a2 a1
+        xc '(eval a2)
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CATSINE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

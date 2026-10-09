@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tetrachoric Function - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Tetrachoric Function</h1>
+      <p class="short-description">The normalized derivatives of the standard normal density, sized by a vertical scale \( a \). Order \( n = 1 \) is a scaled bell curve; each higher integer \( n \) adds a zero and an extra oscillation, the next term in Pearson’s series for a \( 2\times 2 \) correlation.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Tetrachoric/Tetrachoric01-360.avif"
+           alt="Tetrachoric Function, a=10,multiple values of n">
+      <figcaption>
+        Tetrachoric Function, a=10,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">6</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Tetrachoric Function Curve Cartesian equations:</div>
+      \[ y = a \cdot \frac{(-1)^{n-1}}{\sqrt{n!}} \, Z^{(n-1)}(x), \quad \text{where} \quad Z(x) = \frac{1}{\sqrt{2\pi}} \, e^{-x^{2}/2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Tetrachoric Functions arise when the quadrant probabilities of a bivariate normal distribution, the joint bell-shaped surface describing two correlated continuous measurements, are expanded in series. They were introduced by the English biometrician Karl Pearson (1857–1936) in his 1900 memoir on measuring association between characters observed only qualitatively (present or absent, above or below a threshold).<sup>1,2</sup> Pearson already possessed the product-moment correlation for fully quantitative variables; he needed an analogous coefficient for the \( 2\times 2 \) tables that result when each of two latent continuous variables is dichotomized at a fixed cut-off. Assuming the underlying pair follows a bivariate normal law, the four cell probabilities are the volumes under the surface in each quadrant. These volumes are expressed by an infinite series, the tetrachoric series, whose successive terms contain the derivatives of the ordinary univariate normal density function. The normalized versions of those derivatives are the tetrachoric functions \( T_n(x) \). Each derivative records how the slope of the normal bell curve is itself changing; consequently the functions \( T_n(x) \) describe the incremental redistribution of probability mass among the four quadrants as the correlation parameter or the threshold position varies.</p>
+    <p>Real-life applications are concentrated in disciplines that treat binary observations as thresholds on an unobserved normal continuum. In psychometrics and educational testing the tetrachoric correlation is the standard tool for analyzing matrices of correct/incorrect item responses and for fitting item-response-theory models that estimate latent ability.<sup>3</sup> In human genetics and psychiatric genetics it quantifies resemblance between relatives for dichotomous traits (affected versus unaffected) under the liability-threshold model; Pearson himself used early forms of the method on parent–offspring data for conditions such as “insanity.”<sup>4</sup> In epidemiology and clinical research the coefficient extracts association from \( 2\times 2 \) tables (exposure × disease outcome) whenever a continuous latent process is scientifically defensible.<sup>5</sup> In every case the plotted curves \( T_n(x) \) make visible the individual building blocks of the series that converts observed cell frequencies into a single, interpretable correlation.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/TetrachoricFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/TetrachoricFunction.html</a> (definition via derivatives of the normal density)</li>
+      <li><a href="https://royalsocietypublishing.org/rsta/article-pdf/195/262-273/1/239069/rsta.1900.0022.pdf" target="_blank" rel="noopener noreferrer">https://royalsocietypublishing.org/rsta/article-pdf/195/262-273/1/239069/rsta.1900.0022.pdf</a> (Pearson 1900 memoir)</li>
+      <li><a href="https://www.rdocumentation.org/packages/psych/versions/2.6.1/topics/tetrachoric" target="_blank" rel="noopener noreferrer">https://www.rdocumentation.org/packages/psych/versions/2.6.1/topics/tetrachoric</a> (use in psychometrics and item-response theory)</li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/34997802/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/34997802/</a> (application in biometrical psychiatric genetics, with reference to Pearson’s early work)</li>
+      <li><a href="https://www.jameslindlibrary.org/articles/a-statistical-note-on-karl-pearsons-1904-meta-analysis/" target="_blank" rel="noopener noreferrer">https://www.jameslindlibrary.org/articles/a-statistical-note-on-karl-pearsons-1904-meta-analysis/</a> (Pearson’s application to 2×2 tables in epidemiology)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TETRACHORIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (defun T_E (a b / c d e f g h i j k)
+    (if (< a 1) 0.0 (progn
+          (setq c (- a 1) d 1.0 e b g 1)
+          (cond
+            ((= c 0) (setq f 1.0))
+            ((= c 1) (setq f b))
+            (T (while (< g c)
+                (setq f (- (* b e) (* g d)) d e e f g (1+ g)))))
+          (setq h 1.0 i 1)
+          (while (<= i a) (setq h (* h i) i (1+ i)))
+          (setq j (sqrt h) k (/ (exp (* -0.5 b b)) (sqrt (* 2.0 pi))))
+          (/ (* f k) j))))
+  (setq id "Tetrachoric Function"
+        iq "y=a·((-1)^{n-1}/√(n!))·Z^{(n-1)}(x), Z(x)=(1/√(2·π))·exp(-x²/2)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (vertical scale)" 10.0)
+        fb (get_integer 6 "n (order, adds oscillations)" 3)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (itoa fb))
+        skm (if (= (rem fb 2) 1) '(nil T T) '(T T nil))
+        xc '(eval a2)
+        yc '(* fa (T_E fb (eval a2)))
+        paramstep (/ xspan divcount)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TETRACHORIC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

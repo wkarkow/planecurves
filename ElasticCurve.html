@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elastic Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Elastic Curve</h1>
+      <p class="short-description">The elastica, the deformed shape of a thin flexible rod or beam under axial compression or pure bending that minimizes bending energy at fixed length; solutions involve elliptic integrals.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve01-360.avif"
+           alt="Elastic Curve, a=1,k=0.95">
+      <figcaption>Elastic Curve, a=1,k=0.95</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve02-360.avif"
+           alt="Elastic Curve, a=1,k=0.75">
+      <figcaption>Elastic Curve, a=1,k=0.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve03-360.avif"
+           alt="Elastic Curve, a=1,k=0.5">
+      <figcaption>Elastic Curve, a=1,k=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve04-360.avif"
+           alt="Elastic Curve, a=1,k=0.2">
+      <figcaption>Elastic Curve, a=1,k=0.2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve05-360.avif"
+           alt="Elastic Curve, a=1,k=0.0">
+      <figcaption>Elastic Curve, a=1,k=0.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve06-360.avif"
+           alt="Elastic Curve, a=1,k=-0.25">
+      <figcaption>Elastic Curve, a=1,k=-0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve07-360.avif"
+           alt="Elastic Curve, a=1,k=-0.4634871865, ribbon candy with touching loops">
+      <figcaption>Elastic Curve, a=1,k=-0.4634871865, ribbon candy with touching loops</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve08-360.avif"
+           alt="Elastic Curve, a=1,k=-0.6">
+      <figcaption>Elastic Curve, a=1,k=-0.6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve09-360.avif"
+           alt="Elastic Curve, a=1,k=-0.652229532, overlap of loops">
+      <figcaption>Elastic Curve, a=1,k=-0.652229532, overlap of loops</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve10-360.avif"
+           alt="Elastic Curve, a=1,k=-1.9">
+      <figcaption>Elastic Curve, a=1,k=-1.9</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve11-360.avif"
+           alt="Elastic Curve, a=1,k=-2.07641043, loops touch again">
+      <figcaption>Elastic Curve, a=1,k=-2.07641043, loops touch again</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve12-360.avif"
+           alt="Elastic Curve, a=1,k=-2.2">
+      <figcaption>Elastic Curve, a=1,k=-2.2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve13-360.avif"
+           alt="Elastic Curve, a=1,k=-3.0">
+      <figcaption>Elastic Curve, a=1,k=-3.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ElasticCurve/ElasticCurve14-360.avif"
+           alt="Elastic Curve, a=1,k=-1.0, Convict Curve">
+      <figcaption>Elastic Curve, a=1,k=-1.0, Convict Curve</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Elastic Curve integral equations:</div>
+      \[ x = \dfrac{a}{2} \int_{0}^{t} \dfrac{\cos(u)}{\sqrt{\cos(u)-k}}\, du,\quad y = -a\sqrt{\cos(t)-k},\quad -\arccos(k)\le t\le\arccos(k) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The elastic curve, or elastica, describes the deformed shape of a thin, flexible rod or beam under axial compression or bending, minimizing bending energy while maintaining fixed length. Proposed by Jakob Bernoulli in 1691 as a problem in elasticity, it was solved by Leonhard Euler in 1744 using the calculus of variations, yielding solutions involving elliptic integrals.<sup>1</sup> Euler’s work, detailed in his appendix to <em>Methodus Inveniendi Lineas Curvas</em>, distinguished between stretching and bending elasticity and laid foundations for beam theory.<sup>2</sup> Later contributions by Lagrange and others extended it to spatial cases with torsion (Kirchhoff rod model, 1859).<sup>3</sup></p>
+    <p>Real-life applications are well-established in engineering and the natural sciences. In structural engineering the elastica models column buckling under axial compression, giving rise to Euler’s critical-load formula that governs the design of slender columns in buildings, bridges, and aircraft frames to prevent failure.<sup>4</sup> In mechanical engineering it describes large-deflection behavior of flexible beams, springs, and robotic arms. In materials science and biology it explains the supercoiling of DNA filaments under torsional stress, where the molecule adopts plectonemic or toroidal shapes to relieve strain. In civil engineering the same principles appear in the design of transition curves for highways and railways, ensuring smooth curvature changes that minimize vehicle sway.<sup>4</sup></p>
+    <p>To use the code to create a continuous polyline where k ≠ 1, accept only the default number of divisions to draw one wave or loop, then specify how many additional strips (mirrored segments) are desired. See also Lintearia, which uses the same equations to draw single sections.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-103.pdf" target="_blank" rel="noopener noreferrer">https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-103.pdf</a> (history from Bernoulli 1691 to Euler 1744)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/linteaire/linteaire.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/linteaire/linteaire.shtml</a> (equations and buckling applications)</li>
+      <li><a href="https://mathworld.wolfram.com/Elastica.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Elastica.html</a> (history and elliptic-integral solutions)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Elastica_theory" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Elastica_theory</a> (summary of Euler-Bernoulli development and engineering uses)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ELASTICCURVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                         id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 x1 y1 a2 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr
+                         fs ft fu fv fw fx fy fz faa fab fac fad fae faf)
+(defun LNT (a b / c)
+  (setq c (acos a))
+  (* c (sin b)))
+(defun LNY (a b c / d e f g)
+  (setq d 1e-12
+        e (LNT b c)
+        f (cos e)
+        g (- f b))
+  (if (&lt; (abs g) d) 0.0 (* (- a) (alt_expt (if (&lt; g d) d g) 0.5 T))))
+(defun LNX (a b c / d e f g h i j k l m n o p q)
+  (setq d 1e-12
+        e (acos b)
+        f (/ paramstep 4.0)
+        g (if (&lt; c 0.0) -1.0 1.0)
+        h 0.0
+        i (abs c)
+        q 0.0)
+  (while (&lt; h i)
+    (setq j f)
+    (if (&gt; (+ h j) i) (setq j (- i h)))
+    (setq k (+ h (* 0.5 j))
+          l (* g k)
+          m (* e (sin l))
+          n (cos m)
+          o (- n b))
+    (if (&lt; o d) (setq o d))
+    (setq p (* 0.5 a (/ n (alt_expt o 0.5 T)) e (cos l))
+          q (+ q (* p j))
+          h (+ h j)))
+  (* g q))
+  (setq id "Elastic Curve"
+        iq "x=(a/2)·∫₀ᵗ cos(u)/√(cos(u)-k) du, y=-a·√(cos(t)-k)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in 1 wave or loop"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (scale)" 1.0)
+        fb (get_boundr 0 "k (smaller = deeper)" 0.0 nil 1 nil nil)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        xc '(LNX fa fb (eval a2))
+        yc '(LNY fa fb (eval a2))
+        skm '(T T T)
+        a1 (- (/ pi 2.0))
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (setvar "cmdecho" 0)
+  (setq plineents (ssadd (entlast) (ssadd))
+        fc (ssname plineents 0)
+        fd (cdr (assoc 0 (entget fc))))
+  (if (not (member fd '("POLYLINE" "LWPOLYLINE"))) (progn (prompt "\nElasticCurve ce: unexpected entity type.") (exit)))
+  (if (= fd "LWPOLYLINE")
+    (setq fg (entget fc) fj (cdr (assoc 10 fg)))
+    (setq fh (entnext fc) fj (cdr (assoc 10 (entget fh)))))
+  (setq fu (- (car fj) x0) fv (- (cadr fj) y0)
+        fw (- (* fv cosangle) (* fu sinangle))
+        fe fc
+        ft (get_integer 4 "\nAdditional strips to add: " 3)
+        fs 0)
+  (while (&lt; fs ft)
+    (if (= fd "LWPOLYLINE")
+      (progn (setq fg (entget fe) fj (cdr (assoc 10 fg)) fk fj)
+             (foreach fi fg (if (= (car fi) 10) (setq fk (cdr fi)))))
+      (progn (setq fh (entnext fe) fj (cdr (assoc 10 (entget fh))) fk fj)
+             (while (/= (cdr (assoc 0 (entget fh))) "SEQEND")
+               (if (= (cdr (assoc 0 (entget fh))) "VERTEX") (setq fk (cdr (assoc 10 (entget fh)))))
+               (setq fh (entnext fh)))))
+    (setq fu (- (car fj) x0) fv (- (cadr fj) y0)
+          fab (+ (* fu cosangle) (* fv sinangle))
+          fu (- (car fk) x0) fv (- (cadr fk) y0)
+          fac (+ (* fu cosangle) (* fv sinangle))
+          fn (min fab fac) fo (max fab fac)
+          fx fab fy (+ fx 1.0)
+          fz (list (+ x0 (* fx cosangle) (- (* fw sinangle))) (+ y0 (* fw cosangle) (* fx sinangle)) 0.0)
+          faa (list (+ x0 (* fy cosangle) (- (* fw sinangle))) (+ y0 (* fw cosangle) (* fy sinangle)) 0.0))
+    (command "_.mirror" fe "" fz faa "n")
+    (setq ff (entlast))
+    (if (= fd "LWPOLYLINE")
+      (progn (setq fg (entget ff) fl (cdr (assoc 10 fg)) fm fl)
+             (foreach fi fg (if (= (car fi) 10) (setq fm (cdr fi)))))
+      (progn (setq fh (entnext ff) fl (cdr (assoc 10 (entget fh))) fm fl)
+             (while (/= (cdr (assoc 0 (entget fh))) "SEQEND")
+               (if (= (cdr (assoc 0 (entget fh))) "VERTEX") (setq fm (cdr (assoc 10 (entget fh)))))
+               (setq fh (entnext fh)))))
+    (setq fu (- (car fl) x0) fv (- (cadr fl) y0)
+          fad (+ (* fu cosangle) (* fv sinangle))
+          fu (- (car fm) x0) fv (- (cadr fm) y0)
+          fae (+ (* fu cosangle) (* fv sinangle))
+          fp (min fad fae) fq (max fad fae)
+          faf (- fo fp))
+    (command "_.move" ff "" '(0 0 0) (list (* faf cosangle) (* faf sinangle) 0.0))
+    (setq plineents (ssadd ff plineents)
+          fe ff
+          fs (1+ fs)))
+  (command "_.pedit" (ssname plineents 0) "_j" plineents "" ""))
+  (setvar "cmdecho" 1)
+  (princ)
+(C:ELASTICCURVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

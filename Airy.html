@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Airy Disk - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Airy Disk</h1>
+      <p class="short-description">The diffraction pattern of light through a circular aperture.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Airy/Airy01-360.avif" alt="3D rendering of Airy Disk from side view">
+      <figcaption>Airy Disk, y₀=10,a=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Airy/Airy02-360.avif" alt="3D rendering of Airy Disk from top view">
+      <figcaption>Airy Disk, y₀=10,a=2</figcaption>
+    </figure>
+    <figure>
+      <a href="https://en.wikipedia.org/wiki/Point_spread_function" target="_blank" rel="noopener">
+        <img src="images/Airy/Airy03-360.avif" alt="Square mesh rendering of Airy Disk from Wikipedia">
+      </a>
+      <figcaption>Square mesh rendering of Airy Disk from Wikipedia</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Airy/Airy04-360.avif" alt="3D Airy Disk wide aperture">
+      <figcaption>Airy Disk, y₀=10,a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Airy/Airy05-360.avif" alt="2D Airy Disk wide aperture">
+      <figcaption>Airy Disk, y₀=10,a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Airy/Airy06-360.avif" alt="2D Airy Disk medium aperture">
+      <figcaption>Airy Disk, y₀=10,a=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Airy/Airy07-360.avif" alt="2D Airy Disk medium aperture">
+      <figcaption>Airy Disk, y₀=10,a=3</figcaption>
+    </figure>  
+    <figure>
+      <img src="images/Airy/Airy08-360.avif" alt="2D Airy Disk small aperture">
+      <figcaption>Airy Disk, y₀=10,a=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Airy/Airy09-360.avif" alt="2D Airy Disk half intensity">
+      <figcaption>Airy Disk, y₀=5,a=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Airy/Airy10-360.avif" alt="Airy Disk 1/10 intensity">
+      <figcaption>Airy Disk, y₀=1,a=4</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Airy Disk Cartesian equation:</div>
+      \[ y = y_0 \cdot \frac{4 \left( \operatorname{J}_1 (a x) \right)^2 }{(a x)^2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Approximation used:</div>
+      \[ \operatorname{J}_1(z) \approx 1.02361001539456 \cdot \left( \frac{0.1601 z^2 + 0.8660 \cdot \sin(z)}{(1 + 0.3489 z^2)(1 + 0.4181 z^2)^{0.25}} - \frac{z \left(0.1007 z^2 + 0.3718\right) \cdot \cos(z)}{(1 + 0.4181 z^2)^{0.75} (1 + 0.3489 z^2)} \right)^2 \]
+    </div>
+  </section>
+
+<section>
+  <h2>History and Applications</h2>
+  <p>The Airy disk<sup>1,2</sup>, named after George Biddell Airy (1801–1892), describes the diffraction pattern of light through a circular aperture. Airy, an English mathematician and astronomer who served as Astronomer Royal from 1835 to 1881, provided the first mathematical treatment in his 1835 paper "On the Diffraction of an Object-glass with Circular Aperture," building on John Herschel's 1828 empirical observations. Airy's work advanced optics by explaining resolution limits beyond simple ray tracing, using integrals to model wave interference—concepts accessible via basic calculus as the summation of light waves adding constructively or destructively.</p>
+  <p>The intensity distribution is \( I(\rho) = I_0 \left( \frac{2 \operatorname{J}_1 (k a \rho / f)}{k a \rho / f} \right)^2 \), where \( \operatorname{J}_1 \) is the first-order Bessel function of the first kind, \( k = 2\pi / \lambda \) (wavenumber), \( a \) is aperture radius, \( \rho \) is radial distance in the image plane, \( f \) is focal length, and \( \lambda \) is wavelength. This simplifies to the first equation in the equation ribbon above in normalized form, with the central bright spot surrounded by concentric rings. The first dark ring occurs where the intensity drops to zero, giving a disk radius of about \( 1.22 \lambda f / D \) (where \( D \) is aperture diameter). The code employs the approximation shown in the ribbon, accurate to within 0.01 over relevant domains for efficient plotting without external libraries<sup>3</sup>.</p>
+  <p>Real-life applications abound in engineering and natural sciences. In optics, it defines resolution limits for telescopes, microscopes, and cameras, per the Rayleigh criterion: minimum angular separation \( \theta \approx 1.22 \lambda / D \) (\( D \) = aperture diameter). This governs telescope design for astronomy, microscope objectives for biology (e.g., cell imaging), and camera lenses for photography, where diffraction blurs details at small apertures. In laser engineering, it models focused beam spots for manufacturing (e.g., cutting or welding) and beam delivery systems. Confocal microscopy uses Airy units for pinhole sizing to optimize contrast in biological samples. In human vision studies, it explains acuity limits with larger pupils, aiding ophthalmic device design. Acoustics applies similar patterns for sound wave diffraction in varying media, like sonar or architectural soundproofing.</p>
+</section>
+
+<section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/AiryFunctions.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/AiryFunctions.html</a> (history and equations)</li>
+      <li><a href="https://www.2dcurves.com/gamma/gammaa.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/gamma/gammaa.html</a> (history and equations)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S2211379718300111" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S2211379718300111</a> (approximation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:AIRY (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                 divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Airy Disk"
+        iq "y=y₀·4J₁²(a·x)/(a·x)²"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "y₀ (peak height at x=0)" 10.0)
+        fb (get_real 2 "a (affects wave frequency)" 1.0)
+        eq_display (strcat "\ny₀=" (rtos fa 2 4) ", a=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(if (< (abs (eval a2)) 1e-6) fa (* 1.02361001539456 fa (alt_expt (/ (* 2 (- (/ (* (+ (* 0.1601 (* fb fb (eval a2) (eval a2))) 0.8660)
+             (sin (* fb (eval a2)))) (* (+ 1 (* 0.3489 (* fb fb (eval a2) (eval a2)))) (alt_expt (+ 1 (* 0.4181 (* fb fb (eval a2) (eval a2)))) 0.25
+             nil))) (/ (* fb (eval a2) (+ (* 0.1007 (* fb fb (eval a2) (eval a2))) 0.3718) (cos (* fb (eval a2)))) (* (alt_expt (+ 1 (* 0.4181 (* fb
+             fb (eval a2) (eval a2)))) 0.75 nil) (+ 1 (* 0.3489 (* fb fb (eval a2) (eval a2)))))))) (* fb (eval a2))) 2 nil)))
+        paramstep (/ xspan divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:AIRY)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

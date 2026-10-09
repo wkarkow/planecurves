@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Troposkein - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Troposkein</h1>
+      <p class="short-description">Equilibrium shape of an inextensible, homogeneous, flexible rope or wire rotating at constant angular velocity about the axis joining its fixed ends, gravity neglected.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Troposkein/Troposkein01-360.avif"
+           alt="Troposkein, a=10, multiple values of h">
+      <figcaption>
+        Troposkein, a=10,h=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.5</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>,
+        <span class="figcap-value" style="color:#0096FF">3.5</span>,
+        <span class="figcap-value" style="color:#AA5555">4.0</span>,
+        <span class="figcap-value" style="color:#00FF00">4.5</span>,
+        <span class="figcap-value" style="color:#FF00FF">5.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Troposkein parametric curve equations:</div>
+      \[ x(t)=\dfrac{a^{2}}{c}\int_{0}^{t}\dfrac{du}{\sqrt{1-k^{2}\sin^{2}u}},\qquad y(t)=\pm h\cdot\sin(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">where</div>
+      \[ k=\dfrac{h}{c},\quad c^{2}=a^{2}+b^{2},\quad h^{2}=b^{2}-a^{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The troposkein, also known as the skipping rope curve, is the equilibrium shape assumed by an inextensible, homogeneous, flexible rope or wire rotating at constant angular velocity about the axis joining its fixed endpoints when gravity is neglected.<sup>1</sup> The curve arises in classical mechanics from the balance between centrifugal force and internal tension; the resulting second-order differential equation integrates to a form that cannot be expressed in elementary functions. Its solution involves the incomplete elliptic integral of the first kind for one coordinate and the Jacobi elliptic sine function for the other. Although the graph closely resembles a sine arch or a flattened catenary to the unaided eye, the mathematics is distinct: the transverse displacement follows a sine while the axial advance accumulates via elliptic quadrature.<sup>1</sup> The curve was first examined mathematically by the German mathematician Alfred Clebsch in 1860.<sup>1</sup> In the ideal zero-gravity case the shape is independent of rotational speed. When gravity is restored the profile varies with the relative magnitude of gravitational and centrifugal effects and is obtained numerically by midpoint integration.</p>
+    <p>In engineering the troposkein acquired practical significance in the twentieth century through the Darrieus vertical-axis wind turbine (VAWT). The curved blades of the classic “egg-beater” Darrieus rotor are deliberately shaped to approximate the troposkein so that centrifugal loads act primarily as tension rather than bending moments, markedly reducing flatwise structural stress.<sup>2</sup> This geometry appeared in Georges Darrieus’s early patents and was developed at scale by Sandia National Laboratories in the United States during the 1970s and 1980s for machines reaching several hundred kilowatts. The same stress-minimizing property has renewed interest for large floating offshore VAWTs, where the troposkein architecture simplifies structural scaling and keeps heavy components low on the platform.<sup>5</sup></p>
+    <p>The AutoLISP command asks for two numbers: \(a\), the length along \(x\) at the end of the arch (xmax, default 10), and \(h\), the height of the arch (ymax, default 3). It does not ask for \(b\), \(c\), or \(k\). From the relations above, \(c=\sqrt{2a^{2}+h^{2}}\) and \(k=h/c\) once the integral’s own scale factor is known; that factor is not the entered xmax. The routine searches for it so the incomplete elliptic integral, taken over a 180° parameter span, finishes at \(x=a\). On the same span, \(y=h\sin\theta\), so the curve leaves the axis, reaches height \(h\), and returns to the axis. Division count defaults to 360. The status line labels the height as \(b\); the prompt calls it \(h\). The command draws this zero-gravity arch. The gravity-restored profile mentioned above is a separate numerical problem and is not what the routine plots.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cordeasauter/cordeasauter.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cordeasauter/cordeasauter.shtml</a> (force-balance derivation, elliptic-integral parametrization, Clebsch)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Troposkein" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Troposkein</a> (Darrieus VAWT blade design for centrifugal force reduction)</li>
+      <li><a href="https://energy.sandia.gov/programs/renewable-energy/wind-power/offshore-design-optimization/innovative-offshore-vertical-axis-wind-turbine-rotors/" target="_blank" rel="noopener noreferrer">https://energy.sandia.gov/programs/renewable-energy/wind-power/offshore-design-optimization/innovative-offshore-vertical-axis-wind-turbine-rotors/</a> (Sandia National Laboratories report on troposkein VAWTs, 1970s–1990s)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TROPOSKEIN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                       id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp)
+  (setq id "Troposkein"
+        iq "x=(a²/c)·∫du/√(1-k²·sin²u), y=h·sin(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (length, xmax)" 10.0)
+        fb (get_real 6 "h (height, ymax)" 3.0)
+        fc fa
+        fd fb
+        fe fd
+        ff 1e-6
+        fg (if (> fc 1.0) fc 1.0)
+        fh 0)
+  (while (< fh 60)
+    (setq fi (alt_expt (+ (* 2.0 fg fg) (* fd fd)) 0.5 T)
+          fj (if (< (abs fi) 1e-12) 0.0 (/ fd fi))
+          fk 0.0
+          fl 0.0)
+    (repeat divcount (setq fl (+ fl paramstep) fm (- fl (* 0.5 paramstep)) fk (+ fk (/ paramstep (alt_expt (max 1e-12 (- 1.0 (* fj fj (sin fm) (sin fm)))) 0.5 T)))))
+    (setq fn (* (/ (* fg fg) fi) fk))
+    (if (>= fn fc) (setq fh 60) (setq fg (* 2.0 fg)))
+    (setq fh (1+ fh)))
+  (setq fh 0)
+  (while (< fh 50)
+    (setq fo (* 0.5 (+ ff fg))
+          fi (alt_expt (+ (* 2.0 fo fo) (* fd fd)) 0.5 T)
+          fj (if (< (abs fi) 1e-12) 0.0 (/ fd fi))
+          fk 0.0
+          fl 0.0)
+    (repeat divcount (setq fl (+ fl paramstep) fm (- fl (* 0.5 paramstep)) fk (+ fk (/ paramstep (alt_expt (max 1e-12 (- 1.0 (* fj fj (sin fm) (sin fm)))) 0.5 T)))))
+    (setq fp (* (/ (* fo fo) fi) fk))
+    (if (< fp fc) (setq ff fo) (setq fg fo))
+    (setq fh (1+ fh)))
+  (setq fy fg
+        fz (alt_expt (+ (* fy fy) (* fd fd)) 0.5 T)
+        fv (alt_expt (+ (* fy fy) (* fz fz)) 0.5 T)
+        fw (if (< (abs fv) 1e-12) 0.0 (/ fe fv))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", h=" (rtos fb 2 4))
+        fx 0.0
+        xc '(progn (if (> (eval a2) 0.0) (setq fx (+ fx (/ paramstep (alt_expt (max 1e-12 (- 1.0 (* fw fw (sin (- (eval a2) (* 0.5 paramstep)))
+            (sin (- (eval a2) (* 0.5 paramstep)))))) 0.5 T))))) (* (/ (* fy fy) fv) fx))
+        yc '(* fe (sin (eval a2)))
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TROPOSKEIN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

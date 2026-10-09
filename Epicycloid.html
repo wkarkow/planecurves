@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Epicycloid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Epicycloid</h1>
+      <p class="short-description">The locus of a point on the circumference of a circle that rolls without slipping around the outside of a fixed circle.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Epicycloid/Epicycloid01-360.avif"
+           alt="Epicycloid, cardioid, a=2,b=1,c=2,d=2,e=1,f=2">
+      <figcaption>Epicycloid, cardioid, a=2,b=1,c=2,d=2,e=1,f=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid02-360.avif"
+           alt="Epicycloid, nephroid, a=3,b=1,c=3,d=3,e=1,f=3">
+      <figcaption>Epicycloid, nephroid, a=3,b=1,c=3,d=3,e=1,f=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid03-360.avif"
+           alt="Epicycloid, a=4,b=1,c=4,d=4,e=1,f=4">
+      <figcaption>Epicycloid, a=4,b=1,c=4,d=4,e=1,f=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid04-360.avif"
+           alt="Epicycloid, a=5,b=1,c=5,d=5,e=1,f=5">
+      <figcaption>Epicycloid, a=5,b=1,c=5,d=5,e=1,f=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid05-360.avif"
+           alt="Epicycloid, a=6,b=1,c=6,d=6,e=1,f=6">
+      <figcaption>Epicycloid, a=6,b=1,c=6,d=6,e=1,f=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid06-360.avif"
+           alt="Epicycloid, a=7,b=1,c=7,d=7,e=1,f=7">
+      <figcaption>Epicycloid, a=7,b=1,c=7,d=7,e=1,f=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid07-360.avif"
+           alt="Epicycloid (generalized), a=1,b=2,c=2,d=1,e=2,f=2">
+      <figcaption>Epicycloid (generalized), a=1,b=2,c=2,d=1,e=2,f=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid08-360.avif"
+           alt="Epicycloid (generalized), a=1,b=2,c=4,d=1,e=2,f=2">
+      <figcaption>Epicycloid (generalized), a=1,b=2,c=4,d=1,e=2,f=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epicycloid/Epicycloid09-360.avif"
+           alt="Epicycloid (generalized), a=0,b=3,c=2.5,d=0,e=3,f=2.45">
+      <figcaption>Epicycloid (generalized), a=0,b=3,c=2.5,d=0,e=3,f=2.45</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Epicycloid parametric equations:</div>
+      \[ x=(R+r)\cos\theta - r\cdot\cos\left(\dfrac{R+r}{r}\theta\right),\quad y=(R+r)\sin\theta - r\cdot\sin\left(\dfrac{R+r}{r}\theta\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x=a\cos\theta - b\cos(c\theta),\quad y=d\sin\theta - e\sin(f\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The epicycloid<sup>1,2,3,4</sup> is a classical curve in the study of kinematics and geometry, defined as the locus of a point on the circumference of a circle as it rolls without slipping around the outside of a fixed circle. The name comes from the Greek roots epi- meaning “upon” and kyklos meaning “circle.” The ancient Greeks explored related rolling-circle motions in their attempts to model planetary orbits (e.g., epicycles in Ptolemaic astronomy) without formal equations. This curve was studied by Hipparchus in the second century BC in the context of modeling planetary motions (e.g., epicycles in Ptolemaic astronomy) using combinations of circular paths. It received further attention from Albrecht Dürer in 1525, Ole Rømer in 1674, and many prominent mathematicians of the 17th and 18th centuries including Christiaan Huygens, Isaac Newton, Gottfried Leibniz, and members of the Bernoulli family. By the 18th century, Leonhard Euler thoroughly classified the cycloidal curves, epicycloids, hypocycloids, and the standard cycloid, as part of his foundational work on the geometry of curves. He formalized their equations and investigated their curvature, cusps, and periodicity.</p>
+    <p>One of the most enduring practical applications of the epicycloid is in cycloidal gear teeth, particularly in clockmaking and high-efficiency mechanical gear systems. In contrast to the involute profile used in most modern gears, the cycloidal form (derived from both epicycloids and hypocycloids) was historically favored in early clocks due to its lower friction and smooth engagement. Epicycloids also arise in the analysis of epicyclic (planetary) gear trains, where the paths traced by points on rotating gears follow epicycloidal motion relative to a fixed frame. This makes them important in understanding torque transmission in compact mechanical systems such as automatic transmissions and differential gear assemblies.</p>
+    <p>The epicycloid is the mathematical base for many Spirograph patterns when the pen is placed on the circumference of the rolling disk. These visual representations provide intuitive introductions to the beauty and complexity of cycloidal motion.</p>
+    <p>For \(x(\theta)\), an epicycloid with a rolling circle of radius \(r\) rolling around a fixed circle of radius \(R\) has the parametric equation \(x(\theta)=(R+r)\cos\theta-r\cdot\cos\bigl(\frac{R+r}{r}\theta\bigr)\), whereas the epitrochoid has \(x(\theta)=(R+r)\cos\theta-d\cdot\cos\bigl(\frac{R+r}{r}\theta\bigr)\) where \(d\neq r\) generalizes the curve. Thus, the epicycloid is just the \(d=r\) case of the epitrochoid. The epicycloid has cusps, the number of which is determined by the ratio \(R/r\) and the curve closes if this ratio is rational.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/epicycloid/epicycloid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/epicycloid/epicycloid.shtml</a> (history and mathematical properties)</li>
+      <li><a href="https://mathworld.wolfram.com/Epicycloid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Epicycloid.html</a> (definition and special cases)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Epicycloid/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Epicycloid/</a> (historical development)</li>
+      <li><a href="https://www.2dcurves.com/roulette/roulettee.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/roulettee.html</a> (classification of roulettes and cycloidal curves)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:EPICYCLOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq id "Epicycloid"
+        iq "x=a·cos(θ)−b·cos(c·θ), y=d·sin(θ)−e·sin(f·θ)"
+        dcl "EPICYCLOID"
+        opt '("1 lobe, Cardioid"
+              "2 lobes, Nephroid"
+              "3 lobes"
+              "4 lobes"
+              "5 lobes"
+              "n lobes"
+              "Generalized, New Values")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fd (get_dist 2 "Radius of outer circle" nil basept)
+	     fe (if fd nil (get_dist 2 "Radius of inner circle (cusp)" 1.0 basept))
+         fa (if fd (* 2 (/ fd 3)) (* 2 fe))
+         fb (/ fa 2)
+         fc 2.0
+         fd fa
+         fe fb
+         ff fc))
+  ((eq kw 1)
+   (setq fd (get_dist 2 "Radius of outer circle" nil basept)
+         fe (if fd nil (get_dist 2 "Radius of inner circle" 1.0 basept))
+         fa (if fd (* 3 (/ fd 4)) (* 3 (/ fe 2)))
+         fb (/ fa 3)
+         fc 3.0
+         fd fa
+         fe fb
+         ff fc))
+  ((eq kw 2)
+   (setq fd (get_dist 2 "Radius of outer circle" nil basept)
+         fe (if fd nil (get_dist 2 "Radius of inner circle" 1.0 basept))
+         fa (if fd (* 4 (/ fd 5)) (* 4 (/ fe 3)))
+         fb (/ fa 4)
+         fc 4.0
+         fd fa
+         fe fb
+         ff fc))
+  ((eq kw 3)
+   (setq fd (get_dist 2 "Radius of outer circle" nil basept)
+         fe (if fd nil (get_dist 2 "Radius of inner circle" 1.0 basept))
+         fa (if fd (* 5 (/ fd 6)) (* 5 (/ fe 4)))
+         fb (/ fa 5)
+         fc 5.0
+         fd fa
+         fe fb
+         ff fc))
+  ((eq kw 4)
+   (setq fd (get_dist 2 "Radius of outer circle" nil basept)
+         fe (if fd nil (get_dist 2 "Radius of inner circle" 1.0 basept))
+         fa (if fd (* 6 (/ fd 7)) (* 6 (/ fe 5)))
+         fb (/ fa 6)
+         fc 6.0
+         fd fa
+         fe fb
+         ff fc))
+   ((eq kw 5)
+   (setq ff (get_real 4 "# of cusps (or lobes)" 1.0)
+         fe (get_dist 0 "Radius of inner circle (use 0 if prefer outer circle)" 1.0 basept)
+         fd 0
+         fd (if (= fe 0) (while (&lt;= fd fe) (setq fd (get_dist 2 "Radius of outer circle" 1.0 basept))) nil)
+	       fa (if fd (* (1+ ff) (/ fd (+ ff 2))) (* (1+ ff) (/ fe ff)))
+         fb (/ fa (1+ ff))
+         fc (1+ ff)
+         fd fa
+         fe fb
+         ff fc))
+  ((eq kw 6)
+   (setq eq_prompt "x = a cos &lt; - b cos c&lt;, y = d sin &lt; - e sin f&lt;)"
+         fa (get_real 0 "a (1st cos multiplier)" 0)
+         fb (get_real 0 "b (2nd cos multiplier)" 3)
+         fc (get_real 0 "c (x θ multiplier)" 2.5)
+         fd (get_real 0 "d (1st sin multiplier)" 0)
+         fe (get_real 0 "e (2nd sin multiplier)" 3)
+         ff (get_real 0 "f (y θ multiplier)" 2.45))))
+  (setq eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4) "\nd= " (rtos fd 2 4) ", e= " (rtos fe 2 4) ", f= " (rtos ff 2 4))
+       xc '(- (* fa (cos (eval a2))) (* fb (cos (* fc (eval a2)))))
+       yc '(- (* fd (sin (eval a2))) (* fe (sin (* ff (eval a2)))))
+       skm '(T T T)
+       a1 0
+       a2 a1
+       x1 (eval xc)
+       y1 (eval yc)
+       a2 '(+ a1 paramstep)
+       x2 '(eval xc)
+       y2 '(eval yc))
+  (cc))
+(C:EPICYCLOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

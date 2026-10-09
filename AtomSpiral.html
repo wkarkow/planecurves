@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atom Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Atom Spiral</h1>
+      <p class="short-description">A polar spiral that winds infinitely many times around a limiting circle of radius a/b, approaching it asymptotically without ever reaching it, while possessing a radial asymptote at θ = c/b.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral01-360.avif"
+           alt="Atom Spiral, a=1,b=1,c=1">
+      <figcaption>Atom Spiral, a=1,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral02-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=1,c=4">
+      <figcaption>Generalized Atom Spiral, a=1,b=1,c=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral03-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=1,c=8">
+      <figcaption>Generalized Atom Spiral, a=1,b=1,c=8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral04-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=1,c=0.5">
+      <figcaption>Generalized Atom Spiral, a=1,b=1,c=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral05-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=1,c=0.1">
+      <figcaption>Generalized Atom Spiral, a=1,b=1,c=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral06-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=3,c=1">
+      <figcaption>Generalized Atom Spiral, a=1,b=3,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral07-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=-10,c=1">
+      <figcaption>Generalized Atom Spiral, a=1,b=-10,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral08-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=-2,c=1">
+      <figcaption>Generalized Atom Spiral, a=1,b=-2,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral09-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=-0.5,c=1">
+      <figcaption>Generalized Atom Spiral, a=1,b=-0.5,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral10-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=-0.1,c=1">
+      <figcaption>Generalized Atom Spiral, a=1,b=-0.1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/AtomSpiral/AtomSpiral11-360.avif"
+           alt="Generalized Atom Spiral, a=1,b=-0.025,c=1,-θ only">
+      <figcaption>Generalized Atom Spiral, a=1,b=-0.025,c=1,-θ only</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Atom Spiral polar equation:</div>
+      \[ r = \frac{\theta}{\theta - a} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Atom Spiral generalized polar equation:</div>
+      \[ r = \frac{a \theta}{b \theta - c} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Atom Spiral, also known as the atomic spiral, was named by the Belgian mathematician Annie van Maldeghem in connection with the Matomium symposium held in Brussels in 2002.<sup>1</sup> It belongs to the family of polar spirals documented in collections of named two-dimensional curves.<sup>2</sup></p>
+    <p>The polar curve has two asymptotes. As the polar angle θ tends to infinity, the radius r approaches a/b. The spiral winds infinitely many times around a circle of that radius, approaching it arbitrarily closely without reaching it. There is also a straight-line radial asymptote at θ = c/b, where the denominator becomes zero and the curve has a singularity. The basic form is obtained when the parameters are set such that a = 1 and b = 1.</p>
+    <p>No documented real-life applications of the Atom Spiral in engineering or the natural sciences have been identified.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="http://www.2dcurves.com/spiral/spiralas.html" target="_blank" rel="noopener noreferrer">http://www.2dcurves.com/spiral/spiralas.html</a> (name origin by Annie van Maldeghem and Matomium symposium)</li>
+      <li><a href="https://mathworld.wolfram.com/Atom-Spiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Atom-Spiral.html</a> (asymptotes and mathematical properties)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ATOMSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc rval)
+  (setq id "Atom Spiral"
+        iq "r=a·θ/(b·θ-c)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 1440
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (larger = tighter winding)" 1.0)
+        fc (get_real 2 "c (larger = looser winding)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        rval '(/ (* fa (eval a2)) (avoid_zero (- (* fb (eval a2)) fc)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ATOMSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

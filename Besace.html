@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Besace - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Besace</h1>
+      <p class="short-description">A rational quartic Lissajous algebraic curve resembling a saddlebag or double pouch.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Besace/Besace01-360.avif"
+           alt="Besace curve, a=1,b=1">
+      <figcaption>Besace curve, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Besace/Besace02-360.avif"
+           alt="Besace curve, a=1,b=0.5">
+      <figcaption>Besace curve, a=1,b=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Besace/Besace03-360.avif"
+           alt="Besace curve, a=1,b=0 lemniscate of Gerono">
+      <figcaption>Besace curve, a=1,b=0 lemniscate of Gerono</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Besace/Besace04-360.avif"
+           alt="Besace curve, a=1,b=-0.5">
+      <figcaption>Besace curve, a=1,b=-0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Besace/Besace05-360.avif"
+           alt="Besace curve, a=1,b=-1">
+      <figcaption>Besace curve, a=1,b=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Besace/Besace06-360.avif"
+           alt="Besace curve, a=1,b=20">
+      <figcaption>Besace curve, a=1,b=2</figcaption>
+    </figure>
+    <figure>
+      <a href="https://wandler.com/products/kate-saddle-bag-tan-suede" target="_blank" rel="noopener noreferrer">
+        <img src="images/Besace/Besace07-360.avif"
+             alt="Modern saddle bag (besace style) – Kate Saddle Bag by Wandler"
+             class="external">
+      </a>
+      <figcaption>Modern saddle bag (besace style) – Kate Saddle Bag by Wandler</figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Besace implicit equation:</div>
+      \[ c^{2} y = b x^{2} \pm a x c^{2} - x^{3} \quad (c = a^{2} + b^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Besace parametric equations:</div>
+      \[ x = a \cos(\theta) - b \sin(\theta), \quad y = -x \sin(\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Besace curve<sup>1</sup> was studied and named by the Swiss mathematician Gabriel Cramer in 1750. The French word "besace" means saddlebag or double pouch, with Latin <em>bis-</em> ("twice") + <em>saccus</em> ("bag"), describing the typical shape for many values of the parameters. It is a rational quartic algebraic curve and belongs to the family of Lissajous curves<sup>2</sup> (generated from two perpendicular harmonic motions whose frequencies are related). Geometrically it is the orthogonal projection of Viviani's curve<sup>1</sup> (the intersection of a sphere and a cylinder of equal radius) onto planes that pass through the cylinder's axis. For large values of <em>a</em> relative to <em>b</em>, the shape approximates a parabola. When <em>b</em> = 0, it reduces exactly to the lemniscate of Gerono.<sup>2</sup></p>
+    <p>No real-life applications in engineering or the natural sciences were identified in the standard mathematical references<sup>1,2</sup> for this specific curve. Its interest remains primarily theoretical, illustrating properties of algebraic curves and projections of three-dimensional space curves.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/besace/besace.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/besace/besace.shtml</a> (naming by Cramer 1750, projection of Viviani's curve, special cases)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticbs.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticbs.html</a> (Lissajous classification, geometric construction, degeneration to lemniscate of Gerono)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BESACE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Besace"
+        iq "x=a·cos(θ)–b·sin(θ), y=–x·sin(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (cos coefficient)" 1.0)
+        fb (get_real 2 "b (sin coefficient)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(- (* fa (cos (eval a2))) (* fb (sin (eval a2))))
+        yc '(* (- (sin (eval a2))) (eval xc))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BESACE)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

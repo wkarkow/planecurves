@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bowtie Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bowtie Curve</h1>
+      <p class="short-description">Decorative polar curve producing a characteristic bowtie or winged shape with asymptotic rays.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Bowtie/Bowtie01-360.avif"
+           alt="Bowtie Curve, s=1,a=1,b=2,c=2,d=1">
+      <figcaption>Bowtie Curve, s=1,a=1,b=2,c=2,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie02-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=2,b=3,c=3,d=4">
+      <figcaption>Generalized Bowtie Curve, s=1,a=2,b=3,c=3,d=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie03-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=2,b=3,c=-3,d=4">
+      <figcaption>Generalized Bowtie Curve, s=1,a=2,b=3,c=-3,d=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie04-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=1,b=2,c=2,d=0.5">
+      <figcaption>Generalized Bowtie Curve, s=1,a=1,b=2,c=2,d=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie05-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=2,b=2,c=2,d=0.5">
+      <figcaption>Generalized Bowtie Curve, s=1,a=2,b=2,c=2,d=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie06-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=4,b=2,c=2,d=0.5">
+      <figcaption>Generalized Bowtie Curve, s=1,a=4,b=2,c=2,d=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie07-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=2,b=3,c=-3,d=6">
+      <figcaption>Generalized Bowtie Curve, s=1,a=2,b=3,c=-3,d=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie08-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=1,b=6,c=-2,d=9">
+      <figcaption>Generalized Bowtie Curve, s=1,a=1,b=6,c=-2,d=9</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bowtie/Bowtie09-360.avif"
+           alt="Generalized Bowtie Curve, s=1,a=2,b=1.8,c=-5,d=2.4">
+      <figcaption>Generalized Bowtie Curve, s=1,a=2,b=1.8,c=-5,d=2.4</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Bowtie Curve polar equation (classical):</div>
+      \[ r = \frac{\cos(2\theta)}{\cos^{2}(\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Bowtie Curve polar equation:</div>
+      \[ r = s \cdot \frac{\cos^{a}(b\theta)}{\cos^{c}(d\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Bowtie curve, in its classical form \( r = \frac{\cos(2\theta)}{\cos^{2}(\theta)} \), is catalogued among decorative analytic curves and does not originate from a geometric locus or mechanical linkage.<sup>1</sup> Using the identity \(\cos(2\theta) = 2\cos^{2}\theta - 1\), it may be rewritten \( r = 1 - \tan^{2}\theta \), revealing it as a rational function of \(\tan(\theta)\). Its characteristic "wings" arise from polar directions where \(\cos(\theta) = 0\), producing asymptotic rays. For this reason, sources such as MathCurve classify this idea into two-frequency harmonic interaction.<sup>1,2</sup></p>
+    <p>When the denominator exponent c &gt; 0, zeros in the denominator create asymptotic structures; when c &lt; 0, the expression becomes a product of cosine powers and typically yields closed figures.</p>
+    <p>Although the Bowtie itself has no traditional engineering application, products of cosine functions with independent frequencies and powers appear naturally in signal modulation, antenna and acoustic radiation patterns, optical interference models, and procedural geometric design.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml</a> (classification as decorative curve and classical polar equation).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sextic/sexticrationnelle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sextic/sexticrationnelle.shtml</a> (bowtie as rational sextic / Cartesian variant).</li>
+      <li><a href="https://www.2dcurves.com/sextic/sextic.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/sextic/sextic.html</a> (bowtie sextic Cartesian variant); general cosine-product contexts in engineering from MathWorld and standard references.</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BOWTIE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Bowtie Curve"
+        iq "r=s·cos^a(bθ)/cos^c(dθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "s (scale)" 1.0)
+        fb (get_real 2 "a (cos numerator power)" 1.0)
+        fc (get_real 2 "b (numerator θ multiple)" 2.0)
+        fd (get_real 2 "c (cos denominator power)" 2.0)
+        fe (get_real 2 "d (denominator θ multiple)" 1.0)
+        eq_display (strcat "\ns=" (rtos fa 2 4) ", a=" (rtos fb 2 4) ", b=" (rtos fc 2 4) ", c=" (rtos fd 2 4) ", d=" (rtos fe 2 4))
+        rval '(/ (* fa (alt_expt (cos (* fc (eval a2))) fb nil)) (avoid_zero (alt_expt (cos (* fe (eval a2))) fd nil)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BOWTIE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

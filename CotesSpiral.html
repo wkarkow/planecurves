@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cotes Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cotes Spiral</h1>
+      <p class="short-description">A family of five spirals arising in classical orbital mechanics under inverse-cube central forces; each corresponds to a distinct solution of the differential equation of motion in polar coordinates.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CotesSpiral/CotesSpiral01-360.avif"
+           alt="Cotes Cosh Spiral,a=1,k=0.05,ε=0">
+      <figcaption>Cotes Cosh Spiral,a=1,k=0.05,ε=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CotesSpiral/CotesSpiral04-360.avif"
+           alt="Cotes EpiSpiral,a=1,k=0.05,ε=0">
+      <figcaption>Cotes EpiSpiral,a=1,k=0.05,ε=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CotesSpiral/CotesSpiral02-360.avif"
+           alt="Cotes Hyperbolic Spiral,a=1,k=0.05,ε=0">
+      <figcaption>Cotes Hyperbolic Spiral,a=1,k=0.05,ε=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CotesSpiral/CotesSpiral03-360.avif"
+           alt="Cotes Log Spiral,a=1,k=0.05,ε=0">
+      <figcaption>Cotes Log Spiral,a=1,k=0.05,ε=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CotesSpiral/CotesSpiral05-360.avif"
+           alt="Cotes Sinh Spiral,a=1,k=0.05,ε=0">
+      <figcaption>Cotes Sinh Spiral,a=1,k=0.05,ε=0</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cotes’ Spiral polar equation 1:</div>
+      \[ \frac{1}{r} = a \cdot \cosh(k\theta + \epsilon) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cotes’ Spiral polar equation 2:</div>
+      \[ \frac{1}{r} = a \cdot \cos(k\theta + \epsilon) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cotes’ Spiral polar equation 3:</div>
+      \[ \frac{1}{r} = a \cdot (k\theta + \epsilon) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cotes’ Spiral polar equation 4:</div>
+      \[ \frac{1}{r} = a \cdot e^{k\theta + \epsilon} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cotes’ Spiral polar equation 5:</div>
+      \[ \frac{1}{r} = a \cdot \sinh(k\theta + \epsilon) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Roger Cotes (1682–1716) was an English mathematician and the first Plumian Professor of Astronomy and Experimental Philosophy at Trinity College, Cambridge, becoming a fellow and professor by age 23. Cotes collaborated closely with Isaac Newton, editing the second edition of the <em>Principia</em> (1713) over three-and-a-half years of detailed correspondence; he recomputed solar and planetary tables, refined lunar theory sections, and wrote a preface defending Newton's experimental method against Cartesian vortices. Newton later remarked on Cotes' death from a violent fever at age 33: "If he had lived we might have known something." Cotes' only lifetime publication,  <em>Logometria</em> (1714), advanced logarithms and rectified the logarithmic spiral; his broader work appeared posthumously in Harmonia Mensurarum (1722), edited by his cousin Robert Smith.<sup>1,2</sup> At the time,  orbital theory centered on Newton’s inverse-square law for gravity producing conic sections (ellipses, parabolas, hyperbolas). Cotes extended this to the inverse-cube force law \( F(r) ∝ \frac {1}{r^3} \), deriving the family of trajectories now called Cotes’ spirals. These describe particle paths under attractive and repulsive forces, starting from a given position with given speed and direction. The five polar cases he identified emerge from solving the differential equation of motion in polar coordinates, with the parameter \( k \) depending on the ratio of force strength to angular momentum squared. Cases 1 and 5 are Poinsot’s spirals, Case 2 the epispiral, Case 3 the hyperbolic spiral, and Case 4 the equiangular (logarithmic) spiral (see separate entries for details and code).<sup>3,4</sup> \( a \) governs size, \( k \) governs shape, and \( ε \) governs rotation for all cases.</p>
+    <p>Real-life applications in engineering and the natural sciences are confined to the theoretical framework of classical mechanics. Cotes’ spirals model orbits under inverse-cube central forces, a case Newton discussed but did not fully resolve; they appear in textbooks on analytical dynamics (e.g., Whittaker 1944) for illustrating non-closed trajectories that spiral into or away from the center.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Cotes/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Biographies/Cotes/</a> (Cotes biography, <em>Harmonia Mensurarum</em>).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Roger_Cotes" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Roger_Cotes</a> (life and Principia editing).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Cotes%27_spiral" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Cotes%27_spiral</a> (five cases, Newton Principia background).</li>
+      <li><a href="https://mathworld.wolfram.com/CotesSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CotesSpiral.html</a> (equations, orbital mechanics context).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+  <p>See the dedicated pages for each of the five Cotes’ spiral cases:</p>
+  <ul>
+    <li><a href="CoshSpiral.html">Cosh Spiral (Case 1)</a></li>
+    <li><a href="Epispiral.html">Epispiral (Case 2)</a></li>
+    <li><a href="HyperSpiral.html">Hyperbolic Spiral (Case 3)</a></li>
+    <li><a href="LogSpiral.html">Logarithmic Spiral (Case 4)</a></li>
+    <li><a href="SinhSpiral.html">Sinh Spiral (Case 5)</a></li>
+  </ul>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

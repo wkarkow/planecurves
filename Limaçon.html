@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Limaçon - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Limaçon</h1>
+      <p class="short-description">A plane algebraic curve generated as the conchoid of a circle with respect to a point on its circumference or as an epitrochoid of equal circles.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Limacon/Limacon01-360.avif"
+           alt="Cardioid, a=1,b=1">
+      <figcaption>Cardioid, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon02-360.avif"
+           alt="Limaçon Trisectrix, a=1,b=2">
+      <figcaption>Limaçon Trisectrix, a=1,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon03-360.avif"
+           data-caption="Limaçon, a=1,b=1(black),2(red),3(blue),4(green),5(orange),6(purple)"
+           alt="Limaçon, a=1,b=1(black),2(red),3(blue),4(green),5(orange),6(purple)">
+      <figcaption>
+        Limaçon, a=1,b=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">6</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon04-360.avif"
+           data-caption="Limaçon, a=0(black),0.5(red),1.0(blue),1.5(green),2.0(orange),2.5(purple),b=1"
+           alt="Limaçon, a=0(black),0.5(red),1.0(blue),1.5(green),2.0(orange),2.5(purple),b=1">
+      <figcaption>
+        Limaçon, a=
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.5</span>,
+        b=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon05-360.avif"
+           data-caption="Generalized Limaçon, a=1,b=2,c=0,d=0.25(black),0.5(red),1.0(blue),1.5(green),2(orange),3(purple),4(cyan),9(brown),32(lime),244(magenta),e=1"
+           alt="Generalized Limaçon, a=1,b=1,c=0,d=0.25(black),0.5(red),1.0(blue),1.5(green),2(orange),3(purple),4(cyan),9(brown),32(lime),244(magenta),e=1">
+      <figcaption>
+        Generalized Limaçon, a=1,b=2,c=0,d=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2</span>,
+        <span class="figcap-value" style="color:#9600FF">3</span>,
+        <span class="figcap-value" style="color:#0096FF">4</span>,
+        <span class="figcap-value" style="color:#AA5555">9</span>,
+        <span class="figcap-value" style="color:#00FF00">32</span>,
+        <span class="figcap-value" style="color:#FF00FF">244</span>,
+        e=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon06-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=1,e=1/4">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=1,e=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon07-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=1,e=1/3">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=1,e=1/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon08-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=1,e=1/2">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=1,e=1/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon09-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=1,e=4/3">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=1,e=4/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon10-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=1,e=3/2">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=1,e=3/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon11-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=1,e=5/3">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=1,e=5/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon12-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=1/2,e=5/3">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=1/2,e=5/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon13-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=2,e=5/3">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=2,e=5/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon14-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=8,e=5/3">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=8,e=5/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon15-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=0,d=2,e=1.66">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=0,d=2,e=1.66</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon16-360.avif"
+           alt="Generalized Limaçon, a=1,b=0.25,c=0,d=0.8,e=1.05">
+      <figcaption>Generalized Limaçon, a=1,b=0.25,c=0,d=0.8,e=1.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon17-360.avif"
+           alt="Generalized Limaçon, a=1,b=0.25,c=0,d=0.125,e=1.05">
+      <figcaption>Generalized Limaçon, a=1,b=0.25,c=0,d=0.125,e=1.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon18-360.avif"
+           alt="Generalized Limaçon, a=1,b=1,c=0,d=3,e=1.05">
+      <figcaption>Generalized Limaçon, a=1,b=1,c=0,d=3,e=1.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon19-360.avif"
+           alt="Generalized Limaçon, a=1,b=1,c=0,d=0.5,e=1.05">
+      <figcaption>Generalized Limaçon, a=1,b=1,c=0,d=0.5,e=1.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon20-360.avif"
+           alt="Generalized Limaçon, a=2,b=1,c=1,d=1,e=55/37">
+      <figcaption>Generalized Limaçon, a=2,b=1,c=1,d=1,e=55/37</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon21-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=1,d=1,e=55/37">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=1,d=1,e=55/37</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon22-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=2,d=3,e=4">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=2,d=3,e=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon23-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=3,d=2,e=4">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=3,d=2,e=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon24-360.avif"
+           alt="Generalized Limaçon, a=1,b=1,c=2,d=1,e=3">
+      <figcaption>Generalized Limaçon, a=1,b=1,c=2,d=1,e=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon25-360.avif"
+           alt="Generalized Limaçon, a=1,b=2,c=2,d=0.5,e=3">
+      <figcaption>Generalized Limaçon, a=1,b=2,c=2,d=0.5,e=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Limacon/Limacon26-360.avif"
+           alt="Generalized Limaçon, a=1,b=1,c=2,d=1,e=4">
+      <figcaption>Generalized Limaçon, a=1,b=1,c=2,d=1,e=4</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Limaçon of Pascal polar equation:</div>
+      \[ r = a + b \cos\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Limaçon trisectrix polar equation:</div>
+      \[ r = a(1 + 2\cos\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Limaçon polar equation:</div>
+      \[ r = a \cos(c\theta) + b \cos^{d}(e\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The limaçon of Pascal<sup>1,2</sup>, also known as Pascal’s snail, is a plane algebraic curve first investigated by Albrecht Dürer in 1525. It was later studied by Étienne Pascal (1588–1651), father of Blaise Pascal, around 1630 and formally named “limaçon” (from the Latin <em>limax</em>, snail) by Gilles Personne de Roberval in 1650. The curve is generated as the conchoid of a circle with respect to a point on its circumference or as an epitrochoid traced by a point fixed to a circle rolling without slipping around a fixed circle of equal radius. When the ratio of the parameters satisfies specific values, the limaçon becomes the cardioid (inner loop disappears) or the limaçon trisectrix<sup>3</sup> (useful for angle trisection constructions).</p>
+    <p>Real-life applications exist in engineering and the natural sciences. The limaçon profile appears in the Bélidor drawbridge mechanism, in the design of certain gears, and in the linkage of a 24-hour clock. Modern engineering uses the limaçon geometry to define the housing and rotor profiles of rotary positive-displacement machines (compressors, expanders, and pumps) employed in small- and micro-scale power generation systems, organic Rankine cycles, waste-heat recovery, and two-phase fluid processing.<sup>3,4</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/limacon/limacon.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/limacon/limacon.shtml</a> (history, equations, conchoid construction, Bélidor drawbridge, gears, 24-hour clock)</li>
+      <li><a href="https://mathworld.wolfram.com/Limacon.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Limacon.html</a> (history, polar equation, special cases including trisectrix)</li>
+      <li><a href="https://www.2dcurves.com/roulette/roulettel.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/roulettel.html</a> (history, epitrochoid definition)</li>
+      <li><a href="https://www.mdpi.com/2673-8392/4/4/122" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2673-8392/4/4/122</a> (limaçon rotary machines in power generation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LIMACON (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Limacon Curve"
+        iq ""
+        dcl "LIMACON"
+        opt '("Limaçon of Pascal" "Limaçon trisectrix" "Generalized")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0) 
+    (princ "\nLimaçon of Pascal: r = a + b·cos(θ): ")
+    (setq fa (get_real 0 "a (offset): " 1.0)
+          fb (get_real 2 "b (cos amplitude): " (* 2.0 fa))
+          fc 0.0
+          fd 1.0
+          fe 1.0))
+
+   ((eq kw 1)
+    (princ "\nLimaçon Trisectrix: r = a(1 + 2·cos(θ)): ")
+    (setq fa (get_real 2 "a (scale): " 1.0)
+          fb (* 2.0 fa)
+          fc 0.0
+          fd 1.0
+          fe 1.0))
+   ((eq kw 2)
+    (princ "\nGeneralized Limaçon: r = a·cos(cθ) + b·cosᵈ(eθ): ")
+    (setq fa (get_real 0 "a (1st cos amplitude): " 1.0)
+          fb (get_real 2 "b (2nd cos amplitude): " (* 2.0 fa))
+          fc (get_real 0 "c (1st angle multiplier): " 0.0)
+          fd (get_real 2 "d (2nd cos exponent): " 1.0)
+          fe (get_real 2 "e (2nd angle multiplier): " 1.0))))
+  (setq eq_display (strcat "a=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", e=" (rtos fe 2 4))
+        rval '(+ (* fa (cos (* fc (eval a2)))) (* fb (alt_expt (cos (* fe (eval a2))) fd nil)))
+        xc '(* (eval rval ) (cos (eval a2)))
+        yc '(* (eval rval ) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LIMACON)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alias Lookup - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<style>
+  /* Index-specific refinements for clean professional list (matches _CurveIndex.html) */
+  .index-container {
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 20px;
+  }
+  .index-container h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  #alias-list {
+    list-style: decimal;
+    padding-left: 28px;
+    margin: 0;
+    line-height: 1.7;
+  }
+  #alias-list li {
+    margin-bottom: 10px;
+  }
+  .alias-row {
+    display: grid;
+    grid-template-columns: minmax(240px, 1.1fr) 1fr;
+    gap: 20px;
+    align-items: baseline;
+  }
+  .alias-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 1.05rem;
+  }
+  .curve-link a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 1.02rem;
+  }
+  .curve-link a:hover {
+    text-decoration: underline;
+  }
+  .list-meta {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 16px;
+  }
+  .search-box {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <nav class="main-nav left-nav">
+      <a href="_Main.html">Home</a>
+      <a href="_CurveIndex.html">Curve Lookup</a>
+      <span class="nav-current">Alias Lookup</span>
+    </nav>
+    <h2 class="site-title">
+      <a href="_Main.html">Plane Curves with AutoCAD</a>
+    </h2>
+    <nav class="main-nav right-nav">
+      <a href="_EquationIndex.html">Equation Lookup</a>
+      <a href="_ImageIndex.html">Image Lookup</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-title-block">
+      <h1>Alias Lookup</h1>
+      <p class="short-description">
+        Alphabetical index of alternative names and common aliases for all documented curves.
+        Click any entry to open its dedicated page.
+      </p>
+    </div>
+  </section>
+
+  <div class="index-container">
+    <div class="list-meta">
+      <span id="alias-count"></span> aliases · sorted alphabetically by alias · filter below to narrow results
+    </div>
+
+    <input type="text" id="search-input" class="search-box" placeholder="Filter aliases by name..." aria-label="Filter the alias list">
+
+    <ol id="alias-list"></ol>
+  </div>
+</main>
+
+<script src="_Curve-list.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById("alias-list");
+    const countEl = document.getElementById("alias-count");
+    const searchInput = document.getElementById("search-input");
+
+    if (typeof curveList === "undefined" || !Array.isArray(curveList)) {
+      container.innerHTML = "<li style='color:#c00;'>Error: _Curve-list.js not loaded or invalid.</li>";
+      return;
+    }
+
+    // Build flat list of alias entries from curves that have them
+    let aliasEntries = [];
+    curveList.forEach(curve => {
+      if (curve.aliases && Array.isArray(curve.aliases) && curve.aliases.length > 0) {
+        curve.aliases.forEach(alias => {
+          aliasEntries.push({
+            alias: alias,
+            title: curve.title,
+            filename: curve.filename
+          });
+        });
+      }
+    });
+
+    // Sort alphabetically by alias (case-insensitive)
+    aliasEntries.sort((a, b) => a.alias.localeCompare(b.alias, undefined, { sensitivity: "base" }));
+
+    // Render the list (supports filtering)
+    function renderList(filteredEntries) {
+      container.innerHTML = "";
+      if (filteredEntries.length === 0) {
+        const li = document.createElement("li");
+        li.innerHTML = "<em>No matching aliases found.</em>";
+        container.appendChild(li);
+        return;
+      }
+      filteredEntries.forEach(entry => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <div class="alias-row">
+            <span class="alias-name">${entry.alias}</span>
+            <span class="curve-link"><a href="${entry.filename}">${entry.title}</a></span>
+          </div>
+        `;
+        container.appendChild(li);
+      });
+    }
+
+    renderList(aliasEntries);
+    if (countEl) {
+      countEl.textContent = aliasEntries.length;
+    }
+
+    // Live filter on typing (matches CurveIndex behavior)
+    if (searchInput) {
+      searchInput.addEventListener("input", function() {
+        const term = searchInput.value.toLowerCase().trim();
+        if (!term) {
+          renderList(aliasEntries);
+          return;
+        }
+        const filtered = aliasEntries.filter(e =>
+          e.alias.toLowerCase().includes(term)
+        );
+        renderList(filtered);
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

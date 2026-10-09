@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tractrix - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Tractrix</h1>
+      <p class="short-description">The path of a point pulled by a string of fixed length while the other end moves along a straight line.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Tractrix/Tractrix01-360.avif"
+           alt="Tractrix, a=1,b=1,c=1">
+      <figcaption>Tractrix, a=1,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Tractrix/Tractrix02-360.avif"
+           alt="Tractrix, a=1,b=0.5,c=0.5">
+      <figcaption>Tractrix, a=1,b=0.5,c=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Tractrix/Tractrix03-360.avif"
+           alt="Tractrix, a=1,multiple values of b,c=1">
+      <figcaption>
+        Tractrix, a=1,b=
+        <span class="figcap-value" style="color:#000000">3.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">0.75</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.25</span>,
+        <span class="figcap-value" style="color:#AA5555">0.05</span>,
+        c=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Tractrix/Tractrix04-360.avif"
+           alt="Tractrix, a=1,b=1,multiple values of c>
+      <figcaption>
+        Tractrix, a=1,b=1,c=
+        <span class="figcap-value" style="color:#000000">3.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">0.75</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.25</span>,
+        <span class="figcap-value" style="color:#AA5555">0.05</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Tractrix parametric equations:</div>
+      \[ x = a(\theta - \tanh(\theta)),\qquad y = \frac{a}{\operatorname{sech}(\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Tractrix parametric equations:</div>
+      \[ x = a(b\theta - \tanh(c\theta)),\qquad y = \frac{a}{\operatorname{sech}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The tractrix<sup>1,2,3,4</sup>, from the Latin <em>tractus</em> (“drawn” or “pulled”), is the plane curve traced by a point that is pulled by a string of constant length while the other end moves along a straight line that becomes the curve’s asymptote. The problem was posed to Gottfried Wilhelm Leibniz in the late seventeenth century. Christiaan Huygens first studied the curve in 1692 and gave it the name “tractrix.”<sup>2</sup> Leibniz solved the problem by recognizing that the axis of motion is an asymptote to the curve. The tractrix is also known as the “dog curve” or <em>Hundkurve</em> in German from the everyday analogy of a dog on a leash being pulled by its master along a straight path. Johann Bernoulli and later investigators examined its properties in detail. A fundamental property is that the length of the tangent drawn from any point on the curve to its intersection with the asymptote remains constant and equal to the string length \( a \). The area lying between the tractrix and its asymptote is finite. When the tractrix is revolved about its asymptote, the surface generated is the pseudosphere, a surface of constant negative Gaussian curvature that provides a concrete model of hyperbolic geometry in differential geometry. The tractrix is the involute of the catenary (the catenary is the evolute of the tractrix).</p>
+    <p>No explicit engineering or industrial applications beyond the original mechanical dragging construction and the generation of the pseudosphere were identified. The curve remains chiefly an object of mathematical study, appearing in textbooks on differential geometry, pursuit problems, and surfaces of constant curvature.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Tractrix.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Tractrix.html</a> (history, defining problem, properties, pseudosphere, and equations)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Tractrix/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Tractrix/</a> (Huygens naming and Leibniz solution)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/tractrice/tractrice.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/tractrice/tractrice.shtml</a> (equations, construction)</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialt.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialt.html</a> (equations, alternate names)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TRACTRIX (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Tractrix"
+        iq "x=a·(bθ-tanh(cθ)), y=a·sech(θ)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (θ multiplier)" 1.0)
+        fc (get_real 2 "c (tanh(θ) multiplier)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        paramstep (/ (/ (+ (/ xspan fa) 1.0) fb) divcount)
+        xc '(* fa (- (* fb (eval a2)) (tanh (* fc (eval a2)))))
+        yc '(* fa (/ 1.0 (cosh (eval a2))))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TRACTRIX)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

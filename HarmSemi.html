@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonic Semiweak Damping - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Harmonic Semiweak Damping</h1>
+      <p class="short-description">Generalization of the critically damped free harmonic oscillator response: the product of a power-law term and exponential decay that belongs to the Gamma/Erlang family.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HarmSemi/HarmSemi01-360.avif"
+           alt="Harmonic Semiweak Damping, A=10,x₀=0,n=2,multiple values of κ">
+      <figcaption>
+        Harmonic Semiweak Damping, A=10,x₀=0,n=2,κ=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">6</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmSemi/HarmSemi02-360.avif"
+           alt="Harmonic Semiweak Damping, A=10,x₀=0,multiple values of n,κ=1">
+      <figcaption>
+        Harmonic Semiweak Damping, A=10,x₀=0,n=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2</span>,
+        <span class="figcap-value" style="color:#FF9600">2.5</span>,
+        <span class="figcap-value" style="color:#9600FF">3</span>,
+        κ=1
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Harmonic Semiweak Damping Curve Cartesian equation:</div>
+      \[ y = A (x - x_{0})^{n-1} e^{-\kappa (x - x_{0})} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Harmonic Semiweak Damping (generalized Gamma form) curve is a generalization of the semi-weak damping case \( y(x) = x \cdot e^{-x} \) in the free damped harmonic oscillator,<sup>1</sup> matching the critically damped solution to the second-order linear differential equation \( y'' + a \cdot y' + b \cdot y = 0 \) with appropriate initial conditions, where the response is the product of a linear term and an exponential decay.<sup>2</sup> This case sits at the boundary between underdamped and overdamped non-oscillatory motion, and is a special case of the more general Gamma/Erlang family, where \( A \) is a scale factor, \( x_{0} \) a time shift, \( n \) a shape parameter, and \( \kappa \) a damping rate. The case \( n = 2 \), \( A = 1 \), \( x_{0} = 0 \), \( \kappa = 1 \) reduces to the semiweak damping curve above. Larger values of \( n \) yield progressively delayed and broadened pulses, while \( n = 1 \) recovers the simple exponential decay. For statisticians, the canonical Erlang probability density function uses \( \frac{\kappa^{n}}{(n-1)!} \) to normalize the area under the curve to one; here the scale parameter \( A \) is left free, since normalization is not required in physical damping applications. The Erlang distribution uses integer \( n \), but the Gamma distribution extends it to real \( n \).</p>
+    <p>Real-life applications appear in systems that must return to equilibrium as quickly as possible without oscillation. Automotive shock absorbers tune near critical damping to control body motion over road irregularities. Door closers and cabinet hardware use the same principle for smooth, rapid closure. Analog instrument pointers (scales, galvanometers, tachometers) employ critical damping so the needle settles to the true reading without overshoot or ringing. Equivalent behavior governs critically damped RLC circuits in electrical measurement and control equipment.<sup>3</sup> In chemical kinetics and radioactive decay chains it models the concentration or probability density of the nth intermediate in a sequence of consecutive first-order reactions or decays with equal rate constants \( \kappa \), where the output of one stage feeds the next with exponential waiting times.<sup>4</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/exponential/exponentiald.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentiald.html</a> (semi-weak damping description and differential equation)</li>
+      <li><a href="https://mathworld.wolfram.com/CriticallyDampedSimpleHarmonicMotion.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CriticallyDampedSimpleHarmonicMotion.html</a> (critical damping solution and equations)</li>
+      <li><a href="https://jwu.pressbooks.pub/collegephysics/chapter/damped-harmonic-motion/" target="_blank" rel="noopener noreferrer">https://jwu.pressbooks.pub/collegephysics/chapter/damped-harmonic-motion/</a> (critical damping applications in instruments and mechanical systems)</li>
+      <li><a href="https://mathworld.wolfram.com/ErlangDistribution.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ErlangDistribution.html</a> (Erlang distribution in consecutive first-order reactions and radioactive decay chains)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HARMSEMI (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Harmonic Semiweak Damping (generalized Gamma form)"
+        iq "y=A·(x-x₀)^{n-1}·e^{-κ·(x-x₀)}"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 1000
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "A (scale)" 10.0)
+        fb (get_real 2 "x₀ (shift)" 0.0)
+        fc (get_real 2 "n (shape exponent)" 2.0)
+        fd (get_real 6 "κ (damping rate)" 1.0)
+        eq_display (strcat "\nA=" (rtos fa 2 4) ", x₀=" (rtos fb 2 4) ", n=" (rtos fc 2 4) ", κ=" (rtos fd 2 4))
+        xc '(eval a2)
+        yc '(* fa (alt_expt (- (eval a2) fb) (- fc 1.0) nil) (exp (* -1.0 fd (- (eval a2) fb))))
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HARMSEMI)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dumbbell Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Dumbbell Curve</h1>
+      <p class="short-description">A family of closed two-lobed plane curves.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell01-360.avif"
+           alt="Dumbbell Curve, a=1,b=1,c=2,d=1">
+      <figcaption>Dumbbell Curve, a=1,b=1,c=2,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell02-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=2,c=2,d=1">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=2,c=2,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell03-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=2,c=2,d=2">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=2,c=2,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell04-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=1,c=0.5,d=1">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=1,c=0.5,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell05-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=1,c=1,d=1, Lemniscate of Gerono">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=1,c=1,d=1, Lemniscate of Gerono</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell06-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=1,c=3,d=1">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=1,c=3,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell07-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=0.5,c=0.5,d=1">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=0.5,c=0.5,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell08-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=0.5,c=0.5,d=2">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=0.5,c=0.5,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell09-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=0.5,c=1,d=3">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=0.5,c=1,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell10-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=3,c=2,d=1">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=3,c=2,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell11-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=3,c=2,d=3">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=3,c=2,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Dumbbell/Dumbbell12-360.avif"
+           alt="Generalized Dumbbell Curve, a=1,b=3,c=5,d=3">
+      <figcaption>Generalized Dumbbell Curve, a=1,b=3,c=5,d=3</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Dumbbell Curve Cartesian equation:</div>
+      \[ a^{4} y^{2} = x^{4}(a^{2} - x^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Dumbbell Curve polar equation (classical):</div>
+      \[ x = a \sin\theta,\quad y = a \sin^{2}\theta \cdot \cos\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ x = a \sin^{b}\theta,\quad y = a \sin^{c}\theta \cdot \cos^{d}\theta \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Dumbbell curve<sup>1</sup> is described in Wiktionary as “Any of a family of closed curves having two lobes; they satisfy the general equation \( y^{2} = a^{2}(x^{4} - x^{6}) \).”<sup>2</sup> The polar equivalent can be generalized and the shape varied with positive real exponents \( b \), \( c \), and \( d \). When \( b = 1 \), \( c = 2 \), and \( d = 1 \), the curve reduces to the classical Eight curve (also called the Lemniscate of Gerono), a quartic algebraic curve whose Cartesian form is \( x^{4} = a^{2}(x^{2} - y^{2}) \).<sup>3</sup> French mathematician Camille-Christophe Gerono (1799–1891) studied this specific case in detail during the 19th century. Earlier examinations of similar figure-eight loci appear in the work of Grégoire de Saint-Vincent (1647) and Gabriel Cramer (1750).<sup>4</sup> The more general parametric form belongs to the broader family of trigonometric curves catalogued in standard references for plane algebraic curves; no single discoverer is recorded for the parameterized exponents beyond the base case.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In kinematics, mechanical linkages have been designed to trace the path of the Lemniscate of Gerono exactly<sup>5</sup>; these devices serve in mechanism analysis, demonstration models, and the study of constrained motion. In physics, analogous figure-eight trajectories appear in the modeling of certain periodic orbits and phase-space diagrams.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/doublegouttedeau/doublegouttedeau.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/doublegouttedeau/doublegouttedeau.shtml</a> (related dumbbell / double-teardrop sextic).</li>
+      <li><a href="https://en.wiktionary.org/wiki/dumbbell_curve" target="_blank" rel="noopener noreferrer">https://en.wiktionary.org/wiki/dumbbell_curve</a> (definition, equation).</li>
+      <li><a href="https://mathworld.wolfram.com/EightCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/EightCurve.html</a> (Eight Curve / Gerono lemniscate equations and properties).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/gerono/gerono.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/gerono/gerono.shtml</a> (Lemniscate of Gerono history and parametrization).</li>
+      <li><a href="https://iopscience.iop.org/article/10.1088/1757-899X/514/1/012035" target="_blank" rel="noopener noreferrer">https://iopscience.iop.org/article/10.1088/1757-899X/514/1/012035</a> (kinematic mechanisms generating the curve).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DUMBBELL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xstep restartflag
+                     id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd maxdraw)
+  (setq id "Dumbbell Curve"
+        iq "x=a·sinᵇ(θ), y=a·sinᶜ(θ)·cosᵈ(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (exponent on sin for x-component)" 1.0)
+        fc (get_real 2 "c (exponent on sin for y-component)" 2.0)
+        fd (get_real 2 "d (exponent on cos for y-component)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(* fa (alt_expt (sin (eval a2)) fb nil))
+        yc '(* fa (alt_expt (sin (eval a2)) fc nil) (alt_expt (cos (eval a2)) fd nil))
+        maxdraw (if (or (&lt; fb 0) (&lt; fc 0) (&lt; fd 0)) (get_real 2 "Maximum x and y values allowed?" 1e5))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DUMBBELL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

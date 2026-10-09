@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartesian Oval - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cartesian Oval</h1>
+      <p class="short-description">A family of quartic plane curves that produce perfect (stigmatic) point-to-point refraction between two fixed points lying in different optical media.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Cartesian/Cartesian01-360.avif"
+           alt="Cartesian Oval, ρ₂=0.8,ρ₁=0.5,a₁=1.0">
+      <figcaption>Cartesian Oval, ρ₂=0.8,ρ₁=0.5,a₁=1.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cartesian/Cartesian02-360.avif"
+           alt="Cartesian Oval, ρ₂=0.9,ρ₁=0.5,a₁=1.0">
+      <figcaption>Cartesian Oval, ρ₂=0.9,ρ₁=0.5,a₁=1.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cartesian/Cartesian03-360.avif"
+           alt="Cartesian Oval, ρ₂=1.0,ρ₁=0.5,a₁=1.0">
+      <figcaption>Cartesian Oval, ρ₂=1.0,ρ₁=0.5,a₁=1.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cartesian/Cartesian04-360.avif"
+           alt="Cartesian Oval outer plus branch, multiple values of ρ₂"
+      <figcaption>
+        Cartesian Oval outer plus branch, ρ₂=
+        <span class="figcap-value" style="color:#000000">0.2</span>,
+        <span class="figcap-value" style="color:#FF0000">0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">0.6</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.2</span>,
+        <span class="figcap-value" style="color:#0096FF">1.4</span>
+        ,ρ₁=0.15,a₁=1.0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cartesian/Cartesian05-360.avif"
+           alt="Cartesian Oval both branches, multiple values of ρ₂"
+        Cartesian Oval both branches, ρ₂=
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">0.2</span>,
+        <span class="figcap-value" style="color:#FF0000">0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">0.6</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.2</span>,
+        <span class="figcap-value" style="color:#0096FF">1.4</span>
+        ,ρ₁=0.15,a₁=1.0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cartesian/Cartesian06-360.avif"
+           alt="Cartesian Oval both branches, multiple values of ρ₁"
+      <figcaption>
+        Cartesian Oval both branches, ρ₂=0.95,ρ₁=
+        <span class="figcap-value" style="color:#000000">0.15</span>,
+        <span class="figcap-value" style="color:#FF0000">0.35</span>,
+        <span class="figcap-value" style="color:#0000FF">0.55</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">0.90</span>
+        ,a₁=1.0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cartesian/Cartesian07-360.avif"
+           alt="Cartesian Oval both branches, multiple values of ρ₁"
+      <figcaption>
+        Cartesian Oval both branches, ρ₂=0.5,ρ₁=0.9,a₁=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cartesian Oval implicit equation:</div>
+      \[ m\sqrt{(x + a)^{2} + y^{2}} + n\sqrt{(x - a)^{2} + y^{2}} = k \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cartesian Oval polar equation:</div>
+      \[ r =\rho_{1}^{2}\cos\theta+\rho_{2}\pm\sqrt{\rho_{1}^{2}\Bigl[(\rho_{2}+\cos\theta)^{2}+(1-\rho_{1}^{2})\sin^{2}\theta\Bigr]} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cartesian Oval parametric equations:</div>
+      \[ x =a_{1}+r(\theta)\cos\theta,\qquad y = r(\theta)\sin\theta \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Cartesian oval is a family of plane curves introduced by René Descartes in 1637<sup>1</sup> in his work <em>La Géométrie</em>. Descartes developed these curves while investigating the refraction of light rays passing between two different media, motivated by the need to find surfaces that focus all rays from one point to another perfectly (stigmatic imaging). This work was part of his broader efforts in dioptrics and followed challenges from contemporaries such as Fermat on explaining light bending. Given two fixed points F₁ and F₂, and two positive constants m and n, a Cartesian oval is the set of points P such that m·PF₁ + n·PF₂ = k. The Cartesian oval becomes an ellipse when m = n and a hyperbola if one of m or n is negative.</p>
+    <p>While not common in mass-market optics, Cartesian ovals have been investigated or used in several technical areas. In high-end optics<sup>2</sup> (microscopy, lasers), they offer an ideal aspherical lens surface for perfect point-to-point refraction, eliminating spherical aberration and improving clarity. Certain reflective surfaces (e.g., in telescopes or military optics) use Cartesian oval segments to control multi-medium transitions. Their structure appears in the eikonal equation, which models wave propagation in varying media, particularly in nonlinear optics and plasma physics. In medical ultrasound imaging<sup>3</sup>, the constant time-of-flight level sets through layered tissues (skin, fat, muscle) are Cartesian ovals, enabling accurate ray-tracing and focusing algorithms that correct refraction-induced aberrations.</p>
+    <p>Many thanks to Rida T. Farouki, U.C. Davis, for converting the implicit equation into polar coordinates.<sup>4</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/CartesianOvals.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CartesianOvals.html</a> (history and definition).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/descartes/descartes.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/descartes/descartes.shtml</a> (optics applications).</li>
+      <li><a href="https://arxiv.org/pdf/2510.05951" target="_blank" rel="noopener noreferrer">https://arxiv.org/pdf/2510.05951</a> (medical ultrasound time-of-flight Cartesian oval algorithm).</li>
+      <li><a href="https://escholarship.org/uc/item/0d394338" target="_blank" rel="noopener noreferrer">https://escholarship.org/uc/item/0d394338</a> (Farouki paper: polar conversion, eikonal equation, wave propagation).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CARTESIAN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo
+                      paramstep restartflag id iq dcl opt kw mode dpr dct dpt span eq_display fa fb fc rval xc yc skm a1 a2 x1 y1 x2 y2)
+  (setq id "Cartesian Oval"
+        iq ""
+        dcl "CARTESIAN"
+        opt '("(-) root equation" "(+) root equation")
+        kw 1
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (if (eq kw 0)
+    (princ "\nr=ρ₁²·cosθ + ρ₂ - √[ρ₁²·((ρ₂ + cosθ)² + (1-ρ₁²)·sin²θ)]")
+    (princ "\nr=ρ₁²·cosθ + ρ₂ + √[ρ₁²·((ρ₂ + cosθ)² + (1-ρ₁²)·sin²θ)]"))
+  (setq fa (get_real 6 "ρ₂ (2nd focal weight)" 0.9)
+        fb (get_boundr 6 "ρ₁ (1st focal weight < 1)" 0.5 nil 1.0 nil nil)
+        fc (get_real 2 "a₁ (focal distance to first pole)" 1.0)
+        eq_display (strcat "\nρ₁=" (rtos fb 2 4) ", ρ₂=" (rtos fa 2 4) ", a₁=" (rtos fc 2 4))
+        rval (if (eq kw 0) '(+ (* fb fb (cos (eval a2))) fa (- (alt_expt (* fb fb (+ (alt_expt (+ fa (cos (eval a2))) 2 nil) (* (- 1.0 (* fb fb))
+             (alt_expt (sin (eval a2)) 2 nil)))) 0.5 nil))) '(+ (* fb fb (cos (eval a2))) fa (alt_expt (* fb fb (+ (alt_expt (+ fa (cos (eval a2)))
+             2 nil) (* (- 1.0 (* fb fb)) (alt_expt (sin (eval a2)) 2 nil)))) 0.5 nil)))
+        xc '(+ fc (* (cos (eval a2)) (eval rval)))
+        yc '(* (sin (eval a2)) (eval rval))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CARTESIAN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

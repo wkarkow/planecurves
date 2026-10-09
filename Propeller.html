@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boat Propeller Curve</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <!-- ============================================================ -->
+  <!-- CURVE HEADER -->
+  <!-- ============================================================ -->
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Boat Propeller Curve</h1>
+      <p class="short-description">A sextic algebraic curve with rotational symmetry and blade-like lobes.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- IMAGE GALLERY -->
+  <!-- ============================================================ -->
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Propeller/Propeller01-360.avif"
+           alt="Boat Propeller Curve, n=4">
+      <figcaption>Boat Propeller Curve, n=4</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller02-360.avif"
+           alt="Boat Propeller Curve, n=7">
+      <figcaption>Boat Propeller Curve, n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller03-360.avif"
+           alt="Boat Propeller Curve, n=7/2">
+      <figcaption>Boat Propeller Curve, n=7/2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller04-360.avif"
+           alt="Boat Propeller Curve, n=7/3">
+      <figcaption>Boat Propeller Curve, n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller05-360.avif"
+           alt="Boat Propeller Curve, n=7/4">
+      <figcaption>Boat Propeller Curve, n=7</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller06-360.avif"
+           alt="Boat Propeller Curve, n=2">
+      <figcaption>Boat Propeller Curve, n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller07-360.avif"
+           alt="Boat Propeller Curve, n=1">
+      <figcaption>Boat Propeller Curve, n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller08-360.avif"
+           alt="Boat Propeller Curve, n=1/2">
+      <figcaption>Boat Propeller Curve, n=1/2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Propeller/Propeller09-360.avif"
+           alt="Boat Propeller Curve, n=1/7">
+      <figcaption>Boat Propeller Curve, n=1/7</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- EQUATION RIBBON -->
+  <!-- ============================================================ -->
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Boat Propeller implicit equation:</div>
+      \[ x^{6} + y^{6} = x y (x^{2} - y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Boat Propeller polar equation (generalized):</div>
+      \[ r^{2} = \frac{2 \sin (n \theta)}{n + 1 + (n - 1) \cos (n \theta)} \]
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- HISTORY AND APPLICATIONS -->
+  <!-- ============================================================ -->
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Boat Propeller Curve, attributed to Christophe Tardy (2019) and catalogued by MathCurve<sup>¹</sup>, is defined in Cartesian form by \(x^{6} + y^{6} = x y (x^{2} - y^{2})\), a sextic algebraic curve exhibiting four-fold rotational symmetry and blade-like lobes. Converting to polar coordinates yields the equivalent polar equation \(r^{2} = \frac{2 \sin (4\theta)}{5 + 3 \cos (4\theta)}\) for the four-lobe case. The numerator controls the four-lobed symmetry, while the denominator modulates curvature, producing the distinctive “propeller” appearance in which each lobe has one edge nearly straight and the opposite edge more rounded.</p>
+    <p>The Boat Propeller curve itself is primarily decorative and mathematical. However, it is an example of how algebraic curves can resemble engineered forms and a demonstration of how asymmetric blade geometry can emerge from rational trigonometric structure.</p>
+    <p>Early marine propellers (mid–19th century onward) evolved from empirical experimentation by inventors such as John Ericsson and Francis Pettit Smith. Initial designs were influenced by screw-thread geometry and by flat or slightly cambered plate theory. For most of the 19th and early 20th centuries, propeller blades typically exhibited a straighter leading edge (the edge that first meets the water during rotation), and a more curved trailing edge. This geometry was not arbitrary. Several engineering considerations favored it: For structural strength, a straighter leading edge distributes bending loads more uniformly from hub to tip, improving resistance to fatigue. As to manufacturability, earlier casting and machining methods favored simpler edge profiles. Considering hydrodynamics at moderate speeds, before high-speed cavitation became a dominant concern, designers primarily sought thrust efficiency and predictable flow attachment. A relatively straight leading edge helped stabilize inflow over much of the blade span.</p>
+    <p>As marine propulsion speeds increased in the 20th century with naval vessels and submarines, cavitation (formation and collapse of vapor bubbles) became a critical problem. Cavitation causes noise, vibration, blade erosion, and reduced efficiency. By the mid-20th century, naval research developed skewed, highly cambered blades with more complex curvature. Modern submarine propellers, particularly those designed for low acoustic signature, often feature concave leading edges, convex trailing edges, and heavy blade skew and tip sweep. The purpose is to smooth pressure gradients along the blade, delay cavitation onset, distribute loading more gradually, and reduce pressure pulse signatures detectable by sonar. In essence, early propellers prioritized thrust and structural robustness. Modern stealth propellers prioritize hydrodynamic smoothness and acoustic discretion, even at the cost of geometric simplicity.</p>
+    <p>Unlike submarine propellers operating in incompressible water where cavitation control governs blade shape, aircraft propellers work in compressible air at high tip Mach numbers, so concave leading edges are generally avoided because they aggravate compressibility effects, stall behavior, and structural stress under extreme centrifugal loading.</p>
+    <p>When specifying the number of blades \(N\), larger \(N/k\) produces fatter, more overlapped blades whereas \(k = 1\) gives the narrowest propeller form. The generalized polar equation of the curve family allows direct exploration of these multi-lobed symmetric forms for different blade counts \(n\).</p>
+    <p><strong>Applications in engineering and natural sciences:</strong> While the specific Boat Propeller Curve is primarily of mathematical and ornamental interest, its polar construction and multi-lobed symmetry provide a clear, low-parameter model for studying how rational trigonometric expressions generate blade-like curvature and rotational symmetry. This has conceptual value in hydrodynamic education, in parametric modeling of propeller-like shapes for visualization or rapid prototyping, and in exploring the mathematical origins of forms that appear in engineered rotating machinery. Similar multi-lobed algebraic curves occasionally arise in studies of rotational symmetry in physics (e.g., certain orbital or wave patterns) and in natural sciences when modeling periodic or star-shaped structures, though direct engineering use of this exact curve remains decorative rather than functional.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- REFERENCES -->
+  <!-- ============================================================ -->
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml" target="_blank" rel="noopener noreferrer">MathCurve – Ornementales (Cartesian and polar definitions, attribution to Christophe Tardy, 2019)</a></li>
+    </ol>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- AUTOLISP CODE -->
+  <!-- ============================================================ -->
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PROPELLER (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa)
+  (setq id "Boat Propeller Curve"
+        iq "r² = 2·sin(n·θ)/((n+1)+(n-1)·cos(n·θ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "n (number of blades)" 4.0)
+        eq_display (strcat "\nBoat Propeller: r²=2·sin(n·θ)/((n+1)+(n-1)·cos(n·θ)), n=" (rtos fa 2 4))
+        rval '(if (<= (/ (* 2.0 (sin (* fa (eval a2)))) (+ fa 1.0 (* (- fa 1.0) (cos (* fa (eval a2)))))) 1e-9) 0.0
+              (alt_expt (/ (* 2.0 (sin (* fa (eval a2)))) (+ fa 1.0 (* (- fa 1.0) (cos (* fa (eval a2)))))) 0.5 nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PROPELLER)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

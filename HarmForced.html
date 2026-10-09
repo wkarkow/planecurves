@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonic Forced Damping - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Harmonic Forced Damping</h1>
+      <p class="short-description">Displacement response of a driven mass-spring-damper system: a steady-state sinusoid superposed on a transient exponentially decaying sinusoid.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HarmForced/HarmForced01-360.avif"
+           alt="Harmonic Forced Damping, A=1,α=1,φ=0,B=25,multiple values of κ,β=1,ψ=0">
+      <figcaption>
+        Harmonic Forced Damping, A=1,α=1,φ=0,B=25,κ=
+        <span class="figcap-value" style="color:#000000">1/8</span>,
+        <span class="figcap-value" style="color:#FF0000">1/4</span>,
+        <span class="figcap-value" style="color:#0000FF">1/2</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">4.0</span>,
+        β=1,ψ=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmForced/HarmForced02-360.avif"
+           alt="Harmonic Forced Damping, A=1,α=1,φ=0,B=25,κ=0.25,multiple values of β,ψ=0">
+      <figcaption>
+        Harmonic Forced Damping, A=1,α=1,φ=0,B=25,κ=0.25,β=
+        <span class="figcap-value" style="color:#000000">2</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">1/2</span>,
+        <span class="figcap-value" style="color:#009600">1/4</span>,
+        <span class="figcap-value" style="color:#FF9600">1/8</span>,
+        <span class="figcap-value" style="color:#9600FF">1/16</span>,
+        ψ=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmForced/HarmForced03-360.avif"
+           alt="Harmonic Forced Damping, A=1,α=1,φ=0,B=25,κ=0.25,β=1,multiple values of ψ">
+      <figcaption>
+        Harmonic Forced Damping, A=1,α=1,φ=0,B=25,κ=0.25,β=1,ψ=
+        <span class="figcap-value" style="color:#000000">150°</span>,
+        <span class="figcap-value" style="color:#FF0000">120°</span>,
+        <span class="figcap-value" style="color:#0000FF">90°</span>,
+        <span class="figcap-value" style="color:#009600">60°</span>,
+        <span class="figcap-value" style="color:#FF9600">30°</span>,
+        <span class="figcap-value" style="color:#9600FF">0°</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Harmonic Forced Damping Curve Cartesian equation:</div>
+      \[ y = A \sin(\alpha x + \phi) + B e^{-\kappa x} \sin(\beta x + \psi) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Harmonic Forced Damping curve<sup>1,2</sup> describes the displacement of a mass-spring-damper system subject to both frictional energy loss and an external periodic driving force. This form is the exact general solution to the second-order linear differential equation obtained from Newton’s second law for such a system. The solution naturally separates into a transient term (the exponentially decaying sinusoidal component) that depends on initial conditions and damps out over time, plus a steady-state term that persists indefinitely at the driving frequency after the transient vanishes. With a background limited to basic calculus, the first-derivative term in the underlying equation corresponds to the velocity-dependent damping force, while the second derivative represents acceleration.</p>
+    <p>Real-life applications abound in engineering and the natural sciences. In mechanical engineering, the model governs vehicle shock absorbers and suspension systems, where damping rapidly suppresses transient oscillations from road irregularities while the steady-state response maintains controlled motion. In civil engineering, it underpins seismic base isolators and tuned mass dampers installed in skyscrapers and bridges to counteract earthquake- or wind-induced vibrations. The identical mathematics applies to series RLC circuits in electrical engineering responding to alternating-current sources, forming the basis for signal filters, radio tuners, and power-system stability. Seismographs and industrial vibration sensors likewise rely on this behavior to record or control motion accurately without prolonged ringing from transients.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialf.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialf.html</a> (equation and description of forced damped harmonic oscillation)</li>
+      <li><a href="https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Classical_Mechanics_(Dourmashkin)/23%3A_Simple_Harmonic_Motion/23.06%3A_Forced_Damped_Oscillator" target="_blank" rel="noopener noreferrer">https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Classical_Mechanics_(Dourmashkin)/23%3A_Simple_Harmonic_Motion/23.06%3A_Forced_Damped_Oscillator</a> (forced damped oscillator analysis)</li>
+      <li><a href="https://ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf" target="_blank" rel="noopener noreferrer">https://ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf</a> (driven oscillations lecture)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HARMFORCED (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                       restartflag id iq dcl opt kw mode dpr dct dpt eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi)
+  (setq id "Harmonic Forced Damping"
+        iq "y=A·sin(α·x+φ)+B·e^(-κ·x)·sin(β·x+ψ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "A (steady-state amplitude)" 1.0)
+        fb (get_real 2 "α (drive frequency)" 1.0)
+        fc (get_real 2 "φ (drive phase in °)" 0.0)
+        fd (get_real 2 "B (transient amplitude)" 25.0)
+        fg (get_real 2 "κ (damping rate)" 0.25)
+        fe (get_real 2 "β (transient frequency)" 1.0)
+        ff (get_real 2 "ψ (transient phase in °)" 0.0)
+        fh (* pi (/ fc 180.0))
+        fi (* pi (/ ff 180.0))
+        eq_display (strcat "\nA= " (rtos fa 2 4) ", α= " (rtos fb 2 4) ", φ= " (rtos fc 2 4) ", B= " (rtos fd 2 4) ", κ= " (rtos fg 2 4) ", β= " (rtos fe 2 4) ", ψ= " (rtos ff 2 4))
+        xc '(eval a2)
+        yc '(+ (* fa (sin (+ (* fb (eval a2)) fh))) (* fd (exp (* -1 fg (eval a2))) (sin (+ (* fe (eval a2)) fi))))
+        paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        x2 x1
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HARMFORCED)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

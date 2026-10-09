@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Antiparallelogram Coupler Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Antiparallelogram Coupler Curve</h1>
+      <p class="short-description">The path traced by a point on the connecting rod of a crossed antiparallelogram four-bar linkage mechanism, generating a rational bicircular quartic curve.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Antiparalink/Antiparalink01-360.avif"
+           alt="Antiparallelogram Coupler Curve,2a=3,2b=1,c=0.25">
+      <figcaption>Antiparallelogram Coupler Curve,2a=3,2b=1,c=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Antiparalink/Antiparalink02-360.avif"
+           alt="Antiparallelogram Coupler Curve,2a=3,2b=1,c=0.5">
+      <figcaption>Antiparallelogram Coupler Curve,2a=3,2b=1,c=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Antiparalink/Antiparalink03-360.avif"
+           alt="Antiparallelogram Coupler Curve,2a=2,2b=1,c=0.25">
+      <figcaption>Antiparallelogram Coupler Curve,2a=2,2b=1,c=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Antiparalink/Antiparalink04-360.avif"
+           alt="Antiparallelogram Coupler Curve, 2a=1.5,2b=1,c=0.25">
+      <figcaption>Antiparallelogram Coupler Curve, 2a=1.5,2b=1,c=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Antiparalink/Antiparalink05-360.avif"
+           alt="Antiparallelogram Coupler Curve, 2a=3,2b=1,c=1.5">
+      <figcaption>Antiparallelogram Coupler Curve, 2a=3,2b=1,c=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Antiparalink/Antiparalink06-360.avif"
+           alt="Antiparallelogram Coupler Curve, 2a=3,2b=1,c=6">
+      <figcaption>Antiparallelogram Coupler Curve, 2a=3,2b=1,c=6</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Antiparallelogram Coupler Curve parametric equations:</div>
+      \[ x = (1 - c) \cdot (a + 2b \cdot \cos(\theta)) + c \cdot (-a + 2b \cdot \cos(\phi)) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label"></div>
+      \[ y = (1 - c) \cdot (2b \cdot \sin(\theta)) + c \cdot (2b \cdot \sin(\phi)) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label"></div>
+      \[ \text{where}\quad \cos(\phi) = \frac{(a^{2} + b^{2}) \cdot \cos(\theta) + 2ab}{a^{2} + b^{2} + 2ab \cdot \cos(\theta)},\quad \sin(\phi) = \sin(\theta) \cdot \frac{b^{2} - a^{2}}{a^{2} + b^{2} + 2ab \cdot \cos(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The antiparallelogram coupler curve<sup>1</sup>, also known as a butterfly or bow-tie linkage curve, traces the path of a point on the connecting rod of a crossed four-bar mechanism where opposite sides are equal: the two cranks (rotating links) have length 2b pivoting at fixed points separated by 2a, and the coupler (connecting rod) also spans 2a. As one crank rotates uniformly, the other follows, generating the curve through basic geometric constraints, no advanced math needed beyond trigonometry for the angles and distances. This setup, a special case of three-bar linkages, was studied kinematically by Gabriel Koenigs at the end of the 19th century, building on Gaston Darboux's 1879 work using elliptic functions to analyze planar quadrilaterals<sup>2</sup>. The term "antiparallelogram" dates back further, appearing in Frans van Schooten's 1646 treatise on conic sections and Robert Muirhead's 1901 paper on isosceles trapeziums<sup>3</sup>. Unlike parallelograms that produce circles, the crossed antiparallelogram allows full rotations and yields rational bicircular quartics—curves symmetric about one axis but not left-right due to driving one crank (mirroring by switching drivers).</p>
+    <p>Real-life applications span engineering fields. In mechanism design, it features in Hart's inversor for converting rotary to straight-line motion, used historically in precision instruments<sup>4</sup>. Modern uses include deployable structures like space antennas and masts, where antiparallelogram loops enable compact folding and expansion<sup>5</sup>. In robotics, multi-mode mobile mechanisms based on antiparallelogram units adapt to terrains by switching between rolling and obstacle-climbing modes, enhancing adaptability in rough environments<sup>6</sup>. Gear design employs it for non-circular elliptical gears that transform uniform rotation to variable speeds, applied in pumps and compressors<sup>7</sup>. In celestial mechanics, it models central configurations in the four-body problem for equal-mass bodies rotating rigidly, aiding simulations of astronomical motions<sup>8</sup>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/antiparallelogramme/antiparallelogramme.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/antiparallelogramme/antiparallelogramme.shtml</a> (Equations and mechanism)</li>
+      <li><a href="https://www.apmep.fr/IMG/pdf/AAA98032.pdf" target="_blank" rel="noopener noreferrer">https://www.apmep.fr/IMG/pdf/AAA98032.pdf</a> (Darboux and Koenigs references)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Antiparallelogram" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Antiparallelogram</a> (Historical terms and references)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Hart%27s_inversor" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Hart%27s_inversor</a> (Straight-line motion application)</li>
+      <li><a href="https://scispace.com/pdf/design-of-anti-parallelogram-loop-assemblies-uic2yrubn4.pdf" target="_blank" rel="noopener noreferrer">https://scispace.com/pdf/design-of-anti-parallelogram-loop-assemblies-uic2yrubn4.pdf</a> (Deployable structures in aerospace)</li>
+      <li><a href="https://www.nature.com/articles/s41598-025-13169-y" target="_blank" rel="noopener noreferrer">https://www.nature.com/articles/s41598-025-13169-y</a> (Multi-mode mobile mechanisms in robotics)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Non-circular_gear" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Non-circular_gear</a> (Elliptical gears in engineering)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Antiparallelogram" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Antiparallelogram</a> (Celestial mechanics in four-body problem)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ANTIPARALINK (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                         divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display fa fb fc xc yc skm a1 x1 y1 a2 x2 y2)
+  (setq id "Antiparallelogram Coupler Curve"
+        iq "x=(1-c)·(a+2b·cos(θ))+c·(-a+2b·cos(φ)), y=(1-c)·(2b·sin(θ))+c·(2b·sin(φ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (/ (get_real 2 "2a (distance between fixed pivot points)" 2.0) 2.0)
+        fb (/ (get_real 2 "2b (length of rotating links)" 1.0) 2.0)
+        fc (get_real 0 "c (fractional distance along connecting rod)" 0.25)
+        eq_display (strcat "\n2a=" (rtos (* 2.0 fa) 2 4) ", 2b=" (rtos (* 2.0 fb) 2 4) ", c=" (rtos fc 2 4))
+        xc '(+ (* (- 1.0 fc) (+ fa (* 2.0 fb (cos (eval a2))))) (* fc (+ (- fa) (* 2.0 fb (if (< (abs (+ (* fa fa) (* fb fb) (* 2.0 fa fb (cos (eval a2)))))
+            1e-9) 1.0 (/ (+ (* (+ (* fa fa) (* fb fb)) (cos (eval a2))) (* 2.0 fa fb)) (avoid_zero (+ (* fa fa) (* fb fb) (* 2.0 fa fb (cos (eval a2)))))))))))
+        yc '(+ (* (- 1.0 fc) (* 2.0 fb (sin (eval a2)))) (* fc (if (< (abs (- (* fb fb) (* fa fa))) 1e-9) 0.0 (* 2.0 fb (sin (eval a2)) (/ (- (* fb fb)
+            (* fa fa)) (avoid_zero (+ (* fa fa) (* fb fb) (* 2.0 fa fb (cos (eval a2))))))))))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ANTIPARALINK)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

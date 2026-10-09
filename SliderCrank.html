@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider-Crank Mechanism Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Slider-Crank Mechanism Curve</h1>
+      <p class="short-description">Path of a point attached to the connecting rod of a slider-crank linkage, where Plus and Minus offset the point on either side of the slider.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <a href="https://en.wikipedia.org/wiki/Slider-crank_linkage" target="_blank" rel="noopener">
+        <img src="images/SliderCrank/SliderCrank01-360.avif" alt="Slider Crank Coupler curves from Wikipedia">
+      </a>
+      <figcaption>Slider Crank Coupler curves from Wikipedia</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SliderCrank/SliderCrank02-360.avif"
+           alt="Slider-Crank Mechanism Curve, a=1,b=1,c=2,k=0.5,l=0, Plus and Minus">
+      <figcaption>
+        Slider-Crank Mechanism Curve, a=1,b=1,c=2,k=0.5,l=0,
+        <span class="figcap-value" style="color:#000000">Plus</span>,
+        and
+        <span class="figcap-value" style="color:#FF0000">Minus</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SliderCrank/SliderCrank03-360.avif"
+           alt="Slider-Crank Mechanism Curve, a=1,b=1,c=2,k=0.5,l=0.5, Plus and Minus">
+      <figcaption>
+        Slider-Crank Mechanism Curve, a=1,b=1,c=2,k=0.5,l=0.5,
+        <span class="figcap-value" style="color:#000000">Plus</span>,
+        and
+        <span class="figcap-value" style="color:#FF0000">Minus</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SliderCrank/SliderCrank04-360.avif"
+           alt="Slider-Crank Mechanism Curve, a=3,b=1,c=3,k=0.5,l=0.3, Plus and Minus">
+      <figcaption>
+        Slider-Crank Mechanism Curve, a=3,b=1,c=3,k=0.5,l=0.3,
+        <span class="figcap-value" style="color:#000000">Plus</span>,
+        and
+        <span class="figcap-value" style="color:#FF0000">Minus</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SliderCrank/SliderCrank05-360.avif"
+           alt="Slider-Crank Mechanism Curve, a=1,b=2,c=3,k=0.5,l=1, Plus and Minus">
+      <figcaption>
+        Slider-Crank Mechanism Curve, a=1,b=2,c=3,k=0.5,l=1,
+        <span class="figcap-value" style="color:#000000">Plus</span>,
+        and
+        <span class="figcap-value" style="color:#FF0000">Minus</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Slider-Crank Mechanism Curve equations:</div>
+      \[
+      \begin{aligned}
+      x &= b\cos(t)+k\bigl(a-b\cos(t)\bigr)-l\cdot e\cdot\sqrt{c^{2}-\bigl(a-b\cos(t)\bigr)^{2}}\\
+      y &= b\sin(t)+k\cdot e\cdot\sqrt{c^{2}-\bigl(a-b\cos(t)\bigr)^{2}}+l\bigl(a-b\cos(t)\bigr)
+      \end{aligned}
+      \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The slider-crank coupler curve<sup>1,2</sup> is the path traced by a point attached to the side of a connecting rod of the classic linkage in which one link slides along a straight guide. The mechanism itself traces its roots to practical engineering needs for converting rotary and linear motion. By the 12th century the Persian engineer Ismail al-Jazari had already incorporated a crank and connecting rod in his twin-cylinder water pump. The arrangement became indispensable during the Industrial Revolution when it appeared in steam-engine crossheads and later in every internal-combustion piston engine. The equations given below locate an arbitrary point on the rod: distance k along the rod from the crank pin, with perpendicular offset l scaled by the sign e. The square-root term enforces the fixed length c of the rod. For a given perpendicular offset between the crank center and the slider line, the slider can be assembled on either side of that offset; in the code that follows, these two configurations are selected by the “Plus” and “Minus” options.</p>
+    <p>Real-life applications in engineering and the natural sciences are direct and numerous. Every automobile, truck, motorcycle, and stationary reciprocating engine uses the first inversion of the slider-crank to turn piston travel into crankshaft rotation.<sup>1,2,4</sup> Reciprocating compressors, refrigeration pumps, and hydraulic presses employ the identical linkage in reverse. Offset and inverted forms generate the quick-return stroke required in shaper machines and the linear actuators of backhoes, cranes, and automatic doors. In mechanism synthesis the coupler curve supplies prescribed trajectories for packaging equipment, textile looms, and assembly robots when a simple straight or curved path is needed without additional links. No purely mathematical or artistic extensions are documented in the engineering literature.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Slider-crank_linkage" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Slider-crank_linkage</a> (mechanism structure, inversions, coupler-curve diagrams, and applications)</li>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/bielledeberard/bielledeberard.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/bielledeberard/bielledeberard.shtml</a> (mathematical description of slider-crank loci and related curves)</li>
+      <li><a href="https://www.jstage.jst.go.jp/article/jamdsm/14/3/14_2020jamdsm0040/_pdf/-char/en" target="_blank" rel="noopener noreferrer">https://www.jstage.jst.go.jp/article/jamdsm/14/3/14_2020jamdsm0040/_pdf/-char/en</a> (definition and primary uses in engines, compressors, and pumps.)</li>
+      <li><a href="https://ocw.metu.edu.tr/pluginfile.php/6885/mod_resource/content/1/ch7/7-6-2.htm" target="_blank" rel="noopener noreferrer">https://ocw.metu.edu.tr/pluginfile.php/6885/mod_resource/content/1/ch7/7-6-2.htm</a> (coupler-point straight-line approximation and examples)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SLIDERCRANK (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                        restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq id "Slider-Crank Coupler Curve"
+        iq "x=b·cos(t)+k·(a-b·cos(t))-l·e·√(c²-(a-b·cos(t))²), y=b·sin(t)+k·e·√(c²-(a-b·cos(t))²)+l·(a-b·cos(t))"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "\na (crank center to slider line): " 1.0)
+        fb (get_real 2 "\nb (crank length): " 1.0)
+        fc (get_real 0 "\nc (rod length): " 2.0)
+        fd (get_real 0 "\nk (distance along rod from crank): " 0.5)
+        fe (get_real 0 "\nl (perpendicular offset from rod to point): " 0.0)
+        kw (get_keyword 0 "Plus Minus" "\ne (Plus or Minus configuration)?" "Plus")
+        ff (if (= kw "Minus") -1.0 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 6) ", b=" (rtos fb 2 6) ", c=" (rtos fc 2 6) ", k=" (rtos fd 2 6) ", l=" (rtos fe 2 6) ", " kw) 
+        xc '(+ (* fb (cos (eval a2))) (* fd (- fa (* fb (cos (eval a2))))) (* -1.0 fe ff (if (&lt; (abs (- (* fc fc) (* (- fa (* fb (cos (eval a2))))
+            (- fa (* fb (cos (eval a2))))))) 1e-9) 0.0 (alt_expt (- (* fc fc) (* (- fa (* fb (cos (eval a2)))) (- fa (* fb (cos (eval a2)))))) 0.5 T))))
+        yc '(+ (* fb (sin (eval a2))) (* fd ff (if (&lt; (abs (- (* fc fc) (* (- fa (* fb (cos (eval a2)))) (- fa (* fb (cos (eval a2))))))) 1e-9) 0.0
+            (alt_expt (- (* fc fc) (* (- fa (* fb (cos (eval a2)))) (- fa (* fb (cos (eval a2)))))) 0.5 T))) (* fe (- fa (* fb (cos (eval a2))))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SLIDERCRANK)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

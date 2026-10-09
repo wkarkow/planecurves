@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hypotrochoid Evolute - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hypotrochoid Evolute</h1>
+      <p class="short-description">The locus of the centers of curvature of a hypotrochoid; the envelope of its normals.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute01-360.avif"
+           alt="R=16,r=2,d=3, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=16,r=2,d=3, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute02-360.avif"
+           alt="R=8,r=2,d=3, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=2,d=3, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute03-360.avif"
+           alt="R=8,r=2,d=5, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=2,d=5, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute04-360.avif"
+           alt="R=8,r=2,d=7, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=2,d=7, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute05-360.avif"
+           alt="R=8,r=4/3,d=3, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=4/3,d=3, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute06-360.avif"
+           alt="R=8,r=4,d=1, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=4,d=1, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute07-360.avif"
+           alt="R=8,r=4,d=3, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=4,d=3, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute08-360.avif"
+           alt="R=8,r=1,d=0.5, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=1,d=0.5, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute09-360.avif"
+           alt="R=8,r=1,d=0.95, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=1,d=0.95, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute10-360.avif"
+           alt="R=8,r=16,d=8, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=16,d=8, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute11-360.avif"
+           alt="R=8,r=16,d=16, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=16,d=16, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute12-360.avif"
+           alt="R=8,r=12,d=12, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=12,d=12, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute13-360.avif"
+           alt="R=8,r=32/3,d=32/3, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=32/3,d=32/3, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute14-360.avif"
+           alt="R=8,r=12,d=6, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=12,d=6, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute15-360.avif"
+           alt="R=8,r=7,d=6, Hypotrochoid versus Evolute">
+      <figcaption>
+        R=8,r=7,d=6, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HypotrEvolute/HypotrEvolute16-360.avif"
+           alt="R=8,r=4.05,d=1.5, Hypotrochoid versus Evolute (shifted)">
+      <figcaption>
+        R=8,r=4.05,d=1.5, 
+        <span class="figcap-value" style="color:#000000">Hypotrochoid</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute (shifted)</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Hypotrochoid Evolute parametric equations:</div>
+      \[ x = (R-r)\cos\theta + d\cos\left(\frac{R-r}{r}\theta\right) - \dfrac{r\bigl(r^{2}-2rd\cos(\frac{R}{r}\theta)+d^{2}\bigr)}{r^{3}+(r-R)d^{2}+rd(R-2r)\cos(\frac{R}{r}\theta)} \left[(R-r)\cos\theta - \frac{R-r}{r}\,d\cos\left(\frac{R-r}{r}\theta\right)\right] \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label"></div>
+      \[ y = (R-r)\sin\theta - d\sin\left(\frac{R-r}{r}\theta\right) - \dfrac{r\bigl(r^{2}-2rd\cos(\frac{R}{r}\theta)+d^{2}\bigr)}{r^{3}+(r-R)d^{2}+rd(R-2r)\cos(\frac{R}{r}\theta)} \left[(R-r)\sin\theta + \frac{R-r}{r}\,d\sin\left(\frac{R-r}{r}\theta\right)\right] \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The evolute of a hypotrochoid<sup>1</sup> is the locus of the centers of curvature of the hypotrochoid curve. The general theory of evolutes was first examined by Apollonius of Perga around 200 BC and later developed by Christiaan Huygens in 1673 in connection with the design of pendulum clocks and the study of caustics in optics<sup>2</sup>. Hypotrochoids themselves are roulette curves traced by a point attached to a circle of radius r that rolls without slipping inside a fixed circle of radius R, with the tracing point at a distance d from the center of the rolling circle.<sup>3,4</sup> These curves were investigated in the 17th century by mathematicians including Girard Desargues, Philippe de La Hire, Gottfried Wilhelm Leibniz, and Isaac Newton, who analyzed properties of rolling circles and cycloidal motions.<sup>3</sup> For the special case of a hypocycloid (when d = r), the evolute is another similar hypocycloid, scaled and rotated.<sup>4</sup> The general hypotrochoid evolute, however, leads to a considerably more complicated parametric expression.<sup>1</sup></p>
+    <p>No prominent real-life applications in engineering or the natural sciences are documented specifically for the evolute of a general hypotrochoid. The parent hypotrochoid curves are used in mechanical engineering, for example in the rotor housing profile of the Wankel rotary engine and in gerotor pumps and cycloidal gear designs.<sup>3,4</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/HypotrochoidEvolute.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/HypotrochoidEvolute.html</a> (definition of the hypotrochoid evolute).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/developpee/developpee.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/developpee/developpee.shtml</a> (evolute general theory).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/hypotrochoid/hypotrochoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/hypotrochoid/hypotrochoid.shtml</a> (history and equations of hypotrochoids).</li>
+      <li><a href="https://www.2dcurves.com/roulette/rouletteh.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/rouletteh.html</a> (applications of hypotrochoids and evolute property for hypocycloids).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HYPOTREVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                          xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd)
+  (setq id "Hypotrochoid Evolute"
+        iq "x=[(R-r)·cos(θ)+d·cos(((R-r)/r)θ)]-fd·[(R-r)·cos(θ)-((R-r)/r)·d·cos(((R-r)/r)θ)]\ny=[(R-r)·sin(θ)-d·sin(((R-r)/r)θ)]-fd·[(R-r)·sin(θ)+((R-r)/r)·d·sin(((R-r)/r)θ)]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "R (radius of base circle)" 8.0)
+        fb (get_real 2 "r (radius of rolling circle)" (/ fa 4.0))
+        fc (get_real 2 "d (distance from center of rolling circle to tracing point)" 3.0)
+        eq_display (strcat "R=" (rtos fa 2 4) ", r=" (rtos fb 2 4) ", d=" (rtos fc 2 4))
+        fd '(/ (* fb (+ (* fb fb) (* -2 fb fc (cos (* (/ fa fb) (eval a2)))) (* fc fc))) 
+               (avoid_zero (+ (* fb fb fb) (* (- fb fa) (* fc fc)) (* fb fc (- fa (* 2 fb)) (cos (* (/ fa fb) (eval a2)))))))
+        xc '(- (+ (* (- fa fb) (cos (eval a2))) (* fc (cos (* (/ (- fa fb) fb) (eval a2)))))
+               (* (eval fd) (- (* (- fa fb) (cos (eval a2))) (* (/ (- fa fb) fb) fc (cos (* (/ (- fa fb) fb) (eval a2)))))))
+        yc '(+ (- (* (- fa fb) (sin (eval a2))) (* fc (sin (* (/ (- fa fb) fb) (eval a2)))))
+               (* (eval fd) (* -1 (+ (* (- fa fb) (sin (eval a2))) (* (/ (- fa fb) fb) fc (sin (* (/ (- fa fb) fb) (eval a2))))))))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 1e5)
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HYPOTREVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

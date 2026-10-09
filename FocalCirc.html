@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Focal Circular Cubic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Focal Circular Cubic (Van Rees)</h1>
+      <p class="short-description">A special circular cubic that passes through its singular focus F; the locus of the foci of all conics inscribed in a given quadrilateral.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/FocalCirc/FocalCirc01-360.avif"
+           alt="Focal Circular Cubic,multiple values of a,b=1,α=0°">
+      <figcaption>
+        Focal Circular Cubic, a=
+        <span class="figcap-value" style="color:#000000">-0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">0.95</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.05</span>,
+        <span class="figcap-value" style="color:#0096FF">1.25</span>,
+        <span class="figcap-value" style="color:#AA5555">1.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.0</span>,
+        b=1,α=0°
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/FocalCirc/FocalCirc02-360.avif"
+           alt="Focal Circular Cubic, a=1,α=0°,multiple values of b">
+      <figcaption>
+        Focal Circular Cubic, a=1,α=0°,b=
+        <span class="figcap-value" style="color:#000000">4.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">1.25</span>,
+        <span class="figcap-value" style="color:#FF9600">1.05</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">0.95</span>,
+        <span class="figcap-value" style="color:#AA5555">0.75</span>,
+        <span class="figcap-value" style="color:#00FF00">0.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/FocalCirc/FocalCirc03-360.avif"
+           alt="Focal Circular Cubic, a=1.05,b=1,multiple values of α">
+      <figcaption>
+        Focal Circular Cubic, a=1.05,b=1,α=
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">10°</span>,
+        <span class="figcap-value" style="color:#0000FF">20°</span>,
+        <span class="figcap-value" style="color:#009600">30°</span>,
+        <span class="figcap-value" style="color:#FF9600">40°</span>,
+        <span class="figcap-value" style="color:#9600FF">50°</span>,
+        <span class="figcap-value" style="color:#0096FF">60°</span>,
+        <span class="figcap-value" style="color:#AA5555">70°</span>,
+        <span class="figcap-value" style="color:#00FF00">80°</span>,
+        <span class="figcap-value" style="color:#FF00FF">90°</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/FocalCirc/FocalCirc04-360.avif"
+           data-caption="Focal Circular Cubic, a=0.2,b=2,α=0°(black),10°(red),20°(blue),30°(green),40°(orange),50°(purple),60°(cyan),70°(brown),80°(lime), 84°(magenta),84.2608295°(teal),85°(plum),90°(olive)"
+           alt="Focal Circular Cubic, a=0.2,b=2,multiple values of α">
+      <figcaption>
+        Focal Circular Cubic, a=0.2,b=2,α=
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">10°</span>,
+        <span class="figcap-value" style="color:#0000FF">20°</span>,
+        <span class="figcap-value" style="color:#009600">30°</span>,
+        <span class="figcap-value" style="color:#FF9600">40°</span>,
+        <span class="figcap-value" style="color:#9600FF">50°</span>,
+        <span class="figcap-value" style="color:#0096FF">60°</span>,
+        <span class="figcap-value" style="color:#AA5555">70°</span>,
+        <span class="figcap-value" style="color:#00FF00">80°</span>,
+        <span class="figcap-value" style="color:#FF00FF">84°</span>
+        <span class="figcap-value" style="color:#009696">84.2608295°</span>,
+        <span class="figcap-value" style="color:#960096">85°</span>,
+        <span class="figcap-value" style="color:#969600">90°</span>
+        </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Focal Circular Cubic Cartesian equation:</div>
+      \[ (x-2a)(x^{2}+y^{2})+b^{2}(\cos(2\alpha)\,x+\sin(2\alpha)\,y)=0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Focal Circular Cubic polar equation:</div>
+      \[ r=\dfrac{a\pm\sqrt{a^{2}-b^{2}\cos\theta\cos(\theta-2\alpha)}}{\cos\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The focal circular cubic (Van Rees)<sup>1,2,3</sup>, also called the focal of Van Rees, isoptic cubic, or Apollonius cubic, is a special circular cubic that passes through its singular focus F (the intersection of the tangents to the curve at the two circular points at infinity). It was first studied by G. Van Rees in 1829, then independently by J. Steiner in 1852, and later by É. Laguerre in 1868. Gomes Teixeira noted the equivalence of the Van Rees and Steiner results in 1915. The name “circular cubic with an axis” was introduced in 2002 by Dominique Roux and Michel Tixier. Geometrically it is the locus of the foci of all conics inscribed in a given quadrilateral (i.e., tangent to its four sides). It is also the isoptic curve consisting of points from which two directed line segments subtend equal angles. Van Rees himself gave an elegant three-dimensional construction: the curve is the locus of the foci of conics tangent to a fixed quadrilateral. With the singular focus at the origin and the axis of symmetry along the x-axis, the Cartesian form below is obtained; the line x = 2a is the vertical asymptote.</p>
+    <p>No real-life applications in engineering or the natural sciences appear in the primary references. The curve remains a purely theoretical object in classical geometry.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/focaledevanrees/focaledevanrees.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/focaledevanrees/focaledevanrees.shtml</a> (history, names, equations, geometric locus and 3D construction).</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubica.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubica.html</a> (Apollonius/isoptic cubic, Van Rees–Steiner equivalence).</li>
+      <li><a href="https://www.mdpi.com/3042-402X/3/1/5" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/3042-402X/3/1/5</a> (locus of foci of inscribed conics, confirmation of Van Rees 1829 priority).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FOCALCIRC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                      id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp)
+  (setq id "Focal Circular Cubic (Van Rees)"
+        iq "r=a/cos(θ)±√(a²-b²·cos(θ)·cos(θ-2α))/cos(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (x axis offset, asymptote=2a): " 1.0)
+        fb (get_real 0 "b: " 1.0)
+        fc (* (/ pi 180.0) (get_boundr 0 "α (angle to focus, 0 to 90°): " 30.0 0.0 90.0 T T))
+        fd (if (= (get_keyword 0 "Plus Minus" "\nPlus or Minus branch? " "Plus") "Minus") -1.0 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", α=" (rtos (* (/ 180.0 pi) fc) 2 4) "°, branch=" (if (= fd -1.0) "Minus" "Plus"))
+        fe (- (* 2.0 (/ (* fa fa) (* fb fb))) (cos (* 2.0 fc)))
+        ff (if (and (<= fe 1.0) (>= fe -1.0)) 1.0 0.0)
+        fg (if (= ff 1.0) (* 0.5 (acos fe)) 0.0)
+        fh (+ fc fg)
+        fi (- fc fg)
+        fj (+ fh pi)
+        fk (+ fi pi)
+        rval '(progn (setq fl (- (* fa fa) (* fb fb (cos (eval a2)) (cos (- (eval a2) (* 2.0 fc)))))) (if (< (abs (cos (eval a2))) 1e-9) (if (= fd -1.0)
+              (if (< (abs fa) 1e-9) 1e13 (/ (* fb fb (cos (- (eval a2) (* 2.0 fc)))) (* 2.0 fa))) 1e13) (progn (if (= ff 1.0) (progn (setq fm (eval a2)
+              fn fh fo (abs (- fm fh))) (if (> fo pi) (setq fo (- (* 2.0 pi) fo))) (setq fp (abs (- fm fi))) (if (> fp pi) (setq fp (- (* 2.0 pi) fp)))
+              (if (< fp fo) (setq fn fi fo fp)) (setq fp (abs (- fm fj))) (if (> fp pi) (setq fp (- (* 2.0 pi) fp))) (if (< fp fo) (setq fn fj fo fp))
+              (setq fp (abs (- fm fk))) (if (> fp pi) (setq fp (- (* 2.0 pi) fp))) (if (< fp fo) (setq fn fk fo fp)) (if (<= fo (* 0.5 paramstep))
+              (/ fa (avoid_zero (cos fn))) (if (< fl 0.0) 1e13 (/ (+ fa (* fd (alt_expt fl 0.5 T))) (avoid_zero (cos (eval a2)))))))
+              (if (< fl 0.0) 1e13 (/ (+ fa (* fd (alt_expt fl 0.5 T))) (avoid_zero (cos (eval a2)))))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 20.0)
+        a1 (- 0.0 (/ pi 2.0) paramstep)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:FOCALCIRC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

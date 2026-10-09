@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bounce Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bounce Curve</h1>
+      <p class="short-description">A piecewise-parabolic trajectory modeling successive bounces on a rigid flat surface.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Bounce/Bounce01-360.avif"
+           alt="Bounce Curve, H=5,S₀=5,e=1,d=0">
+      <figcaption>Bounce Curve, H=5,S₀=5,e=1,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bounce/Bounce02-360.avif"
+           alt="Bounce Curve, H=5,S₀=5,e=0.9,d=0">
+      <figcaption>Bounce Curve, H=5,S₀=5,e=0.9,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bounce/Bounce03-360.avif"
+           alt="Bounce Curve, H=5,S₀=5,e=0.8,d=0">
+      <figcaption>Bounce Curve, H=5,S₀=5,e=0.8,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bounce/Bounce04-360.avif"
+           alt="Bounce Curve, H=5,S₀=5,e=0.7,d=0">
+      <figcaption>Bounce Curve, H=5,S₀=5,e=0.7,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bounce/Bounce05-360.avif"
+           alt="Bounce Curve, H=5,S₀=5,e=1,d=0.1">
+      <figcaption>Bounce Curve, H=5,S₀=5,e=1,d=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bounce/Bounce06-360.avif"
+           alt="Bounce Curve, H=5,S₀=5,e=0.8,d=0.1">
+      <figcaption>Bounce Curve, H=5,S₀=5,e=0.8,d=0.1</figcaption>
+    </figure>
+    <figure>
+      <a href="https://www.youtube.com/watch?v=QpuCtzdvix4" target="_blank" rel="noopener">
+        <img src="images/Bounce/Bounce07-360.avif" alt="Near-perfect elastic bouncing by Steve Mould on YouTube">
+      </a>
+      <figcaption>Near-perfect elastic bouncing by Steve Mould on YouTube</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Bounce Curve local hop equation (hop n):</div>
+      \[ y_n(x) = \dfrac{4 H e^{2n}}{S_n^2} \, x (S_n - x) \quad (0 \leq x \leq S_n) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hop span and horizontal state update:</div>
+      \[ S_n = S_0 \, u_n \, e^n , \quad u_{n+1} = \max(0, u_n - d \cdot e^n) , \quad u_0 = 1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">World-coordinate assembly of successive hops:</div>
+      \[ X_n = \sum_{k=0}^{n-1} S_k \quad (X_0 = 0), \quad x_{\text{world}} = X_n + x , \quad y = y_n(x) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Bounce Curve¹ is a modern mathematical invention with no prior historical curve reference. It was constructed to produce a smooth sequence of connected parabolic arcs whose heights and forward spans decay in a controlled way. The model assumes a flat, rigid surface, neglects air resistance, ignores rotational effects such as spin, and treats impacts as instantaneous. As such, it is not intended to be an exact physical simulation but an approximation.</p>
+    <p>The coefficient of restitution <em>e</em> (a number between 0 and 1) is the simple ratio of vertical speed just after a bounce to the speed just before impact. A value of 1 would mean a perfectly elastic bounce with no height loss; real materials are always less than 1. Because the peak height reached after each bounce depends on the square of the takeoff speed (from the basic relation height = speed² / (2g) that follows directly from constant downward acceleration), the heights form the geometric sequence Hₙ = H · e^{2n}. This single number therefore fully explains why each successive bounce is lower by the same ratio e². The horizontal loss coefficient <em>d</em> (also 0 to 1) is a separate parameter that reduces the forward speed at each bounce. In the model the reduction is d · eⁿ, becoming smaller as bounces weaken. This is an engineering approximation for friction; the actual slowing depends on surface grip, spin, and the normal (pressing) force at impact. The vertical part of the model matches real bouncing balls quite closely whenever <em>e</em> stays nearly constant over the first several bounces, which is true for most rigid or rubber objects on hard surfaces. The horizontal part is a useful but rough simplification; real tangential slowing is usually smaller than the vertical loss and depends on whether the ball is sliding or starting to roll.</p>
+
+    <p>Let H &gt; 0 = initial peak height of the first hop<br>
+    S₀ &gt; 0 = initial horizontal span of the first hop<br>
+    e ∈ [0,1] = coefficient of restitution (vertical): a perfectly elastic collision e = 1<br>
+    d ∈ [0,1] = horizontal loss coefficient (fraction of the <em>initial</em> horizontal speed removed after the first bounce)<br>
+    n = 0,1,2,… = bounce index (hop number)<br>
+    x ∈ [0,Sₙ] = local horizontal coordinate within hop n</p>
+
+    <p>1) Height decay (restitution) Peak height of hop n: Hₙ = H e^{2n}<br>
+    2) Horizontal-loss state: Define a unitless horizontal speed state uₙ by: u₀ = 1, u_{n+1} = max(0, uₙ − d eⁿ)<br>
+    3) Hop span and: Span of hop n (range per hop): Sₙ = S₀ uₙ eⁿ<br>
+    4) Sampling step: With N segments per hop, the local step is: Δxₙ = Sₙ / N<br>
+    5) Local flight parabola for hop n on [0,Sₙ]: yₙ(x) = (4 Hₙ / Sₙ²) x (Sₙ − x) (0 ≤ x ≤ Sₙ)<br>
+    6) World-coordinate assembly (concatenating hops)<br>
+    Define the cumulative horizontal offset to the start of hop n: Xₙ = Σ_{k=0}^{n−1} S_k (with X₀ = 0)<br>
+    The full curve is the piecewise union of hops: (x_world, y_world) = (Xₙ + x, yₙ(x)), 0 ≤ x ≤ Sₙ, n = 0,1,2,…<br>
+    At hop endpoints: yₙ(0) = yₙ(Sₙ) = 0 so the curve meets the ground at every bounce.</p>
+
+    <p>The full curve: y(x_world) = [4 H e^{2n} / Sₙ²] ξ (Sₙ − ξ), ξ = x_world − Xₙ ∈ [0,Sₙ], Sₙ = S₀ uₙ eⁿ, u_{n+1} = max(0, uₙ − d eⁿ) where n is the unique hop index such that x_world ∈ [Xₙ , Xₙ + Sₙ].</p>
+
+    <p>Among everyday objects, polished steel ball bearings on a smooth steel plate come closest to the equation. Their e is often above 0.9, so they can bounce hundreds of times before the height becomes negligible; on a mirror-smooth plate the horizontal loss d can be kept very small.²,³ A regulation NBA basketball on hardwood has e ≈ 0.75, which produces the moderate decay the curve is meant to show, but its horizontal motion is also affected by air drag and floor grip.² Billiard (pool) balls have high e (near 0.8) yet stop forward motion faster than the model predicts because of the felt cloth’s high friction. Soft playground rubber balls or “superballs” bounce high vertically but lose horizontal speed more quickly than steel.⁴ Real-life applications of bouncing-ball physics exist in three fields. Sports engineers use the same height-decay and speed-loss ideas to set basketball specifications, tune tennis-ball rebound, and analyze dribble consistency. Materials-testing laboratories drop steel or rubber samples onto plates to measure e directly and rate the elasticity of new alloys or polymers. Physics classrooms and science-fair projects demonstrate energy loss by recording bounce heights of different balls, turning the simple ratio e into a hands-on lesson on conservation of energy.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>Original construction by the author (no prior curve reference).</li>
+      <li><a href="https://www.samaterials.com/content/coefficient-of-restitution.html" target="_blank" rel="noopener noreferrer">https://www.samaterials.com/content/coefficient-of-restitution.html</a> (COR values for basketball &gt;0.75, steel ~0.6–0.7).</li>
+      <li><a href="https://www.youtube.com/results?search_query=steel+ball+on+steel+plate+259+bounces" target="_blank" rel="noopener noreferrer">YouTube demonstration</a> (steel ball on steel reaching 259 bounces).</li>
+      <li><a href="https://www.physics.usyd.edu.au/~cross/BOUNCE.htm" target="_blank" rel="noopener noreferrer">https://www.physics.usyd.edu.au/~cross/BOUNCE.htm</a> (horizontal COR for superball 0.5–0.6, other balls 0.1–0.2).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BOUNCE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                 xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr id iq dcl opt kw mode dpr dct dpt span)
+ (setq id "Bounce Curve"
+       iq "yₙ(x)=4·H·e²ⁿ·x·(S₀·uₙ·eⁿ−x)/(S₀·uₙ·eⁿ)²"
+       dcl nil
+       opt nil
+       kw nil
+       mode 'param
+       dpr "# of divisions per hop"
+       dct 60
+       dpt nil
+       span nil
+       kw (ca id iq dcl opt kw mode dpr dct dpt span)
+       fa (get_real 2 "H (first hop peak height" 5.0)
+       fb (get_real 2 "S₀ (first hop horizontal span" 5.0)
+       fc (get_boundr 0 "e (vertical coefficient of restitution)" 0.8 0.0 1.0 T T)
+       fd (get_boundr 0 "d (horizontal loss coefficient, fraction of speed removed after the first bounce)" 0.1 0.0 1.0 T T)
+       eq_display (strcat "\nH=" (rtos fa 2 4) ", S₀=" (rtos fb 2 4) ", e=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+       fe divcount
+       fh x0
+       fn 1.0
+       fo fb
+       fg (/ fo fe)
+       fq 0.0
+       fp fo
+       ff 0
+       fr -1
+       paramstep (/ 1.0 divcount)
+       divcount (1+ divcount)
+       x2 '(progn (if (= ff 0) (progn (setq fi 0 fj 0 fk 0.0 x0 fh ff 1) 0.0) (progn (setq fl (1- ff) fi (fix (/ fl fe)) fj (+ 1 (- fl (* fi fe))))
+           (if (/= fi fr) (progn (if (> fi 0) (setq fq (+ fq fp))) (setq x0 (+ fh fq)) (if (> fi 0) (setq fn (max 0.0 (- fn (* fd (alt_expt fc
+           (1- fi) nil)))))) (setq fo (* fb fn (alt_expt fc fi nil)) fg (/ fo fe) fp fo fr fi))) (setq fk (* fj fg) ff (1+ ff)) fk)))
+       y2 '(progn (setq fm x3) (if (or (<= (abs fm) 1e-9) (<= (abs (- fm fo)) 1e-9)) 0.0
+           (* (alt_expt (* fc fc) fi nil) (/ (* 4.0 fa fm (- fo fm)) (* fo fo))))))
+       skm '(T T T)
+       a1 0
+       a2 a1
+       x1 0.0
+       y1 0.0
+       a2 '(+ a1 paramstep))
+ (cc))
+(C:BOUNCE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

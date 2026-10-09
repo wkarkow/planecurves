@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inverse Evolutoid of a Circle - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Inverse Evolutoid of a Circle</h1>
+      <p class="short-description">A generalization of the classical involute of a circle in which the fixed angle between the tangent to the generating circle and the line joining the contact point to the tracing point is an arbitrary constant &phi; rather than 90°.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle01-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=80°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=80,Positive°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle02-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=85°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=85°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle03-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=89°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=89°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle04-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-80°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-80°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle05-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-85°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-85°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle06-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-89°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-89°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle07-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-60°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-60°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle08-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-45°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-45°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle09-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-30°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-30°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle10-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-15°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-15°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle11-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-5°,Positive">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-5°,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/InvEvolutoidCircle/InvEvolutoidCircle12-360.avif"
+           alt="Inverse Evolutoid of a Circle, a=1,φ=-89°,Positive,mirrored opposite">
+      <figcaption>Inverse Evolutoid of a Circle, a=1,φ=-89°,Positive,mirrored opposite</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Inverse Evolutoid of a Circle parametric equations:</div>
+      \[ x = a\left(\cos t + \dfrac{e^{\cot\phi \cdot t}-1}{\cot\phi}\sin t\right),\quad
+         y = a\left(\sin t + \dfrac{e^{\cot\phi \cdot t}-1}{\cot\phi}\cos t\right) \]
+    </div>
+
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Inverse Evolutoid of a Circle<sup>1</sup>, also known as the oblique involute or tanvolute of a circle, generalizes the classical involute of a circle. The standard involute arises when the fixed angle between the tangent to the original circle and the line connecting the current point on the circle to the tracing point equals 90°. For other fixed angles φ where k = cot(φ), the inverse evolutoid is the locus of points where this angle remains constant. The notion traces to abbé Aoust’s 1873 study in <em>Analyse infinitésimale</em>.<sup>2</sup> In 2010 mathematicians Tom M. Apostol and Mamikon A. Mnatsakanian examined the family under the name tanvolute.<sup>3</sup> For the circle of radius a, the parametric form produces two branches. The positive-t branch starts near the origin and spirals outward clockwise in Archimedean-spiral-like coils, transitioning toward logarithmic-spiral behavior as t increases. The negative-t branch spirals outward counterclockwise and approaches an off-center slightly elliptical asymptote with semi-axis lengths of a(1 + 1/k) and a(1/k − 1) as t → −∞. Because k = cot(φ) is small when φ is close to 90°, the approach is very slow and requires |t| ≫ 1/|k| (hundreds of radians for the default φ = 89°). This is why the asymptote is not immediately visible with a span of only 360°.</p>
+    <p>No real-life applications in engineering or the natural sciences appear in the primary mathematical references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/developpee/developpoidinverse.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/developpee/developpoidinverse.shtml</a> (definition, history, parametric equations)</li>
+      <li><a href="https://archive.org/details/analyseinfinit00aousuoft" target="_blank" rel="noopener noreferrer">https://archive.org/details/analyseinfinit00aousuoft</a> (abbé Aoust, <em>Analyse infinitésimale des courbes planes</em>, 1873)</li>
+      <li><a href="https://www.tandfonline.com/doi/abs/10.4169/000298910X515767" target="_blank" rel="noopener noreferrer">https://www.tandfonline.com/doi/abs/10.4169/000298910X515767</a> (Apostol &amp; Mnatsakanian, “Tanvolutes: Generalized Involutes,” <em>Amer. Math. Monthly</em> 117 (2010) 701–713)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:INVEVOLUTOIDCIRCLE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo
+                   paramstep divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc skm)
+  (setq id "Inverse Evolutoid of a Circle"
+        iq "x=a·(cos(t)+((e^(k·t)-1)/k)·sin(t)), y=a·(sin(t)+((e^(k·t)-1)/k)·cos(t)), k=cot(φ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in 2π"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (circle radius)" 1.0)
+        fb (get_boundr 2 "φ in degrees (k = cot φ)" 89.0 -180.0 180.0 nil nil)
+        fc (/ (cos (* fb (/ pi 180.0))) (sin (* fb (/ pi 180.0))))
+        fd (get_keyword 0 "Positive Negative" "Positive or Negative branch?" "Positive")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", φ=" (rtos fb 2 4) "°, k=" (rtos fc 2 4))
+        xc '(* fa (+ (cos (eval a2)) (* (if (&lt; (abs fc) 1e-9) (eval a2) (/ (- (exp (* fc (eval a2))) 1.0) fc)) (sin (eval a2)))))
+        yc '(* fa (+ (sin (eval a2)) (* (if (&lt; (abs fc) 1e-9) (eval a2) (/ (- (exp (* fc (eval a2))) 1.0) fc)) (cos (eval a2)))))
+        paramstep (if (eq fd "Negative") (- paramstep) paramstep)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:INVEVOLUTOIDCIRCLE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

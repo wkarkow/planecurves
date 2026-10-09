@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Raindrop Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Raindrop Curve</h1>
+      <p class="short-description">A modern parametric teardrop obtained by a 90° rotation of a special case of the antiparallelogram coupler curve.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Raindrop/Raindrop01-360.avif"
+           alt="Raindrop Curve, a=1">
+      <figcaption>Raindrop Curve, a=1</figcaption>
+    </figure>
+    <figure>
+      <a href="https://www.wideopenspaces.com/world-record-attempt-38-water-balloons-and-one-arrow/" target="_blank" rel="noopener">
+        <img src="images/Raindrop/Raindrop02-360.avif" alt="hanging water balloons with 'raindrop' shape from wideopenspaces.com">
+      </a>
+      <figcaption>hanging water balloons with 'raindrop' shape from wideopenspaces.com</figcaption>
+    </figure>
+    <figure>
+      <a href="https://www.youtube.com/watch?v=RLn1ErhxOPo" target="_blank" rel="noopener">
+        <img src="images/Raindrop/Raindrop03-360.avif" alt="real falling water drop, YouTube video by stepvideolabs">
+      </a>
+      <figcaption>real falling water drop, YouTube video by stepvideolabs</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Raindrop Curve parametric equations:</div>
+      \[ x = a\cdot\dfrac{3(\cos t + 1)\sin t}{4\cos t + 5},\qquad y = -a\cdot\dfrac{6\cos^{2}t + 14\cos t + 7}{2(4\cos t + 5)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Raindrop Curve is a modern parametric plane curve constructed by the author to produce a teardrop-shaped profile using trigonometric functions. These equations arose serendipitously from the Antiparallelogram Coupler Curve for particular parameter values, after applying a 90° rotation, yielding a shape that aligns closely with the commonly perceived raindrop silhouette. No other source for this equation can be found in the broader searches of mathematical literature. It does not correspond to the classical teardrop (piriform) curves<sup>1,2</sup> or related quartic forms studied by earlier mathematicians such as Wallis (1685) or Bonnet (1844).</p>
+    <p>No real-life applications in engineering or the natural sciences were identified for this exact parametric form. It was created as a likeness for an artist’s raindrop, suited to graphics, logos, icons, and stylized depictions of droplets, rather than a model of steady-state raindrop aerodynamics. Real raindrops in atmospheric free fall are typically oblate. The only time this sharply tipped silhouette occurs is briefly during pinch-off, when a droplet separates from the liquid above, or in the case of a hanging balloon as pictured above.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/piriforme/piriforme.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/piriforme/piriforme.shtml</a> (related pear-shaped/teardrop curves with different equations)</li>
+      <li><a href="https://www.2dcurves.com/higher/highert.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/higher/highert.html</a> (teardrop curve as generalization of quartic piriform; no match to this parametrization)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RAINDROP (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Raindrop Curve"
+        iq "x=a·[3(cos(t)+1)sin(t)/(4cos(t)+5)], y=-a·[(6cos²(t)+14cos(t)+7)/(2(4cos(t)+5))]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(* fa (/ (* 3.0 (+ (cos (eval a2)) 1.0) (sin (eval a2))) (+ (* 4.0 (cos (eval a2))) 5.0)))
+        yc '(* -1.0 fa (/ (+ (* 6.0 (cos (eval a2)) (cos (eval a2))) (* 14.0 (cos (eval a2))) 7.0) (* 2.0 (+ (* 4.0 (cos (eval a2))) 5.0))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:RAINDROP)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubic Egg Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cubic Egg Curve</h1>
+      <p class="short-description">Three asymmetric cubic egg-shaped curves; the Hügelschäffer egg, Newton's egg curve, and a rationalized elliptic approximation.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CubicEgg/CubicEgg01-360.avif"
+           alt="Cubic Hügelschäffer Egg, a=1,b=0.7,d=0.18">
+      <figcaption>Cubic Hügelschäffer Egg, a=1,b=0.7,d=0.18</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CubicEgg/CubicEgg02-360.avif"
+           alt="Cubic Newton's Egg, a=5.5,b=0.297">
+      <figcaption>Cubic Newton's Egg, a=5.5,b=0.297</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CubicEgg/CubicEgg03-360.avif"
+           alt="Cubic Rationalized Ellipse Egg, a=0.18,b=0.697">
+      <figcaption>Cubic Rationalized Ellipse Egg, a=0.18,b=0.697</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CubicEgg/CubicEgg04-360.avif"
+          alt="Cubic Egg Curves, Digitized Chicken Egg, Hügelschäffer, Newton's, Rationalized Ellipse">
+      <figcaption>
+        Cubic Egg Curves,
+        <span class="figcap-value" style="color:#000000">Digitized Chicken Egg</span>,
+        <span class="figcap-value" style="color:#FF0000">Hügelschäffer</span>,
+        <span class="figcap-value" style="color:#0000FF">Newton's</span>,
+        <span class="figcap-value" style="color:#009600">Rationalized Ellipse</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Hügelschäffer egg Cartesian equation:</div>
+      \[ y = \frac{b^{2} (a^{2} - (x - d)^{2}) }{a^{2} - d^{2} + 2 d x} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Newton's Egg Cartesian equation:</div>
+      \[ y^{2} = b (x^{2} - 1)(x - a) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rationalized Elliptic Egg Cartesian equation:</div>
+      \[ y^{2} = b \frac{(1 - x^{2}) }{1 + a x} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>There are at least three distinct Cubic Egg Curves, also referred to informally as Egg-shaped Cubics or Asymmetric Polynomial Cubics, all of which are third-degree curves that resemble an asymmetric egg shape. The Hügelschäffer egg was studied by German engineer Fritz Hügelschäffer in 1948<sup>1</sup>. Hügelschäffer constructed the curve as the Newton transform of two non-concentric circles, one centered at the origin. When the circles are concentric the result is an ellipse; shifting the second circle produces the characteristic egg asymmetry. The resulting algebraic curve is cubic. Newton’s egg curve<sup>2</sup>, another member of this family, arises from Newton’s 1710 classification of cubic curves as a diverging parabola with egg-like form when the cubic equation has three distinct real roots. The rationalized ellipse<sup>3</sup> supplies a simple rational algebraic approximation for similar egg-shaped profiles. These curves furnish compact Cartesian equations that closely approximate the profile of many biological eggs.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In biology the equations model avian egg contours for quantitative studies in ornithology, evolution, and poultry science. A 2020 study by Narushin et al.<sup>4</sup> used 2D digital imaging and image processing on hen eggs; the authors confirmed Hügelschäffer’s model describes actual egg contours with high precision and supplied refined formulas for calculating egg volume and surface area (R = 0.962). In civil and environmental engineering egg-shaped cross-sections improve hydraulic performance in drainage pipes and gutters (higher flow velocity at low water depths and better self-cleansing). Similar ovoid forms appear in anaerobic sludge digestion tanks because the shape enhances structural strength with minimal material and promotes uniform mixing. Aero-engineering employs the continuous-curvature property of the Hügelschäffer form for glider fuselage sections<sup>5</sup> to ensure smooth pressure distribution and undisturbed boundary-layer flow. Chicken eggs (<em>Gallus gallus domesticus</em>) are reported to have elongation ratios between 1.4 to 1.5, or inversely, between 0.67 to 0.71, with the maximum bulge some 41% along the length<sup>4</sup>. The three egg curves here have been ‘tuned’ to approximate real chicken eggs by setting default values for the parameters, and in the latter 2 cases by adding a scaling parameter <em>b</em> for y to compensate for the bulge width. Other non-cubic egg curves such as the quartic ‘Wassenaar’ egg curve also exist and are  treated separately in a general "Egg Curve" entry.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/oeuf/oeuf.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/oeuf/oeuf.shtml</a> (Hügelschäffer history and Newton-transform construction)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubicn.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubicn.html</a> (Newton’s egg curve within 1710 cubic classification)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubiceg.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubiceg.html</a> (cubic egg variants and rationalized forms)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S1537511020301653" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S1537511020301653</a> (Narushin et al. 2020 – digital chicken egg validation of Hügelschäffer model)</li>
+      <li><a href="https://arxiv.org/pdf/2205.14448" target="_blank" rel="noopener noreferrer">https://arxiv.org/pdf/2205.14448</a> (Hügelschäffer applications in aero-engineering, architecture, and biology)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CUBICEGG (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc skm)
+  (setq id "Cubic Egg Curve"
+        iq ""
+        dcl "CUBICEGG"
+        opt '("Hügelschäffer" "Newton's" "Rationalized Ellipse")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 100
+        dpt '(1.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\ny²=b²·(a²-(x-d)²)/(a²-d²+2dx)")
+    (setq fa (get_real 2 "a (radius of the first circle)" 1.0)
+          fb (get_real 2 "b (radius of the second circle)" 0.7)
+          fc (get_real 2 "d (distance between the centres)" 0.18)
+          eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", d=" (rtos fc 2 4))
+          a1 (- fc fa)
+          xc '(eval a2)
+          yc '(* fb (if (<= (/ (- (* fa fa) (expt (- (eval a2) fc) 2)) (avoid_zero (+ (* fa fa) (- (* fc fc)) (* 2 fc (eval a2))))) 1e-9) 0.0
+              (alt_expt (/ (- (* fa fa) (expt (- (eval a2) fc) 2)) (avoid_zero (+ (* fa fa) (- (* fc fc)) (* 2 fc (eval a2))))) 0.5 nil)))))
+   ((eq kw 1)
+    (princ "\ny²=b²·(x²-1)·(x-a")
+    (setq fa (get_real 2 "a (asymmetry parameter)" 5.5)
+          fb (get_real 2 "b (y-scale-factor)" 0.297)
+          eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+          a1 -1.0
+          xc '(eval a2)
+          yc '(* fb (if (<= (* (- (expt (eval a2) 2) 1.0) (- (eval a2) fa)) 1e-9) 0.0 (alt_expt (* (- (expt (eval a2) 2) 1.0) (- (eval a2) fa)) 0.5 nil)))))
+   ((eq kw 2)
+    (princ "\ny² = b²·(1-x²)/(1 + ax)")
+    (setq fa (get_real 2 "a (asymmetry parameter)" 0.18)
+          fb (get_real 2 "b (y-scale-factor)" 0.697)
+          eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+          a1 -1.0
+          xc '(eval a2)
+          yc '(* fb (if (<= (/ (- 1.0 (expt (eval a2) 2)) (avoid_zero (+ (* fa (eval a2)) 1.0))) 1e-9) 0.0
+              (alt_expt (/ (- 1.0 (expt (eval a2) 2)) (avoid_zero (+ (* fa (eval a2)) 1.0))) 0.5 nil))))))
+  (setq paramstep (/ xspan divcount 0.5)
+        skm '(T nil T)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CUBICEGG)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

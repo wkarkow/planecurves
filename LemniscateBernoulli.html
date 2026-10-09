@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lemniscate of Bernoulli - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Lemniscate of Bernoulli</h1>
+      <p class="short-description">A plane algebraic curve of degree four resembling a figure-eight or infinity symbol (∞).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/LemniscateBernoulli/LemniscateBernoulli01-360.avif"
+           alt="Lemniscate of Bernoulli, a=1">
+      <figcaption>Lemniscate of Bernoulli, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Lemniscate of Bernoulli polar equation:</div>
+      \[ r = a \sqrt{\cos(2\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Lemniscate of Bernoulli<sup>1,2,3,4</sup>, a plane algebraic curve of degree four resembling a figure-eight or infinity symbol (∞), was first studied and published in 1694 by Swiss mathematician Jacob Bernoulli (1654–1705) in <em>Acta Eruditorum</em>. He named it <em>lemniscus</em> (Latin for pendant ribbon). Bernoulli posed the problem of finding a curve whose polar radius squared is proportional to the cosine of twice the angle; this led directly to the canonical equation \( r^{2} = a^{2} \cos(2\theta) \). He presented it as the locus of points whose distances to two fixed foci satisfy a constant product, making it an analog of the ellipse (constant sum) and the hyperbola (constant difference). It is a special case of the Cassini ovals described by Giovanni Domenico Cassini in 1680. Giulio Carlo Fagnano analyzed its arc length in 1750, uncovering deep relationships between the lemniscate and elliptic integrals long before the formal development of elliptic functions by Euler, Abel, and Jacobi. Leonhard Euler extended this work in 1751, advancing the foundations of elliptic functions.</p>
+    <p>In engineering, the curve is exactly traced by the midpoint of the connecting rod in a specific crossed-parallelogram configuration of Watt’s three-bar linkage, a mechanical device originally developed by James Watt for steam engines to produce approximate straight-line motion; variants of this linkage appear in modern automobile rear-axle suspensions to control lateral axle movement during vertical travel. It also arises as a particular section of a torus. No additional direct physical realizations in the natural sciences are documented in the primary references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Lemniscate.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Lemniscate.html</a> (history and equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/lemniscate/lemniscate.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/lemniscate/lemniscate.shtml</a> (history, equations, Watt linkage)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticca.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticca.html</a> (Cassini relation and history)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Lemniscate/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Lemniscate/</a> (history and elliptic integrals)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LEMNISCATEBERNOULLI (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                                divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc rval skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Lemniscate of Bernoulli"
+        iq "r=a·√cos(2θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(if (&lt; (abs (cos (* 2.0 (eval a2)))) 1e-9) 0.0 (* fa (alt_expt (cos (* 2.0 (eval a2))) 0.5 T)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 (/ pi -2.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LEMNISCATEBERNOULLI)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

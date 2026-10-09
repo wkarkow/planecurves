@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bicorn Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bicorn Curve</h1>
+      <p class="short-description">A rational quartic plane curve with two cusps resembling a cocked hat.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Bicorn/Bicorn01-360.avif"
+           alt="Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn02-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=2,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=2,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn03-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=1,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=1,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn04-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=2,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=2,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn05-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=2,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=2,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn06-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=1,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=1,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn07-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=3,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=3,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn08-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn09-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=2,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=2,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn10-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=3,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=3,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn11-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=4,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=4,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn12-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=2">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn13-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=-3">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=-3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn14-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=2,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=-3">
+      <figcaption>Generalized Bicorn Curve, a=1,b=2,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=-3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn15-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=2,c=1,d=1,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=2,c=1,d=1,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn16-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=2,e=1,f=3,g=3,h=1,i=2,j=-1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=2,e=1,f=3,g=3,h=1,i=2,j=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn17-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=3,d=0.5,e=2,f=1,g=2,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=3,d=0.5,e=2,f=1,g=2,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn18-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=1,e=2,f=1,g=3,h=1,i=2,j=-0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=1,e=2,f=1,g=3,h=1,i=2,j=-0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn19-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=0.5,e=0.5,f=2,g=1.5,h=1,i=2,j=-1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=0.5,e=0.5,f=2,g=1.5,h=1,i=2,j=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn20-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-4,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-4,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn21-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-2,h=1,i=2,j=-3">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-2,h=1,i=2,j=-3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn22-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-4,h=1,i=2,j=-2">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=1,g=-4,h=1,i=2,j=-2</figcaption>
+    </figure>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn23-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=2,e=2,f=1,g=-3,h=1,i=2,j=-2">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=2,e=2,f=1,g=-3,h=1,i=2,j=-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn24-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=0.5,e=1,f=1.5,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=0.5,e=1,f=1.5,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn25-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=0.5,e=0.5,f=-0.5,g=-1.5,h=1,i=2,j=-0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=0.5,e=0.5,f=-0.5,g=-1.5,h=1,i=2,j=-0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn26-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=2,d=-0.5,e=2,f=0.5,g=2,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=2,d=-0.5,e=2,f=0.5,g=2,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn27-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=2,d=0.5,e=0.5,f=-0.5,g=-2.5,h=1,i=2,j=-0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=2,d=0.5,e=0.5,f=-0.5,g=-2.5,h=1,i=2,j=-0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn28-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=1,e=2,f=1,g=-1.5,h=-1,i=2,j=2">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=1,e=2,f=1,g=-1.5,h=-1,i=2,j=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn29-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=0.5,e=0.5,f=1,g=-1.5,h=-1,i=2,j=2">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=0.5,e=0.5,f=1,g=-1.5,h=-1,i=2,j=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn30-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=2,c=2,d=2,e=2,f=1,g=1.5,h=0.5,i=2,j=2">
+      <figcaption>Generalized Bicorn Curve, a=1,b=2,c=2,d=2,e=2,f=1,g=1.5,h=0.5,i=2,j=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn31-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=0.75,g=-1.5,h=1,i=1,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=2,f=0.75,g=-1.5,h=1,i=1,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn32-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=3,d=1/3,e=2,f=1,g=4,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=3,d=1/3,e=2,f=1,g=4,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn33-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1/3,c=3,d=0.5,e=2,f=1,g=4,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1/3,c=3,d=0.5,e=2,f=1,g=4,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn34-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1/3,c=3,d=1/3,e=2,f=1,g=4,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1/3,c=3,d=1/3,e=2,f=1,g=4,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn35-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.25,c=3,d=0.25,e=2,f=1,g=4,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.25,c=3,d=0.25,e=2,f=1,g=4,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn36-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=1,d=0.5,e=0,f=-0.5,g=-1.5,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=1,d=0.5,e=0,f=-0.5,g=-1.5,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn37-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1/6,c=3,d=1/6,e=3,f=1,g=4,h=1,i=4,j=1/6">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1/6,c=3,d=1/6,e=3,f=1,g=4,h=1,i=4,j=1/6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn38-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=1,f=0.8,g=-2,h=1,i=1,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1,c=2,d=1,e=1,f=0.8,g=-2,h=1,i=1,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn39-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=2,d=1,e=1,f=0.8,g=-2,h=1,i=1,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=2,d=1,e=1,f=0.8,g=-2,h=1,i=1,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn40-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=2,d=0.5,e=1,f=0.8,g=-2,h=1,i=1,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=2,d=0.5,e=1,f=0.8,g=-2,h=1,i=1,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn41-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=1,d=0.5,e=0,f=-0.5,g=-1.5,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=1,d=0.5,e=0,f=-0.5,g=-1.5,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn42-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=1,d=0.5,e=0,f=-1,g=-1.5,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=1,d=0.5,e=0,f=-1,g=-1.5,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn43-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=1,d=0.5,e=0,f=2,g=-1.5,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=1,d=0.5,e=0,f=2,g=-1.5,h=1,i=2,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn44-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=0.5,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=0.5,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn45-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1/3,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1/3,c=2,d=1,e=2,f=1,g=3,h=1,i=2,j=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bicorn/Bicorn46-360.avif"
+           alt="Generalized Bicorn Curve, a=1,b=1/3,c=1,d=0.5,e=0,f=-0.5,g=-1.5,h=1,i=2,j=0.5">
+      <figcaption>Generalized Bicorn Curve, a=1,b=1/3,c=1,d=0.5,e=0,f=-0.5,g=-1.5,h=1,i=2,j=0.5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Bicorn Curve classic implicit equation:</div>
+      \[ y^{2}(a^{2}-x^{2}) = (x^{2}+2ay-a^{2})^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bicorn Curve generalized parametric equations:</div>
+      \[ x=a\sin(b\theta),\quad y=a\frac{\cos^{c}(d\theta)\ (e+\cos(f\theta))}{g+h\sin^{i}(j\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The classic bicorn curve, also known as the cocked hat curve, is a rational quartic plane curve. It was first studied by the English mathematician James Joseph Sylvester in 1864<sup>1</sup>, who named it bicorn because of its two cusps. Arthur Cayley examined it further in 1867<sup>1</sup>, and G. de Longchamps provided additional analysis in 1897<sup>1</sup>. Its shape resembles a two-horned military hat, hence the alternate name. Several geometric constructions generate the bicorn as a locus.<sup>2,3</sup></p>
+    <p>One standard method uses two equal-radius tangent circles: a point Q moves along one circle, R is its projection onto the y-axis, and the polar line of Q with respect to the circle intersects QR at points that trace the curve.<sup>2</sup> Other constructions involve centers of incircles in certain triangle families or intersections with cardioid-based loci.<sup>2,3</sup></p>
+    <p>The trigonometric bicorn is presented in major references as one of the standard parametric representations of the bicorn (mathematically equivalent to the rational t-form).<sup>2,3</sup> No original mathematician or date is associated with the introduction of this trig parametrization in the literature. The multi-parameter generalization (with b, c, d, e, f, g, h, i, j) used in the AutoLISP code is a contemporary extension developed to allow frequency modulation, envelope shaping, asymmetry biasing, and phase reflection.</p>
+    <p>Applications in engineering and the natural sciences are limited. One documented use appears in mechanical engineering, where linkage mechanisms have been developed specifically to trace the bicorn as part of research into aesthetic curves for machine design.<sup>4</sup> No major applications in physics, optics, biology, structural analysis, or other natural sciences are identified in standard curve references.<sup>1,2,3</sup> The curve remains primarily of theoretical interest in algebraic geometry.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Bicorn.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Bicorn.html</a> (history, equations, properties)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/bicorne/bicorne.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/bicorne/bicorne.shtml</a> (history and equations)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticbi.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticbi.html</a> (history and construction details)</li>
+      <li><a href="https://www.researchgate.net/figure/Mechanism-that-generates-a-bicorn-curve_fig1_259572299" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/figure/Mechanism-that-generates-a-bicorn-curve_fig1_259572299</a> (mechanism generation in engineering)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BICORN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj)
+ (setq id "Bicorn Curve"
+       iq "x=a·sin(bθ), y=a·cosᶜ(dθ)(e+cos(fθ))/(g+h·sinⁱ(jθ))"
+       dcl nil
+       opt nil
+       kw nil
+       mode 'polar
+       dpr "# of divisions in curve"
+       dct 360
+       dpt nil
+       span 360
+       kw (ca id iq dcl opt kw mode dpr dct dpt span)
+       fa (get_real 2 "a (overall scale)" 1.0)
+       fb (get_real 0 "b (frequency modulation on θ)" 1.0)
+       fc (get_real 0 "c (power on cos, envelope shaping)" 2.0)
+       fd (get_real 0 "d (frequency on first cos)" 1.0)
+       fe (get_real 0 "e (asymmetry and curve biasing)" 2.0)
+       ff (get_real 0 "f (frequency on second cos, negative flips phase)" 1.0)
+       fg (get_real 0 "g (denominator base)" 3.0)
+       fh (get_real 0 "h (coefficient on sin power)" 1.0)
+       fi (get_real 0 "i (power on sin, envelope shaping)" 2.0)
+       fj (get_real 0 "j (frequency on sin, negative flips phase)" 1.0)
+       eq_display (strcat "\na=" (rtos fa 2 4) ",b=" (rtos fb 2 4) ",c=" (rtos fc 2 4) ",d=" (rtos fd 2 4) ",e=" (rtos fe 2 4) ",f=" (rtos ff 2 4)
+                          ",g=" (rtos fg 2 4) ",h=" (rtos fh 2 4) ",i=" (rtos fi 2 4) ",j=" (rtos fj 2 4))
+       xc '(* fa (sin (* fb (eval a2))))
+       yc '(/ (* fa (alt_expt (cos (* fd (eval a2))) fc nil) (+ fe (cos (* ff (eval a2))))) (+ fg (* fh (alt_expt (sin (* fj (eval a2))) fi nil))))
+       skm '(T T T)
+       a1 0
+       a2 a1
+       x1 (eval xc)
+       y1 (eval yc)
+       a2 '(+ a1 paramstep)
+       x2 '(eval xc)
+       y2 '(eval yc))
+ (cc))
+(C:BICORN)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atriphtaloid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Atriphtaloid</h1>
+      <p class="short-description">A sextic algebraic plane curve first studied in 1882 to model sea surfaces on an attractive sphere, featuring vertical asymptotes near the y-axis, endpoint cusps on the x-axis, and an optional detached oval.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Atriphtaloid/Atriphtaloid01-360.avif"
+           alt="Atriphtaloid, main curve with vertical asymptotes, a=1,b=1">
+      <figcaption>a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atriphtaloid/Atriphtaloid02-360.avif"
+           alt="Atriphtaloid, detached oval component, a=0.5,b=0.018">
+      <figcaption>a=0.5,b=0.018</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atriphtaloid/Atriphtaloid03-360.avif"
+           alt="Atriphtaloid, a=2,b=1.17">
+      <figcaption>a=2,b=1.17</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atriphtaloid/Atriphtaloid04-360.avif"
+           alt="Atriphtaloid, a=1,b=0.12">
+      <figcaption>a=1,b=0.12</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atriphtaloid/Atriphtaloid05-360.avif"
+           alt="Atriphtaloid, a=0.5,b=0.001">
+      <figcaption>a=0.5,b=0.001</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atriphtaloid/Atriphtaloid06-360.avif"
+           alt="Atriphtaloid, a=2,b=0.2">
+      <figcaption>a=2,b=0.2</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Atriphtaloid implicit equation:</div>
+      \[ x^{4}(x^{2} + y^{2}) - (a x^{2} - b)^{2} = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Atriphtaloid Cartesian equation:</div>
+      \[ y = \pm \frac{\sqrt{(a x^{2} - b)^{2} - x^{6}}}{x^{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The atriphtaloid<sup>3</sup> is a sextic algebraic plane curve of degree six first studied in 1882 by Haughton and Townsend to model the form of the surface of the seas covering an attractive sphere. It is also referenced by Haughton and Longchamps and known as the atriphtalassic (or atriphtothalassic) curve. The name derives from the Greek <em>atripos</em> (frictionless) and <em>thalassa</em> (sea). The curve is most commonly defined implicitly by \(x^{4}(x^{2}+y^{2})-(a x^{2}-b)^{2}=0\). The atriphtaloid exhibits vertical asymptotic behavior near the y-axis, endpoint cusps on the x-axis, and depending upon the presence versus absence of three real roots of an associated cubic in \(u=x^{2}\), a detached oval. These features made it a useful example in the historical classification of sextic curves by real topology rather than by degree alone.</p>
+    <p>Real-life applications include this historical theoretical modeling of sea surfaces under gravitational attraction. No other direct engineering or physical governing uses have been identified in standard references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Atriphtaloid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Atriphtaloid.html</a> (sextic classification and equation)</li>
+      <li><a href="https://www.2dcurves.com/sextic/sextica.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/sextic/sextica.html</a> (alternative names and additional historical studies)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/atriphtaloid/atriphtaloid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/atriphtaloid/atriphtaloid.shtml</a> (1882 study and sea-surface modeling on attractive sphere)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ATRIPHTALOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo)
+  (setq id "Atriphtaloid"
+        iq "x^4(x^2+y^2)-(a·x^2-b)^2=0"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in right upper curve"
+        dct 200
+        dpt nil
+        span nil)
+  (ca id iq dcl opt kw mode dpr dct dpt span)
+  (setq fa (get_real 6 "a (scale >0)" 1.0)
+        fb (get_real 6 (strcat "b (oval if b < " (rtos (* (* fa fa fa) (/ 4.0 27.0)) 2 4) "):") 1.0)
+        fc (* fa fa fa)
+        fd 1e-4
+        fe 1e-6
+        ff (* fc fd)
+        fg (* fc (- (/ 4.0 27.0) fe))
+        fh (/ fb fc)
+        fi (and (> fh 0.0) (< fh (/ 4.0 27.0)))
+        kw (if fi (get_keyword 0 "Yes No" "Draw oval interval [Yes/No]" "No") "No")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(progn (setq fg (- (* (- (* fa (* (eval a2) (eval a2))) fb) (- (* fa (* (eval a2) (eval a2))) fb)) (* (* (eval a2) (eval a2)) (* (* (eval a2) (eval a2)) (* (eval a2) (eval a2)))))) (cond ((< (abs fg) 1e-9) 0.0) ((< fg 0.0) (* 2.0 maxdraw)) (T (/ (alt_expt fg 0.5 T) (* (avoid_zero (eval a2)) (avoid_zero (eval a2)))))))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 10))
+  (if (/= kw "Yes")
+      (progn
+        (setq fc 0.0
+              fd (/ fb fa)
+              fg 0)
+        (while (< fg 60)
+          (setq fh (* 0.5 (+ fc fd))
+                fi (- (* (- (* fa fh) fb) (- (* fa fh) fb)) (* fh fh fh)))
+          (if (>= fi 0.0)
+            (setq fc fh)
+            (setq fd fh))
+          (setq fg (1+ fg)))
+        (setq fd fc
+              fc 0.0
+              fe (alt_expt fc 0.5 T)
+              fi (alt_expt fd 0.5 T)))
+      (progn
+        (setq fj (- (* fa fa fa fa) (* 6.0 fa fb)))
+        (if (<= fj 0.0)
+          (progn
+            (setq kw "No")
+            (setq fc 0.0
+                  fd (/ fb fa)
+                  fg 0)
+            (while (< fg 60)
+              (setq fh (* 0.5 (+ fc fd))
+                    fi (- (* (- (* fa fh) fb) (- (* fa fh) fb)) (* fh fh fh)))
+              (if (>= fi 0.0)
+                (setq fc fh)
+                (setq fd fh))
+              (setq fg (1+ fg))) 
+            (setq fd fc
+                  fc 0.0
+                  fe (alt_expt fc 0.5 T)
+                  fi (alt_expt fd 0.5 T)))
+          (progn
+            (setq fk (alt_expt fj 0.5 T)
+                  fl (/ (- (* fa fa) fk) 3.0)
+                  fm (/ (+ (* fa fa) fk) 3.0)
+                  fc 0.0
+                  fd fl
+                  fg 0)
+            (while (< fg 60)
+              (setq fh (* 0.5 (+ fc fd))
+                    fi (- (+ (* fh fh fh) (* 2.0 fa fb fh)) (* fa fa fh fh) (* fb fb)))
+              (if (>= fi 0.0)
+                (setq fc fh)
+                (setq fd fh))
+              (setq fg (1+ fg)))
+            (setq fc fl
+                  fd fm
+                  fg 0)
+            (while (< fg 60)
+              (setq fh (* 0.5 (+ fc fd))
+                    fi (- (+ (* fh fh fh) (* 2.0 fa fb fh)) (* fa fa fh fh) (* fb fb)))
+              (if (>= fi 0.0)
+                (setq fc fh)
+                (setq fd fh))
+              (setq fg (1+ fg)))
+            (setq fn fc
+                  fc fm
+                  fd (* 2.0 fm)
+                  fg 0
+                  fi (- (+ (* fd fd fd) (* 2.0 fa fb fd)) (* fa fa fd fd) (* fb fb)))
+            (while (and (< fi 0.0) (< fg 40))
+              (setq fd (* 2.0 fd)
+                    fi (- (+ (* fd fd fd) (* 2.0 fa fb fd)) (* fa fa fd fd) (* fb fb))
+                    fg (1+ fg)))
+            (setq fg 0)
+            (while (< fg 60)
+              (setq fh (* 0.5 (+ fc fd))
+                    fi (- (+ (* fh fh fh) (* 2.0 fa fb fh)) (* fa fa fh fh) (* fb fb)))
+              (if (< fi 0.0)
+                (setq fc fh)
+                (setq fd fh))
+              (setq fg (1+ fg)))
+            (setq fo fc
+                  fc fn
+                  fd fo
+                  fe (alt_expt fc 0.5 T)
+                  fi (alt_expt fd 0.5 T))))))
+  (setq paramstep (/ (- fi fe) divcount)
+        a1 fe
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ATRIPHTALOID)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

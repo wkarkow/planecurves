@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curve Name</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <!-- ============================================================ -->
+  <!-- CURVE HEADER -->
+  <!-- ============================================================ -->
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Curve Name</h1>
+      <p class="short-description">Short one-sentence description of the curve and its notable behavior.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- IMAGE GALLERY -->
+  <!-- ============================================================ -->
+  <!-- 
+    USAGE NOTES:
+    - Most curves have 2–4 images. Duplicate the <figure> block as needed.
+    - If the curve has multiple colored parameter sets, add data-caption="..." to the <img> 
+      and provide the text when asked. Not all curves need this.
+    - For an external/Wikipedia image, add class="external" (or data-skip-modal) to the <img>
+      so the modal script can skip it if desired.
+    - Image filenames should follow: CurveName01-360.avif, CurveName02-360.avif, etc.
+  -->
+
+  <section class="image-gallery">
+    <!-- Example 1: Image with colored parameter variants (most common colored case) -->
+    <figure>
+      <img src="images/CurveName/CurveName01-360.avif"
+           alt="CurveName – main view with multiple parameter sets"
+           data-caption="a=1, b=0(black), 0.25(red), 0.5(blue), 0.75(green), 1.0(orange), 1.25(purple), 1.5(cyan), 2(brown), 4(lime), 8(magenta)">
+      <figcaption>
+        a = 1, b =
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.25</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">2</span>,
+        <span class="figcap-value" style="color:#00FF00">4</span>,
+        <span class="figcap-value" style="color:#FF00FF">8</span>
+      </figcaption>
+    </figure>
+    <!-- Example 2: Simple image without colored parameters (delete or duplicate as needed) -->
+    <figure>
+      <img src="images/CurveName/CurveName02-360.avif"
+           alt="CurveName – alternate view or different parameter">
+      <figcaption>CurveName – alternate rendering<br>parameter notes here if useful</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- EQUATION RIBBON -->
+  <!-- ============================================================ -->
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Curve Name implicit equation:</div>
+      \[ \text{Replace with actual equation} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Curve Name polar / parametric equation:</div>
+      \[ \text{Replace with actual equation} \]
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- HISTORY AND APPLICATIONS -->
+  <!-- ============================================================ -->
+  <section>
+    <h2>History and Applications</h2>
+    <p>History text goes here. Include superscript citations.</p>
+    <p>Applications in engineering and natural sciences (or state that none were found).</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- REFERENCES -->
+  <!-- ============================================================ -->
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://example.com/primary-source" target="_blank" rel="noopener noreferrer">Primary source URL (history and equations)</a></li>
+    </ol>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- AUTOLISP CODE -->
+  <!-- ============================================================ -->
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CURVENAME (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fe)
+  (setq id "Curve Name"
+        iq "r = equation in display form"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar          ; or 'param
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (description of effect)" 1.0)
+        fe (get_keyword 0 "Real Imaginary" "Real or Imaginary values allowed?" "Real")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        ; define rval / xc / yc expressions here using fa, fb, fe ...
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CURVENAME)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

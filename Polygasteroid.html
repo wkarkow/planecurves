@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Polygasteroid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Polygasteroid</h1>
+      <p class="short-description">A polar generalization of the focus–directrix conics obtained by replacing θ with nθ.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Polygasteroid/Polygasteroid01-360.avif"
+           data-caption="e=0.25(black),0.5(red); a=1, n=3"
+           alt="Polygasteroid, a=1(black),3(red),e=0.25,n=3(black),3.1(red)">
+      <figcaption>
+        Polygasteroid, a=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">3</span>,
+        e=0.25,n=
+        <span class="figcap-value" style="color:#000000">3</span>,
+        <span class="figcap-value" style="color:#FF0000">3.1</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Polygasteroid/Polygasteroid02-360.avif"
+           data-caption="Cyclic Harmonic(black),a=1(black),b=1(black),Polygasteroid(red),a=1/4(red),e=0.5(red),n=5/3"
+           alt="Cyclic Harmonic(black),a=1(black),b=1(black),Polygasteroid(red),a=1/4(red),e=0.5(red),n=5/3">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Cyclic Harmonic</span>,
+        <span class="figcap-value" style="color:#000000">a=1</span>,
+        <span class="figcap-value" style="color:#000000">b=1</span>,
+        <span class="figcap-value" style="color:#FF0000">Polygasteroid</span>,
+        <span class="figcap-value" style="color:#FF0000">a=1/4</span>,
+        <span class="figcap-value" style="color:#FF0000">e=0.5</span>,
+        n=5/3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Polygasteroid/Polygasteroid03-360.avif"
+           data-caption="Cyclic Harmonic(black),a=1,b=0.5,n=7/3, Polygasteroid(red),a=1,e=0.5,n=7/3"
+           alt="Cyclic Harmonic(black),a=1,b=0.5,n=7/3, Polygasteroid(red),a=1,e=0.5,n=7/3">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Cyclic Harmonic</span>,
+        a=1,b=0.5,n=7/3,
+        <span class="figcap-value" style="color:#FF0000">Polygasteroid</span>,
+        a=1,e=0.5,n=7/3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Polygasteroid/Polygasteroid04-360.avif"
+           alt="Polygasteroid, a=1,e=1,n=2">
+      <figcaption>Polygasteroid, a=1,e=1,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Polygasteroid/Polygasteroid05-360.avif"
+           alt="Polygasteroid, a=1,e=1,n=4/3">
+      <figcaption>Polygasteroid, a=1,e=1,n=4/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Polygasteroid/Polygasteroid06-360.avif"
+           alt="Polygasteroid, a=1,e=1,n=7/5">
+      <figcaption>Polygasteroid, a=1,e=1,n=7/5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Polygasteroid Curve polar equation:</div>
+      \[ r = \dfrac{a}{1 + e \cdot \cos(n\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Polygasteroid curve, named by Gino Loria in 1930 in his work on special algebraic and transcendental plane curves, generalizes the family of conic sections in polar form by changing θ to nθ. When n = 1, the equation reduces to the standard polar form of the ellipse (when eccentricity e &lt; 1), parabola (e = 1), and hyperbola (e &gt; 1). Earlier references to curves with n antinodes or n overhangs appear in Laboulaye’s 1849 work. It is also known as the generalized conic (Mamikon, 2012). Polygasteroids are inverses of the conchoids of roses. They also arise as the conical projections of cylindric sine waves onto a plane perpendicular to the cylinder axis (with the center on the axis).<sup>1</sup></p>
+    <p>In mechanical engineering, polygasteroids serve as mating profiles for non-circular gears. When one gear profile is an ellipse with its hub at a focus, the conjugate mating profile that maintains proper rolling contact without slipping follows the polygasteroid equation, enabling mechanisms with prescribed variable angular velocity ratios.<sup>2</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/polygasteroid/polygasteroid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/polygasteroid/polygasteroid.shtml</a> (history, definition, properties, and relations to other curves)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/engrenage/engrenage.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/engrenage/engrenage.shtml</a> (mating profiles in non-circular gear design)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:POLYGASTEROID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                          restartflag rval id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc)
+  (setq id "Polygasteroid"
+        iq "r=a/(1+e·cos(nθ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "e (eccentricity)" 0.25)
+        fc (get_real 6 "n (θ multiplier)" 3.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", e=" (rtos fb 2 4) ", n=" (rtos fc 2 4))
+        rval '(/ fa (avoid_zero (+ 1.0 (* fb (cos (* fc (eval a2)))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 5.0)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:POLYGASTEROID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

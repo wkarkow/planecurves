@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reciprocal Power Exponential Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Reciprocal Power Exponential Curve</h1>
+      <p class="short-description">The Cartesian family \(y = a \cdot x^{b/x}\); for positive \(b\) the curve has a single maximum at \(x = e\) and then decays toward the axes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/RecipPowerExp/RecipPowerExp01-360.avif"
+           alt="Reciprocal Power Exponential Curve, a=1, multiple values of b">
+      <figcaption>
+        Reciprocal Power Exponential Curve, a=1,b=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>,
+        <span class="figcap-value" style="color:#0096FF">4.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/RecipPowerExp/RecipPowerExp02-360.avif"
+           alt="Reciprocal Power Exponential Curve, multiple values of a,b=1">
+      <figcaption>
+        Reciprocal Power Exponential Curve, a=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>,
+        <span class="figcap-value" style="color:#0096FF">4.0</span>,
+        b=1
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Reciprocal Power Exponential Curve Cartesian equation:</div>
+      \[ y = a \cdot x^{b/x} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The reciprocal power exponential curve, given in Cartesian form by \( y = a \cdot x^{b/x} \), arises as a generalization of the simpler case \( y = x^{1/x} \) (when \( a = 1 \) and \( b = 1 \)). This function appears in introductory calculus as an example for applying logarithmic differentiation or the first-derivative test to locate extrema. Taking the natural logarithm yields \( \ln(y) = (b/x)\ln(x) \), whose derivative reveals a critical point at \( x = e \) (for positive \( b \)), where the curve attains a maximum before decaying toward the axes. No specific mathematician is credited with its first study or naming; it functions as a pedagogical tool rather than a historically named curve or an entry in standard references. Rather, it is a variant within broader discussions of power or exponential families.<sup>1,2</sup></p>
+    <p>No real-life applications in engineering and the natural sciences are documented in the reviewed literature. The curve serves primarily as a mathematical illustration rather than a model for observable phenomena.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/powerexponential/powexpc.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/powerexponential/powexpc.html</a> (power exponential family and related fitting curves; no exact match)</li>
+      <li><a href="https://mathworld.wolfram.com/SteinersProblem.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/SteinersProblem.html</a> (Steiner's problem of \( x^{1/x} \), no dedicated page for \( x^{b/x} \))</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RECIPPOWEREXP (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                          divpt restartflag xspan id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Reciprocal Power Exponential Curve"
+        iq "y=a·x^(b/x)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (y-scale)" 1.0)
+        fb (get_real 2 "b (exponent in b/x)" 1.0)
+        fc (if (eq (get_keyword 0 "Positive Negative" "Positive or Negative x?" "Positive") "Positive") T nil)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(* fa (alt_expt (eval a2) (/ fb (avoid_zero (eval a2))) nil))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 1e5)
+        span xspan
+        paramstep (/ xspan divcount)
+        paramstep (if fc paramstep (- paramstep))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:RECIPPOWEREXP)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

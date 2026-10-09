@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mascot Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Mascot Curve</h1>
+      <p class="short-description">The path of a point that travels around a circle of fixed radius while the center of that circle translates at constant speed, the moving point itself holding constant speed relative to the ground.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Mascot/Mascot01-360.avif"
+           data-caption="Mascot Curve, V₀=1,V=1.5,R=1(black), Prolate cycloid: x=1.052641(t-1.62364sin(t)); y=(t-cos(t))(red)"
+           alt="Mascot Curve, V₀=1,V=1.5,R=1(black), Prolate cycloid: x=1.052641(t-1.62364sin(t)); y=(t-cos(t))(red)">
+      <figcaption>
+        Mascot Curve,
+        <span class="figcap-value" style="color:#000000">V₀=1,V=1.5,R=1</span>,
+        Prolate cycloid:
+        <span class="figcap-value" style="color:#FF0000">x=1.052641(t-1.62364sin(t)); y=(t-cos(t))</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Mascot/Mascot02-360.avif"
+           data-caption="Mascot Curve, V₀=1,V=1.2,R=1(black), Prolate cycloid: x=2.161576(t-1.316956sin(t)); y=(t-cos(t))(red)"
+           alt="Mascot Curve, V₀=1,V=1.2,R=1(black), Prolate cycloid: x=2.161576(t-1.316956sin(t)); y=(t-cos(t))(red)">
+      <figcaption>
+        Mascot Curve,
+        <span class="figcap-value" style="color:#000000">V₀=1,V=1.2,R=1</span>,
+        Prolate cycloid:
+        <span class="figcap-value" style="color:#FF0000">x=2.161576(t-1.316956sin(t)); y=(t-cos(t))</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Mascot/Mascot03-360.avif"
+           alt="Mascot Curve, Gardner solution, V₀=1,V=3.36807452665,R=1">
+      <figcaption>Mascot Curve, Gardner solution, V₀=1,V=3.36807452665,R=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Mascot/Mascot04-360.avif"
+           alt="Mascot Curve, loops first kiss, V₀=1,V=4.5498858,R=1">
+      <figcaption>Mascot Curve, loops first kiss, V₀=1,V=4.5498858,R=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Mascot Curve parametric equations:</div>
+      \[ x = R\left(\cos\theta + \int_{0}^{\theta}\dfrac{1}{\sin u+\sqrt{k^{2}-\cos^{2}u}}\,du\right),\qquad y = R\sin\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Speed ratio:</div>
+      \[ k = \dfrac{V}{V_{0}}\quad (k&gt;1) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Gardner one-turn condition:</div>
+      \[ \int_{0}^{2\pi}\dfrac{d\theta}{\sin\theta+\sqrt{k^{2}-\cos^{2}\theta}} = 2,\qquad k \approx 3.3680745 \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Mascot curve<sup>1</sup> describes the trajectory of a point constrained to move around a circle of fixed radius while the center of that circle translates at constant speed, with the point itself maintaining a constant speed relative to the ground, not relative to the circle. This distinction, constant absolute speed rather than constant relative speed, is what differentiates the Mascot curve from classical trochoids and cycloids. The curve is best known from a problem popularized by Martin Gardner in <em>Scientific American</em> (1960)<sup>2</sup> under the title “marching cadets and a trotting dog.” In Gardner’s formulation (originally for a square regiment), a regiment marches forward at constant speed \(V_{0}\) while a mascot runs continuously around a circle (or square perimeter) centered on the regiment, always keeping the same distance from the regiment’s center and always moving at constant speed \(V\) over the ground. \(V_{0}\) and \(V\) are the respective speeds of the regiment and the mascot, \(R\) the radius of the circle, and \(k=V/V_{0}\). Although the Mascot curve resembles a prolate cycloid, it is not one. A cycloid (or trochoid) assumes constant speed relative to the rolling or moving body, which produces uniform angular motion. In contrast, the Mascot curve’s angular rate around the circle varies with position: the mascot advances rapidly when running backward relative to the regiment and slows significantly when both mascot and regiment move forward in the same direction. This nonuniform angular motion redistributes curvature along the path, producing subtle but measurable differences in loop shape. A direct overlay comparison (Mascot in black, cycloid in red) illustrates this distinction clearly. The mismatch increases as \(k\) approaches 1, where the mascot’s angular rate becomes highly nonuniform. From a mathematical standpoint, the Mascot curve is notable because its Cartesian parametrization involves a non-elementary integral, rather than a finite combination of trigonometric functions. As a result, its geometry cannot be reduced to any member of the trochoid or cycloid families, even though close visual approximations are possible. The curve provides a clear geometric example of how constant speed in an inertial frame differs from constant speed in a moving frame.</p>
+    <p>Comparing image 1 and image 2, note the increasing mismatch as \(k=\frac{V}{V_{0}}\) approaches 1.</p>
+    <p>Comparing image 3, per MathCurve<sup>1</sup> “The problem posed by Martin Gardner: determining \(k\) such that after one turn, the mascot that started at the back of the regiment is where the front of the regiment was, amounts to solving \(\int_{0}^{2\pi} \dfrac{d\theta}{\sin\theta+\sqrt{k^{2}-\cos^{2}\theta}}=2\); answer: \(k=3.3680745\ldots\)”.</p>
+    <p>Comparing image 4, a question of interest is not merely the shape of the path, but whether speed ratios would cause the mascot to revisit earlier positions in space. At the critical speed ratio \(k \approx 4.5498858\) (\(V \approx 4.5498858\) when \(V_{0}=1\) and \(R=1\), the loops first kiss (the back of one loop just touches the front of the previous loop. This value has no simple closed form and is defined implicitly by the equation’s integral; it is the practical value that produces contact under the finite-step trapezoidal quadrature used in the AutoLISP code. As a test of precision, with \(V_{０}=1\) and \(R=1\) the exact Python solution for touching loops is \(V=4.549880404129692\). However, due to the discrete trapezoidal (midpoint-style) quadrature bias in the AutoLISP code, a value of \(V_{０}=4.5498858\) reduces the loop separation from 0.0000023779450649 to 0.0000000015098274.</p>
+    <p>Real-life applications include ship station-keeping, where one vessel maintains a constant distance while circling another at fixed ground speed. Variants of the Mascot problem arise in pursuit–evasion modeling and autonomous vehicle coordination where agents maintain distance constraints while moving at fixed absolute speeds.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/mascotte/mascotte.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/mascotte/mascotte.shtml</a> (definition, history, parametric form, ship application).</li>
+      <li>Martin Gardner, <em>New Mathematical Diversions from Scientific American</em> (or <em>My Best Mathematical and Logic Puzzles</em>), problem on “Marching Cadets and a Trotting Dog” (original square-regiment version, 1960 Scientific American column).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:MASCOT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg)
+  (setq id "Mascot Curve"
+        iq "x=R·(cosθ+∫dθ/(sinθ+√(k²-cos²θ))), y=R·sinθ, k=V/V₀"
+        dcl "MASCOT"
+        opt '("V0, V, R" "Gardner solution")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in one loop"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 6 "V₀ (regiment speed)" 1.0)
+           fb (get_boundr 6 "V (mascot speed)" 1.5 fa nil nil nil)
+           fc (get_real 6 "R (regiment circle radius)" 1.0)))
+    ((eq kw 1)
+     (setq fa (get_real 6 "V₀ (regiment speed)" 1.0)
+           fc (get_real 6 "R (regiment circle radius)" 1.0)
+           fb (* 3.36807452665347 fa))))
+  (setq fd (/ fb fa)
+        fe 0.0
+        ff nil
+        xc '(* fc (+ (cos (eval a2)) (progn (setq fg (/ 1.0 (avoid_zero (+ (sin (eval a2)) (alt_expt (- (* fd fd) (* (cos (eval a2)) (cos (eval a2))))
+            0.5 T))))) (if ff (setq fe (+ fe (* 0.5 (+ ff fg) paramstep))) (setq fe 0.0)) (setq ff fg) fe)))
+        yc '(* fc (sin (eval a2)))
+        eq_display (strcat "V₀=" (rtos fa 2 4) ", V=" (rtos fb 2 4) ", R=" (rtos fc 2 4))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:MASCOT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

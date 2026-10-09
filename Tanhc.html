@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tanhc Function - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Tanhc Function</h1>
+      <p class="short-description">An even, bell-shaped curve, the hyperbolic counterpart of the cardinal tangent.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Tanhc/Tanhc01-360.avif"
+           alt="Tanhc Function, multiple values of a">
+      <figcaption>
+        Tanhc Function, a=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">3</span>,
+        <span class="figcap-value" style="color:#FF9600">4</span>,
+        <span class="figcap-value" style="color:#9600FF">5</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Tanhc Function Curve Cartesian equation:</div>
+      \[ y = a \cdot \frac{\tanh(x)}{x} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Tanhc function<sup>1</sup> is a modern mathematical construct introduced by analogy with the better-known tanc (cardinal tangent) function. It is explicitly defined on MathWorld as the hyperbolic counterpart to the cardinal sine (sinc) and tanc families: for nonzero argument it is the ratio of the hyperbolic tangent to its argument, with the removable singularity at zero filled by continuity so that the function value is 1 there. This creates an even, smooth, bell-shaped curve that reaches a maximum of 1 at the origin and decays toward the horizontal asymptote at height zero as the absolute value of the argument grows large. The underlying hyperbolic tangent itself belongs to a family of functions first systematically explored in the eighteenth century by the Swiss mathematician Johann Heinrich Lambert (1728–1777), who developed the analogies between ordinary trigonometric functions (based on the circle) and hyperbolic functions (based on the hyperbola) while studying problems in analysis and geometry.<sup>2</sup> Lambert’s exponential definitions and the resulting hyperbolic identities proved useful for solving certain differential equations and describing physical curves such as the catenary. Because the Tanhc form is defined purely by this analogy, it inherits the decay and limiting behavior of \( \tanh(x) \) while introducing the \( 1/x \) factor familiar from \( \operatorname{sinc}(x) \). In this AutoLISP implementation, a single scale parameter \( a \) is introduced so that the plotted curve becomes \( y = a \cdot \operatorname{tanhc}(x/a) \). This choice produces an isotropic scaling: the peak height becomes \( a \) and the width stretches proportionally with \( a \), which is a convenient convention for sizing figures in CAD without altering the essential shape.</p>
+    <p>Real-life applications of the named Tanhc function in engineering or the natural sciences are not documented in the available literature. While the hyperbolic functions in general appear in contexts such as transmission-line theory, wave propagation in shallow water, and special relativity, the specific cardinal form \( \tanh(x)/x \) does not appear to have established practical roles beyond pure mathematics and formal analogies.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/TanhcFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/TanhcFunction.html</a> (primary definition by explicit analogy with the tanc function)</li>
+      <li><a href="http://www.bibnum.education.fr/sites/default/files/LAMBERT_PROPRIETES.pdf" target="_blank" rel="noopener noreferrer">http://www.bibnum.education.fr/sites/default/files/LAMBERT_PROPRIETES.pdf</a> (J. H. Lambert, “Mémoire sur quelques propriétés remarquables des quantités transcendantes et logarithmiques” 1761, early comparison of circular and hyperbolic functions; Berlin printing p. 306, PDF p. 43, §73.)</li>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TANHC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Tanhc Function"
+        iq "y=a·tanhc(x/a)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4)))
+  (setq paramstep (/ (/ xspan fa) divcount)
+        xc '(* fa (eval a2))
+        yc '(if (< (abs (eval a2)) 1e-9) fa (/ (* fa (sinh (eval a2))) (* (cosh (eval a2)) (eval a2))))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TANHC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

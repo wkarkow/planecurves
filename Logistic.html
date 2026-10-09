@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logistic Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Logistic Curve</h1>
+      <p class="short-description">The sigmoid solution of Verhulst’s constrained-growth equation involving carrying capacity, growth rate and midpoint.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Logistic/Logistic01-360.avif"
+           alt="Logistic Curve, L=5,k=1,x0=0">
+      <figcaption>Logistic Curve, L=5,k=1,x0=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logistic/Logistic02-360.avif"
+           alt="Logistic Curve, L=5,k=-1,x0=0">
+      <figcaption>Logistic Curve, L=5,k=-1,x0=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logistic/Logistic03-360.avif"
+           alt="Logistic Curve, L=5,x0=0,curve pt (1.2,1.4),k=-0.7871">
+      <figcaption>Logistic Curve, L=5,x0=0,curve pt (1.2,1.4),k=-0.7871</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logistic/Logistic04-360.avif"
+           alt="Logistic Curve, L=5,x0=0,curve pt (1.2,3.2),k=0.4795">
+      <figcaption>Logistic Curve, L=5,x0=0,curve pt (1.2,3.2),k=0.4795</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logistic/Logistic05-360.avif"
+           alt="Logistic Curve, L=5,curve pts (1.2,1.4),(2.7,2.3),x0=3.0067,k=0.5227">
+      <figcaption>Logistic Curve, L=5,curve pts (1.2,1.4),(2.7,2.3),x0=3.0067,k=0.5227</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Logistic/Logistic06-360.avif"
+           alt="Logistic Curve, L=5,curve pts (3.2,1.4),(2.7,2.3),x0=-0.4905,k=2.3731">
+      <figcaption>Logistic Curve, L=5,curve pts (3.2,1.4),(2.7,2.3),x0=-0.4905,k=2.3731</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Logistic Curve Cartesian equation:</div>
+      \[ y = \dfrac{L}{1+e^{-k(x-x_{0})}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The logistic growth curve was introduced in 1838 by the Belgian mathematician and astronomer Pierre-François Verhulst<sup>1,2</sup> while studying population dynamics. Verhulst was dissatisfied with the purely exponential growth models of his time, which predicted unbounded population increase. He proposed a modified differential equation that incorporated a carrying capacity, representing environmental limits such as food supply, space, or resources. In modern notation, Verhulst’s equation is \(\frac{dy}{dx} = ky\bigl(1 - \frac{y}{L}\bigr)\), whose closed-form solution is the logistic function \( y(x) = \frac{L}{1+e^{-k(x-x_{0})}} \). This formulation introduces three concepts that were novel at the time: initial exponential growth when \( y \ll L \), self-limiting behavior as \( y \) approaches \( L \), and a well-defined inflection point at \( y = L/2 \), where the growth rate is maximal.</p>
+    <p>Although originally developed for population studies, the logistic curve proved useful well beyond biology. In engineering the positive logistic is a smooth saturation curve that models actuator saturation and soft limits without hard clipping, approximates transistor transfer curves and amplifier soft-limiting behavior, describes strain hardening of materials where deformation accelerates initially but asymptotically approaches a limit, models autocatalytic chemical reactions and diffusion-limited processes, and describes technology diffusion, product adoption, and infrastructure rollout where growth slows as capacity is reached. From a CAD and geometric standpoint the positive logistic is monotonic, smooth, and curvature-continuous, has a single controllable inflection, and approaches its asymptotes without discontinuities. Those properties make it useful as a design curve rather than merely a data-fit curve.</p>
+    <p>The same mathematics applies when the growth-rate parameter \( k \) is negative. The solution then represents decay toward extinction rather than growth toward saturation, and the asymptote \( y = 0 \) becomes the stable state. Historically this “negative logistic” was not emphasized early on because most nineteenth-century studies focused on population growth. By the mid-twentieth century it was clear that inhibitory, damping, and decay processes obey the same structure. It is used where an initial rapid decline transitions into long-tail decay, such as decreasing product failure rates after burn-in or conditioning, aerodynamic tapering, and inhibitory biological and chemical responses.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/LogisticEquation.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/LogisticEquation.html</a> (history, differential equation origin, and solution form)</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponentiall.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentiall.html</a> (S-curve description for saturation processes)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LOGISTIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan restartflag
+                     paramstep id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff p1 p2)
+  (setq id "Logistic Growth Curve"
+        iq "y=L/(1+e^{-k·(x-x₀)})"
+        dcl "LOGISTIC"
+        opt '("Known values" "Unknown growth rate" "Unknown growth & midpoint")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        paramstep (/ xspan divcount))
+  (cond
+   ((eq kw 0)
+    (setq fa (get_real 6 "L (carrying capacity): " 1.0)
+          fb (get_real 2 "k (growth rate): " 1.0)
+          fc (get_real 2 "x₀ (midpoint location): " 0.0)
+          paramstep (if (eq (get_keyword 0 "Positive Negative" "Positive or Negative direction of curve?" "Positive") "Negative") (- paramstep) paramstep)))
+   ((eq kw 1)
+    (setq fa (get_real 6 "L (carrying capacity): " 1.0)
+          fc (get_real 2 "x₀ (midpoint location): " 0.0)
+          fd nil)
+    (while (not fd)
+      (setq p1 (get_boundpt "Curve point" nil nil basept nil nil nil 0.0 fa nil)
+            x1 (get_xspan basept xaxisangle p1)
+            y1 (get_yspan basept xaxisangle p1))
+      (if (<= (abs (- x1 fc)) 1e-9) (prompt "Cannot solve k from a point with x = x₀ (midpoint). Pick another point.") (setq fd T)))
+    (setq fb (- (/ (log (- (/ fa y1) 1.0)) (- x1 fc)))
+          paramstep (if (eq (get_keyword 0 "Positive Negative" "Positive or Negative direction of curve?" "Positive") "Negative") (- paramstep) paramstep)))
+   ((eq kw 2)
+    (setq fa (get_real 6 "L (carrying capacity): " 1.0)
+          paramstep (if (eq (get_keyword 0 "Positive Negative" "Positive or Negative direction of curve?" "Positive") "Negative") (- paramstep) paramstep)
+          fd nil)
+    (while (not fd)
+      (setq p1 (get_boundpt "First curve point" nil nil basept nil nil nil 0.0 fa nil)
+            x1 (get_xspan basept xaxisangle p1)
+            y1 (get_yspan basept xaxisangle p1)
+            p2 (get_boundpt "Second curve point" nil nil basept nil nil nil 0.0 fa nil)
+            x2 (get_xspan basept xaxisangle p2)
+            y2 (get_yspan basept xaxisangle p2))
+      (cond
+        ((<= (abs (- x2 x1)) 1e-9)
+         (prompt "\nSecond point must have different x from first point; pick again."))
+        (T
+         (setq fe (log (- (/ fa y1) 1.0))
+               ff (log (- (/ fa y2) 1.0)))
+         (if (<= (abs (- fe ff)) 1e-9)
+           (prompt "\nPoints lead to k ≈ 0 (almost flat logistic); pick different points.")
+           (setq fb (- (/ (- fe ff) (- x1 x2)))
+                 fc (+ x1 (/ fe fb))
+                 fd T)))))))
+  (setq eq_display (strcat "L=" (rtos fa 2 4) ", k=" (rtos fb 2 4) ", x₀=" (rtos fc 2 4))
+        xc '(eval a2)
+        yc '(/ fa (+ 1.0 (exp (* -1.0 fb (- (eval a2) fc)))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LOGISTIC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

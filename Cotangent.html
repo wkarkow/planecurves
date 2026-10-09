@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cotangent Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cotangent Curve</h1>
+      <p class="short-description">A periodic trigonometric curve with vertical asymptotes spaced π/b apart.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Cotangent/Cotangent01-360.avif"
+           alt="Cotangent,a=1,b=1/π,c=0">
+      <figcaption>Cotangent,a=1,b=1/π,c=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent02-360.avif"
+           alt="Cotangent,a=1,b=1,c=0">
+      <figcaption>Cotangent,a=1,b=1,c=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent03-360.avif"
+           alt="Cotangent,a=1,zero pt (0.7,0)">
+      <figcaption>Cotangent,a=1,zero pt (0.7,0)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent04-360.avif"
+           alt="Cotangent,a=1,b=1,asymptote x=1.6">
+      <figcaption>Cotangent,a=1,b=1,asymptote x=1.6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent05-360.avif"
+           alt="Cotangent,a=1,zero pt (0.7,0),asymptote x=1.6">
+      <figcaption>Cotangent,a=1,zero pt (0.7,0),asymptote x=1.6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent06-360.avif"
+           alt="Cotangent,a=1,b=1,phase shift=90°">
+      <figcaption>Cotangent,a=1,b=1,phase shift=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent07-360.avif"
+           alt="Cotangent,a=1.5,curve pt=(0.7,0.7)">
+      <figcaption>Cotangent,a=1.5,curve pt=(0.7,0.7)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent08-360.avif"
+           alt="Cotangent,a=1,asymptote x=1.6,curve pt=(0.7,0.7)">
+      <figcaption>Cotangent,a=1,asymptote x=1.6,curve pt=(0.7,0.7)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent09-360.avif"
+           alt="Cotangent,a=1,zero pt=(0.3,1.4),curve pt=(0.7,0.7)">
+      <figcaption>Cotangent,a=1,zero pt=(0.3,1.4),curve pt=(0.7,0.7)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cotangent/Cotangent10-360.avif"
+           alt="Cotangent,a=1,wavelength=1.6,curve pt=(0.7,0.7)">
+      <figcaption>Cotangent,a=1,wavelength=1.6,curve pt=(0.7,0.7)</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Generalized Cotangent Cartesian equation:</div>
+      \[ y = a \cdot \cot(b x - c) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The cotangent function<sup>1</sup> is one of the six classical trigonometric ratios. Its systematic tabulation began in the golden Islamic Age with Habash al-Hasib al-Marwazi around 830 AD<sup>2</sup> , who included both tangent and cotangent values in astronomical tables. The term “cotangens” entered European mathematics in 1620 when Edmund Gunter published tables of the function in his <em>Canon triangulorum</em><sup>3</sup> . Leonhard Euler later incorporated it fully into analytic trigonometry in the 18th century.<sup>1</sup>  The cotangent graph consists of repeating branches separated by vertical asymptotes spaced π/b apart. The parameter a controls vertical scaling of each branch, b sets the horizontal compression or expansion of the period, and c produces a horizontal phase shift. Engineers and draftsmen recognize this shape immediately as a periodic function with sharp discontinuities at the asymptotes, which is useful when modeling phenomena that exhibit rapid transitions or infinite slopes.</p>
+    <p>In engineering and the natural sciences the cotangent function appears wherever angular ratios must be inverted or where complementary-angle relationships simplify calculations. Surveyors and civil engineers apply cotangent to compute heights of structures or distances across inaccessible terrain from measured elevation angles. In mechanical engineering it arises in solutions for certain beam-vibration modes and resonance problems. Electrical engineers encounter cotangent terms in the analysis of alternating-current circuits and transmission-line impedance models. Astronomers use cotangent relations in spherical trigonometry for coordinate transformations between equatorial and horizon systems. Because cotangent rises so fast near asymptotes, be sure to specify enough divisions to the division point to capture high enough y values as desired. Setting maximum x and y values allowed will clip extremes but if set too low will also shorten pline lengths shorter than desired depending on the number of divisions. For very y values, a boundary line and the Trim command will often be required. If one sees connections across asymptotes, redo the curve with a greater number of divisions within spans.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Cotangent.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cotangent.html</a> (definition, properties, and historical notation).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Cotangent" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Cotangent</a> (Habash al-Hasib tabulation and Gunter introduction).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Miller/mathsym/trigonometry/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Miller/mathsym/trigonometry/</a> (Fincke and Gunter terminology).</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:COTANGENT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan paramstep
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe ff fg fh p1 p2)
+  (setq id "Cotangent Curve"
+        iq "y=a·cot(b·x-c)"
+        dcl "COTANGENT"
+        opt '("a,b values" "Zero pt, a value" "Asymptote, a,b values" "Asymptote pt, zero pt" "Phase shift, a value" "a value, 1 pt on curve"
+              "Asymptote point, 1 pt on curve" "Zero pt, 1 pt on curve" "Wavelength, 1pt on curve")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 100
+        dpt '(1.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fa (get_real 2 "a (vertical scaling)" 1.0)
+          fb (get_real 2 "b (angle multiplier)" 1.0)
+          fd (get_keyword 0 "Yes No" "Divide period by π? (if not, period = b*π )" "Yes")
+          fb (if (eq fd "Yes") (* fb pi) 1.0)
+          fc 0.0))
+   ((eq kw 1)
+    (setq fa (get_real 2 "a (vertical scaling)" 1.0)
+          p1 (get_point 0 "Zero point" divpt basept)
+          fd (get_xspan basept xaxisangle p1)
+          fb (/ pi (* 2 fd))
+          fc 0.0)) 
+   ((eq kw 2)
+    (setq p1 (get_point 0 "Point on asymptote" divpt basept)
+          fa (get_real 2 "a (vertical scaling)" 1.0)
+          fb (get_real 2 "b (angle multiplier)" 1.0)
+          fd (get_xspan basept xaxisangle p1)
+          fc (* fb fd)))
+   ((eq kw 3)
+    (setq p1 (get_point 0 "Point on asymptote" divpt basept)
+          p2 (get_point 0 "Zero point" divpt basept)
+          fa (get_real 2 "a (vertical scaling)" 1.0)
+          fd (get_xspan basept xaxisangle p1)
+          fc (get_xspan basept xaxisangle p2)
+          fb (/ pi (* 2 (abs (- fc fd))))
+          fc (* fb fd)))
+   ((eq kw 4)
+    (setq fa (get_real 2 "a (vertical scaling)" 1.0)
+          fb (get_real 2 "b (angle multiplier)" 1.0)
+          fc (* (get_real 2 "phase shift in degrees" 0.0) (/ pi 180))))
+   ((eq kw 5)
+    (setq p1 (get_point 0 "Curve point off x axis" divpt basept)
+         fa (get_real 2 "a (vertical scaling)" 1.0)
+         fd (get_xspan basept xaxisangle p1)
+         fb (get_yspan basept xaxisangle p1)
+         fc 0.0
+         fe (atan (/ fa (avoid_zero fb)))
+         fe (if (< fb 0.0) (+ pi fe) fe)
+         fb (/ fe fd)))
+   ((eq kw 6)
+    (setq p1 (get_point 0 "Point on asymptote" divpt basept)
+          p2 (get_point 0 "Curve point off x axis" divpt basept)
+          fd (get_xspan basept xaxisangle p1)
+          fe (get_xspan basept xaxisangle p2)
+          ff (get_yspan basept xaxisangle p2)
+          fa (get_real 2 "a (vertical scaling)" 1.0)
+          fg (avoid_zero (- fe fd))
+          fh (atan (/ fa (avoid_zero ff)))
+          fb (/ fh fg)
+          fb (if (and (< fb 0.0) (> ff 0.0)) (/ (- fh pi) fg) fb)
+          fb (if (and (< fb 0.0) (< ff 0.0)) (/ (+ fh pi) fg) fb)
+          fc (* fb fd)))
+   ((eq kw 7)
+    (setq p1 (get_point 0 "Zero point" divpt basept)
+          p2 (get_point 0 "Curve point off x axis" divpt basept)
+          fa (get_real 2 "a (vertical scaling)" 1.0)
+          fd (get_xspan basept xaxisangle p1)
+          fe (get_xspan basept xaxisangle p2)
+          ff (get_yspan basept xaxisangle p2)
+          fg (avoid_zero (- fe fd))
+          fh (atan (/ (- ff) (avoid_zero fa)))
+          fb (/ fh (avoid_zero fg))
+          fb (if (and (< fb 0.0) (< ff 0.0)) (/ (- fh pi) (avoid_zero fg)) fb)
+          fb (if (and (< fb 0.0) (> ff 0.0)) (/ (+ fh pi) (avoid_zero fg)) fb)
+          fc (- (* fb fd) (/ pi 2))))
+   ((eq kw 8)
+    (setq p1 (get_point 0 "Curve point off x axis" divpt basept)
+          fd (get_real 2 "wavelength between zero crossings, will flip curve depending on curve pt" pi)
+          fe (get_xspan basept xaxisangle p1)
+          ff (get_yspan basept xaxisangle p1)
+          fb (/ pi (avoid_zero fd))
+          fa (* ff (tan (* fb fe)))
+          fc 0.0)))
+  (setq eq_display (strcat "\nY=" (rtos fa 2 4) "·cot(" (rtos fb 2 4) "·x-" (rtos fc 2 4) ")")
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 1000)
+        paramstep (/ xspan divcount)
+        xc '(eval a2)
+        yc '(* fa (cot (- (* fb (eval a2)) fc)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:COTANGENT)</code></pre>
+  </section>
+</main>
+
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

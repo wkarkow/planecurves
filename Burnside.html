@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Burnside Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Burnside Curve</h1>
+      <p class="short-description">A quintic algebraic curve with a closed oval and an open, diverging bell.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Burnside/Burnside01-360.avif"
+           alt="Burnside Curve, Oval and Bell branches">
+      <figcaption>Burnside Curve, Oval and Bell branches</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Burnside Curve implicit equation:</div>
+      \[ y^{2} - x(x^{4} - 1) = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Burnside Curve Cartesian equation:</div>
+      \[ y = ±\sqrt{x(x^{4} - 1)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Burnside curve is a plane algebraic curve studied in the late nineteenth century in the context of complex analysis and algebraic geometry. It is attributed to British mathematician William Burnside (1852–1927), who investigated it in 1893 while examining examples of algebraic curves whose associated Riemann surfaces have higher genus yet admit explicit analytic descriptions. It is a quintic curve whose area uses the Gamma function and can be parametrized via the Weierstrass elliptic function.<sup>1</sup> The curve is defined implicitly by y² − x(x⁴ − 1) = 0. It is notable for combining a compact real component with a separate unbounded branch, separated by an interval in which the curve has no real points. On the interval [−1,0] it forms a closed oval symmetric about the x-axis. On the interval [0,1] the defining polynomial is negative and the curve exists only in the complex plane. For x ≥ 1, the curve re-enters the real plane and produces an open, rapidly diverging branch whose profile resembles a bell or hyperbola-like flare.<sup>1</sup> Subsequent research by Y. V. Brezhnev has examined the uniformization of the curve, linking Burnside’s parametrization to Schwarz’s differential equation and Fuchsian equations.<sup>2</sup></p>
+    <p>The Burnside curve has no direct applications in engineering or the natural sciences.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/BurnsideCurve.html" target="_blank" rel="noopener noreferrer">Weisstein, Eric W. "Burnside Curve." From MathWorld—A Wolfram Web Resource</a> (history, 1893 attribution, parametrization, Gamma-function area, real branches).</li>
+      <li><a href="https://arxiv.org/abs/math/0111150" target="_blank" rel="noopener noreferrer">Brezhnev, Y. V. "Uniformization of the Burnside curve." arXiv:math/0111150</a> (uniformization study confirming Weierstrass parametrization).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BURNSIDE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                   id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw)
+  (setq id "Burnside Curve"
+        iq "y²-x(x⁴-1)=0"
+        dcl "BURNSIDE"
+        opt '("Oval" "Bell")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 100
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (if (= kw 0)
+    (setq a1 -1.0
+          span 1.0
+          eq_display "\nOval branch: x = -1 to 0")
+    (setq divpt (get_boundpt "Bell end point (x > 1)" "5,0" '(5.0 0.0) basept 1.0 nil T nil nil nil)
+          xspan (get_xspan basept xaxisangle divpt)
+          a1 1.0
+          span (- xspan 1.0)
+          eq_display (strcat "\nBell branch: x = 1 to " (rtos xspan 2 4))))
+  (setq xc '(eval a2)
+        yc '(if (<= (* (eval a2) (- (expt (eval a2) 4) 1.0)) 1e-9) 0.0 (alt_expt (max (* (eval a2) (- (expt (eval a2) 4) 1.0)) 0.0) 0.5 nil))
+        paramstep (/ span divcount)
+        skm '(T nil T)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BURNSIDE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

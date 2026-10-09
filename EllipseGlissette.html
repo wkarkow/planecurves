@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ellipse Glissette - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ellipse Glissette</h1>
+      <p class="short-description">The locus of a vertex of an ellipse that slides while remaining tangent to two fixed perpendicular lines.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/EllipseGlissette/EllipseGlissette01-360.avif"
+           alt="Ellipse Glissette major-axis vertex,a=4,multiple values of b">
+      <figcaption>
+        Ellipse Glissette major-axis vertex,a=4, b=
+        <span class="figcap-value" style="color:#000000">3.5</span>,
+        <span class="figcap-value" style="color:#FF0000">3.0</span>,
+        <span class="figcap-value" style="color:#0000FF">2.5</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.5</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">0.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseGlissette/EllipseGlissette02-360.avif"
+           alt="Ellipse Glissette minor-axis vertex, a=4,multiple values of b">
+      <figcaption>
+        Ellipse Glissette minor-axis vertex,a=4, b=
+        <span class="figcap-value" style="color:#000000">3.5</span>,
+        <span class="figcap-value" style="color:#FF0000">3.0</span>,
+        <span class="figcap-value" style="color:#0000FF">2.5</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.5</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">0.5</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Ellipse Glissette major-axis vertex parametric equations:</div>
+      \[ x=\dfrac{\cos(t)\bigl(a^{2}+(b^{2}-a^{2})\sin(t)\bigr)}{\sqrt{b^{2}\sin^{2}(t)+a^{2}\cos^{2}(t)}},\quad y=\dfrac{ab\bigl(1-\sin(t)\bigr)}{\sqrt{b^{2}\sin^{2}(t)+a^{2}\cos^{2}(t)}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ellipse Glissette minor-axis vertex parametric equations:</div>
+      \[ x=\dfrac{-\sin(t)\bigl(b^{2}(1-\cos(t))+a^{2}\cos(t)\bigr)}{\sqrt{b^{2}\sin^{2}(t)+a^{2}\cos^{2}(t)}},\quad y=\dfrac{ab\bigl(1-\cos(t)\bigr)}{\sqrt{b^{2}\sin^{2}(t)+a^{2}\cos^{2}(t)}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Ellipse Glissette<sup>1,2</sup> is the locus traced by a fixed point (typically a vertex) attached to an ellipse as the ellipse slides while remaining tangent to two fixed perpendicular lines, usually the coordinate axes. In this constrained motion the center of the ellipse traces an arc of a circle, a direct consequence of the orthoptic property of the ellipse. The two code variants plot the paths of the major-axis vertex and the minor-axis vertex, respectively. This configuration is the mathematical inverse of the Trammel of Archimedes, in which a straight bar with endpoints constrained to two perpendicular lines generates an ellipse. The algebraic Cartesian equation obtained by eliminating the parameter from the parametric forms was the subject of the “Ellipse-Glissette Elimination Problem,” examined in 1899 by E. J. Nanson<sup>3</sup> in connection with mechanical models constructed by Professor Peter Guthrie Tait. Glissettes in general were systematically studied by Catalan in 1865 and Besant in 1869.<sup>1</sup></p>
+    <p>Real-life applications in engineering and the natural sciences are limited and primarily illustrative. The general glissette concept appears in kinematic geometry as a means of understanding constrained plane motion in linkages and mechanisms. The related trammel mechanism itself has been used in ellipsographs and drafting instruments to generate accurate ellipses.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/glissette/glissette.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/glissette/glissette.shtml</a> (ellipse glissette description, center and vertex paths, Catalan/Besant studies).</li>
+      <li><a href="https://mathworld.wolfram.com/Glissette.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Glissette.html</a> (general glissette definition and ellipse example).</li>
+      <li><a href="https://www.cambridge.org/core/journals/proceedings-of-the-royal-society-of-edinburgh/article/on-the-ellipseglissette-elimination-problem/CC9B1B74BFF21A755A9FCE32F88D9532" target="_blank" rel="noopener noreferrer">https://www.cambridge.org/core/journals/proceedings-of-the-royal-society-of-edinburgh/article/on-the-ellipseglissette-elimination-problem/CC9B1B74BFF21A755A9FCE32F88D9532</a> (Nanson 1899 on the elimination problem and Tait models).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ELLIPSEGLISSETTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo
+                           paramstep divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Ellipse Glissette"
+        iq ""
+        dcl "ELLIPSEGLISSETTE"
+        opt '("Major axis pt" "Minor axis pt")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\nx=b·cos(t), y=a·sin(t)")
+     (setq fa (get_real 2 "a (semi-major, vertical)" 4.0)
+           fb (get_real 2 "b (semi-minor, horizontal)" 2.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+           xc '(/ (* (cos (eval a2)) (+ (* fa fa) (* (- (* fb fb) (* fa fa)) (eval (sin (eval a2)))))) (alt_expt (avoid_zero (+ (* (* fb fb)
+               (alt_expt (eval (sin (eval a2))) 2.0 nil)) (* (* fa fa) (alt_expt (cos (eval a2)) 2.0 nil)))) 0.5 nil))
+           yc '(/ (* fa fb (- 1.0 (eval (sin (eval a2))))) (alt_expt (avoid_zero (+ (* (* fb fb) (alt_expt (eval (sin (eval a2))) 2.0 nil))
+               (* (* fa fa) (alt_expt (cos (eval a2)) 2.0 nil)))) 0.5 nil))))
+    ((eq kw 1)
+     (princ "\nx=a·cos(t), y=b·sin(t)")
+     (setq fa (get_real 2 "a (semi-major axis)" 4.0)
+           fb (get_real 2 "b (semi-minor axis)" 2.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+           xc '(/ (* -1.0 (sin (eval a2)) (+ (* (* fb fb) (- 1.0 (cos (eval a2)))) (* (* fa fa) (cos (eval a2))))) (alt_expt (avoid_zero 
+               (+ (* (* fb fb) (alt_expt (sin (eval a2)) 2.0 nil)) (* (* fa fa) (alt_expt (cos (eval a2)) 2.0 nil)))) 0.5 nil))
+           yc '(/ (* fa fb (- 1.0 (cos (eval a2)))) (alt_expt (avoid_zero (+ (* (* fb fb) (alt_expt (sin (eval a2)) 2.0 nil))
+               (* (* fa fa) (alt_expt (cos (eval a2)) 2.0 nil)))) 0.5 nil)))))
+  (setq skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ELLIPSEGLISSETTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

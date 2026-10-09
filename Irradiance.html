@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Irradiance Distribution - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Irradiance Distribution</h1>
+      <p class="short-description">The horizontal illuminance (irradiance) pattern on a plane produced by a point source.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Irradiance/Irradiance01-360.avif"
+           data-caption="Irradiance Distribution, h=1,I=1(black),2(red),3(blue),4(green),5(orange)"
+           alt="Irradiance Distribution, h=1,I=1(black),2(red),3(blue),4(green),5(orange)">
+      <figcaption>
+        Irradiance Distribution, h=1,I=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Irradiance/Irradiance02-360.avif"
+           data-caption="Irradiance Distribution, I=1,h=1(black),2(red),3(blue),4(green),5(orange)"
+           alt="Irradiance Distribution, I=1,h=1(black),2(red),3(blue),4(green),5(orange)">
+      <figcaption>
+        Irradiance Distribution, I=1,h=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Irradiance Distribution Cartesian equation:</div>
+      \[ y = \dfrac{I \cdot h}{(x^{2} + h^{2})^{3/2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The irradiance distribution produced by a point light above a plane is a direct consequence of two classical results in optics and photometry: the inverse-square law for point sources and Lambert’s cosine law for diffuse surfaces.<sup>1,2,3</sup> The inverse-square law was recognized in early work on light and gravitation, becoming firmly established in the 17th–18th centuries in the context of geometrical optics and Newtonian mechanics.<sup>2</sup> It states that the illuminance (or irradiance) from an ideal point source decreases in proportion to 1/r<sup>2</sup>, where r is the distance from the source. This behavior reflects conservation of energy as light spreads out over the surface of an expanding sphere. Johann Heinrich Lambert (1728–1777) formalized the cosine law for diffuse emitters and reflectors in his 1760 work <em>Photometria</em>.<sup>1</sup> A Lambertian surface is one whose brightness, when viewed from different directions, varies in proportion to the cosine of the angle between the surface normal and the viewing (or illumination) direction. Applied to a horizontal plane lit by a point source overhead, Lambert’s law contributes a factor of h/r, where h is the source height and r the radial distance on the plane. Combining the inverse-square falloff with Lambert’s cosine factor yields the closed-form expression below, which describes the Lambertian point-source irradiance distribution on the plane.<sup>2</sup></p>
+    <p>In lighting engineering, that formula describes the horizontal illuminance pattern beneath a ceiling-mounted point luminaire, assuming Lambertian behavior.<sup>2</sup> It is used to estimate brightness distribution on floors, work surfaces, and pavements, to check uniformity, and to size and space luminaires. Superposition of multiple such distributions (for arrays of lights) provides a first-order model before more detailed ray-tracing or radiosity calculations are applied. In radiometry, this distribution is the canonical example of irradiance from a point source onto a plane.<sup>2</sup> It appears whenever one computes energy per unit area from an isotropic source at a fixed height above a detector. In computer graphics, the Lambertian point-source model underlies many analytic approximations and sanity checks for direct lighting implementations.<sup>2</sup> The same profile appears when calibrating imaging sensors placed in a plane under a reference lamp; the form of the function allows one to separate geometric falloff from sensor non-uniformities such as vignetting or pixel-to-pixel gain variation.<sup>2</sup> The curve is not usually given a special geometric name in the classical plane-curves literature.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Lambert%27s_cosine_law" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Lambert%27s_cosine_law</a> (Lambert’s cosine law formalized in Photometria, 1760, and its role in photometry).</li>
+      <li><a href="https://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/RYER/ch06.html" target="_blank" rel="noopener noreferrer">https://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/RYER/ch06.html</a> (inverse-square & cosine laws, irradiance formula in lighting/radiometry).</li>
+      <li><a href="https://re.public.polimi.it/retrieve/b3d81013-98e5-4845-bf7c-5ec82b9aa755/Campione_2024_Eur._J._Phys._45_065301.pdf" target="_blank" rel="noopener noreferrer">https://re.public.polimi.it/retrieve/b3d81013-98e5-4845-bf7c-5ec82b9aa755/Campione_2024_Eur._J._Phys._45_065301.pdf</a> (experimental validation).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:IRRADIANCE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Irradiance Distribution"
+        iq "y=I·h/(x²+h²)^{3/2}"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "I (Irradiance)" 1.0)
+        fb (get_real 2 "h (height above surface)" 1.0)
+        eq_display (strcat "\nI=" (rtos fa 2 4) ", h=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(/ (* fa fb) (alt_expt (+ (* (eval a2) (eval a2)) (* fb fb)) 1.5 nil))
+        paramstep (/ xspan divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:IRRADIANCE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

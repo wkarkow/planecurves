@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apollonian Cubic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Apollonian Cubic</h1>
+      <p class="short-description">The isoptic cubic (focal of van Rees); locus of points from which two fixed segments subtend equal visual angles, manifesting as one or two branches depending on parameters.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Apollonian/Apollonian01-360.avif" alt="Apollonian cubic, b=1,α=0°,a=1">
+      <figcaption>Apollonian cubic, a=4.0,b=1.0,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian02-360.avif" alt="Apollonian cubic, b=1,α=45°,a=1/√2">
+      <figcaption>Apollonian cubic, a=0,b=1,α=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian03-360.avif" alt="Apollonian cubic, b=1,α=0°,a=1.01">
+      <figcaption>Apollonian cubic, a=4,b=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian04-360.avif" alt="Apollonian cubic, b=1,α=45°,a=1">
+      <figcaption>Apollonian cubic, a=2,b=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian05-360.avif" alt="Apollonian cubic, b=1,α=0°,a=0.5">
+      <figcaption>Apollonian cubic, a=1,b=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian06-360.avif" alt="Apollonian cubic, b=1,α=45°,a=0.5">
+      <figcaption>Apollonian cubic, a=0.5,b=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian07-360.avif" alt="Apollonian cubic, b=1,α=30°,a=0">
+      <figcaption>Apollonian cubic, a=0.25,b=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian08-360.avif" alt="Apollonian cubic, b=1,α=45°,a=0">
+      <figcaption>Apollonian cubic, a=0.1,b=1.0,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian09-360.avif" alt="Apollonian cubic, b=1,α=85°,a=0">
+      <figcaption>Apollonian cubic, a=1,b=1,α=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Apollonian/Apollonian10-360.avif" alt="Apollonian cubic, b=1, multiple values of α, a=1">
+      <figcaption>
+        Apollonian cubic,a=1,b=1,α =
+        <span class="figcap-value" style="color:#000000">0</span>°,
+        <span class="figcap-value" style="color:#FF0000">15</span>°,
+        <span class="figcap-value" style="color:#0000FF">30</span>°,
+        <span class="figcap-value" style="color:#009600">45</span>°,
+        <span class="figcap-value" style="color:#FF9600">60</span>°,
+        <span class="figcap-value" style="color:#9600FF">75</span>°,
+        <span class="figcap-value" style="color:#0096FF">90</span>°
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Apollonian Cubic implicit equation:</div>
+      \[ (x - 2a)(x^{2} + y^{2}) + b^{2} (\cos(2\alpha) \, x + \sin(2\alpha) \, y) = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Apollonian Cubic polar equation:</div>
+      \[ r = \frac{a}{\cos\theta} \pm \sqrt{\frac{a^{2} - b^{2} \cos\theta \cdot \cos(\theta - 2\alpha)}{\cos\theta}} \quad (a \geq 0,\, b > 0,\, 0 \leq \alpha \leq \pi/2) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Apollonian cubic<sup>1</sup>, also known as the isoptic cubic or focal of van Rees, is the locus of points P from which two given line segments AB and CD subtend equal angles. This geometric property was first explored by Hendrik van Rees, a Dutch mathematician active in the early 19th century, in his 1829 work on foci of conic sections. Independently, Jacob Steiner, a Swiss mathematician renowned for his contributions to projective geometry (1805–1858), formulated a similar problem in 1852 without knowledge of van Rees’ earlier results. The equivalence between their approaches was noted by Francisco Gomes Teixeira, a Portuguese mathematician (1851–1933), in 1915. The curve gained popularity in the 19th century, attracting studies from mathematicians such as Henri Brocard (known for Brocard points), Jules Henri Poincaré’s teacher Charles Chasles, Germinal Pierre Dandelin (famous for Dandelin spheres in conics), Gaston Darboux (noted for differential geometry), and George Salmon (author of influential treatises on conic sections and algebraic geometry). In modern times, a group at the University of Crete led by Paris Pamfilos has advanced research on these cubics, dubbing them "isoptic cubics" and developing the Isoptikon tool for interactive visualization given two segments.</p>
+    <p>The curve can manifest as one or two branches depending on parameters; it is elliptical when a² &gt; 3b², forms an oval or branch under other conditions, and degenerates to a rational strophoid when a = 0. Its isoptic nature—defining points where the visual angle to a fixed segment remains constant—finds application in optics, such as modeling loci for equal angular subtension in vision geometry or lens design<sup>2</sup>.</p>
+    <p>Real-life applications in engineering and natural sciences are primarily found in optics. The isoptic property supports design of systems where constant visual angle or equal subtended angles are required, such as certain lens or mirror configurations and vision-related geometric modeling. No broader engineering uses outside this optical context were identified.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/focaledevanrees/focaledevanrees.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/focaledevanrees/focaledevanrees.shtml</a> (history, classifications, and optical interpretation)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubica.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubica.html</a> (additional historical details on mathematicians)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:APOLLONIAN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display maxdraw xc yc skm a1 x1 y1 a2 x2 y2 f_r c_pl
+                       px py p3 current_pts add_count draw_active fd fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs)
+  (setq id "Apollonian Cubic"
+        iq "r=(a±√(a²-b²·cosθ·cos(θ-2α)))/cosθ"
+        dcl "APOLLONIAN"
+        opt '("Minus curve" "Plus curve")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 720
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "b (shape)" 1.0)
+        fb (get_real 0 "α° (tilts curve)" 0.0)
+        fc (if (> (abs (cos (* fb (/ pi 180.0)))) 1e-6) (* fa (cos (* fb (/ pi 180.0)))) fa)
+        fd (get_real 0 (strcat "a (x-axis shift, oval >, strophoid = " (rtos fc 2 4) ")") fc)
+        fe (if (eq (get_keyword 0 "Real Imaginary" "\nReal or +Imaginary values? " "Real") "Real") T nil)
+        ff (if (= kw 0) -1 1)
+        eq_display (strcat "\na=" (rtos fd 2 4) ", b=" (rtos fa 2 4) ", α=" (rtos fb 2 4))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 10)
+        skm '(T T T))
+  (defun c_pl (a / b c)
+    (setq b (length a) c nil)
+    (foreach pt a (setq c (append c (list (cons 10 pt)))))
+    (entmake (append (list '(0 . "LWPOLYLINE") '(100 . "AcDbEntity") '(67 . 0) '(410 . "Model") 
+                           (cons 8 (getvar "clayer")) '(62 . 256) '(100 . "AcDbPolyline")
+                           (cons 90 b) '(70 . 0) '(43 . 0.0) '(38 . 0.0) '(39 . 0.0)) c '((210 0.0 0.0 1.0))))
+    (ssadd (entlast) plineents))
+  (defun f_r (a b / c d e f g)
+    (setq g 0
+          d  (- (* fd fd) (* fa fa (cos a) (cos (- a (* 2 (* fb (/ pi 180.0)))))))
+          e  (- (* fd fd) (* fa fa (cos b) (cos (- b (* 2 (* fb (/ pi 180.0))))))))
+    (while (and (< g 50) (> (abs (- b a)) 1e-12))
+      (setq c (/ (+ a b) 2.0)
+            f (- (* fd fd) (* fa fa (cos c) (cos (- c (* 2 (* fb (/ pi 180.0))))))))
+      (if (<= (* d f) 0.0) (setq b c e f) (setq a c d f))
+      (setq g (1+ g)))
+    (/ (+ a b) 2.0))
+  (if fe
+    (progn
+      (princ eq_display)
+      (setq draw_active T current_pts nil fg 0.0 fh paramstep plineents (ssadd))
+      (while draw_active
+        (if (setq add_count (getint (strcat "\nTotal # = " (itoa segcount)
+                                            "  Enter additional # of segments <" (itoa (fix (abs divcount))) ">: ")))
+          () (setq add_count (fix (abs divcount))))
+        (if (> add_count 0)
+          (progn
+            (repeat add_count
+              (setq fi (- (* fd fd) (* fa fa (cos fg) (cos (- fg (* 2 (* fb (/ pi 180.0)))))))
+                    fj (- (* fd fd) (* fa fa (cos (+ fg fh)) (cos (- (+ fg fh) (* 2 (* fb (/ pi 180.0))))))))
+              (cond
+                ((and (>= fi 0.0) (< fj 0.0))
+                 (setq fk (f_r fg (+ fg fh))
+                       fl (/ fd (avoid_zero (cos fk)))
+                       fm (* fl (cos fk))
+                       fn (* fl (sin fk))
+                       px (+ x0 (* fm cosangle) (- (* fn sinangle)))
+                       py (+ y0 (* fn cosangle) (* fm sinangle))
+                       p3 (list px py))
+                 (if (or (> (abs px) maxdraw) (> (abs py) maxdraw)
+                         (and current_pts (or (> (abs (car (last current_pts))) maxdraw) (> (abs (cadr (last current_pts))) maxdraw))))
+                   (progn (if (> (length current_pts) 1) (c_pl current_pts))
+                          (setq current_pts (list p3)))
+                   (if current_pts (setq current_pts (append current_pts (list p3))) (setq current_pts (list p3))))
+                 (if (> (length current_pts) 1) (c_pl current_pts))
+                 (setq current_pts nil fg fk))
+                ((and (< fi 0.0) (>= fj 0.0))
+                 (setq fk (f_r fg (+ fg fh))
+                       fl (/ fd (avoid_zero (cos fk)))
+                       fm (* fl (cos fk))
+                       fn (* fl (sin fk))
+                       px (+ x0 (* fm cosangle) (- (* fn sinangle)))
+                       py (+ y0 (* fn cosangle) (* fm sinangle))
+                       p3 (list px py)
+                       current_pts (list p3))
+                 (setq fg fk))
+                ((>= fi 0.0)
+                 (setq fo (sqrt (max fi 0.0))
+                       fp (* fa fa (cos fg) (cos (- fg (* 2 (* fb (/ pi 180.0))))))
+                       fq
+                       (cond
+                         ((< (abs fi) 1e-12) fd)
+                         ((and (= ff -1) (< (abs (cos fg)) 1e-8) (zerop fp)) 0.0)
+                         ((= ff -1) (/ fp (+ fd fo)))
+                         (T (+ fd (* ff fo)))))
+                 (if (and (= ff -1) (< (abs (cos fg)) 1e-8))
+																					(setq fr (/ (* fa fa (cos (- fg (* 2 (* fb (/ pi 180.0)))))) (* 2.0 fd))
+																											fm 0.0
+																											fn (* fr (sin fg)))
+																					(setq fs (avoid_zero (cos fg))
+																											fl (/ fq fs)
+																											fm fq
+																											fn (* fq (/ (sin fg) fs))))
+                 (setq px (+ x0 (* fm cosangle) (- (* fn sinangle)))
+                       py (+ y0 (* fn cosangle) (* fm sinangle))
+                       p3 (list px py))
+                 (if (or (> (abs px) maxdraw) (> (abs py) maxdraw)
+                         (and current_pts (or (> (abs (car (last current_pts))) maxdraw) (> (abs (cadr (last current_pts))) maxdraw))))
+                   (progn (if (> (length current_pts) 1) (c_pl current_pts))
+                          (setq current_pts (list p3)))
+                   (if current_pts (setq current_pts (append current_pts (list p3))) (setq current_pts (list p3))))))
+              (setq fg (+ fg fh)))
+            (if (> (length current_pts) 1) (c_pl current_pts))))
+        (setq divcount 0)
+        (if (< add_count 1) (setq draw_active nil) (setq segcount (+ segcount add_count))))
+      (if (and plineents (= (type plineents) 'PICKSET) (> (sslength plineents) 0))
+        (progn (command "pedit" "m" plineents "" "j" "" "")
+               (command "pedit" "m" plineents "" "f" "")))
+      (setvar "osmode" os) (setvar "orthomode" om) (setvar "snapmode" sm)
+      (setvar "snapbase" sb) (setvar "snapang" sa) (setvar "cmdecho" cd)
+      (princ))
+    (progn
+      (setq rval '(if (= (cos (eval a2)) 0.0) 1e15 (/ (+ fd (* ff (alt_expt (- (* fd fd) (* fa fa (cos (eval a2))
+                  (cos (- (eval a2) (* 2 (* fb (/ pi 180.0))))))) 0.5 fe))) (cos (eval a2))))
+            xc '(* (eval rval) (cos (eval a2)))
+            yc '(* (eval rval) (sin (eval a2)))
+            divcount (1+ divcount)
+            a1 (- paramstep) a2 a1 x1 (eval xc) y1 (eval yc)
+            a2 '(+ a1 paramstep) x2 '(eval xc) y2 '(eval yc))
+      (cc))))
+(C:APOLLONIAN)</code></pre>
+</section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of Apollonian cubic">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pericycloid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Pericycloid</h1>
+      <p class="short-description">A plane curve traced by a point on the circumference of a circle that rolls without slipping around a fixed base circle while containing it, mathematically the same as an epicycloid.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Pericycloid/Pericycloid01-360.avif"
+           alt="Pericycloid, R=1,n=3">
+      <figcaption>Pericycloid, R=1,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pericycloid/Pericycloid02-360.avif"
+           alt="Pericycloid, R=1,n=5">
+      <figcaption>Pericycloid, R=1,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pericycloid/Pericycloid03-360.avif"
+           alt="Pericycloid, R=1,n=8">
+      <figcaption>Pericycloid, R=1,n=8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pericycloid/Pericycloid04-360.avif"
+           alt="Pericycloid, R=1,n=3.1">
+      <figcaption>Pericycloid, R=1,n=3.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pericycloid/Pericycloid05-360.avif"
+           alt="Pericycloid, R=1,n=5.2">
+      <figcaption>Pericycloid, R=1,n=5.2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pericycloid/Pericycloid06-360.avif"
+           alt="Pericycloid, R=1,n=1.5">
+      <figcaption>Pericycloid, R=1,n=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pericycloid/Pericycloid07-360.avif"
+           alt="Pericycloid, R=1,n=0.75">
+      <figcaption>Pericycloid, R=1,n=0.75</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Pericycloid parametric equations:</div>
+      \[ x=(R+r)\cos(t)-r\cos\Bigl(\dfrac{R+r}{r}t\Bigr),\quad y=(R+r)\sin(t)-r\sin\Bigl(\dfrac{R+r}{r}t\Bigr),\quad r=\dfrac{R}{n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The pericycloid<sup>1</sup> is a plane curve traced by a point on the circumference of a circle that rolls without slipping around a fixed base circle while containing it. The distinction between pericycloid and epicycloid lies only in the generation method; the resulting curve is mathematically equivalent to an epicycloid with adjusted radius ratio. See epicycloid entry.</p>
+    <p>In engineering, cycloidal curves including pericycloids are applied in the design of tooth profiles for cycloidal and planetary gear systems to achieve smooth meshing, efficient torque transmission, and reduced wear.</p>
+    <p>Pericycloid equation: \(x=(R+r)\cos(t)-r\cos(((R+r)/r)t),\ y=(R+r)\sin(t)-r\sin(((R+r)/r)t)\), where \(r=R/n\).</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/pericycloid/pericycloid.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/pericycloid/pericycloid.shtml</a> (definition, parametrization, and relation to epicycloid)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PERICYCLOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                        divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Pericycloid"
+        iq "x=(R+r)·cos(t)-r·cos(((R+r)/r)·t), y=(R+r)·sin(t)-r·sin(((R+r)/r)·t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "R (base circle radius)" 1.0)
+        fb (get_real 2 "n (# of cusps)" 3.0)
+        eq_display (strcat "\nR=" (rtos fa 2 4) ", n=" (rtos fb 2 4))
+        xc '(- (* (+ fa (/ fa fb)) (cos (eval a2))) (* (/ fa fb) (cos (* (1+ fb) (eval a2)))))
+        yc '(- (* (+ fa (/ fa fb)) (sin (eval a2))) (* (/ fa fb) (sin (* (1+ fb) (eval a2)))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PERICYCLOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

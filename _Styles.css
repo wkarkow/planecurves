@@ -1,0 +1,346 @@
+/* ============================================================
+   LOCKED COLOR SCHEME — Layers 0–12 for all curve images
+   Use these exact labels and hex values in every figcaption.
+   Last updated: 2026-06-18
+   ============================================================ */
+
+/*
+Layer | Label        | Hex       | RGB
+------|--------------|-----------|---------------
+  0   | black        | #000000   | (0, 0, 0)
+  1   | red          | #FF0000   | (255, 0, 0)
+  2   | blue         | #0000FF   | (0, 0, 255)
+  3   | green        | #009600   | (0, 150, 0)
+  4   | orange       | #FF9600   | (255, 150, 0)
+  5   | purple       | #9600FF   | (150, 0, 255)
+  6   | cyan         | #0096FF   | (0, 150, 255)
+  7   | brown        | #AA5555   | (170, 85, 85)
+  8   | lime         | #00FF00   | (0, 255, 0)
+  9   | magenta      | #FF00FF   | (255, 0, 255)
+ 10   | teal         | #009696   | (0, 150, 150)
+ 11   | plum         | #960096   | (150, 0, 150)
+ 12   | olive        | #969600   | (150, 150, 0)
+*/
+
+/* ========== HEADER ========== */
+header {
+  background-color: rgb(117, 227, 255);
+  padding: 8px 20px;
+  border-bottom: 1px solid #000;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 4px;
+}
+/* Left and right nav groups */
+.left-nav,
+.right-nav {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* Shared link styling for both groups */
+.left-nav a,
+.right-nav a,
+.main-nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+.left-nav a:hover,
+.right-nav a:hover,
+.main-nav a:hover {
+  text-decoration: underline;
+}
+/* Placeholder text styling (non-links) */
+.placeholder {
+  color: #555;
+  cursor: default;
+  user-select: none;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.site-title a {
+  color: #000;
+  text-decoration: none
+}
+.site-title a:hover {
+  text-decoration: underline;
+}
+
+/* ========== CURVE TITLE RIBBON ========== */
+.curve-header {
+  background-color: rgb(179, 255, 230);
+  padding: 8px 12px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  min-height: 2.8rem;
+}
+
+/* Left side - Previous / Next links (now overlaid on left) */
+.curve-nav {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.curve-nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.curve-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Center block - Title + Short description */
+.curve-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  justify-content: center;
+}
+
+/* Curve title */
+.curve-title-block h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Short description - now centered under the title */
+.curve-title-block .short-description {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  white-space: normal;
+  text-align: center;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.image-gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.image-gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+/* Colored parameter values in figure captions */
+.figcap-value {
+  font-weight: bold;
+}
+/* ==================== MODAL STYLING ==================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  position: relative;           /* Add this if missing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-height: 100vh;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* Image inside modal */
+#modalImage {
+  max-width: 100vw;
+  max-height: 98vh;
+  width: auto;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #FFFFFF;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1003;
+  line-height: 1;
+  user-select: none;
+  padding: 0px;
+  border-radius: 4px;
+}
+
+.close-button:hover {
+  color: #cccccc;
+}
+
+/* Caption - always visible, directly under image */
+.modal-caption {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #222;
+  font-size: 0.95rem;
+  margin-top: 0;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  z-index: 10;
+  text-align: center;
+}
+
+/* ==================== END MODAL STYLING ==================== */
+
+
+/* ========== EQUATION RIBBON ========== */
+.equation-ribbon {
+  background-color: rgb(218, 230, 255);
+  padding: 4px 4px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+/* Each label + equation pair (new) */
+.equation-line {
+  display: grid;
+  grid-template-columns: minmax(var(--label-min-width, 220px), auto) 1fr;
+  align-items: baseline;
+  column-gap: 8px;
+  margin-bottom: 6px;
+}
+
+/* Label text */
+.equation-label {
+  white-space: nowrap;        /* Keeps label on one line */
+  font-weight: 500;
+}
+
+/* KaTeX equations */
+.equation-line .katex {
+  font-size: 1.15rem !important;   /* Force consistent size */
+}
+
+/* Math content */
+.equation-line .katex-display,
+.equation-line .katex-display > .katex {
+  margin: 0 !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+/* ========== CODE RIBBON ========== */
+.code-ribbon {
+  background-color: rgb(232, 220, 255);
+  padding: 4px 4px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 0;
+  font-size: 0.85rem;           /* Smaller font to reduce vertical space */
+  line-height: 1.15;
+}
+
+.code-ribbon h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.code-ribbon pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+}
+/* Bottom ribbon on _Main.html only */
+.bottom-ribbon {
+  background-color: rgb(117, 227, 255);
+  padding: 10px 20px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Left and right groups — same size as Curve Lookup */
+.ribbon-left,
+.ribbon-right {
+  display: flex;
+  gap: 18px;
+  font-size: 1rem;           /* Matches Curve Lookup size */
+}
+
+.ribbon-left a,
+.ribbon-right a {
+  color: #222;
+  text-decoration: none;
+}
+
+.ribbon-left a:hover,
+.ribbon-right a:hover {
+  text-decoration: underline;
+}
+
+/* Prominent center item — sized like Plane Curves title */
+.ribbon-center {
+  flex: 1;
+  text-align: center;
+}
+
+.ribbon-center a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.5rem;         /* Large, similar to site title */
+  font-weight: 600;
+}
+
+.ribbon-center a:hover {
+  text-decoration: underline;
+}

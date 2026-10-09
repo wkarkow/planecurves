@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rose Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Rose Curve</h1>
+      <p class="short-description">A polar curve that produces petal-like patterns symmetric about the origin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Rose/Rose01-360.avif"
+           alt="Rose Curve, quadrifolium, a=1,p=2,q=1,c=1">
+      <figcaption>Rose Curve, quadrifolium, a=1,p=2,q=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose02-360.avif"
+           alt="Generalized Rose Curve, a=1,p=2,q=1,c=3">
+      <figcaption>Generalized Rose Curve, a=1,p=2,q=1,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose03-360.avif"
+           alt="Generalized Rose Curve, a=1,p=2,q=1,c=10">
+      <figcaption>Generalized Rose Curve, a=1,p=2,q=1,c=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose04-360.avif"
+           alt="Rose Curve, a=1,p=5,q=4,c=1">
+      <figcaption>Rose Curve, a=1,p=5,q=4,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose05-360.avif"
+           alt="Generalized Rose Curve, a=1,p=5,q=4,c=10">
+      <figcaption>Generalized Rose Curve, a=1,p=5,q=4,c=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose06-360.avif"
+           alt="Generalized Rose Curve, a=1,p=5,q=4,c=1/4">
+      <figcaption>Generalized Rose Curve, a=1,p=5,q=4,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose07-360.avif"
+           alt="Rose Curve, a=1,p=1,q=5,c=1">
+      <figcaption>Rose Curve, a=1,p=1,q=5,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose08-360.avif"
+           alt="Generalized Rose Curve, a=1,p=1,q=5,c=10">
+      <figcaption>Generalized Rose Curve, a=1,p=1,q=5,c=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose09-360.avif"
+           alt="Generalized Rose Curve, a=1,p=1,q=5,c=1/4">
+      <figcaption>Generalized Rose Curve, a=1,p=1,q=5,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose10-360.avif"
+           alt="Rose Curve, a=1,p=17,q=9,c=1">
+      <figcaption>Rose Curve, a=1,p=17,q=9,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose11-360.avif"
+           alt="Generalized Rose Curve, a=1,p=17,q=16,c=5">
+      <figcaption>Generalized Rose Curve, a=1,p=17,q=16,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose12-360.avif"
+           alt="Generalized Rose Curve, a=1,p=17,q=16,c=2/3">
+      <figcaption>Generalized Rose Curve, a=1,p=17,q=16,c=2/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose13-360.avif"
+           alt="Generalized Rose Curve, a=1,p=48,q=47,c=5">
+      <figcaption>Generalized Rose Curve, a=1,p=48,q=47,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose14-360.avif"
+           alt="Generalized Rose Curve, a=1,p=48,q=47,c=3">
+      <figcaption>Generalized Rose Curve, a=1,p=48,q=47,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Rose/Rose15-360.avif"
+           alt="Generalized Rose Curve, a=1,p=48,q=47,c=24">
+      <figcaption>Generalized Rose Curve, a=1,p=48,q=47,c=24</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Rose Curve polar equation:</div>
+      \[ r = a \cdot \cos\Bigl(\frac{p}{q}\theta\Bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot \cos^{c}\Bigl(\frac{p}{q}\theta\Bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The rose curve<sup>1,2</sup>, also known as the rhodonea or Grandi’s rose, is a polar plane curve that produces petal-like patterns symmetric about the origin. It was studied and named “rhodonea” (Latin for “rose-like”) by the Italian mathematician Guido Grandi (1671–1742), a Camaldolese monk who served as professor of philosophy from 1700 and mathematics from 1714 at the University of Pisa. Grandi introduced the curve between 1723 and 1728 in his work <em>Flores geometrici</em>, deriving it from the clelia (a related spherical curve) and naming it "rhodonea" due to its floral appearance, which he explored between 1723 and 1728. His contributions extended to hydraulics, where he advised on river engineering projects like the Arno's flow control, and infinite series (e.g., Grandi's series: 1 − 1 + 1 − 1 + …), but the rose remains his most visually enduring legacy in geometry. Later work by E. W. Hyde in 1875 further examined its properties. In the equation below, <em>a</em> scales the size, and <em>p</em> and <em>q</em> are positive integers controlling the number of petals (typically reduced to lowest terms). For \( k = p/q \), the curve has <em>k</em> petals if <em>k</em> is odd, or \( 2k \) petals if even. The generalized form raises the cosine to a power <em>c</em> for narrower petals while preserving closure.</p>
+    <p>In engineering, rose curves are used in antenna design to create multilobe radiation patterns. One documented example is a coplanar waveguide-fed ultra-wideband monopole antenna shaped with a rose-curve contour for improved bandwidth and omnidirectional performance.<sup>3</sup> No additional confirmed applications in the natural sciences were identified beyond visual analogies to radial symmetry in botanical structures.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/RoseCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/RoseCurve.html</a> (history and equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/rosace/rosace.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/rosace/rosace.shtml</a> (history and polar equation)</li>
+      <li><a href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/iet-map.2017.0852" target="_blank" rel="noopener noreferrer">https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/iet-map.2017.0852</a> (UWB antenna application)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ROSE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                 restartflag rval id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd fe)
+  (setq id "Rose Curve"
+        iq "r=a·cosᶜ((p/q)θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_integer 2 "p (numerator, integer)" 3)
+        fc (get_integer 2 "q (denominator, integer)" 2)
+        fd (get_real 2 "c (power of cos, narrows lobes)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", p=" (itoa fb) ", q=" (itoa fc) ", c=" (rtos fd 2 4))
+        fe (/ fc (gcd fb fc)))
+  (princ (strcat "\n" (itoa (fix (/ (* (if (and (= (rem (/ fb (gcd fb fc)) 2) 1) (= (rem fe 2) 1)) (* 180 fe) (* 360 fe))
+         divcount) span))) " segments needed to close the curve"))
+  (setq rval '(* fa (alt_expt (cos (* (/ (float fb) (float fc)) (eval a2))) fd nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ROSE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

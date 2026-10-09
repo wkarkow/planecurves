@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Lookup - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <style>
+    .index-container {
+      max-width: 1280px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+    .list-meta {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .search-box {
+      width: 100%;
+      max-width: 420px;
+      padding: 8px 12px;
+      font-size: 1rem;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      margin-bottom: 18px;
+    }
+    .image-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    .image-table th {
+      text-align: left;
+      padding: 8px 10px;
+      background-color: #f0f0f0;
+      border-bottom: 2px solid #ccc;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .image-table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    .curve-name {
+      font-weight: 500;
+      font-size: 1.02rem;
+      white-space: nowrap;
+    }
+    .curve-name a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .curve-name a:hover {
+      text-decoration: underline;
+    }
+    .image-cell {
+      text-align: center;
+      min-width: 380px;
+    }
+    .image-cell img {
+      max-width: 360px;
+      max-height: 360px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .image-cell img.external {
+      border: 1px solid #0000FF;
+      box-shadow: 0 0 0 1px #0000FF;
+    }  
+    .image-cell img:hover {
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .pending-text {
+      color: #888;
+      font-style: italic;
+      font-size: 0.9rem;
+      padding: 40px 10px;
+    }
+
+    /* Minimal centering — preserves original tight caption style from _styles.css */
+    #modalImage {
+      display: block;
+      align-self: center;
+    }
+    #modal {
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <nav class="main-nav left-nav">
+      <a href="_Main.html">Home</a>
+      <a href="_CurveIndex.html">Curve Lookup</a>
+      <a href="_AliasIndex.html">Alias Lookup</a>
+    </nav>
+    <h2 class="site-title">
+      <a href="_Main.html">Plane Curves with AutoCAD</a>
+    </h2>
+    <nav class="main-nav right-nav">
+      <a href="_EquationIndex.html">Equation Lookup</a>
+      <span class="nav-current">Image Lookup</span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-title-block">
+      <h1>Image Lookup</h1>
+      <p class="short-description">
+        Browse curves visually by representative image(s). Click on the curve name to see potential further images.
+      </p>
+    </div>
+  </section>
+
+  <div class="index-container">
+    <div class="list-meta">
+      <span id="curve-count"></span> curves · imaged curves first, then pending roadmap · filter by name below
+    </div>
+
+    <input type="text" id="search-input" class="search-box" placeholder="Filter curves by name..." aria-label="Filter the image list">
+
+    <table class="image-table" id="image-table">
+      <thead>
+        <tr>
+          <th style="width: 220px;">Curve</th>
+          <th colspan="3">Images</th>
+        </tr>
+      </thead>
+      <tbody id="image-tbody">
+        <!-- Populated by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<!-- Modal for enlarged image (uses original styles from _styles.css) -->
+<div id="modal" class="modal" onclick="hideModal()">
+  <div class="modal-content" onclick="event.stopImmediatePropagation()">
+    <span class="close-button" onclick="hideModal()">&times;</span>
+    <img id="modalImage" src="" alt="Curve image">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+
+<script src="_Curve-list.js"></script>
+<script>
+// Image Lookup page logic
+document.addEventListener("DOMContentLoaded", function() {
+  const tbody = document.getElementById("image-tbody");
+  const countEl = document.getElementById("curve-count");
+  const searchInput = document.getElementById("search-input");
+
+  if (typeof curveList === "undefined" || !Array.isArray(curveList)) {
+    tbody.innerHTML = "<tr><td colspan='4' style='color:#c00;'>Error: _Curve-list.js not loaded or invalid.</td></tr>";
+    return;
+  }
+
+  // Partition curves
+  let withImages = [];
+  let withoutImages = [];
+
+  curveList.forEach(curve => {
+    if (curve.imgSortKey && curve.images && typeof curve.images === "object") {
+      withImages.push(curve);
+    } else {
+      withoutImages.push(curve);
+    }
+  });
+
+  // Sort imaged curves by imgSortKey (numeric-aware)
+  withImages.sort((a, b) => a.imgSortKey.localeCompare(b.imgSortKey, undefined, { numeric: true, sensitivity: "base" }));
+
+  // Sort pending curves alphabetically by title
+  withoutImages.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: "base" }));
+
+  // Final ordered list
+  const orderedCurves = [...withImages, ...withoutImages];
+
+  function renderTable(filteredCurves) {
+    tbody.innerHTML = "";
+
+    if (filteredCurves.length === 0) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = "<td colspan='4'><em>No matching curves found.</em></td>";
+      tbody.appendChild(tr);
+      return;
+    }
+
+    filteredCurves.forEach(curve => {
+      const tr = document.createElement("tr");
+      const hasImgs = curve.images && curve.images.canonical;
+
+      if (!hasImgs) {
+        tr.className = "pending-row";
+      }
+
+      // Column 1: Name + link
+      const nameTd = document.createElement("td");
+      nameTd.className = "curve-name";
+      nameTd.innerHTML = `<a href="${curve.filename}">${curve.title}</a>`;
+      tr.appendChild(nameTd);
+
+      // Columns 2-4: Images or pending
+      const labels = ["Canonical", "Variant / Extreme", "Variant / Extreme"];
+      const keys = ["canonical", "variant1", "variant2"];
+
+      keys.forEach((key, idx) => {
+        const td = document.createElement("td");
+        td.className = "image-cell";
+
+        const entry = curve.images ? curve.images[key] : null;
+
+        if (entry && typeof entry === "object" && entry.external) {
+          // External reference image
+          const img = document.createElement("img");
+          img.src = entry.thumbnail || entry.url;
+          img.alt = curve.title;
+          img.width = 360;
+          img.style.cursor = "pointer";
+          img.classList.add("external");         
+          img.onclick = () => window.open(entry.url, "_blank", "noopener,noreferrer");
+          td.appendChild(img);
+
+        } else if (curve.imgSortKey && entry && typeof entry === "string") {
+          // Normal local image → open modal
+          const thumbSrc = entry;
+          const highResSrc = thumbSrc.replace('-360', '-1600');
+
+          const img = document.createElement("img");
+          img.src = thumbSrc;
+          img.alt = curve.title;
+          img.width = 360;
+          img.onclick = () => showModal(highResSrc, curve.title);
+          td.appendChild(img);
+
+        } else if (!curve.imgSortKey) {
+          // No images at all for this curve
+          td.innerHTML = `<div class="pending-text">Images pending</div>`;
+        } else {
+          // Imaged curve but this slot is empty
+          td.innerHTML = "";
+        }
+
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+
+    if (countEl) {
+      countEl.textContent = filteredCurves.length;
+    }
+  }
+
+  // Initial render
+  renderTable(orderedCurves);
+
+  // Live filter (by title only)
+  searchInput.addEventListener("input", function() {
+    const term = searchInput.value.toLowerCase().trim();
+    if (!term) {
+      renderTable(orderedCurves);
+      return;
+    }
+    const filtered = orderedCurves.filter(c =>
+      c.title.toLowerCase().includes(term)
+    );
+    renderTable(filtered);
+  });
+});
+
+// Modal functions
+function showModal(src, caption) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImage");
+  const modalCap = document.getElementById("modalCaption");
+
+  modalImg.src = src;
+  modalImg.alt = caption || "";
+  modalCap.textContent = caption || "";
+  modal.style.display = "flex";
+}
+
+function hideModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+// Close modal with Escape key
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    const modal = document.getElementById("modal");
+    if (modal && modal.style.display === "flex") {
+      modal.style.display = "none";
+    }
+  }
+});
+</script>
+
+</body>
+</html>

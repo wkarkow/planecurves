@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catenary Evolute - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Catenary Evolute</h1>
+      <p class="short-description">The evolute of the catenary curve; the locus of its centers of curvature.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/CatEvolute/CatEvolute01-360.avif"
+           alt="Catenary Evolute versus catenary"
+      <figcaption>
+        Catenary Evolute, a=2,
+        <span class="figcap-value" style="color:#000000">catenary</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        <span class="figcap-value" style="color:#0000FF">osculating circle</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Catenary hyperbolic equation:</div>
+      \[ y = a \cosh\left(\frac{x}{a}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Catenary Evolute parametric equations:</div>
+      \[ x = t - \frac{a}{2} \sinh\left(\frac{2t}{a}\right),\quad y = 2a \cosh\left(\frac{t}{a}\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The catenary evolute is the locus of the centers of curvature of the catenary curve.<sup>1</sup> Christian Huygens (1629–1695), the Dutch mathematician, physicist, and astronomer best known for his work on pendulum clocks and wave theory of light, laid the foundation for the study of evolutes in 1659. While investigating the catenary (the shape assumed by a hanging chain under uniform gravity), Huygens determined the radius of curvature at each point and thereby discovered that the evolute itself is another catenary, merely translated and scaled. This property emerged during the intense mathematical activity of the late 17th century. In 1669 Joachim Jungius had already shown that the hanging chain is not a parabola, as Galileo had mistakenly proposed. The correct analytic equation of the catenary was then derived independently in 1691 by Gottfried Wilhelm Leibniz, Christian Huygens, and Johann Bernoulli in response to a challenge issued by Jakob Bernoulli; their solutions appeared together in the Acta Eruditorum. Huygens explicitly linked his earlier evolute theory to the catenary in letters and notes, using the concept of osculating circles (the circles that best match the curve’s local curvature, a notion accessible through basic calculus as the instantaneous center of rotation of the tangent).<sup>2</sup></p>
+    <p>No real-life applications of the catenary evolute itself have been documented in engineering or the natural sciences. In contrast, the parent catenary curve finds extensive use wherever a flexible member carries load purely in tension: suspension-bridge cables, catenary arches in kilns and large-span structures, overhead contact wires in electric railways, and steel catenary risers in offshore oil and gas production. The evolute relationship remains of purely theoretical interest in differential geometry and classical curve theory.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>Huygens, C. <em>Horologium Oscillatorium</em> (1673) and related manuscripts on evolutes and the catenary.</li>
+      <li><a href="https://mathworld.wolfram.com/CatenaryEvolute.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CatenaryEvolute.html</a> (parametric equations, properties, and relation to the catenary).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/chainette/chainette.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/chainette/chainette.shtml</a> (evolute parametrization and connection to Huygens’ work).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CATEVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Catenary Evolute"
+        iq "x=t-(a/2)·sinh(2t/a), y=2a·cosh(t/a)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in t-span"
+        dct 400
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (catenary constant)" 1.0)
+        fb (get_real 2 "t-span (larger=greater range, less precise)" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", t-span=" (rtos fb 2 4))
+        xc '(- (eval a2) (* 0.5 fa (sinh (/ (* 2.0 (eval a2)) fa))))
+        yc '(* 2.0 fa (cosh (/ (eval a2) fa)))
+        paramstep (/ fb divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CATEVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

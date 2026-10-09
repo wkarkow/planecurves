@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swastika Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Swastika Curve</h1>
+      <p class="short-description">A decorative polar curve \(r^{2}=\tan((p/(2q))\theta)\) whose reduced numerator \(p\) sets the number of hooked arms and whose reduced denominator \(q\) controls how those arms overlap as further revolutions are traced.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Swastika/Swastika01-360.avif"
+           alt="Swastika Curve, p=4,q=1">
+      <figcaption>Swastika Curve, p=4,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika02-360.avif"
+           alt="Swastika Curve, p=3,q=1">
+      <figcaption>Swastika Curve, p=3,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika03-360.avif"
+           alt="Swastika Curve, p=5,q=1">
+      <figcaption>Swastika Curve, p=5,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika04-360.avif"
+           alt="Swastika Curve, p=5,q=9">
+      <figcaption>Swastika Curve, p=6,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika05-360.avif"
+           alt="Swastika Curve, p=5,q=11">
+      <figcaption>Swastika Curve, p=5,q=11</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika06-360.avif"
+           alt="Swastika Curve, p=5,q=13">
+      <figcaption>Swastika Curve, p=5,q=13</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika07-360.avif"
+           alt="Swastika Curve, p=1,q=1">
+      <figcaption>Swastika Curve, p=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika08-360.avif"
+           alt="Swastika Curve, p=1,q=2, 'Galaxy Curve'">
+      <figcaption>Swastika Curve, p=1,q=2, 'Galaxy Curve'</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika09-360.avif"
+           alt="Swastika Curve, p=1,q=3, 'Galaxy Curve'">
+      <figcaption>Swastika Curve, p=1,q=3, 'Galaxy Curve'</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika10-360.avif"
+           alt="Swastika Curve, p=1,q=4, 'Galaxy Curve'">
+      <figcaption>Swastika Curve, p=1,q=4, 'Galaxy Curve'</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika11-360.avif"
+           alt="Swastika Curve, p=2,q=3">
+      <figcaption>Swastika Curve, p=2,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika12-360.avif"
+           alt="Swastika Curve, p=49,q=51">
+      <figcaption>Swastika Curve, p=49,q=51</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Swastika/Swastika13-360.avif"
+           alt="Swastika Curve, p=1,q=20">
+      <figcaption>Swastika Curve, p=1,q=20</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">Swastika Curve polar equation:</div>
+      \[ r^{2} = \tan\left(\frac{p}{2q}\,\theta\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The swastika curve is a decorative polar curve intended to evoke the rotational, hooked-arm form long known as the swastika. The word derives from Sanskrit (svastika, “conducive to well-being”)<sup>1</sup>, and the symbol appears across much of Eurasia from prehistoric times: in ancient Indian religious art, on Greco-Roman and Celtic artifacts, in East Asian motifs, and in numerous folk traditions.<sup>2,3</sup> Its geometry expresses rotation and continuity, often interpreted as solar motion, cyclic time, or auspiciousness.<sup>2,3</sup> Variants include three-armed rotational forms (related to the classical triskelion)<sup>4</sup> as well as four-armed right-angled forms familiar from later history. The modern Nazi appropriation of the symbol in the 20th century represents only a recent specific use of a far older symbol.<sup>1</sup> In the classical parameter setting (integer \(p/q\)), this swastika curve produces a symmetric hooked form suggestive of the traditional four-armed design. For small fractional parameters, the curve can resemble tightly wound barred spiral galaxies, with a central straight bar and outward-flaring spiral arms.</p>
+    <p>When \(p/q\) is written in lowest terms, the reduced numerator \(p\) gives the number of distinct arms; the reduced denominator \(q\) controls how many arms overlap as additional revolutions are traced. A single straight “bar” through the origin, in the sense of a barred spiral galaxy, occurs only when \(p/q = 1\) (naturally) or \(p/q = \tfrac{1}{2}\) with mirroring and \(q &gt; p\); larger values of \(p\) produce multiple radial directions rather than a single barred axis.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://encyclopedia.ushmm.org/content/en/article/history-of-the-swastika" target="_blank" rel="noopener noreferrer">https://encyclopedia.ushmm.org/content/en/article/history-of-the-swastika</a> (etymology from Sanskrit, Eurasian origins, Nazi appropriation)</li>
+      <li><a href="https://www.bbc.com/news/magazine-29644591" target="_blank" rel="noopener noreferrer">https://www.bbc.com/news/magazine-29644591</a> (prehistoric Eurasian distribution, solar-motion and auspicious interpretations)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Swastika" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Swastika</a> (religious appearances in Indian, Greco-Roman, Celtic, East Asian traditions)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Triskelion" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Triskelion</a> (three-armed rotational variants related to hooked swastika forms)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SWASTIKA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                     xstep restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw rval fa fb)
+  (setq id "Swastika Curve"
+        iq "r²=tan((p/(2q))θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "p (numerator, # of arms when reduced)" 4.0)
+        fb (get_real 2 "q (denominator, increases spiralling)" 1.0)
+        eq_display (strcat "\np=" (rtos fa 2 4) ", q=" (rtos fb 2 4) ")")
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 3.5)
+        rval '(if (&lt; (abs (tan (* (/ fa (* 2.0 fb)) (eval a2)))) 1e-9) 0.0 (if (&lt; (tan (* (/ fa (* 2.0 fb)) (eval a2))) 0.0) 0.0 (sqrt (tan (* (/ fa (* 2.0 fb)) (eval a2))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SWASTIKA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spiral of Theodorus - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Spiral of Theodorus</h1>
+      <p class="short-description">A discrete square-root spiral formed by contiguous right triangles, each with one leg of fixed length. The code also traces a continuous interpolation of the same vertices.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Theodorus/Theodorus01-360.avif"
+           alt="Spiral of Theodorus, a=1,24 triangles, Discrete">
+      <figcaption>
+        Spiral of Theodorus, a=1,24 triangles,
+        <span class="figcap-value" style="color:#000000">Discrete</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Theodorus/Theodorus02-360.avif"
+           alt="Spiral of Theodorus, a=1,24 triangles, Continuous">
+      <figcaption>
+        Spiral of Theodorus, a=1,24 triangles,
+        <span class="figcap-value" style="color:#FF0000">Continuous</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Theodorus/Theodorus03-360.avif"
+           alt="Spiral of Theodorus, a=1,24 triangles, Discrete and Continuous">
+      <figcaption>
+        Spiral of Theodorus, a=1,24 triangles,
+        <span class="figcap-value" style="color:#000000">Discrete</span>,
+        and
+        <span class="figcap-value" style="color:#FF0000">Continuous</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Spiral of Theodorus parametric equations:</div>
+      \[ r(n) = a\sqrt{n+1},\quad \theta(n) = \sum_{k=1}^{n}\arctan\bigl(\tfrac{1}{\sqrt{k}}\bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Spiral of Theodorus<sup>1,2</sup>, also known as the square root spiral or Pythagorean spiral, is a discrete spiral formed by attaching a sequence of contiguous right triangles edge-to-edge, each with one leg of fixed length \(a\) (the scale factor in the code). It is named after Theodorus of Cyrene (approximately 465–398 BC), a Greek mathematician and philosopher who taught both Plato and Theaetetus. Plato’s dialogue <em>Theaetetus</em> describes Theodorus demonstrating that the square roots of non-square integers from 3 through 17 are irrational. Although Theodorus’ original work is lost, the spiral offers a clear geometric construction that visualizes these lengths successively. The process begins with an isosceles right triangle having legs of length \(a\), yielding a hypotenuse of \(a\sqrt{2}\). Each new right triangle then takes the previous hypotenuse as one leg and adds another leg of length \(a\), producing successive hypotenuses of \(a\sqrt{3}\), \(a\sqrt{4}=2a\), \(a\sqrt{5}\), and so on. The ancient record states that Theodorus stopped at \(\sqrt{17}\) because the diagram became “entangled” beyond that point. Modern examination shows the spiral can continue indefinitely without self-overlap. The construction directly applies the Pythagorean theorem at every step, adjacent leg squared plus opposite leg squared equals new hypotenuse squared, and has become a standard educational tool for illustrating irrational numbers and successive square roots to engineers, architects, and draftsmen.</p>
+    <p>Mathematicians later developed continuous interpolations of the discrete spiral, which have led to studies of special constants and summation techniques. In engineering, the Theodorus spiral and its continuous analog have been investigated for use in antenna design.<sup>3</sup> Researchers constructed and analyzed both discrete and smoothed versions as spiral antennas, evaluating their radiation characteristics and comparing them to more conventional Archimedean spirals. Another engineering application appears in fluid dynamics, where the Theodorus spiral concept has been used to investigate nozzle geometry for pico-scale crossflow turbines.<sup>4</sup> Applications in the natural sciences center on mathematical education and visualization. No other major practical applications in engineering or the sciences were identified beyond antenna research, turbine nozzle studies, and teaching.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/TheodorusSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/TheodorusSpiral.html</a> (history and mathematical description)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Spiral_of_Theodorus" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Spiral_of_Theodorus</a> (history and construction)</li>
+      <li><a href="https://www.ursi.org/Publications/RadioScienceLetters/Volume3/RSL21-0003_Toda.pdf" target="_blank" rel="noopener noreferrer">https://www.ursi.org/Publications/RadioScienceLetters/Volume3/RSL21-0003_Toda.pdf</a> (antenna design applications)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0029801825000484" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/abs/pii/S0029801825000484</a> (pico-scale crossflow turbine nozzle geometry)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:THEODORUS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Spiral of Theodorus"
+        iq "r(n)=a·√(n+1), θ(n)=∑ arctan(1/√k)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of triangles"
+        dct 24
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale, leg length)" 1.0)
+        fb (get_keyword 0 "Continuous Discrete" "Continuous or Discrete curvature?" "Discrete")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", # triangles=" (itoa divcount))
+        fc fa
+        fd 0.0
+        xc '(* fc (cos fd))
+        yc '(* fc (sin fd))
+        span divcount
+        paramstep 1.0
+        skm (if (eq fb "Discrete") '(T T T T) '(T T T))
+        a1 0
+        a2 '(progn (setq fe (atan (/ fa fc))) (setq fd (+ fd fe)) (setq fc (alt_expt (+ (* fc fc) (* fa fa)) 0.5 nil)) 0.0)
+        x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:THEODORUS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

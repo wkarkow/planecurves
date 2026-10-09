@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Erythrocyte Cross-Section - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Erythrocyte Cross-Section</h1>
+      <p class="short-description">Parametric model of the meridional cross-section of a mature human erythrocyte (red blood cell); a biconcave disc whose geometry supports a high surface-area-to-volume ratio and extreme deformability.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Erythrocyte/Erythrocyte01-360.avif"
+           alt="Erythrocyte Cross-Section, a=8,h=2.2,b=1.0,c=5.8">
+      <figcaption>Erythrocyte Cross-Section, a=8,h=2.2,b=1.0,c=5.8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Erythrocyte/Erythrocyte02-360.avif"
+           alt="Spherocyte, ellipse with a=8,h=4">
+      <figcaption>Spherocyte, ellipse with a=8,h=4</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 430px;">
+    <div class="equation-line">
+      <div class="equation-label">Erythrocyte central cross-sectional parametric equations:</div>
+      \[ x = a \cos(t),\quad y = \sin(t) \bigl( b + \dfrac{\frac12 \cdot (h / \sqrt{1 - (c/a)^{2}}) \cdot (4 - 5(c/a)^{2}) - 2b(1 - (c/a)^{2})}{(c/a)^{2} (1 - (c/a)^{2})} \cos^{2}(t) + \dfrac{(h / \sqrt{1 - (c/a)^{2}}) \cdot (\frac32 (c/a)^{2} - 1) + b(1 - (c/a)^{2})}{(c/a)^{4} (1 - (c/a)^{2})} \cos^{4}(t) \bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The biconcave disc shape of mature human erythrocytes (red blood cells) was first observed microscopically in the 17th century by Antonie van Leeuwenhoek, who described the cells as small “round, red globules” floating in a clear fluid.<sup>1</sup> Improvements in optical microscopy during the 19th and 20th centuries clarified the geometry, leading to quantitative models. In 1999, Kuchel and Fackerell introduced a practical parametric representation of the meridional cross-section using cell radius \(a\), half central thickness \(b\), half maximum thickness \(h\), and radius at maximum thickness \(c\).<sup>2,3,4</sup> This form matches standard reference profiles and supports straightforward evaluation of coordinates, surface area, and volume using basic trigonometry and calculus concepts such as derivatives for local slope or curvature.</p>
+    <p>The biconcave geometry is biologically optimized for a high surface-area-to-volume ratio, facilitating efficient gas exchange (oxygen and carbon dioxide), and for extreme deformability, allowing erythrocytes to pass through capillaries narrower than their resting diameter (~7 – 8 µm). Mathematical models of this cross-section are used in engineering and the natural sciences. In biomechanics and vascular physiology, they enable computational fluid dynamics simulations of erythrocyte passage through microvessels, where cell deformability governs blood flow resistance and oxygen delivery.<sup>5</sup> In biomedical optics and hematology diagnostics, the geometry predicts light scattering and absorption patterns in blood samples, supporting flow cytometry, spectrophotometry, and non-invasive hemoglobin monitoring.<sup>6</sup> The model also appears in multiscale studies of red blood cell mechanics under strain and in the design of blood-contacting medical devices such as stents and dialysis filters.<sup>7</sup></p>
+    <p>Pathologic conditions alter membrane mechanics or cytoskeletal integrity, producing distinct geometries:</p>
+    <ul>
+      <li>Spherocyte: Nearly spherical rather than biconcave with reduced surface-area-to-volume ratio and loss of central pallor in blood smear; common in hereditary spherocytosis and immune hemolytic anemia.</li>
+      <li>Poikilocyte: A broad term describing irregularly shaped RBCs that are non-axisymmetric with variable elongation or distortion; seen in severe anemia, marrow stress, or metabolic disorders.<sup>8</sup></li>
+      <li>Elliptocytes have an elongated oval shape.</li>
+      <li>Stomatocytes have a slit-like central pallor.</li>
+      <li>Target cells (codocytes) have a central density with an outer ring.</li>
+      <li>Schistocytes are fragmented cells.</li>
+    </ul>
+    <p>Each represents altered membrane tension, cytoskeletal failure, or osmotic imbalance.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml</a> (red blood cell cross-section model)</li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/35364426/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/35364426/</a> (Leeuwenhoek’s 17th-century observations of red blood cells as “red globules”)</li>
+      <li>Kuchel PW, Fackerell ED. Parametric-equation representations of biconcave erythrocytes. <em>Bulletin of Mathematical Biology</em> 61:209–220 (1999) (foundational parametric representation with physical parameters a, b, h, c)</li>
+      <li><a href="https://link.springer.com/article/10.1006/bulm.1998.0064" target="_blank" rel="noopener noreferrer">https://link.springer.com/article/10.1006/bulm.1998.0064</a> (Kuchel &amp; Fackerell 1999 paper)</li>
+      <li><a href="https://projecteuclid.org/ebooks/geometry-integrability-and-quantization-proceedings/Proceedings-of-the-International-Conference-on-Geometry-Integrability-and-Quantization/chapter/On-the-Geometry-of-Red-Blood-Cell/10.7546/giq-1-2000-27-46.pdf" target="_blank" rel="noopener noreferrer">https://projecteuclid.org/ebooks/geometry-integrability-and-quantization-proceedings/Proceedings-of-the-International-Conference-on-Geometry-Integrability-and-Quantization/chapter/On-the-Geometry-of-Red-Blood-Cell/10.7546/giq-1-2000-27-46.pdf</a> (integrals for volume and area)</li>
+      <li><a href="https://peng.lab.uic.edu/wp-content/uploads/sites/568/2021/09/multiscale-modelling-of-erythrocytes-in-stokes-flow.pdf" target="_blank" rel="noopener noreferrer">https://peng.lab.uic.edu/wp-content/uploads/sites/568/2021/09/multiscale-modelling-of-erythrocytes-in-stokes-flow.pdf</a> (Stokes flow simulations)</li>
+      <li><a href="https://www.sysrevpharm.org/articles/the-geometry-and-optical-models-of-the-erythrocyte.pdf" target="_blank" rel="noopener noreferrer">https://www.sysrevpharm.org/articles/the-geometry-and-optical-models-of-the-erythrocyte.pdf</a> (models for light scattering and diagnostics)</li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK562141/" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/books/NBK562141/</a> (poikilocytosis definition)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ERYTHROCYTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                        restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj)
+  (setq id "Erythrocyte Cross-Section"
+        iq "x=a·cos(t), y=sin(t)·(b+p·cos²(t)+q·cos⁴(t))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (cell radius)" 8.0)
+        fb (get_real 2 "h (half max thickness)" 2.2)
+        fc (get_real 2 "b (half central thickness)" 1.0)
+        fd (get_real 0 "c (radius at max thickness)" 5.8)
+        fg (/ (* fd fd) (* fa fa))
+        fh (sqrt (max 0.0 (- 1.0 fg)))
+        fi (/ fb (avoid_zero fh))
+        fj (avoid_zero (- 1.0 fg))
+        ff (/ (+ (* fi (- (* 1.5 fg) 1.0)) (* fc (- 1.0 fg))) (* (expt fg 2.0) fj))
+        fe (/ (- (* 0.5 fi (- 4.0 (* 5.0 fg))) (* 2.0 fc (- 1.0 fg))) (* fg fj))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", h=" (rtos fb 2 4) ", b=" (rtos fc 2 4) ", c=" (rtos fd 2 4))
+        xc '(* fa (cos (eval a2)))
+        yc '(* (sin (eval a2)) (+ fc (* fe (expt (cos (eval a2)) 2.0)) (* ff (expt (cos (eval a2)) 4.0))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ERYTHROCYTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

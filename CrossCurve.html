@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cross Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cross Curve</h1>
+      <p class="short-description">A rational quartic plane curve (cruciform curve) with four branches, one in each quadrant, and the coordinate axes as asymptotes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CrossCurve/CrossCurve01-360.avif"
+           alt="Cross Curve, multiple values of a=b,c=1,d=0,e=1,f=0"
+      <figcaption>
+        Cross Curve, a=b=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">2.0</span>,
+        <span class="figcap-value" style="color:#009600">3.0</span>,
+        c=1,d=0,e=1,f=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/CrossCurve/CrossCurve02-360.avif"
+           alt="Cross Curve, multiple values of a and b,c=1,d=0,e=1,f=0"
+      <figcaption>
+        Cross Curve, 
+        <span class="figcap-value" style="color:#000000">a=0.5</span>,
+        <span class="figcap-value" style="color:#000000">b=1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">a=1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">b=2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">c=2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">b=4.0</span>,
+        <span class="figcap-value" style="color:#009600">a=3.0</span>,
+        <span class="figcap-value" style="color:#009600">b=6.0</span>,
+        c=1,d=0,e=1,f=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/CrossCurve/CrossCurve03-360.avif"
+           alt="Generalized Cross Curve, a=1,b=1,c=1.5,d=0°,e=0.5,f=45°">
+      <figcaption>Generalized Cross Curve, a=1,b=1,c=1.5,d=0°,e=0.5,f=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CrossCurve/CrossCurve04-360.avif"
+           alt="Generalized Cross Curve, a=1,b=1,c=0.5,d=0°,e=0.4,f=0°">
+      <figcaption>Generalized Cross Curve, a=1,b=1,c=0.5,d=0°,e=0.4,f=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CrossCurve/CrossCurve05-360.avif"
+           alt="Generalized Cross Curve, a=1,b=1,c=0.9,d=0°,e=1.0,f=0°">
+      <figcaption>Generalized Cross Curve, a=1,b=1,c=0.9,d=0°,e=1.0,f=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CrossCurve/CrossCurve06-360.avif"
+           alt="Generalized Cross Curve, a=1,b=1,c=0.96,d=0°,e=1.0,f=0°">
+      <figcaption>Generalized Cross Curve, a=1,b=1,c=0.96,d=0°,e=1.0,f=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CrossCurve/CrossCurve07-360.avif"
+           alt="Generalized Cross Curve, a=1,b=1,c=0.96,d=30°,e=1.0,f=60°">
+      <figcaption>Generalized Cross Curve, a=1,b=1,c=0.96,d=30°,e=1.0,f=60°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CrossCurve/CrossCurve08-360.avif"
+           alt="Generalized Cross Curve, a=1,b=1,c=0.6,d=60°,e=0.7,f=70°">
+      <figcaption>Generalized Cross Curve 08</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cross Curve Cartesian equation:</div>
+      \[ \frac{a^{2}}{x^{2}} + \frac{b^{2}}{y^{2}} = 1 \quad \text{or equivalently} \quad x^{2} y^{2} - b^{2} x^{2} - a^{2} y^{2} = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cross Curve polar equation:</div>
+      \[ r = \sqrt{a^{2} \sec^{2} \theta + b^{2} \csc^{2} \theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cross Curve parametric equations:</div>
+      \[ x = a \cdot \sec \theta, \quad y = b \cdot \csc \theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = a \cdot \sec(c \theta + d), \quad y = b \cdot \csc(e \theta + f) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The cruciform curve, also known as the cross curve or policeman on point-duty curve<sup>1,2</sup>, is a rational quartic plane curve<sup>1,3</sup> consisting of four branches, one in each quadrant, with the coordinate axes serving as asymptotes. It was first studied by the French mathematician Olry Terquem in 1847. In 1860, the Italian mathematician Francesco Siacci analyzed the curve and demonstrated that the sum of the areas bounded by its four branches and their respective asymptotes equals the area of the rectangle formed by those asymptotes.<sup>4</sup> The Dutch mathematician Pieter Hendrik Schoute further studied it in 1883.<sup>4</sup> The curve is a special case of the Lamé curve.<sup>2</sup> It can be generated geometrically as the image of an ellipse under biaxial inversion with respect to the coordinate axes.<sup>2</sup> When a = b, it is the reciprocal pedal curve of the astroid<sup>5</sup> and also its polar.<sup>5,6</sup> In this square case it functions as a glissette, the locus of the focus of a parabola that remains tangent to two perpendicular axes, and appears as a planar section of a sinusoidal cone. The parametric equations used in the AutoLISP code generate this curve or its rotated/scaled variants when c, d, e, f are nonzero. It possesses symmetry about both axes and the origin.<sup>1</sup></p>
+    <p>Applications include geometry, where it provides a visual derivation of the inverse Pythagorean theorem for the altitude to the hypotenuse in a right triangle<sup>7</sup>: substituting the segments gives \(\frac{1}{CD^{2}} = \frac{1}{AC^{2}} + \frac{1}{BC^{2}}\). In mechanical engineering the curve is known as the shear stress quartic and is used as a visualization tool for shear stress components acting on solid surfaces.<sup>4</sup> The curve is also known as the Stauroid, from the Greek stauros (“cross”), referencing its distinctive cross-shaped arms. The term echoes the mineralogical name staurolite, a mineral whose crystal twins form natural cross shapes called stauroids.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Cruciform.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cruciform.html</a> (definition and equations).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cruciforme/cruciforme.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cruciforme/cruciforme.shtml</a> (Terquem, Schoute, Lamé curve, biaxial inversion, glissette, sinusoidal cone).</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticcr.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticcr.html</a> (construction and properties).</li>
+      <li><a href="https://www.statisticshowto.com/cruciform-curve/" target="_blank" rel="noopener noreferrer">https://www.statisticshowto.com/cruciform-curve/</a> (Siacci area property, shear stress application).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/astroid/astroid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/astroid/astroid.shtml</a> (polar and reciprocal pedal of astroid).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Astroid" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Astroid</a> (dual curve relation).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Quartic_plane_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Quartic_plane_curve</a> (Cartesian form, inverse Pythagorean theorem).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CROSSCURVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff maxdraw)
+  (setq id "Cross Curve"
+        iq "x=a·sec(cθ+d), y=b·csc(eθ+f)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar
+        dpr "# of divisions in first quadrant"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (x-scale factor)" 1.0)
+        fb (get_real 2 "b (y-scale factor)" 1.0)
+        fc (get_real 2 "c (θ multiplier for sec)" 1.0)
+        fd (* (get_real 0 "d (offset in degrees for sec)" 0.0) (/ pi 180.0))
+        fe (get_real 2 "e (θ multiplier for csc)" 1.0)
+        ff (* (get_real 0 "f (offset in degrees for csc)" 0.0) (/ pi 180.0))
+        eq_display (strcat "\na=" (rtos fa 2 4) ",b=" (rtos fb 2 4) ",c=" (rtos fc 2 4) ",d=" (rtos (* fd (/ 180.0 pi)) 2 2) "°"
+                           ",e=" (rtos fe 2 4) ",f=" (rtos (* ff (/ 180.0 pi)) 2 2) "°")
+        xc '(* fa (sec (+ (* fc (eval a2)) fd)))
+        yc '(* fb (csc (+ (* fe (eval a2)) ff)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 50)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CROSSCURVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

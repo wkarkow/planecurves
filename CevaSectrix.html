@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ceva Sectrix - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ceva Sectrix</h1>
+      <p class="short-description">A family of polar curves generalizing the classical trisectrix of Ceva (n = 1), enabling precise geometric division of an angle into 2n + 1 equal parts.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix01-360.avif"
+           alt="Ceva Trisectrix, n=1">
+      <figcaption>Ceva Trisectrix, n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix02-360.avif"
+           alt="Ceva Sectrix, a=1,n=2,b=1,c=1">
+      <figcaption>Ceva Sectrix, a=1,n=2,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix03-360.avif"
+           alt="Ceva Sectrix, a=1,n=3,b=1,c=1">
+      <figcaption>Ceva Sectrix, a=1,n=3,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix04-360.avif"
+           alt="Ceva Sectrix, a=1,n=11,b=1,c=1">
+      <figcaption>Ceva Sectrix, a=1,n=11,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix05-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=2,b=3,c=2">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=2,b=3,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix06-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=3,b=2.5,c=5">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=3,b=2.5,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix07-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=0.25,b=2,c=2">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=0.25,b=2,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix08-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=0.25,b=1,c=1">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=0.25,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix09-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=-0.125,b=1,c=1">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=-0.125,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix10-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=-0.125,b=2,c=2">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=-0.125,b=2,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix11-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=2,b=7,c=10">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=2,b=7,c=10</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix12-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=0.125,b=1,c=1">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=0.125,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix13-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=-0.25,b=1.5,c=4">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=-0.25,b=1.5,c=4</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix14-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=6,b=2,c=3">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=6,b=2,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix15-360.avif"
+           alt="Generalized Ceva Double Egg, a=1,n=0.5,b=2,c=2">
+      <figcaption>Generalized Ceva Double Egg, a=1,n=0.5,b=2,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix16-360.avif"
+           alt="Generalized Ceva Sectrix, a=1,n=0.5,b=2,c=1">
+      <figcaption>Generalized Ceva Sectrix, a=1,n=0.5,b=2,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix17-360.avif"
+           alt="2dcurves Bow Tie, a=1,b=2,c=1,d=2">
+      <figcaption>2dcurves Bow Tie, a=1,b=2,c=1,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix18-360.avif"
+           alt="2dcurves Double Egg, a=1,b=1,c=1,d=2">
+      <figcaption>2dcurves Double Egg, a=1,b=1,c=1,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix19-360.avif"
+           alt="2dcurves Peanut, a=1,b=0.5,c=1,d=2">
+      <figcaption>2dcurves Peanut, a=1,b=0.5,c=1,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix20-360.avif"
+           alt="2dcurves Generalized, a=1,b=0.9,c=1,d=2">
+      <figcaption>2dcurves Generalized, a=1,b=0.9,c=1,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix21-360.avif"
+           alt="2dcurves Generalized, a=1,b=2,c=1,d=3">
+      <figcaption>2dcurves Generalized, a=1,b=2,c=1,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix22-360.avif"
+           alt="2dcurves Generalized, a=1,b=2,c=2,d=3">
+      <figcaption>2dcurves Generalized, a=1,b=2,c=2,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix23-360.avif"
+           alt="2dcurves Generalized, a=1,b=2,c=3,d=2">
+      <figcaption>2dcurves Generalized, a=1,b=2,c=3,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix24-360.avif"
+           alt="2dcurves Generalized, a=1,b=2,c=3,d=3">
+      <figcaption>2dcurves Generalized, a=1,b=2,c=3,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix25-360.avif"
+           alt="2dcurves Generalized, a=1,b=1,c=3,d=3">
+      <figcaption>2dcurves Generalized, a=1,b=1,c=3,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix26-360.avif"
+           alt="2dcurves Generalized, a=1,b=0.5,c=2.5,d=3">
+      <figcaption>2dcurves Generalized, a=1,b=0.5,c=2.5,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix27-360.avif"
+           alt="2dcurves Generalized, a=1,b=3,c=2.5,d=5">
+      <figcaption>2dcurves Generalized, a=1,b=3,c=2.5,d=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CevaSectrix/CevaSectrix28-360.avif"
+           alt="2dcurves Generalized, a=1,b=3,c=0.5,d=0.5">
+      <figcaption>2dcurves Generalized, a=1,b=3,c=0.5,d=0.5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Ceva Trisectrix Cartesian equation:</div>
+      \[ (x^{2} + y^{2})^{3} = \left( (b + 1) x^{2} - (b - 1) y^{2} \right)^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ceva Sectrix polar equation:</div>
+      \[ r = \frac{\sin \left( (2n+1)\theta \right) }{\sin(\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot \frac{\sin^{b} \left( (2n+1)\theta \right) }{\sin^{c} (\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">2dcurves.com polar equation:</div>
+      \[ r = a \cdot (1 + b \cos(2\theta)) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized 2dcurves.com polar equation:</div>
+      \[ r = a \cdot (1 + b \cdot \cos^{c}(d \theta)) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Ceva's Sectrix<sup>1,2</sup> is a family of polar curves originally devised by Giovanni Ceva (1647–1734) in his exploration of classical angle subdivision problems such as trisection that are impossible to solve using compass and straightedge alone. These curves provided a precise method for subdividing angles by tracing intersection points along the curve path, a valuable tool in centuries before numerical computation. Ceva, a mathematics professor at the University of Pisa, applied geometric reasoning not only to theoretical problems but also to physical applications in engineering and mechanics. In "Opus Hydrostaticum" (1728), he addressed the distribution and flow of water, offering insights into river management, irrigation systems, and public infrastructure. In his treatise "Geometria Motus", he extended his geometric thinking to the analysis of motion, developing early formulations that connected geometry with statics and equilibrium. The curve that bears his name generalizes the concept of the trisectrix into a broader class of sectrix curves, capable of dividing an angle into 2n + 1 equal parts. These curves are still of interest today for their rich polar symmetry and are useful in computer graphics and generative design. The classic Ceva trisectrix, corresponding to n = 1, is also known as the cycloid of Ceva, and appears in both polar and algebraic forms.</p>
+    <p>Real-life applications in engineering and the natural sciences are confined to geometric constructions and educational tools. The curve supports STEM activities in mathematics and technical education, where students design and build mechanical trisection devices such as hand-made wooden mechanisms with 3D-printed joints or fully 3D-printed aids based on the smaller loops for classroom demonstrations of angle division.<sup>3,4</sup> No broader uses in physics, biology, manufacturing, or other applied sciences appear in available references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trisectricedeceva/trisectricedeceva.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trisectricedeceva/trisectricedeceva.shtml</a> (history, construction, and (2n+1)-sectrix generalization)</li>
+      <li><a href="https://www.2dcurves.com/sextic/sextict.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/sextic/sextict.html</a> (history, trisection method, peanut/double-egg/bow-tie variants, and polar forms)</li>
+      <li><a href="https://atcm.mathandtech.org/EP2023/invited/22081.pdf" target="_blank" rel="noopener noreferrer">https://atcm.mathandtech.org/EP2023/invited/22081.pdf</a> (Tommaso Ceva attribution, 2023 STEM/3D-printed trisection device applications – ATCM proceedings)</li>
+      <li><a href="https://www.geogebra.org/m/hN9tjqXT" target="_blank" rel="noopener noreferrer">https://www.geogebra.org/m/hN9tjqXT</a> (Cicloide-Trisectriz de Tommaso Ceva – interactive construction and trisection animation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CEVASECTRIX (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Ceva Sectrix"
+        iq ""
+        dcl "CEVASECTRIX"
+        opt '("Classical Ceva Trisectrix" "Classical New Values" "2DCurve Bow Tie" "2DCurve Double Egg" "2DCurve Peanut" "2DCurve New Values")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nClassical Ceva Trisectrix: r = a·sin(3θ)/sin(θ)")
+    (setq fa (get_real 2 "a (overall scale)" 1.0)
+          eq_display (strcat "\na=" (rtos fa 2 4))
+          rval '(if (< (abs (sin (eval a2))) 1e-6) (* fa 3.0) (* fa (/ (sin (* 3.0 (eval a2))) (avoid_zero (sin (eval a2))))))))
+   ((eq kw 1)
+    (princ "\nGeneralized Ceva Sectrix: r = a·[sin((2n+1)θ)]ᵇ/[sin(θ)]ᶜ")
+    (setq fa (get_real 2 "a (overall scale)" 1.0)
+          fb (get_real 2 "n (sectrix order: divides angles into 2n+1)" 1.0)
+          fc (get_real 2 "b (numerator exponent)" 1.0)
+          fd (get_real 2 "c (denominator exponent)" 1.0)
+          eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (rtos fb 2 4) ", b=" (rtos fc 2 4) ", c=" (rtos fd 2 4))
+          rval '(if (< (abs (sin (eval a2))) 1e-6) (* fa (cond ((= fc fd) (alt_expt (+ (* 2.0 fb) 1.0) fc T)) ((> fc fd) 0.0) (T 1e6)))
+                (* fa (/ (alt_expt (sin (* (+ (* 2.0 fb) 1.0) (eval a2))) fc nil) (avoid_zero (alt_expt (sin (eval a2)) fd nil)))))))
+   ((eq kw 2)
+    (princ "\n2DCurve Bow Tie: r = a·(1 + 2·cos(2θ))")
+    (setq fa (get_real 2 "a (overall scale)" 1.0)
+          eq_display (strcat "\na=" (rtos fa 2 4))
+          rval '(* fa (1+ (* 2.0 (cos (* 2.0 (eval a2))))))))
+   ((eq kw 3)
+    (princ "\n2DCurve Double Egg: r = a·(1 + cos(2θ))")
+    (setq fa (get_real 2 "a (overall scale)" 1.0)
+          eq_display (strcat "\na=" (rtos fa 2 4))
+          rval '(* fa (1+ (cos (* 2.0 (eval a2)))))))
+   ((eq kw 4)
+    (princ "\n2DCurve Peanut: r = a·(1 + 0.5·cos(2θ))")
+    (setq fa (get_real 2 "a (overall scale)" 1.0)
+          eq_display (strcat "\na=" (rtos fa 2 4))
+          rval '(* fa (+ 1 (* 0.5 (cos (* 2.0 (eval a2))))))))
+   ((eq kw 5)
+    (princ "\n2DCurve New Values: r = a·(1 + b·cosᶜ(d·θ))")
+    (setq fa (get_real 2 "a (overall scale)" 1.0)
+          fb (get_real 2 "b (cosine coefficient)" 2.0)
+          fc (get_real 2 "c (cosine exponent)" 1.0)
+          fd (get_real 2 "d (angle multiple)" 2.0)
+          eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+          rval '(* fa (+ 1 (* fb (alt_expt (cos (* fd (eval a2))) fc nil)))))))
+  (setq xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CEVASECTRIX)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Egg Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Egg Curve</h1>
+      <p class="short-description">A collection of plane curves with a single axis of symmetry and an egg-like (ovoid or pyriform) silhouette.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/EggCurve/EggCurve01-360.avif"
+           alt="Egg Curve, Double form, a=1">
+      <figcaption>Egg Curve, Double form, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve02-360.avif"
+           alt="Egg Curve, Hortsch form, a=1">
+      <figcaption>Egg Curve, Hortsch form, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve03-360.avif"
+           alt="Egg Curve, Granville form,multiple values of a">
+      <figcaption>
+        Egg Curve, Granville form, a=
+        <span class="figcap-value" style="color:#000000">4.0</span>,
+        <span class="figcap-value" style="color:#FF0000">3.8</span>,
+        <span class="figcap-value" style="color:#0000FF">3.5</span>,
+        <span class="figcap-value" style="color:#009600">3.2</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.7</span>,
+        b=5,r=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve04-360.avif"
+           alt="Egg Curve, Rosillo form,a=1,b=1.4,multiple values of c">
+      <figcaption>
+        Egg Curve, Rosillo form, a=1,b=1.4,c=
+        <span class="figcap-value" style="color:#000000">2.3</span>,
+        <span class="figcap-value" style="color:#FF0000">2.2</span>,
+        <span class="figcap-value" style="color:#0000FF">2.1</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.9</span>,
+        <span class="figcap-value" style="color:#9600FF">1.8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve05-360.avif"
+           alt="Egg Curve, Rosillo form,a=1,multiple values of b,c=2">
+      <figcaption>
+        Egg Curve, Rosillo form, a=1,b=
+        <span class="figcap-value" style="color:#000000">1.1</span>,
+        <span class="figcap-value" style="color:#FF0000">1.2</span>,
+        <span class="figcap-value" style="color:#0000FF">1.3</span>,
+        <span class="figcap-value" style="color:#009600">1.4</span>,
+        <span class="figcap-value" style="color:#FF9600">1.5</span>,
+        <span class="figcap-value" style="color:#9600FF">1.6</span>,
+        c=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve06-360.avif"
+           alt="Egg Curve, Bastelein First form,multiple values of a">
+      <figcaption>
+        Egg Curve, Bastelein First form, a=
+        <span class="figcap-value" style="color:#000000">0.24</span>,
+        <span class="figcap-value" style="color:#FF0000">0.20</span>,
+        <span class="figcap-value" style="color:#0000FF">0.16</span>,
+        <span class="figcap-value" style="color:#009600">0.12</span>,
+        <span class="figcap-value" style="color:#FF9600">0.08</span>,
+        <span class="figcap-value" style="color:#9600FF">0.04</span>,
+        <span class="figcap-value" style="color:#0096FF">0.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve07-360.avif"
+           alt="Egg Curve, Bastelein Second form,multiple values of a">
+      <figcaption>
+        Egg Curve, Bastelein Second form, a=
+        <span class="figcap-value" style="color:#000000">0.24</span>,
+        <span class="figcap-value" style="color:#FF0000">0.20</span>,
+        <span class="figcap-value" style="color:#0000FF">0.16</span>,
+        <span class="figcap-value" style="color:#009600">0.12</span>,
+        <span class="figcap-value" style="color:#FF9600">0.08</span>,
+        <span class="figcap-value" style="color:#9600FF">0.04</span>,
+        <span class="figcap-value" style="color:#0096FF">0.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve08-360.avif"
+           alt="Egg Curve, Bastelein Third form,multiple values of a">
+      <figcaption>
+        Egg Curve, Bastelein Third form, a=
+        <span class="figcap-value" style="color:#000000">0.24</span>,
+        <span class="figcap-value" style="color:#FF0000">0.20</span>,
+        <span class="figcap-value" style="color:#0000FF">0.16</span>,
+        <span class="figcap-value" style="color:#009600">0.12</span>,
+        <span class="figcap-value" style="color:#FF9600">0.08</span>,
+        <span class="figcap-value" style="color:#9600FF">0.04</span>,
+        <span class="figcap-value" style="color:#0096FF">0.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve09-360.avif"
+           alt="Egg Curve, Bastelein Fourth form,multiple values of a">
+      <figcaption>
+        Egg Curve, Bastelein Fourth form, a=
+        <span class="figcap-value" style="color:#000000">0.24</span>,
+        <span class="figcap-value" style="color:#FF0000">0.20</span>,
+        <span class="figcap-value" style="color:#0000FF">0.16</span>,
+        <span class="figcap-value" style="color:#009600">0.12</span>,
+        <span class="figcap-value" style="color:#FF9600">0.08</span>,
+        <span class="figcap-value" style="color:#9600FF">0.04</span>,
+        <span class="figcap-value" style="color:#0096FF">0.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve10-360.avif"
+           alt="Egg Curve, Jacobs form,multiple values of a,b=1.4">
+      <figcaption>
+        Egg Curve, Jacobs form, a=
+        <span class="figcap-value" style="color:#000000">2.4</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.8</span>,
+        <span class="figcap-value" style="color:#009600">1.6</span>,
+        <span class="figcap-value" style="color:#FF9600">1.4</span>,
+        <span class="figcap-value" style="color:#9600FF">1.2</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0</span>,
+        b=1.4
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve11-360.avif"
+           alt="Egg Curve, Jacobs form, a=1.6,multiple values of b">
+      <figcaption>
+        Egg Curve, Jacobs form, a=1.6,b=
+        <span class="figcap-value" style="color:#000000">2.4</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.6</span>,
+        <span class="figcap-value" style="color:#009600">1.4</span>,
+        <span class="figcap-value" style="color:#FF9600">1.2</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">0.8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve12-360.avif"
+           alt="Egg Curve, Szego form">
+      <figcaption>Egg Curve, Szego form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve13-360.avif"
+           alt="Egg Curve, Descartes form">
+      <figcaption>Egg Curve, Descartes form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve14-360.avif"
+           alt="Egg Curve, MacLaurin form">
+      <figcaption>Egg Curve, MacLaurin form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve15-360.avif"
+           alt="Egg Curve, Bernoulli form">
+      <figcaption>Egg Curve, Bernoulli form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve16-360.avif"
+           alt="Egg Curve, deSluze form">
+      <figcaption>Egg Curve, deSluze form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve17-360.avif"
+           alt="Egg Curve, Sillke form">
+      <figcaption>Egg Curve, Sillke form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve18-360.avif"
+           alt="Egg Curve, Blaschke First form,multiple values of a">
+      <figcaption>
+        Egg Curve, Blaschke First form, a=
+        <span class="figcap-value" style="color:#000000">0.7</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.3</span>,
+        <span class="figcap-value" style="color:#009600">1.6</span>,
+        <span class="figcap-value" style="color:#FF9600">1.9</span>,
+        <span class="figcap-value" style="color:#9600FF">2.2</span>,
+        <span class="figcap-value" style="color:#0096FF">2.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve19-360.avif"
+           alt="Egg Curve, Blaschke Second form">
+      <figcaption>Egg Curve, Blaschke Second form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve20-360.avif"
+           alt="Egg Curve, Skovgaard form">
+      <figcaption>Egg Curve, Skovgaard form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve21-360.avif"
+           alt="Egg Curve, Babois form">
+      <figcaption>Egg Curve, Babois form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve22-360.avif"
+           alt="Egg Curve, Bouma form">
+      <figcaption>Egg Curve, Bouma form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve23-360.avif"
+           alt="Egg Curve, Neyt form">
+      <figcaption>Egg Curve, Neyt form</figcaption>
+    </figure>
+    <figure>
+      <img src="images/EggCurve/EggCurve24-360.avif"
+           alt="Egg Curve, Yamamoto form">
+      <figcaption>Egg Curve, Yamamoto form</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Double egg (polar):</div>
+      \[ r = a\cos^{2}\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hortsch egg (polar):</div>
+      \[ r = a\,e^{\cos 2\theta}\cos^{2}\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Granville egg (parametric):</div>
+      \[ x = b + r\cos t,\quad y = \frac{a r\sin t}{b + r\cos t} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rosillo egg (Cartesian):</div>
+      \[ y = \pm(b-x)\sqrt{\frac{a^{2}-x^{2}}{c-x}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bastelein eggs (Cartesian, 4 forms):</div>
+      \[ y = \pm\frac{2}{3}\sqrt{\frac{1-x^{2}}{1+3ax}},\quad
+         y = \pm\frac{2}{3}\sqrt{(1-x^{2})(1-3ax)},\quad
+         y = \pm\frac{2}{3}\sqrt{(1-x^{2})e^{-3ax}},\quad
+         y = \pm\frac{2}{3}\sqrt{(1-x^{2})\frac{1-3ax}{1+3ax}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Jacobs egg (Cartesian):</div>
+      \[ y = \pm\sqrt{\frac{1-x^{2}}{a\,b^{x}}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Szego egg (Cartesian):</div>
+      \[ y = \pm\sqrt{e^{2x-2}-x^{2}-0.02} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Descartes egg (implicit):</div>
+      \[ x^{3}+y^{3}+0.06=3xy \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Maclaurin egg (Cartesian):</div>
+      \[ y = \pm\sqrt{\frac{x^{2}(3-x)-0.01}{1+x}} \]
+    </div>  
+    <div class="equation-line">
+      <div class="equation-label">Bernoulli egg (Cartesian):</div>
+      \[ y = \pm\sqrt{\frac{\sqrt{8x^{2}+0.96}-(2x^{2}+1)}{2}} \]
+    </div> 
+    <div class="equation-line">
+      <div class="equation-label">deSluze egg (Cartesian):</div>
+      \[ y = \pm\sqrt{\frac{-x^{3}+1.5x^{2}-0.04}{x+0.5}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sillke egg (Cartesian):</div>
+      \[ y = \pm\sqrt{\bigl|\sin x + 0.1\sin 2x\bigr|} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Blaschke 1 egg (Cartesian):</div>
+      \[ y = \pm\sqrt{x\bigl(\sqrt{a}-\sqrt{x}\bigr)} \]
+    </div>  
+    <div class="equation-line">
+      <div class="equation-label">Blaschke 2 egg (Cartesian):</div>
+      \[ y = \pm\sqrt{\dfrac{6.4 - e(x-3)^{2}}{2x}} \]
+    </div> 
+    <div class="equation-line">
+      <div class="equation-label">Skovgaard egg (Cartesian):</div>
+      \[ y = \pm\sqrt{3\sqrt{2x+1}-2x-3} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Babois egg (Cartesian):</div>
+      \[ y = \pm\sqrt{\dfrac{1}{\varphi}\bigl(0.1 - \bigl(\sqrt{x} - \dfrac{1}{\varphi}\bigr)^{2}\bigr)},\quad \varphi = \dfrac{1+\sqrt{5}}{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bouma egg (Cartesian):</div>
+      \[ y = \pm\sqrt{2^{x}-x^{2}} \]
+    </div>  
+    <div class="equation-line">
+      <div class="equation-label">Neyt egg (Cartesian):</div>
+      \[ y = \pm\sqrt{x - \dfrac{\cosh x}{e}} \]
+    </div> 
+    <div class="equation-line">
+      <div class="equation-label">Yamamoto egg (Cartesian):</div>
+      \[ y = \pm\dfrac{1}{2.8}\sqrt{-\ln\bigl(1 + e^{-x} - e^{-4x^{2}}\bigr)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Inventing “egg” curves has long been a cottage industry in recreational mathematics. The collection implemented here is not exhaustive; it gathers classical forms that receive a mild “eggifying” tweak together with a large number of hobbyist constructions that have appeared on mathematical websites, often accompanied by construction notes and dated e-mail contributions. The principal living archives for these shapes are Robert Ferréol’s MathCurve<sup>1</sup> and Jürgen Köller’s Mathematische Basteleien.<sup>2</sup></p>
+    <p>The double-egg polar form \(r=a\cos^{2}\theta\) appears on MathCurve with a geometric construction and links to related two-lobed eggs; it is already present in the work of Villalpando (1606) and Münger (1894). A century later Granville (1908/1929) obtained an egg-shaped quartic as the hyperbolism of a circle; the same site records the Euclidean construction (point, line, circle, perpendicular) that yields a modern-looking profile. Nicolas Rosillo’s 2009 locus—built from a circle and two marked points on a diameter—produces a rational quartic that can be tuned into a clean egg silhouette. Köller’s page “Egg Curves and Ovals” collects the Bastelein family (ellipse modulated by a linear, reciprocal or exponential factor), the Jacobs exponential-weight egg, the Szegő form obtained by adding a small constant to an open exponential curve, and a long list of reader contributions (Sillke, Blaschke, Skovgaard, Babois, Bouma, Neyt, Yamamoto<sup>3</sup>). Several of the entries are simply classical curves—the folium of Descartes, the trisectrix of Maclaurin, the lemniscate of Bernoulli, the conchoid of de Sluze—given a constant offset that closes an otherwise asymptotic or looped figure into a compact oval.</p>
+    <p>The classical double-egg polar form coincides with the magnetic field lines of a dipole; the orthogonal trajectories are the curves of the companion polar equation.<sup>1</sup> No engineering applications have been identified for the remaining recreational forms. A separate scientific literature continues to study the geometry of real avian eggs, producing “universal” formulae intended for biological and poultry-industry use.<sup>4</sup> The recreational constructions and the biological models share the same practical spirit: capture a believable egg silhouette with the simplest possible algebraic expression.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/oeufdouble/oeufdouble.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/oeufdouble/oeufdouble.shtml</a> (double egg, magnetic-dipole field lines); <a href="https://mathcurve.com/courbes2d.gb/oeuf/oeufgranville.shtml" target="_blank" rel="noopener noreferrer">Granville egg</a>; <a href="https://mathcurve.com/courbes2d.gb/rosillo/rosillo.shtml" target="_blank" rel="noopener noreferrer">Rosillo curve</a>; <a href="https://mathcurve.com/surfaces.gb/ovoid/ovoid.shtml" target="_blank" rel="noopener noreferrer">Ovoid</a>; <a href="https://mathcurve.com/courbes2d.gb/ovale/ovale.shtml" target="_blank" rel="noopener noreferrer">Oval</a>.</li>
+      <li><a href="https://www.mathematische-basteleien.de/eggcurves.htm" target="_blank" rel="noopener noreferrer">https://www.mathematische-basteleien.de/eggcurves.htm</a> (Köller’s collection of Bastelein, Jacobs, Szegő, Sillke, Blaschke, Skovgaard, Babois, Bouma, Neyt, Yamamoto and related recreational eggs; Hortsch 1990 reference).</li>
+      <li><a href="https://nyjp07.com/index_egg6_E.html" target="_blank" rel="noopener noreferrer">https://nyjp07.com/index_egg6_E.html</a> (Yamamoto equation #6).</li>
+
+      <li><a href="https://www.biorxiv.org/content/10.1101/2020.08.15.252148v1.full" target="_blank" rel="noopener noreferrer">https://www.biorxiv.org/content/10.1101/2020.08.15.252148v1.full</a>(Narushin et. al. universal formula for egg shape).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:EGGCURVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xstep restartflag
+                     id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc kw2)
+  (setq id "Egg Curve"
+        iq ""
+        dcl "EGGCURVE"
+        opt '("Double" "Hortsch" "Granville" "Rosillo" "Bastelein" "Jacobs" "Szego" "Descartes" "MacLauren" "Bernoulli" "deSluze"
+              "Sillke" "Blaschke" "Skovgaard" "Babois" "Bouma" "Neyt" "Yamamoto")
+        kw 0
+        mode 'param
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\nDouble egg: r=a·cos²(θ)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           rval '(* fa (alt_expt (cos (eval a2)) 2.0 nil))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           paramstep (/ (* 360 (/ pi 180.0)) divcount)))
+    ((eq kw 1)
+     (princ "\nHortsch egg: r=a·e^(cos(2θ)·cos²(θ))")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           rval '(* fa (exp (cos (* 2.0 (eval a2)))) (expt (cos (eval a2)) 2))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           paramstep (/ (* 360 (/ pi 180.0)) divcount)))
+    ((eq kw 2)
+     (princ "\nGranville egg: x=b+r·cos(t), y=(a·r·sin(t))/(b + r·cos(t))")
+     (setq fc (get_real 2 "r (circle radius)" 1.0)
+           fb (get_real 2 "b (circle center x-coordinate)" 5.0)
+           fa (get_real 2 "a (vertical proportion)" 4.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", r=" (rtos fc 2 4))
+           xc '(+ fb (* fc (cos (eval a2))))
+           yc '(/ (* fa fc (sin (eval a2))) (avoid_zero (+ fb (* fc (cos (eval a2))))))
+           paramstep (/ (* 2.0 pi) divcount)))
+    ((eq kw 3)
+     (princ "\nRosillo egg: y = ±(b-x)√((a²-x²)/(c-x))")
+     (setq fa (get_real 2 "a (half-length; egg length = 2a)" 1.0)
+           fb (get_boundr 2 "b (shape; requires b>a; larger b→thicker)" (* 1.4 fa) fa nil nil nil)
+           fc (get_boundr 2 "c (pole; requires c>b; larger c→pointed)" (* 1.4 fb) fb nil nil nil)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+           xc '(- fa (eval a2))
+           yc '(if (<= (- (* fa fa) (* (eval x2) (eval x2))) 1e-12) 0.0 (/ (* (- fb (eval x2)) (alt_expt (- (* fa fa) (* (eval x2) (eval x2))) 0.5 nil))
+               (avoid_zero (- fc (eval x2)))))
+           paramstep (/ (* 2.0 fa) divcount)))
+    ((eq kw 4)
+     (setq kw2 (get_keyword 0 "First Second Third fouRth" "First Second Third or fouRth bastelein egg?" "First"))
+     (cond
+       ((eq kw2 "First")
+        (princ "\nBastelein egg 1, y=±2/3√((1-x²)/(1+3ax))")
+        (setq yc '(if (<= (/ (- 1.0 (* (eval x2) (eval x2))) (avoid_zero (+ 1.0 (* 3.0 fa (eval x2))))) 1e-12) 0.0
+                  (* (/ 2.0 3.0) (alt_expt (/ (- 1.0 (* (eval x2) (eval x2))) (avoid_zero (+ 1.0 (* 3.0 fa (eval x2))))) 0.5 nil)))))
+       ((eq kw2 "Second")
+        (princ "\nBastelein egg 2, y=±(2/3)√((1-x²)(1-3ax))")
+        (setq yc '(if (<= (* (- 1.0 (* (eval x2) (eval x2))) (- 1.0 (* 3.0 fa (eval x2)))) 1e-12) 0.0
+                  (* (/ 2.0 3.0) (alt_expt (* (- 1.0 (* (eval x2) (eval x2))) (- 1.0 (* 3.0 fa (eval x2)))) 0.5 nil)))))
+       ((eq kw2 "Third")
+        (princ "\nBastelein egg 3, y=±(2/3)√((1-x²)e^(-3ax))")
+        (setq yc '(if (<= (* (- 1.0 (* (eval x2) (eval x2))) (exp (* -3.0 fa (eval x2)))) 1e-12) 0.0
+                  (* (/ 2.0 3.0) (alt_expt (* (- 1.0 (* (eval x2) (eval x2))) (exp (* -3.0 fa (eval x2)))) 0.5 nil)))))
+       ((eq kw2 "fouRth")
+        (princ "\nBastelein egg 4, y=±(2/3)√((1-x²)((1-3ax)/(1+3ax)))")
+        (setq yc '(if (<= (* (- 1.0 (* (eval x2) (eval x2))) (/ (- 1.0 (* 3.0 fa (eval x2))) (avoid_zero (+ 1.0 (* 3.0 fa (eval x2)))))) 1e-12) 0.0
+                  (* (/ 2.0 3.0) (alt_expt (* (- 1.0 (* (eval x2) (eval x2))) (/ (- 1.0 (* 3.0 fa (eval x2))) (avoid_zero (+ 1.0 (* 3.0 fa (eval x2)))))) 0.5 nil))))))
+     (setq fa (get_boundr 0 "a (asymmetry proportion, 0=symmetric, >0 fattens left)" 0.12 nil (/ 1.0 3.0) T T)
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           xc '(- 1.0 (eval a2))
+           paramstep (/ 2.0 divcount)))
+    ((eq kw 5)
+     (princ "\nJacobs egg: y=±√((1-x²)/(a·bˣ)")
+     (setq fa (get_real 6 "a (vertical scale, >1 flattens, <1 fattens)" 1.6)
+           fb (get_real 6 "b (asymmetry base, >1 fattens left, <1 fattens right)" 1.4)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+           xc '(- 1.0 (eval a2))
+           yc '(if (<= (- 1.0 (* (eval x2) (eval x2))) 1e-12) 0.0 (/ (alt_expt (- 1.0 (* (eval x2) (eval x2))) 0.5 nil) (* fa (exp (* (log fb) (eval x2))))))
+           paramstep (/ 2.0 divcount)))
+    ((eq kw 6)
+     (princ "\nSzego egg: y=±√(e^(2x-2)-x²-0.02)")
+     (setq eq_display ""
+           paramstep (/ 1.09179759712092 divcount)
+           xc '(- 0.842422931291946 (eval a2))
+           yc '(max 0.0 (alt_expt (- (exp (- (* 2.0 (eval x2)) 2.0)) (* (eval x2) (eval x2)) 0.02) 0.5 nil))))
+    ((eq kw 7)
+     (princ "\nDescartes egg: x³+y³+0.06=3xy")
+     (setq kw2 (get_keyword 0 "Bottom Top" "Bottom or Top limb?" "Bottom"))
+     (cond
+((eq kw2 "Bottom")
+        (setq yc '(* 2.0 (sqrt (max 0.0 (eval x2))) (cos (/ (- (acos (/ (- (+ (* (eval x2) (* (eval x2) (eval x2))) 0.06))
+                  (avoid_zero (* 2.0 (* (eval x2) (sqrt (max 0.0 (eval x2)))))))) (* 2.0 pi)) 3.0)))))
+       ((eq kw2 "Top")
+        (setq yc '(* 2.0 (sqrt (max 0.0 (eval x2))) (cos (/ (acos (/ (- (+ (* (eval x2) (* (eval x2) (eval x2))) 0.06))
+                  (avoid_zero (* 2.0 (* (eval x2) (sqrt (max 0.0 (eval x2)))))))) 3.0))))))
+     (setq eq_display ""
+           xc '(+ 0.0975419774001159 (eval a2))
+           paramstep (/ 1.4736983292222563 divcount)))
+    ((eq kw 8)
+     (princ "\nMacLaurin egg: y=±√((x²·(3-x)-0.01)/(1+x))")
+     (setq eq_display ""
+           xc '(+ 0.05830437343463209  (eval a2))
+           yc '(if (<= (/ (- (* (* (eval x2) (eval x2)) (- 3.0 (eval x2))) 0.01) (avoid_zero (+ 1.0 (eval x2)))) 1e-12) 0.0
+               (alt_expt (/ (- (* (* (eval x2) (eval x2)) (- 3.0 (eval x2))) 0.01) (avoid_zero (+ 1.0 (eval x2)))) 0.5 nil))
+           paramstep (/ 2.94058369134038261 divcount)))
+    ((eq kw 9)
+     (princ "\nBernoulli egg: y=±√(√(8*x²+0.96)-(2*x²+1))/2)")
+     (setq eq_display ""
+           xc '(+ 0.1005089620052082  (eval a2))
+           yc '(if (<= (/ (- (alt_expt (+ (* 8.0 (* (eval x2) (eval x2))) 0.96) 0.5 nil) (+ 1.0 (* 2.0 (* (eval x2) (eval x2))))) 2.0) 1e-12) 0.0
+               (alt_expt (/ (- (alt_expt (+ (* 8.0 (* (eval x2) (eval x2))) 0.96) 0.5 nil) (+ 1.0 (* 2.0 (* (eval x2) (eval x2))))) 2.0) 0.5 nil))
+           paramstep (/ 0.8944271909999159 divcount)))
+    ((eq kw 10)
+     (princ "\nDeSluze egg: y=±√((-x³+1.5*x²-0.04)/(x+0.5))")
+     (setq eq_display ""
+           xc '(+ 0.17366118321649367  (eval a2))
+           yc '(if (<= (/ (- (* 1.5 (* (eval x2) (eval x2))) (alt_expt (eval x2) 3.0 nil) 0.04) (avoid_zero (+ (eval x2) 0.5))) 1e-12) 0.0
+               (alt_expt (/ (- (* 1.5 (* (eval x2) (eval x2))) (alt_expt (eval x2) 3.0 nil) 0.04) (avoid_zero (+ (eval x2) 0.5))) 0.5 nil))
+           paramstep (/ 1.3081212182893780 divcount)))
+    ((eq kw 11)
+     (princ "\nSillke egg: y=±√(|sin(x)+0.1sin(2x)|)")
+     (setq eq_display ""
+           xc '(eval a2)
+           yc '(if (<= (abs (+ (sin (eval x2)) (* 0.1 (sin (* 2.0 (eval x2)))))) 1e-12) 0.0 (sqrt (abs (+ (sin (eval x2)) (* 0.1 (sin (* 2.0 (eval x2))))))))
+           paramstep (/ pi divcount)))
+    ((eq kw 12)
+     (princ "\nBlaschke egg: y=±√((6.4-e*(x-3)²)/(2x))")
+     (setq kw2 (get_keyword 0 "First Second" "First or Second?" "First"))
+     (cond
+       ((eq kw2 "First")
+        (princ "\nBlaschke 1 egg: y=±√(x·(√(a)-√(x)))")
+        (setq fa (get_real 6 "a (scale)" 1.0)
+              eq_display ""
+              xc '(eval a2)
+              yc '(if (<= (* (eval x2) (- (sqrt fa) (sqrt (max 0.0 (eval x2))))) 1e-12) 0.0 (sqrt (max 0.0 (* (eval x2) (- (sqrt fa) (sqrt (max 0.0 (eval x2))))))))
+              paramstep (/ fa divcount)))
+       ((eq kw2 "Second")
+        (princ "\nBlaschke 2 egg: y=±√((6.4-e*(x-3)²)/(2x))")
+        (setq eq_display ""
+              xc '(+ 1.46558531566684 (eval a2))
+              yc '(sqrt (max 0.0 (/ (- 6.4 (* (exp 1.0) (alt_expt (- (eval x2) 3.0) 2.0 nil))) (* 2.0 (eval x2)))))
+              paramstep (/ 3.06882936866632 divcount)))))
+    ((eq kw 13)
+     (princ "\nSkovgaard egg: y=±√(3·√(2x+1)-2x-3)")
+     (setq eq_display ""
+           xc '(eval a2)
+           yc '(if (<= (- (* 3.0 (sqrt (+ (* 2.0 (eval x2)) 1.0))) (* 2.0 (eval x2)) 3.0) 1e-12) 0.0
+               (sqrt (max 0.0 (- (* 3.0 (sqrt (+ (* 2.0 (eval x2)) 1.0))) (* 2.0 (eval x2)) 3.0))))
+           paramstep (/ 1.5 divcount)))
+    ((eq kw 14)
+     (princ "\nBabois egg: y=±√((1/φ)(0.1-(√(x)-1/φ)²)), where φ=(1+√(5))/2")
+     (setq fa (/ (+ 1.0 (sqrt 5.0)) 2.0)
+           eq_display ""
+           xc '(+ 0.09108699608039553 (eval a2))
+           yc '(if (<= (* (/ 1.0 fa) (- 0.1 (alt_expt (- (sqrt (eval x2)) (/ 1.0 fa)) 2.0 nil))) 1e-12) 0.0
+               (sqrt (max 0.0 (* (/ 1.0 fa) (- 0.1 (alt_expt (- (sqrt (eval x2)) (/ 1.0 fa)) 2.0 nil))))))
+           paramstep (/ 0.7817580303394190 divcount)))
+    ((eq kw 15)
+     (princ "\nBouma egg: y=±√(2^x-x²)")
+     (setq eq_display ""
+           xc '(+ -0.7666646959621233 (eval a2))
+           yc '(sqrt (max 0.0 (- (exp (* (log 2.0) (eval x2))) (* (eval x2) (eval x2)))))
+           paramstep (/ 2.766664695962123 divcount)))
+    ((eq kw 16)
+     (princ "\nNeyt egg: y=±√(x-cosh(x)/e)")
+     (setq eq_display ""
+           xc '(+ 0.3972973638344549 (eval a2))
+           yc '(if (<= (- (eval x2) (/ (cosh (eval x2)) (exp 1.0))) 1e-12) 0.0 (sqrt (max 0.0 (- (eval x2) (/ (cosh (eval x2)) (exp 1.0))))))
+           paramstep (/ 2.2734189684450159 divcount)))
+    ((eq kw 17)
+     (princ "\nYamamoto egg: y=±(1/2.8)·√(-ln(1+exp(-x)-exp(-4·x²)))")
+     (setq eq_display ""
+           xc '(eval a2)
+           yc '(if (<= (- (log (max 1e-12 (+ 1.0 (exp (- (eval x2))) (- (exp (* -4.0 (* (eval x2) (eval x2))))))))) 1e-12) 0.0
+               (* (/ 1.0 2.8) (sqrt (max 0.0 (- (log (max 1e-12 (+ 1.0 (exp (- (eval x2))) (- (exp (* -4.0 (* (eval x2) (eval x2)))))))))))))
+           paramstep (/ 0.25 divcount))))
+  (setq skm (if (or (< kw 3) (eq kw 7)) '(T T T) '(T nil T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        x2 x1
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:EGGCURVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

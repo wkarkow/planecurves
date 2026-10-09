@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyperbolic Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hyperbolic Spiral</h1>
+      <p class="short-description">A plane curve with polar equation \( r = a/\theta \); the radius decreases hyperbolically with polar angle and approaches the origin asymptotically.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HyperSpiral/HyperSpiral01-360.avif"
+           alt="Hyperbolic Spiral, a=1">
+      <figcaption>Hyperbolic Spiral, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic Spiral polar equation:</div>
+      \[ r = \dfrac{a}{\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The hyperbolic spiral<sup>1,2,3</sup>, also known as the reciprocal spiral or inverse spiral, was first studied by Pierre Varignon in 1704. It was subsequently examined by Johann Bernoulli between 1710 and 1713 and by Roger Cotes in 1722. The curve is the inverse of the Archimedean spiral and a special case of a Cotes’ spiral, representing the trajectory of a particle in a central orbit under a specific power-law force.</p>
+    <p>When the pole of a hyperbolic spiral rolls along a straight line, the path traced by the pole is a tractrix. As the polar angle θ increases without bound, the radius r approaches zero asymptotically while the arc length remains infinite.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In sports facility design, the staggered starting positions for runners in 200 m and 400 m races on curved tracks follow a hyperbolic spiral so that athletes in every lane travel identical distances to the finish line. In architecture, the perspective view looking straight up the axis of a spiral staircase matches the curve exactly. Astronomers have applied the form to model the arms of certain spiral galaxies whose pitch angle increases with distance from the center.</p>
+    <p>See also the Spiral entry for more generalized spiral options.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/HyperbolicSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/HyperbolicSpiral.html</a> (history and equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/hyperbolic/hyperbolic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/hyperbolic/hyperbolic.shtml</a> (history, reciprocal name, properties)</li>
+      <li><a href="https://www.2dcurves.com/spiral/spiralh.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spiralh.html</a> (history and properties)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HYPERSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                        divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc rval skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Hyperbolic Spiral"
+        iq "r=a/θ"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(/ fa (avoid_zero (eval a2)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HYPERSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

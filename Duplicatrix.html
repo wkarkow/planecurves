@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Duplicatrix Cubic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Duplicatrix Cubic</h1>
+      <p class="short-description">A classical Newtonian cubic that serves as a geometric instrument for segment trisection and appears in kinematic mechanisms related to the cube-duplication problem.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Duplicatrix/Duplicatrix01-360.avif"
+           alt="Duplicatrix Cubic, multiple values of a">
+      <figcaption>
+        Duplicatrix Cubic, a=
+        <span class="figcap-value" style="color:#000000">0.01</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>,
+        <span class="figcap-value" style="color:#9600FF">4.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Duplicatrix/Duplicatrix02-360.avif"
+           alt="Duplicatrix Cubic, line segment trisection (see history)">
+      <figcaption>Duplicatrix Cubic, line segment trisection (see history)</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Duplicatrix Cubic Cartesian equation:</div>
+      \[ x^{3} = a(x^{2} + y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Duplicatrix Cubic polar equation:</div>
+      \[ r = \dfrac{a}{\cos^{3}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Duplicatrix Cubic<sup>1,2</sup> is a classical plane cubic associated with early analytic geometry. It was studied in detail by Uhlhorn in 1809 and later by G. de Longchamps in 1890, primarily for its algebraic and geometric properties as a member of the Newtonian family of cubics.<sup>3</sup> It is also known as the toxoid and is a special case of the divergent parabola and of Clairaut’s curve. In modern references such as MathCurve it is typically presented in the polar form below.</p>
+    <p>Real-life applications are found in mechanism design. A kinematic linkage mechanism for generating the duplicatrix cubic was described by Artobolevskii and analyzed in engineering literature for its ability to trace the curve mechanically.<sup>4</sup> This connects directly to the historical geometric construction problem of doubling the volume of a cube. No other applications in engineering or the natural sciences were identified.</p>
+    <p>When the duplicatrix is drawn with parameter \(a=1\) and vertex at (1,0), it may nevertheless be used as a geometric instrument for segment trisection, aligning more closely with the classical emphasis on ratios of lengths than on angular manipulation. Given a segment \(OP>1\) laid along the x-axis, a vertical erected at \(P\) intersects the curve at a point \(Q\), whose coordinates encode a cubic relationship between horizontal and vertical projections. The tangent \(ST\) to the curve at \(Q\) is transferred to the origin as \(OT'\). A line \(UO\) is constructed perpendicular to the line \(OQ\). The angle \(UOT'\) is then rotated to the x axis as \(U'OT''\). The line \(OU'\) is extended to the horizontal line \(QR\), intersecting it at \(V\). From \(V\) a perpendicular is dropped to \(W\). The equal segments \(OW\), \(WW'\), and \(W'P\) are each 1/3 of \(OP\). In this way, without recourse to angle trisection or numerical computation, the duplicatrix serves as a valid auxiliary curve for dividing a line segment into three equal parts.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cubicduplicatrice/cubicduplicatrice.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cubicduplicatrice/cubicduplicatrice.shtml</a> (history, geometric construction, equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/duplicatrice/duplicatrice.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/duplicatrice/duplicatrice.shtml</a> (duplicatrix family and cube-duplication context)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubicn.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubicn.html</a> (polar equation and Newtonian cubic family)</li>
+      <li><a href="https://www.utjiu.ro/rev_mec/mecanica/pdf/2020-01/04_Iulian%20POPESCU,%20Mirela%20LUCA,%20Cherciu%20-%20STUDY%20OF%20A%20MECHANISM%20GENERATING%20%20DUPLICATRIX%20CUBIC.pdf" target="_blank" rel="noopener noreferrer">https://www.utjiu.ro/rev_mec/mecanica/pdf/2020-01/04_Iulian%20POPESCU,%20Mirela%20LUCA,%20Cherciu%20-%20STUDY%20OF%20A%20MECHANISM%20GENERATING%20%20DUPLICATRIX%20CUBIC.pdf</a> (mechanism for generating the curve)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>; DUPLICATRIX.LSP - started 02/07/26
+
+(defun C:DUPLICATRIX (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                        restartflag id iq dcl opt kw mode dpr dct dpt span rval xc yc a1 skm a2 x1 y1 x2 y2 eq_display fa)
+  (setq id "Duplicatrix Cubic"
+        iq "r=a·cos^{-3}(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(/ fa (expt (avoid_zero (cos (eval a2))) 3.0))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(nil T T)
+        a1 (- (* 0.5 paramstep) (/ pi 2.0))
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DUPLICATRIX)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

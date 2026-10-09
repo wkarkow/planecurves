@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Limaçon Evolute - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Limaçon Evolute</h1>
+      <p class="short-description">The locus of centers of curvature of the limaçon of Pascal.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute01-360.avif"
+           data-caption="limaçon(black),evolute(red),a=2,b=1,c=1,d=1"
+           alt="limaçon(black),evolute(red),a=2,b=1,c=1,d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=2,b=1,c=1,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute02-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1.5,b=1,c=1,d=1"
+           alt="limaçon(black),evolute(red),a=1.5,b=1,c=1,d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1.5,b=1,c=1,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute03-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=1,c=1,d=1"
+           alt="limaçon(black),evolute(red),a=1,b=1,c=1,d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1,b=1,c=1,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute04-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=2,c=1,d=1"
+           alt="limaçon(black),evolute(red),a=1,b=2,c=1,d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1,b=2,c=1,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute05-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=4,c=1,d=1"
+           alt="limaçon(black),evolute(red),a=1,b=4,c=1,d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1,b=4,c=1,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute06-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=2,c=1,d=5/3"
+           alt="limaçon(black),evolute(red),a=1,b=2,c=1,d=5/3">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1,b=2,c=1,d=5/3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute07-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=2,c=8,d=5/3"
+           alt="limaçon(black),evolute(red),a=1,b=2,c=8,d=5/3">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1,b=2,c=8,d=5/3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute08-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=0.25,c=0.8,d=1.05"
+           alt="limaçon(black),evolute(red),a=1,b=0.25,c=0.8,d=1.05">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1,b=0.25,c=0.8,d=1.05
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute09-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=2,c=1,d=1.66"
+           alt="limaçon(black),evolute(red),a=1,b=2,c=1,d=1.66">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1, b=1, c=2, d=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/LimaEvolute/LimaEvolute10-360.avif"
+           data-caption="limaçon(black),evolute(red),a=1,b=5,c=1.5,d=1.5"
+           alt="limaçon(black),evolute(red),a=1,b=5,c=1.5,d=1.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">limaçon</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>,
+        a=1,b=5,c=1.5,d=1.5
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Classical limaçon polar equation:</div>
+      \[ r = a + b\cos\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized limaçon polar equation:</div>
+      \[ r = a + b\cdot\cos^{c}(d\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized evolute parametric equation \(x(\theta)\):</div>
+      \[
+      x=\dfrac{
+      \bigl(a+b\cos^{c}(d\theta)\bigr)\cos\theta
+      \Bigl[
+      \bigl(a+b\cos^{c}(d\theta)\bigr)^{2}
+      +2b^{2}c^{2}d^{2}\sin^{2}(d\theta)\cos^{2c-2}(d\theta)
+      -bcd^{2}\bigl(a+b\cos^{c}(d\theta)\bigr)\bigl(c\sin^{2}(d\theta)-1\bigr)\cos^{c-2}(d\theta)
+      \Bigr]
+      -
+      \Bigl[-bcd\sin(d\theta)\cos^{c-1}(d\theta)\sin\theta
+      +\bigl(a+b\cos^{c}(d\theta)\bigr)\cos\theta\Bigr]
+      \Bigl[
+      \bigl(a+b\cos^{c}(d\theta)\bigr)^{2}
+      +b^{2}c^{2}d^{2}\sin^{2}(d\theta)\cos^{2c-2}(d\theta)
+      \Bigr]
+      }{
+      \bigl(a+b\cos^{c}(d\theta)\bigr)^{2}
+      +2b^{2}c^{2}d^{2}\sin^{2}(d\theta)\cos^{2c-2}(d\theta)
+      -bcd^{2}\bigl(a+b\cos^{c}(d\theta)\bigr)\bigl(c\sin^{2}(d\theta)-1\bigr)\cos^{c-2}(d\theta)
+      }
+      \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized evolute parametric equation \(y(\theta)\):</div>
+      \[
+      y=\dfrac{
+      \bigl(a+b\cos^{c}(d\theta)\bigr)\sin\theta
+      \Bigl[
+      \bigl(a+b\cos^{c}(d\theta)\bigr)^{2}
+      +2b^{2}c^{2}d^{2}\sin^{2}(d\theta)\cos^{2c-2}(d\theta)
+      -bcd^{2}\bigl(a+b\cos^{c}(d\theta)\bigr)\bigl(c\sin^{2}(d\theta)-1\bigr)\cos^{c-2}(d\theta)
+      \Bigr]
+      +
+      \Bigl[-bcd\sin(d\theta)\cos^{c-1}(d\theta)\cos\theta
+      -\bigl(a+b\cos^{c}(d\theta)\bigr)\sin\theta\Bigr]
+      \Bigl[
+      \bigl(a+b\cos^{c}(d\theta)\bigr)^{2}
+      +b^{2}c^{2}d^{2}\sin^{2}(d\theta)\cos^{2c-2}(d\theta)
+      \Bigr]
+      }{
+      \bigl(a+b\cos^{c}(d\theta)\bigr)^{2}
+      +2b^{2}c^{2}d^{2}\sin^{2}(d\theta)\cos^{2c-2}(d\theta)
+      -bcd^{2}\bigl(a+b\cos^{c}(d\theta)\bigr)\bigl(c\sin^{2}(d\theta)-1\bigr)\cos^{c-2}(d\theta)
+      }
+      \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The limaçon of Pascal is a polar curve first investigated geometrically by Albrecht Dürer in 1525 in his treatise <em>Underweysung der Messung</em>, where he described a construction method.<sup>1</sup> Étienne Pascal (1588–1651), a French magistrate and father of Blaise Pascal, studied the curve around 1630. Gilles Personne de Roberval named it “limaçon” (from the Latin <em>limax</em> for snail) in 1650 while using it to illustrate methods for finding tangents.<sup>2</sup> The evolute of any plane curve is the locus of its centers of curvature (the envelope of its normals). For the classical limaçon \(r=a+b\cdot\cos\theta\), the evolute coincides exactly with the catacaustic, the envelope of rays reflected from a circle when the light source (radiant point) lies at a finite distance from the circle.<sup>3</sup> The code generalizes the limaçon to \(r=a+b\cdot\cos^{c}(d\theta)\) and computes the corresponding evolute parametrically via the standard polar-evolute formulas for radius of curvature and center-of-curvature coordinates. Once the limaçon is generalized, its evolute grows in algebraic difficulty far faster than the original curve.</p>
+    <p>Real-life applications of the limaçon evolute arise primarily through its identity with circle catacaustics in optics. Caustics describe the bright curves formed by concentrated reflected light rays and appear in the analysis of curved mirrors, cylindrical lenses, and everyday reflection phenomena.<sup>4</sup> In engineering, limaçon-based rotary positive-displacement machines (compressors, expanders, and pumps) use limaçon profiles for variable-volume chambers in fluid processing and small-scale power generation, including renewable-energy systems; the evolute properties aid in understanding curvature-related stress and sealing behavior in such designs.<sup>5</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Limacon.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Limacon.html</a> (history of limaçon).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/limacon/limacon.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/limacon/limacon.shtml</a> (history of Étienne Pascal, Roberval, and evolute as caustic).</li>
+      <li><a href="https://mathworld.wolfram.com/LimaconEvolute.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/LimaconEvolute.html</a> (limaçon evolute as catacaustic of circle).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/developpee/developpee.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/developpee/developpee.shtml</a> (evolute–caustic equivalence).</li>
+      <li><a href="https://www.mdpi.com/2673-8392/4/4/122" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2673-8392/4/4/122</a> (limaçon rotary machines in engineering and power generation).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LIMAEVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                        xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc maxdraw skm a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Limaçon Evolute (generalized)"
+        iq "r=a + b·cosᶜ(dθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (offset)" 1.0)
+        fb (get_real 2 "b (cosine multiplier)" 2.0)
+        fc (get_real 2 "c (cosine exponent)" 1.0)
+        fd (get_real 2 "d (θ multiplier)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(- (* (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (cos (eval a2))) (/ (* (+ (* -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos 
+            (* fd (eval a2))) (- fc 1.0) nil) (sin (eval a2))) (* (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (cos (eval a2)))) (+ (* (+ fa
+            (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil)))) (* -1.0 fb fc fd (sin (* fd (eval a2)))
+            (alt_expt (cos (* fd (eval a2))) (- fc 1.0) nil) -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos (* fd (eval a2))) (- fc 1.0) nil))))
+            (avoid_zero (+ (* (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil)))) (* 2.0
+            (* -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos (* fd (eval a2))) (- fc 1.0) nil) -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos
+            (* fd (eval a2))) (- fc 1.0) nil))) (* -1.0 (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (* fb fc (* fd fd) (+ (* fc (sin (* fd
+            (eval a2))) (sin (* fd (eval a2)))) -1.0) (alt_expt (cos (* fd (eval a2))) (- fc 2.0) nil)))))))
+        yc '(+ (* (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (sin (eval a2))) (/ (* (+ (* -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos
+            (* fd (eval a2))) (- fc 1.0) nil) (cos (eval a2))) (* -1.0 (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (sin (eval a2)))) (+ (* (+ fa
+            (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil)))) (* -1.0 fb fc fd (sin (* fd (eval a2)))
+            (alt_expt (cos (* fd (eval a2))) (- fc 1.0) nil) -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos (* fd (eval a2))) (- fc 1.0) nil))))
+            (avoid_zero (+ (* (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil)))) (* 2.0
+            (* -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos (* fd (eval a2))) (- fc 1.0) nil) -1.0 fb fc fd (sin (* fd (eval a2))) (alt_expt (cos
+            (* fd (eval a2))) (- fc 1.0) nil))) (* -1.0 (+ fa (* fb (alt_expt (cos (* fd (eval a2))) fc nil))) (* fb fc (* fd fd) (+ (* fc (sin (* fd
+            (eval a2))) (sin (* fd (eval a2)))) -1.0) (alt_expt (cos (* fd (eval a2))) (- fc 2.0) nil)))))))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 20)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LIMAEVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

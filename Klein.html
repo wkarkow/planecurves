@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Klein Quartic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Klein Quartic</h1>
+      <p class="short-description">A plane algebraic curve of degree four that realizes the highest possible symmetry for a genus-3 Riemann surface.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Klein/Klein01-360.avif"
+           data-caption="Klein Quartic, a=1,b=0.5,c=0.25(black),0.27(red),0.3(blue),0.4(green),0.5(orange),1.0(purple),2.0(cyan),8.0(brown)"
+           alt="Klein Quartic, a=1,b=0.5,c=0.25(black),0.27(red),0.3(blue),0.4(green),0.5(orange),1.0(purple),2.0(cyan),8.0(brown)">
+      <figcaption>
+        Klein Quartic, a=1,b=0.5,c=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.27</span>,
+        <span class="figcap-value" style="color:#0000FF">0.3</span>,
+        <span class="figcap-value" style="color:#009600">0.4</span>,
+        <span class="figcap-value" style="color:#FF9600">0.5</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        <span class="figcap-value" style="color:#0096FF">2.0</span>,
+        <span class="figcap-value" style="color:#AA5555">8.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein02-360.avif"
+           data-caption="Klein Quartic, a=1,b=0.9,c=0.811(black),0.82(red),0.83(blue),0.85(green),0.9(orange),1.1(purple),1.5(cyan),10(brown)"
+           alt="Klein Quartic, a=1,b=0.9,c=0.811(black),0.82(red),0.83(blue),0.85(green),0.9(orange),1.1(purple),1.5(cyan),10(brown)">
+      <figcaption>
+        Klein Quartic, a=1,b=0.9,c=
+        <span class="figcap-value" style="color:#000000">0.811</span>,
+        <span class="figcap-value" style="color:#FF0000">0.82</span>,
+        <span class="figcap-value" style="color:#0000FF">0.83</span>,
+        <span class="figcap-value" style="color:#009600">0.85</span>,
+        <span class="figcap-value" style="color:#FF9600">0.9</span>,
+        <span class="figcap-value" style="color:#9600FF">1.1</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">10</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein03-360.avif"
+           data-caption="Klein Quartic, a=1,b=1.0,c=1.0(black),1.05(red),1.1(blue),1.2(green),1.3(orange),1.4(purple),1.5(cyan),2.0(brown)"
+           alt="Klein Quartic, a=1,b=1.0,c=1.0(black),1.05(red),1.1(blue),1.2(green),1.3(orange),1.4(purple),1.5(cyan),2.0(brown)">
+      <figcaption>
+        Klein Quartic, a=1,b=0.9,c=
+        <span class="figcap-value" style="color:#000000">1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.05</span>,
+        <span class="figcap-value" style="color:#0000FF">1.1</span>,
+        <span class="figcap-value" style="color:#009600">1.2</span>,
+        <span class="figcap-value" style="color:#FF9600">1.3</span>,
+        <span class="figcap-value" style="color:#9600FF">1.4</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">2.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein04-360.avif"
+           alt="Klein Quartic, a=1,b=0.5,c=0.23, nearestR versus nearestXY">
+      <figcaption>Klein Quartic, a=1,b=0.5,c=0.23, nearestR versus nearestXY</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein05-360.avif"
+           alt="Klein Quartic, a=1,b=0.9,c=0.5, nearestR versus Outermost">
+      <figcaption>Klein Quartic, a=1,b=0.9,c=0.5, nearestR versus Outermost</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein06-360.avif"
+           alt="Klein Quartic, a=1,b=0.1,c=0.25">
+      <figcaption>Klein Quartic, a=1,b=0.1,c=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein07-360.avif"
+           alt="Klein Quartic, a=1,b=0.1,c=0.005, nearestR versus Outermost">
+      <figcaption>Klein Quartic, a=1,b=0.1,c=0.005, nearestR versus Outermost</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein08-360.avif"
+           alt="Klein Quartic, a=1,b=0.5,c=0.1, nearestR versus Outermost">
+      <figcaption>Klein Quartic, a=2, b=0.5, c=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein09-360.avif"
+           alt="Klein Quartic, a=1,b=2,c=1">
+      <figcaption>Klein Quartic, a=1,b=2,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein10-360.avif"
+           alt="Klein Quartic, a=1,b=2,c=5">
+      <figcaption>Klein Quartic, a=1,b=2,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein11-360.avif"
+           alt="Klein Quartic, a=1,b=2.5,c=0.5">
+      <figcaption>Klein Quartic, a=1,b=2.5,c=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Klein/Klein12-360.avif"
+           alt="Klein Quartic, a=1,b=2,c=2">
+      <figcaption>Klein Quartic, a=1,b=2,c=2</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Klein Quartic implicit polar equation:</div>
+      \[ (r^{2} - b^{2})^{2} = c \cdot a \cdot (a^{3} - 2 r^{3} \sin(3\theta) - 3 a r^{2}) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Klein quartic<sup>1,2</sup>, named after Felix Klein (1849–1925), is a plane algebraic curve of degree four first studied by the German mathematician in his 1879 paper on seventh-order transformations of elliptic functions. Klein explored the curve while investigating modular functions and the symmetries of the modular group reduced modulo 7. The curve is remarkable for realizing the highest possible symmetry for its type: it corresponds to a Riemann surface of genus 3 with an automorphism group of order 168 (336 if reflections are included), achieving the Hurwitz bound. In the real affine plane the curve can be plotted using the implicit polar form shown below; depending on the relationship between parameters b and c it ranges from smooth loops to forms with cusps. Its tangents at the six inflection points form equilateral triangles, a property shared with certain other quartics such as the Loriga quartic. Topologically the associated compact surface is equivalent to a three-holed torus. The high symmetry group and hyperbolic tiling properties extend the idea of Platonic solids into hyperbolic geometry, with 24 regular heptagons meeting three at each vertex.</p>
+    <p>Real-life applications in engineering and the natural sciences are limited; no direct uses in drafting, manufacturing, optics, or ultrasound imaging appear in the literature. The negative-curvature tilings associated with the curve have, however, inspired theoretical models in materials chemistry for low-density polymeric carbon allotropes (such as schwarzites) and analogous boron-nitride structures.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/KleinQuartic.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/KleinQuartic.html</a> (history, properties, plane-curve equation, and chemical applications reference).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/klein/klein.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/klein/klein.shtml</a> (affine plane version, inflection properties, and relation to Klein’s 1879 study).</li>
+      <li>R. B. King, “Chemical Applications of Topology and Group Theory, 29. Low Density Polymeric Carbon Allotropes Based on Negative Curvature Structures,” J. Phys. Chem. 100, 15096 (1996) (negative-curvature carbon allotropes; also cited in MathWorld).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:KLEIN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                  id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd eq_prompt fe ff fg fh fi fj fk)
+(defun K_F (a b / c d e f)
+ (setq c (* a a)
+       d (* fb fa fa)
+       e (* (- c d) (- c d))
+       f (* fc (- (* fa fa fa) (* 2.0 a a a (sin (* 3.0 b))) (* 3.0 fa c))))
+ (- e f))
+
+(defun K_B (a / b c d e f g h i)
+ (setq b (* 20.0 fa)
+       c 200
+       i nil
+       d 0
+       e 0.0
+       g (K_F e a))
+ (while (&lt; d c)
+  (setq f (* b (/ (float (1+ d)) (float c)))
+        h (K_F f a))
+  (if (&lt; (* g h) 0.0) (setq i (cons (list e f g h) i)))
+  (setq e f g h d (1+ d)))
+ (reverse i))
+
+(defun K_S (a b / c d e f g h i)
+ (setq c (nth 0 b) d (nth 1 b) e (nth 2 b) f (nth 3 b) i 0)
+ (while (&lt; i 40)
+  (setq g (/ (+ c d) 2.0)
+        h (K_F g a))
+  (if (&lt; (* e h) 0.0) (setq d g f h) (setq c g e h))
+  (setq i (1+ i)))
+ (/ (+ c d) 2.0))
+
+(defun K_R (a / b c d e f g h i j k)
+ (setq b (K_B a))
+ (if (not b)
+  ff
+  (progn
+   (setq e nil f 1e99)
+   (foreach br b
+    (setq d (K_S a br))
+    (cond
+     ((= fe 2)
+      (if (or (not e) (&gt; d e)) (setq e d)))
+     ((= fe 0)
+      (setq k (abs (- d ff)))
+      (if (&lt; k f) (setq f k e d)))
+     (T
+      (setq g (* d (cos a)) h (* d (sin a))
+            i (- g fi) j (- h fj)
+            k (+ (* i i) (* j j)))
+      (if (&lt; k f) (setq f k e d)))))
+   e)))
+
+(defun K_P (a / b)
+ (if (and fg (= a fg)) fh
+  (progn
+   (if (not fe) (setq fe 1))
+   (if (not ff) (setq ff fa))
+   (if (not fi) (setq fi 0.0 fj 0.0))
+   (setq b (K_R a))
+   (setq ff b
+         fg a
+         fh (list (* b (cos a)) (* b (sin a))))
+   (setq fi (car fh)
+         fj (cadr fh))
+   fh)))
+
+  (setq id "Klein Quartic"
+        iq "(r²-b²)² = c·a·(a³-2·r³·sin(3θ)-3·a·r²)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale): " 1.0)
+        fb (get_real 2 "b (offset): " 0.5)
+        fd (* fb fb)
+        fc (get_real 0 (strcat "c (smooth if &gt; " (rtos fd 2 4) ", otherwise w/ cusps): ") fd)       
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        kw (get_keyword 0 "nearestR nearestXY Outermost" "nearestR nearestXY or Outermost root?" "nearestXY")
+        fe (cond ((= kw "nearestR") 0) ((= kw "Outermost") 2) (T 1))
+        ff fb
+        fg nil
+        fh nil
+        fi nil
+        fj nil
+        fk (K_P 0.0)
+        xc '(if (&lt; (abs (- (eval a2) (* 2.0 pi))) 1e-8) (car fk) (car (K_P (eval a2))))
+        yc '(if (&lt; (abs (- (eval a2) (* 2.0 pi))) 1e-8) (cadr fk) (cadr (K_P (eval a2))))
+        skm '(T T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:KLEIN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

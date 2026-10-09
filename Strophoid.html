@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strophoid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Strophoid</h1>
+      <p class="short-description">Given a point \(O\) on a reference line \(L1\), a second point \(F\) off that line, and a second line \(L2\) drawn from \(F\) that intersects the reference line at \(I\), the strophoid is the locus of points \(P\) along \(L2\) where \(IP=IO\) as \(L2\) rotates about \(F\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Strophoid/Strophoid01-360.avif"
+           alt="Oblique Strophoid, a=1, α variation 0° to 90°">
+      <figcaption>
+        Oblique Strophoid, a=1,α=
+        <span class="figcap-value" style="color:#000000">-80°</span>,
+        <span class="figcap-value" style="color:#FF0000">-60°</span>,
+        <span class="figcap-value" style="color:#0000FF">-30°</span>,
+        <span class="figcap-value" style="color:#009600">0°</span>,
+        <span class="figcap-value" style="color:#FF9600">30°</span>,
+        <span class="figcap-value" style="color:#9600FF">60°</span>,
+        <span class="figcap-value" style="color:#0096FF">80°</span>,
+        <span class="figcap-value" style="color:#AA5555">87°</span>,
+        <span class="figcap-value" style="color:#00FF00">89°</span>,
+        <span class="figcap-value" style="color:#FF00FF">90°</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Strophoid/Strophoid02-360.avif"
+           alt="Right Strophoid, a=1,α=0°">
+      <figcaption>Right Strophoid, a=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Strophoid/Strophoid03-360.avif"
+           alt="Multiple θ Strophoid, a=1,α=0°,m=11,n=10">
+      <figcaption>Multiple θ Strophoid, a=1,α=0°,m=11,n=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Strophoid/Strophoid04-360.avif"
+           alt="Multiple θ Strophoid, a=1,α=0°,m=16,n=15">
+      <figcaption>Multiple θ Strophoid, a=1,α=0°,m=16,n=15</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Strophoid/Strophoid05-360.avif"
+           alt="Multiple θ Strophoid, a=1,α=60°,m=3,n=2">
+      <figcaption>Multiple θ Strophoid, a=1,α=60°,m=3,n=2</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Strophoid polar equation:</div>
+      \[ r = -a \cdot \dfrac{\cos(2\theta - \alpha)}{\cos\theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Multiple θ strophoid polar equation:</div>
+      \[ r = -a \cdot \dfrac{\cos\bigl(2\tfrac{m}{n}\theta - \alpha\bigr)}{\cos\bigl(\tfrac{m}{n}\theta\bigr)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The strophoid curve<sup>1,2</sup> was studied by Roberval around 1645 as the locus of the focus of a conic section obtained when a plane cutting a cone rotates about the tangent at its vertex. Isaac Barrow (Newton’s professor) examined it in 1670; Jean Bernoulli also investigated the curve. The name “strophoid,” from the Greek <em>strophos</em> meaning string, belt, or braid, was proposed by Enrico Montucci. Quételet studied the general form in 1810 and Chasles contributed later. The right strophoid<sup>3</sup> is the symmetric special case (fixed point perpendicular to the reference line); the oblique strophoid is the more general form with angle α between pole and fixed point. The multiple-θ variant extends this by rational multipliers on the angle.</p>
+    <p>In optics the strophoid is the locus of intersection points of the ray from an observer B to the image A′ of a fixed point A in a mirror rotating about a fixed point O.<sup>2</sup> It is also the locus of the foci of certain conics (Quételet focal). In plane kinematics strophoids are circle-point curves, the loci of points on a moving body whose trajectories have instantaneously stationary curvature, appearing in mechanism design and the analysis of Bricard’s flexible octahedra.<sup>4</sup> In descriptive geometry they arise as perspective views of particular curve intersections. In structural biology a twisted hyperboloid surface derived from the strophoid approximates the backbone geometry of β-barrels in proteins.<sup>5</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Strophoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Strophoid.html</a> (history and definition)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/strophoid/strophoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/strophoid/strophoid.shtml</a> (general strophoid and optics)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/strophoiddroite/strophoiddroite.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/strophoiddroite/strophoiddroite.shtml</a> (right strophoid history and applications)</li>
+      <li><a href="https://www.geometrie.tuwien.ac.at/stachel/157_Strophoid_orig.pdf" target="_blank" rel="noopener noreferrer">https://www.geometrie.tuwien.ac.at/stachel/157_Strophoid_orig.pdf</a> (kinematics)</li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/6471105/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/6471105/</a> (β-barrel protein model)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:STROPHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval xspan maxdraw fa fb fc fd)
+  (setq id "Strophoid"
+        iq ""
+        dcl "STROPHOID"
+        opt '("Oblique Strophoid" "Right Strophoid" "Multiple θ Strophoid")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nOblique Strophoid: r=-a·cos(2θ-α)/cos(θ)")
+    (setq fa (get_real 2 "a (scale)" 1.0)
+          fb (* (/ pi 180.0) (get_real 0 "α (degrees)" 30.0))
+          fc 1
+          fd 1))
+   ((eq kw 1)
+    (princ "\nRight Strophoid: r=-a·cos(2θ-90°)/cos(θ)")
+    (setq fa (get_real 2 "a (scale)" 1.0)
+          fb 0.0
+          fc 1
+          fd 1))
+   ((eq kw 2)
+    (princ "\nMultiple θ Strophoid: r=-a·cos(2·(m/n)θ-α)/cos((m/n)θ)")
+    (setq fa (get_real 2 "a (scale)" 1.0)
+          fb (* (/ pi 180.0) (get_real 0 "α (degrees)" 0.0))
+          fc (get_integer 2 "m (numerator)" 3)
+          fd (get_integer 2 "n (denominator)" 2)
+          maxdraw (get_real 2 "Maximum x and y values allowed?" 1e5))
+    (prompt (strcat "\n " (itoa (1+ (* divcount fd (if (and (= (rem fc 2) 1) (= (rem fd 2) 1)) 1 2)))) " segments are needed to close the curve."))))
+  (setq eq_display (strcat "a=" (rtos fa 2 4) ", α=" (rtos (* fb (/ 180.0 pi)) 2 4) "°, m=" (itoa fc) ", n=" (itoa fd))
+        rval '(* (- fa) (/ (cos (- (* 2.0 (* (/ (float fc) (float fd)) (eval a2))) fb)) (avoid_zero (cos (* (/ (float fc) (float fd)) (eval a2))))))
+        xc '(* (eval rval ) (cos (eval a2)))
+        yc '(* (eval rval ) (sin (eval a2)))
+        skm '(T T T)
+        a1 (/ pi 2.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:STROPHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

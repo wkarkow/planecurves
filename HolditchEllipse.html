@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holditch Ellipse - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Holditch Ellipse</h1>
+      <p class="short-description">The locus of the midpoint of a chord of fixed length 2c that slides with its endpoints on an ellipse of semiaxes a and b.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HolditchEllipse/HolditchEllipse01-360.avif"
+           data-caption="Holditch Ellipse, a=2,b=1,c=0(black), 0.1(red),0.2(red),0.25(red),0.3(blue),0.35(blue),0.4(blue), 0.45(green),0.5(green),0.55(green),0.6(orange),0.65(orange),0.7(orange), 0.75(purple),0.8(purple),0.85(purple),0.9(cyan),0.93(cyan),0.96(cyan), 0.975(brown),0.985(brown),0.995(brown),0.9995(lime), inner 'eights':,1.1(red),1.2(red),1.3(blue),1.4(blue),1.5(green),1.6(green), 1.7(orange),1.8(orange),1.9(purple),1.95(purple),1.97(cyan),1.99(cyan)"
+           alt="Holditch Ellipse, a=2,b=1,multiple values of c and inner 'eights'">
+      <figcaption>
+        Holditch Ellipse, a=2,b=1,c=
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000"> 0.1,0.2,0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.3,0.35,0.4</span>,
+        <span class="figcap-value" style="color:#009600"> 0.45,0.5,0.55</span>,
+        <span class="figcap-value" style="color:#FF9600">0.6,0.65,0.7</span>,
+        <span class="figcap-value" style="color:#9600FF"> 0.75,0.8,0.85</span>,
+        <span class="figcap-value" style="color:#0096FF">0.9,0.93,0.96</span>,
+        <span class="figcap-value" style="color:#AA5555"> 0.975,0.985,0.995</span>,
+        <span class="figcap-value" style="color:#00FF00">0.9995</span>,
+        inner 'eights':
+        <span class="figcap-value" style="color:#FF0000"> 1.1,1.2</span>,
+        <span class="figcap-value" style="color:#0000FF">1.3,1.4</span>,
+        <span class="figcap-value" style="color:#009600">1.5,1.6,</span>,
+        <span class="figcap-value" style="color:#FF9600"> 1.7,1.8</span>,
+        <span class="figcap-value" style="color:#9600FF">1.9,1.95</span>,
+        <span class="figcap-value" style="color:#0096FF">1.97,1.99</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Holditch Ellipse polar equation:</div>
+      \[ \dfrac{r^{2}}{a^{2} b^{2}} = \dfrac{1}{b^{2}\cos^{2}(\theta)+a^{2}\sin^{2}(\theta)} - \dfrac{c^{2}}{b^{4}\cos^{2}(\theta)+a^{4}\sin^{2}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Holditch’s theorem<sup>1,2</sup> was published in 1858 by Reverend Hamnet Holditch (1800–1867), an English mathematician who served as Senior Wrangler at Cambridge and later President of Gonville and Caius College. The theorem states that if a chord of fixed length slides with its endpoints on a smooth closed convex curve, the locus of a point dividing the chord into fixed segments p and q traces an inner closed curve whose enclosed area is smaller than the original by exactly πpq, the area of an ellipse with semiaxes p and q, independent of the shape or size of the outer curve. When the outer curve is an ellipse with semiaxes a (along x) and b (along y), and the tracing point is the midpoint of a chord of length 2c (with 0 ≤ c ≤ a), the resulting locus is the Holditch ellipse, a quartic algebraic curve of genus 2.</p>
+    <p>Real-life applications in engineering and the natural sciences for Holditch curves appear in kinematics for analysis of sliding linkages and planar motions. Civil engineering uses include regularization of planar curves for railway line design, division of irregular enclosures into equal areas, lining of excavations, and planning paths for guided vehicles.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/HolditchsTheorem.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/HolditchsTheorem.html</a> (theorem history and statement)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/holditch/holditch.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/holditch/holditch.shtml</a> (polar equation and ellipse case)</li>
+      <li><a href="https://www.mathcurve.com/courbes2d/holditch/amer.math.monthly.124.5.403%20HOLDITCH.pdf" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d/holditch/amer.math.monthly.124.5.403%20HOLDITCH.pdf</a> (civil engineering applications referenced therein)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HOLDITCHELLIPSE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                            xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb fc)
+  (setq id "Holditch Ellipse"
+        iq "r²/(a²·b²)=1/(b²·cos²(θ)+a²·sin²(θ))−c²/(b⁴·cos²(θ)+a⁴·sin²(θ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (x-semiaxis of base ellipse)" 2.0)
+        fb (get_real 6 "b (y-semiaxis of base ellipse)" 1.0)
+        fc (get_boundr 4 "c (Holditch constant); 0 ≤ c ≤ a)" 0.5 0.0 fa T T)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        rval '(sqrt (max 0.0 (* (expt fa 2.0) (expt fb 2.0) (- (/ 1.0 (avoid_zero (+ (* (expt fb 2.0) (expt (cos (eval a2)) 2.0)) (* (expt fa 2.0) (expt (sin
+              (eval a2)) 2.0))))) (/ (expt fc 2.0) (avoid_zero (+ (* (expt fb 4.0) (expt (cos (eval a2)) 2.0)) (* (expt fa 4.0) (expt (sin (eval a2)) 2.0)))))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HOLDITCHELLIPSE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

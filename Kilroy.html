@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilroy Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Kilroy Curve</h1>
+      <p class="short-description">Graph of \( y = a \cdot \ln|\sin(x)/x| \), whose tall central lobe and decaying oscillatory sidelobes visually resemble the World War II “Kilroy was here” graffiti.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Kilroy/Kilroy01-360.avif"
+           alt="Kilroy Curve, a=1">
+      <figcaption>Kilroy Curve, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Kilroy Curve Cartesian equation:</div>
+      \[ y = a \cdot \ln\left|\dfrac{\sin x}{x}\right| \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Kilroy curve<sup>1</sup> is the graph of the Cartesian equation above (with scale factor \( a \)). It receives its informal name because the overall shape of the curve, featuring a tall central lobe followed by a series of progressively smaller oscillating sidelobes that decay toward the x-axis, strikingly resembles the famous World War II graffiti character “Kilroy was here.” In the classic drawing the bald-headed Kilroy peers over a wall with his long nose and fingers visible; similarly, the logarithmic transformation compresses the amplitude of the rapidly decaying lobes of the underlying sinc function, producing a distinctive profile that evokes the peering figure. The underlying mathematical function is the normalized sinc function, defined as \( \operatorname{sinc}(x) = \sin(x)/x \). This function arises naturally throughout wave theory, vibrations, and diffraction analysis. It is precisely the inverse Fourier transform of an ideal rectangular “brick-wall” frequency filter: when a system passes all frequencies within a sharp cutoff band perfectly and rejects all others, its impulse response in the time (or spatial) domain is exactly this sinc function. The natural logarithm in the Kilroy equation further compresses the vertical scale, making the sidelobe structure visible over a wide dynamic range.</p>
+    <p>One of the most important applications of the sinc function appears in Claude Shannon’s 1949 sampling theorem.<sup>2</sup> Shannon showed that any band-limited continuous signal can be perfectly reconstructed from its discrete samples using sinc interpolation kernels. The reconstruction formula is \( f(t) = \sum f(nT) \cdot \operatorname{sinc}((t-nT)/T) \), where \( T \) is the sampling interval. This fundamental result underpins every modern digital audio, video, and communication system, enabling accurate anti-aliasing filters, digital-to-analog conversion, and signal interpolation. In physical wave phenomena the squared sinc function, \( \operatorname{sinc}^{2}(x) \), describes the far-field intensity distribution produced when light, sound, or electromagnetic waves diffract through a single rectangular slit or aperture.<sup>3</sup> This same pattern appears in the radiation patterns of many antennas. Consequently, the sinc function is central to the design and analysis of antennas, acoustic systems, and optical instruments. The specific logarithmic Kilroy form is particularly valuable in engineering practice when power spectral densities of rectangular-pulse or direct-sequence spread-spectrum signals are plotted on a decibel (dB) scale. On linear scales the sidelobes decay too rapidly to see clearly; the log transformation reveals their detailed envelope. This is essential for evaluating interference potential, regulatory compliance, and system performance in telecommunications (such as CDMA cellular networks), GPS receivers, Wi-Fi systems, and military radar.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/KilroyCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/KilroyCurve.html</a> (definition, naming origin, visual resemblance, and applications in spread spectra on decibel scale)</li>
+      <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://infoscience.epfl.ch/server/api/core/bitstreams/41442bbd-2751-4589-a447-58840ecfca76/content&ved=2ahUKEwimqc7kqbqWAxVS5MkDHeFfNmQQFnoECBkQAQ&usg=AOvVaw16K7SJrp1spr6YYyOw85oQ" target="_blank" rel="noopener noreferrer">https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://infoscience.epfl.ch/server/api/core/bitstreams/41442bbd-2751-4589-a447-58840ecfca76/content&ved=2ahUKEwimqc7kqbqWAxVS5MkDHeFfNmQQFnoECBkQAQ&usg=AOvVaw16K7SJrp1spr6YYyOw85oQ</a> (a review of Shannon's sampling theorem and sinc reconstruction)</li>
+      <li><a href="https://mathworld.wolfram.com/SincFunction.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/SincFunction.html</a> (sinc<sup>2</sup> in single-slit diffraction and antenna patterns)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:KILROY (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Kilroy Curve"
+        iq "y=a·ln|sin(x)/x|"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 2000
+        dpt '(20.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(eval a2)
+        yc '(if (= (eval a2) 0) 0.0 (* fa (log (avoid_zero (abs (/ (sin (eval a2)) (avoid_zero (eval a2))))))))
+        paramstep (/ xspan divcount)
+        skm '(nil T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:KILROY)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

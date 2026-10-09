@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Capricornoid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Capricornoid</h1>
+      <p class="short-description">A quartic algebraic plane curve resembling the horns of a Capricorn goat.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Capricornoid/Capricornoid01-360.avif"
+           alt="Capricornoid curve, a=0">
+      <figcaption>Capricornoid, a=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid02-360.avif"
+           alt="Capricornoid curve, a=0.125">
+      <figcaption>Capricornoid, a=0.125</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid03-360.avif"
+           alt="Capricornoid curve, a=0.25">
+      <figcaption>Capricornoid, a=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid04-360.avif"
+           alt="Capricornoid curve, a=0.5">
+      <figcaption>Capricornoid, a=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid05-360.avif"
+           alt="Capricornoid curve, a=0.75">
+      <figcaption>Capricornoid, a=0.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid06-360.avif"
+           alt="Capricornoid curve, a=1.0">
+      <figcaption>Capricornoid, a=1.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid07-360.avif"
+           alt="Capricornoid curve, a=1.1">
+      <figcaption>Capricornoid, a=1.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid08-360.avif"
+           alt="Capricornoid curve, a=1.5">
+      <figcaption>Capricornoid, a=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid09-360.avif"
+           alt="Capricornoid curve, a=2.0">
+      <figcaption>Capricornoid, a=2.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid10-360.avif"
+           alt="Capricornoid curve, a=3.0">
+      <figcaption>Capricornoid, a=3.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Capricornoid/Capricornoid11-360.avif"
+           alt="Capricornoid curve, a=8.0">
+      <figcaption>Capricornoid, a=8.0</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Capricornoid implicit equation:</div>
+      \[ a^{2} x^{2} (x^{2} + y^{2}) - b (a y - x^{2} - y^{2})^{2} = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Capricornoid polar equation:</div>
+      \[ r = \dfrac{\sin\theta}{\cos\theta + a} \quad (a > 1) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Capricornoid<super>1,2,3</super> is a quartic plane curve named for its resemblance to the horns of a male Capricorn goat or the zodiac symbol for Capricorn. It appears in collections of special algebraic curves and is documented in handbooks such as E. V. Shikin’s <em>Handbook and Atlas of Curves</em> (1995). The curve features a tacnode at the origin (where two branches touch with the same tangent direction) and a crunode at (0, a) for parameter a &gt; 0 (where branches cross)<super>1</super>.</p>
+    <p>Real-life applications are found in computational geometry and mechanical engineering. The Capricornoid serves as a benchmark test case for algorithms that approximate implicit algebraic curves on triangulated meshes, supporting adaptive refinement methods used in surface modeling and numerical simulation<super>4</super>. In kinematics, the curve (sometimes referred to as Poncelet’s Capricornoid) is generated by Artobolevskii linkage mechanisms for analysis and design of mechanical systems that trace specific paths<super>5</super>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Capricornoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Capricornoid.html</a> (naming, implicit equation, singularities, Shikin handbook reference).</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticd.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticd.html</a> (naming as goat horns, Cartesian form).</li>
+      <li><a href="https://filipec.dev/files/aatri_cag14.pdf" target="_blank" rel="noopener noreferrer">https://filipec.dev/files/aatri_cag14.pdf</a> (test case in implicit curve approximation on meshes).</li>
+      <li><a href="https://webdoc.sub.gwdg.de/ebook/serien/e/IMPA_A/720.pdf" target="_blank" rel="noopener noreferrer">https://webdoc.sub.gwdg.de/ebook/serien/e/IMPA_A/720.pdf</a> (additional mesh approximation example).</li>
+      <li><a href="http://vtorog.indep.ru/" target="_blank" rel="noopener noreferrer">Artobolevskii linkage mechanism resources</a> (kinematics generation of the curve).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CAPRICORNOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                         divpt restartflag id iq dcl opt kw mode dpr dct dpt span rval xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa)
+  (setq id "Capricornoid"
+        iq "r = sin(θ)/(cos(θ)+a)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (controls pole location and overall width; values >1 avoid vertical asymptotes)" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 10.0)
+        rval '(* (sin (eval a2)) (/ 1.0 (avoid_zero (+ (cos (eval a2)) fa))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CAPRICORNOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

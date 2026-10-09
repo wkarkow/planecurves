@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beetle Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Beetle Curve</h1>
+      <p class="short-description">The negative pedal curve of an astroid (scarabaeus); produces distinctive looped “beetle” forms, including a symmetric three-lobed variant when a = b and φ = 45°.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Beetle/Beetle01-360.avif"
+           alt="Beetle Curve, a=5,b=5,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=5,b=5,r=1,φ=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle02-360.avif"
+           alt="Beetle Curve, a=2,b=2,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=2,b=2,r=1,φ=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle03-360.avif"
+           alt="Beetle Curve, a=1,b=1,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=1,b=1,r=1,φ=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle04-360.avif"
+           alt="Beetle Curve, a=0.5,b=0.5,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=0.5,b=0.5,r=1,φ=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle05-360.avif"
+           alt="Beetle Curve, a=0.25,b=0.25,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=0.25,b=0.25,r=1,φ=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle06-360.avif"
+           alt="Beetle Curve, a=0.125,b=0.125,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=0.125,b=0.125,r=1,φ=45°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle07-360.avif"
+           alt="Beetle Curve, a=0.01,b=0.01,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=0.01,b=0.01,r=1,φ=45</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle08-360.avif"
+           alt="Beetle Curve, a=1/3,b=0.5,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=1/3,b=0.5,r=1,φ=45</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle09-360.avif"
+           alt="Beetle Curve, a=1,b=0,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=1,b=0,r=1,φ=45</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle10-360.avif"
+           alt="Beetle Curve, a=2,b=0.5,r=1,φ=45°">
+      <figcaption>Beetle Curve, a=2,b=0.5,r=1,φ=45</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle11-360.avif"
+           alt="Beetle Curve, a=2,b=0.5,r=1,φ=0°">
+      <figcaption>Beetle Curve, a=2,b=0.5,r=1,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Beetle/Beetle12-360.avif"
+           alt="Beetle Butterfly Curve, a=1,b=1,r=1,φ=0°,90°">
+      <figcaption>Beetle Butterfly Curve, a=1,b=1,r=1,φ=0°,90°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Beetle Curve Cartesian equation:</div>
+      \[ (x^{2} + y^{2})(x^{2} + y^{2} - a x - b y)^{2} = r^{2} x^{2} y^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Beetle Curve polar equation:</div>
+      \[ \rho(\theta) = a \cos(\theta) - b \sin(\theta) - r \sin(\theta)\cos(\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Beetle Curve with rotation φ:</div>
+      \[ \rho(\theta) = \frac{a}{\sqrt{2}}\cos(\theta - \phi) + \frac{b}{\sqrt{2}}\sin(\theta - \phi) - 2r \sin(\theta - \phi)\cos(\theta - \phi) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Beetle curve<sup>1</sup>, known in French as the <em>courbe scarabée</em> or as <em>scarabaeus</em> in Latin, first received this name in 1857 in a textbook prepared by Eugène Charles Catalan for candidates to the École Polytechnique. It later appeared in Laurent’s treatise on analysis. The curve is the negative pedal of an astroid, meaning it is the envelope of lines drawn perpendicular to the tangents of an astroid from a fixed pole point. It bears the same relationship to the astroid as the folium does to the deltoid. The underlying astroid is generated as a hypocycloid by a circle rolling inside a fixed circle of four times the radius. Pedal curves of this type illustrate envelope constructions that draftsmen and engineers encounter when studying tangents and offsets. The parameter <em>a</em> is typically defined as a fixed fraction of the astroid’s radius <em>r</em>, with ratios such as <em>a = r/(2√2)</em> and <em>a = r/√2</em> producing the standard beetle forms seen in mathematical galleries. When <em>a = b</em>, the curve becomes a rational sextic and can be reformulated in a rotated polar frame. When <em>a = b</em> and the rotation <em>φ = 45°</em>, the curve produces the distinctive three-lobed form with one large upper loop and two smaller side loops intersecting at a triple point. Slightly different equations are given by MathWorld<sup>2</sup> that generate identical curves with appropriate parameters.</p>
+    <p>No specific applications in engineering, architecture, or the natural sciences are documented for the Beetle curve itself in the major curve references. Its value lies primarily in mathematical illustration and as an example of pedal curve properties. The "Beetle Butterfly Curve" is a homemade name.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/scarabee/scarabee.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/scarabee/scarabee.shtml</a> (history, naming as negative pedal of astroid, equations)</li>
+      <li><a href="https://mathworld.wolfram.com/ScarabaeusCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ScarabaeusCurve.html</a> (variant Cartesian and polar equations)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BEETLE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                 divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq id "Beetle Curve"
+        iq "ρ(θ)=(a/√2)·cos(θ−φ)+(b/√2)·sin(θ−φ)−2r·sin(θ−φ)·cos(θ−φ)  φ=fd°"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (smaller -> quadrifolium)" 1.0)
+        fb (get_real 0 "b (symmetric if =a)" fa)
+        fc (get_real 2 "r (astroid radius)" 1.0)
+        fd (get_real 0 "φ (rotation angle)" 45.0)
+        fe (sqrt 2.0)
+        ff (* fd (/ pi 180.0))
+        eq_display (strcat "\nρ(θ)=(" (rtos fa 2 4) "/√2)·cos(θ−" (rtos fd 2 1) "°)+(" (rtos fb 2 4) "/√2)·sin(θ−" (rtos fd 2 1)
+                           "°)−2·" (rtos fc 2 4) "·sin(θ−" (rtos fd 2 1) "°)·cos(θ−" (rtos fd 2 1) "°)")
+        rval '(+ (* (/ fa fe) (cos (- (eval a2) ff))) (* (/ fb fe) (sin (- (eval a2) ff))) (* -2.0 fc (sin (- (eval a2) ff)) (cos (- (eval a2) ff))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BEETLE)</code></pre>
+  </section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

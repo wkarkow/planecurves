@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiepert Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Kiepert Curve</h1>
+      <p class="short-description">A tricircular sextic plane algebraic curve of genus 1, the sinusoidal spiral of order 3 (three-pole lemniscate), arising as the locus of the Kiepert perspector for an equilateral reference triangle.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Kiepert/Kiepert01-360.avif"
+           alt="Kiepert Curve, a=1,b=1/3,c=3">
+      <figcaption>Kiepert Curve, a=1,b=1/3,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kiepert/Kiepert02-360.avif"
+           alt="Generalized Kiepert Curve, a=1,b=1/5,c=5">
+      <figcaption>Generalized Kiepert Curve, a=1,b=1/5,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kiepert/Kiepert03-360.avif"
+           alt="Generalized Kiepert Curve, a=1,b=1/7,c=7">
+      <figcaption>Kiepert Curve, a=1, b=1, c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kiepert/Kiepert04-360.avif"
+           alt="Generalized Kiepert Curve, a=1,b=1/3,c=7">
+      <figcaption>Generalized Kiepert Curve, a=1,b=1/3,c=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kiepert/Kiepert05-360.avif"
+           alt="Generalized Kiepert Curve, a=1,b=2/3,c=7">
+      <figcaption>Generalized Kiepert Curve, a=1,b=2/3,c=7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kiepert/Kiepert06-360.avif"
+           alt="Generalized Kiepert Curve, a=1,b=1/28,c=7">
+      <figcaption>Generalized Kiepert Curve, a=1,b=1/28,c=7</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Kiepert polar equation:</div>
+      \[ r = a \cdot \sqrt[3]{\cos(3\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot \cos^{b}(c\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Classical Cartesian equation:</div>
+      \[ (x^{2} + y^{2})^{3} = a^{3}\, x(x^{2} - 3y^{2}) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Kiepert curve<sup>1,2</sup> is named after the German geometer Ludwig Kiepert (1846–1934), who studied triangle centers and transformations that arise when constructing equiangular triangles on the sides of a reference triangle. In 1884–1885, Kiepert and Neuberg independently showed that if one erects an isosceles triangle with apex angle \(\phi\) externally on each side of a reference triangle, the three resulting apexes define a new triangle whose lines of perspective with the original triangle are concurrent. The concurrence point is called the Kiepert perspector, and as the angle \(\phi\) varies, this perspector traces a continuous locus. For a general (scalene) reference triangle, that locus is a bicircular quartic expressed most naturally in trilinear or barycentric coordinates. Classic sources such as Loria’s 1902 <em>Spezielle algebraische und transzendente ebene Kurven</em> and Neuberg’s papers describe the Kiepert curve in this fully general form. Although the perspector definition is elegant from the standpoint of triangle geometry, the resulting trilinear coordinates are not convenient for plotting in a standard Cartesian or polar plane unless one first anchors a specific reference triangle. However, for an equilateral triangle, the expression collapses dramatically because the three angles are all 60° and the side lengths are equal. Under this symmetry the barycentric-to-Cartesian conversion reduces to a single polar equation exhibiting 3-fold rotational symmetry, giving the familiar closed-form \( r = a \cdot \sqrt[3]{\cos(3\theta)} \). This is the version most commonly shown in modern curve catalogs, precisely because it is both compact and visually distinctive. The curve is also known as the three-pole lemniscate and the sinusoidal spiral of order 3. It bears the same relation to an equilateral triangle as the lemniscate of Bernoulli does to a pair of foci. It is a special case of the Cassini curve for three poles and is a tricircular sextic algebraic curve of genus 1. In recent differential geometry studies, the Kiepert trefoil has been identified as a particular closed solution of the generalized elastica equation describing buckled rings or pressurized elastic loops.<sup>3</sup></p>
+    <p>In real life, solutions to the elastica problem model the bending of thin flexible rods or closed rings under compressive forces or pressure. These have relevance in structural mechanics and the study of biological filaments.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/kiepert/kiepert.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/kiepert/kiepert.shtml</a> (history, names, properties).</li>
+      <li><a href="https://www.2dcurves.com/sextic/sextickl.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/sextic/sextickl.html</a> (history and classification).</li>
+      <li><a href="https://www.mdpi.com/2227-7390/10/18/3357" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2227-7390/10/18/3357</a> (Kiepert trefoil as elastica solution).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>; KIEPERT.LSP - started 11/29/25
+
+(defun C:KIEPERT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Kiepert Curve"
+        iq "r=a·cosᵇ(cθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (cos exponent)" (/ 1.0 3.0))
+        fc (get_real 2 "c (θ multiplier)" 3.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        rval '(* fa (alt_expt (cos (* fc (eval a2))) fb nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:KIEPERT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

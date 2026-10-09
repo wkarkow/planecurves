@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bifolium - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bifolium</h1>
+      <p class="short-description">A quartic plane curve; the pedal curve of the deltoid (tricuspoid). Includes regular, Longchamps, and generalized forms.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Bifolium/Bifolium01-360.avif"
+           alt="Classic Half-Quadrifolium, a=1">
+      <figcaption>Classic Half-Quadrifolium, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium02-360.avif"
+           alt="Regular Bifolium, a=1">
+      <figcaption>Regular Bifolium, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium03-360.avif"
+           alt="Longchamps, a=1,b=1">
+      <figcaption>Longchamps, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium04-360.avif"
+           alt="Longchamps, a=1,b=0">
+      <figcaption>Longchamps, a=1,b=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium05-360.avif"
+           data-caption="Longchamps, a=1,b=0(black),0.25(red),0.5(blue),1.0(green),2.0(orange),3.0(magenta)"
+           alt="Longchamps, a=1,b=0,0.25,0.5,1.0,2.0,3.0>
+      <figcaption>
+        a = 1, b =
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">3.0</span>
+      </figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium06-360.avif"
+           alt="Longchamps, a=1,b=1000">
+      <figcaption>Longchamps, a=1,b=1000</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium07-360.avif"
+           alt="Longchamps, a=1,b=2">
+      <figcaption>Longchamps, a=1,b=2</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium08-360.avif"
+           alt="Longchamps, a=1,b=-2">
+      <figcaption>Longchamps, a=1,b=-2</figcaption>
+    </figure>
+        </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium09-360.avif"
+           alt="Generalized, a=1,b=2,c=1,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=1,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium10-360.avif"
+           alt="Generalized, a=1,b=2,c=2,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=2,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium11-360.avif"
+           alt="Generalized, a=1,b=2,c=3,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=3,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium12-360.avif"
+           alt="Generalized, a=1,b=2,c=4,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=4,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium13-360.avif"
+           alt="Generalized, a=1,b=2,c=5,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=5,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium14-360.avif"
+           alt="Generalized, a=1,b=2,c=6,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=6,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium15-360.avif"
+           alt="Generalized, a=1,b=2,c=12,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=12,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium16-360.avif"
+           alt="Generalized, a=1,b=3,c=1,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=3,c=1,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium17-360.avif"
+           alt="Generalized, a=1,b=3,c=12,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=3,c=12,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium18-360.avif"
+           alt="Generalized, a=1,b=3,c=7,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=3,c=7,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium19-360.avif"
+           alt="Generalized, a=1,b=3,c=4,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=3,c=4,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium20-360.avif"
+           alt="Generalized, a=1,b=0.5,c=1,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=0.5,c=1,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium21-360.avif"
+           alt="Generalized, a=1,b=3,c=1,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=3,c=1,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium22-360.avif"
+           alt="Generalized, a=1,b=6,c=1,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=6,c=1,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium23-360.avif"
+           alt="Generalized, a=1,b=7,c=1,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=7,c=1,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium24-360.avif"
+           alt="Generalized, a=1,b=0.5,c=0.5,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=0.5,c=0.5,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium25-360.avif"
+           alt="Generalized, a=1,b=2,c=0.75,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=0.75,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium26-360.avif"
+           alt="Generalized, a=1,b=2,c=11/12,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=2,c=11/12,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium27-360.avif"
+           alt="Generalized, a=1,b=3,c=23/24,d=0,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=3,c=23/24,d=0,e=1,f=1,g=0</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Bifolium/Bifolium28-360.avif"
+           alt="Generalized, a=1,b=3,c=23/24,d=180,e=1,f=1,g=0">
+      <figcaption>Generalized, a=1,b=3,c=23/24,d=180,e=1,f=1,g=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium29-360.avif"
+           alt="Generalized, a=1,b=3,c=23/24,d=180,e=2,f=1,g=180">
+      <figcaption>Generalized, a=1,b=3,c=23/24,d=180,e=2,f=1,g=180</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bifolium/Bifolium30-360.avif"
+           alt="Generalized, a=1,b=2,c=23/24,d=90,e=3,f=1,g=180">
+      <figcaption>Generalized, a=1,b=2,c=23/24,d=90,e=3,f=1,g=180</figcaption>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Regular Bifolium (polar):</div>
+      \[ r = a \cdot \cos^{2}(\theta) \cdot \sin(\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Longchamps Bifolium (implicit):</div>
+      \[ (x^{2} + y^{2})^{2} = 4 a x^{2} y \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Longchamps Bifolium (polar):</div>
+      \[ r = \cos^{2}(\theta) \cdot (a \cdot \cos(\theta) + b \cdot \sin(\theta)) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Longchamps (polar):</div>
+      \[ r = a \cdot (\sin^{b}(c\theta) - d) \cdot (\cos^{e}(f\theta) - g) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The bifolium curve, also known as the double folium or bifoliate curve, was studied by French mathematicians Gaston Albert Gohierre de Longchamps<sup>1</sup> in 1886 and Henri Brocard<sup>1</sup> in 1887. It is a quartic plane curve<sup>2</sup> and the pedal curve of the deltoid (tricuspoid) with the pedal point at the midpoint of one of the three curved sides.<sup>2,3</sup> The regular bifolium is the special case obtained when the pedal point is at a cusp of the deltoid<sup>4</sup>; it can also be generated as the locus of points <em>M</em> on the perpendicular to a fixed diameter <em>OA</em> through variable points <em>N</em> on the circle of diameter <em>OA</em>, where <em>NM = ON</em>.<sup>4</sup></p>
+    <p>The Longchamps bifolium introduces separate scaling coefficients for the cosine and sine terms, while the generalized form further extends the equation with variable exponents, frequencies, and offsets. Another “bifolium” in the sense of a two-lobed, leaf-like shape is the “half-quadrifolium” (r = a · sin(2θ), 0 ≤ θ ≤ π), included in the implementation for comparison.</p>
+    <p>No real-life applications in engineering or the natural sciences have been documented in the primary references. The generalized form can be adjusted to resemble a peacock’s tail or a sea scallop.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/bifolium/bifolium.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/bifolium/bifolium.shtml</a> (history, pedal curve of deltoid, variants including regular)</li>
+      <li><a href="https://mathworld.wolfram.com/Bifolium.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Bifolium.html</a> (Cartesian/polar equations, deltoid relation)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticfb.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticfb.html</a> (construction, Longchamps 1886 &amp; Brocard 1887 study)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/bifolium/bifoliumregulier.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/bifolium/bifoliumregulier.shtml</a> (regular bifolium construction and equations)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BIFOLIUM (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                     restartflag rval xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd fe ff fg fh fi)
+  (setq id "Bifolium"
+        iq ""
+        dcl "BIFOLIUM"
+        opt '("Half-quadrifolium" "Regular Bifolium" "Longchamps Bifolium" "Generalized Longchamps")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+  ((eq kw 0)
+    (princ "r=a·(sin(2θ)")
+    (setq paramstep (/ paramstep 2)
+          fa (get_real 2 "a (size)" 1.0)
+          eq_display (strcat "\nr=" (rtos fa 2 4) "·sin(2θ)   [θ 0 to π]")
+          rval '(* fa (sin (* 2 (eval a2))))))
+  ((eq kw 1)
+    (princ "r=a·cos²(θ)sin(θ)")
+   (setq fa (get_real 2 "a (size)" 1.0)
+          eq_display (strcat "\nr=" (rtos fa 2 4) "sin(θ)·cos²(θ)")
+          rval '(* fa (sin (eval a2)) (cos (eval a2)) (cos (eval a2)))))
+  ((eq kw 2)
+    (princ "r=cos²(θ)(a·cos²(θ)+b·(sin(θ))")
+    (setq fa (get_real 0 "a (larger = more asymmetric)" 1.0)
+            fb (get_real 0 "b (larger = more symmetric)" 1.0)
+            eq_display (strcat "\nr=cos²(θ)(" (rtos fa 2 4) "·cos(θ)+" (rtos fb 2 4) "·sin(θ))")
+            rval '(* (alt_expt (cos (eval a2)) 2 nil) (+ (* fa (cos (eval a2))) (* fb (sin (eval a2)))))))
+  ((eq kw 3)
+    (princ "r=a·(sinᵇ(cθ)−d)·(cosᵉ(fθ)−g)")
+    (setq fa (get_real 2 "a (amplitude)" 1.0)
+          fb (get_real 0 "b (sin exponent)" 2.0)
+          fc (get_real 0 "c (sin frequency)" 12.0)
+          fd (get_real 0 "d (sin offset in °)" 0.0)
+          fe (get_real 0 "e (cos exponent)" 1.0)
+          ff (get_real 0 "f (cos frequency)" 1.0)
+          fg (get_real 0 "g (cos offset in °)" 0.0)
+          fh (* fd (/ pi 180.0))
+          fi (* fg (/ pi 180.0))
+          eq_display (strcat "\nr=" (rtos fa 2 4) "·(sin^" (rtos fb 2 4) "(" (rtos fc 2 4) "θ)-" (rtos fd 2 4) "°)·(cos^"
+                                    (rtos fe 2 4) "(" (rtos ff 2 4) "θ)-" (rtos fg 2 4) "°)")
+          rval '(* fa (- (alt_expt (sin (* fc (eval a2))) fb nil) fh) (- (alt_expt (cos (* ff (eval a2))) fe nil) fi)))))
+  (setq xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BIFOLIUM)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

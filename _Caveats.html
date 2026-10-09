@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For AutoCAD Users - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <nav class="main-nav left-nav">
+      <a href="_Main.html">Home</a>
+      <a href="_CurveIndex.html">Curve Lookup</a>
+      <a href="_AliasIndex.html">Alias Lookup</a>
+    </nav>
+    <h2 class="site-title">
+      <a href="_Main.html">Plane Curves with AutoCAD</a>
+    </h2>
+    <nav class="main-nav right-nav">
+      <a href="_EquationIndex.html">Equation Lookup</a>
+      <a href="_ImageIndex.html">Image Lookup</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="curve-header">
+    <div class="curve-title-block">
+      <h1>Caveats</h1>
+      <p class="short-description">
+        Important notes about how curves are generated and displayed in AutoCAD.
+      </p>
+    </div>
+  </section>
+
+  <div style="max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.65;">
+
+    <ol>
+      <li>To avoid errors created by settings such as SNAP, ORTHO, and OSNAP, their variables are stored, temporarily cancelled, then restored during the execution of a curve.</li>
+
+      <li>To avoid division by zero, whenever denominators are less than 10<sup>-12</sup> (1e-12 in AutoLISP), the denominators for those point calculations are changed to 1e-12. The AutoLISP code for denominator input is: <code>(defun avoid_zero (input) (if (&lt; (abs input) 1e-13) 1e-12 input))</code></li>
+
+      <li>To avoid imaginary numbers, the <code>(expt number power)</code> function is modified to <code>ALT_EXPT</code> that converts various domain situations and imaginary values so that only real values within 1e7 are plotted. A setting, <code>complexsafe</code>, either nil or T, allows one to either flip an imaginary root to an artificial real value or suppress it entirely. Both code and details of this and other utility functions are kept in Curvecore.lsp. See <a href="_User.html">For AutoCAD Users</a></li>
+
+      <li>Therefore, any curve whose formula contains the possibility of division by zero or imaginary numbers may have an altered appearance, as the polyline may include points with these ‘corrections’. Search the code for the functions <code>(avoid_zero...</code> and <code>(alt_expt...</code> to identify the suspects.</li>
+
+      <li>For the above reasons, extraneous lines to and from infinity have been removed in the images that follow.</li>
+
+      <li>The curves, their variable values, and their image magnifications are arbitrarily chosen to reveal interesting portions.</li>
+
+      <li>Where curves are commonly used and known but defy parametric calculation, parametric approximations found in the literature are used so that the user can still plot these, although with varying accuracy. An example is the Bessel function.</li>
+    </ol>
+
+  </div>
+</main>
+
+<footer>
+  <div style="text-align:center; padding:28px 20px; background:#eaf6f9; font-size:1.45rem; line-height:1.45; color:#1a3a42;">
+    Comments, questions, corrections, suggestions, new curves? I'd love to hear from you!<br>
+    <a href="mailto:karkowbs@yahoo.com" style="color:#1a3a42; font-weight:600;">karkowbs@yahoo.com</a><br>
+    All content is offered free to the public domain.
+  </div>
+</footer>
+
+</body>
+</html>

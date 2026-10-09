@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cosh Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cosh Spiral</h1>
+      <p class="short-description">Polar spiral in which radius grows as the hyperbolic cosine of the polar angle.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CoshSpiral/CoshSpiral01-360.avif"
+           alt="Cosh Spiral, a=1,b=0.1">
+      <figcaption>Cosh Spiral, a=1,b=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CoshSpiral/CoshSpiral02-360.avif"
+           alt="Cosh Spiral, a=1,b=0.1, mirrored">
+      <figcaption>Cosh Spiral, a=1,b=0.1, mirrored</figcaption>
+    </figure>
+    <figure>
+      <img src="images/CoshSpiral/CoshSpiral03-360.avif"
+           alt="Cosh Spiral, a=1,b=0.05">
+      <figcaption>Cosh Spiral, a=1,b=0.05</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Cosh Spiral polar equation:</div>
+      \[ r = a \cdot \cosh(b \theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Cosh Spiral is related to the family of Cotes’ spirals<sup>1,2</sup> first classified by Roger Cotes in 1722 in <em>Harmonia Mensurarum</em>. Cotes, a close collaborator of Isaac Newton, derived the family as exact solutions for the trajectories of particles moving under a central force law that varies inversely as the cube of the distance from a fixed center (F ∝ 1/r³).</p>
+    <p>The general Cotes’ family is most often expressed in reciprocal form 1/r = A · f(kθ + ε), where f is one of five functions: hyperbolic cosine, exponential, hyperbolic sine, linear, or cosine. The direct polar form r = a · cosh(bθ) appears as a specific member (or polar reciprocal of the Poinsot-spiral case 1/r = A · cosh(kθ + ε)) and is also known in the literature as the rotating-rod spiral<sup>3,4</sup>: it traces the path of a ring sliding frictionlessly outward along a straight rod that rotates uniformly about one fixed end in a horizontal plane. In modern differential geometry the curve and its companions (sinh and logarithmic spirals) serve as standard test cases for classifying curves with constant or affine-invariant curvature properties. They illustrate how certain spirals remain unchanged under affine transformations and provide explicit examples in sub-Riemannian geometry and Möbius-curvature studies.<sup>5</sup> See the Poinsot Spiral entry also.</p>
+    <p>Real-life applications in engineering and the natural sciences are confined to theoretical physics and mathematical modeling. In celestial mechanics the broader Cotes family (including the cosh case) supplies exact solutions for particle orbits under idealized inverse-cube central forces, models that arise in certain short-range gravitational or electrostatic problems but are rare in nature compared with the inverse-square law. The curves remain tools for analytical verification of numerical orbit integrators and for illustrating non-standard force laws. Metaheuristic optimization algorithms occasionally adopt “sinh-cosh spiral” search patterns as abstract inspiration for exploration strategies, but these are algorithmic analogies rather than direct geometric applications of the plotted curve itself.</p>  </section>
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Cotes%27s_spiral" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Cotes%27s_spiral</a> (classical mechanics solutions and explicit cosh regime).</li>
+      <li>Wolfram MathWorld: <a href="https://mathworld.wolfram.com/CotesSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CotesSpiral.html</a> (classical mechanics solutions and explicit cosh regime).</li>
+      <li>MathCurve: <a href="https://mathcurve.com/courbes2d.gb/spiralech/spiralech.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/spiralech/spiralech.shtml</a> (rotating-rod mechanical model and Bernoulli reference).</li>
+      <li>Chimix: <a href="https://www.chimix.com/mecanique/tige_rot.htm " target="_blank" rel="noopener noreferrer">https://www.chimix.com/mecanique/tige_rot.htm </a> (derivation in French of the polar equation for a rotating rod, sinh and cosh).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:COSHSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb)
+  (setq id "Cosh Spiral"
+        iq "r = a · cosh(b · θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (growth factor)" 0.1)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        rval '(* fa (cosh (* fb (eval a2))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:COSHSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

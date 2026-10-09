@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Constant Angular Acceleration Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Constant Angular Acceleration Curve</h1>
+      <p class="short-description">Trajectory of a point moving with uniformly accelerated motion along a straight line that rotates at constant angular velocity about a fixed point.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/AngularAccel/AngularAccel01-360.avif"
+           alt="Constant Angular Acceleration Curve, a=1, versus Archimedean Spiral">
+      <figcaption>
+        Constant Angular Acceleration Curve, 
+        <span class="figcap-value" style="color:#000000">a=1</span>,
+        versus
+        <span class="figcap-value" style="color:#FF0000">Archimedean Spiral</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/AngularAccel/AngularAccel02-360.avif"
+           alt="Constant Angular Acceleration Curve, zoomed to origin, a=1, versus Archimedean Spiral">
+      <figcaption>
+        Constant Angular Acceleration Curve, zoomed to origin, 
+        <span class="figcap-value" style="color:#000000">a=1</span>,
+        versus
+        <span class="figcap-value" style="color:#FF0000">Archimedean Spiral</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Constant Angular Acceleration Curve differential equation:</div>
+      \[ \dfrac{d^{2}s}{d\theta^{2}} = a \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Equivalent first-order form (polar):</div>
+      \[ \left(\dfrac{dr}{d\theta}\right)^{2} + r^{2} = a^{2}\theta^{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Constant Angular Acceleration Curve<sup>1</sup> was studied by Mikhail Gaichenkov in 2008 and is defined by the geometric condition \(d^{2}s/d\theta^{2} = a\), meaning that arc length increases with constant angular acceleration. It describes the trajectory of a point moving with uniformly accelerated motion along a straight line while that line rotates with constant angular velocity around a fixed point. Unlike classical spirals of the 17th and 18th centuries, this curve arises from a modern differential constraint rather than an explicit polar formula. Its solution satisfies \(r'^{2} + r^{2} = a^{2}\theta^{2}\) and, while not expressible in elementary closed form, possesses a convergent Maclaurin series near the origin. As \(a\) approaches zero the curve approaches the Galileo spiral. As \(\theta\) increases, the curve approaches the spacing of an Archimedean spiral.</p>
+    <p>No specific real-life applications in engineering or the natural sciences were identified for this exact curve in primary mathematical references. It remains a theoretical model for kinematic trajectories that combine linear acceleration with rotation.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/gaichenkov/gaichenkov.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/gaichenkov/gaichenkov.shtml</a> (history, definition, and series expansion).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ANGULARACCEL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                         id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj)
+  (setq id "Constant Angular Acceleration Curve"
+        iq "d²s/dθ²=a"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (angular acceleration)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        fb 0.0
+        fc 0.0
+        xc '(* fb (cos fc))
+        yc '(* fb (sin fc))
+        skm '(T T nil)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(progn
+              (setq fd paramstep
+                    fe fc
+                    ff fb
+                    fg (- (* fa fa fe fe) (* ff ff))
+                    fh (+ fe (* 0.5 fd))
+                    fi (+ ff (* 0.5 fd (if (< fg 1e-12) 0.0 (sqrt fg))))
+                    fj (- (* fa fa fh fh) (* fi fi))
+                    fb (+ ff (* fd (if (< fj 1e-12) 0.0 (sqrt fj))))
+                    fc (+ fc fd))
+              fc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ANGULARACCEL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

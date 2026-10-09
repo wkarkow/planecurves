@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cissoid of Diocles - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cissoid of Diocles</h1>
+      <p class="short-description">The “ivy-shaped” cissoid curve with a cusp at the origin and vertical asymptote at x = 2a.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Diocles/Diocles01-360.avif"
+           alt="Cissoid of Diocles, a=1,multiple values of α"
+      <figcaption>
+        Cissoid of Diocles, a=1,α=
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">175°</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles02-360.avif"
+           alt="Cissoid of Diocles, a=1,multiple values of α"
+      <figcaption>
+        Cissoid of Diocles, a=1,α=
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">-30°</span>,
+        <span class="figcap-value" style="color:#0000FF">-60°</span>,
+        <span class="figcap-value" style="color:#009600">-90°</span>,
+        <span class="figcap-value" style="color:#FF9600">-120°</span>,
+        <span class="figcap-value" style="color:#9600FF">-150°</span>,
+        <span class="figcap-value" style="color:#0096FF">-175°</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles03-360.avif"
+           alt="Generalized Cissoid of Diocles, a=0,b=2,c=2,d=1,e=0°,f=0,g=1,h=1,i=1,j=0°">
+      <figcaption>Generalized Cissoid of Diocles, a=0,b=2,c=2,d=1,e=0°,f=0,g=1,h=1,i=1,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles04-360.avif"
+           alt="Generalized Cissoid Right Strophoid, a=0,b=2,c=1,d=1,e=0°,f=1,g=1,h=1,i=1,j=0°">
+      <figcaption>Generalized Cissoid Right Strophoid, a=0,b=2,c=1,d=1,e=0°,f=1,g=1,h=1,i=1,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles05-360.avif"
+           alt="Canonical Right Strophoid, a=0,b=1,c=1,d=2,e=0°,f=0,g=1,h=1,i=1,j=0°">
+      <figcaption>Canonical Right Strophoid, a=0,b=1,c=1,d=2,e=0°,f=0,g=1,h=1,i=1,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles06-360.avif"
+           alt="Trisectrix of MacLaurin, a=0,b=1,c=1,d=3,e=0°,f=0,g=1,h=1,i=2,j=0°">
+      <figcaption>Trisectrix of MacLaurin, a=0,b=1,c=1,d=3,e=0°,f=0,g=1,h=1,i=2,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles07-360.avif"
+           alt="Generalized Cissoid, a=1,b=2,c=2,d=1,e=0°,f=0,g=1,h=1,i=1,j=0°">
+      <figcaption>Generalized Cissoid, a=1,b=2,c=2,d=1,e=0°,f=0,g=1,h=1,i=1,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles08-360.avif"
+           alt="Generalized Cissoid, a=0,b=2,c=2,d=2,e=0°,f=0,g=1,h=1,i=1,j=0°">
+      <figcaption>Generalized Cissoid, a=0,b=2,c=2,d=2,e=0°,f=0,g=1,h=1,i=1,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles09-360.avif"
+           alt="Generalized Cissoid, a=0,b=2,c=1,d=2,e=0°,f=1,g=1,h=1,i=1,j=0°">
+      <figcaption>Generalized Cissoid, a=0,b=2,c=1,d=2,e=0°,f=1,g=1,h=1,i=1,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles10-360.avif"
+           alt="Generalized Cissoid, a=1,b=2,c=2,d=2,e=0°,f=0,g=1,h=2,i=1,j=0°">
+      <figcaption>Generalized Cissoid, a=1,b=2,c=2,d=2,e=0°,f=0,g=1,h=1,i=2,j=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Diocles/Diocles11-360.avif"
+           alt="Generalized Cissoid, a=1,b=2,c=2,d=1,e=0°,f=0,g=1,h=1,i=2,j=0°">
+      <figcaption>Generalized Cissoid, a=1,b=2,c=2,d=1,e=0°,f=0,g=1,h=1,i=2,j=0°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cissoid of Diocles Cartesian equation:</div>
+      \[ x(x^{2} + y^{2}) = a\left(\cos\frac{\alpha}{2} y - \sin\frac{\alpha}{2} x\right)^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cissoid of Diocles polar equation:</div>
+      \[ r = a \frac{\sin^{2}(\theta - \alpha/2)}{\cos \theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = \frac{a + b \sin^{c}(d\theta + e)}{f + g \cos^{h}(i\theta + j)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Cissoid of Diocles<sup>1,2,3</sup>, known as “ivy-shaped” from the Greek “kissoid” for its vein-like appearance, was invented by the Greek mathematician Diocles around 180 BC. Diocles created the curve specifically to solve the Delian problem of duplicating the cube that required constructing the side length of a new cube having twice the volume of a given cube with straightedge and compass. The construction requires finding two mean proportionals between two given lengths; the cissoid provides the necessary geometric locus to achieve this, even though the general problem is impossible with those tools alone. The name “cissoid” first appears about 100 years later in the writings of Geminus. In the 17th century, Fermat and Roberval found the tangents to the curve (1634), and Huygens and Wallis determined the area between the curve and its asymptote to be πa²/4 (1658). Newton later gave a mechanical generation method using linked rods of equal length sliding along perpendicular lines. The curve has a cusp at the origin and a vertical asymptote at x = 2a. It is also the roulette formed when the vertex of one parabola rolls without slipping on an equal fixed parabola. In polar coordinates the standard form is r = a sin²(θ)/cos(θ) with the cusp at the origin and asymptote along the y-axis; the code implements the more general cissoid version allowing an arbitrary starting angle α versus the cissoid of Diocles where α = π.</p>
+    <p>Real-life applications in engineering and the natural sciences are limited. The curve’s primary significance remains its historical role in classical Greek geometry and the Delian problem. No specific modern applications in engineering, optics, mechanics, or the natural sciences were identified in the primary mathematical references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/CissoidofDiocles.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CissoidofDiocles.html</a> (history, equations, area, mechanical generation)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cissoid/cissoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cissoid/cissoid.shtml</a> (polar/Cartesian equations, construction methods)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubicc.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubicc.html</a> (Delian problem, area calculation, later mathematicians)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DIOCLES (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fe)
+  (setq id "Cissoid of Diocles"
+        iq "r = a sin²(θ−α/2)/cos(θ)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fe (* (get_real 0 "α (shift angle in °)" 30.0) (/ pi 180.0))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", α=" (rtos (* fe (/ 180.0 pi)) 2 4) "°")
+        rval '(/ (* fa (alt_expt (sin (- (eval a2) fe)) 2 nil)) (avoid_zero (cos (eval a2))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 1e5)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DIOCLES)</code></pre>
+  <p style="font-size:0.85rem; color:#555; margin-top:6px;">Full multi-option version (including Right Strophoid, Canonical Right Strophoid, Trisectrix of Maclaurin, and generalized form) with DCL dialog is available in the separate file Diocles.lsp.</p>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pursuit Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Pursuit Curve</h1>
+      <p class="short-description">The path of a pursuer that moves at constant speed while always directing its velocity toward the current position of a target traveling in a straight line at constant speed.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Pursuit/Pursuit01-360.avif"
+           alt="Pursuit Curve, xd0 varies">
+      <figcaption>
+        Pursuit Curve, s<sub>t</sub>=1,s<sub>d</sub>=2,x<sub>t0</sub>=0,x<sub>d0</sub>=
+        <span class="figcap-value" style="color:#000000">-3</span>,
+        <span class="figcap-value" style="color:#FF0000">-2</span>,
+        <span class="figcap-value" style="color:#0000FF">-1</span>,
+        <span class="figcap-value" style="color:#009600">0</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        y<sub>d0</sub> = 3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pursuit/Pursuit02-360.avif"
+           alt="Pursuit Curve, Pursuit Curve, yd0 varies">
+      <figcaption>
+        Pursuit Curve, s<sub>t</sub>=1,s<sub>d</sub>=2,x<sub>t0</sub>=0,x<sub>d0</sub>=0,y<sub>d0</sub>=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2</span>,
+        <span class="figcap-value" style="color:#FF9600">2.5</span>,
+        <span class="figcap-value" style="color:#9600FF">3</span>,
+        <span class="figcap-value" style="color:#0096FF">3.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pursuit/Pursuit03-360.avif"
+           alt="Pursuit Curve, Pursuit Curve, sd0 varies">
+      <figcaption>
+        Pursuit Curve, s<sub>t</sub>=1,s<sub>d</sub>=
+        <span class="figcap-value" style="color:#000000">10</span>,
+        <span class="figcap-value" style="color:#FF0000">3</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">1.2</span>,
+        <span class="figcap-value" style="color:#9600FF">1.05</span>,
+        <span class="figcap-value" style="color:#0096FF">0.8</span>,
+        x<sub>t0</sub>=0,x<sub>d0</sub>=3,y<sub>d0</sub>=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Pursuit/Pursuit04-360.avif"
+           alt="Pursuit Evasion Curve, sd0 varies">
+      <figcaption>
+        Pursuit Curve, s<sub>t</sub>=1,s<sub>d</sub>=
+        <span class="figcap-value" style="color:#000000">-10</span>,
+        <span class="figcap-value" style="color:#FF0000">-3</span>,
+        <span class="figcap-value" style="color:#0000FF">-2</span>,
+        <span class="figcap-value" style="color:#009600">-1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">-1.2</span>,
+        <span class="figcap-value" style="color:#9600FF">-1.05</span>,
+        <span class="figcap-value" style="color:#0096FF">-0.8</span>,
+        x<sub>t0</sub>=0,x<sub>d0</sub>=2,y<sub>d0</sub>=1
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Pursuit Curve traveler equations:</div>
+      \[ x_{t} = x_{t0} + s_{t}\, t,\qquad y_{t} = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Pursuit Curve dog equations:</div>
+      \[ \dfrac{dx}{dt} = \dfrac{s_{d}(x_{t}-x)}{\sqrt{(x_{t}-x)^{2}+y^{2}}},\qquad \dfrac{dy}{dt} = \dfrac{-s_{d}\, y}{\sqrt{(x_{t}-x)^{2}+y^{2}}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The pursuit curve, often called the dog curve, describes the path traced by a pursuer that moves at constant speed while always directing its velocity vector directly toward the current position of a target moving along a straight line at constant speed. Leonardo da Vinci considered the idea conceptually, but the first systematic mathematical analysis was given by the French scientist and hydrographer Pierre Bouguer in 1732 in a memoir on naval tactics.<sup>1,2</sup> The term “pursuit curve” itself entered the literature later in the nineteenth century. In the classic straight-line case coded here, a traveler moves along the x-axis with position \(x_{t}=x_{t0}+s_{t}\cdot t\), \(y_{t}=0\). The dog starts at offset position \((x_{d0},\,y_{d0}&gt;0)\) with constant speed \(s_{d}\) and always heads directly toward the traveler. Its motion is governed by the pair of coupled differential equations that keeps its velocity aligned with the instantaneous line of sight to the target. Derivatives here represent velocities (rate of change of position with time), a basic calculus concept familiar to engineers who work with slopes and rates. The code generates the curve by stepwise numerical integration of these equations, advancing the state variables (time and position) incrementally. When \(s_{d}&gt;s_{t}\) the dog intercepts the traveler; when \(s_{d}\le s_{t}\) capture does not occur and the path approaches an asymptote parallel to the traveler’s line. In the images above, the traveler starts from the origin, moving along the x-axis.</p>
+    <p>In engineering and the natural sciences the geometry appears directly in guidance systems. Pure pursuit guidance, a literal implementation of this rule, has been used in missile control and aircraft targeting studies, where the interceptor continuously steers to point toward the current target location.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/PursuitCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PursuitCurve.html</a> (history and general definition).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/poursuite/poursuite.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/poursuite/poursuite.shtml</a> (dog curve history, Bouguer 1732).</li>
+      <li><a href="https://www.2dcurves.com/power/powerp.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/power/powerp.html</a> (straight pursuit case and naval/kinematic context).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PURSUIT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp)
+  (setq id "Pursuit Curve"
+        iq "xt=xt₀+st·t (yt=0); dog: x'=sd·(xt-x)/R , y'=-sd·y/R"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        xstep (/ xspan divcount)
+        fa (get_real 2 "st (speed of traveler, -= go left)" 1.0)
+        fb (get_real 2 "sd (speed of dog, -= flee): " 2.0)
+        fc (get_real 0 "xt₀ (traveler start x)" 0.0)
+        fd (get_real 0 "xd₀ (dog start x)" 0.0)
+        fe (get_real 2 "yd₀ (dog start y)" 3.0)
+        eq_display (strcat "\nst=" (rtos fa 2 4) ", sd=" (rtos fb 2 4) ", xt₀=" (rtos fc 2 4) ", xd₀=" (rtos fd 2 4) ", yd₀=" (rtos fe 2 4))
+        ff 0.0
+        fg fc
+        fh fd
+        fi fe
+        fj 1
+        fk 0
+        a2 '(progn (setq fl (abs xstep)) (if (= fj 1) (progn (setq fj 0) ff) (progn (if (= fk 1) (progn (setq ff  (+ ff fl) fg (+ fg (* fa fl)) fh fg fi 0.0) ff)
+            (progn (setq fm (- fg fh) fn  (sqrt (+ (* fm fm) (* fi fi))) fo (* (abs fb) fl)) (if (or (&lt; (abs fn) 1e-9) (&lt;= fo fn)) (if (&lt; (abs fn) 1e-9) ff
+            (progn (setq fp (/ (* fb fl) (avoid_zero fn))) (setq fh (+ fh (* fp fm)) fi (+ fi (* fp (- fi)))) (setq ff  (+ ff fl) fg (+ fg (* fa fl))) (if (and
+            (&lt; (abs fi) 1e-9) (&lt; (- fg fh) 0.0)) (setq fh fg fi 0.0 fk 1)) ff)) (progn (setq fh fg fi 0.0 fk 1) (setq ff  (+ ff fl) fg (+ fg (* fa fl))) ff)))))))
+        x2 'fh
+        y2 'fi
+        xc x2
+        yc y2
+        skm '(T T T)
+        a1 0.0
+        x1 fh
+        y1 fi
+        restartflag nil)
+  (cc))
+(C:PURSUIT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

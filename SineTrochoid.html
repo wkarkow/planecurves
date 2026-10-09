@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sine Trochoid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sine Trochoid</h1>
+      <p class="short-description">Roulette of a circle of radius \(a\) that rolls without slip on the sine wave \(y=\sin x\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid01-360.avif"
+           alt="Sine Trochoid, a=0.5,d=1,Positive">
+      <figcaption>Sine Trochoid, a=0.5,d=1,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid02-360.avif"
+           alt="Sine Trochoid, a=0.5,d=1,Negative">
+      <figcaption>Sine Trochoid, a=0.5,d=1,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid03-360.avif"
+           alt="Sine Trochoid, a=0.25,d=1,Positive">
+      <figcaption>Sine Trochoid, a=0.25,d=1,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid04-360.avif"
+           alt="Sine Trochoid, a=0.25,d=1,Negative">
+      <figcaption>Sine Trochoid, a=0.25,d=1,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid05-360.avif"
+           alt="Sine Trochoid, a=0.25,d=0.5,Positive">
+      <figcaption>Sine Trochoid, a=0.25,d=0.5,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid06-360.avif"
+           alt="Sine Trochoid, a=0.25,d=0.5,Negative">
+      <figcaption>Sine Trochoid, a=0.25,d=0.5,Negative/figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid07-360.avif"
+           alt="Sine Trochoid, a=1,d=1,Negative">
+      <figcaption>Sine Trochoid, a=1,d=1,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid08-360.avif"
+           alt="Sine Trochoid, a=1,d=0.5,Negative">
+      <figcaption>Sine Trochoid, a=1,d=0.5,Negative</figcaption>
+    </figure>
+        <figure>
+      <img src="images/SineTrochoid/SineTrochoid09-360.avif"
+           alt="Sine Trochoid, a=1/3,d=1,Positive">
+      <figcaption>Sine Trochoid, a=1/3,d=1,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid10-360.avif"
+           alt="Sine Trochoid, a=1/3,d=1,Negative">
+      <figcaption>Sine Trochoid, a=1/3,d=1,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid11-360.avif"
+           alt="Sine Trochoid, a=2/3,d=0.5,Positive">
+      <figcaption>Sine Trochoid, a=2/3,d=0.5,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid12-360.avif"
+           alt="Sine Trochoid, a=2/3,d=0.5,Negative">
+      <figcaption>Sine Trochoid, a=2/3,d=0.5,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid13-360.avif"
+           alt="Sine Trochoid, a=2/3,d=1,Positive">
+      <figcaption>Sine Trochoid, a=2/3,d=1,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid14-360.avif"
+           alt="Sine Trochoid, a=2/3,d=1,Negative">
+      <figcaption>Sine Trochoid, a=2/3,d=1,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid15-360.avif"
+           alt="Sine Trochoid, a=0.5,d=-1,Positive">
+      <figcaption>Sine Trochoid, a=0.5,d=-1,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid16-360.avif"
+           alt="Sine Trochoid, a=0.5,d=-1,Negative">
+      <figcaption>Sine Trochoid, a=0.5,d=-1,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid17-360.avif"
+           alt="Sine Trochoid, a=0.5,d=-2,Positive">
+      <figcaption>Sine Trochoid, a=0.5,d=-2,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid18-360.avif"
+           alt="Sine Trochoid, a=0.5,d=-2,Negative">
+      <figcaption>Sine Trochoid, a=0.5,d=-2,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid19-360.avif"
+           alt="Sine Trochoid, a=-2/3,d=1,Positive">
+      <figcaption>Sine Trochoid, a=-2/3,d=1,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid20-360.avif"
+           alt="Sine Trochoid, a=-2/3,d=1,Negative">
+      <figcaption>Sine Trochoid, a=-2/3,d=1,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid21-360.avif"
+           alt="Sine Trochoid, a=-1/3,d=-0.5,Positive">
+      <figcaption>Sine Trochoid, a=-1/3,d=-0.5,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid22-360.avif"
+           alt="Sine Trochoid, a=-1/3,d=-0.5,Negative">
+      <figcaption>Sine Trochoid, a=-1/3,d=-0.5,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid23-360.avif"
+           alt="Sine Trochoid, a=0.2,d=0.5,Positive">
+      <figcaption>Sine Trochoid, a=0.2,d=0.5,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid24-360.avif"
+           alt="Sine Trochoid, a=0.2,d=0.5,Negative">
+      <figcaption>Sine Trochoid, a=0.2,d=0.5,Negative</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid25-360.avif"
+           alt="Sine Trochoid, a=0.1,d=0.5,Positive">
+      <figcaption>Sine Trochoid, a=0.1,d=0.5,Positive</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SineTrochoid/SineTrochoid26-360.avif"
+           alt="Sine Trochoid, a=0.025,d=0.5,Positive">
+      <figcaption>Sine Trochoid, a=0.025,d=0.5,Positive</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Sine Trochoid parametric equations:</div>
+      \[ \mathbf{r}(t)=\begin{pmatrix}t\\ \sin t\end{pmatrix}+a'\,\mathbf{N}(t)+d'\,\mathbf{U}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Unit normal and rotated tracer:</div>
+      \[ \mathbf{N}(t)=\pm\dfrac{(-\cos t,\,1)}{\sqrt{1+\cos^{2}t}},\qquad
+         \phi=\dfrac{s}{a'},\qquad
+         \mathbf{U}(t)=\mathrm{rot}(\phi)\,\mathbf{N}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Arc length and input scaling:</div>
+      \[ s=\int\sqrt{1+\cos^{2}t}\,dt,\qquad
+         s_{\text{period}}\approx 7.640395578055424,\qquad
+         k=\dfrac{s_{\text{period}}}{2\pi}\approx 1.21600672342498 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Scaled rolling radius and tracer distance:</div>
+      \[ a'=k\cdot a,\qquad d'=k\cdot d \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The generalized trochoid is the curve traced by a point fixed at a distance \(d\) from the center of a circle of radius \(a\) that rolls without slipping on an arbitrary base curve. The classical theory of roulettes and trochoids was developed in the seventeenth century by Roberval, Pascal, and others in connection with the cycloid and its generalizations; the kinematic condition that the rotation angle equals arc length divided by radius is the standard definition used in mechanism theory.<sup>1</sup> The specific case of a sinusoidal base curve is a modern illustrative example that produces rich families of loops and cusps when the rolling rate and tracing distance are varied. Such constructions appear in the kinematic analysis of mechanisms with undulating guides and in the generation of certain non-circular gear and cam profiles.<sup>2</sup> In engineering they are related to trochoidal rotary pumps and engines, where the rolling or sliding contact between a rotor and housing generates epitrochoidal or hypotrochoidal paths.<sup>3</sup> The version implemented here starts the rolling at a peak of the sine wave and employs a scaling of the input parameters so that the visual rolling rate (revolutions per base period) matches common published illustrations that advance the rotation angle with the parameter rather than true arc length.</p>
+    <p>When the user supplies values \(a\) and \(d\), the code implements the geometrically faithful equations below. The final curve is reflected across the x-axis to match standard orientation.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml</a> (generalized trochoid parametrization, including sinusoidal example)</li>
+      <li>E. H. Lockwood, <em>A Book of Curves</em> (Cambridge University Press, 1961) (classical treatment of roulettes and trochoids)</li>
+      <li>J. E. Beard et al., “Kinematic analysis of trochoidal rotary pumps,” <em>Mechanism and Machine Theory</em> (papers on trochoidal mechanisms and pumps)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SINETROCHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                         id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq)
+  (setq id "Sine-based trochoid"
+        iq "M=(t,sin t)+(k·a)N+(k·d)U, k≈1.216, s=∫√(1+cos²t)dt, φ=s/(k·a), U=rot(φ)N"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions"
+        dct 2513
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (* 1.21600672342498 (get_real 2 "a (rolling radius)" 0.5))
+        fb (* 1.21600672342498 (get_real 2 "d (tracing distance)" 1.0))
+        fc (get_keyword 0 "Positive Negative" "Positive or Negative side of normal?" "Positive")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", d=" (rtos fb 2 4) ", normal side=" fc)
+        paramstep 0.01
+        fd (/ pi 2.0)
+        fe 0.0
+        ff (if (eq fc "Positive") 1.0 -1.0)
+        fg (sqrt (+ 1.0 (* (cos fd) (cos fd))))
+        fh (* ff (/ (- (cos fd)) fg))
+        fi (* ff (/ 1.0 fg))
+        fj (/ fe fa)
+        fk (cos fj)
+        fl (sin fj)
+        fm (- (* (- fk) fh) (* fl fi))
+        fn (- (* fl fh) (* fk fi))
+        fo (+ fd (* fa fh) (* fb fm))
+        fp (+ (sin fd) (* fa fi) (* fb fn))
+        skm '(T T T)
+        a1 0.0
+        a2 '(progn (setq fd (+ fd paramstep) fq (sqrt (+ 1.0 (* (cos fd) (cos fd)))) fe (+ fe (* fq paramstep)) ff (if (eq fc "Positive") 1.0 -1.0)
+            fg fq fh (* ff (/ (- (cos fd)) fg)) fi (* ff (/ 1.0 fg)) fj (/ fe fa) fk (cos fj) fl (sin fj) fm (- (* (- fk) fh) (* fl fi))
+            fn (- (* fl fh) (* fk fi)) fo (+ fd (* fa fh) (* fb fm)) fp (+ (sin fd) (* fa fi) (* fb fn))) fd)
+        xc 'fo
+        yc '(- fp)
+        x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SINETROCHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

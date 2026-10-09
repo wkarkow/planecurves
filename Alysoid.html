@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alysoid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Alysoid Curve</h1>
+      <p class="short-description">A parametric curve generalizing the catenary, defined by differential equations from its Whewell intrinsic form; reduces to catenary when k=1 and plotted via stateful numerical integration.</p>
+    </div>
+    </section>
+
+    <section class="image-gallery">
+      <figure>
+        <img src="images/Alysoid/Alysoid01-360.avif"
+            alt="Alysoid Curve - multiple values of k">
+        <figcaption>
+          Alysoid Curve, a = 1, k =
+          <span class="figcap-value" style="color:#9600FF">0.5</span>,
+          <span class="figcap-value" style="color:#FF9600">0.6</span>,
+          <span class="figcap-value" style="color:#009600">0.7</span>,
+          <span class="figcap-value" style="color:#0000FF">0.8</span>,
+          <span class="figcap-value" style="color:#FF0000">0.9</span>,
+          <span class="figcap-value" style="color:#000000">1.0</span>,
+          <span class="figcap-value" style="color:#0096FF">1.1</span>,
+          <span class="figcap-value" style="color:#AA5555">1.2</span>,
+          <span class="figcap-value" style="color:#00FF00">1.3</span>,
+          <span class="figcap-value" style="color:#FF00FF">1.5</span>,
+          <span class="figcap-value" style="color:#009696">2</span>,
+          <span class="figcap-value" style="color:#960096">4</span>,
+          <span class="figcap-value" style="color:#969600">10</span>
+        </figcaption>
+      </figure>
+    </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Alysoid Curve differential equations:</div>
+      \[ \frac{dx}{dt} = a k^{2} \frac{\cos(t)}{\cos^{2}(k t)}, \quad \frac{dy}{dt} = a k^{2} \frac{\sin(t)}{\cos^{2}(k t)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Integration domain (stateful midpoint):</div>
+      \[ t \in \left[0, \frac{\pi}{2k} - \epsilon\right] \quad (k = b/a > 0) \]
+    </div>
+  </section>
+
+<section>
+  <h2>History and Applications</h2>
+  <p>The alysoid was first studied by Italian mathematician Ernesto Cesàro in 1886, as documented in <em>Nouvelles Annales de Mathématiques</em> (p. 75)<sup>1</sup>. Cesàro (1859–1906) contributed to differential geometry and is known for Cesàro summation in series convergence, but his work on the alysoid focused on its intrinsic properties, such as the Whewell equation \( s = b \cdot \tan(k \cdot \phi) \), where \( s \) is arc length, \( \phi \) is the tangential angle, and \( k = b/a \). The name derives from the Greek "alusion," meaning "little chain," reflecting its resemblance to a hanging chain generalized beyond the standard catenary<sup>1</sup>.</p>
+  <p>When \( a = b \) (\( k = 1 \)), the alysoid reduces to the catenary, the curve formed by a uniform chain under gravity, with equation \( y = a \cdot \cosh(x/a) \)<sup>1</sup>. For \( a = 2b \) (\( k = 1/2 \)), it has a specific parametrization involving integrals of secant functions<sup>1</sup>. If \( b \) approaches 0, it becomes the antiloga or Pirondini pseudo-spiral<sup>2</sup>.</p>
+  <p>Real-life applications center on the special catenary case: suspended cables in power lines and suspension bridges (e.g., Golden Gate Bridge cables follow catenary shapes for load distribution); catenary arches in architecture, like Antoni Gaudí's designs in Casa Milà for structural stability without tension; and steel catenary risers in offshore oil platforms for flexible seabed connections resisting waves and currents. No distinct applications for the general alysoid (\( k \neq 1 \)) were found beyond these.</p>
+</section>
+
+<section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/alysoid/alysoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/alysoid/alysoid.shtml</a> (History and special cases)</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponentiala.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentiala.html</a> (Whewell equation and acceleration profile note)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ALYSOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm)
+  (setq id "Alysoid Curve"
+        iq "dx/dt=a·k²·cos(t)/cos²(kt), dy/dt=a·k²·sin(t)/cos²(kt), k=b/a"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions in curve"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "k (shape ratio)" 1.0)
+        fc (/ pi (* 2.0 (abs fb)))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        paramstep (/ (* 0.999999 fc) (float (max 1 (1- divcount))))
+        fd 0.0
+        fe 0.0
+        ff 0.0
+        fg 1
+        xc 'fe
+        yc 'ff
+        skm '(nil T T)
+        a1 0.0
+        a2 '(progn
+              (if (= fg 1)
+                (progn (setq fg 0) fd)
+                (progn
+                  (setq fh fd
+                        fi (cos (* fb fh))
+                        fj (avoid_zero (* fi fi))
+                        fk (+ fh paramstep)
+                        fl (cos (* fb fk))
+                        fm (avoid_zero (* fl fl))
+                        fe (+ fe (* 0.5 paramstep (+ (* fa fb fb (/ (cos fh) fj)) (* fa fb fb (/ (cos fk) fm)))))
+                        ff (+ ff (* 0.5 paramstep (+ (* fa fb fb (/ (sin fh) fj)) (* fa fb fb (/ (sin fk) fm)))))
+                        fd fk)
+                  fd)))
+        x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ALYSOID)</code></pre>
+</section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

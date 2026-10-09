@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyclic Harmonic Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cyclic Harmonic Curve</h1>
+      <p class="short-description">A family of polar curves given by r = a + b·cos(nθ), producing rose-like or limaçon-derived patterns.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic01-360.avif"
+           alt="Cyclic Harmonic Curve, a=1,multiple values of b,n=1"
+      <figcaption>
+        Cyclic Harmonic Curve, a=1,b=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>(cardioid),
+        <span class="figcap-value" style="color:#FF9600">1.25</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.75</span>,
+        <span class="figcap-value" style="color:#AA5555">2.0</span>(limaçon),
+        <span class="figcap-value" style="color:#00FF00">2.25</span>,
+        <span class="figcap-value" style="color:#FF00FF">2.5</span>,
+        n=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic02-360.avif"
+           alt="Cyclic Harmonic Curve, a=1,b=1,multiple values of n"
+      <figcaption>
+        Cyclic Harmonic Curve, a=1,b=1,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic03-360.avif"
+           alt="Cyclic Harmonic Curve, a=0,b=1,multiple values of n"
+      <figcaption>
+        Cyclic Harmonic Curve, a=0,b=1,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic04-360.avif"
+           alt="Cyclic Harmonic Curve, a=4,b=1,n=32"
+      <figcaption>Cyclic Harmonic Curve, a=4,b=1,n=32</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic05-360.avif"
+           alt="Cyclic Harmonic Curve, a=8,b=0.5,n=32">
+      <figcaption>Cyclic Harmonic Curve, a=8,b=0.5,n=32</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic06-360.avif"
+           alt="Cyclic Harmonic Curve, a=1,b=0.5,n=7/3">
+      <figcaption>Cyclic Harmonic Curve, a=1,b=0.5,n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic07-360.avif"
+           alt="Cyclic Harmonic Curve, a=1,b=1,n=7/3">
+      <figcaption>Cyclic Harmonic Curve, a=1,b=1,n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic08-360.avif"
+           alt="Cyclic Harmonic Curve, a=1,b=2,n=7/3">
+      <figcaption>Cyclic Harmonic Curve, a=1,b=2,n=7/3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic09-360.avif"
+           alt="Cyclic Harmonic Curve, a=1,b=1,n=65/16">
+      <figcaption>Cyclic Harmonic Curve, a=1,b=1,n=65/16</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicHarmonic/CyclicHarmonic10-360.avif"
+           alt="Cyclic Harmonic Curve, a=1,b=3,n=65/16">
+      <figcaption>Cyclic Harmonic Curve, a=1,b=3,n=65/16</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Cyclic Harmonic Curve polar equation:</div>
+      \[ r = a + b \cdot \cos(n \theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Cyclic-harmonic curves, also known as Moritz curves, geometric petals, botanical curves, conchoids of roses, or circular sinusoids,<sup>1</sup> were systematically studied by the American mathematician Robert E. Moritz (1868–1940) beginning in 1917. Moritz published “The General Theory of Cyclic-Harmonic Curves” in the Annals of Mathematics in 1921<sup>2</sup> and a comprehensive book on the subject in 1923. He constructed a mechanical linkage device to physically generate these curves for different values of the parameters. These curves are mathematically the conchoids of rose curves taken with respect to the pole and can also be obtained as the image of Pascal’s limaçon under the Brocard transformation.<sup>1</sup></p>
+    <p>Real-life applications in engineering and the natural sciences are limited. When n = 1 the equation reduces to the classical limaçon, which is used in the design of limaçon rotary machines such as pumps, compressors, and expanders for power generation and fluid processing systems.<sup>3</sup> For general rational n = p/q the curves correspond to projections of certain Turk’s head knots and represent toroidal solenoids viewed from above, components used in electromagnetism for generating uniform magnetic fields within their core.<sup>1</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/conchoidderosace/conchoidderosace.shtml " target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/conchoidderosace/conchoidderosace.shtml </a> (history, alternative names, knot projections, toroidal solenoids)</li>
+      <li><a href="https://archive.org/details/jstor-1967779" target="_blank" rel="noopener noreferrer">https://archive.org/details/jstor-1967779</a> (Moritz 1921 general theory)</li>
+      <li><a href="https://dresden.academic.wlu.edu/files/2025/01/GrayStarWeb.pdf" target="_blank" rel="noopener noreferrer">https://dresden.academic.wlu.edu/files/2025/01/GrayStarWeb.pdf</a> (historical context and limaçon applications in machines)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CYCLICHARMONIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                           restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Cyclic Harmonic Curve"
+        iq "r=a+b·cos(nθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (radial offset)" 1.0)
+        fb (get_real 2 "b (cos amplitude)" 0.25)
+        fc (get_real 2 "n (theta multiplier)" 8.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", n=" (rtos fc 2 4))
+        rval '(+ fa (* fb (cos (* fc (eval a2)))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CYCLICHARMONIC)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

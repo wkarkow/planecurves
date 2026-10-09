@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circular Radial Sextic Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Circular Radial Sextic Curve</h1>
+      <p class="short-description">The radial curve of an ellipse with pole at the ellipse center; a sixth-degree algebraic curve.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CircRadialSextic/CircRadialSextic01-360.avif"
+           alt="Circular Radial Sextic, multiple values of a"
+      <figcaption>
+        Circular Radial Sextic, a=
+        <span class="figcap-value" style="color:#000000">2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.8</span>,
+        <span class="figcap-value" style="color:#0000FF">1.6</span>,
+        <span class="figcap-value" style="color:#009600">1.4</span>,
+        <span class="figcap-value" style="color:#FF9600">1.2</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+        ,b=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/CircRadialSextic/CircRadialSextic02-360.avif"
+           alt="Circular Radial Sextic, a=1,multiple values of b"
+      <figcaption>
+        Circular Radial Sextic, a=1,b=
+        <span class="figcap-value" style="color:#000000">2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.8</span>,
+        <span class="figcap-value" style="color:#0000FF">1.6</span>,
+        <span class="figcap-value" style="color:#009600">1.4</span>,
+        <span class="figcap-value" style="color:#FF9600">1.2</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Circular Radial Sextic Curve implicit equation:</div>
+      \[ (a^{2} y^{2} + b^{2} x^{2})^{3} = a^{4} b^{4} (x^{2} + y^{2})^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Circular Radial Sextic Curve polar equation:</div>
+      \[ r = \frac{a^{2} b^{2}}{(a^{2} \cos^{2} \theta + b^{2} \sin^{2} \theta)^{3/2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Circular Radial Sextic Curve<sup>1,2</sup> is the radial curve of an ellipse with the pole located at the ellipse center. British mathematician Robert Tucker (1832–1905), long-time editor of the Quarterly Journal of Pure and Applied Mathematics, studied this family of curves in 1864. The radial curve is the locus of points obtained by placing, at a fixed pole, a vector equal in length and parallel to the radius-of-curvature vector drawn from each point on the original ellipse. This construction, which relies on the basic idea of curvature as how sharply the tangent turns along the path (a concept from introductory calculus), produces a sixth-degree algebraic curve.</p>
+    <p>In engineering, radial curves of this type appear in the theory of wheel-road couples. A wheel-road couple consists of two curves, one being the radial curve and the other its Mannheim partner, that roll on each other without slipping. Such pairs have practical use in the analysis and design of conjugate profiles for mechanical systems, including special gears and rolling-contact mechanisms.<sup>3</sup> No specific applications in the natural sciences were identified in the reviewed sources.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/radiale/radiale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/radiale/radiale.shtml</a> (radial curve definition and ellipse example).</li>
+      <li><a href="https://mathworld.wolfram.com/RadialCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/RadialCurve.html</a> (Tucker 1864 study).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/engrenage/engrenage.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/engrenage/engrenage.shtml</a> (wheel-road couples).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CIRCRADIALSEXTIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                             restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Circular Radial Sextic Curve"
+        iq "r=a²·b²/(a²·cos²(θ)+b²·sin²(θ))^(3/2)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (vertical parameter)" 1.0)
+        fb (get_real 2 "b (horizontal parameter)" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        rval '(/ (* fa fa fb fb) (alt_expt (+ (* fa fa (cos (eval a2)) (cos (eval a2))) (* fb fb (sin (eval a2)) (sin (eval a2)))) 1.5 T))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CIRCRADIALSEXTIC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

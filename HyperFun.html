@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyperbolic Functions - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hyperbolic Functions</h1>
+      <p class="short-description">The six classical hyperbolic functions (csch, cosh, coth, sech, sinh, tanh) plotted as plane curves y = a · f(x).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HyperFun/HyperFun01-360.avif"
+           alt="Hyperbolic cosecant, a=1">
+      <figcaption>Hyperbolic cosecant, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HyperFun/HyperFun02-360.avif"
+           alt="Hyperbolic cosine, a=1">
+      <figcaption>Hyperbolic cosine, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HyperFun/HyperFun03-360.avif"
+           alt="Hyperbolic cotangent, a=1">
+      <figcaption>Hyperbolic cotangent, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HyperFun/HyperFun04-360.avif"
+           alt="Hyperbolic secant, a=1">
+      <figcaption>Hyperbolic secant, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HyperFun/HyperFun05-360.avif"
+           alt="Hyperbolic sine, a=1">
+      <figcaption>Hyperbolic sine, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/HyperFun/HyperFun06-360.avif"
+           alt="Hyperbolic tangent, a=1">
+      <figcaption>Hyperbolic tangent, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic cosecant Cartesian equation:</div>
+      \[ y = a\,\mathrm{csch}(x) = \dfrac{a}{\sinh(x)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic cosine Cartesian equation:</div>
+      \[ y = a\,\cosh(x) = a\dfrac{e^{x}+e^{-x}}{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic cotangent Cartesian equation:</div>
+      \[ y = a\,\coth(x) = a\dfrac{\cosh(x)}{\sinh(x)} = \dfrac{a}{\tanh(x)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic secant Cartesian equation:</div>
+      \[ y = a\,\mathrm{sech}(x) = \dfrac{a}{\cosh(x)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic sine Cartesian equation:</div>
+      \[ y = a\,\sinh(x) = a\dfrac{e^{x}-e^{-x}}{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic tangent Cartesian equation:</div>
+      \[ y = a\,\tanh(x) = a\dfrac{\sinh(x)}{\cosh(x)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The six hyperbolic functions sinh, cosh, tanh, csch, sech, and coth serve as analogs to the ordinary trigonometric functions.<sup>1,2,3</sup> Vincenzo Riccati introduced them formally in 1757 using the notations Sh. and Ch. for hyperbolic sine and cosine. Johann Heinrich Lambert systematized their use in the 1760s, providing exponential definitions and the modern abbreviations that remain in use today. These functions arise naturally from solutions to problems in mathematical physics involving the exponential function and parallel ordinary trigonometric functions, but arise from the geometry of the hyperbola.</p>
+    <p>The hyperbolic cosecant originated with the 18th-century formalization of hyperbolic functions by Riccati and Lambert. The csch curve exhibits a sharp spike at the origin and decays rapidly toward zero on either side, resembling the reciprocal of an exponential wave. Csch(x) is useful in modeling wave attenuation, electric field decay in plasma physics, and heat transfer problems where the solution of the differential equation involves sinh(x) and its reciprocal.</p>
+    <p>The hyperbolic cosine forms the basis of the catenary, the curve assumed by an ideal flexible chain suspended under its own weight. The underlying curve was studied as early as Galileo and Huygens, and its analytic expression using cosh(x) was formalized by Euler in the mid-18th century. Engineers employ this shape in the design of suspension bridges, power transmission lines, and related structures to ensure uniform tension and minimal material use. The Gateway Arch in St. Louis, Missouri, is built as an inverted catenary to achieve optimal performance under compression.</p>
+    <p>The hyperbolic cotangent appeared in Lambert’s 1766 <em>Theorie der Parallellinien</em>, in hyperbolic geometry and in exponential-based differential equations. It arises in physical modeling where ratios of exponential growth and decay dominate, for example in the current-voltage relationship of thermionic emission, in certain solutions to the diffusion equation, in describing relaxation phenomena in thermal systems, and in visualizing boundary layers.</p>
+    <p>The hyperbolic secant was introduced by Riccati, and often appears in closed-form analytic solutions of the nonlinear Schrödinger equation and the Korteweg–de Vries (KdV) equation, where sech-squared profiles model solitary wave pulses. In engineering and applied physics, the sech curve is therefore central to soliton theory, fiber-optic signal transmission, and waveguide field distributions. It is a smoother, exponentially based cousin of the Gaussian curve.</p>
+    <p>The hyperbolic sine is the foundation of all hyperbolic functions. It first appeared in the 1760s in Euler’s and Lambert’s analytic works and corresponds to the y-coordinate of a point on the unit hyperbola parameterized by a hyperbolic angle. Sinh(x) arises in the solution of linear differential equations describing steady-state heat conduction, beam deflection, and electric potential in uniform media, next most frequently encountered after sine and cosine.</p>
+    <p>The hyperbolic tangent was a central function in 19th-century studies of hyperbolic geometry and later gained prominence in electronics and control theory as a convenient analog of the logistic curve. Tanh(x) models saturation in amplifiers and neural activation functions in artificial intelligence, where its bounded output provides nonlinear compression of large inputs. In physics it describes magnetization (the Langevin function approximation), temperature-dependent transition curves, and viscous velocity profiles. In plots, it serves as an ideal sigmoid transition curve.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/HyperbolicFunctions.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/HyperbolicFunctions.html</a> (history, definitions, and general properties).</li>
+      <li><a href="https://mathworld.wolfram.com/HyperbolicCosine.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/HyperbolicCosine.html</a> (catenary equation and engineering applications).</li>
+      <li><a href="https://mathworld.wolfram.com/HyperbolicSine.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/HyperbolicSine.html</a> (differential equation applications and related uses).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HYPERFUN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa xstep)
+  (setq id "Hyperbolic Functions"
+        iq ""
+        dcl "HYPERFUN"
+        opt '("cosecant" "cosine" "cotangent" "secant" "sine" "tangent")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 400
+        dpt '(4.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\ny=a·csch(x)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "a=" (rtos fa 2 4))
+           yc '(/ fa (sinh (avoid_zero (eval x2))))))
+    ((eq kw 1)
+     (princ "\ny=a·cosh(x)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "a=" (rtos fa 2 4))
+           yc '(* fa (cosh (eval x2)))))
+    ((eq kw 2)
+     (princ "\ny=a·coth(x)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "a=" (rtos fa 2 4))
+           yc '(/ fa (tanh (avoid_zero (eval x2))))))
+    ((eq kw 3)
+     (princ "\ny=a·sech(x)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "a=" (rtos fa 2 4))
+           yc '(/ fa (cosh (eval x2)))))
+    ((eq kw 4)
+     (princ "\ny=a·sinh(x)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "a=" (rtos fa 2 4))
+           yc '(* fa (sinh (eval x2)))))
+    ((eq kw 5)
+     (princ "\ny=a·tanh(x)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "a=" (rtos fa 2 4))
+           yc '(* fa (tanh (eval x2))))))
+  (setq maxdraw (get_real 2 "Maximum x and y values allowed?" 1e5)
+        paramstep (/ xspan divcount)
+        skm (if (or (eq kw 1) (eq kw 3)) '(nil T T) '(T T nil))
+        a1 0
+        a2 a1
+        xc '(eval a2)
+        x1 (eval xc)
+        x2 x1
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HYPERFUN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

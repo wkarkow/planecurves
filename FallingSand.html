@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Falling Sand Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Falling Sand Curve</h1>
+      <p class="short-description">A quartic algebraic curve obtained as the profile of a sand dune formed by constant-rate sand falling from a harmonically oscillating basket.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/FallingSand/FallingSand01-360.avif"
+           alt="Falling Sand Curve, a=1,b=1,c=1,d=2 before trimming">
+      <figcaption>Falling Sand Curve, a=1,b=1,c=1,d=2 before trimming</figcaption>
+    </figure>
+    <figure>
+      <img src="images/FallingSand/FallingSand02-360.avif"
+           alt="Falling Sand Curve, a=1,b=1,c=1,d=2 after trimming, real values">
+      <figcaption>Falling Sand Curve, a=1,b=1,c=1,d=2 after trimming, real values</figcaption>
+    </figure>
+    <figure>
+      <img src="images/FallingSand/FallingSand03-360.avif"
+           alt="Generalized Falling Sand Curve, a=1,b=2,c=1,d=3">
+      <figcaption>Generalized Falling Sand Curve, a=1,b=2,c=1,d=3</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Falling Sand Curve Cartesian equation:</div>
+      \[ y^{2} = \dfrac{1}{1 - x^{2}},\quad |x| &lt; 1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Cartesian equation:</div>
+      \[ y^{2} = \dfrac{a}{b - c\, x^{d}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Falling Sand Curve<sup>1</sup> is a quartic algebraic curve proposed on the mathematical curve collection website 2dcurves.com. It is presented through the following physical thought experiment: “Imagine a basket of sand, oscillating harmonically on a string. When there is a hole in the basket, so that the sand pours down on the ground, a dune of sand emerges. We admit that the amount of falling sand is constant with time, and we neglect the horizontal velocity of the sand. Then the profile of the sand dune has a curve as shown in the drawn curve.”</p>
+    <p>This specific curve and model appear only on 2dcurves.com; no other independent references or standard names were located in major curve compendia such as mathcurve.com or MathWorld. When the equation is generalized by varying the exponent d, the implicit form bears a structural resemblance to certain hyperelliptic curves. Because the curve is asymmetric whenever d is not an even integer, to see the full curve, the user must run the code twice, choosing first one, then the other of right- versus left-hand options. In addition, because the alt_expt function with “nil” changes negative base values to positive and then changes the resulting roots to negative in order to avoid imaginary root crashes, parts of the curve outside the vertical asymptotes are mathematically invalid and can be trimmed away if desired.</p>
+    <p>No applications of this particular curve in engineering or the natural sciences have been found.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/quartic/quarticf.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticf.html</a> (definition and physical model of the Falling Sand Curve)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FALLINGSAND (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                        restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe)
+  (setq id "Falling Sand Curve"
+        iq "y² = a/(b-c·xᵈ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 1000
+        dpt '(1.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "b (shifts vertical asymptote right)" 1.0)
+        fc (get_real 2 "c (increases steepness)" 1.0)
+        fd (get_real 2 "d (sharpness of rise near asymptote)" 2.0)
+        fe (get_keyword 0 "Right Left" "draw Right or Left-hand portion of curve?" "Right")
+        eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4) ", d= " (rtos fd 2 4))
+        xc '(eval a2)
+        yc '(alt_expt (/ fa (avoid_zero (- fb (* fc (alt_expt (eval a2) fd nil))))) 0.5 nil)
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 50.0)
+        paramstep (/ xspan divcount)
+        paramstep (if (eq fe "Right") paramstep (- paramstep))
+        skm '(nil nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:FALLINGSAND)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

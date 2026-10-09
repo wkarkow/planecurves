@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nickalls-Pulfrich Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Nickalls-Pulfrich Curve</h1>
+      <p class="short-description">Apparent path of a vertical rod fixed on a horizontal turntable rotating at constant angular velocity, viewed binocularly from the side with a light-reducing filter before one eye.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Nickalls/Nickalls01-360.avif"
+           data-caption="Nickalls-Pulfrich Curve, a=5.0(black),4.5(red),4.0(blue),3.5(green),3.0(orange),2.5(purple),2.0(cyan),1.9092(brown),1.5(lime),1.0(magenta),0.5(teal),b=1/3,c=10"
+           alt="Nickalls-Pulfrich Curve, a=5.0(black),4.5(red),4.0(blue),3.5(green),3.0(orange),2.5(purple),2.0(cyan),1.9092(brown),1.5(lime),1.0(magenta),0.5(teal),b=1/3,c=10">
+      <figcaption>
+        Nickalls-Pulfrich Curve, a=
+        <span class="figcap-value" style="color:#000000">5.0</span>,
+        <span class="figcap-value" style="color:#FF0000">4.5</span>,
+        <span class="figcap-value" style="color:#0000FF">4.0</span>,
+        <span class="figcap-value" style="color:#009600">3.5</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.5</span>,
+        <span class="figcap-value" style="color:#0096FF">2.0</span>,
+        <span class="figcap-value" style="color:#AA5555">1.9092</span>,
+        <span class="figcap-value" style="color:#00FF00">1.5</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.0</span>,
+        <span class="figcap-value" style="color:#009696">0.5</span>,
+        b=1/3,c=10
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Nickalls/Nickalls02-360.avif"
+           data-caption="Nickalls-Pulfrich Curve, a=2.5,b=1/3,c=8.0(black),6.0(red),5.0(blue),4.0(green),3.0(orange),2.0(purple),1.5(cyan),1.0(brown),0.75(lime),0.5(magenta),0.25(teal)"
+           alt="Nickalls-Pulfrich Curve, a=2.5,b=1/3,c=8.0(black),6.0(red),5.0(blue),4.0(green),3.0(orange),2.0(purple),1.5(cyan),1.0(brown),0.75(lime),0.5(magenta),0.25(teal)">
+      <figcaption>
+        Nickalls-Pulfrich Curve, a=2.5,b=1/3,c=
+        <span class="figcap-value" style="color:#000000">8.0</span>,
+        <span class="figcap-value" style="color:#FF0000">6.0</span>,
+        <span class="figcap-value" style="color:#0000FF">5.0</span>,
+        <span class="figcap-value" style="color:#009600">4.0</span>,
+        <span class="figcap-value" style="color:#FF9600">3.0</span>,
+        <span class="figcap-value" style="color:#9600FF">2.0</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">1.0</span>,
+        <span class="figcap-value" style="color:#00FF00">0.75</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.5</span>,
+        <span class="figcap-value" style="color:#009696">0.25</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Nickalls-Pulfrich parametric equations:</div>
+      \[ x=\dfrac{2b\cos^{2}(t-a)+2c(b\cos a-c\sin a)\cos(t-a)+(b\cos 2a-c\sin 2a-b)}{2(b\cos a+c\sin a)\cos(t-a)+\sin a\cos a+b\cdot c} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label"></div>
+      \[ y=\dfrac{b\sin(t-a)\cos(t-a)+(b\cdot c\cos a+b^{2}\sin a)\sin(t-a)}{(b\cos a+c\sin a)\cos(t-a)+\sin a\cos a+b\cdot c} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Nickalls-Pulfrich curve<sup>1,2</sup> describes the apparent path traced by a vertical rod fixed on a horizontal turntable rotating at constant angular velocity when viewed binocularly from the side with a light-reducing filter before one eye. This is a specific geometric realization of the Pulfrich effect, an optical illusion first reported in 1922 by German physicist Carl Pulfrich while investigating stereoscopic photometry. Pulfrich observed that dimming the image to one eye (via a filter) caused objects moving in a frontal plane to appear to follow curved trajectories in depth because the filtered eye processes visual information with a measurable delay relative to the other eye.<sup>2</sup> In 1986 R. W. D. Nickalls (a British anesthetist and mathematician) analyzed the rotating-turntable case and derived the equations for the apparent locus of the rod, showing that the curve’s shape depends on: the latency angle \(a\) (half the angular delay), \(b\) (half the interpupillary distance divided by rod-to-center radius), and \(c\) (observer-to-center distance divided by rod-to-center radius).<sup>2</sup> Varying the latency angle while holding distances fixed produces families of curves that reverse apparent rotation sense. Nickalls’ derivation also furnished a simple, sensitive clinical method for quantifying small inter-ocular latency differences without additional pointers or complex apparatus.<sup>2</sup></p>
+    <p>Real-life applications lie in ophthalmology and neurology by detecting and measuring unilateral delays in the visual pathway, such as those caused by optic neuritis in multiple sclerosis, cataracts, ischaemic optic neuropathy, or facial trauma. Neutral-density filters placed before the unaffected eye can neutralize the illusory depth and restore normal perception, providing both diagnostic confirmation and therapeutic management. In astronomy the same latency difference contributes to the classical “personal equation” that produces small systematic timing discrepancies among observers of moving celestial objects.<sup>3</sup></p>
+    <p>With default parameters of \(b=\frac{1}{3}\) and \(c=10\), the curve turns into a single line at the transition value of the half-latency angle, \(\frac{1}{30}\) radians = 1.909152432996376° or \(\arctan(\frac{b}{c})\).</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/higher/highern.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/higher/highern.html</a> (curve description, equation, parameters, Pulfrich/Nickalls history)</li>
+      <li><a href="https://nickalls.org/dick/papers/pulfrich/pulfrich1986.pdf" target="_blank" rel="noopener noreferrer">https://nickalls.org/dick/papers/pulfrich/pulfrich1986.pdf</a> (1986 derivation, experimental verification, latency-measurement method)</li>
+      <li><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000001646" target="_blank" rel="noopener noreferrer">https://www.neurology.org/doi/10.1212/WNL.0000000000001646</a> (applications in multiple sclerosis, optic neuritis, and neutral-density filter therapy)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:NICKALLS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Nickalls-Pulfrich Curve"
+        iq (strcat "Let s=t−a. d=(b·cos(a)+c·sin(a))·cos(s)+sin(a)·cos(a)+b·c\nx=(1/(2d))[2b·cos²(s)+2c(b·cos(a)−c·sin(a))·cos(s)+(b·cos(2a)−c·sin(2a)−b)]"
+                   "\ny=(1/d)[b·sin(s)·cos(s)+(b·c·cos(a)+b²·sin(a))·sin(s)]")
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (half-latency angle in °)" 2.5)
+        fb (get_real 2 "b = 1/2 eye-eye/rod to turntable center" (/ 1.0 3.0))
+        fc (get_real 2 "c = eye to turntable center/rod to turntable center" 10.0)
+        fd (* pi (/ fa 180.0))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        fe '(+ (* (+ (* fb (cos fd)) (* fc (sin fd))) (cos (- (eval a2) fd))) (* (sin fd) (cos fd)) (* fb fc))
+        xc '(/ (+ (* 2.0 fb (expt (cos (- (eval a2) fd)) 2)) (* 2.0 fc (+ (* fb (cos fd)) (* -1.0 fc (sin fd))) (cos (- (eval a2) fd)))
+            (+ (* fb (cos (* 2.0 fd))) (* -1.0 fc (sin (* 2.0 fd))) (* -1.0 fb))) (* 2.0 (avoid_zero (eval fe))))
+        yc '(/ (+ (* fb (sin (- (eval a2) fd)) (cos (- (eval a2) fd))) (* (+ (* fb fc (cos fd)) (* fb fb (sin fd))) (sin (- (eval a2) fd)))) (avoid_zero (eval fe)))
+        maxdraw (if (< fc 1)(get_real 2 "Maximum x and y values allowed?" 5) nil)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:NICKALLS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

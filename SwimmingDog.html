@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swimming Dog Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Swimming Dog Curve</h1>
+      <p class="short-description">The path of a dog or boat that swims at constant speed toward a fixed landing point on the opposite bank of a river with uniform current.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SwimmingDog/SwimmingDog01-360.avif"
+           alt="Swimming Dog Curve, c=2, multiple values of k">
+      <figcaption>
+        Swimming Dog Curve, c=2,k=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">0.75</span>,
+        <span class="figcap-value" style="color:#0000FF">0.85</span>,
+        <span class="figcap-value" style="color:#009600">0.95</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.1</span>,
+        <span class="figcap-value" style="color:#0096FF">1.25</span>,
+        <span class="figcap-value" style="color:#AA5555">1.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">4.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Swimming Dog Curve polar equation:</div>
+      \[ r = c\,\dfrac{\cos^{k-1}(t)}{(1+\sin(t))^{k}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Swimming Dog Curve<sup>1</sup> describes the path of a dog (or boat) swimming at constant speed \(v\) relative to the water in a river with uniform current of speed \(u\), while always heading directly toward a fixed target point on the opposite bank. This is a pursuit problem set in a moving medium, where the current introduces a constant drift velocity that the swimmer must counteract by adjusting direction continuously. The ratio \(k=v/u\) (dog or boat speed over current speed) controls the outcome and shape: when \(k&gt;1\) the swimmer reaches the target after a curved detour; when \(k=1\) the path is a parabolic arc that reaches the bank but misses the target point; when \(k&lt;1\) the swimmer is carried downstream and approaches the bank asymptotically without landing. In other words, if the dog swims slower than the current, he is swept away to the north, struggling but ‘losing ground’ (or water?) to the current as he is swept away and never reaches his goal. This dog is dumb. At some point, a real dog would eventually swim for shore and run back to 0,0, but this is what happens when the AI dog is not smart enough to figure that out.</p>
+    <p>The broader family of pursuit trajectories (also called dog curves or <em>courbe du chien</em>) has deep classical roots. Early investigations of pursuit traces go to Leonardo da Vinci, with systematic study by Pierre Bouguer in 1732. Later contributions came from Du Boisaymé around 1811, Dunoyer in 1906, and Morley in 1921 for the circular case.<sup>2</sup> The specific swimming-dog variant with linear current was examined by Saint Laurent and Sturm in 1822. It appears in modern compilations as a natural extension of pursuit theory to drifting media and is sometimes presented under the descriptive name “Nageur” (swimmer).</p>
+    <p>Real-life applications center on navigation and path planning. The model directly gives the curved route and travel time for a swimmer, dog, or boat crossing a river while always aiming at a precise landing point or beacon, accounting for the drift of the current. Analogous problems appear in classical physics exercises on boat crossing times. Generalizations to pursuit in moving frames extend to animal locomotion in flowing water, vehicle guidance in currents or wind, and related search or interception scenarios in fluids.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/nageur/nageur.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/nageur/nageur.shtml</a> (equations, cases, navigation interpretation and link to related boat-time exercises).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/poursuite/poursuite.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/poursuite/poursuite.shtml</a> (classical history, explicit connection to the swimming-dog/current variant).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SWIMMINGDOG (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep
+                        paramstep restartflag rval id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Swimming Dog Curve"
+        iq "r=(c/cos(t))·((cos(t)/(1+sin(t)))ᵏ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 90
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "c (x of dog at t=0)" 2.0)
+        fb (get_real 6 "k (dog speed ratio)" 1.5)
+        eq_display (strcat "\nc=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        rval '(cond ((&lt; (abs (cos (eval a2))) 1e-9) (cond ((&gt; fb 1.0) 0.0) ((&lt; (abs (- fb 1.0)) 1e-9) (/ fa 2.0)) (T 1e13))) ((&lt; (abs (+ 1.0 (sin
+              (eval a2)))) 1e-9) 1e13) (T (* (/ fa (cos (eval a2))) (expt (/ (cos (eval a2)) (+ 1.0 (sin (eval a2)))) fb))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SWIMMINGDOG)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

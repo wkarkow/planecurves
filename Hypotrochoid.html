@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hypotrochoid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hypotrochoid</h1>
+      <p class="short-description">A roulette traced by a point attached to a circle of radius r rolling without slipping inside a fixed circle of radius R, the point lying at distance d from the rolling-circle center.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid01-360.avif"
+           alt="Astroid, a=0.75,b=0.25,c=1,d=3,e=0.75,f=0.25,g=1,h=3">
+      <figcaption>Astroid, a=0.75,b=0.25,c=1,d=3,e=0.75,f=0.25,g=1,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid02-360.avif"
+           alt="Blunted Hypotrochoid, a=0.75,b=0.125,c=1,d=3,e=0.75,f=0.125,g=1,h=3">
+      <figcaption>"Blunted Hypotrochoid, a=0.75,b=0.125,c=1,d=3,e=0.75,f=0.125,g=1,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid03-360.avif"
+           alt="Looped Hypotrochoid, a=0.75,b=0.5,c=1,d=3,e=0.75,f=0.5,g=1,h=3">
+      <figcaption>Looped Hypotrochoid, a=0.75,b=0.5,c=1,d=3,e=0.75,f=0.5,g=1,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid04-360.avif"
+           alt="Rose Hypotrochoid, a=0.75,b=0.75,c=1,d=3,e=0.75,f=0.75,g=1,h=3">
+      <figcaption>Hypotrochoid, a=0.75,b=0.75,c=1,d=3,e=0.75,f=0.75,g=1,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid05-360.avif"
+           alt="Expanded Rose Hypotrochoid, a=0.75,b=1.25,c=1,d=3,e=0.75,f=1.25,g=1,h=3">
+      <figcaption>Expanded Rose Hypotrochoid, a=0.75,b=1.25,c=1,d=3,e=0.75,f=1.25,g=1,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid06-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.75,c=0.5,d=3,e=0.75,f=0.75,g=0.5,h=3">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.75,c=0.5,d=3,e=0.75,f=0.75,g=0.5,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid07-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.75,c=2,d=3,e=0.75,f=0.75,g=2,h=3">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.75,c=2,d=3,e=0.75,f=0.75,g=2,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid08-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.75,c=3,d=3,e=0.75,f=0.75,g=3,h=3">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.75,c=3,d=3,e=0.75,f=0.75,g=3,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid09-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.75,c=4,d=3,e=0.75,f=0.75,g=4,h=3">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.75,c=4,d=3,e=0.75,f=0.75,g=4,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid10-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.75,c=5,d=3,e=0.75,f=0.75,g=5,h=3">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.75,c=5,d=3,e=0.75,f=0.75,g=5,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid11-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.25,c=3,d=3,e=0.75,f=0.25,g=3,h=3">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.25,c=3,d=3,e=0.75,f=0.25,g=3,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid12-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.25,c=0.5,d=3,e=0.75,f=0.25,g=0.5,h=3">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.25,c=0.5,d=3,e=0.75,f=0.25,g=0.5,h=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid13-360.avif"
+           alt="Generalized Hypotrochoid, a=2/3,b=7/12,c=1,d=2,e=2/3,f=7/12,g=1,h=2">
+      <figcaption>Generalized Hypotrochoid, a=2/3,b=7/12,c=1,d=2,e=2/3,f=7/12,g=1,h=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid14-360.avif"
+           alt="Generalized Hypotrochoid, a=2/3,b=5/6,c=3,d=2,e=2/3,f=5/6,g=3,h=2">
+      <figcaption>Generalized Hypotrochoid, a=2/3,b=5/6,c=3,d=2,e=2/3,f=5/6,g=3,h=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid15-360.avif"
+           alt="Generalized Hypotrochoid, a=2/3,b=5/6,c=0.5,d=2,e=2/3,f=5/6,g=0.5,h=2">
+      <figcaption>Generalized Hypotrochoid, a=2/3,b=5/6,c=0.5,d=2,e=2/3,f=5/6,g=0.5,h=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid16-360.avif"
+           alt="'Classic' Hypotrochoid, R=7,r=3,d=2">
+      <figcaption>'Classic' Hypotrochoid, R=7,r=3,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid17-360.avif"
+           alt="'Powered' Hypotrochoid, R=1,n=4.05,loop depth=-0.75,exponents=1.5">
+      <figcaption>'Powered' Hypotrochoid, R=1,n=4.05,loop depth=-0.75,exponents=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypotrochoid/Hypotrochoid18-360.avif"
+           alt="Generalized Hypotrochoid, a=0.75,b=0.5,c=2,d=3,e=0.5,f=0.75,g=3,h=2">
+      <figcaption>Generalized Hypotrochoid, a=0.75,b=0.5,c=2,d=3,e=0.5,f=0.75,g=3,h=2</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Hypotrochoid parametric equations:</div>
+      \[ x=(R-r)\cos\theta + d\cos\left(\dfrac{R-r}{r}\theta\right),\quad y=(R-r)\sin\theta - d\sin\left(\dfrac{R-r}{r}\theta\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x=a\cos\theta + b\cos^{c}(d\theta),\quad y=e\sin\theta - f\sin^{g}(h\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The hypotrochoid<sup>1,2,3</sup> is a roulette traced by a point attached to a small circle of radius r rolling without slipping inside a fixed circle of radius R, with the tracing point at distance d from the center of the rolling circle. These curves belong to the trochoid family and become a hypocycloid when d equals r. Mathematicians Philippe de La Hire, Girard Desargues, Gottfried Wilhelm Leibniz, and Isaac Newton studied the curves in the context of rolling circles and mechanical linkages during the 17th century.<sup>3</sup> An earlier special case that produces straight-line motion (the Tusi couple, a hypocycloid with ratio 1/2) was known to the Persian mathematician Nasir al-Din al-Tusi in the 13th century.<sup>4</sup> The Spirograph toy later made various hypotrochoids accessible through geared wheels.</p>
+    <p>Real-life applications appear in mechanical engineering. Hypotrochoid profiles form the basis for internal cycloidal gearing and gear belts that deliver smooth positive displacement in compact pumps used for lubrication, fuel delivery, and power steering systems. Certain square watch mechanisms employ the curve (when the fixed-to-rolling radius ratio is 4) to approximate straight-line segments. Special cases also appear in rotary engine rotor paths and drilling mechanisms that produce multi-edged holes.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Hypotrochoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Hypotrochoid.html</a> (definition, parametric equations, and properties)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/hypotrochoid/hypotrochoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/hypotrochoid/hypotrochoid.shtml</a> (Cartesian and complex forms, special cases, mechanisms)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Hypotrochoid/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Hypotrochoid/</a> (historical mathematicians)</li>
+      <li><a href="https://www.2dcurves.com/roulette/rouletteh.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/rouletteh.html</a> (Tusi couple and engineering uses)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HYPOTROCHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                         restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk)
+  (setq id "Hypotrochoid"
+        iq "x=a·cos(θ)+b·cosᶜ(dθ), y=e·sin(θ)-f·sinᵍ(hθ)"
+        dcl "HYPOTROCHOID"
+        opt '("Classic, cusp count" "Classic, R,r,d" "Powered (+ exponent)" "General (a-h free)")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fi (get_real 2 "R (Radius of fixed circle" 1.0)
+          fj (get_real 2 "n (Cusp/loop count)" 4.0)
+          fk (get_real 0 "Loop depth ( >0 blunted, 0 cusp, -1 rose, < -1 expanded )" 0.0)
+          fa (- fi (/ fi fj))
+          fb (if (>= fk 0.0) (* (/ fi fj) (- 1.0 fk)) (+ (/ fi fj) (* (- fk) (- fi (* 2.0 r)))))
+          fc 1.0
+          fd (/ fa (/ fi fj))
+          fe fa
+          ff fb
+          fg 1.0
+          fh fd))
+   ((eq kw 1)
+    (setq fi (get_real 2 "R (Radius of fixed circle)" 1.0)
+          fj (get_real 2 "r (Radius of rolling circle)" (/ fi 4.0))
+          fk (get_real 2 "d (Distance from center of rolling circle to tracing point)" fj)
+          fa (- fi fj)
+          fb fk
+          fc 1.0
+          fd (/ (- fi fj) fj)
+          fe (- fi fj)
+          ff fk
+          fg 1.0
+          fh fd))
+   ((eq kw 2)
+    (setq fi (get_real 2 "R (Radius of fixed circle)" 1.0)
+          fj (get_real 2 "n (Cusp/loop count)" 4.0)
+          fk (get_real 0 "Loop depth ( >0 blunted, 0 cusp, -1 rose, < -1 expanded )" 0.0)
+          fc (get_real 6 "c (cos exponent)" 1.0)
+          fg (get_real 6 "g (sin exponent)" fc)
+          fa (- fi (/ fi fj))
+          fb (if (>= fk 0.0) (* (/ fi fj) (- 1.0 fk)) (+ (/ fi fj) (* (- fk) (- fi (* 2.0 r)))))
+          fd (/ fa (/ fi fj))
+          fe fa
+          ff fb
+          fh fd))
+   ((eq kw 3)
+    (setq fa (get_real 2 "a (base cos amplitude)" 0.75)
+          fb (get_real 2 "b (2nd cos amplitude)" 0.75)
+          fc (get_real 2 "c (cos exponent)" 3.0)
+          fd (get_real 2 "d (cos frequency)" 3.0)
+          fe (get_real 2 "e (base sin amplitude)" 0.75)
+          ff (get_real 2 "f (2nd sin amplitude)" 0.75)
+          fg (get_real 2 "g (sin exponent)" 3.0)
+          fh (get_real 2 "h (sin frequency)" 3.0))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4)
+                           ", e=" (rtos fe 2 4) ", f=" (rtos ff 2 4) ", g=" (rtos fg 2 4) ", h=" (rtos fh 2 4))
+        xc '(+ (* fa (cos (eval a2))) (* fb (alt_expt (cos (* fd (eval a2))) fc nil)))
+        yc '(- (* fe (sin (eval a2))) (* ff (alt_expt (sin (* fh (eval a2))) fg nil)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HYPOTROCHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

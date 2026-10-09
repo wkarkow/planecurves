@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonograph - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Harmonograph</h1>
+      <p class="short-description">Damped Lissajous figures produced by the superposition of independent damped sinusoidal motions along the x- and y-axes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Harmonograph/Harmonograph01-360.avif"
+           alt="Harmonograph, Admiral Akbar, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.15, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.015, A₄=1.428571428571,f₄=1.5,p₄=1.570796326795,k₄=2,d₄=0.015">
+      <figcaption>Harmonograph, Admiral Akbar, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.15, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.015, A₄=1.428571428571,f₄=1.5,p₄=1.570796326795,k₄=2,d₄=0.015</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph02-360.avif"
+           alt="Harmonograph, Angel, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.015, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=2,p₃=0,k₃=1,d₃=0.015, A₄=1,f₄=1.5,p₄=0.785398163397,k₄=3,d₄=0.015">
+      <figcaption>Harmonograph, Angel, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.015, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=2,p₃=0,k₃=1,d₃=0.015, A₄=1,f₄=1.5,p₄=0.785398163397,k₄=3,d₄=0.015</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph03-360.avif"
+           alt="Harmonograph, Arch, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.015, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=-3,f₃=1,p₃=0,k₃=2,d₃=0.015, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0">
+      <figcaption>Harmonograph, Arch, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.015, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=-3,f₃=1,p₃=0,k₃=2,d₃=0.015, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph04-360.avif"
+           alt="Harmonograph, Bifolium, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.006, A₄=-2,f₄=0.5,p₄=0.785398163397,k₄=1,d₄=0.006">
+      <figcaption>Harmonograph, Bifolium, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.006, A₄=-2,f₄=0.5,p₄=0.785398163397,k₄=1,d₄=0.006</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph05-360.avif"
+           alt="Harmonograph, Bug, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.005, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1/3,p₃=1.570796326795,k₃=1,d₃=0.005, A₄=-1,f₄=0.5,p₄=0,k₄=2,d₄=0.005">
+      <figcaption>Harmonograph, Bug, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.005, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1/3,p₃=1.570796326795,k₃=1,d₃=0.005, A₄=-1,f₄=0.5,p₄=0,k₄=2,d₄=0.005</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph06-360.avif"
+           alt="Harmonograph, Capped egg, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.007, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=-1.570796326795,k₃=1,d₃=0.007, A₄=0.5,f₄=0.5,p₄=1.570796326795,k₄=3,d₄=0.007">
+      <figcaption>Harmonograph, Capped egg, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.007, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=-1.570796326795,k₃=1,d₃=0.007, A₄=0.5,f₄=0.5,p₄=1.570796326795,k₄=3,d₄=0.007</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph07-360.avif"
+           alt="Harmonograph, Capstan, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.006, A₄=-1,f₄=1.5,p₄=1.570796326795,k₄=2,d₄=0.006">
+      <figcaption>Harmonograph, Capstan, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.006, A₄=-1,f₄=1.5,p₄=1.570796326795,k₄=2,d₄=0.006</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph08-360.avif"
+           alt="Harmonograph, Cook, A₁=1,f₁=2,p₁=0,k₁=1,d₁=0.012, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=5,p₃=1.570796326795,k₃=1,d₃=0.012, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0.012">
+      <figcaption>Harmonograph, Cook, A₁=1,f₁=2,p₁=0,k₁=1,d₁=0.012, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=5,p₃=1.570796326795,k₃=1,d₃=0.012, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0.012</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph09-360.avif"
+           alt="Harmonograph, DQ logo, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=0.5,f₃=1,p₃=1.570796326795,k₃=3,d₃=0.006, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0.006">
+      <figcaption>Harmonograph, DQ logo, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=0.5,f₃=1,p₃=1.570796326795,k₃=3,d₃=0.006, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0.006</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph10-360.avif"
+           alt="Harmonograph, Fly face, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.004, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.004, A₄=-2,f₄=2/3,p₄=1.047197551197,k₄=1,d₄=0.004">
+      <figcaption>Harmonograph, Fly face, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.004, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.004, A₄=-2,f₄=2/3,p₄=1.047197551197,k₄=1,d₄=0.004</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph11-360.avif"
+           alt="Harmonograph, Ghost, A₁=1.5,f₁=1,p₁=0,k₁=1,d₁=0.009, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=2,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.009, A₄=-1,f₄=3,p₄=0,k₄=2,d₄=0.009">
+      <figcaption>Harmonograph, Ghost, A₁=1.5,f₁=1,p₁=0,k₁=1,d₁=0.009, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=2,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.009, A₄=-1,f₄=3,p₄=0,k₄=2,d₄=0.009</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph12-360.avif"
+           alt="Harmonograph, Heart, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.007, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.007, A₄=-0.5,f₄=1.5,p₄=0.785398163397,k₄=1,d₄=0.007">
+      <figcaption>Harmonograph, Heart, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.007, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.007, A₄=-0.5,f₄=1.5,p₄=0.785398163397,k₄=1,d₄=0.007</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph13-360.avif"
+           alt="Harmonograph, Leaf, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.01, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=0,k₃=1,d₃=0.01, A₄=0.5,f₄=1,p₄=1.570796326795,k₄=3,d₄=0.01">
+      <figcaption>Harmonograph, Leaf, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.01, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=0,k₃=1,d₃=0.01, A₄=0.5,f₄=1,p₄=1.570796326795,k₄=3,d₄=0.01</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph14-360.avif"
+           alt="Harmonograph, Lemniscate of Gerono, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.008, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=0.5,f₃=2,p₃=0,k₃=1,d₃=0.008, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0">
+      <figcaption>Harmonograph, Lemniscate of Gerono, A₁=1,f₁=1,p₁=0,k₁=1,d₁=0.008, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=0.5,f₃=2,p₃=0,k₃=1,d₃=0.008, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph15-360.avif"
+           alt="Harmonograph, Peters' BIT-101, A₁=1,f₁=2,p₁=0,k₁=1,d₁=0.001, A₂=1,f₂=2.01,p₂=1.570796326795,k₂=1,d₂=0.0015, A₃=1,f₃=3,p₃=0.785398163397,k₃=1,d₃=0.002, A₄=1,f₄=3.01,p₄=2.356194490192,k₄=1,d₄=0.0025">
+      <figcaption>Harmonograph, Peters' BIT-101, A₁=1,f₁=2,p₁=0,k₁=1,d₁=0.001, A₂=1,f₂=2.01,p₂=1.570796326795,k₂=1,d₂=0.0015, A₃=1,f₃=3,p₃=0.785398163397,k₃=1,d₃=0.002, A₄=1,f₄=3.01,p₄=2.356194490192,k₄=1,d₄=0.0025</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph16-360.avif"
+           alt="Harmonograph, Speedo, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.008, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=2,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.008, A₄=0.714285714286,f₄=2,p₄=0,k₄=2,d₄=0.008">
+      <figcaption>Harmonograph, Speedo, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.008, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=2,f₃=1,p₃=1.570796326795,k₃=1,d₃=0.008, A₄=0.714285714286,f₄=2,p₄=0,k₄=2,d₄=0.008</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph17-360.avif"
+           alt="Harmonograph, Star Trek, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.01, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=-2,f₃=1,p₃=1.047197551197,k₃=1,d₃=0.01, A₄=-2.5,f₄=1,p₄=0,k₄=2,d₄=0.01">
+      <figcaption>Harmonograph, Star Trek, A₁=2,f₁=1,p₁=0,k₁=1,d₁=0.01, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=-2,f₃=1,p₃=1.047197551197,k₃=1,d₃=0.01, A₄=-2.5,f₄=1,p₄=0,k₄=2,d₄=0.01</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Harmonograph/Harmonograph18-360.avif"
+           alt="Harmonograph, Swoosh, A₁=-3,f₁=1,p₁=0.785398163397,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=2,p₃=0,k₃=1,d₃=0.006, A₄=-1,f₄=0.5,p₄=1.570796326795,k₄=2,d₄=0.006">
+      <figcaption>Harmonograph, Swoosh, A₁=-3,f₁=1,p₁=0.785398163397,k₁=1,d₁=0.006, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=2,p₃=0,k₃=1,d₃=0.006, A₄=-1,f₄=0.5,p₄=1.570796326795,k₄=2,d₄=0.006</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Harmonograph/Harmonograph19-360.avif"
+           alt="Harmonograph, Circle, A₁=1,f₁=1,p₁=1.570796326795,k₁=1,d₁=0.008, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=0,k₃=1,d₃=0.008, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0">
+      <figcaption>Harmonograph, Circle, A₁=1,f₁=1,p₁=1.570796326795,k₁=1,d₁=0.008, A₂=0,f₂=0,p₂=0,k₂=1,d₂=0, A₃=1,f₃=1,p₃=0,k₃=1,d₃=0.008, A₄=0,f₄=0,p₄=0,k₄=1,d₄=0</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Generalized Harmonograph parametric equations:</div>
+      \[
+      \begin{align*}
+      x &= A_1 [\sin(f_1 t + p_1)]^{k_1} e^{-d_1 t} + A_2 [\sin(f_2 t + p_2)]^{k_2} e^{-d_2 t} \\
+      y &= A_3 [\sin(f_3 t + p_3)]^{k_3} e^{-d_3 t} + A_4 [\sin(f_4 t + p_4)]^{k_4} e^{-d_4 t}
+      \end{align*}
+      \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The harmonograph<sup>1,2</sup> is a mechanical device that employs one or more pendulums swinging in perpendicular directions to trace geometric patterns on paper. It produces figures that are damped versions of Lissajous curves. The device appeared in the mid-19th century and enjoyed peak popularity during the Victorian era as both a scientific demonstration tool and a parlor entertainment. Hugh Blackburn, professor of mathematics at the University of Glasgow, is most often credited with its conceptual development following his description of the Blackburn pendulum in 1844; the term “harmonograph” itself first appears in the 1870s in connection with A. E. Donkin and instruments built by Samuel Charles Tisley. The underlying principle is the superposition of simple harmonic motions. In a basic two-pendulum lateral harmonograph, one pendulum drives motion along the x-axis while the other drives motion along the y-axis. Friction and air resistance introduce damping, so the amplitude decreases over time and the curve spirals inward to a point. The AutoLISP code generalizes this physical behavior by allowing each axis to be the sum of two damped sinusoidal terms, each with its own amplitude, frequency, phase shift, optional power (exponent) on the sine, and damping coefficient. For engineers, architects, and draftsmen the key practical insight is that frequency ratios determine the overall shape while the damping and exponents control how quickly the figure decays and how sharply the lobes are defined—concepts directly analogous to the decaying exponential factors and power-law modifications encountered in basic vibration analysis.</p>
+    <p>Real-life applications are centered in the natural sciences and engineering education. Harmonographs provide a direct, mechanical illustration of damped harmonic oscillators and wave superposition, making abstract ideas of phase relationships and frequency ratios visible without electronic equipment. The same parametric forms (with or without damping) appear on oscilloscopes when two sinusoidal signals are fed to the X and Y inputs; this technique remains a standard method for comparing frequencies and measuring phase differences in electronics, signal processing, and vibration analysis.<sup>3</sup> No additional widespread industrial or scientific applications beyond these demonstration and measurement uses have been documented.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Harmonograph" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Harmonograph</a> (history, device description, and parametric equations)</li>
+      <li><a href="https://mathworld.wolfram.com/Harmonograph.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Harmonograph.html</a> (definition as damped Lissajous curves and relation to simple harmonic motion)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Lissajous_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Lissajous_curve</a> (oscilloscope applications and phase/frequency measurement uses)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HARMONOGRAPH (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                         id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft)
+  (setq id "Harmonograph"
+        iq "x(t)=A₁·sin(f₁·t+p₁)ᵏ¹·e^(-d₁·t)+A₂·sin(f₂·t+p₂)ᵏ²·e^(-d₂·t)\ny(t)=A₃·sin(f₃·t+p₃)ᵏ³·e^(-d₃·t)+A₄·sin(f₄·t+p₄)ᵏ⁴·e^(-d₄·t)"
+        dcl "HARMONOGRAPH"
+        opt '("Admiral Akbar" "Angel" "Arch" "Bifolium" "Bug" "Capped egg" "Capstan" "Cook" "DQ logo" "Fly face" "Ghost" "Heart" "Leaf"
+              "Lemniscate of Gerono" "New values" "Peters' BIT-101" "Speedo" "Star Trek" "Swoosh")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0) ; Admiral Akbar 
+     (setq fa 2.0 fb 1.0 fc 0.0 fd 1.0 fe 0.015
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 1.0 fm 1.570796326795 fn 1.0 fo 0.015
+           fp 1.428571428571 fq 1.5 fr 1.570796326795 fs 2.0 ft 0.015))
+    ((eq kw 1) ; Angel
+     (setq fa 2.0 fb 1.0 fc 0.0 fd 1.0 fe 0.015
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 2.0 fm 0.0 fn 1.0 fo 0.015
+           fp 1.0 fq 1.5 fr 0.785398163397 fs 3.0 ft 0.015))
+    ((eq kw 2) ; Arch
+     (setq fa 2.0 fb 1.0 fc 0.0 fd 1.0 fe 0.015
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk -3.0 fl 1.0 fm 0.0 fn 2.0 fo 0.015
+           fp 0.0 fq 0.0 fr 0.0 fs 1.0 ft 0.0))   
+    ((eq kw 3) ; Bifolium
+     (setq fa 2.0 fb 1.0 fc 0.0 fd 1.0 fe 0.006
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 1.0 fm 1.570796326795 fn 1.0 fo 0.006
+           fp -2.0 fq 0.5 fr 0.785398163397 fs 1.0 ft 0.006))
+    ((eq kw 4) ; Bug
+     (setq fa 1.0 fb 1.0 fc 0.0 fd 1.0 fe 0.005
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 0.333333333333 fm 1.570796326795 fn 1.0 fo 0.005
+           fp -1.0 fq 0.5 fr 0.0 fs 2.0 ft 0.005))
+    ((eq kw 5) ; Capped Egg
+     (setq fa 1.0 fb 1.0 fc 0.0 fd 1.0 fe 0.007
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 1.0 fm -1.570796326795 fn 1.0 fo 0.007
+           fp 0.5 fq 0.5 fr 1.570796326795 fs 3.0 ft 0.007))
+    ((eq kw 6) ; Capstan
+     (setq fa 1.0 fb 1.0 fc 0.0 fd 1.0 fe 0.006
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 1.0 fm 1.570796326795 fn 1.0 fo 0.006
+           fp -1.0 fq 1.5 fr 1.570796326795 fs 2.0 ft 0.006))
+    ((eq kw 7) ; Cook
+     (setq fa 1.0 fb 2.0 fc 0.0 fd 1.0 fe 0.012
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 5.0 fm 1.570796326795 fn 1.0 fo 0.012
+           fp 0.0 fq 0.0 fr 0.0 fs 1.0 ft 0.0))   
+    ((eq kw 8) ; DQ Logo
+     (setq fa 1.0 fb 1.0 fc 0.0 fd 1.0 fe 0.006
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 0.5 fl 1.0 fm 1.570796326795 fn 3.0 fo 0.006
+           fp 0.0 fq 0.0 fr 0.0 fs 1.0 ft 0.006))
+    ((eq kw 9) ; Fly Face
+     (setq fa 2.0 fb 1.0 fc 0.0 fd 1.0 fe 0.004
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 1.0 fm 1.570796326795 fn 1.0 fo 0.004
+           fp -2.0 fq 0.666666666667 fr 1.047197551197 fs 1.0 ft 0.004))
+    ((eq kw 10) ; Ghost
+     (setq fa 1.5 fb 1.0 fc 0.0 fd 1.0 fe 0.009
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 2.0 fl 1.0 fm 1.570796326795 fn 1.0 fo 0.009
+           fp -1.0 fq 3.0 fr 0.0 fs 2.0 ft 0.009))
+    ((eq kw 11) ; Heart
+     (setq fa 1.0 fb 1.0 fc 0.0 fd 1.0 fe 0.007
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 1.0 fm 1.570796326795 fn 1.0 fo 0.007
+           fp -0.5 fq 1.5 fr 0.785398163397 fs 1.0 ft 0.007))
+    ((eq kw 12) ; Leaf
+     (setq fa 1.0 fb 1.0 fc 0.0 fd 1.0 fe 0.01
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 1.0 fm 0.0 fn 1.0 fo 0.01
+           fp 0.5 fq 1.0 fr 1.570796326795 fs 3.0 ft 0.01))
+    ((eq kw 13) ; Lemniscate of Gerono
+     (setq fa 1.0 fb 1.0 fc 0.0 fd 1.0 fe 0.008
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 0.5 fl 2.0 fm 0.0 fn 1.0 fo 0.008
+           fp 0.0 fq 0.0 fr 0.0 fs 1.0 ft 0.0000))
+    ((eq kw 14) ; New Values
+     (setq fa (get_real 0 "A₁ (Amplitude)" 1.0)
+           fb (get_real 0 "f₁ (Frequency)" 1.0)
+           fc (* (get_real 0 "p₁ (Phase in °)" 0.0) (/ pi 180.0))
+           fd (get_real 0 "k₁ (Exponent)" 1.0)
+           fe (get_real 2 "d₁ (Damping)" 0.02)
+           ff (get_real 0 "Amplitude A2" 1.0)
+           fg (get_real 0 "f₂ (Frequency)" 1.0)
+           fh (* (get_real 0 "p₂ (Phase in °)" 0.0) (/ pi 180.0))
+           fi (get_real 0 "k₂ (Exponent)" 1.0)
+           fj (get_real 2 "d₂ (Damping)" 0.02)
+           fk (get_real 0 "Amplitude A3" 1.0)
+           fl (get_real 0 "f₃ (Frequency)" 1.0)
+           fm (* (get_real 0 "p₃ (Phase in °)" 0.0) (/ pi 180.0))
+           fn (get_real 0 "k₃ (Exponent)" 1.0)
+           fo (get_real 2 "d₃ (Damping)" 0.02)
+           fp (get_real 0 "A₄ (Amplitude)" 1.0)
+           fq (get_real 0 "f₄ (Frequency)" 1.0)
+           fr (* (get_real 0 "p₄ (Phase in °)" 0.0) (/ pi 180.0))
+           fs (get_real 0 "k₄ (Exponent)" 1.0)
+           ft (get_real 2 "d₄ (Damping)" 0.02)))
+    ((eq kw 15) ; Peters' BIT-101
+     (setq fa 1.0 fb 2.0 fc 0.0 fd 1.0 fe 0.001
+           ff 1.0 fg 2.01 fh 1.570796326795 fi 1.0 fj 0.0015
+           fk 1.0 fl 3.0 fm 0.785398163397 fn 1.0 fo 0.002
+           fp 1.0 fq 3.01 fr 2.356194490192 fs 1.0 ft 0.0025))
+    ((eq kw 16) ; Speedo
+     (setq fa 2.0 fb 1.0 fc 0.0 fd 1.0 fe 0.008
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 2.0 fl 1.0 fm 1.570796326795 fn 1.0 fo 0.008
+           fp 0.714285714286 fq 2.0 fr 0.0 fs 2.0 ft 0.008))
+    ((eq kw 17) ; Star Trek
+     (setq fa 2.0 fb 1.0 fc 0.0 fd 1.0 fe 0.01
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk -2.0 fl 1.0 fm 1.047197551197 fn 1.0 fo 0.01
+           fp -2.5 fq 1.0 fr 0.0 fs 2.0 ft 0.01))
+    ((eq kw 18) ; Swoosh
+     (setq fa -3.0 fb 1.0 fc 0.785398163397 fd 1.0 fe 0.006
+           ff 0.0 fg 0.0 fh 0.0 fi 1.0 fj 0.0
+           fk 1.0 fl 2.0 fm 0.0 fn 1.0 fo 0.006
+           fp -1.0 fq 0.5 fr 1.570796326795 fs 2.0 ft 0.006)))
+  (setq eq_display (strcat "\nA₁= " (rtos fa 2 4) ", f₁= " (rtos fb 2 4) ", p₁= " (rtos (* fc (/ 180.0 pi)) 2 4) "°, k₁= " (rtos fd 2 4) ", d₁= " (rtos fe 2 4)
+                           "\nA₂= " (rtos ff 2 4) ", f₂= " (rtos fg 2 4) ", p₂= " (rtos (* fh (/ 180.0 pi)) 2 4) "°, k₂= " (rtos fi 2 4) ", d₂= " (rtos fj 2 4)
+                           "\nA₃= " (rtos fk 2 4) ", f₃= " (rtos fl 2 4) ", p₃= " (rtos (* fm (/ 180.0 pi)) 2 4) "°, k₃= " (rtos fn 2 4) ", d₃= " (rtos fo 2 4)
+                           "\nA₄= " (rtos fp 2 4) ", f₄= " (rtos fq 2 4) ", p₄= " (rtos (* fr (/ 180.0 pi)) 2 4) "°, k₄= " (rtos fs 2 4) ", d₄= " (rtos ft 2 4))
+        xc '(+ (* fa (alt_expt (sin (+ (* fb (eval a2)) fc)) fd nil) (exp (* (- fe) (eval a2)))) (* ff (alt_expt (sin (+ (* fg (eval a2)) fh)) fi nil) (exp (* (- fj) (eval a2)))))
+        yc '(+ (* fk (alt_expt (sin (+ (* fl (eval a2)) fm)) fn nil) (exp (* (- fo) (eval a2)))) (* fp (alt_expt (sin (+ (* fq (eval a2)) fr)) fs nil) (exp (* (- ft) (eval a2)))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HARMONOGRAPH)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

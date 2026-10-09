@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabola Negative Pedal Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Parabola Negative Pedal Curve</h1>
+      <p class="short-description">The envelope of lines through points of the parabola \(x=at^{2}\), \(y=at\) that are perpendicular to the ray from a fixed pedal point.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/ParaNegPedal/ParaNegPedal01-360.avif"
+           data-caption="Parabola Negative Pedal Curve, a=1, pedal point=(-3.0;0)(black),(-2.0;0)(red),(-1.0;0)(blue),(0:0)(green),(1;0)(orange),(2;0)(purple),(3;0)(cyan),(4;0)(brown),(5;0)(lime)"
+           alt="Parabola Negative Pedal Curve, a=1, pedal point=(-3.0;0)(black),(-2.0;0)(red),(-1.0;0)(blue),(0:0)(green),(1;0)(orange),(2;0)(purple),(3;0)(cyan),(4;0)(brown),(5;0)(lime)">
+      <figcaption>
+        Parabola Negative Pedal Curve, a=1, pedal point=
+        <span class="figcap-value" style="color:#000000">(-3,0)</span>,
+        <span class="figcap-value" style="color:#FF0000">(-2,0)</span>,
+        <span class="figcap-value" style="color:#0000FF">(-1,0)</span>,
+        <span class="figcap-value" style="color:#009600">(0,0)</span>,
+        <span class="figcap-value" style="color:#FF9600">(1,0)</span>,
+        <span class="figcap-value" style="color:#9600FF">(2,0)</span>,
+        <span class="figcap-value" style="color:#0096FF">(3,0)</span>,
+        <span class="figcap-value" style="color:#AA5555">(4,0)</span>,
+        <span class="figcap-value" style="color:#00FF00">(5,0)</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParaNegPedal/ParaNegPedal02-360.avif"
+           data-caption="Parabola Negative Pedal Curve, a=1, pedal point=(-3.0;2)(black),(-2.0;2)(red),(-1.0;2)(blue),(0:2)(green),(1;2)(orange),(2;2)(purple),(3;2)(cyan),(4;2)(brown),(5;2)(lime)"
+           alt="Parabola Negative Pedal Curve, a=1, pedal point=(-3.0;2)(black),(-2.0;2)(red),(-1.0;2)(blue),(0:2)(green),(1;2)(orange),(2;2)(purple),(3;2)(cyan),(4;2)(brown),(5;2)(lime)">
+      <figcaption>
+        Parabola Negative Pedal Curve, a=1, pedal point=
+        <span class="figcap-value" style="color:#000000">(-3,2)</span>,
+        <span class="figcap-value" style="color:#FF0000">(-2,2)</span>,
+        <span class="figcap-value" style="color:#0000FF">(-1,2)</span>,
+        <span class="figcap-value" style="color:#009600">(0,2)</span>,
+        <span class="figcap-value" style="color:#FF9600">(1,2)</span>,
+        <span class="figcap-value" style="color:#9600FF">(2,2)</span>,
+        <span class="figcap-value" style="color:#0096FF">(3,2)</span>,
+        <span class="figcap-value" style="color:#AA5555">(4,2)</span>,
+        <span class="figcap-value" style="color:#00FF00">(5,2)</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Parabola Negative Pedal parametric equations:</div>
+      \[ x = \dfrac{3a^{2}t^{4}+4a^{2}t^{2}-2a\,y_{0}\,t^{3}-a\,x_{0}\,t^{2}-4a\,y_{0}\,t+x_{0}y_{0}\,t+y_{0}^{2}}{a t^{2}-y_{0}t+x_{0}},\quad y = -\dfrac{a^{2}t^{5}-2a\,x_{0}\,t^{3}+a\,y_{0}\,t^{2}-4a\,x_{0}\,t+x_{0}^{2}t+x_{0}y_{0}}{a t^{2}-y_{0}t+x_{0}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The negative pedal curve (also called the antipedal or orthocaustic) of a parabola with respect to a fixed pedal point \((x_{0},y_{0})\) is a rational parametric plane curve obtained by the envelope construction from the parabola \(x=at^{2}\), \(y=at\).<sup>1,2</sup> Negative pedal curves reverse the ordinary pedal construction: they are the locus such that the original curve is the pedal of the new curve. The broader theory of pedal curves traces to Colin Maclaurin (circa 1718); the specific study of negative pedal curves of conic sections, including the parabola, appears in A. Ameseder’s 1879 paper on negative fusspunktcurven.<sup>3</sup> E. H. Lockwood’s <em>A Book of Curves</em> (1967) also treats the family systematically.<sup>4</sup></p>
+    <p>Special cases of the general form are better known. With the pedal point at the origin the curve reduces to a semicubical parabola. With the pedal point at the focus it becomes the Tschirnhausen cubic.<sup>1</sup> The kinematic interpretation is that if one arm of a try-square slides along the original parabola while the other arm passes through the fixed point, the free arm envelopes the negative pedal curve.<sup>2</sup></p>
+    <p>Real-life applications in engineering or the natural sciences for the general parabola negative pedal curve (arbitrary \((x_{0},y_{0})\)) are not documented in the available mathematical literature. The curve remains of theoretical interest in classical differential geometry. Special-case reductions (semicubical parabola, Tschirnhausen cubic) appear in the study of caustics in geometrical optics and in the classification of algebraic curves, but no direct practical uses for the general parametric form have been identified.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/ParabolaNegativePedalCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ParabolaNegativePedalCurve.html</a> (equations, special cases, origin and focus reductions)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/antipodaire/antipodaire.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/antipodaire/antipodaire.shtml</a> (negative pedal definition, kinematic interpretation, try-square envelope)</li>
+      <li>Ameseder, A. “Negative Fusspunktcurven der Kegelschnitte.” <em>Archiv Math. u. Phys.</em> 64, 170–176, 1879 (historical study of conics)</li>
+      <li>Lockwood, E. H. <em>A Book of Curves</em>. Cambridge University Press, p. 157, 1967 (comprehensive reference)</li>
+
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PARANEGPEDAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                         restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe)
+  (setq id "Parabola Negative Pedal Curve"
+        iq "x=(3a²t⁴+4a²t²-2a·y₀·t³-a·x₀·t²-4a·y₀·t+x₀·y₀·t+y₀²)/a·t²-y₀·t+x₀\ny=-(a²t⁵-2a·x₀·t³+a·y₀·t²-4a·x₀·t+x₀²t+x₀·y₀)/a·t²-y₀·t+x₀"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in parameter t"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (parabola scale)" 1.0)
+        fb (get_real 0 "x₀ (pedal point x-coordinate)" 1.0)
+        fc (get_real 0 "y₀ (pedal point y-coordinate)" 0.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", x₀ = " (rtos fb 2 4) ", y₀ = " (rtos fc 2 4))
+        paramstep (if (= (get_keyword 0 "Plus Minus" "\nsweep in Plus or Minus direction?" "Plus") "Minus") (- paramstep) paramstep)
+        fd 0.0
+        fe 0.0
+        xc '(if (&lt; (abs (eval a2)) 1e-9) 0.0 (if (&lt; (abs (+ (* fa (* (eval a2) (eval a2))) (* -1.0 fc (eval a2)) fb)) 1e-9) (progn (setq restartflag T) fd) (/ (+ 
+            (* 3.0 fa fa (* (eval a2) (eval a2)) (* (eval a2) (eval a2))) (* 4.0 fa fa (* (eval a2) (eval a2))) (* -2.0 fa fc (* (eval a2) (eval a2)) (eval a2))
+            (* -1.0 fa fb (* (eval a2) (eval a2))) (* -4.0 fa fc (eval a2)) (* fb fc (eval a2)) (* fc fc)) (+ (* fa (* (eval a2) (eval a2))) (* -1.0 fc (eval a2)) fb))))
+        yc '(if (&lt; (abs (eval a2)) 1e-9) 0.0 (if (&lt; (abs (+ (* fa (* (eval a2) (eval a2))) (* -1.0 fc (eval a2)) fb)) 1e-9) (progn (setq restartflag T) fe) (- (/
+            (+ (* fa fa (* (eval a2) (eval a2)) (* (eval a2) (eval a2)) (eval a2)) (* -2.0 fa fb (* (eval a2) (eval a2)) (eval a2)) (* fa fc (* (eval a2) (eval a2)))
+            (* -4.0 fa fb (eval a2)) (* fb fb (eval a2)) (* fb fc)) (+ (* fa (* (eval a2) (eval a2))) (* -1.0 fc (eval a2)) fb)))))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 20.0)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PARANEGPEDAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

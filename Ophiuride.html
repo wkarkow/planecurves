@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ophiuride - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ophiuride</h1>
+      <p class="short-description">A rational circular cubic with a double point at the origin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Ophiuride/Ophiuride01-360.avif"
+          data-caption="Ophiuride, a=0(black),1(red),2(blue),3(green),4(orange),b=1"
+           alt="Ophiuride, a=0(black),1(red),2(blue),3(green),4(orange),b=1">
+      <figcaption>
+        Ophiuride, a=0
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">3</span>,
+        <span class="figcap-value" style="color:#FF9600">4</span>,
+        b=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride02-360.avif"
+          data-caption="Ophiuride, a=1,b=1(black),2(red),3(blue),4(green),5(orange)"
+           alt="Ophiuride, a=1,b=1(black),2(red),3(blue),4(green),5(orange)">
+      <figcaption>
+        Ophiuride, a=1,b=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride03-360.avif"
+          data-caption="Ophiuride, a=b=0.5(black),1(red),2(blue),3(green),4(orange)"
+           alt="Ophiuride, a=b=0.5(black),1(red),2(blue),3(green),4(orange)">
+      <figcaption>
+        Ophiuride, a=b=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">3</span>,
+        <span class="figcap-value" style="color:#FF9600">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride04-360.avif"
+           alt="Generalized, b=1,m=0.5,a=1,n=1,o=1">
+      <figcaption>Generalized, b=1,m=0.5,a=1,n=1,o=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride05-360.avif"
+           alt="Generalized, b=1,m=2,a=1,n=1,o=1">
+      <figcaption>Generalized, b=1,m=2,a=1,n=1,o=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride06-360.avif"
+           alt="Generalized, b=1,m=4,a=1,n=1,o=1">
+      <figcaption>Generalized, b=1,m=4,a=1,n=1,o=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride07-360.avif"
+           alt="Generalized, b=1,m=1,a=1,n=0.5,o=1">
+      <figcaption>Generalized, b=1,m=1,a=1,n=0.5,o=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride08-360.avif"
+           alt="Generalized, b=1,m=1,a=1,n=2,o=1">
+      <figcaption>Generalized, b=1,m=1,a=1,n=2,o=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride09-360.avif"
+           alt="Generalized, b=1,m=1,a=1,n=4,o=1">
+      <figcaption>Generalized, b=1,m=1,a=1,n=4,o=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride10-360.avif"
+           alt="Generalized, b=1,m=1,a=1,n=1,o=0.5">
+      <figcaption>Generalized, b=1,m=1,a=1,n=1,o=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride11-360.avif"
+           alt="Generalized, b=1,m=1,a=1,n=1,o=2, rotated right strophoid">
+      <figcaption>Generalized, b=1,m=1,a=1,n=1,o=2, rotated right strophoid</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ophiuride/Ophiuride12-360.avif"
+           alt="Generalized, b=1,m=1,a=1,n=1,o=4">
+      <figcaption>Generalized, b=1,m=1,a=1,n=1,o=4</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Ophiuride Curve polar equation:</div>
+      \[ r = (b\sin\theta - a\cos\theta)\tan\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = \bigl(b\sin(m\theta) - a\cos(n\theta)\bigr)\tan(o\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Ophiuride curve<sup>1,2,3</sup> was studied by Diedrich Uhlhorn in 1809. Its name derives from the Greek words <em>ophis</em> (“snake”) and <em>oura</em> (“tail”), reflecting its resemblance to the sinuous form of a brittle star (ophiuroid), an echinoderm related to the starfish. Like all rational circular cubics, the ophiuride admits multiple geometric constructions and is characterized by a double point at the origin. When the cosine amplitude parameter vanishes it reduces to the cissoid of Diocles. Curves of this class were typical of 18th- and 19th-century work that translated angle-based geometric loci into polar equations and then into implicit Cartesian forms, enabling classification by algebraic degree and singularities.</p>
+    <p>The ophiuride has no known direct applications in engineering or the natural sciences.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ophiuride/ophiuride.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ophiuride/ophiuride.shtml</a> (Uhlhorn 1809, name, rational circular cubic, cissoid special case).</li>
+      <li><a href="https://mathworld.wolfram.com/Ophiuride.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Ophiuride.html</a> (implicit and polar forms, reduction to the cissoid of Diocles).</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubicop.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubicop.html</a> (cubic generalization of the cissoid; brittle-star name).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:OPHIURIDE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe rval)
+  (setq id "Ophiuride Curve"
+        iq ""
+        dcl "OPHIURIDE"
+        opt '("Canonical" "Generalized")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nOphiuride: r=(b·sin(θ)-a·cos(θ))·tan(θ) ")
+    (setq fa (get_real 6 "b (sine amplitude)" 1.0)
+          fc (get_real 4 "a (cosine amplitude)" 1.0)
+          fb 1.0
+          fd 1.0
+          fe 1.0
+          eq_display (strcat "b=" (rtos fb 2 4) ", a=" (rtos fc 2 4))))
+   ((eq kw 1)
+    (princ "\nGeneralized ophiuride: r=(b·sin(mθ)-a·cos(nθ))·tan(oθ)")
+    (setq fa (get_real 6 "b (sine amplitude)" 1.0)
+          fb (get_real 6 "m (sine multiplier)" 1.0)
+          fc (get_real 4 "a (cosine amplitude)" 1.0)
+          fd (get_real 6 "n (cosine multiplier)" 1.0)
+          fe (get_real 6 "o (tangent multiplier)" 1.0)
+          eq_display (strcat "b=" (rtos fa 2 4) ", m=" (rtos fb 2 4) ", a=" (rtos fc 2 4) ", n=" (rtos fd 2 4) ", o=" (rtos fe 2 4)))))
+  (setq rval '(* (- (* fa (sin (* fb (eval a2)))) (* fc (cos (* fd (eval a2))))) (tan (* fe (eval a2))))
+        xc '(* (eval rval ) (cos (eval a2)))
+        yc '(* (eval rval ) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 1e5)
+        skm '(T T T)
+        a1 (/ pi -2.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:OPHIURIDE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

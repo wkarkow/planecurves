@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Superellipse - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Superellipse</h1>
+      <p class="short-description">The Lamé family with shapes varying from star-like to diamond to ellipse to rounded rectangle to near-rectangle.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Superellipse/Superellipse01-360.avif"
+           alt="Superellipse, a=2,b=1,multiple values of n">
+      <figcaption>
+        Superellipse, a=2,b=1,n=
+        <span class="figcap-value" style="color:#000000">-32</span>,
+        <span class="figcap-value" style="color:#FF0000">-8</span>,
+        <span class="figcap-value" style="color:#0000FF">-4</span>,
+        <span class="figcap-value" style="color:#009600">-3</span>,
+        <span class="figcap-value" style="color:#FF9600">-2</span>,
+        <span class="figcap-value" style="color:#9600FF">-1</span>,
+        <span class="figcap-value" style="color:#0096FF">1</span>,
+        <span class="figcap-value" style="color:#AA5555">1.5</span>,
+        <span class="figcap-value" style="color:#00FF00">2</span>,
+        <span class="figcap-value" style="color:#FF00FF">3</span>,
+        <span class="figcap-value" style="color:#009696">4</span>,
+        <span class="figcap-value" style="color:#960096">8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Superellipse/Superellipse02-360.avif"
+           alt="Superellipse, a=2,b=1,multiple values of n">
+      <figcaption>
+        Superellipse, a=2,b=1,n=
+        <span class="figcap-value" style="color:#000000">0.2</span>,
+        <span class="figcap-value" style="color:#FF0000">0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">0.6</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.25</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">2</span>,
+        <span class="figcap-value" style="color:#00FF00">3</span>,
+        <span class="figcap-value" style="color:#FF00FF">4</span>,
+        <span class="figcap-value" style="color:#009696">8</span>,
+        <span class="figcap-value" style="color:#960096">16</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="https://en.wikipedia.org/wiki/Pittsburgh_Steelers" target="_blank" rel="noopener noreferrer">
+        <img src="images/Superellipse/Superellipse03-360.avif"
+             alt="Pittsburgh Steelers Logo"
+             class="external"
+             data-skip-modal>
+      </a>
+      <figcaption>Pittsburgh Steelers Logo</figcaption>
+    </figure>
+  </section>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Superellipse implicit equation:</div>
+      \[ \left\lvert\dfrac{x}{a}\right\rvert^{n} + \left\lvert\dfrac{y}{b}\right\rvert^{n} = 1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Superellipse parametric equations:</div>
+      \[ x = \pm a\,\lvert\cos t\rvert^{2/n},\quad y = \pm b\,\lvert\sin t\rvert^{2/n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The superellipse, also known as the Lamé curve<sup>1,2</sup>, was introduced by Gabriel Lamé (1795–1870) in 1818<sup>3,4</sup> as a generalization of the ellipse equation in his study of algebraic curves and elliptic coordinates. Lamé examined the family \(\lvert x/a\rvert^{n}+\lvert y/b\rvert^{n}=1\), where the ellipse occurs exactly at \(n=2\). Earlier special cases (diamond at \(n=1\)) were known, but Lamé treated the full parameterized family systematically. For much of its early history the curve remained primarily theoretical, illustrating continuous change in geometric properties with varying exponent.</p>
+    <p>The term superellipse gained widespread use in applied contexts in the 20th century. The curve provides a single tunable shape spanning circles, ellipses, rounded rectangles, and nearly rectangular profiles without corners or discontinuities. Adjusting \(n\) controls curvature concentration while preserving axial symmetry. In mechanical and structural design superelliptic profiles minimize stress concentration in cutouts, flanges, and load-bearing openings because larger \(n\) yields near-rectangular forms retaining smooth curvature.<sup>5</sup> In manufacturing and CAD/CAM the curve simplifies toolpaths, fillets, and finite-element meshing by avoiding sharp vertices. Real-world uses include urban design (Sergels Torg roundabout, Stockholm, \(n=2.5\), \(a/b=6/5\), completed 1967)<sup>3</sup>, stadium architecture (Azteca Olympic Stadium, Mexico City, 1968)<sup>3</sup>, and logos (Pittsburg Steelers helmet)<sup>2</sup>. In natural sciences it approximates certain plant stem cross-sections such as square bamboo.<sup>5</sup> Piet Hein also applied the shape to tables, dishes, and the superegg novelty solid.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Superellipse.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Superellipse.html</a> (history, equation, parametric form)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/lame/lame.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/lame/lame.shtml</a> (Lamé 1818 study and function, engineering and design context)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Superellipse" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Superellipse</a> (Lamé generalization, Sergels Torg, Piet Hein, Azteca Stadium and WTC balcony)</li>
+      <li><a href="https://gallica.bnf.fr/ark:/12148/bpt6k92728m/f119.item" target="_blank" rel="noopener noreferrer">https://gallica.bnf.fr/ark:/12148/bpt6k92728m/f119.item</a> (original 1818 Lamé reference)</li>
+      <li><a href="https://www.mdpi.com/2073-8994/12/12/2073" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2073-8994/12/12/2073</a> (stress and plant cross-section applications, square bamboo)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SUPERELLIPSE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep
+                         paramstep restartflag id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc)
+  (setq id "Superellipse"
+        iq "|x/a|ⁿ + |y/b|ⁿ = 1"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (x semi-axis)" 2.0)
+        fb (get_real 2 "b (y semi-axis)" 1.0)
+        fc (get_real 2 "n (exponent: 2=ellipse, 1=diamond, large→boxy)" 4.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", n=" (rtos fc 2 4))
+        xc '(* fa (if (and (&lt; (abs (cos (eval a2))) 1e-9) (&gt; fc 0.0)) 0.0 (if (&lt; (abs (cos (eval a2))) 1e-9) 1e9 (alt_expt (cos (eval a2)) (/ 2.0 fc) T))))
+        yc '(* fb (if (and (&lt; (abs (sin (eval a2))) 1e-9) (&gt; fc 0.0)) 0.0 (if (&lt; (abs (sin (eval a2))) 1e-9) 1e9 (alt_expt (sin (eval a2)) (/ 2.0 fc) T))))
+        skm '(nil nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SUPERELLIPSE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

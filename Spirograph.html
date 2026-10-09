@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spirograph - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Spirograph</h1>
+      <p class="short-description">A three-wheel roulette; fixed outer circle, an intermediate circle, and an innermost circle with the pen offset from the innermost center.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Spirograph/Spirograph01-360.avif"
+           alt="Spirograph, r1=5,r2=3,r3=1,d=1">
+      <figcaption>Spirograph, r₁=5,r₂=3,r₃=1,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Spirograph/Spirograph02-360.avif"
+           alt="Spirograph, r1=5,r2=3.5,r3=1,d=1">
+      <figcaption>Spirograph, r₁=5,r₂=3.5,r₃=1,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Spirograph/Spirograph03-360.avif"
+           alt="Spirograph, r1=5,r2=2.5,r3=1,d=0.5">
+      <figcaption>Spirograph, r₁=5,r₂=2.5,r₃=1,d=0.5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Spirograph parametric equations:</div>
+      \[
+      \begin{aligned}
+      x &= (r_1-r_2)\cos\theta + (r_2-r_3)\cos\Bigl(\tfrac{r_1-r_2}{r_2}\theta\Bigr) + d\cdot\cos\Bigl(\bigl(\tfrac{r_1-r_2}{r_2}+\tfrac{r_2-r_3}{r_3}\bigr)\theta\Bigr)\\
+      y &= (r_1-r_2)\sin\theta - (r_2-r_3)\sin\Bigl(\tfrac{r_1-r_2}{r_2}\theta\Bigr) - d\cdot\sin\Bigl(\bigl(\tfrac{r_1-r_2}{r_2}+\tfrac{r_2-r_3}{r_3}\bigr)\theta\Bigr)
+      \end{aligned}
+      \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Spirograph toy<sup>1,2</sup> was developed by British engineer Denys Fisher (1918–2002) between 1962 and 1964. Fisher, working from his family’s industrial lubricant business, built early prototypes using Meccano parts after noticing intricate patterns on a British one-pound banknote that he believed were produced by a simple gearing mechanism. He first exhibited the device at the 1965 Nuremberg International Toy Fair and it went on sale in Britain that year; Kenner, Inc. acquired U.S. distribution rights and introduced it in 1966. The standard two-wheel Spirograph produces the classical hypotrochoid and epitrochoid curves. For earlier development of hypotrochoids see the Hypotrochoid entry.</p>
+    <p>The 3-wheel version rendered here, which nests a third rolling circle inside the second, is presented for artistic experimentation rather than for any documented practical application in engineering or the natural sciences. In order for the curve to close, it is necessary that \(r_1\), \(r_2\), and \(r_3\) be chosen such that the quantities \(\dfrac{r_1-r_2}{r_2}\) and \(\left(\dfrac{r_1-r_2}{r_2}+\dfrac{r_2-r_3}{r_3}\right)\) are both rational numbers (expressible as the ratio of two integers). When this condition holds, the tracing point returns exactly to its starting location after a whole number of outer rotations. To facilitate this, the code includes a prompt after entering these values as to how many segments would be required and is offered as a default. If \(r_3=r_2\), the equations reduce to the ordinary two-wheel Spirograph with pen offset \(d\). If \(d=0\), they reduce to a two-wheel hypotrochoid whose pen offset is \(r_2-r_3\).</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Spirograph" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Spirograph</a> (history of the toy and its development by Denys Fisher)</li>
+      <li><a href="https://americanhistory.si.edu/collections/search/object/nmah_1292825" target="_blank" rel="noopener noreferrer">https://americanhistory.si.edu/collections/search/object/nmah_1292825</a> (Nat. Museum of Am. History description &amp; history of the Spirograph)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SPIROGRAPH (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                       xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fh fe ff fg)
+  (setq id "3-Wheel Spirograph"
+        iq "\nx=(r₁-r₂)cos(θ)+(r₂-r₃)cos(((r₁-r₂)/r₂)θ)+d·cos(((r₁-r₂)/r₂+(r₂-r₃)/r₃)θ)\ny=(r₁-r₂)sin(θ)-(r₂-r₃)sin(((r₁-r₂)/r₂)θ)-d·sin(((r₁-r₂)/r₂+(r₂-r₃)/r₃)θ)"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar
+        dpr "# of divisions per 360°"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "r₁ (fixed outer wheel radius)" 5.0)
+        fb (get_real 2 "r₂ (intermediate rolling wheel radius)" 3.0)
+        fc (get_real 2 "r₃ (innermost rolling wheel radius)" 1.0)
+        fd (get_real 0 "d (pen offset from r₃ center)" 1.0)
+        fe (/ (- fa fb) fb)
+        ff (/ (- fb fc) fc)
+        fg (+ fe ff)
+        fh 1)
+  (while (and (&lt; fh 200) (or (&gt; (abs (- (* fe fh) (fix (+ (* fe fh) 0.5)))) 1e-5) (&gt; (abs (- (* fg fh) (fix (+ (* fg fh) 0.5)))) 1e-5))) (setq fh (1+ fh)))
+  (if (&gt;= fh 200) (progn (princ (strcat "# of segments exceeds 200 rotations or " (itoa (fix (* fh divcount)) ) " segments.")) (setq fh 20)))
+  (setq divcount (get_integer 2 "# of divisions to plot to close curve" (fix (* fh divcount)))
+        paramstep (/ (* (* fh 360.0) (/ pi 180.0)) divcount)
+        eq_display (strcat "\nr₁=" (rtos fa 2 4) ", r₂=" (rtos fb 2 4) ", r₃=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(+ (* (- fa fb) (cos (eval a2))) (* (- fb fc) (cos (* (/ (- fa fb) fb) (eval a2)))) (* fd (cos (* (+ (/ (- fa fb) fb) (/ (- fb fc) fc)) (eval a2)))))
+        yc '(- (* (- fa fb) (sin (eval a2))) (* (- fb fc) (sin (* (/ (- fa fb) fb) (eval a2)))) (* fd (sin (* (+ (/ (- fa fb) fb) (/ (- fb fc) fc)) (eval a2)))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SPIROGRAPH)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

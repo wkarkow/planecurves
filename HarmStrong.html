@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harmonic Strong Damping - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Harmonic Strong Damping</h1>
+      <p class="short-description">Overdamped free response of the damped harmonic oscillator with zero initial displacement.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HarmStrong/HarmStrong01-360.avif"
+           alt="Harmonic Strong Damping, A=10,multiple values of κ,β=1">
+      <figcaption>
+        Harmonic Strong Damping, A=10,κ=
+        <span class="figcap-value" style="color:#000000">0.9</span>,
+        <span class="figcap-value" style="color:#FF0000">1</span>,
+        <span class="figcap-value" style="color:#0000FF">1.1</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2</span>,
+        <span class="figcap-value" style="color:#9600FF">3</span>,
+        β=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HarmStrong/HarmStrong02-360.avif"
+           data-caption="Harmonic Strong Damping, A=10,κ=1,β=0.25(black),0.5(red),0.75(blue),0.9(green),1(orange),1.1(purple)"
+           alt="Harmonic Strong Damping, A=10,κ=1,multiple values of β">
+      <figcaption>
+        Harmonic Strong Damping, A=10,κ=1,β=
+        <span class="figcap-value" style="color:#000000">0.25</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0.75</span>,
+        <span class="figcap-value" style="color:#009600">0.9</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">1.1</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Harmonic Strong Damping Curve Cartesian equation:</div>
+      \[ y = A \cdot e^{-\kappa \cdot x} \cdot \sinh(\beta \cdot x) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The strong damping (overdamped) case of the damped harmonic oscillator yields the Harmonic Strong Damping curve when the initial displacement satisfies \( y(0) = 0 \). It is a direct solution to the second-order linear differential equation \( y'' + a \cdot y' + b \cdot y = 0 \), arising when the damping coefficient is large enough that the characteristic equation has two distinct negative real roots.<sup>1,2</sup> The exponential decay term \( e^{-\kappa x} \) governs the overall return to equilibrium, while the hyperbolic sine term \( \sinh(\beta x) \) shapes the initial rise before monotonic decay. This form appears in standard catalogs of plane curves as the product of an exponential function and a hyperbolic sine.<sup>1</sup> The curve is distinguished from the forced and semiweak cases by the absence of sinusoidal terms: instead of oscillation or a single pulse, it exhibits an asymmetric rise and fall determined by the balance between exponential decay and hyperbolic growth. In applied mathematics it appears as a fundamental solution of linear differential equations with real, unequal roots, and is used as a building block in Laplace transform methods.<sup>4</sup></p>
+    <p>Real-life applications exist wherever a system must return to equilibrium rapidly without oscillation. In mechanical engineering, overdamped behavior appears in heavy-duty shock absorbers and vibration isolators that dissipate energy monotonically after large disturbances. Precision analog instruments such as galvanometers, laboratory balances, and pointer-type meters incorporate strong viscous damping so the needle or indicator settles to the measured value without overshoot or ringing, improving readability and reducing wear.<sup>3</sup> Automatic door closers and hydraulic dampers in industrial machinery are tuned to operate in or near the strong-damping regime to ensure smooth, non-slamming closure or controlled motion.<sup>3</sup> In thermal physics and heat conduction it describes steady temperature (and analogous diffusion) profiles near boundaries or in fins and slabs, where the governing ODE yields solutions that combine exponential attenuation with hyperbolic functions.<sup>5</sup> In viscoelasticity and structural analysis, similar expressions describe creep and relaxation curves under heavy damping.<sup>6</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/exponential/exponentiald.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentiald.html</a> (strong damping case of damped harmonic oscillation and differential equation)</li>
+      <li><a href="https://mathworld.wolfram.com/DampedSimpleHarmonicMotion.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/DampedSimpleHarmonicMotion.html</a> (mathematical definition and characteristic equation)</li>
+      <li><a href="https://mathworld.wolfram.com/OverdampedSimpleHarmonicMotion.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/OverdampedSimpleHarmonicMotion.html</a> (overdamped regime and engineering context)</li>
+      <li><a href="https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/10c777db2cf27ca7a55b08d3fd6e3e78_MITRES_6_007S11_lec21.pdf" target="_blank" rel="noopener noreferrer">https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/10c777db2cf27ca7a55b08d3fd6e3e78_MITRES_6_007S11_lec21.pdf</a> (Laplace transforms as building blocks for overdamped solutions)</li>
+      <li><a href="https://rosenreview.cbe.princeton.edu/sites/g/files/toruqf6461/files/documents/grad_heat_and_mass_transfer.pdf" target="_blank" rel="noopener noreferrer">https://rosenreview.cbe.princeton.edu/sites/g/files/toruqf6461/files/documents/grad_heat_and_mass_transfer.pdf</a> (diffusion equation solutions with exponential and hyperbolic terms see p. 20 section 2.6)</li>
+      <li><a href="https://pdfs.semanticscholar.org/1275/ca47e12e2428c48254264f5d0c553737e5a2.pdf" target="_blank" rel="noopener noreferrer">https://pdfs.semanticscholar.org/1275/ca47e12e2428c48254264f5d0c553737e5a2.pdf</a> (viscoelastic damped oscillator models for creep/relaxation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HARMSTRONG (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                       xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Harmonic Strong Damping"
+        iq "y=A·e^(-κ·x)·sinh(β·x)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 1000
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "A (scale)" 10.0)
+        fb (get_real 6 "κ (damping rate)" 1.0)
+        fc (get_real 2 "β (hyperbolic frequency)" 1.0)
+        eq_display (strcat "\nA=" (rtos fa 2 4) ", κ=" (rtos fb 2 4) ", β=" (rtos fc 2 4))
+        xc '(eval a2)
+        yc '(* fa (exp (* -1.0 fb (eval a2))) (* 0.5 (- (exp (* fc (eval a2))) (exp (* -1.0 fc (eval a2))))))
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HARMSTRONG)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

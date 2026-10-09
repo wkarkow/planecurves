@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sine Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sine Curve</h1>
+      <p class="short-description">Graph of \( y = a \cdot \sin(bx) \), also called the sinusoid.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Sine/Sine01-360.avif"
+           alt="Sine Curve, a=1,b=1/π">
+      <figcaption>Sine Curve, a=1,b=1/π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine02-360.avif"
+           alt="Sine Curve, a=1, half-wavelength x=0.8,b=3.9270">
+      <figcaption>Sine Curve, a=1, half-wavelength x=0.8,b=3.9270</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine03-360.avif"
+           alt="Sine Curve, peak height y=a=1.2,b=2.0944">
+      <figcaption>Sine Curve, peak height y=a=1.2,b=2.0944</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine04-360.avif"
+           alt="Sine Curve, peak height y=a=1.2, half-wavelength x=0.8,b=3.9270">
+      <figcaption>Sine Curve, peak height y=a=1.2, half-wavelength x=0.8,b=3.9270</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine05-360.avif"
+           alt="Sine Curve, peak point (1.1,1.4)a=1.4,b=1.4280">
+      <figcaption>Sine Curve, peak point (1.1,1.4)a=1.4,b=1.4280</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine06-360.avif"
+           alt="Sine Curve, trough point (0.8,-1.8)a=1.8,b=5.8905">
+      <figcaption>Sine Curve, trough point (0.8,-1.8)a=1.8,b=5.8905</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine07-360.avif"
+           alt="Sine Curve, peak point (0.3,1.3),trough point (1.7,-1.4),a=1.3500,b=2.2440">
+      <figcaption>Sine Curve, peak point (0.3,1.3),trough point (1.7,-1.4),a=1.3500,b=2.2440</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine08-360.avif"
+           alt="Sine Curve, peak height y=a=1.2,ascending curve pt (-0.7,0.8),b=7.9335">
+      <figcaption>Sine Curve, peak height y=a=1.2,ascending curve pt (-0.7,0.8),b=7.9335</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine09-360.avif"
+           alt="Sine Curve, peak height y=a=1.2,descending curve pt (-0.7,0.8),b=5.5305">
+      <figcaption>Sine Curve, peak height y=a=1.2,descending curve pt (-0.7,0.8),b=5.5305</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine10-360.avif"
+           alt="Sine Curve, half-wavelength x=1.7,curve pt (0.6,-0.6),a=-0.6703,b=1.8480">
+      <figcaption>Sine Curve, half-wavelength x=1.7,curve pt (0.6,-0.6),a=-0.6703,b=1.8480</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Sine/Sine11-360.avif"
+           alt="Sine Curve, peak height y=a=2.2,wavelength x=2.7,a=2.2, b=2.3271">
+      <figcaption>Sine Curve, peak height y=a=2.2,wavelength x=2.7,a=2.2, b=2.3271</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 220px;">
+    <div class="equation-line">
+      <div class="equation-label">Sine Cartesian equation:</div>
+      \[ y = a \cdot \sin(bx) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Pythagorean identity:</div>
+      \[ \cos^{2}(x) + \sin^{2}(x) = 1 \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The sine curve, also called the sinusoid, is the graph of the sine function. The sine function originated in Indian astronomy during the Gupta period. Aryabhata (476–550 AD) introduced it in the <em>Aryabhatiya</em> as <em>jya</em>, the half-chord of a circle, and provided tables of sine values at intervals of 3.75° accurate to four decimal places.<sup>1,2</sup> These tables supported astronomical calculations of planetary positions. Knowledge passed through the Islamic world, where astronomers such as Abu al-Wafa (940–998) refined sine tables, and later reached Europe. Regiomontanus (1436–1476) standardized sine tables for European use in the 15th century.<sup>3</sup> The curve itself first appeared explicitly in 1636 when French mathematician Gilles Personne de Roberval drew it as the “companion of the roulette,” describing the path traced by the projection of uniform circular motion onto a straight line.<sup>4,5</sup> For the next two centuries it was known interchangeably as Roberval’s curve or the sine curve; the term “sinusoid” became standard by the mid-19th century. Geometrically the sinusoid arises as the y-component of a point moving at constant speed around a circle: if the point has coordinates \( (a\cos\theta,\; a\sin\theta) \), its vertical projection yields the sine wave.<sup>6</sup></p>
+    <p>Real-life applications in engineering and the natural sciences are extensive. In classical mechanics the sine curve describes simple harmonic motion, the ideal motion of a mass on a spring or a simple pendulum for small amplitudes.<sup>7</sup> In electrical engineering alternating-current voltage and current follow sinusoidal patterns, enabling efficient power generation, transmission, and motor operation.<sup>7</sup> Acoustics relies on sine waves to model pure tones; complex sounds are decomposed into sums of sines via Fourier analysis, a technique used in noise control, architectural soundproofing, and audio signal processing.<sup>8</sup> Ocean waves and many surface water waves approximate sinusoidal profiles over short distances. Electromagnetic waves, including visible light and radio signals, are sinusoidal in their electric and magnetic field components.<sup>7</sup></p>
+    <p>In medicine and biology the sinusoid appears in electrocardiograms (ECG) for heart rhythms and electroencephalograms (EEG) for brain waves, allowing clinicians to detect arrhythmias or seizure activity through frequency analysis. In medical acoustics ultrasonic sine-based waves are used for imaging (sonography) and therapeutic heating of tissues.<sup>9</sup> In control systems and vibration engineering, sine-wave excitation tests predict resonance and fatigue in mechanical structures such as aircraft wings or bridges. Fourier series, built from sine and cosine terms, underpin digital signal processing in everything from MRI scanners to seismic analysis.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sinusoid/sinusoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sinusoid/sinusoid.shtml</a> (history of sinusoid curve and Roberval reference)</li>
+      <li><a href="https://www.2dcurves.com/trig/trigs.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/trig/trigs.html</a> (geometric definition as projection of circular motion and harmonic oscillation)</li>
+      <li><a href="https://mathworld.wolfram.com/Sine.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Sine.html</a> (trigonometric definition and historical context)</li>
+      <li><a href="https://en.wikipedia.org/wiki/History_of_trigonometry" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/History_of_trigonometry</a> (Aryabhata’s introduction of sine tables)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/HistTopics/Trigonometric_functions/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/HistTopics/Trigonometric_functions/</a> (Indian origins of sine)</li>
+      <li><a href="https://www.gresham.ac.uk/sites/default/files/transcript/2022-05-23-1300_HART-T.pdf" target="_blank" rel="noopener noreferrer">https://www.gresham.ac.uk/sites/default/files/transcript/2022-05-23-1300_HART-T.pdf</a> (history from chord to sine wave and broad applications)</li>
+      <li><a href="https://www.youtube.com/watch?v=2QVI_4LXhBM" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=2QVI_4LXhBM</a> (practical applications in springs, sea waves, sound, light)</li>
+      <li><a href="https://svantek.com/academy/sound-wave/" target="_blank" rel="noopener noreferrer">https://svantek.com/academy/sound-wave/</a> (sine representation of sound waves and Fourier analysis in acoustics)</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3682421/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC3682421/</a> (acoustic waves in medical imaging and diagnostics)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SINE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan paramstep
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc p1 p2)
+  (setq id "Sine Curve"
+        iq "y=a·sin(b·x)"
+        dcl "SINE"
+        opt '("origin,a,b values" "origin,half-wavelength, a" "origin,height,b value" "origin,height,h-wavelength" "origin,peak" "origin,trough"
+              "peak,trough (new origin)" "origin,height,1 pt on curve" "origin,h-wave,1 pt on curve" "origin,height,wavelength")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fa (get_real 2 "a (amplitude)" 1.0)
+          fb (get_real 2 "b (frequency factor)" 1.0)
+          fc (get_keyword 0 "Yes No" "Divide pi (half wavelength) by b" "Yes")
+          fb (if (eq fc "Yes") (/ pi fb) fb)))
+   ((eq kw 1)
+    (setq fa (get_real 2 "a (amplitude)" 1.0)
+          p1 (get_boundpt "Half-wavelength point" "Division point" divpt basept 0 nil T nil nil nil)
+          fb (/ pi (get_xspan basept xaxisangle p1))))
+   ((eq kw 2)
+    (setq p1 (get_boundpt "Peak height point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          fb (get_real 2 "b (frequency factor)" 1.0)
+          fc (get_keyword 0 "Yes No" "Divide pi (half wavelength) by b" "Yes")
+          fb (if (eq fc "Yes") (/ pi fb) fb)))
+   ((eq kw 3)
+    (setq p1 (get_boundpt "Peak height point" "Division point" divpt basept nil nil nil 0 nil T)
+          p2 (get_boundpt "Half-wavelength point" "Division point" divpt basept 0 nil T nil nil nil)
+          fa (get_yspan basept xaxisangle p1)
+          fb (/ pi (get_xspan basept xaxisangle p2))))
+   ((eq kw 4)
+    (setq p1 (get_boundpt "Next peak point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          fb (/ pi (* 2.0 (get_xspan basept xaxisangle p1)))))
+   ((eq kw 5)
+    (setq p1 (get_boundpt "First trough point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (- (get_yspan basept xaxisangle p1))
+          fb (/ (* 3.0 pi) (* 2.0 (get_xspan basept xaxisangle p1)))))
+   ((eq kw 6)
+    (setq x1 0 x2 0)
+    (while (or (= x1 x2) (= y1 y2))
+      (setq p1 (get_point 0 "Pick new peak point (0 wave)" divpt basept)
+            x1 (get_xspan basept xaxisangle p1)
+            y1 (get_yspan basept xaxisangle p1)
+            p2 (get_boundpt "Pick next trough point (1/4 wave)" "Division point" divpt basept x1 nil nil nil y1 nil)
+            x2 (get_xspan basept xaxisangle p2)))
+    (setq y2 (get_yspan basept xaxisangle p2)
+          fa (/ (- y1 y2) 2.0)
+          fb (/ pi (- x2 x1))
+          x1 (+ x1 (* -0.5 (- x2 x1)))
+          y1 (/ (+ y1 y2) 2.0)
+          x0 (+ x0 (* x1 cosangle) (- (* y1 sinangle)))
+          y0 (+ y0 (* y1 cosangle) (* x1 sinangle))))
+   ((eq kw 7)
+    (setq p1 (get_boundpt "Peak height point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          p2 (get_boundpt "Point on curve" "Division point" divpt basept 0 nil T nil fa nil)
+          x2 (get_xspan basept xaxisangle p2)
+          y2 (get_yspan basept xaxisangle p2)
+          fc (get_keyword 0 "A D" "Is point on Ascending or Descending slope" "A")
+          fb (if (>= x2 0) (if (eq fc "A") (/ (asin (/ y2 fa)) x2) (/ (- pi (asin (/ y2 fa))) x2))
+             (if (eq fc "A") (/ (- (asin (/ y2 fa)) (* 2.0 pi)) x2) (/ (- (+ pi (asin (/ y2 fa)))) x2)))))
+   ((eq kw 8)
+    (setq p1 (get_boundpt "Half-wavelength point" "Division point" divpt basept 0 nil T nil nil nil)
+          x1 (get_xspan basept xaxisangle p1)
+          fb (/ pi x1)
+          x2 x1)
+    (while (or (= x1 x2) (&lt; (abs (sin (* fb x2))) 1e-4))
+      (setq p2 (get_boundpt "Point on curve" "Division point" divpt basept 0 x1 T 0 nil T)
+            x2 (get_xspan basept xaxisangle p2)
+            fa (/ (get_yspan basept xaxisangle p2) (avoid_zero (sin (* fb x2)))))))
+   ((eq kw 9)
+    (setq p1 (get_boundpt "Peak height point" "Division point" divpt basept nil nil nil 0 nil T)
+          p2 (get_boundpt "Wavelength point" "Division point" divpt basept 0 nil T nil nil nil)
+          fa (get_yspan basept xaxisangle p1)
+          fb (/ (* 2 pi) (get_xspan basept xaxisangle p2)))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(* fa (sin (* fb (eval a2))))
+        paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SINE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

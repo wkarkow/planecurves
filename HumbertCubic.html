@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Humbert Cubic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Humbert Cubic</h1>
+      <p class="short-description">An elliptic cubic algebraic curve of degree three with 3-fold rotational symmetry of 120 degrees.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HumbertCubic/HumbertCubic01-360.avif"
+           alt="Humbert Cubic, a=1">
+      <figcaption>Humbert Cubic, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Humbert Cubic implicit equation:</div>
+      \[ x^{3} - 3xy^{2} = a^{3} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Humbert Cubic polar equation:</div>
+      \[ r = \dfrac{a}{\sqrt[3]{\cos(3\theta)}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Humbert cubic<sup>1</sup>, studied by French mathematician Marie Georges Humbert (1859–1921) in 1887 and published in the <em>Journal de mathématiques pures et appliquées</em> (p. 377), is a plane algebraic curve of degree three. Humbert, a professor of analysis at the École Polytechnique and member of the Académie des Sciences, contributed to geometry and the theory of elliptic and hyperelliptic functions. This curve is an elliptic cubic (a smooth cubic) and a special case of the sinusoidal spiral, \( r^{n} = a^{n}\cos(n\theta) \), with parameter \( n = -3 \). It is the inverse (with respect to the origin) of the Kiepert curve and is one of the few cubics for which the derivative \( \frac{dy}{dx} \) admits a rational expression in terms of both x and y. It also possesses 3-fold rotational symmetry of 120 degrees, a property shared with only a small number of other cubics such as the equilateral trefoil.</p>
+    <p>No real-life applications in engineering or the natural sciences are documented for the Humbert cubic in primary mathematical references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/humbert/humbert.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/humbert/humbert.shtml</a> (history and equations).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HUMBERTCUBIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                         restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc rval skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Humbert Cubic"
+        iq "r=a·(cos(3θ))^{-1/3}"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(* fa (alt_expt (avoid_zero (cos (* 3 (eval a2)))) (/ -1.0 3.0) nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HUMBERTCUBIC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

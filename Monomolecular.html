@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monomolecular Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Monomolecular Curve</h1>
+      <p class="short-description">The saturating first-order response approach to chemical equilibrium.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Monomolecular/Monomolecular01-360.avif"
+           alt="Monomolecular Curve, A=5,k=1,t₀=0">
+      <figcaption>Monomolecular Curve, A=5,k=1,t₀=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Monomolecular/Monomolecular02-360.avif"
+           alt="Monomolecular Curve, curve pt (1.4,1.7), A=5,k=0.2968,t₀=0">
+      <figcaption>Monomolecular Curve, curve pt (1.4,1.7), A=5,k=0.2968,t₀=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Monomolecular/Monomolecular03-360.avif"
+           alt="Monomolecular Curve, curve pts (0.8,0.6),(1.4,1.7), A=5,k=0.4795,t₀=0.5334">
+      <figcaption>Monomolecular Curve, curve pts (0.8,0.6),(1.4,1.7), A=5,k=0.4795,t₀=0.5334</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Monomolecular differential equation:</div>
+      \[ \dfrac{dy}{dt} = k(A - y) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Monomolecular Curve equation:</div>
+      \[ y = A \cdot \left(1 - e^{-k(t-t_{0})}\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The monomolecular curve describes processes in which the rate of change is proportional to the distance remaining to an asymptotic maximum. It is the solution to the first-order differential equation \(\frac{dy}{dt}=k(A-y)\), a concept accessible through basic calculus as the instantaneous rate of approach diminishing linearly toward zero. The monomolecular curve occupies a central position among saturating growth and response models. Other models include (1) exponential decay that describes the complementary quantity, the remaining gap to equilibrium, decaying toward zero; (2) logistic and Gompertz curves that introduce feedback or time-varying rates and therefore depart from true first-order kinetics; (3) Weibull (stretched exponential) and Avrami models that generalize the monomolecular form by incorporating geometry, nucleation, or distributed time scales; and (4) Michaelis–Menten saturation that describes a similar asymptotic shape but as a function of input rather than time. For this reason, the monomolecular curve is often used as a reference model: when experimental data deviate from it, the deviation signals the presence of additional mechanisms. German agronomist Eilhard Mitscherlich first proposed this functional form in 1909 to model crop-yield response to fertilizer application, thereby formalizing the Law of Diminishing Returns (or Law of Diminishing Increments) in agriculture.<sup>1</sup> Mitscherlich generalized the equation to other growth factors beyond fertilizers. An earlier biological application appears in Weber’s 1891 study of tree growth.<sup>2</sup> In chemistry the identical form arises from the law of mass action applied to first-order reactions.</p>
+    <p>Real-life applications abound in engineering and the natural sciences. In agriculture the model quantifies yield increases from added nutrients and guides fertilizer recommendations for optimal production.<sup>1,3</sup> In forestry and plant science it describes height, diameter, or biomass accumulation in trees and crops over time.<sup>2</sup> In animal science the mathematically equivalent Brody growth function predicts body-weight gain in livestock as animals approach mature size. In plant pathology the monomolecular model fits disease-progress curves, where the infection rate depends on the proportion of healthy tissue remaining.<sup>4</sup> In chemical engineering the same equation simulates approach to equilibrium in titration and certain adsorption processes.<sup>5</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.agronomy.org/files/publications/nse/pdfs/jnr012/012-01-0021.pdf" target="_blank" rel="noopener noreferrer">https://www.agronomy.org/files/publications/nse/pdfs/jnr012/012-01-0021.pdf</a> (Mitscherlich 1909 proposal, Law of Diminishing Returns in agriculture)</li>
+      <li><a href="https://www.isa.ulisboa.pt/cef/public/SAFMOD/textos/Papers/BorisZeideOriginal.pdf" target="_blank" rel="noopener noreferrer">https://www.isa.ulisboa.pt/cef/public/SAFMOD/textos/Papers/BorisZeideOriginal.pdf</a> (Weber 1891 tree-growth application, model discussion)</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7070440/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC7070440/</a> (long history in agricultural sciences and applied biology)</li>
+      <li><a href="https://www.apsnet.org/edcenter/sites/EcologyAndEpidemiologyInR/DiseaseProgress/Pages/GrowthModels.aspx" target="_blank" rel="noopener noreferrer">https://www.apsnet.org/edcenter/sites/EcologyAndEpidemiologyInR/DiseaseProgress/Pages/GrowthModels.aspx</a> (model for plant disease progress)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1007570419303284" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/abs/pii/S1007570419303284</a> (application to titration processes in chemistry)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:MONOMOLECULAR (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan paramstep
+                          restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff p1 p2)
+  (setq id "Monomolecular Curve"
+        iq "y=A·(1-e^{-k(t-t₀)})"
+        dcl "MONOMOLECULAR"
+        opt '("Known parameters" "Unknown k" "Unknown k and t₀")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 200
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fa (get_real 2 "A (Final steady-state value)" 1.0)
+          fb (get_real 6 "k (Rate constant, 1/time)" 1.0)
+          fc (get_real 0 "t₀ (Step start time)" 0.0)))
+   ((eq kw 1)
+    (setq fa (get_real 2 "A (Final steady-state value)" 1.0)
+          fc (get_real 0 "t₀ (Step start time)" 0.0)
+          fd nil)
+    (while (not fd)
+      (setq p1 (get_point 0 "Curve point" nil basept)
+            x1 (get_xspan basept xaxisangle p1)
+            y1 (get_yspan basept xaxisangle p1))
+      (cond
+        ((<= (abs (- x1 fc)) 1e-9) (prompt "\nCannot solve k from a point with t = t0. Pick another point."))
+        ((<= (- 1.0 (/ y1 fa)) 1e-12) (prompt "\nPoint must satisfy 1 - y/A > 0 so ln(1 - y/A) is defined. Pick another point."))
+        (T (setq fb (- (/ (log (- 1.0 (/ y1 fa))) (- x1 fc))) fd T)))))
+   ((eq kw 2)
+    (setq fa (get_real 2 "A (Final steady-state value)" 1.0)
+          fd nil)
+    (while (not fd)
+      (setq p1 (get_point 0 "Point 1 on curve" nil basept)
+            x1 (get_xspan basept xaxisangle p1)
+            y1 (get_yspan basept xaxisangle p1)
+            p2 (get_point 0 "Point 2 on curve" nil basept)
+            x2 (get_xspan basept xaxisangle p2)
+            y2 (get_yspan basept xaxisangle p2))
+      (cond
+       ((<= (abs (- x2 x1)) 1e-9) (prompt "\nPoints must have different t values. Pick again."))
+       ((<= (- 1.0 (/ y1 fa)) 1e-12) (prompt "\nPoint 1 must satisfy 1 - y/A > 0 so ln(1 - y/A) is defined. Pick again."))
+       ((<= (- 1.0 (/ y2 fa)) 1e-12) (prompt "\nPoint 2 must satisfy 1 - y/A > 0 so ln(1 - y/A) is defined. Pick again."))
+       (T
+        (setq fe (log (- 1.0 (/ y1 fa)))
+              ff (log (- 1.0 (/ y2 fa)))
+              fb (- (/ (- ff fe) (- x2 x1)))
+              fc (/ (+ fe (* fb x1)) fb)
+              fd T))))))
+  (setq eq_display (strcat "A=" (rtos fa 2 4) ", k=" (rtos fb 2 4) ", t₀=" (rtos fc 2 4))
+        xc '(eval a2)
+        yc '(* fa (- 1.0 (exp (* -1.0 fb (- (eval a2) fc)))))
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:MONOMOLECULAR)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

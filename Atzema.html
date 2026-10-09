@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atzema Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Atzema Spiral</h1>
+      <p class="short-description">A parametric spiral curve distinguished by its circular catacaustic property under reflection from a point source at the origin; approximates an Archimedean spiral for large θ.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Atzema/Atzema01-360.avif"
+           alt="Atzema Spiral, a=1,b=2,c=1,d=1,e=2,f=1">
+      <figcaption>Atzema Spiral, a=1,b=2,c=1,d=1,e=2,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema02-360.avif"
+           alt="Atzema Spiral, a=0.5,b=1,c=0.5,d=0.5,e=0.5,f=0.25">
+      <figcaption>Atzema Spiral, a=0.5,b=1,c=0.5,d=0.5,e=0.5,f=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema03-360.avif"
+           alt="Atzema Spiral, a=0.5,b=4,c=2,d=0.5,e=-3,f=0.5">
+      <figcaption>Atzema Spiral, a=0.5,b=4,c=2,d=0.5,e=-3,f=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema04-360.avif"
+           alt="Atzema Spiral, a=1,b=0.5,c=3,d=1,e=-2,f=0.25">
+      <figcaption>Atzema Spiral, a=1,b=0.5,c=3,d=1,e=-2,f=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema05-360.avif"
+           alt="Atzema Spiral, a=1,b=4,c=0.25,d=1,e=4,f=0.25">
+      <figcaption>Atzema Spiral, a=1,b=4,c=0.25,d=1,e=4,f=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema06-360.avif"
+           alt="Atzema Spiral, a=1,b=0.5,c=1,d=1,e=1,f=1.5">
+      <figcaption>Atzema Spiral, a=1,b=0.5,c=1,d=1,e=1,f=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema07-360.avif"
+           alt="Atzema Spiral, a=1,b=3,c=-1,d=1,e=-3,f=1">
+      <figcaption>Atzema Spiral, a=1,b=3,c=-1,d=1,e=-3,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema08-360.avif"
+           alt="Atzema Spira, a=1,b=4,c=0.25,d=1,e=-4,f=0.25">
+      <figcaption>Atzema Spiral, a=1,b=4,c=0.25,d=1,e=-4,f=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Atzema/Atzema09-360.avif"
+           alt="Atzema Spiral, a=1,b=-4,c=0.25,d=1,e=4,f=0.25">
+      <figcaption>Atzema Spiral, a=1,b=-4,c=0.25,d=1,e=4,f=0.25</figcaption>
+    </figure>
+    <figure>
+      <a href="https://mathworld.wolfram.com/AtzemaSpiral.html" target="_blank" rel="noopener">
+        <img src="images/Atzema/Atzema10-360.avif"
+             alt="Atzema Spiral, MathWorld illustration"
+             class="external"
+             data-skip-modal>
+      </a>
+      <figcaption>Atzema Spiral from Wolfram MathWorld</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label"> Pritch-Atzema parametric equations:</div>
+      \[ x = a\left(\frac{\sin\theta}{\theta} - 2\cos\theta - \theta\sin\theta\right),\quad y = a\left(\frac{\cos\theta}{\theta} - 2\sin\theta + \theta\cos\theta\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = a\left(\frac{\sin\theta}{\theta} - b\cos\theta - c\theta\sin\theta\right),\quad y = d\left(\frac{\cos\theta}{\theta} - e\sin\theta + f\theta\cos\theta\right) \]
+    </div>
+
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Atzema spiral, also known as the Pritch-Atzema spiral, is a parametric curve distinguished by its unique optical property: when light rays from a point source at the origin reflect off the curve, the envelope of those reflected rays (the catacaustic) forms a perfect circle of radius 2a.<sup>1,2</sup> This property was proven by Eisso Atzema (with Yael Pritch) around 2000.<sup>2</sup></p>
+    <p>For large values of the parameter θ, the curve approximates an Archimedean spiral, where the distance from the origin increases linearly with angle.<sup>2,3</sup> The curve has an asymptote at x = 0 as θ approaches infinity in certain parameterizations, though it unwinds outward from near the origin.<sup>2</sup> The parametric equations have a limiting behavior near θ = 0 yielding finite coordinates after the 1/θ terms are handled (via sinc-like limits: sin(θ)/θ → 1 and cos(θ)/θ → 0 as θ → 0, though adjusted by the coefficients).<sup>2</sup></p>
+    <p>No widespread real-life applications in engineering or the natural sciences appear in standard curve references, beyond its theoretical interest in optics as a demonstration of a spiral mirror producing a circular caustic (relevant to understanding reflection envelopes in curved mirrors or wavefronts).<sup>1</sup> The property makes it a curiosity in mathematical optics, but practical uses (such as in mirror design for specific focal behaviors) are not documented in sources.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/AtzemaSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/AtzemaSpiral.html</a> (definition, parametric equations, catacaustic circle of radius 2a, illustrations)</li>
+      <li><a href="https://www.2dcurves.com/spiral/spiralat.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spiralat.html</a> (history with Atzema/Pritch circa 2000, approximation to Archimedean spiral)</li>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_spirals" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/List_of_spirals</a> (brief entry confirming catacaustic is a circle, approximation to Archimedean spiral)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ATZEMA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe ff fg)
+  (setq id "Atzema Spiral"
+        iq "x=a·(sinθ/θ − b·cosθ − c·θ·sinθ), y=d·(cosθ/θ − e·sinθ + f·θ·cosθ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 180
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (x scale factor)" 1.0)
+        fb (get_real 2 "b (coefficient of cos θ term in x)" 2.0)
+        fc (get_real 2 "c (coefficient of θ sin θ term in x)" 1.0)
+        fd (get_real 2 "d (y scale factor)" 1.0)
+        fe (get_real 2 "e (coefficient of sin θ term in y)" 2.0)
+        ff (get_real 2 "f (coefficient of θ cos θ term in y)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", e=" (rtos fe 2 4) ", f=" (rtos ff 2 4))
+        xc '(* fa (if (< (abs (eval a2)) 1e-9) (- 1.0 fb) (- (/ (sin (eval a2)) (avoid_zero (eval a2)))
+            (* fb (cos (eval a2))) (* fc (eval a2) (sin (eval a2))))))
+        yc '(* fd (if (< (abs (eval a2)) 1e-9) 1.0 (+ (/ (cos (eval a2)) (avoid_zero (eval a2)))
+            (* (- fe) (sin (eval a2))) (* ff (eval a2) (cos (eval a2))))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ATZEMA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mie Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Mie Curve</h1>
+      <p class="short-description">Pair-potential and force curves for neutral atoms or molecules.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Mie/Mie01-360.avif"
+           data-caption="Mie Potential, ε=1,σ=1,m=6,n=16(black),14(red),12(blue),10(green),8(orange),7(purple),6.1(cyan)"
+           alt="Mie Potential, ε=1,σ=1,m=6,n=16(black),14(red),12(blue),10(green),8(orange),7(purple),6.1(cyan)">
+      <figcaption>
+        Mie Potential, ε=1,σ=1,m=6,n=
+        <span class="figcap-value" style="color:#000000">16</span>,
+        <span class="figcap-value" style="color:#FF0000">14</span>,
+        <span class="figcap-value" style="color:#0000FF">12</span>,
+        <span class="figcap-value" style="color:#009600">10</span>,
+        <span class="figcap-value" style="color:#FF9600">8</span>,
+        <span class="figcap-value" style="color:#9600FF">7</span>,
+        <span class="figcap-value" style="color:#0096FF">6.1</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Mie/Mie02-360.avif"
+           data-caption="Mie Force, ε=1,σ=1,m=6,n=16(black),14(red),12(blue),10(green),8(orange),7(purple),6.1(cyan)"
+           alt="Mie Force, ε=1,σ=1,m=6,n=16(black),14(red),12(blue),10(green),8(orange),7(purple),6.1(cyan)">
+      <figcaption>
+        Mie Force, ε=1,σ=1,m=6,n=
+        <span class="figcap-value" style="color:#000000">16</span>,
+        <span class="figcap-value" style="color:#FF5555">14</span>,
+        <span class="figcap-value" style="color:#5555FF">12</span>,
+        <span class="figcap-value" style("color:#55AA55">13</span>,
+        <span class("figcap-value" style("color:#AA7733">8</span>,
+        <span class("figcap-value" style("color:#7733AA">7</span>,
+        <span class("figcap-value" style("color=#33AAFF">6.1</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Mie potential equation:</div>
+      \[ V=C\varepsilon\left[\left(\dfrac{\sigma}{r}\right)^{n}-\left(\dfrac{\sigma}{r}\right)^{m}\right],\quad C=\dfrac{n}{n-m}\left(\dfrac{n}{m}\right)^{\frac{m}{n-m}},\quad V_{\min}=-\varepsilon \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Lennard-Jones equation:</div>
+      \[ V=4\varepsilon\left[\left(\dfrac{\sigma}{r}\right)^{12}-\left(\dfrac{\sigma}{r}\right)^{6}\right] \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Mie force equation:</div>
+      \[ F=\dfrac{C\varepsilon}{r}\left[n\left(\dfrac{\sigma}{r}\right)^{n}-m\left(\dfrac{\sigma}{r}\right)^{m}\right] \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Lennard-Jones force equation:</div>
+      \[ F=\dfrac{24\varepsilon}{r}\left[2\left(\dfrac{\sigma}{r}\right)^{12}-\left(\dfrac{\sigma}{r}\right)^{6}\right] \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Mie potential<sup>1,2</sup>, introduced in 1903 by German physicist Gustav Mie (better known for his theory of Mie scattering in electromagnetism), is a generalized empirical model for the pairwise interaction energy between neutral atoms or molecules. It balances short-range repulsion, arising from electron cloud overlap and the Pauli exclusion principle, with long-range attraction due to induced dipole–dipole (van der Waals) forces. Predating quantum mechanics, Mie’s phenomenological formulation allows independent exponents n (repulsive) and m (attractive) to flexibly fit experimental data. In 1924, British physicist John Lennard-Jones proposed a specific simplified case using repulsive exponent 12 and attractive exponent 6, now known as the Lennard-Jones (12–6) potential. The choice of 12 was largely for computational convenience (as the square of 6), yet it closely matched measured noble-gas interaction energies and became a standard model. The Lennard-Jones potential is viewed as a canonical special case of the more general Mie family. The Mie potential models three physically distinct regions: a steep repulsive wall at short range; an equilibrium region around the potential minimum; and a weak, slowly decaying attractive tail at long range. The force curve, the negative derivative of the potential, is often more intuitive: positive (repulsive) at short distances, negative (attractive) at long distances, and zero at equilibrium separation.</p>
+    <p>These potentials and their force curves are foundational in engineering and the natural sciences. They serve as core components of molecular force fields in molecular dynamics and Monte Carlo simulations used to study gases, liquids, polymers, and simple solids. Applications include computing thermophysical properties, phase equilibria, virial coefficients, vapor-liquid interfaces, and transport behavior for substances such as noble gases, alkanes, and perfluoroalkanes.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Mie_potential" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Mie_potential</a> (history, general equation, applications in molecular modeling)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Lennard-Jones_potential" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Lennard-Jones_potential</a> (Lennard-Jones specific case and history)</li>
+      <li><a href="https://pubs.acs.org/doi/10.1021/jp9072137" target="_blank" rel="noopener noreferrer">https://pubs.acs.org/doi/10.1021/jp9072137</a> (Mie potentials for phase equilibria calculations: application to alkanes and perfluoroalkanes)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:MIE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Mie Curve"
+        iq ""
+        dcl "MIE"
+        opt '("Mie Potential" "Lennard-Jones Potential" "Mie Force" "Lennard-Jones Force")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nMie Potential: V=C·ε[(σ/r)ⁿ-(σ/r)ᵐ],  C = n/(n-m)·(n/m)^{m/(n-m)}: ")
+    (setq fa (get_real 2 "ε (energy scale)" 1.0)
+          fb (get_real 2 "σ (length scale)" 1.0)
+          fd (get_real 6 "m (attractive exponent)" 6.0)
+          fc (get_boundr 2 "n (repulsive exponent)" 12.0 fd nil nil nil)
+          fe (/ fc (- fc fd))
+          fe (* fe (exp (* (/ fd (- fc fd)) (log (/ fc fd)))))
+          yc '(* fe fa (- (expt (/ fb (avoid_zero (eval a2))) fc) (expt (/ fb (avoid_zero (eval a2))) fd)))
+          eq_display (strcat "\nε=" (rtos fa 2 4) ", σ=" (rtos fb 2 4) ", n=" (rtos fc 2 4) ", m=" (rtos fd 2 4) ", C=" (rtos fe 2 4))))
+   ((eq kw 1)
+    (princ "\nLennard-Jones Potential: V=4·ε[(σ/r)¹²-(σ/r)⁶]")
+    (setq fa (get_real 2 "ε (energy scale)" 1.0)
+          fb (get_real 2 "σ (length scale)" 1.0)
+          fc 12.0
+          fd 6.0
+          yc '(* 4.0 fa (- (expt (/ fb (avoid_zero (eval a2))) fc) (expt (/ fb (avoid_zero (eval a2))) fd)))
+          eq_display (strcat "\nε=" (rtos fa 2 4) ", σ=" (rtos fb 2 4))))
+   ((eq kw 2)                                ; Mie Force
+    (princ "\nMie Force: F=(C·ε/r)[n·(σ/r)ⁿ-m·(σ/r)ᵐ],  C=n/(n-m)·(n/m)^{m/(n-m)}")
+    (setq fa (get_real 2 "ε (energy scale)" 1.0)
+          fb (get_real 2 "σ (length scale)" 1.0)
+          fd (get_real 6 "m (attractive exponent)" 6.0)
+          fc (get_boundr 2 "n (repulsive exponent)" 12.0 fd nil nil nil)
+          fe (/ fc (- fc fd))
+          fe (* fe (exp (* (/ fd (- fc fd)) (log (/ fc fd)))))
+          yc '(/ (* fe fa (- (* fc (expt (/ fb (avoid_zero (eval a2))) fc)) (* fd (expt (/ fb (avoid_zero (eval a2))) fd)))) (avoid_zero (eval a2)))
+          eq_display (strcat "\nε=" (rtos fa 2 4) ", σ=" (rtos fb 2 4) ", n=" (rtos fc 2 4) ", m=" (rtos fd 2 4) ", C=" (rtos fe 2 4))))
+   ((eq kw 3)                                ; Lennard-Jones Force
+    (princ "\nLennard-Jones Force: F=-(dV/dr)=(24·ε/r)[2·(σ/r)¹²-(σ/r)⁶]")
+    (setq fa (get_real 2 "ε (energy scale)" 1.0)
+          fb (get_real 2 "σ (length scale)" 1.0)
+          yc '(/ (* 24.0 fa (- (* 2.0 (expt (/ fb (avoid_zero (eval a2))) 12.0)) (expt (/ fb (avoid_zero (eval a2))) 6.0))) (avoid_zero (eval a2)))
+          eq_display (strcat "\nε=" (rtos fa 2 4) ", σ=" (rtos fb 2 4)))))
+  (setq xc '(eval a2)
+        paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:MIE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

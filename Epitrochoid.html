@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Epitrochoid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Epitrochoid</h1>
+      <p class="short-description">The locus of a point fixed relative to a circle of radius b that rolls without slipping around the outside of a fixed circle of radius a; the offset distance of the tracing point from the rolling-circle center produces a continuous family of shapes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid01-360.avif"
+           alt="Epitrochoid-all convex, a=1,b=1/3,c=1/8">
+      <figcaption>Epitrochoid-all convex, a=1,b=1/3,c=1/8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid02-360.avif"
+           alt="Epitrochoid-flat sides, a=1,b=1/3,c=1/4">
+      <figcaption>Epitrochoid-flat sides, a=1,b=1/3,c=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid03-360.avif"
+           alt="Epitrochoid-concave, a=1,b=1/3,c=1/2">
+      <figcaption>Epitrochoid-concave, a=1,b=1/3,c=1/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid04-360.avif"
+           alt="Epitrochoid-epicycloid, a=1,b=1/3,c=1">
+      <figcaption>Epitrochoid-epicycloid, a=1,b=1/3,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid05-360.avif"
+           alt="Epitrochoid-loops short of origin, a=1,b=1/3,c=2.5">
+      <figcaption>Epitrochoid-loops short of origin, a=1,b=1/3,c=2.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid06-360.avif"
+           alt="Epitrochoid-rose reaching origin, a=1,b=1/3,c=4">
+      <figcaption>Epitrochoid-rose reaching origin, a=1,b=1/3,c=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid07-360.avif"
+           alt="Epitrochoid-loops beyond origin, a=1,b=1/3,c=5">
+      <figcaption>Epitrochoid-loops beyond origin, a=1,b=1/3,c=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid08-360.avif"
+           alt="Epitrochoid-new values, a=1,b=2/5,c=9/4">
+      <figcaption>Epitrochoid-new values, a=1,b=2/5,c=9/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid09-360.avif"
+           alt="Epitrochoid-new values, a=1,b=2/5,c=4/7">
+      <figcaption>Epitrochoid-new values, a=1,b=2/5,c=4/7</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid10-360.avif"
+           alt="Epitrochoid-new values, a=1,b=21/20,c=4/5">
+      <figcaption>Epitrochoid-new values, a=1,b=21/20,c=4/5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid11-360.avif"
+           alt="Epitrochoid-new values, a=1,b=21/20,c=1">
+      <figcaption>Epitrochoid-new values, a=1,b=21/20,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Epitrochoid/Epitrochoid12-360.avif"
+           alt="Epitrochoid-new values, a=1,b=21/20,c=6/5">
+      <figcaption>Epitrochoid-new values, a=1,b=21/20,c=6/5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Epitrochoid parametric equations:</div>
+      \[ x=(a+b)\cos\theta - c\cdot b\cdot\cos\left(\dfrac{a+b}{b}\theta\right),\quad y=(a+b)\sin\theta - c\cdot b\cdot\sin\left(\dfrac{a+b}{b}\theta\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The epitrochoid<sup>1,2</sup> is the curve traced by a point attached to a circle of radius \( b \) that rolls without slipping around the outside of a fixed circle of radius \( a \). Albrecht Dürer first described such curves in 1525 in his book <em>Instruction in Measurement with Compasses and Straight Edge</em>, calling the construction lines “spider lines.” The broader family of epicyclic curves received extensive study in the 17th and 18th centuries by Girard Desargues (1640), Christiaan Huygens (1679), Leibniz, Isaac Newton (1686), Guillaume de L’Hôpital (1690), Jakob Bernoulli (1690), Philippe de la Hire (1694), Johann Bernoulli (1695), Daniel Bernoulli (1725), and Leonhard Euler (1745, 1781).<sup>1</sup> The epitrochoid generalizes the epicycloid by allowing the tracing point to be located at an arbitrary fractional distance \(c\) from the center of the rolling circle with radius \(b\), rather than fixed to its circumference. This extra degree of freedom greatly enriches the family of possible shapes: When \(c &lt; 1\), the curve has smooth inward concavities but no cusps. At \( c = 1 \), the curve becomes an epicycloid, with its characteristic sharp cusps. When \( c &gt; 1 \), the point traces loops that pass inside the base circle’s perimeter. This flexibility makes the epitrochoid an important case study in roulette curves, paths generated by points attached to rolling bodies, because it bridges between convex cycloidal forms and multi-looped or rose-like structures. Historically, such generalizations were explored alongside the more restrictive epicycloid during the 17th–18th century classification of cycloidal curves. Euler, in particular, used the generalized \( c \) parameter to study changes in curvature and inflection behavior.</p>
+    <p>In mechanical engineering the two-lobed epitrochoid forms the inner housing surface of the Wankel rotary engine, allowing a triangular rotor to maintain sealed contact while executing the four strokes of the Otto cycle with a minimum of moving parts.<sup>1</sup> Identical epitrochoidal lobe profiles are used in gerotor pumps for hydraulic fluid transfer and automotive lubrication systems, delivering compact, low-pulsation positive displacement.<sup>3</sup> In optics, pairs of Risley prisms generate epitrochoidal scanning patterns for high-speed laser beam steering in metrology and imaging instruments.<sup>4</sup> In the natural sciences the tip trajectory of meandering spiral waves in excitable media such as cardiac tissue or the Belousov–Zhabotinsky chemical reaction follows an epitrochoid or hypotrochoid path.<sup>5</sup></p>
+    <p>Beyond engineering, the epitrochoid’s variety of forms is a key reason it dominates recreational curve-drawing systems like the Spirograph: changing \( c \) in small increments morphs the output from gentle bulges to intricate looping patterns, providing an intuitive visual demonstration of parametric variation and examples of how altering a single geometric relationship, here the tracer’s offset, modifies topological properties such as cusp count, closure period, and symmetry.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Epitrochoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Epitrochoid.html</a> (equations, history, Dürer spider line, Wankel engine reference via trochoid family)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Epicycloid/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Epicycloid/</a> (family history and mathematicians)</li>
+      <li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13144/131440Y/Generation-of-polar-roses-epitrochoids-and-hypotrochoids-using-Risley-prisms/10.1117/12.3028771.short" target="_blank" rel="noopener noreferrer">https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13144/131440Y/Generation-of-polar-roses-epitrochoids-and-hypotrochoids-using-Risley-prisms/10.1117/12.3028771.short</a> (Risley-prism optical scanning)</li>
+      <li><a href="https://link.aps.org/doi/10.1103/PhysRevE.107.014215" target="_blank" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevE.107.014215</a> (meandering spiral waves in excitable media)</li>
+      <li><a href="https://iopscience.iop.org/article/10.1209/0295-5075/135/50003/meta" target="_blank" rel="noopener noreferrer">https://iopscience.iop.org/article/10.1209/0295-5075/135/50003/meta</a> (use in rotating-plane buckling, confirming engineering relevance)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:EPITROCHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                        xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Epitrochoid"
+        iq "x=(a+b)·cos(θ)−c·b·cos(((a+b)/b)θ), y=(a+b)·sin(θ)−c·b·sin(((a+b)/b)θ)"
+        dcl "EPITROCHOID"
+        opt '("All convex" "Flat sides" "Concave short of cusps" "Epicycloid with cusps" "Loops short of origin"
+              "Rose reaching origin" "Loops beyond origin" "New Values")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_dist 2 "a (radius of base circle)" 1.0 basept))
+  (cond
+    ((eq kw 0)
+     (setq fd (get_real 6 "a/b (# of indentations or lobes)" 3.0)
+           fd (1+ fd)
+           fb (/ fa (avoid_zero (1- fd)))
+           fc (get_boundr 2 (strcat "c (pen offset fraction - 0=center, 1=rolling radius < " (rtos (/ 1.0 fd) 2 4) ")") (/ 0.5 fd) 0.0 (/ 1.0 fd) T nil)))
+    ((eq kw 1)
+     (setq fd (get_real 6 "a/b (# of indentations or lobes)" 1.0)
+           fd (1+ fd)
+           fb (/ fa (avoid_zero (1- fd)))
+           fc (/ 1.0 fd)))
+    ((eq kw 2)
+     (setq fd (get_real 6 "a/b (# of indentations or lobes)" 1.0)
+           fd (1+ fd)
+           fb (/ fa (avoid_zero (1- fd)))
+           fc (get_boundr 2 (strcat "c (pen offset fraction between " (rtos (/ 1.0 fd) 2 4) " and 1)") (/ 2.0 fd) (/ 1.0 fd) 1.0 nil nil)))
+    ((eq kw 3)
+     (setq fd (get_real 6 "a/b (# of cusps or lobes)" 1.0)
+           fd (1+ fd)
+           fb (/ fa (avoid_zero (1- fd)))
+           fc 1.0))
+    ((eq kw 4)
+     (setq fd (get_real 6 "a/b (# of loops or lobes)" 1.0)
+           fd (1+ fd)
+           fb (/ fa (avoid_zero (1- fd)))
+           fc (get_boundr 2 (strcat "c (pen offset fraction between 1 and " (rtos (/ (+ fa fb) fb) 2 4) ")") (+ 1.0 (/ fa 2.0 fb)) 1.0 (/ (+ fa fb) fb) nil nil)))
+    ((eq kw 5)
+     (setq fd (get_real 6 "a/b (# of loops or lobes)" 1.0)
+           fd (1+ fd)
+           fb (/ fa (avoid_zero (1- fd)))
+           fc (/ (+ fa fb) fb)))
+    ((eq kw 6)
+     (setq fd (get_real 6 "a/b (# of loops or lobes)" 1.0)
+           fd (1+ fd)
+           fb (/ fa (avoid_zero (1- fd)))
+           fc (get_boundr 2 (strcat "c (pen offset fraction > " (rtos (/ (+ fa fb) fb) 2 4) ")") (+ 1.0 (/ (+ fa fb) fb)) (/ (+ fa fb) fb) nil nil nil)))
+    ((eq kw 7)
+     (setq fb (get_dist 2 (strcat eq_prompt "b (radius of rolling circle)") 1.05 (list fa 0.0))
+           fc (get_real 6 "c (pen offset as fraction of rolling radius)" 0.8))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        xc '(- (* (+ fa fb) (cos (eval a2))) (* fc fb (cos (* (/ (+ fa fb) fb) (eval a2)))))
+        yc '(- (* (+ fa fb) (sin (eval a2))) (* fc fb (sin (* (/ (+ fa fb) fb) (eval a2)))))
+        skm '(T T T)a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:EPITROCHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

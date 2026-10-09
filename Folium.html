@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Folium - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Folium</h1>
+      <p class="short-description">A collection of polar leaf-shaped curves.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Folium/Folium01-360.avif"
+           alt="Folium, Descartes a=1,b=3,c=3">
+      <figcaption>Folium, Descartes a=1,b=3,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium02-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=2,c=2">
+      <figcaption>Folium, Generalized Descartes a=1,b=2,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium03-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=1,c=1">
+      <figcaption>Folium, Generalized Descartes a=1,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium04-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=0.5,c=0.5">
+      <figcaption>Folium, Generalized Descartes a=1,b=0.5,c=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium05-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=0.75,c=0.75">
+      <figcaption>Folium, Generalized Descartes a=1,b=0.75,c=0.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium06-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=4,c=4">
+      <figcaption>Folium, Generalized Descartes a=1,b=4,c=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium07-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=3,c=0.25">
+      <figcaption>Folium, Generalized Descartes a=1,b=3,c=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium08-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=3,c=8">
+      <figcaption>Folium, Generalized Descartes a=1,b=3,c=8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium09-360.avif"
+           alt="Folium, Generalized Descartes a=1,b=2,c=3">
+      <figcaption>Folium, Generalized Descartes a=1,b=2,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium10-360.avif"
+           alt="Folium, Kepler Bifolium a=0,b=2">
+      <figcaption>Folium, Kepler Bifolium a=0,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium11-360.avif"
+           alt="Folium, Kepler Trifolium a=0.25,b=2">
+      <figcaption>Folium, Kepler Trifolium a=0.25,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium12-360.avif"
+           alt="Folium, Kepler Trefoil a=0.5,b=2">
+      <figcaption>Folium, Kepler Trefoil a=0.5,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium13-360.avif"
+           alt="Folium, Kepler Trifolium a=0.75,b=2">
+      <figcaption>Folium, Kepler Trifolium a=0.75,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium14-360.avif"
+           alt="Folium, Kepler Folium a=1,b=2">
+      <figcaption>Folium, Kepler Folium a=1,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium15-360.avif"
+           alt="Folium, Kepler folium a=2,b=2">
+      <figcaption>Folium, Kepler Folium a=2,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium16-360.avif"
+           alt="Folium, Generalized Kepler Trifolium a=0,b=3">
+      <figcaption>Folium, Generalized Kepler Trifolium a=0,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium17-360.avif"
+           alt="Folium, Generalized Kepler Folium a=1,b=3">
+      <figcaption>Folium, Generalized Kepler Folium a=1,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium18-360.avif"
+           alt="Folium, Generalized Kepler Folium a=0.25,b=3">
+      <figcaption>Folium, Generalized Kepler Folium a=0.25,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium19-360.avif"
+           alt="Folium, Generalized Kepler Folium a=3,b=0.25">
+      <figcaption>Folium, Generalized Kepler Folium a=3,b=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium20-360.avif"
+           alt="Folium, Rose Trifolium a=1,n=3">
+      <figcaption>Folium, Rose Trifolium a=1,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium21-360.avif"
+           alt="Folium, Rose Quadrifolium a=1,n=2">
+      <figcaption>Folium, Rose Quadrifolium a=1,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium22-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=5">
+      <figcaption>Folium, Rose Multifolium a=1,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium23-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=4">
+      <figcaption>Folium, Rose Multifolium a=1,n=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium24-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=1/2">
+      <figcaption>Folium, Rose Multifolium a=1,n=1/2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium25-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=1/3">
+      <figcaption>Folium, Rose Multifolium a=1,n=1/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium26-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=1/4">
+      <figcaption>Folium, Rose Multifolium a=1,n=1/4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium27-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=1/5">
+      <figcaption>Folium, Rose Multifolium a=1,n=1/5</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Folium/Folium28-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=19/20">
+      <figcaption>Folium, Rose Multifolium a=1,n=19/20</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium29-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=4.05">
+      <figcaption>Folium, Rose Multifolium a=1,n=4.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium30-360.avif"
+           alt="Folium, Rose Multifolium a=1,n=8.8">
+      <figcaption>Folium, Rose Multifolium a=1,n=8.8</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium31-360.avif"
+           alt="Folium, Dürer a=1">
+      <figcaption>Folium, Dürer a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium32-360.avif"
+           alt="Folium, Parabolic a=1,b=1,c=2,d=3">
+      <figcaption>Folium, Parabolic a=1,b=1,c=2,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium33-360.avif"
+           alt="Folium, Generalized Parabolic a=1,b=2,c=3,d=3">
+      <figcaption>Folium, Generalized Parabolic a=1,b=2,c=3,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium34-360.avif"
+           alt="Folium, Generalized Parabolic a=1,b=2,c=1,d=1">
+      <figcaption>Folium, Generalized Parabolic a=1,b=2,c=1,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium35-360.avif"
+           alt="Folium, Generalized Parabolic New-values a=1,b=4,c=2,d=2">
+      <figcaption>Folium, Generalized Parabolic New-values a=1,b=4,c=2,d=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium36-360.avif"
+           alt="Folium, Generalized Parabolic New-values a=0.5,b=1,c=0.5,d=0.5">
+      <figcaption>Folium, Generalized Parabolic New-values a=0.5,b=1,c=0.5,d=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Folium/Folium37-360.avif"
+           alt="Folium, Simple a=1">
+      <figcaption>Folium, Simple a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Descartes polar equation:</div>
+      \[ r = \dfrac{3a\sin\theta\cos\theta}{\cos^{3}\theta + \sin^{3}\theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Descartes polar equation:</div>
+      \[ r = \dfrac{3a\sin\theta\cos\theta}{\cos^{b}\theta + \sin^{c}\theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Kepler polar equation:</div>
+      \[ r = \cos\theta\,(\sin^{2}\theta - a) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Kepler polar equation:</div>
+      \[ r = \cos\theta\,(\sin^{b}\theta - a) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rose folium polar equation:</div>
+      \[ r = a\cos(n\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Dürer folium polar equation:</div>
+      \[ r = a\sin(\theta/2) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Parabolic folium polar equation:</div>
+      \[ r = \dfrac{a\cos(2\theta) + (b/2)\sin(2\theta)}{\cos^{3}\theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parabolic polar equation:</div>
+      \[ r = \dfrac{a\cos(c\theta) + (b/2)\sin(c\theta)}{\cos^{d}\theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Simple folium polar equation:</div>
+      \[ r = a\cos^{3}\theta \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Folium curves comprise a family of polar leaf-shaped plots. The Descartes variant was introduced by René Descartes in 1638 in correspondence with Pierre de Fermat as part of an early calculus challenge to determine tangent lines to algebraic curves.<sup>1</sup> The Kepler family (bifolium, trifolium, and simple forms) originates from Johannes Kepler’s 1609 work on ovoid shapes and was further studied by Vincenzo Viviani in 1647.<sup>2</sup> The Dürer folium is attributed to the geometric constructions of Albrecht Dürer (1471–1528) and represents a special case of the rose curve.<sup>3</sup> The parabolic folium was examined by Gérard de Longchamps in 1890.<sup>4</sup> The rose family variant is a multi-lobed extension of these polar forms.</p>
+    <p>Applications in engineering and the natural sciences are limited primarily to mathematical modeling. The Descartes folium has been applied in rock mechanics to relate fracture aperture to strain parameters in brittle rocks under uniaxial compression.<sup>5</sup> Kepler’s ovoid variants aid in calculating volumes of solids of revolution in engineering analysis. No specific engineering or scientific applications were identified for the Dürer, parabolic, rose, or simple folium variants beyond their utility in curve plotting and calculus education.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/FoliumofDescartes.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FoliumofDescartes.html</a> (history with Fermat challenge).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/foliumsimple/foliumsimple.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/foliumsimple/foliumsimple.shtml</a> (Kepler and Viviani history).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/foliumdedurer/foliumdedurer.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/foliumdedurer/foliumdedurer.shtml</a> (Dürer folium).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/foliumparabolic/foliumparabolic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/foliumparabolic/foliumparabolic.shtml</a> (de Longchamps history).</li>
+      <li><a href="https://www.researchgate.net/publication/268575558_Use_of_Descartes_Folium_Equation_for_Deriving_a_Relation_between_Total_Aperture_of_Fractures_after_Uniaxial_Compression_and_Strain_Parameters_of_Different_Rocks_Exhibiting_Negative_Dual_Volumetric_St" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/268575558_Use_of_Descartes_Folium_Equation_for_Deriving_a_Relation_between_Total_Aperture_of_Fractures_after_Uniaxial_Compression_and_Strain_Parameters_of_Different_Rocks_Exhibiting_Negative_Dual_Volumetric_St</a> (rock mechanics application).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FOLIUM (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd kw2 rval)
+  (setq id "Folium"
+        iq ""
+        dcl "FOLIUM"
+        opt '("Descartes" "Kepler Family" "Rose Family" "Dürer" "Parabolic" "Simple")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nFolium of Descartes (generalized): r = (3·a·sinθ·cosθ) / (cos^bθ + sin^cθ)")
+    (setq kw2 (get_keyword 0 "Descartes New-values" "Descartes (aka cartesian) New-values" "Descartes")
+          fa (get_real 6 "a (scale factor a)" 1.0))
+    (cond
+      ((eq kw2 "Descartes")
+       (setq fb 3 fc 3))
+      ((eq kw2 "New-values")
+       (setq fb (get_real 6 "b (cosine exponent b): " 3.0)
+             fc (get_real 6 "c (sine exponent c): " 3.0))))
+    (setq eq_display (strcat "\na= " (rtos fa 2 4) ",b= " (rtos fb 2 4) ", c= " (rtos fc 2 4))
+          rval '(/ (* 3 fa (sin (eval a2)) (cos (eval a2))) (avoid_zero (+ (alt_expt (cos (eval a2)) fb nil) (alt_expt (sin (eval a2)) fc nil))))))
+   ((eq kw 1)
+    (princ "\nKepler Folium (generalized): r = cosθ(sinᵇ(θ)-a)")
+    (setq kw2 (get_keyword 0 "Bifolium Trifolium treFoil Single New-values" "kepler: Bifolium Trifolium treFoil Single New-values" "Bifolium"))
+    (cond
+      ((eq kw2 "Bifolium")
+       (setq fa 0 fb 2))
+      ((eq kw2 "Trifolium")
+       (setq fa (get_boundr 6 "a (leaf-selector): " 0.3 nil 1.0 nil nil)
+             fb 2))
+      ((eq kw2 "treFoil")
+       (setq fa 0.5 fb 2))
+      ((eq kw2 "Single")
+       (setq fa (get_boundr 6 "a (leaf-selector): " 1.0 1.0 nil T nil)
+             fb 2))     
+      ((eq kw2 "New-values")
+       (setq fa (get_real 0 "a (leaf-selector): " 0.0)
+             fb (get_real 2 "b (exponent): " 2.0))))      
+    (setq eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4))
+          rval '(* (cos (eval a2)) (- (alt_expt (sin (eval a2)) fb nil) fa))))
+   ((eq kw 2)
+    (princ "\nRose Folium: r = a·cos(nθ/2)")
+    (setq kw2 (get_keyword 0 "Trifolium Quadrifolium Multifolium" "rose folium: Trifolium Quadrifolium Multifolium-(new-values)" "Multifolium")
+          fa (get_real 6 "a (scale): " 1.0))
+    (cond
+      ((eq kw2 "Trifolium")
+       (setq fb 3))
+      ((eq kw2 "Quadrifolium")
+       (setq fb 2))
+      ((eq kw2 "Multifolium")
+       (setq fb (get_real 6 "# of lobes: n if odd, 2n if even: " 5.0))))
+    (setq eq_display (strcat "\na= " (rtos fa 2 4) ", n= " (rtos fb 2 4))
+          rval '(* fa (cos (* fb (eval a2))))))
+   ((eq kw 3)
+    (princ "\nDürer Folium: r = a·sin(θ/2)")
+    (setq fa (get_real 6 "\na (scale): " 1.0)
+          eq_display (strcat "\na= " (rtos fa 2 4))
+          rval '(* fa (sin (/ (eval a2) 2.0)))))
+   ((eq kw 4)
+    (princ "\nParabolic folium (generalized): r = (a·cos(cθ)+(b/2)sin(cθ))/cos^d(θ)")
+    (setq kw2 (get_keyword 0 "Parabolic New-values" "parabolic folium: Parabolic New-values" "Parabolic"))
+    (cond
+      ((eq kw2 "Parabolic")   
+       (setq fa (get_real 2 "\na (cosine multiplier): " 1.0)
+             fb (get_real 2 "\nb (sine multiplier): " 1.0)
+             fc 2.0
+             fd 3.0))
+      ((eq kw2 "New-values")
+       (setq fa (get_real 2 "\na (cosine multiplier): " 1.0)
+             fb (get_real 2 "\nb (sine multiplier): " 1.0)
+             fc (get_real 6 "\nc (angle multiplier): " 2.0)
+             fd (get_real 6 "\nd (cosine exponent): " 3.0))))
+    (setq eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4) ", d= " (rtos fd 2 4))
+          rval '(/ (+ (* fa (cos (* fc (eval a2)))) (* (/ fb 2.0) (sin (* fc (eval a2))))) (avoid_zero (alt_expt (cos (eval a2)) fd nil)))))
+   ((eq kw 5)
+    (princ "\nSimple folium: r = a·cos³(θ)")
+    (setq fa (get_real 6 "\na (scale): " 1.0)
+          eq_display (strcat "\na= " (rtos fa 2 4))
+          rval '(* fa (expt (cos (eval a2)) 3)))))
+  (setq xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 20.0)
+        skm (if (or (eq kw 3) (eq kw 4)) '(nil nil T) '(T T T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:FOLIUM)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

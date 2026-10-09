@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watt's Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Watt's Curve</h1>
+      <p class="short-description">Sextic traced by the midpoint of a rod of length 2c whose ends ride on two equal wheels of radius b, centers a distance 2a apart. Watt’s linkage used that geometry to turn piston motion into flywheel rotation while keeping the piston rod nearly straight. The drawing is the polar form, with a p/q multiplier on θ and a Plus or Minus branch.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Watts/Watts01-360.avif"
+           alt="Watt's Curve, a=1,b=1,multiple values of c,p=1,q=1,Plus,Real">
+      <figcaption>
+        Watt's Curve, a=1,b=1,c=
+        <span class="figcap-value" style="color:#000000">1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">1.1</span>,
+        <span class="figcap-value" style="color:#0000FF">1.2</span>,
+        <span class="figcap-value" style="color:#009600">1.3</span>,
+        <span class="figcap-value" style="color:#FF9600">1.4</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.6</span>,
+        <span class="figcap-value" style="color:#AA5555">1.7</span>,
+        <span class="figcap-value" style="color:#00FF00">1.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.9</span>,
+        p=1,q=1,Plus,Real
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts02-360.avif"
+           alt="Watt's Curve, multiple values of a,b=1,c=1,p=1,q=1,Plus,Real">
+      <figcaption>
+        Watt's Curve, a=
+        <span class="figcap-value" style="color:#000000">1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.9</span>,
+        <span class="figcap-value" style="color:#0000FF">0.8</span>,
+        <span class="figcap-value" style="color:#009600">0.7</span>,
+        <span class="figcap-value" style="color:#FF9600">0.6</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.4</span>,
+        <span class="figcap-value" style="color:#AA5555">0.3</span>,
+        <span class="figcap-value" style="color:#00FF00">0.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.1</span>,
+        b=1,c=1,p=1,q=1,Plus,Real
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts03-360.avif"
+           alt="Watt's Curve, a=1,b=1,c=1,p=1,q=1,Plus,Real">
+      <figcaption>Watt's Curve, a=1,b=1,c=1,p=1,q=1,Plus,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts04-360.avif"
+           alt="Watt's Curve, a=1,b=1,c=1.2,p=1,q=1,Plus,Real">
+      <figcaption>Watt's Curve, a=1,b=1,c=1.2,p=1,q=1,Plus,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts05-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=6,q=7,Plus,Real">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=6,q=7,Plus,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts06-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=13,q=7,Plus,Real">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=13,q=7,Plus,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts07-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=3,q=7,Minus,Real">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=3,q=7,Minus,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts08-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=6,q=7,Minus,Real">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=6,q=7,Minus,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts09-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=13,q=7,Minus,Real">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=13,q=7,Minus,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts10-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=3,q=7,Plus,+Imaginary">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=3,q=7,Plus,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts11-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=6,q=7,Plus,+Imaginary">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=6,q=7,Plus,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts12-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.2,p=13,q=7,Plus,+Imaginary">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.2,p=13,q=7,Plus,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts13-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1,c=1.5,p=17,q=15,Plus,+Imaginary">
+      <figcaption>Generalized Watt's Curve, a=1,b=1,c=1.5,p=17,q=15,Plus,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Watts/Watts14-360.avif"
+           alt="Generalized Watt's Curve, a=1,b=1.5,c=1.5,p=17,q=15,Plus,+Imaginary">
+      <figcaption>Generalized Watt's Curve, a=1,b=1.5,c=1.5,p=17,q=15,Plus,+Imaginary</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">Watt's Curve polar equation:</div>
+      \[ r^{2} = b^{2} - \left(a \cdot \sin\theta \pm \sqrt{c^{2} - a^{2}\cos^{2}\theta}\right)^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r^{2} = b^{2} - \left(a \cdot \sin\left(\dfrac{p}{q}\theta\right) \pm \sqrt{c^{2} - a^{2}\cos^{2}\left(\dfrac{p}{q}\theta\right)}\right)^{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Watt's Curve is a sextic algebraic curve generated as the locus of the midpoint P of a rod whose ends lie on the circumferences of two equal wheels of radius b whose centers are a distance 2a apart.<sup>1</sup> The curve takes its name from the Scottish engineer James Watt (1736–1819), who devised the underlying linkage in the 1780s while developing his steam engine. Watt required a mechanism that would convert the reciprocating motion of the piston into rotary motion of the flywheel while keeping the piston rod moving in an approximately straight line, thereby minimizing side thrust on the cylinder walls. Although Watt did not publish a mathematical treatment of the curve traced by the midpoint of the connecting rod, the geometric properties of the linkage he invented were subsequently studied by mathematicians as a classic example of a higher-degree algebraic curve produced by a simple revolute-joint mechanism.<sup>2</sup></p>
+    <p>In the standard geometric construction, a rod of length 2c joins a point on each wheel circumference, and P is the midpoint of that rod. When the parameters satisfy the condition a = c, the curve degenerates to a circle of radius b containing an inner figure-eight loop. For other admissible values of a, b, and c, the curve is a smooth, closed sextic possessing reflection symmetry across both coordinate axes and typically consisting of a central loop or figure-eight region enclosed by an outer oval boundary.<sup>3,4</sup></p>
+    <p>The principal engineering application of Watt's linkage was in beam and pumping engines of the late eighteenth and nineteenth centuries, where it furnished one of the earliest practical solutions for approximate straight-line motion without the use of sliding guides. The same geometric principle appears in the study of four-bar coupler curves and continues to be referenced in modern kinematics when approximate rectilinear paths are required from revolute-joint mechanisms.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/WattsCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/WattsCurve.html</a> (linkage construction and degeneration when a = c).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/watt/watt.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/watt/watt.shtml</a> (parameter relations and geometry properties).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Watt%27s_linkage" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Watt%27s_linkage</a> (historical development by James Watt for steam engines).</li>
+      <li><a href="https://paulmasson.github.io/mathcell/docs/examples/watt-curve.html" target="_blank" rel="noopener noreferrer">https://paulmasson.github.io/mathcell/docs/examples/watt-curve.html</a> (graphic with sliders for shape exploration).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:WATTS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                 restartflag rval id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd fe ff fg fh fi fj)
+  (setq id "Watt's Curve"
+        iq "r²=b²-(a·sin((p/q)θ)±√(c²-a²·cos²((p/q)θ)))²"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (wheel half-separation)" 1.0)
+        fb (get_real 2 "b (outer radius)" 1.5)
+        fc (get_boundr 6 (strcat "c (rod half-length < " (rtos (+ fa fb) 2 4) ")") 2.0 0.0 (+ fa fb) nil nil)
+        fd (get_integer 6 "p (θ multiplier numerator)" 1)
+        fe (get_integer 6 "q (θ multiplier denominator)" 1)
+        ff (get_keyword 0 "Plus Minus" "Plus or Minus branch?" "Plus")
+        fg (get_keyword 0 "Real Imaginary" "Real or + Imaginary values)?" "Real")
+        fh (if (eq ff "Plus") 1.0 -1.0)
+        fi (eq fg "Real")
+        fj (/ fe (gcd fd fe))
+        divcount (* divcount fj)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", p=" (itoa fd) ", q=" (itoa fe) ", branch=" ff ", mode=" fg)
+        rval '(alt_expt (if fi (max 0.0 (- (* fb fb) (* (+ (* fa (sin (/ (* (float fd) (eval a2)) (float fe)))) (* fh (alt_expt (max 0.0 (- (* fc fc) (* fa fa (alt_expt (cos (/
+              (* (float fd) (eval a2)) (float fe))) 2 T)))) 0.5 T))) (+ (* fa (sin (/ (* (float fd) (eval a2)) (float fe)))) (* fh (alt_expt (max 0.0 (- (* fc fc) (* fa fa
+              (alt_expt (cos (/ (* (float fd) (eval a2)) (float fe))) 2 T)))) 0.5 T)))))) (- (* fb fb) (* (+ (* fa (sin (/ (* (float fd) (eval a2)) (float fe)))) (* fh (alt_expt
+              (- (* fc fc) (* fa fa (alt_expt (cos (/ (* (float fd) (eval a2)) (float fe))) 2 nil))) 0.5 nil))) (+ (* fa (sin (/ (* (float fd) (eval a2)) (float fe)))) (* fh
+              (alt_expt (- (* fc fc) (* fa fa (alt_expt (cos (/ (* (float fd) (eval a2)) (float fe))) 2 nil))) 0.5 nil)))))) 0.5 fi)
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:WATTS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

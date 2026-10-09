@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pearls of Sluze - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Pearls of Sluze</h1>
+      <p class="short-description">An algebraic family and a polar variant whose parameter choices produce bead- or pearl-like loops along the x-axis.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/PearlsOfSluze/PearlsOfSluze01-360.avif"
+           alt="Pearls of Sluze, Algebraic, a=4,k=2,m=4,n=2,b=3">
+      <figcaption>Pearls of Sluze, Algebraic, a=4,k=2,m=4,n=2,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/PearlsOfSluze/PearlsOfSluze02-360.avif"
+           alt="Pearls of Sluze, Algebraic, a=3,k=3,m=4,n=3,b=4">
+      <figcaption>Pearls of Sluze, Algebraic, a=3,k=3,m=4,n=3,b=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/PearlsOfSluze/PearlsOfSluze03-360.avif"
+           alt="Pearls of Sluze, Algebraic, a=5,k=2,m=4,n=2,b=2">
+      <figcaption>Pearls of Sluze, Algebraic, a=5,k=2,m=4,n=2,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/PearlsOfSluze/PearlsOfSluze04-360.avif"
+           alt="Pearls of Sluze, Algebraic, a=4,k=2,m=4,n=4,b=3">
+      <figcaption>Pearls of Sluze, Algebraic, a=4,k=2,m=4,n=4,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/PearlsOfSluze/PearlsOfSluze05-360.avif"
+           alt="Pearls of Sluze, Algebraic, a=4,k=2,m=4,n=4,b=1">
+      <figcaption>Pearls of Sluze, Algebraic, a=4,k=2,m=4,n=4,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/PearlsOfSluze/PearlsOfSluze06-360.avif"
+           data-caption="Pearls of Sluze, Polar, a=1,n=3(black),2(red),1(blue),0.5(green),0.25(orange),0.125(purple)"
+           alt="Pearls of Sluze, Polar, a=1,n=3(black),2(red),1(blue),0.5(green),0.25(orange),0.125(purple)">
+      <figcaption>
+        Pearls of Sluze, Polar, a=1,n=
+        <span class="figcap-value" style="color:#000000">3</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">1</span>,
+        <span class="figcap-value" style="color:#009600">0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">0.25</span>,
+        <span class="figcap-value" style="color:#9600FF">0.125</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Pearls of Sluze Cartesian equation:</div>
+      \[ y^{m} = k\, x^{n} (a-x)^{b} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Variant polar equation:</div>
+      \[ r = a\,\dfrac{\cos(\theta)}{\sin^{n}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Pearls of Sluze<sup>1,2,3</sup> are a family of algebraic plane curves studied by the Belgian mathematician and cleric René François de Sluse (1622–1685) between 1657 and 1698. De Sluse, a canon at Liège Cathedral who corresponded with Blaise Pascal and Christiaan Huygens on geometry and analysis, explored these higher-degree curves as part of the 17th-century development of analytic geometry following Descartes. Blaise Pascal named the family the “Pearls of Sluze” because certain parameter choices produce bead- or pearl-like shapes strung along the x-axis. The curves generalize simpler forms such as the teardrop curve.</p>
+    <p>There is a somewhat visually similar curve using a polar, trigonometric formulation that is included as an option in this code, though not truly named “Pearls of Sluze”. This polar form generates paired, bulbous profiles rather than a closed “pearl”, with each half bearing a similarity to the teardrop curve. Neither form has known practical applications in engineering or the natural sciences other than as decorative motifs.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/PearlsofSluze.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PearlsofSluze.html</a> (history and equation)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Pearls/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Pearls/</a> (MacTutor history and naming)</li>
+      <li><a href="https://www.2dcurves.com/higher/highers.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/higher/highers.html</a> (history and generalization of teardrop curve)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PEARLSOFSLUZE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan paramstep restartflag
+                          dcl_id dcl_pos dcl_opts id iq dcl opt kw mode dpr dct dpt span rval eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq dcl_id (load_dialog "PEARLSOFSLUZE.dcl") dcl_pos '(1680 0))
+  (if (&lt; dcl_id 0) (exit))
+  (if (not (new_dialog "PEARLSOFSLUZE" dcl_id "" dcl_pos)) (exit))
+  (setq dcl_opts '("Algebraic form" "Polar form"))
+  (start_list "list_col") (mapcar 'add_list dcl_opts) (end_list)
+  (setq kw 0)
+  (set_tile "list_col" "0")
+  (action_tile "list_col" "(setq kw (atoi $value))")
+  (start_dialog)
+  (unload_dialog dcl_id)
+  (cond
+   ((eq kw 0)
+    (setq id "Pearls of Sluze"
+          iq "yᵐ = k·xⁿ·(a-x)ᵇ"
+          dcl nil
+          opt nil
+          mode 'param
+          dpr "# of divisions in pearl"
+          dct 200
+          dpt '(2.0 0.0)
+          span nil
+          kw (ca id iq dcl opt kw mode dpr dct dpt span)
+          fa (get_real 2 "a " 4.0)
+          fb (get_real 2 "k " 2.0)
+          fc (get_real 2 "m (power of y): " 4.0)
+          fd (get_real 2 "n (power of x): " 2.0)
+          fe (get_real 2 "b (power of a-x): " 3.0)
+          ff (get_keyword 0 "Positive Negative" "\nSweep in Positive or Negative direction?" "Positive")
+          paramstep (/ fa divcount)
+          paramstep (if (eq ff "Positive") paramstep (- paramstep))
+          eq_display (strcat "\na" (rtos fa 2 4) ", k= " (rtos fb 2 4) ", m= " (rtos fc 2 4) ", n= " (rtos fd 2 4) ", b= " (rtos fe 2 4))
+          xc '(eval a2)
+          yc '(alt_expt (* fb (alt_expt (eval a2) fd nil) (alt_expt (- fa (eval a2)) fe nil)) (/ 1.0 fc) nil)))
+   ((eq kw 1)   
+    (setq id "Pearls of Sluze"
+          iq "r = a·cos(𝛉)/sinⁿ(𝛉)"
+          dcl nil
+          opt nil
+          mode 'polar
+          dpr "# of divisions in right-half of curve"
+          dct 360
+          dpt nil
+          span 180
+          kw (ca id iq dcl opt kw mode dpr dct dpt span)
+          fa (get_real 2 "a (scale)" 1.0)
+          fb (get_real 2 "n (sine exponent)" 0.5)
+          eq_display (strcat "\na=" (rtos fa 2 4) ", n= " (rtos fb 2 4))
+          rval '(* fa (/ (cos (eval a2)) (avoid_zero (alt_expt (sin (eval a2)) fb nil))))
+          xc '(* (eval rval) (cos (eval a2)))
+          yc '(* (eval rval) (sin (eval a2)))
+          maxdraw (get_real 2 "Maximum x and y values allowed?" 40))))
+  (setq skm (if (eq kw 0) '(T nil T) '(nil T T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PEARLSOFSLUZE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

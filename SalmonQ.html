@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Salmon Quartic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Salmon Quartic</h1>
+      <p class="short-description">A plane quartic whose number of real loops, genus, and bitangents change with \(a_{1}\), \(a_{2}\), and \(b\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SalmonQ/SalmonQ01-360.avif"
+           alt="Salmon Quartic, a₁=1,a₂=1, multiple values of b">
+      <figcaption>
+        Salmon Quartic, a₁=1,a₂=1,b=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">0.6</span>,
+        <span class="figcap-value" style="color:#0000FF">0.7</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">0.9</span>,
+        <span class="figcap-value" style="color:#9600FF">0.95</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0</span>,
+        <span class="figcap-value" style="color:#AA5555">1.1</span>,
+        <span class="figcap-value" style="color:#00FF00">1.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.3</span>,
+        <span class="figcap-value" style="color:#009696">1.4</span>,
+        <span class="figcap-value" style="color:#960096">1.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SalmonQ/SalmonQ02-360.avif"
+           alt="Salmon Quartic, a₁=1,a₂=1.5, multiple values of b">
+      <figcaption>
+        Salmon Quartic, a₁=1,a₂=1.5,b=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">0.6</span>,
+        <span class="figcap-value" style="color:#0000FF">0.7</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">0.9</span>,
+        <span class="figcap-value" style="color:#9600FF">0.95</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0</span>,
+        <span class="figcap-value" style="color:#AA5555">1.1</span>,
+        <span class="figcap-value" style="color:#00FF00">1.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.3</span>,
+        <span class="figcap-value" style="color:#009696">1.4</span>,
+        <span class="figcap-value" style="color:#960096">1.5</span>,
+        <span class="figcap-value" style="color:#969600">1.6</span>,
+        <span class="figcap-value" style="color:#9696FF">1.7</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/SalmonQ/SalmonQ03-360.avif"
+           data-caption="b=0.25(black),0.5(red),0.75(blue),1(green),1.25(orange),1.5(purple),1.75(cyan),2(brown),2.25(lime),2.5(magenta),2.75(teal),3(plum); a₁=1, a₂=1"
+           alt="Salmon Quartic, a₁=1,a₂=1.5, multiple values of b">
+      <figcaption>
+        Salmon Quartic, a₁=1,a₂=1.5,b=
+        <span class="figcap-value" style="color:#000000">1.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1.51</span>,
+        <span class="figcap-value" style="color:#0000FF">1.52</span>,
+        <span class="figcap-value" style="color:#009600">1.53</span>,
+        <span class="figcap-value" style="color:#FF9600">1.54</span>,
+        <span class="figcap-value" style="color:#9600FF">1.55</span>,
+        <span class="figcap-value" style="color:#0096FF">1.56</span>,
+        <span class="figcap-value" style="color:#AA5555">1.568</span>,
+        <span class="figcap-value" style="color:#00FF00">1.6</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.7</span>,
+        <span class="figcap-value" style="color:#009696">1.8</span>,
+        <span class="figcap-value" style="color:#960096">2.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Salmon Quartic Curve isotropic Cartesian equation:</div>
+      \[ (x^{2}-a^{2})^{2}+(y^{2}-a^{2})^{2}=b^{4} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Salmon Quartic Curve isotropic parametric equations:</div>
+      \[ x=\pm\sqrt{a^{2}+b^{2}\cos t},\quad y=\pm\sqrt{a^{2}+b^{2}\sin t} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Salmon Quartic Curve generalized Cartesian equation:</div>
+      \[ (x^{2}-a_{1}^{2})^{2}+(y^{2}-a_{2}^{2})^{2}=b^{4} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Salmon Quartic Curve generalized parametric equations:</div>
+      \[ x=\sqrt{a_{2}^{2}+b^{2}\cos t},\quad y=\sqrt{a_{1}^{2}+b^{2}\sin t} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Salmon quartic<sup>1,2</sup> was presented by George Salmon (1819–1904) in 1852 on page 45 of <em>A Treatise on Higher Plane Curves</em>, his sequel to the earlier <em>Treatise on Conic Sections</em>. Salmon, an Irish mathematician whose textbooks remained standard references for decades, classified many higher-degree plane curves and computed invariants that characterize their geometry. The curve itself is a general quartic of genus 3 when \(b\) differs from both \(a\) and \(a\sqrt[4]{2}\), a decomposed quartic consisting of two ellipses when \(b=a\), and a genus-2 curve when \(b=a\sqrt[4]{2}\). Depending on the relative sizes of \(a_{1}\), \(a_{2}\), and \(b\), it consists of four separate closed loops, two loops, or a single connected component; in certain parameter regimes it attains the maximum of 28 real bitangents possible for any quartic.</p>
+    <p>No real-life applications in engineering or the natural sciences were found. The curve remains of purely theoretical interest as an example in the classification of plane quartics and the study of bitangents.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/salmon/salmon.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/salmon/salmon.shtml</a> (history, equation, parametrization, bitangents, genus)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Salmon/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Biographies/Salmon/</a> (biography of George Salmon and textbook context)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SALMONQ (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl)
+  (setq id "Salmon Quartic"
+        iq ""
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions in quadrant"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a₁ (x-scale)" 1.0)
+        fb (get_real 2 "a₂ (y-scale)" fa)
+        fc (get_real 2 "b (scale)" 1.0)
+        eq_display (strcat "\na₁=" (rtos fa 2 4) ", a₂=" (rtos fb 2 4) ", b=" (rtos fc 2 4)))
+  (if (= fa fb)
+    (progn
+      (princ "\nIsotropic:(x²-a²)²+(y²-a²)²= b⁴")
+      (if (&lt;= fc fa)
+          (setq fk (* -1.0 pi)
+                fl pi)
+          (progn
+            (setq fd (asin (/ (* fa fa) (* fc fc)))
+                  fk (- fd)
+                  fl (+ (/ pi 2.0) fd))))
+      (setq xc '(alt_expt (if (&lt;= (+ (* fa fa) (* fc fc (cos (eval a2)))) 1e-9) 0.0 (+ (* fa fa) (* fc fc (cos (eval a2))))) 0.5 T)
+            yc '(if (&lt;= fc fa) (alt_expt (if (&lt; (abs (sin (eval a2))) 1e-9) (* fa fa) (+ (* fa fa) (* fc fc (sin (eval a2))))) 0.5 T)
+                (alt_expt (if (&lt;= (+ (* fa fa) (* fc fc (sin (eval a2)))) 1e-9) 0.0 (+ (* fa fa) (* fc fc (sin (eval a2))))) 0.5 T))))
+    (progn
+      (princ "\nGeneral: (x²-a₁²)²+(y²-a₂²)²=b⁴")
+      (setq ff (max fa fb)
+            fg (alt_expt (+ (alt_expt fa 4 nil) (alt_expt fb 4 nil)) 0.25 nil)
+            fh (and (&gt; fc ff) (&lt; fc fg)))
+      (if fh
+          (setq fe (get_keyword 0 "Inner Outer" "Inner or Outer curve?" "Outer"))
+          (setq fe nil))
+      (if (and fh (eq fe "Inner"))
+          (progn
+            (setq fi (acos (/ (* -1.0 fb fb) (* fc fc)))
+                  fj (asin (/ (* -1.0 fa fa) (* fc fc)))
+                  fk (- fi)
+                  fl (- pi fj (* 2.0 pi)))
+            (princ "\n  (inner closed curve)"))
+          (progn
+            (setq fk (asin (/ (* -1.0 fa fa) (* fc fc)))
+                  fl (if (&lt;= fc fb) (- pi fk) (acos (/ (* -1.0 fb fb) (* fc fc)))))
+            (if fh (princ "\n  (outer closed curve)"))))
+      (setq xc '(alt_expt (if (&lt;= (+ (* fb fb) (* fc fc (cos (eval a2)))) 1e-8) 0.0 (+ (* fb fb) (* fc fc (cos (eval a2))))) 0.5 T)
+            yc '(alt_expt (if (&lt;= (+ (* fa fa) (* fc fc (sin (eval a2)))) 1e-8) 0.0 (+ (* fa fa) (* fc fc (sin (eval a2))))) 0.5 T))))
+  (setq paramstep (/ (- fl fk) divcount)
+        skm '(nil nil T)
+        a1 fk
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SALMONQ)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

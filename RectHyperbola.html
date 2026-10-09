@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rectangular Hyperbola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Rectangular Hyperbola</h1>
+      <p class="short-description">The special case of the hyperbola in which the asymptotes are perpendicular and the eccentricity is \(\sqrt{2}\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/RectHyperbola/RectHyperbola01-360.avif"
+           alt="Rectangular Hyperbola, Upright, a=1">
+      <figcaption>Rectangular Hyperbola, Upright, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RectHyperbola/RectHyperbola02-360.avif"
+           alt="Rectangular Hyperbola, Sideways, a=1">
+      <figcaption>Rectangular Hyperbola, Sideways, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/RectHyperbola/RectHyperbola03-360.avif"
+           alt="Rectangular Hyperbola, 45° Rotated, a=1">
+      <figcaption>Rectangular Hyperbola, 45° Rotated, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Rectangular Hyperbola Cartesian equation 1:</div>
+      \[ y^{2} - x^{2} = a^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rectangular Hyperbola Cartesian equation 2:</div>
+      \[ x^{2} - y^{2} = a^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rectangular Hyperbola Cartesian equation 3:</div>
+      \[ x \cdot y = a \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The rectangular hyperbola<sup>1,2,3</sup> is the special case of the hyperbola in which the asymptotes are perpendicular, corresponding to eccentricity \( e = \sqrt{2} \). This form was first studied by the Greek mathematician Menaechmus in the 4th century BC. Euclid and Aristaeus wrote about the general hyperbola but typically considered only one branch. Apollonius of Perga named the curve “hyperbola” and gave the first systematic analysis of conic sections, examining both branches, in his treatise <em>Conics</em>.<sup>4</sup></p>
+    <p>Real-life applications in engineering and the natural sciences include the mechanical locus traced by a bucket suspended from a rope that passes over a pulley in a specific configuration.<sup>2</sup> The rectangular hyperbola is also the envelope of line segments whose ends move on the coordinate axes such that the area of the triangle formed with the origin remains constant; this appears physically as the trace left by liquid in a pivoted container. In physics and chemistry, the pressure-volume isotherm of an ideal gas obeying Boyle’s law (\( P \cdot V = \) constant) graphs as a rectangular hyperbola in the \( x \cdot y = a \) form. In biochemistry and pharmacology, saturation curves such as the Hill equation and Hill-Langmuir equation for ligand binding to proteins are rectangular hyperbolae, as well as inverse scaling in a variety of situations (e.g., “if speed doubles, time halves” for fixed distance).</p>
+    <p>Also see the Hyperbola entry for the general conic and other construction methods.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/RectangularHyperbola.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/RectangularHyperbola.html</a> (definition, equations, and properties)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/hyperbole/hyperboleequilatere.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/hyperbole/hyperboleequilatere.shtml</a> (definitions, mechanical interpretations, envelope, rope-pulley locus)</li>
+      <li><a href="https://www.2dcurves.com/conicsection/conicsectionh.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/conicsection/conicsectionh.html</a> (history and special case)</li>
+      <li><a href="https://mathworld.wolfram.com/Hyperbola.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Hyperbola.html</a> (Menaechmus and Apollonius)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RECTHYPERBOLA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                          restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Rectangular Hyperbola"
+        iq ""
+        dcl "RECTHYPERBOLA"
+        opt '("Upright" "Sideways" "45° Rotated")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        paramstep (/ xspan divcount))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "Rectangular Hyperbola, y²-x²=a², a" 1.0)
+           yc '(sqrt (+ (expt (eval a2) 2) (expt fa 2)))))
+    ((eq kw 1)
+     (setq fa (get_real 2 "Rectangular Hyperbola, x²-y²=a², a" 1.0)
+           yc '(sqrt (max 0.0 (- (expt (eval a2) 2) (expt fa 2))))))
+    ((eq kw 2)
+     (setq fa (get_real 2 "Rectangular Hyperbola, xy=a, a" 1.0)
+           yc '(/ fa (avoid_zero (eval a2))))))
+  (setq eq_display (strcat "\nRectangular Hyperbola: a=" (rtos fa 2 4))
+        a1 (if (eq kw 1) fa 0)
+        a2 a1
+        xc '(eval a2)
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:RECTHYPERBOLA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

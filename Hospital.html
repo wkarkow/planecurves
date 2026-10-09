@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>L'Hospital Quintic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>L'Hospital Quintic</h1>
+      <p class="short-description">The algebraic quintic (k=1) of the family of curves of constant reaction force under gravity.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Hospital/Hospital01-360.avif"
+           alt="L'Hospital Quintic, a=1,k=0.5">
+      <figcaption>L'Hospital Quintic, a=1,k=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hospital/Hospital02-360.avif"
+           alt="L'Hospital Quintic, 'Care Ribbon', a=1,k=1">
+      <figcaption>L'Hospital Quintic, 'Care Ribbon', a=1,k=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hospital/Hospital03-360.avif"
+           alt="L'Hospital Quintic, a=1,ymin=2,k=0.7071068">
+      <figcaption>L'Hospital Quintic, a=1,ymin=2,k=0.7071068</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hospital/Hospital04-360.avif"
+           alt="L'Hospital Quintic, a=1,ymin=5,k=1.4472136,1g gravity">
+      <figcaption>
+        L'Hospital Quintic, a=1,ymin=5,k=1.4472136,
+        <span class="figcap-value" style="color:#000000">1g</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hospital/Hospital05-360.avif"
+           alt="L'Hospital Quintic, a=10.58016790,ymin=5.77371464,k=2.35368813,2g gravity">
+      <figcaption>
+        L'Hospital Quintic, a=10.58016790,ymin=5.77371464,k=2.35368813,
+        <span class="figcap-value" style="color:#FF0000">2g</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hospital/Hospital06-360.avif"
+           alt="L'Hospital Quintic, a=70.02177247,ymin=7.59321076,k=4.03671352,3g gravity">
+      <figcaption>
+        L'Hospital Quintic, a=70.02177247,ymin=7.59321076,k=4.03671352,
+        <span class="figcap-value" style="color:#0000FF">3g</span>,
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hospital/Hospital07-360.avif"
+           alt="L'Hospital Quintic, a=334.91164171,ymin=10.59911676,k=6.62121613,4g gravity">
+      <figcaption>
+        L'Hospital Quintic, a=334.91164171,ymin=10.59911676,k=6.62121613,
+        <span class="figcap-value" style="color:#009600">4g</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="https://www.coaster101.com/2010/07/05/great-american-scream-machine-to-close-july-18th/" target="_blank" rel="noopener">
+        <img src="images/Hospital/Hospital08-360.avif" alt="Constant-g double loop roller coaster">
+      </a>
+      <figcaption>
+        Constant-g double loop roller coaster
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">General Cartesian parametrization:</div>
+      \[ x=2a\int_{0}^{\phi}\frac{\cos\phi_{1}}{(k+\cos\phi_{1})^{3}}\,d\phi_{1},\quad y=\frac{a}{(k+\cos\phi)^{2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">k &lt; 1 solution:</div>
+      \[ x=-a\frac{\sin\phi\,(2k^{3}+k+(k^{2}+2)\cos\phi)}{(1-k^{2})^{2}(k+\cos\phi)^{2}}
+      -\frac{6ak}{(1-k^{2})^{2}\sqrt{1-k^{2}}}\cdot\frac12\ln\Bigl(\frac{1+\tan(\phi/2)\sqrt{(1-k)/(1+k)}}{1-\tan(\phi/2)\sqrt{(1-k)/(1+k)}}\Bigr), \quad y=\frac{a}{(k+\cos\phi)^{2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">k = 1 (algebraic quintic):</div>
+      \[ x=\frac{a}{2}\Bigl(\tan(\phi/2)-\frac{\tan(\phi/2)^{5}}{5}\Bigr),\quad y=\frac{a}{4}(1+\tan(\phi/2)^{2})^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">k &gt; 1 solution:</div>
+      \[ x=-a\frac{\sin\phi\,(2k^{3}+k+(k^{2}+2)\cos\phi)}{(k^{2}-1)^{2}(k+\cos\phi)^{2}}
+      -\frac{6ak}{(k^{2}-1)^{2}\sqrt{k^{2}-1}}\,\Theta(\phi), \quad y=\frac{a}{(k+\cos\phi)^{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The L’Hospital quintic<sup>1,2</sup>, named after Guillaume François Antoine de l’Hôpital (1661–1704), a French mathematician who wrote the first printed textbook on differential calculus, is the special algebraic case (k=1) of a family of curves with constant reaction force. The underlying problem, called the “curva aequalis pressionis” (curve of constant pressure), was posed by Johann Bernoulli in 1695. L’Hôpital published the complete solution in 1700. The curve is shaped so that a particle descending along it under uniform gravity experiences a constant normal reaction force from the supporting surface (or the particle exerts constant force on the curve). This follows directly from Newton’s second law projected onto the normal direction together with conservation of mechanical energy: the speed squared is proportional to the vertical drop, and the normal acceleration component must balance gravity to keep the reaction magnitude fixed. The general family depends on the dimensionless ratio k = reaction/weight. For k = 1 the curve becomes a polynomial quintic of degree five; for k &lt; 1 and k &gt; 1 it is transcendental and solved with inverse hyperbolic or trigonometric functions.</p>
+    <p>For the \(k>1\) regime the inverse-tangent term \(\Theta(\phi)\) must be kept continuous so that the \(x\)-coordinate does not jump. The ordinary arctangent experiences a discontinuity of \(\pi\) each time the argument passes through a singularity (when \(\sin\phi\approx0\) and \(1+\cos\phi\approx0\), i.e., at the odd multiples of \(\pi\)). To produce a steadily advancing \(x\) the expression therefore “marches” by adding the appropriate multiple of \(\pi\): \(\Theta(\phi)=\dfrac{\pi}{2}+\pi\left\lfloor\dfrac{\phi}{2\pi}\right\rfloor\) when the singularity condition holds, otherwise \(\Theta(\phi)=\operatorname{atan2}\!\Bigl(\sqrt{\dfrac{k-1}{k+1}}\,\sin\phi,\;1+\cos\phi\Bigr)+\pi\left\lfloor\dfrac{\phi}{2\pi}\right\rfloor+1_{\{\phi\bmod 2\pi>\pi\}}\). This continuous “marching” form is the one implemented in the AutoLISP code.</p>
+    <p>Real-life applications are found in classical mechanics and the natural sciences. The curve itself and its evolute illustrate exact solutions to constrained motion under gravity with constant force or tension, concepts used in theoretical treatments of particle trajectories, pendulum dynamics, and early studies of mechanical constraints. No additional modern engineering or scientific applications beyond these foundational mechanical illustrations are documented in primary sources. While no real roller coaster follows this curve exactly (due to friction, structural limits, and lateral stability requirements), the underlying principle remains relevant in the conceptual design of motion paths with controlled load factors. Of note, the L’Hospital Quintic curve has constant force for only one value of speed. At the vertex, \( V = \frac{1}{k}\sqrt{2ga} \), so that speed is inversely proportional to \(k\) and proportional to the square root of \(a\).</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/quintique%20de%20l'hospital/quintique%20de%20l'hospital.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/quintique%20de%20l'hospital/quintique%20de%20l'hospital.shtml</a> (history, problem, equations, evolute)</li>
+      <li><a href="http://christophe.masurel.free.fr/pdf/30-TheQuinticOflHopital.pdf" target="_blank" rel="noopener noreferrer">http://christophe.masurel.free.fr/pdf/30-TheQuinticOflHopital.pdf</a> (Hospital Quintic properties)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HOSPITAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe)
+  (setq id "L'Hospital Quintic"
+        iq ""
+        dcl "HOSPITAL"
+        opt '("k&lt;1" "k=1 algebraic ribbon" "k&gt;1 constant tension")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((= kw 0)
+     (princ "\nL'Hospital Quintic (k&lt;1): x=a·F(φ)-(6a·k/(1-k²)^(5/2))·artanh(...), y=-a/(k+cos(φ))²")
+     (setq fa (get_real 6 "a (scale)" 1.0)
+           fb (get_boundr 6 "k (-1&lt;k&lt;1)" 0.5 -1.0 1.0 nil nil)
+           fd (acos (- fb))
+           eq_display (strcat "\nL'Hospital Quintic (k&lt;1): a=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+           xc '(- (* fa (/ (* (sin (eval a2)) (+ (+ (* 2.0 fb fb fb) fb) (* (+ (* fb fb) 2.0) (cos (eval a2))))) (* (alt_expt (- 1.0 (* fb fb)) 2 T)
+               (alt_expt (+ fb (cos (eval a2))) 2 T)))) (* (/ (* 6.0 fa fb) (* (alt_expt (- 1.0 (* fb fb)) 2 T) (sqrt (- 1.0 (* fb fb))))) (* 0.5 (progn
+               (setq fe (* (tan (* 0.5 (eval a2))) (sqrt (/ (- 1.0 fb) (+ 1.0 fb))))) (if (&lt; (abs fe) 0.999999999) (log (/ (+ 1.0 fe) (- 1.0 fe)))
+               (progn (setq restartflag T) 0.0))))))
+           yc '(- (/ fa (alt_expt (+ fb (cos (eval a2))) 2 T)))
+           divcount (+ (fix (/ (* 2.0 fd) paramstep)) 2)
+           a1 (- 0.0 fd (* 0.25 paramstep))))
+    ((= kw 1)
+     (princ "\nL'Hospital Quintic (k=1): x=(a/2)(t-t⁵/5), y=(a/4)(1+t²)², t=tan(φ/2)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           xc '(* 0.5 fa (- (tan (* 0.5 (eval a2))) (/ (alt_expt (tan (* 0.5 (eval a2))) 5 nil) 5.0)))
+           yc '(- (* 0.25 fa (alt_expt (+ 1.0 (* (tan (* 0.5 (eval a2))) (tan (* 0.5 (eval a2))))) 2 nil)))
+           a1 (- pi)
+           maxdraw (get_real 2 "Maximum x and y values allowed? &lt;5&gt;: " 5.0)))
+    (T
+     (princ "\nL'Hospital Quintic (k&gt;1): x=a·F(φ)-(6a·k/(k²-1)^(5/2))·atan(...), y=-a/(k+cos(φ))²")
+     (setq fa (get_real 6 "a (loop tightening) &lt;70.02177247&gt;: " 70.02177247)
+           fb (get_real 6 "ymin magnitude (depth) &lt;7.59321076&gt;: " 7.59321076)
+           fd (+ 1.0 (sqrt (/ fa fb)))
+           eq_display (strcat "\nL'Hospital Quintic (k&gt;1): a=" (rtos fa 2 4) ", ymin=" (rtos fb 2 4) ", k=" (rtos fd 2 4))
+           xc '(- 0.0 (- (* fa (/ (* (sin (eval a2)) (+ (+ (* 2.0 fd fd fd) fd) (* (+ (* fd fd) 2.0) (cos (eval a2))))) (* (alt_expt (- (* fd fd) 1.0) 2 T)
+               (alt_expt (+ fd (cos (eval a2))) 2 T)))) (/ (* 6.0 fa fd (if (and (&lt; (abs (sin (eval a2))) 1e-12) (&lt; (abs (+ 1.0 (cos (eval a2)))) 1e-12))
+               (+ (* 0.5 pi) (* pi (fix (/ (eval a2) (* 2.0 pi))))) (+ (atan (* (sqrt (/ (- fd 1.0) (+ fd 1.0))) (sin (eval a2))) (+ 1.0 (cos (eval a2))))
+               (* pi (+ (fix (/ (eval a2) (* 2.0 pi))) (if (&gt; (- (eval a2) (* 2.0 pi (fix (/ (eval a2) (* 2.0 pi))))) pi) 1 0)))))) (* (alt_expt (- 
+               (* fd fd) 1.0) 2 T) (sqrt (- (* fd fd) 1.0))))))
+           yc '(- (/ fa (alt_expt (+ fd (cos (eval a2))) 2 T)))
+           a1 0)))
+  (setq skm (if (eq kw 2) '(nil T T) '(T T T))
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HOSPITAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

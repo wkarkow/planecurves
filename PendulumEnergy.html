@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pendulum Isoenergy Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Pendulum Isoenergy Curve</h1>
+      <p class="short-description">Cartesian plot of scaled angular velocity versus angular displacement at constant total energy for a simple pendulum.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/PendulumEnergy/PendulumEnergy01-360.avif"
+           data-caption="Pendulum Isoenergy Curve, a=1,b=1,k=1(black),0.8(red),0.6(blue),0.4(green),0.2(orange),0.0(purple),-0.2(cyan),-0.4(brown),-0.6(lime),-0.8(magenta),-0.99(teal)"
+           alt="Pendulum Isoenergy Curve, a=1,b=1,k=1(black),0.8(red),0.6(blue),0.4(green),0.2(orange),0.0(purple),-0.2(cyan),-0.4(brown),-0.6(lime),-0.8(magenta),-0.99(teal)">
+      <figcaption>
+        Pendulum Isoenergy Curve, a=1,b=1,k=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.8</span>,
+        <span class="figcap-value" style="color:#0000FF">0.6</span>,
+        <span class="figcap-value" style="color:#009600">0.4</span>,
+        <span class="figcap-value" style="color:#FF9600">0.2</span>,
+        <span class="figcap-value" style="color:#9600FF">0.0</span>,
+        <span class="figcap-value" style="color:#0096FF">-0.2</span>,
+        <span class="figcap-value" style="color:#AA5555">-0.4</span>,
+        <span class="figcap-value" style="color:#00FF00">-0.6</span>,
+        <span class="figcap-value" style="color:#FF00FF">-0.8</span>,
+        <span class="figcap-value" style="color:#009696">-0.99</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/PendulumEnergy/PendulumEnergy02-360.avif"
+           data-caption="Pendulum Isoenergy Curve, a=1,b=1,k=1(black),1.2(red),1.4(blue),1.6(green),1.8(orange),2.0(purple),3.0(cyan),4.0(brown),5.0(lime),7.5(magenta),10(teal)"
+           alt="Pendulum Isoenergy Curve, a=1,b=1,k=1(black),1.2(red),1.4(blue),1.6(green),1.8(orange),2.0(purple),3.0(cyan),4.0(brown),5.0(lime),7.5(magenta),10(teal)">
+      <figcaption>
+        Pendulum Isoenergy Curve, a=1,b=1,k=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">1.2</span>,
+        <span class="figcap-value" style="color:#0000FF">1.4</span>,
+        <span class="figcap-value" style="color:#009600">1.6</span>,
+        <span class="figcap-value" style="color:#FF9600">1.8</span>,
+        <span class="figcap-value" style="color:#9600FF">2.0</span>,
+        <span class="figcap-value" style="color:#0096FF">3.0</span>,
+        <span class="figcap-value" style="color:#AA5555">4.0</span>,
+        <span class="figcap-value" style="color:#00FF00">5.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">7.5</span>,
+        <span class="figcap-value" style="color:#009696">10</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 380px;">
+    <div class="equation-line">
+      <div class="equation-label">Pendulum Isoenergy Curve equation:</div>
+      \[ y^{2}-b^{2}\cos\!\left(\frac{x}{a}\right)=k\,b^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Solved for \(y\):</div>
+      \[ y=\pm b\sqrt{k+\cos\!\left(\frac{x}{a}\right)}\qquad (k\ge -1) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The isoenergy curve of the pendulum<sup>1</sup> (other names: Horus eyes, almond eyes, cat eyes) is the Cartesian plot of angular velocity squared versus angular displacement for a simple pendulum at constant total mechanical energy. It arises directly from conservation of energy. For a simple pendulum of mass \(m\) and length \(l\) whose bob makes angle \(x\) with the vertical, the total energy \(E\) is the sum of kinetic energy \(\bigl(\tfrac12 m(l\,\frac{dx}{dt})^{2}\bigr)\) and gravitational potential energy (\(-m\cdot g\cdot l\cdot\cos x\), zero at the bottom). Setting \(E\) constant and solving for the angular speed \(y=\frac{dx}{dt}\) (after scaling of axes by factors involving \(a\) and \(b\)) yields the equation below. When \(k&lt;1\) the radicand is negative outside a finite interval of \(x\); the curve consists of isolated symmetric humps (corresponding to bounded oscillations of the pendulum). When \(k=1\) the humps touch at the origin (separatrix). When \(k\ge 1\) the radicand never goes negative and the curve becomes a continuous wavy sinusoid-like profile (corresponding to full rotations or circulations of the pendulum). The curve is a standard visualization tool in classical mechanics for displaying the phase portrait of the conservative pendulum system. It distinguishes two qualitatively different types of motion without solving the nonlinear differential equation of motion.</p>
+    <p>Real-life applications exist in the natural sciences and engineering wherever the phase-space behavior of a simple pendulum must be analyzed or visualized. In physics education and research the curves appear in textbooks and simulations to illustrate energy conservation, separatrices, and the transition between oscillatory and rotational regimes. They are used in the design and analysis of pendulum clocks, seismometers, and vibration sensors, where understanding the full range of possible motions (small swings versus whirling) is essential for accurate calibration and performance prediction. In nonlinear dynamics laboratories the isoenergy curves serve as reference level sets against which experimental or numerical trajectories are plotted. No additional engineering applications beyond these documented uses in mechanics and instrumentation were identified.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/pendule/pendule.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/pendule/pendule.shtml</a> (definition, equation, origin from energy conservation, phase-portrait interpretation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PENDULUMENERGY (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                           restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+  (setq id "Isoenergy Pendulum"
+        iq "y²-b²·cos(x/a)=k·b²"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar
+        dpr "# of divisions"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "\nHalf-wavelength (a): " 1.0)
+        fb (get_real 2 "\nb (amplitude factor): " 1.0)
+        fc (get_boundr 0 "\nk (>-1): " 0.4 -1.0 nil nil nil)
+        fd (/ fa (* 2.0 pi))
+        fe (acos (- fc)))
+  (if (< fc 1.0)
+    (progn
+      (setq a1 (- fe)
+            paramstep (/ (* 2.0 fe) divcount)))
+    (progn
+      (setq ff (get_integer 6 "\nNumber of periods to draw" 2)
+            a1 0.0
+            divcount (* ff divcount))))
+  (setq xc '(* fd (eval a2))
+        yc '(* fd fb (sqrt (max 0.0 (+ fc (cos (eval a2))))))
+        eq_display (strcat "\nHalf-wavelength=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", k=" (rtos fc 2 4))
+        skm '(T nil T)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (setq cd (getvar "CMDECHO"))
+  (setvar "CMDECHO" 0)
+  (if (< fc 1.0) (progn (setq ff (get_integer 6 "\nNumber of humps to array (including original)" 5)) (if (> ff 1) (command "array" plineents "" "R" 1 ff fa))))
+  (setvar "CMDECHO" cd)
+  (princ))
+(C:PENDULUMENERGY)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

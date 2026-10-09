@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oxyhemoglobin Dissociation Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Oxyhemoglobin Dissociation Curve</h1>
+      <p class="short-description">The sigmoid Hill relation between oxygen partial pressure \(p_{O_2}\) and percent hemoglobin saturation \(s_{O_2}\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/OxyHb/OxyHb01-360.avif"
+           alt="Oxyhemoglobin Dissociation Curve, 50% sO₂=26.6 mmHg">
+      <figcaption>Oxyhemoglobin Dissociation Curve, 50% sO₂=26.6 mmHg</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Oxyhemoglobin Dissociation Curve Cartesian equation:</div>
+      \[ s{O_2} = \dfrac{100 \times (p{O_2})^{n}}{(P_{50})^{n} + (p{O_2})^{n}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The oxyhemoglobin dissociation curve<sup>1</sup>, modeled by the Hill equation, quantifies the relationship between partial pressure of oxygen (\(p{O_2}\)) and hemoglobin oxygen saturation (\(s{O_2}\)). In 1910, British physiologist Archibald Vivian Hill formulated the empirical equation to fit the experimentally observed sigmoidal binding curve of oxygen to hemoglobin.<sup>2</sup> The characteristic S-shape results from positive cooperative binding. Hemoglobin is a tetramer with four heme groups. Binding of the first \(\mathrm{O}_2\) molecule induces a conformational change from the tense (T) to relaxed (R) state, increasing affinity for subsequent \(\mathrm{O}_2\) molecules. The Hill coefficient \(n \approx 2.8\) for adult human hemoglobin quantifies this cooperativity; \(n &gt; 1\) produces the steep central portion of the curve that allows efficient oxygen loading in the lungs and unloading in tissues.<sup>3</sup> In healthy adults at sea level and normal body temperature, arterial blood (\(Pa{O_2} \approx 95\)–\(100\,\mathrm{mmHg}\)) averages 97&nbsp;% saturation. Mixed venous blood (\(Pv{O_2} \approx 40\,\mathrm{mmHg}\)) shows approximately 75&nbsp;% saturation at rest, corresponding to extraction of roughly 25&nbsp;% of delivered oxygen.</p>
+    <p>Modern arterial blood gas (ABG) analyzers determine oxygen saturation by integrated co-oximetry.<sup>4</sup> This technique hemolyzes the blood sample and applies multi-wavelength spectrophotometry. Each hemoglobin species (oxy-, deoxy-, carboxy-, and methemoglobin) has a unique absorption spectrum; light absorption at four or more specific wavelengths directly yields the fractional concentrations and thus the true saturation. This measured value is more accurate than saturation calculated from \(PO_2\) alone, especially when dyshemoglobins are present.</p>
+    <p>The curve and its shifts (Bohr effect from pH, \(pCO_2\), temperature, and 2,3-DPG) are central to respiratory physiology, critical care, anesthesiology, and pulmonology. Clinicians use it daily to interpret ABG results, manage hypoxemia, adjust mechanical ventilation, and assess \(\mathrm{O}_2\) delivery in conditions such as anemia, high altitude, or shock.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Oxygen-hemoglobin_dissociation_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Oxygen-hemoglobin_dissociation_curve</a> (physiological significance and arterial/venous values)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Hill_equation_(biochemistry)" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Hill_equation_(biochemistry)</a> (history of Hill’s 1910 formulation and cooperative binding)</li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3699289/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC3699289/</a> (Hill coefficient and cooperativity explanation)</li>
+      <li><a href="https://acutecaretesting.org/en/articles/to-coox-or-not-to-coox" target="_blank" rel="noopener noreferrer">https://acutecaretesting.org/en/articles/to-coox-or-not-to-coox</a> (co-oximetry technology in ABG analyzers)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:OXYHB (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                  xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff)
+(setq id "Oxyhemoglobin Dissociation Curve"
+        iq "θ₄=(4P³_{2,3,4}P_{O₂}+6P²_{3,4}P²_{O₂}+4P₄P³_{O₂}+P⁴_{O₂})/(P⁴_{1,2,3,4}+4P³_{2,3,4}P_{O₂}+6P²_{3,4}P²_{O₂}+4P₄P³_{O₂}+P⁴_{O₂})"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 500
+        dpt '(100.0 50.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "fa (horizontal scale, drawing units per mmHg)" 1.0)
+        fb (get_real 2 "fb (vertical scale, % O₂ saturation)" 1.0)
+        fc (get_real 2 "fc = n (Hill coefficient)" 2.8)
+        fd (get_real 2 "fd = P₅₀ (mmHg at 50% saturation)" 26.6)
+        eq_display (strcat "\nfa=" (rtos fa 2 4) ", fb=" (rtos fb 2 4) ", fc=" (rtos fc 2 2) ", fd=" (rtos fd 2 2))
+        xc '(* fa (eval a2))
+        yc '(* fb (/ (* 100.0 (alt_expt (eval a2) fc nil)) (+ (alt_expt fd fc nil) (alt_expt (eval a2) fc nil))))
+        paramstep (/ xspan fa divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:OXYHB)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

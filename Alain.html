@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alain's Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Alain's Curve</h1>
+      <p class="short-description">A plane algebraic curve proposed by Alain Juhel, morphing between crossed ovals, hyperbolas, and figure-eights depending on the b/a ratio.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Alain/Alain01-360.avif"
+          alt="Alain's Curve - multiple values of b">
+      <figcaption>
+        Alain's Curve,a = 1, b =
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.25</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">2</span>,
+        <span class="figcap-value" style="color:#00FF00">4</span>,
+        <span class="figcap-value" style="color:#FF00FF">8</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Alain's Curve implicit equation:</div>
+      \[ (x^{2} - y^{2})^{2} = a^{2} x^{2} - b^{2} y^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Alain's Curve polar equation:</div>
+      \[ r = \frac{\sqrt{a^{2} \cos^{2}(\theta) - b^{2} \sin^{2}(\theta)}}{|\cos(2\theta)|} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Alain's curve<sup>1</sup> is a recent entry in MathCurve's catalog of plane algebraic curves, named after Alain Juhel of France, who proposed it for study. Juhel appears to be a contemporary enthusiast of mathematical curves rather than a historical figure like Bernoulli or Cassini, whose similar quartic curves (degree 4) date back to the 17th and 18th centuries. As with many modern algebraic discoveries, Alain's curve likely emerged from exploratory work with equations, highlighting how simple quadratic combinations can yield symmetric shapes without ties to classical problems like planetary motion or optics.</p>
+    <p>The curve always satisfies the origin as a point, since substituting x = 0, y = 0 gives 0 = 0, but polar conversions can obscure this unless boundary limits are considered, much like how derivatives approach slopes at points where functions touch zero. Depending on the ratio of parameters a and b, the curve morphs: for b = 0, it degenerates into a union of two hyperbolas; for 0 &lt; b &lt; a, it forms crossed ovals with cusps; for b = a, it becomes a hyperbola with its asymptotes; and for b &gt; a &gt; 0, it resembles a cylindrical lemniscate or figure-eight, pinched at the center. This versatility makes it a good teaching tool for understanding symmetry and domain restrictions through basic trigonometry, where angles determine valid real points, akin to how sine and cosine bound circles.</p>
+    <p>No real-life applications in engineering or natural sciences were found after searches across mathematical databases and literature. It serves primarily as an illustrative example in algebraic geometry.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/alain/alain.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/alain/alain.shtml</a> (Primary source for equation, naming, and parametric forms)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ALAIN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd rval)
+  (setq id "Alain's Curve"
+        iq "r=√(a²·cos²(θ)-b²·sin²(θ))/|cos(2θ)|"
+        dcl nil
+        opt nil
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 0 "b (>a shape = horizontal 8)" 0.5)
+        fc (get_keyword 0 "Real Imaginary" "Real or Imaginary values allowed?" "Real")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        fd '(- (* fa fa (cos (eval a2)) (cos (eval a2))) (* fb fb (sin (eval a2)) (sin (eval a2))))
+        rval '(/ (alt_expt (if (eq fc "Imaginary") (abs (eval fd)) (max (eval fd) 0.0)) 0.5 nil) (avoid_zero (abs (cos (* 2.0 (eval a2))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ALAIN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

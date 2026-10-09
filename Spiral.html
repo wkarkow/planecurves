@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spiral Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Spiral Curve</h1>
+      <p class="short-description">A single polar framework that recovers the Archimedean, Fermat, epispiral, parabolic, Galilean, lituus, hyperbolic, and logarithmic spirals by choice of nine parameters and also draws hybrid forms.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Spiral/Spiral01-360.avif"
+           alt="Spiral Curve, New Values a=0,b=0.5,c=1,d=2.5,f=3,g=1.5,h=0.15,i=0.08,j=1.2,Real">
+      <figcaption>Spiral Curve, New Values a=0,b=0.5,c=1,d=2.5,f=3,g=1.5,h=0.15,i=0.08,j=1.2,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Spiral/Spiral02-360.avif"
+           alt="Spiral Curve, New Values a=0,b=0.5,c=1,d=2.5,f=3,g=1.5,h=0.15,i=0.08,j=1.2,+Imaginary">
+      <figcaption>Spiral Curve, New Values a=0,b=0.5,c=1,d=2.5,f=3,g=1.5,h=0.15,i=0.08,j=1.2,+Imaginary</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Spiral/Spiral03-360.avif"
+           alt="Spiral Curve, New Values a=3,b=-3,c=0.5,d=0,f=1,g=1,h=-1.5,i=-1,j=0.5,+Imaginary">
+      <figcaption>Spiral Curve, New Values a=3,b=-3,c=0.5,d=0,f=1,g=1,h=-1.5,i=-1,j=0.5,+Imaginary</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 200px;">
+    <div class="equation-line">
+      <div class="equation-label">Spiral polar equation:</div>
+      \[ r = a + b\theta^{c}\bigl(1 + d(\cos(f\theta))^{1/g}\bigr) + h\,e^{i\theta^{j}} \]
+    </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The spiral form<sup>1,2,3,4,5</sup> has long held a powerful fascination across centuries of human thought, appearing as both a symbol of growth and an object of mathematical inquiry. From the steady unwinding of an Archimedean screw in ancient irrigation systems to the self-similar logarithmic spirals that govern the chambers of a nautilus shell and the arms of distant galaxies, spirals embody an intuitive link between angular motion and radial expansion. The present Spiral Curve is a generalization developed by the author beginning in 1988, with intermittent refinements over subsequent decades. Its single polar equation, \( r = a + b\theta^{c}\bigl(1 + d(\cos(f\theta))^{1/g}\bigr) + h\,e^{i\theta^{j}} \), was created specifically to encompass as many named classical spirals as possible within one accessible parametric framework. By suitable choice of the nine parameters \(a\) through \(j\) it reproduces the Archimedean, Fermat, epispiral, parabolic, Galilean, lituus, hyperbolic, and logarithmic spirals, and it readily generates hybrid forms for further exploration. Not every spiral fits this construction. The Atom spiral, Atzema spiral, Nielsen's spiral, and Poinsot's spiral, among others, require fundamentally different expressions. Certain visually spiral-like curves such as Fay's exponential butterfly also exhibit spiral characteristics in portions of their path but lie outside this family. Wikipedia’s List of spirals<sup>5</sup> is a convenient comparative catalogue of named plane spirals, including members both inside and outside the present construction.</p>
+    <p>In engineering and the natural sciences the underlying ideas find direct application. Archimedean screws remain in use for pumping and conveying solids; logarithmic spirals appear in the design of certain antennas and waveguides; corrugated tubing and spiral springs rely on controlled radial growth for flexibility and energy storage. In nature, spiral growth governs phyllotaxis in plants, the coiling of mollusk shells, the structure of hurricanes, and the large-scale organization of galaxies.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Spiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Spiral.html</a> (overview of classical spirals)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/spirale/spirale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/spirale/spirale.shtml</a> (Archimedean and logarithmic examples)</li>
+      <li><a href="https://www.2dcurves.com/spiral/spiral.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spiral.html</a> (additional named spirals and parameter mappings)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Spiral" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Spiral</a> (overview, comparative images and links)</li>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_spirals" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/List_of_spirals</a> (catalogue of named plane spirals)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                   id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn p1)
+  (setq id "Spiral Curve"
+        iq ""
+        dcl "SPIRAL"
+        opt '("New Values" "Archimedes" "Epispiral" "Fermat" "Galilean" "Hyperbolic" "Lituus" "Logarithmic" "Parabolic")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fk 1.0)
+  (cond
+   ((eq kw 0) ; New Values
+    (princ "\nGeneral spiral: r=a+b·θ^c·(1+d·(cos(f·θ))^(1/g))+h·e^(i·θ^j)")
+    (setq fa (get_real 0 "\na (constant radial offset)" 0.0)
+          fb (get_real 0 "\nb (θ multiplier)" 0.5)
+          fc (get_real 0 "\nc (θ exponent)" 1.0)
+          fd (get_real 0 "\nd (cosine term multiplier)" 2.5)
+          fe (get_real 0 "\nf (θ multiplier inside cosine)" 3.0)
+          ff (get_real 0 "\ng (cosine exponent 1/g)" 1.5)
+          fg (get_real 0 "\nh (exponential multiplier)" 0.15)
+          fh (get_real 0 "\ni (θ multiplier inside exponential)" 0.08)
+          fi (get_real 0 "\nj (θ exponent inside exponential)" 1.2)
+          fj (get_keyword 0 "Real Imaginary" "Real or with Imaginary values allowed?" "Imaginary")))
+   ((eq kw 1)
+    (princ "\nArchimedean spiral: r=bθ")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fl (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle))
+          fl (if (= fl 0) (+ fl (* 2.0 pi)) fl)
+          fa 0
+          fb (/ (distance basept p1) fl)
+          fc 1 fd 0 fe 0 ff 1 fg 0 fh 1 fi 1 fj "Real"))
+   ((eq kw 2)
+    (princ "\nEpispiral: r = a·sec(nθ)")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fe (get_real 2 "n (frequency multiplier inside cos)" 3.0)
+          fl (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle))
+          fm (* (distance basept p1) (cos (* fe fl)))
+          fa (- fm)
+          fb fm
+          fc 0 fd 1 ff -1 fg 0 fh 1 fi 1 fj "Real"))
+   ((eq kw 3)
+    (princ "\nFermat spiral: r=bθ^0.5")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fl (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle))
+          fl (if (&lt; (abs fl) 1e-8) (+ fl (* 2.0 pi)) fl)
+          fa 0
+          fb (/ (distance basept p1) (alt_expt fl 0.5 T))
+          fc 0.5 fd 0 fe 0 ff 1 fg 0 fh 1 fi 1 fj "Real"))
+   ((eq kw 4)
+    (princ "\nGalilean spiral: r=bθ²")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fl (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle))
+          fl (if (&lt; (abs fl) 1e-8) (+ fl (* 2.0 pi)) fl)
+          fa 0
+          fb (/ (distance basept p1) (alt_expt fl 2.0 T))
+          fc 2 fd 0 fe 0 ff 1 fg 0 fh 1 fi 1 fj "Real"))
+   ((eq kw 5)
+    (princ "\nHyperbolic spiral: r=b/θ")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fl (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle))
+          fl (if (&lt; (abs fl) 1e-8) (+ fl (* 2.0 pi)) fl)
+          fa 0
+          fb (* (distance basept p1) fl)
+          fc -1 fd 0 fe 0 ff 1 fg 0 fh 1 fi 1 fj "Real"))
+   ((eq kw 6)
+    (princ "\nLituus spiral: r=bθ^(-0.5)")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fl (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle))
+          fl (if (&lt; (abs fl) 1e-8) (+ fl (* 2.0 pi)) fl)
+          fa 0
+          fb (/ (distance basept p1) (alt_expt fl -0.5 T))
+          fc -0.5 fd 0 fe 0 ff 1 fg 0 fh 1 fi 1 fj "Real"))
+   ((eq kw 7)
+    (princ "\nLogarithmic spiral: r=g·e^(hθ)")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fh (get_real 2 "h value for r = g·e^(hθ)" (- (log 2.0)))
+          fa 0 fb 0 fc 1 fd 0 fe 0 ff 1
+          fg (/ (distance basept p1) (exp (* fh (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle)))))
+          fi 1 fj "Real"))
+   ((eq kw 8)
+    (princ "\nParabolic spiral: r=b√θ")
+    (setq p1 (get_boundpt "Point on curve" "1,0" (polar basept xaxisangle 1.0) basept nil nil nil nil nil nil)
+          fl (+ (* (get_real 2 "# of extra revolutions to point" 0) (* 2.0 pi)) (- (angle basept p1) xaxisangle))
+          fl (if (&lt; (abs fl) 1e-8) (+ fl (* 2.0 pi)) fl)
+          fa 0
+          fb (/ (distance basept p1) (alt_expt fl 0.5 T))
+          fc 0.5 fd 0 fe 0 ff 1 fg 0 fh 1 fi 1 fj "Real")))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) " b=" (rtos fb 2 4) " c=" (rtos fc 2 4) " d=" (rtos fd 2 4) " f=" (rtos fe 2 4) " g=" (rtos ff 2 4)
+                   " h=" (rtos fg 2 4) " i=" (rtos fh 2 4) " j=" (rtos fi 2 4))
+        rval '(progn (setq fn (cos (* fe (eval a2)))) (if (eq fj "Real") (progn (setq restartflag (and fk (&lt; (* fk fn) 0.0))) (setq fk fn) (if restartflag 1e14
+              (+ fa (* fb (alt_expt (eval a2) fc T)) (+ 1.0 (* fd (alt_expt (cos (* fe (eval a2))) (/ 1.0 ff) T))) (* fg (exp (* fh (alt_expt (eval a2) fi T)))))))
+              (+ fa (* fb (alt_expt (eval a2) fc nil)) (+ 1.0 (* fd (alt_expt (cos (* fe (eval a2))) (/ 1.0 ff) nil))) (* fg (exp (* fh (alt_expt (eval a2) fi nil)))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>L'Hospital Evolute - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>L'Hospital Evolute</h1>
+      <p class="short-description">The locus of the centers of curvature of the transcendental L'Hospital curve of constant reaction, yielding constant tension when used as the winding cam of a pendulum.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HospEvolute/HospEvolute01-360.avif"
+           alt="a=70.02177247,ymin=7.59321076,k=4.03671352, L'Hospital Quintic versus Evolute">
+      <figcaption>
+        a=70.02177247,ymin=7.59321076,k=4.03671352,
+        <span class="figcap-value" style="color:#000000">L'Hospital Quintic</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HospEvolute/HospEvolute02-360.avif"
+           alt="Same curves, L'Hospital Quintic, Evolute, pendulum, walls with perfect elastic recoil">
+      <figcaption>
+        Same curves, 
+        <span class="figcap-value" style="color:#000000">L'Hospital Quintic</span>,
+        <span class="figcap-value" style="color:#FF0000">Evolute</span>,
+        <span class="figcap-value" style="color:#0000FF">pendulum</span>,
+        <span class="figcap-value" style="color:#009600">walls with perfect elastic recoil</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 180px;">
+    <div class="equation-line">
+      \[ x=-\dfrac{a\sin\phi\,(2k^{3}+k+(k^{2}+2)\cos\phi)}{(k^{2}-1)^{2}(k+\cos\phi)^{2}}-\dfrac{6ak}{(k^{2}-1)^{2}\sqrt{k^{2}-1}} -\Biggl[\dfrac{
+      \Bigl[-\dfrac{a(2k^{4}\cos\phi+3k^{3}+2k^{2}\cos\phi+3k\cos^{2}\phi+2\cos\phi)}{(k^{2}-1)^{2}(k+\cos\phi)^{3}}-\dfrac{3ak}{(k^{2}-1)^{2}(k+\cos\phi)}\Bigr]^{2}
+      +\Bigl[\dfrac{2a\sin\phi}{(k+\cos\phi)^{3}}\Bigr]^{2}}{\Biggl(\Bigl[-\dfrac{a(2k^{4}\cos\phi+3k^{3}+2k^{2}\cos\phi+3k\cos^{2}\phi+2\cos\phi)}
+      {(k^{2}-1)^{2}(k+\cos\phi)^{3}}-\dfrac{3ak}{(k^{2}-1)^{2}(k+\cos\phi)}\Bigr]\Bigl[-2a\Bigl(\dfrac{\cos\phi}{(k+\cos\phi)^{3}}+\dfrac{3\sin^{2}\phi}
+      {(k+\cos\phi)^{4}}\Bigr)\Bigr] -\Bigl[-\dfrac{2a\sin\phi}{(k+\cos\phi)^{3}}\Bigr]\Bigl[a\sin\phi\,(2k^{5}-4k^{4}\cos\phi-7k^{3}+2k^{2}\cos\phi+3k\sin^{2}
+      \phi-k-4\cos\phi) -\dfrac{3ak\sin\phi}{(k^{2}-1)^{2}(k+\cos\phi)^{2}}\Bigr]\Biggr)}\Biggr]\cdot\Bigl[-\dfrac{2a\sin\phi}{(k+\cos\phi)^{3}}\Bigr]\]
+    </div>
+    <div class="equation-line">
+      \[y=\Bigl[-\dfrac{a}{(k+\cos\phi)^{2}}\Bigr]+\Biggl[\dfrac{\Bigl[-\dfrac{a(2k^{4}\cos\phi+3k^{3}+2k^{2}\cos\phi+3k\cos^{2}\phi+2\cos\phi)}{(k^{2}-1)^{2}
+      (k+\cos\phi)^{3}}-\dfrac{3ak}{(k^{2}-1)^{2}(k+\cos\phi)}\Bigr]^{2}+\Bigl[\dfrac{2a\sin\phi}{(k+\cos\phi)^{3}}\Bigr]^{2}}{\Biggl(\Bigl[-\dfrac{a(2k^{4}
+      \cos\phi+3k^{3}+2k^{2}\cos\phi+3k\cos^{2}\phi+2\cos\phi)}{(k^{2}-1)^{2}(k+\cos\phi)^{3}}-\dfrac{3ak}{(k^{2}-1)^{2}(k+\cos\phi)}\Bigr]\Bigl[-2a\Bigl(\dfrac
+      {\cos\phi}{(k+\cos\phi)^{3}}+\dfrac{3\sin^{2}\phi}{(k+\cos\phi)^{4}}\Bigr)\Bigr]-\Bigl[-\dfrac{2a\sin\phi}{(k+\cos\phi)^{3}}\Bigr]\Bigl[\dfrac{a\sin\phi
+      \,(2k^{5}-4k^{4}\cos\phi-7k^{3}+2k^{2}\cos\phi+3k\sin^{2}\phi-k-4\cos\phi)}{(k^{2}-1)^{2}(k+\cos\phi)^{4}}-\dfrac{3ak\sin\phi}{(k^{2}-1)^{2}(k+\cos\phi)^{2}}
+      \Bigr]\Biggr)}\Biggr]\cdot\Bigl[-\dfrac{a(2k^{4}\cos\phi+3k^{3}+2k^{2}\cos\phi+3k\cos^{2}\phi+2\cos\phi)}{(k^{2}-1)^{2}(k+\cos\phi)^{3}}-\dfrac{3ak}
+      {(k^{2}-1)^{2}(k+\cos\phi)}\Bigr]\]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The L'Hospital quintic<sup>1</sup>, also called the curve of constant reaction or <em>curva aequabilis pressionis</em>, originated from a mechanical problem posed by Johann Bernoulli in 1695 (in a letter to Leibniz and in <em>Acta Eruditorum</em>, 1696). Bernoulli sought the plane curve along which a particle descending under uniform gravity experiences a constant normal reaction force from its rigid support. Guillaume de l'Hôpital published the general solution in 1700 in the <em>Mémoires de l'Académie royale des Sciences</em>, including the special algebraic case (k = 1) that yields the quintic. For k &gt; 1 the base curve is transcendental and periodic. Its evolute solves the inverse mechanical problem (also due to Bernoulli): the curve on which to wind the flexible wire of a pendulum such that tension in the wire remains constant throughout the motion.<sup>2</sup> In the second image, if the blue pendulum is confined by the red Hospital Quintic Evolute, it will swing with equal tension throughout its arc that follows the black quintic curve itself up to the vertices on either side. This will happen only if the pendulum has only one particular base velocity at the bottom of its arc. And the pendulum bob must rebound with perfect elastic recoil off the dashed green walls. The equations are shown in fully expanded form to make the point that conversion of a curve to its evolute can result in considerable expansion and complexity.</p>
+    <p>In the natural sciences and classical mechanics these curves model constrained particle motion under gravity with prescribed constant normal reaction, relevant to theoretical studies of tracks or loops where uniform reaction force is required. The evolute specifically provides the profile for constant-tension pendulum mechanisms. No additional modern engineering or scientific applications beyond these historical mechanical contexts appear in the primary references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/quintique%20de%20l'hospital/quintique%20de%20l'hospital.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/quintique%20de%20l'hospital/quintique%20de%20l'hospital.shtml</a> (history of Bernoulli/l'Hôpital problem, constant-reaction curve, evolute pendulum-tension equations)</li>
+      <li><a href="http://christophe.masurel.free.fr/pdf/30-TheQuinticOflHopital.pdf" target="_blank" rel="noopener noreferrer">http://christophe.masurel.free.fr/pdf/30-TheQuinticOflHopital.pdf</a> (1695–1700 origins, evolute parametric equations and mechanical interpretation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HOSPEVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                        id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj)
+  (setq id "Evolute of L'Hospital Quintic (k&gt;1)"
+        iq "(parametric in φ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions per loop"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (scale)" 70.02177247)
+        fb (get_boundr 6 "k (&gt;1)" 4.03671352 1.0 nil nil nil)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        fc '(- 0.0 (- (* fa (/ (* (sin (eval a2)) (+ (+ (* 2.0 fb fb fb) fb) (* (+ (* fb fb) 2.0) (cos (eval a2))))) (* (alt_expt (- (* fb fb) 1.0) 2 T) (alt_expt
+            (+ fb (cos (eval a2))) 2 T)))) (/ (* 6.0 fa fb (if (and (&lt; (abs (sin (eval a2))) 1e-12) (&lt; (abs (+ 1.0 (cos (eval a2)))) 1e-12)) (+ (* 0.5 pi) (* pi (fix
+            (/ (eval a2) (* 2.0 pi))))) (+ (atan (* (sqrt (/ (- fb 1.0) (+ fb 1.0))) (sin (eval a2))) (+ 1.0 (cos (eval a2)))) (* pi (+ (fix (/ (eval a2) (* 2.0 pi)))
+            (if (&gt; (- (eval a2) (* 2.0 pi (fix (/ (eval a2) (* 2.0 pi))))) pi) 1 0)))))) (* (alt_expt (- (* fb fb) 1.0) 2 T) (sqrt (- (* fb fb) 1.0))))))
+        fd '(- (/ fa (alt_expt (+ fb (cos (eval a2))) 2 T)))
+        fe '(- (/ (* 2.0 fa (sin (eval a2))) (alt_expt (+ fb (cos (eval a2))) 3 T)))
+        ff '(- (* 2.0 fa (+ (/ (cos (eval a2)) (alt_expt (+ fb (cos (eval a2))) 3 T)) (/ (* 3.0 (sin (eval a2)) (sin (eval a2))) (alt_expt (+ fb (cos (eval a2))) 4 T)))))
+        fg '(+ (- (/ (* fa (+ (* 2.0 fb fb fb fb (cos (eval a2))) (* 3.0 fb fb fb) (* 2.0 fb fb (cos (eval a2))) (* 3.0 fb (cos (eval a2)) (cos (eval a2))) (* 2.0 (cos
+            (eval a2))))) (* (alt_expt (+ fb (cos (eval a2))) 3 T) (alt_expt (- (* fb fb) 1.0) 2 T)))) (/ (* 3.0 fa fb) (* (alt_expt (- (* fb fb) 1.0) 2 T) (+ fb (cos (eval a2))))))
+        fh '(+ (/ (* fa (sin (eval a2)) (+ (* 2.0 fb fb fb fb fb) (* -4.0 fb fb fb fb (cos (eval a2))) (* -7.0 fb fb fb) (* 2.0 fb fb (cos (eval a2))) (* 3.0 fb (sin
+            (eval a2)) (sin (eval a2))) (* -1.0 fb) (* -4.0 (cos (eval a2))))) (* (alt_expt (+ fb (cos (eval a2))) 4 T) (alt_expt (- (* fb fb) 1.0) 2 T))) (- (/ (* 3.0 fa fb
+            (sin (eval a2))) (* (alt_expt (- (* fb fb) 1.0) 2 T) (alt_expt (+ fb (cos (eval a2))) 2 T)))))
+        fi '(- (* (eval fg) (eval ff)) (* (eval fe) (eval fh)))
+        fj '(/ (+ (* (eval fg) (eval fg)) (* (eval fe) (eval fe))) (eval fi))
+        xc '(- (eval fc) (* (eval fj) (eval fe)))
+        yc '(+ (eval fd) (* (eval fj) (eval fg)))
+        paramstep (/ (* 2.0 pi) divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HOSPEVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

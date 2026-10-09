@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generalized Hyperbola - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Generalized Hyperbola</h1>
+      <p class="short-description">The hyperbolic counterpart to the superellipse (Lamé curve); larger n produces increasingly box-like branches.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/GenHyperbola/GenHyperbola01-360.avif"
+           alt="Generalized Hyperbola, a=2,b=1,multiple values of n">
+      <figcaption>
+        Generalized Hyperbola, a=2,b=1,n=
+        <span class="figcap-value" style="color:#000000">0.2</span>,
+        <span class="figcap-value" style="color:#FF0000">0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">0.6</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">2.0</span>,
+        <span class="figcap-value" style="color:#AA5555">2.0</span>,
+        <span class="figcap-value" style="color:#00FF00">4.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">8.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/GenHyperbola/GenHyperbola02-360.avif"
+           alt="Generalized Hyperbola, a=2,b=1,multiple values of n">
+      <figcaption>
+        Generalized Hyperbola, a=2,b=1,n=
+        <span class="figcap-value" style="color:#000000">-0.2</span>,
+        <span class="figcap-value" style="color:#FF0000">-0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">-0.6</span>,
+        <span class="figcap-value" style="color:#009600">-0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">-1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">-1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">-2.0</span>,
+        <span class="figcap-value" style="color:#AA5555">-2.0</span>,
+        <span class="figcap-value" style="color:#00FF00">-4.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">-8.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Generalized Hyperbola Cartesian equation:</div>
+      \[ \left|\dfrac{x}{a}\right|^{n} - \left|\dfrac{y}{b}\right|^{n} = 1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Hyperbola parametric equations:</div>
+      \[ x = a\,(\sec\phi)^{2/n},\quad y = b\,(\tan\phi)^{2/n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The generalized hyperbola is the hyperbolic counterpart to the superellipse (Lamé curve) introduced by Gabriel Lamé in 1818 to describe crystal forms.<sup>1,2</sup> While Lamé’s work addressed the elliptic case (|x/a|<sup>n</sup> + |y/b|<sup>n</sup> = 1), the minus-sign family arises naturally as part of the broader superconic family, recognized in computational geometry literature.<sup>3</sup> No separate discoverer is identified for the general-n hyperbolic branch beyond its inclusion alongside the superellipse in superconics discussions.</p>
+    <p>Applications in engineering and the natural sciences are limited relative to the elliptic case. The curve family (including its 3D superquadric extensions) is employed in computer-aided design (CAD) and computer graphics for flexible parametric modeling of non-standard shapes, allowing engineers and draftsmen to generate smooth transitions between hyperbolic and asymptotic behaviors without piecewise definitions.<sup>3</sup> No additional documented uses in structural mechanics, optics, or natural-science contexts were located in the primary curve-reference sources.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Superellipse" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Superellipse</a> (terminology linking superellipse/hyperellipse to Lamé and superconics)</li>
+      <li><a href="https://math.stackexchange.com/questions/893295/how-is-the-curve-with-equation-1-x4-1-y4-1-called" target="_blank" rel="noopener noreferrer">https://math.stackexchange.com/questions/893295/how-is-the-curve-with-equation-1-x4-1-y4-1-called</a> (parametric superhyperbola matches code)</li>
+      <li><a href="https://old.nationalcurvebank.org/superconicncb/superconicncb.htm" target="_blank" rel="noopener noreferrer">https://old.nationalcurvebank.org/superconicncb/superconicncb.htm</a> (superconics overview including superhyperbola)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GENHYPERBOLA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                         divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Generalized Hyperbola"
+        iq "|x/a|ᶜ - |y/b|ᶜ = 1"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 90
+        dpt nil
+        span 90
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (setq fa (get_real 6 "\na (x semi-axis): " 2.0)
+        fb (get_real 6 "\nb (y semi-axis): " 1.0)
+        fc (get_real 2 "\nn (2=hyperbola, 1=V-lines, large→boxy): " 2.0)
+        eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", n= " (rtos fc 2 4))
+        xc '(* fa (if (&lt; (abs (cos (if (&lt; (eval a2) pi) (- (eval a2) (/ pi 2.0)) (- (eval a2) (* 3.0 (/ pi 2.0)))))) 1e-9) 1e9 (alt_expt (/ 1.0 (cos
+            (if (&lt; (eval a2) pi) (- (eval a2) (/ pi 2.0)) (- (eval a2) (* 3.0 (/ pi 2.0)))))) (/ 2.0 fc) T)))
+        yc '(* fb (if (&lt; (abs (cos (if (&lt; (eval a2) pi) (- (eval a2) (/ pi 2.0)) (- (eval a2) (* 3.0 (/ pi 2.0)))))) 1e-9) 1e9 (alt_expt (tan (if
+            (&lt; (eval a2) pi) (- (eval a2) (/ pi 2.0)) (- (eval a2) (* 3.0 (/ pi 2.0))))) (/ 2.0 fc) T)))
+        a1 (/ pi 2.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GENHYPERBOLA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

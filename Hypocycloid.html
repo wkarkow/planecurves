@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hypocycloid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hypocycloid</h1>
+      <p class="short-description">The locus of a point on the circumference of a circle that rolls without slipping inside a fixed circle.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid01-360.avif"
+           alt="Hypocycloid, Tusi couple, R/r=2,a=1,b=1,c=1,d=1,e=1,f=1">
+      <figcaption>Hypocycloid, Tusi couple, R/r=2,a=1,b=1,c=1,d=1,e=1,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid02-360.avif"
+           alt="Hypocycloid, deltoid, a=2,b=1,c=2,d=2,e=1,f=2">
+      <figcaption>Hypocycloid, deltoid, a=2,b=1,c=2,d=2,e=1,f=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid03-360.avif"
+           alt="Hypocycloid, astroid, a=1.5,b=0.5,c=3,d=1.5,e=0.5,f=3">
+      <figcaption>Hypocycloid, astroid, a=1.5,b=0.5,c=3,d=1.5,e=0.5,f=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid04-360.avif"
+           alt="Hypocycloid, a=1.6,b=0.4,c=4,d=1.6,e=0.4,f=4">
+      <figcaption>Hypocycloid, a=1.6,b=0.4,c=4,d=1.6,e=0.4,f=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid05-360.avif"
+           alt="Hypocycloid, a=1.8,b=0.3,c=6,d=1.8,e=0.3,f=6">
+      <figcaption>Hypocycloid, a=1.8,b=0.3,c=6,d=1.8,e=0.3,f=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid06-360.avif"
+           alt="Generalized Hypocycloid, a=1.8,b=0.4,c=6,d=1.8,e=0.4,f=6">
+      <figcaption>Generalized Hypocycloid, a=1.8,b=0.4,c=6,d=1.8,e=0.4,f=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid07-360.avif"
+           alt="Generalized Hypocycloid, a=1.8,b=3,c=6,d=1.8,e=3,f=6">
+      <figcaption>Generalized Hypocycloid, a=1.8,b=3,c=6,d=1.8,e=3,f=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid08-360.avif"
+           alt="Generalized Hypocycloid, a=1.8,b=1.8,c=0.5,d=1.8,e=1.8,f=0.25">
+      <figcaption>Generalized Hypocycloid, a=1.8,b=1.8,c=0.5,d=1.8,e=1.8,f=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid09-360.avif"
+           alt="Generalized Hypocycloid, a=0.875,b=0.625,c=12,d=0.6875,e=0.3125,f=6">
+      <figcaption>Generalized Hypocycloid, a=0.875,b=0.625,c=12,d=0.6875,e=0.3125,f=6</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid10-360.avif"
+           alt="Generalized Hypocycloid, \(10 \pi\), a=2.25,b=2.75,c=104,d=2.25,e=2.75,f=104">
+      <figcaption>Generalized Hypocycloid, \(10 \pi\), a=2.25,b=2.75,c=104,d=2.25,e=2.75,f=104</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hypocycloid/Hypocycloid11-360.avif"
+           alt="Generalized Hypocycloid, \(10 \pi\), a=2.75,b=2.25,c=104,d=2.0625,e=1.6875,f=104">
+      <figcaption>Generalized Hypocycloid, \(10 \pi\), a=2.75,b=2.75,c=104,d=2.0625,e=1.6875,f=104</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Hypocycloid parametric equations:</div>
+      \[ x=(R-r)\cos\theta + r\cdot\cos\left(\dfrac{R-r}{r}\theta\right),\quad y=(R-r)\sin\theta - r\cdot\sin\left(\dfrac{R-r}{r}\theta\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x=a\cos\theta + b\cos(c\theta),\quad y=d\sin\theta - e\sin(f\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The hypocycloid is the plane curve traced by a fixed point on the circumference of a small circle of radius r that rolls inside a fixed larger circle of radius R without slipping.<sup>1,2</sup> The 2-cusped case (R/r = 2) produces a straight-line segment known as the Tusi couple; Persian astronomer and mathematician Nasir al-Din al-Tusi (1201–1274) first described it in the 13th century.<sup>1</sup> European mathematicians later examined the general family: Albrecht Dürer (1525), Ole Rømer (1674), and Daniel Bernoulli (1725).<sup>2</sup> Special integer ratios R/r yield the deltoid (3 cusps), astroid (4 cusps), and n-cusped hypocycloids. The general parametric form used in the code covers all cases by varying the coefficients a, b, c, d, e, f.</p>
+    <p>Real-life applications in engineering and the natural sciences are documented. In mechanical engineering the hypocycloid profile forms the inner rotor of gerotor and trochoidal pumps, producing sealed, expanding/contracting chambers that deliver smooth, pulsation-free flow of oils and viscous fluids at low speeds with high torque.<sup>3</sup> Similar hypocycloidal gearing appears in compact planetary drives and internal-combustion-engine mechanisms that replace conventional slider-crank designs for improved efficiency.<sup>4</sup> The astroid (4-cusped hypocycloid) defines the envelope traced by bus-door mechanisms, allowing the door to open while minimizing the swept volume on the ground.<sup>5</sup> In physics the curve solves a generalized brachistochrone problem under a central force field proportional to 1/r; this models the shape of a gravity-assisted tunnel drilled through a uniform sphere that minimizes transit time between any two surface points.<sup>1,2</sup> Related mathematics describes small oscillations of the Foucault pendulum.<sup>2</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Hypocycloid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Hypocycloid.html</a> (Tusi couple, history, sphere-tunnel applications, equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/hypocycloid/hypocycloid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/hypocycloid/hypocycloid.shtml</a> (European mathematical history, brachistochrone 1/r force, Foucault pendulum)</li>
+      <li><a href="https://asmedigitalcollection.asme.org/mechanicaldesign/article-abstract/134/1/011005/471745" target="_blank" rel="noopener noreferrer">https://asmedigitalcollection.asme.org/mechanicaldesign/article-abstract/134/1/011005/471745</a> (gerotor pump hypocycloid rotors)</li>
+      <li><a href="https://journals.sagepub.com/doi/10.1177/1468087419893583" target="_blank" rel="noopener noreferrer">https://journals.sagepub.com/doi/10.1177/1468087419893583</a> (hypocycloid gear mechanism in internal-combustion engines)</li>
+      <li><a href="https://ui.adsabs.harvard.edu/abs/2019PhCS1345c2085W/abstract" target="_blank" rel="noopener noreferrer">https://ui.adsabs.harvard.edu/abs/2019PhCS1345c2085W/abstract</a> (astroid envelope in bus-door mechanism)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HYPOCYCLOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                        restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg)
+  (setq id "Hypocycloid"
+        iq "x=a·cos(θ)+b·cos(c·θ), y=d·sin(θ)-e·sin(f·θ)"
+        dcl "HYPOCYCLOID"
+        opt '("R/r=2  →  Line (Tusi couple)" "R/r=3  →  Deltoid (3 cusps)" "R/r=4  →  Astroid (4 cusps)" "R/r=5  →  5 cusps"
+              "R/r=n  →  n-cusped Hypocycloid" "Generalized, New Values")
+        kw 1
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fd (get_dist 2 "Radius of outer circle, hit ENTER to specify inner radius" nil basept)
+          fe (if fd (/ fd 2.0) (get_dist 2 "Radius of inner rolling circle" 1.0 basept))
+          fd (if fd fd (* 2.0 fe))
+          fa (- fd fe)
+          fb fe
+          fc (/ fa fe)
+          fd fa
+          fe fb
+          ff fc))
+   ((eq kw 1)
+    (setq fd (get_dist 2 "Radius of outer circle, hit ENTER to specify inner radius" nil basept)
+          fe (if fd (/ fd 3.0) (get_dist 2 "Radius of inner rolling circle" 1.0 basept))
+          fd (if fd fd (* 3.0 fe))
+          fa (- fd fe)
+          fb fe
+          fc (/ fa fe)
+          fd fa
+          fe fb
+          ff fc))
+   ((eq kw 2)
+    (setq fd (get_dist 2 "Radius of outer circle, hit ENTER to specify inner radius" nil basept)
+          fe (if fd (/ fd 4.0) (get_dist 2 "Radius of inner rolling circle" 1.0 basept))
+          fd (if fd fd (* 4.0 fe))
+          fa (- fd fe)
+          fb fe
+          fc (/ fa fe)
+          fd fa
+          fe fb
+          ff fc))
+   ((eq kw 3)
+    (setq fd (get_dist 2 "Radius of outer circle, hit ENTER to specify inner radius" nil basept)
+          fe (if fd (/ fd 5.0) (get_dist 2 "Radius of inner rolling circle" 1.0 basept))
+          fd (if fd fd (* 5.0 fe))
+          fa (- fd fe)
+          fb fe
+          fc (/ fa fe)
+          fd fa
+          fe fb
+          ff fc))
+   ((eq kw 4)
+    (setq fg (get_real 2 "Number of cusps" 6.0)
+          fd (get_dist 2 "Radius of outer circle, hit ENTER to specify inner radius" nil basept)
+          fe (if fd (/ fd fg) (get_dist 2 "Radius of inner rolling circle" 1.0 basept))
+          fd (if fd fd (* fg fe))
+          fa (- fd fe)
+          fb fe
+          fc (/ fa fe)
+          fd fa
+          fe fb
+          ff fc))
+   ((eq kw 5)
+    (setq fa (get_real 0 "a (1st x cos multiplier)" 1.8)
+          fb (get_real 0 "b (2nd x cos multiplier)" 1.8)
+          fc (get_real 0 "c (2nd x θ multiplier)" 0.5)
+          fd (get_real 0 "d (1st y sin multiplier)" 1.8)
+          fe (get_real 0 "e (2nd y sin multiplier)" 1.8)
+          ff (get_real 0 "f (2nd y θ multiplier)" 0.25))))
+  (setq eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4) ", d= " (rtos fd 2 4) ", e= " (rtos fe 2 4) ", f= " (rtos ff 2 4))
+        xc '(+ (* fa (cos (eval a2))) (* fb (cos (* fc (eval a2)))))
+        yc '(- (* fd (sin (eval a2))) (* fe (sin (* ff (eval a2)))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HYPOCYCLOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

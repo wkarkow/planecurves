@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ribaucour Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ribaucour Curve</h1>
+      <p class="short-description">A one-parameter family whose radius of curvature at each point is a constant multiple of the normal distance to the x-axis.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Ribaucour/Ribaucour01-360.avif"
+           alt="Ribaucour Curve, a=1,k=2">
+      <figcaption>Ribaucour Curve, a=1,k=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ribaucour/Ribaucour02-360.avif"
+           alt="Ribaucour Curve, a=1,k=3, Football curve">
+      <figcaption>Ribaucour Curve, a=1,k=3, Football curve</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ribaucour/Ribaucour03-360.avif"
+           alt="Ribaucour Curve, a=1,k=5">
+      <figcaption>Ribaucour Curve, a=1,k=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ribaucour/Ribaucour04-360.avif"
+           alt="Ribaucour Curve, a=1,k=9">
+      <figcaption>Ribaucour Curve, a=1,k=9</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ribaucour/Ribaucour05-360.avif"
+           alt="Ribaucour Curve, a=1, multiple values of k">
+      <figcaption>
+        Ribaucour Curve, a=1,k=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">0.7</span>,
+        <span class="figcap-value" style="color:#0000FF">0.9</span>,
+        <span class="figcap-value" style="color:#009600">1.2</span>,
+        <span class="figcap-value" style="color:#FF9600">1.6</span>,
+        <span class="figcap-value" style="color:#9600FF">2.1</span>,
+        <span class="figcap-value" style="color:#0096FF">2.7</span>,
+        <span class="figcap-value" style="color:#AA5555">3.4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Ribaucour/Ribaucour06-360.avif"
+           alt="Ribaucour Curve, a=1, multiple values of k-">
+      <figcaption>
+        Ribaucour Curve, a=1,k=
+        <span class="figcap-value" style="color:#000000">-4.0</span>,
+        <span class="figcap-value" style="color:#FF0000">-3.0</span>,
+        <span class="figcap-value" style="color:#0000FF">-2.0</span>,
+        <span class="figcap-value" style="color:#009600">-1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">-0.5</span>,
+        <span class="figcap-value" style="color:#9600FF">-0.25</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Ribaucour Curve parametric equations:</div>
+      \[ x = k\,a\int \cos^{k}(u)\,du,\qquad y = a\cos^{k}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Defining curvature property:</div>
+      \[ R_{c} = -k\,N \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Ribaucour curve<sup>1</sup> takes its name from the French mathematician and engineer Albert Ribaucour (1845–1893). The underlying problem was posed by Jean Bernoulli in 1716 and solved by Brook Taylor in 1717. Ossian Bonnet studied the curve in 1844, and Ribaucour gave a more detailed treatment in 1880. Geometrically the curve’s radius of curvature \(R_{c}\) is proportional to the normal distance \(N\) from the curve to the x-axis: \(R_{c} = -k\,N\) where \(k\) is a constant called the index of the curve. This same property makes the Ribaucour curve the trajectory of a light ray traveling in an inhomogeneous medium according to Fermat’s principle of least time.</p>
+    <p>The curve reduces to shapes appearing in classical physics and engineering; the catenary for \(k = -1\), the parabola for \(k = -2\), the cycloid (or brachistochrone or curve of fastest descent under gravity) for \(k = 2\), and the circle (a geodesic in the Poincaré half-plane model of hyperbolic geometry) for \(k = 1\). No additional applications were found.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ribaucour/ribaucour.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ribaucour/ribaucour.shtml</a> (history, parametric form, differential equations, applications in optics and mechanics)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:RIBAUCOUR (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi)
+  (setq id "Ribaucour Curve"
+        iq "\nx=k·a·∫cosᵏ(u)du, y=a·cosᵏ(t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "k" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        span (if (= fb (fix fb)) (if (zerop (rem (fix fb) 2)) pi (* 2.0 pi)) (* 0.5 pi))
+        paramstep (/ span (1- divcount))
+        yc (if (&lt; fb 0.0) '(* fa (alt_expt (max (cos fc) 1e-12) fb nil)) (if (and (&gt; fb 0.0) (not (= fb (fix fb)))) '(if (&lt; (abs (- fc span)) 1e-8) 0.0
+           (* fa (alt_expt (cos fc) fb nil))) '(* fa (alt_expt (cos fc) fb nil)))))
+  (cond
+    ((&lt; fb 0.0)
+     (setq skm '(nil T T)
+           a2 '(progn (if (= fe 1) (progn (setq fe 0) fc) (progn (setq ff fc fg (+ fc (* 0.5 paramstep)) fh (* paramstep (* fa fb (alt_expt (max (cos fg) 1e-12) fb nil)))
+               fd (+ fd fh) fc (+ fc paramstep)) (if (&gt; fc (- span 1e-9)) (setq fc span)) fc)))))
+    ((= fb (fix fb))
+     (if (zerop (rem (fix fb) 2))
+       (setq skm '(T T T)
+             a2 '(progn (if (= fe 1) (progn (setq fe 0) fc) (progn (setq ff fc fg (+ fc (* 0.5 paramstep)) fh (* paramstep (* fa fb (alt_expt (cos fg) fb nil)))
+                 fd (+ fd fh) fc (+ fc paramstep)) (if (&lt; (abs (- fc span)) 1e-9) (progn (setq fc span) (setq fd pi))) fc))))
+       (setq skm '(T T T)
+             a2 '(progn (if (= fe 1) (progn (setq fe 0) fc) (progn (setq ff fc fg (+ fc (* 0.5 paramstep)) fh (* paramstep (* fa fb (alt_expt (cos fg) fb nil)))
+                 fd (+ fd fh) fc (+ fc paramstep)) (if (&lt; (abs (- fc span)) 1e-9) (progn (setq fc span) (setq fd 0.0))) fc))))))
+    (T
+     (setq a2 '(progn (if (= fe 1) (progn (setq fe 0) fc) (progn (setq ff fc fg (+ fc (* 0.5 paramstep)) fh (* paramstep (* fa fb (alt_expt (cos fg) fb nil)))
+               fd (+ fd fh) fc (+ fc paramstep)) (if (&gt; fc (- span 1e-9)) (setq fc span)) fc))))))
+  (setq fc 0.0
+        fd 0.0
+        fe 1
+        xc 'fd
+        a1 0
+        x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (setq cd (getvar "CMDECHO"))
+  (setvar "CMDECHO" 0)
+  (if (and (= fb (fix fb)) (zerop (rem (fix fb) 2)))
+      (progn
+         (setq fi (get_integer 6 "\nNumber of humps to array (including original)" 5))
+         (if (&gt; fi 1) (command "array" plineents "" "R" 1 fi pi))))
+  (setvar "CMDECHO" cd)
+  (princ))
+(C:RIBAUCOUR)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

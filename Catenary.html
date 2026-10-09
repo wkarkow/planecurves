@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catenary - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Catenary</h1>
+      <p class="short-description">The curve assumed by a perfectly flexible, uniform chain or cable suspended under its own weight and supported only at its ends.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Catenary/Catenary01-360.avif"
+           alt="Catenary, span=10,multiple values of sag">
+      <figcaption>
+        Catenary, span=10,sag=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">6</span>,
+        <span class="figcap-value" style="color:#0096FF">7</span>,
+        <span class="figcap-value" style="color:#AA5555">8</span>,
+        <span class="figcap-value" style="color:#00FF00">9</span>,
+        <span class="figcap-value" style="color:#FF00FF">10</span>,
+        (for a sag of 5, a=3.0938)
+    </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Catenary/Catenary02-360.avif"
+           alt="Vertically Scaled Catenary, span=10,sag=5,multiple values of a">
+      <figcaption>Vertically Scaled Catenary, span=10,sag=5,a=3.0938,b=
+        <span class="figcap-value" style="color:#FF9600">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">3.0</span>,
+        <span class="figcap-value" style="color:#000000">3.0938</span>,
+        <span class="figcap-value" style="color:#9600FF">5.0</span>,
+        <span class="figcap-value" style="color:#0096FF">10.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Catenary/Catenary03-360.avif"
+           alt="Asymmetric Catenary, span=10,sag=1,b=12.6632,multiple values of c vs true catenary">
+      <figcaption>
+        Asymmetric Catenary, span=10,sag=1,b=12.6632,c=
+        <span class="figcap-value" style="color:#000000">17</span>,
+        <span class="figcap-value" style="color:#0000FF">15</span>,
+        <span class="figcap-value" style="color:#009600">13</span>,
+        <span class="figcap-value" style="color:#FF9600">11</span>,
+        <span class="figcap-value" style="color:#9600FF">10</span>,
+        <span class="figcap-value" style="color:#0096FF">9</span>,
+        <span class="figcap-value" style="color:#FF0000">true catenary b=c=12.6632</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Catenary/Catenary04-360.avif"
+           alt="Asymmetric Catenary, span=10,sag=5,b=3.0938,multiple values of c vs true catenary">
+      <figcaption>
+        Asymmetric Catenary, span=10,sag=5,b=3.0938,c=
+        <span class="figcap-value" style="color:#000000">3.7</span>,
+        <span class="figcap-value" style="color:#0000FF">3.5</span>,
+        <span class="figcap-value" style="color:#009600">3.3</span>,
+        <span class="figcap-value" style="color:#FF9600">2.9</span>,
+        <span class="figcap-value" style="color:#9600FF">2.7</span>,
+        <span class="figcap-value" style="color:#0096FF">2.5</span>,
+        <span class="figcap-value" style="color:#FF0000">true catenary b=c=3.0938</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Catenary (hyperbolic form):</div>
+      \[ y = a \cosh\left(\frac{x}{a}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Vertically scaled form:</div>
+      \[ y = a \cosh\left(\frac{x}{b}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Exponential form:</div>
+      \[ y = \frac{a}{2} \left( e^{x/a} + e^{-x/a} \right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Asymmetric generalized form:</div>
+      \[ y = \frac{a}{2} \left( e^{x/b} + e^{-x/c} \right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The catenary is the curve assumed by a perfectly flexible, uniform chain or cable suspended under its own weight and supported only at its ends. The name comes from the Latin <em>catena</em>, meaning “chain.” Although often confused with a parabola, the true catenary was first correctly derived in 1691 by Gottfried Wilhelm Leibniz, Christian Huygens, and Johann Bernoulli, who showed that its equation is \( y = a \cosh(x/a) \), involving the hyperbolic cosine function rather than a quadratic form<sup>1,2</sup>. This resolved an earlier misconception by Galileo Galilei, who had incorrectly proposed that a hanging chain forms a parabola<sup>1</sup>.</p>
+    <p>A key mechanical property of the catenary is that it represents a state of pure tension: the force at every point in the chain is directed along the curve itself, with no bending moment. When inverted, the catenary becomes the ideal shape for a self-supporting arch under uniform gravity loading. This principle was famously exploited by Antoni Gaudí, who used hanging chain models to design efficient masonry arches in structures such as Sagrada Família<sup>3</sup>. In engineering, the catenary appears wherever flexible cables are suspended under their own weight, including power lines, suspension bridges, and mooring lines for ships and offshore platforms<sup>4</sup>. In these applications, the curve determines sag, tension distribution, and clearance requirements. Variations such as the “scaled” or “asymmetric” catenary arise when horizontal forces or unequal supports are introduced, which generalized forms capture. In physics, the catenary also appears in variational problems. While the closely related brachistochrone curve (a cycloid) minimizes travel time under gravity, the catenary minimizes potential energy for a hanging chain subject to length constraints<sup>5</sup>. In architecture and structural optimization, it is therefore associated with efficient load paths and minimal material stress. A useful practical insight relevant to the scaled version is that vertical scaling of a catenary does not preserve its exact form; it produces only an approximation to a new catenary with a different parameter <em>a</em>. However, the deviation is often small over moderate spans, which explains why parabolic approximations are sometimes used in engineering practice<sup>6</sup>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Catenary.html" target="_blank" rel="noopener noreferrer">Wolfram MathWorld – Catenary</a> (history and equation, includes attribution to Leibniz 1691 work, Galileo’s assumption)</li>
+      <li><a href="https://www.britannica.com/science/catenary" target="_blank" rel="noopener noreferrer">Britannica – Catenary</a> (historical background and mathematical description)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Funicular_curve" target="_blank" rel="noopener noreferrer">Wikipedia – Funicular Curve</a> (Gaudí’s use of hanging chain models and inverted catenaries)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Catenary" target="_blank" rel="noopener noreferrer">Wikipedia – Catenary</a> (practical uses in engineering systems)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Catenary" target="_blank" rel="noopener noreferrer">Wikipedia – Catenary</a> (derivation via calculus of variations / energy minimization)</li>
+      <li><a href="https://www.engineersedge.com/excel_calculators/catenary_curve_graph_16368.htm" target="_blank" rel="noopener noreferrer">Engineers Edge – Catenary Curve Calculator</a> (equations and practical design notes for cables and lifting apparatus)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CATENARY (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fe ff fg fh fi fj)
+  (setq id "Catenary"
+        iq ""
+        dcl "CATENARY"
+        opt '("Standard by a value" "Standard by sag" "Vertically Scaled" "Asymmetric")
+        kw 0
+        mode 'param
+        dpr "# of divisions in span"
+        dct 1000
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\ny = a·cosh(x/a)")
+    (setq fa (get_real 2 "a (flattening/scale factor, higher values flatten curve)" 3.0)
+          eq_display (strcat "\na=" (rtos fa 2 4))
+          xc '(+ (- (/ xspan 2.0)) (eval a2))
+          yc '(* fa (cosh (/ (+ (- (/ xspan 2.0)) (eval a2)) fa)))))
+   ((eq kw 1)
+    (princ "\ny = a·cosh(x/a) (a solved for given sag)")
+    (setq fe (get_real 2 "vertical sag" 1.0)
+          ff (get_real 2 "initial guess for a (flattening factor, higher = flatter)" (/ xspan 4.0))
+          fa ff
+          fg 0
+          fh (/ xspan 2.0))
+    (while (and (< fg 50) (> (abs (- (* fa (- (cosh (/ fh fa)) 1.0)) fe)) 1e-6))
+      (setq fi (- (* fa (- (cosh (/ fh fa)) 1.0)) fe)
+            fj (+ (- (cosh (/ fh fa)) 1.0)
+                  (* -0.5 (/ xspan fa) (sinh (/ fh fa))))
+            fa (- fa (/ fi (avoid_zero fj)))
+            fg (1+ fg)))
+    (setq eq_display (strcat "\nsag=" (rtos fe 2 4) ", a=" (rtos fa 2 4))
+          xc '(+ (- (/ xspan 2.0)) (eval a2))
+          yc '(* fa (cosh (/ (+ (- (/ xspan 2.0)) (eval a2)) fa)))))
+   ((eq kw 2)
+    (princ "\ny = a·cosh(x/b)")
+    (setq fe (get_real 2 "vertical sag" 1.0)
+          fb (get_real 2 "b (horizontal shaping factor)" 1.0)
+          fa (/ fe (- (cosh (/ xspan (* 2.0 fb))) 1.0))
+          eq_display (strcat "\nsag=" (rtos fe 2 4) ", a=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+          xc '(+ (- (/ xspan 2.0)) (eval a2))
+          yc '(* fa (cosh (/ (+ (- (/ xspan 2.0)) (eval a2)) fb)))))
+   ((eq kw 3)
+    (princ "\ny = (a/2)·[e^(x/b)+e^(-x/c)]")
+    (setq fe (get_real 2 "vertical sag" 1.0)
+          fb (get_real 2 "b (right-side shaping factor)" 1.0)
+          fc (get_real 2 "c (left-side shaping factor)" 0.9)
+          fa (/ fe (- (/ (+ (exp (/ xspan (* 2.0 fb))) (exp (/ (- xspan) (* 2.0 fc)))) 2.0) 1.0))
+          eq_display (strcat "\nsag=" (rtos fe 2 4) ", a=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+          xc '(+ (- (/ xspan 2.0)) (eval a2))
+          yc '(* 0.5 fa (+ (exp (/ (+ (- (/ xspan 2.0)) (eval a2)) fb)) (exp (/ (- (+ (- (/ xspan 2.0)) (eval a2))) fc)))))))
+  (setq paramstep (/ xspan divcount)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CATENARY)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

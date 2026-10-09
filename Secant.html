@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secant Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Secant Curve</h1>
+      <p class="short-description">Graph of \( y = a \cdot \sec(bx) \), the reciprocal of the cosine.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Secant/Secant01-360.avif"
+           alt="Secant Curve, a=1,b=2/π">
+      <figcaption>SSecant Curve, a=1,b=2/π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant02-360.avif"
+           alt="Secant Curve, a=2, asymptote x=1.7,b=0.9240">
+      <figcaption>Secant Curve, a=2, asymptote x=1.7,b=0.9240</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant03-360.avif"
+           alt="Secant Curve, trough height=a=1.8,b=2">
+      <figcaption>Secant Curve, trough height=a=1.8,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant04-360.avif"
+           alt="Secant Curve, trough height=a=1.8,asymptote x=1.7,b=0.9240">
+      <figcaption>SSecant Curve, trough height=a=1.8,asymptote x=1.7,b=0.9240</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant05-360.avif"
+           alt="Secant Curve, trough bottom=(0.6,1.1),a=1.1,b=10.4720">
+      <figcaption>Secant Curve, trough bottom=(0.6,1.1),a=1.1,b=10.4720</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant06-360.avif"
+           alt="Secant Curve, trough height=a=1.3,ascending curve pt(1.7,2.1),b=0.5313">
+      <figcaption>Secant Curve, trough height=a=1.3,ascending curve pt(1.7,2.1),b=0.5313</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant07-360.avif"
+           alt="Secant Curve, trough height=a=1.1,descending curve pt(1.1,2.1),b=4.7852">
+      <figcaption>Secant Curve, trough height=a=1.1,descending curve pt(1.1,2.1),b=4.7852</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant08-360.avif"
+           alt="Secant Curve, asymptote x=1.5,ascending curve pt(1.1,2.1),a=0.8541,b=1.0472">
+      <figcaption>Secant Curve, asymptote x=1.5,ascending curve pt(1.1,2.1),a=0.8541,b=1.0472</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Secant/Secant09-360.avif"
+           alt="Secant Curve, asymptote x=1.5,ascending curve pt(-1.1,1.3),a=0.5288, b=1.0472">
+      <figcaption>Secant Curve, asymptote x=1.5,ascending curve pt(-1.1,1.3),a=0.5288, b=1.0472</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Secant Cartesian equation:</div>
+      \[ y = a \cdot \sec(bx) = \dfrac{a}{\cos(bx)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Trigonometric identity:</div>
+      \[ \sec(x) = \dfrac{1}{\cos(x)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The secant function<sup>1,2,3</sup> derives its name from the Latin <em>secans</em> (“cutting”), a direct reference to the geometric construction of a line that intersects a circle at two points. This interpretation originated in the study of chords within unit circles and was formalized as the reciprocal of the cosine ratio. Danish mathematician Thomas Fincke introduced the explicit term “secant” in 1583 in his treatise <em>Geometria rotundi</em>. The function and its notation became standardized during the 16th and 17th centuries as European mathematicians refined tables for astronomy, navigation, and surveying. In the 18th century Leonhard Euler incorporated the secant into the developing framework of mathematical analysis, supplying series expansions and establishing its connections to exponential and complex functions.</p>
+    <p>Applications of the secant appear in several branches of engineering and the natural sciences. In structural mechanics the secant formula is a standard tool for calculating the buckling strength of columns or struts under eccentric compressive loads, yielding a more accurate prediction than the basic Euler formula when the load is applied off-center. In numerical analysis the secant method provides an efficient iterative algorithm for locating roots of nonlinear equations when derivative information is unavailable. Cartographers rely on secant projections—particularly secant conic and secant cylindrical varieties—to reduce distortion over chosen regions of the Earth’s surface by allowing the projection surface to cut through the globe along two standard parallels or meridians rather than one. Secant relationships also surface occasionally in optics for path-length calculations at oblique angles of incidence and in certain wave-propagation or vibration models.</p>
+    <p>For such a basic function, it is helpful at times to specify parameters for the curve to fit, hence 7 options are encoded for the user; see the images. Because secant rises so fast near asymptotes, be sure to specify enough divisions to the division point to capture high enough y values as desired. Setting maximum x and y values allowed will clip extremes but if set too low will also shorten pline lengths shorter than desired depending on the number of divisions. For even y values, a boundary line and the Trim command will often be required. If one sees connections across asymptotes, redo the curve with a greater number of divisions within spans.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Secant.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Secant.html</a> (history and definition)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Trigonometric_functions#History" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Trigonometric_functions#History</a> (etymology and historical development)</li>
+      <li><a href="https://journals.sagepub.com/doi/10.1177/00218286211013202" target="_blank" rel="noopener noreferrer">https://journals.sagepub.com/doi/10.1177/00218286211013202</a> (Fincke and early modern trigonometry)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SECANT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc p1 p2)
+  (setq id "Secant Curve"
+        iq "y=a·sec(b·x)"
+        dcl "SECANT"
+        opt '("a,b values" "asymptote point, a value" "trough height,b value" "trough height,asymptote point"
+              "trough bottom" "trough height,1 pt on curve" "1st asymptote,1 pt on curve")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 100
+        dpt '(1.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fa (get_real 2 "Y = a·sec(b·x):  (a) value" 1)
+          fb (get_real 2 "Y = a·sec(b·x):  (b) value" 1)
+          fc (get_keyword 0 "Yes No" "Divide pi (half wavelength) by b" "Yes")
+          fb (if (eq fc "Yes") (/ pi fb) fb)))
+   ((eq kw 1)
+    (setq fa (get_real 2 "Y = a·sec(b·x):  (a) value" 1)
+          p1 (get_boundpt "First asymptote point" "Division point" divpt basept nil nil nil nil nil nil)
+          fb (/ pi (* 2.0 (get_xspan basept xaxisangle p1)))))
+   ((eq kw 2)
+    (setq p1 (get_boundpt "Trough height point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          fb (get_real 2 "Y = a·sec(b·x):  (b) value" 1)
+          fc (get_keyword 0 "Yes No" "Divide pi (half wavelength) by b" "Yes")
+          fb (if (eq fc "Yes") (/ pi fb) fb)))
+   ((eq kw 3)
+    (setq p1 (get_boundpt "Trough height point" "Division point" divpt basept nil nil nil 0 nil T)
+          p2 (get_boundpt "Asymptote point" "Division point" divpt basept 0 nil T nil nil nil)
+          fa (get_yspan basept xaxisangle p1)
+          fb (/ pi (* 2.0 (get_xspan basept xaxisangle p2)))))
+   ((eq kw 4)
+    (setq p1 (get_boundpt "Trough bottom (1st loop)" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          fb (/ pi 0.5 (get_xspan basept xaxisangle p1))))
+   ((eq kw 5)
+    (setq p1 (get_boundpt "Trough height point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          p2 (get_boundpt "Point on curve" "Division point" divpt basept nil nil nil fa nil T)
+          x2 (get_xspan basept xaxisangle p2)
+          y2 (get_yspan basept xaxisangle p2)
+          fc (get_keyword 0 "A D" "Is point on Ascending or Descending slope?" "A")
+          fb (if (eq fc "A") (/ (acos (/ fa y2)) x2) (/ (- (* 2 pi) (acos (/ fa y2))) x2))))
+((eq kw 6)
+    (setq p1 (get_boundpt "Asymptote point" "Division point" divpt basept nil nil nil 0 nil T)
+          x1 (get_xspan basept xaxisangle p1)
+          fb (/ pi (* 2.0 x1))
+          x2 x1
+          p2 (get_boundpt "Point on curve, descending=left, ascending=right of origin" "Division point" divpt basept (- x1) x1 nil nil nil nil)
+          x2 (get_xspan basept xaxisangle p2)
+          y2 (get_yspan basept xaxisangle p2)
+          fa (* y2 (cos (* fb x2))))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 100)
+        xc '(eval a2)
+        yc '(/ fa (avoid_zero (cos (* fb (eval a2)))))
+        paramstep (/ xspan divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SECANT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

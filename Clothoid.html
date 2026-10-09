@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clothoid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Clothoid</h1>
+      <p class="short-description">The plane curve whose curvature is proportional to arc length with the mathematically smoothest transition between a straight path and a circular arc.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Clothoid/Clothoid01-360.avif"
+           alt="Clothoid, a=1">
+      <figcaption>
+        Clothoid, a=1
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Clothoid parametric integral equations:</div>
+      \[ x(t) = 2a \int_{0}^{t} \cos\left( \frac{\pi u^{2}}{2} \right) \, du , \quad y(t) = 2a \int_{0}^{t} \sin\left( \frac{\pi u^{2}}{2} \right) \, du \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Curvature law (defining property):</div>
+      \[ \kappa = \frac{s}{a^{2}} \quad (s = \text{arc length from origin}) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The clothoid occupies a unique position in mathematics and engineering because it arises naturally from a simple curvature law: curvature proportional to arc length, expressed conceptually as κ ∝ s. This idea was first studied systematically by Leonhard Euler in the 18th century, who investigated curves defined by prescribed curvature variation rather than explicit algebraic equations. Euler showed that such a curve provides the smoothest possible transition between straight and curved motion, laying the theoretical groundwork for later applications.<sup>1</sup></p>
+    <p>In the early 19th century, the same curve reappeared independently in wave optics through the work of Augustin-Jean Fresnel, who introduced the integrals (see below) to analyze diffraction patterns. These integrals describe how wave phase accumulates and interferes, and when plotted parametrically they form the spiral now known as the Cornu spiral.<sup>2</sup> The curve was later popularized and tabulated for practical use by Alfred Cornu, whose graphical methods allowed engineers and physicists to evaluate diffraction without extensive calculation.<sup>3</sup> The Italian mathematician Ernesto Cesàro named it <em>clothoid</em>, after Clotho, one of the three Fates who spins the thread of life, reflecting the curve’s steadily “spinning” curvature.</p>
+    <p>By the late 19th and early 20th centuries, engineers recognized that Euler’s curvature law solved a long-standing practical problem: how to transition smoothly between a straight path (zero curvature) and a circular arc (constant curvature) without abrupt changes.<sup>4</sup></p>
+    <p>The most important application of the clothoid is in highway and railway design. When a vehicle enters a curve directly from a straight path, a sudden jump in curvature produces a sharp lateral acceleration, which is uncomfortable and potentially unsafe. By inserting a clothoid transition, curvature increases gradually, ensuring smooth steering input and minimizing “jerk” (the rate of change of acceleration). This principle is now standard in modern road and rail alignment design worldwide.<sup>1,4</sup></p>
+    <p>Beyond transportation engineering, clothoids are widely used in robotics, CNC machining, and autonomous vehicle path planning for similar reasons. In optics, the Cornu spiral remains a fundamental tool for visualizing Fresnel diffraction: distances along the spiral correspond to phase, and chords between points represent resultant wave amplitudes.<sup>2,3</sup> In mechanics and structural analysis, similar curvature profiles appear in beam bending and flexible material deformation, where gradual stress variation is required to avoid localized failure. The same property is used in ship hull design to control curvature distribution.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cornu/cornu.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cornu/cornu.shtml</a> (history, Euler spiral and engineering use).</li>
+      <li><a href="https://mathworld.wolfram.com/FresnelIntegrals.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FresnelIntegrals.html</a> (definition and properties of Fresnel integrals).</li>
+      <li><a href="https://mathworld.wolfram.com/CornuSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CornuSpiral.html</a> (Cornu spiral and diffraction applications).</li>
+      <li><a href="https://www.2dcurves.com/spiral/spirale.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/spiral/spirale.html</a> (applications in road and railway design).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CLOTHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                     id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh)
+  (setq id "Clothoid"
+        iq "x=a·∫₀ᵗcos(πu²/2)du, y=a·∫₀ᵗsin(πu²/2)du"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in t-span"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (* 2.0 (get_real 2 "a (asymptote x&y value)" 1.0))
+        fb (get_real 2 "t-span" 5.0)
+        eq_display (strcat "\na=" (rtos (/ fa 2.0) 2 4))
+        paramstep (/ fb (1- divcount))
+        fc 0.0
+        fd 0.0
+        fe 0.0
+        xc 'fd
+        yc 'fe
+        skm '(T T nil)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)        
+        a2 '(progn (setq ff fc
+                         fc (+ fc paramstep)
+                         fg (+ ff (* 0.5 paramstep))
+                         fh (* 0.5 pi fg fg)
+                         fd (+ fd (* fa (* (cos fh) paramstep)))
+                         fe (+ fe (* fa (* (sin fh) paramstep))))
+                   fc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CLOTHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

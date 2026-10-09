@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Avrami Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Avrami Curve</h1>
+      <p class="short-description">Sigmoidal curve modeling the transformed fraction y(t) during isothermal nucleation-and-growth phase transformations.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Avrami/Avrami01-360.avif"
+           alt="Avrami Curve, k=1, multiple values of n"
+      <figcaption>
+        Avrami Curve, k=1,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">1.5</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">2.5</span>,
+        <span class="figcap-value" style="color:#FF9600">3</span>,
+        <span class="figcap-value" style="color:#9600FF">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Avrami/Avrami02-360.avif"
+           alt="Avrami Curve, multiple values of k, n=2
+      <figcaption>
+        Avrami Curve, k=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1</span>,
+        <span class="figcap-value" style="color:#009600">2</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">10</span>,
+        n=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Avrami/Avrami03-360.avif"
+           alt="Avrami Curve, pt at 0.8,0.6, k=1.4317, n=1">
+      <figcaption>Avrami Curve, pt at 0.8,0.6, k=1.4317, n=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Avrami/Avrami04-360.avif"
+           alt="Avrami Curve, pts at 0.8,0.6, 1.5,0.8, k=1.1191, n=0.8961">
+      <figcaption>Avrami Curve, pts at 0.8,0.6, 1.5,0.8, k=1.1191, n=0.8961</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Avrami/Avrami05-360.avif"
+           alt="Avrami Curve,half-life=2, k=0.1733, n=2.0000">
+      <figcaption>Avrami Curve, half-life=2, k=0.1733, n=2.0000</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Avrami Curve Cartesian equation:</div>
+      \[ y = 1 - e^{-k t^n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Johnson–Mehl–Avrami–Kolmogorov (JMAK) model, commonly called the Avrami equation, describes the kinetics of isothermal phase transformations in solids, particularly those involving nucleation and growth processes.<sup>1,2</sup> The model emerged from independent but converging work in the late 1930s and early 1940s. Andrey N. Kolmogorov published the foundational statistical theory in 1937, treating random nucleation in space and time with constant growth rates.<sup>3</sup> Melvin Avrami extended this in a series of papers from 1939 to 1941, incorporating probabilistic considerations for the transformed fraction.<sup>4</sup> Concurrently, William A. Johnson and Robert F. Mehl applied similar ideas in 1939 to describe pearlite formation from austenite in steels, emphasizing practical metallurgical kinetics.<sup>5</sup> The combined framework is now known as the JMAK (or sometimes KJMA) model.</p>
+    <p>The equation arises from assuming spatially random nucleation, constant (or time-dependent) isotropic growth, and impingement of growing domains that prevents overlap in the extended volume calculation. The transformed fraction y(t) follows an exponential form that emerges naturally from these assumptions rather than being an empirical fit. The Avrami exponent n reflects the underlying mechanism: it combines dimensionality of growth and nucleation behavior. For three-dimensional growth with continuous (sporadic) nucleation, n = 4; for three-dimensional with site-saturated (instantaneous) nucleation, n = 3; for two-dimensional growth, n = 2 or 3; for one-dimensional, n = 1 or 2.<sup>6</sup> Non-integer values often appear in real systems due to mixed mechanisms, surface effects, or deviations from ideal assumptions.</p>
+    <p>In materials engineering and the natural sciences, the Avrami equation is foundational for modeling time-dependent phase changes where the fraction transformed is more critical than detailed microstructure. In metallurgy, it describes austenite decomposition to pearlite, bainite, or other products during heat treatment, allowing prediction of transformation progress at constant temperature. In polymer science, it models isothermal crystallization kinetics, with parameters extracted from differential scanning calorimetry (DSC) data via Avrami plots.<sup>7</sup> It applies to devitrification of metallic glasses, crystallization in thin films during deposition (e.g., island nucleation and coalescence), oxidation layer growth, and surface reactions. In battery electrode materials, it describes phase changes during intercalation or conversion reactions driven by nucleation fronts. The sigmoidal shape—slow initial rise due to nucleation, acceleration as interface grows, and saturation as reactants deplete—makes it a preferred mechanistic model over purely empirical sigmoids in engineering contexts.</p>
+    <p>Compared to the logistic or Gompertz curves, the Avrami form rises more gradually near t = 0 when n &gt; 1, lacks a fixed inflection constraint, and ties curvature directly to physical dimensionality and nucleation rate. This physical interpretability favors its use where parameters carry mechanistic meaning rather than mere curve-fitting.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Avrami_equation" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Avrami_equation</a> (history, derivation, and exponent interpretations)</li>
+      <li><a href="https://royalsocietypublishing.org/doi/10.1098/rsif.2023.0242" target="_blank" rel="noopener noreferrer">https://royalsocietypublishing.org/doi/10.1098/rsif.2023.0242</a> (critical review of JMAK applications beyond materials science)</li>
+      <li>Kolmogorov A. (1937). On the statistical theory of metal crystallization. <em>Izv. Akad. Nauk SSSR Ser. Mat.</em> 1:335–360. (foundational 1937 paper)</li>
+      <li>Avrami M. (1939–1941). Kinetics of phase change I–III. <em>J. Chem. Phys.</em> 7–9. (series of key papers)</li>
+      <li>Johnson W.A., Mehl R.F. (1939). Reaction kinetics in processes of nucleation and growth. <em>Trans. AIME</em> 135:416–442. (metallurgical application)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Avrami_equation" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Avrami_equation</a> (exponent n values and growth dimensionality)</li>
+      <li>Lorenzo A.T. et al. (2007). DSC isothermal polymer crystallization kinetics... Guidelines... Avrami equation. (polymer/DSC applications)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:AVRAMI (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan paramstep
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc p1 p2 x1p y1p x2p y2p)
+  (setq id "Avrami Curve"
+        iq "y(t)=1−exp(−k·tⁿ)"
+        dcl "AVRAMI"
+        opt '("k,n values"
+              "solve k from one point"
+              "solve k,n from two points"
+              "half-time form (t½)")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+  ((= kw 0)
+   (setq fa (get_real 2 "\nk (rate; larger = faster transformation)" 1.0)
+         fb (get_real 2 "\nn (exponent; higher = more sigmoidal)" 2.0)))
+  ((= kw 1)
+   (princ "\nsolve k from point")
+   (setq fb (get_real 2 "\nn (exponent; higher = more sigmoidal)" 2.0)
+         p1 (get_boundpt "\nCurve point (t,y)" nil nil basept 0 nil nil 0 1.0 nil)
+         x1p (get_xspan basept xaxisangle p1)
+         y1p (get_yspan basept xaxisangle p1)
+         fa (/ (- (log (- 1.0 y1p))) (alt_expt x1p fb nil))))
+  ((= kw 2)
+   (princ "\nsolve k,n from two points")
+   (setq p1 (get_boundpt "\nCurve point 1" nil nil basept 0 nil nil 0 1.0 nil)
+         x1p (get_xspan basept xaxisangle p1)
+         y1p (get_yspan basept xaxisangle p1)
+         p2 (get_boundpt "\nCurve point 2" nil nil basept 0 nil nil 0 1.0 nil)
+         x2p (get_xspan basept xaxisangle p2)
+         y2p (get_yspan basept xaxisangle p2)
+         fb (/ (log (/ (- (log (- 1.0 y2p))) (- (log (- 1.0 y1p)))))
+               (log (/ x2p x1p)))
+         fa (/ (- (log (- 1.0 y1p))) (alt_expt x1p fb nil))))
+  ((= kw 3)
+   (princ "\nhalf-time form")
+   (setq fb (get_real 2 "\nn (exponent; higher = more sigmoidal)" 2.0)
+         fc (get_real 2 "\nt½ (time when y reaches 0.5)" 1.0)
+         fa (/ (log 2.0) (alt_expt fc fb nil)))))
+(setq eq_display (strcat "\nk=" (rtos fa 2 4) ", n=" (rtos fb 2 4))
+      paramstep (/ xspan divcount)
+      xc '(eval a2)
+      yc '(- 1.0 (exp (- (* fa (alt_expt (eval a2) fb nil)))))
+      skm '(T T T)
+      a1 0
+      a2 a1
+      x1 (eval xc)
+      y1 (eval yc)
+      a2 '(+ a1 paramstep)
+      x2 '(eval xc)
+      y2 '(eval yc))
+(cc))
+(C:AVRAMI)</code></pre>
+</section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Heart Curve</h1>
+      <p class="short-description">A collection of plane curves that produce a heart outline through polar, parametric, algebraic, Fourier, and mechanical-linkage constructions.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Heart/Heart01-360.avif"
+           alt="Heart Curve, Algebraic, a=1">
+      <figcaption>Heart Curve, Algebraic, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart02-360.avif"
+           alt="Heart Curve, Boddorf, a=1">
+      <figcaption>Heart Curve, Boddorf, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart03-360.avif"
+           alt="Heart Curve, Bos">
+      <figcaption>Heart Curve (Bos)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart04-360.avif"
+           alt="Heart Curve, Cardioid, a=0.5">
+      <figcaption>Heart Curve, Cardioid, a=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart05-360.avif"
+           alt="Heart Curve, Caspar">
+      <figcaption>Heart Curve, Caspar</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart06-360.avif"
+           alt="Heart Curve, Pierre-Daniel">
+      <figcaption>Heart Curve, Pierre-Daniel</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart07-360.avif"
+           alt="Heart Curve, Dascanio-1">
+      <figcaption>Heart Curve, Dascanio-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart08-360.avif"
+           alt="Heart Curve, Dascanio-2">
+      <figcaption>Heart Curve, Dascanio-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart09-360.avif"
+           alt="Heart Curve, Fourier">
+      <figcaption>Heart Curve, Fourier</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart10-360.avif"
+           alt="Heart Curve, Kuriscak">
+      <figcaption>Heart Curve, Kuriscak</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart11-360.avif"
+           alt="Heart Curve, Laporte">
+      <figcaption>Heart Curve, Laporte</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart12-360.avif"
+           alt="Heart Curve, Log-Modified">
+      <figcaption>Heart Curve, Log-Modified</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart13-360.avif"
+           alt="Heart Curve, Mangaldan">
+      <figcaption>Heart Curve, Mangaldan</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart14-360.avif"
+           alt="Heart Curve, Samothrace">
+      <figcaption>Heart Curve, Samothrace</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart15-360.avif"
+           alt="Heart Curve, Sillke-1">
+      <figcaption>Heart Curve, Sillke-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart16-360.avif"
+           alt="Heart Curve, Sillke-2">
+      <figcaption>Heart Curve, Sillke-2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart17-360.avif"
+           alt="Heart Curve, Sillke-3">
+      <figcaption>Heart Curve, Sillke-3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart18-360.avif"
+           alt="Heart Curve, Sillke-4 Ellipse, k=4,p=0.5=1,q=1">
+      <figcaption>Heart Curve, Sillke-4, Ellipse, k=4,p=0.5=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart19-360.avif"
+           alt="Heart Curve, Sillke-4 New values, k=5,p=0.75=1,q=1">
+      <figcaption>Heart Curve, Sillke-4 New values, k=5,p=0.75=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart20-360.avif"
+           alt="Heart Curve, Sillke-4 Square Root, k=4,p=0.5=1,q=0.5">
+      <figcaption>Heart Curve, Sillke-4, Square Root, k=4,p=0.5=1,q=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart21-360.avif"
+           alt="Heart Curve, Sillke-4 Schroeder, k=4,p=0.5=1,q=2/3">
+      <figcaption>Heart Curve, Sillke-4, Schroeder, k=4,p=0.5=1,q=2/3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart22-360.avif"
+           alt="Heart Curve, Ueki, a=0.99,b=3.5,c=2,d=4.5">
+      <figcaption>Heart Curve, Ueki, a=0.99,b=3.5,c=2,d=4.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart23-360.avif"
+           alt="Heart Curve, Valentine">
+      <figcaption>Heart Curve, Valentine</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Heart/Heart24-360.avif"
+           alt="Heart Curve, Zeitler, a=1">
+      <figcaption>Heart Curve, Zeitler, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Algebraic Heart (polar):</div>
+      \[ (r^{2}-a^{2})^{3}=a\cdot r^{5}\cos^{2}\theta\sin^{3}\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Boddorf Heart (polar):</div>
+      \[ r=a\cdot|\tan\theta|^{|\cot\theta|} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bos Heart (parametric):</div>
+      \[ x=\cos t,\quad y=\sin t+\sqrt{|\cos t|} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cardioid (polar):</div>
+      \[ r=a(1-\sin\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Caspar Heart (polar):</div>
+      \[ r=\Bigl(-\frac{324}{\pi^{2}}\Bigr)\theta^{2}+\Bigl(\frac{396}{\pi}\Bigr)\theta-105 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Pierre-Daniel Heart (parametric):</div>
+      \[ x=\sqrt{\frac{\cos^{3}(2(\theta-\pi/4))}{\cos^{2}(\theta-\pi/4)}},\quad y=2\sin(2(\theta-\pi/4))-\tan^{2}(\theta-\pi/4) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Dascanio-1 Heart (parametric):</div>
+      \[ x=\sin t\cdot\cos t\cdot\ln|t|,\quad y=|t|^{0.3}\sqrt{\cos t} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Dascanio-2 Heart (parametric):</div>
+      \[ x=\sin t\cdot\cos t\cdot\ln|t|,\quad y=\sqrt{|t|}\cdot\cos t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Fourier Heart (parametric):</div>
+      \[ x=16\sin^{3}t,\quad y=13\cos t-5\cos 2t-2\cos 3t-\cos 4t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Kuriscak Heart (implicit):</div>
+      \[ x^{2}+\Biggl[y-\frac{2(x^{2}+|x|-6)}{3(x^{2}+|x|+2)}\Biggr]^{2}=36 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Laporte Heart (parametric):</div>
+      \[ x=\sin^{3}t,\quad y=\cos t-\cos^{4}t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Log-Modified Heart (polar):</div>
+      \[ r=2-2\sin\theta+\frac{\sin\theta\cdot\sqrt{|\cos\theta|}}{\sin\theta+1.4} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Mangaldan Heart (parametric):</div>
+      \[ x=-\sqrt{2}\sin^{3}t,\quad y=2\cos t-\cos^{2}t-\cos^{3}t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Samothrace Heart (polar):</div>
+      \[ r=\frac{\tan(\theta/2)}{1+0.5\cos(3\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sillke-1 Heart (polar):</div>
+      \[ r=-1-\cos\bigl(\theta/2+\pi/4\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sillke-2 Heart (polar):</div>
+      \[ r=\frac{|\theta|-\pi/2}{\pi} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sillke-3 Heart (polar):</div>
+      \[ r=(1-|\theta|)(1+3|\theta|) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sillke-4 Heart, Ellipse-heart case:</div>
+      \[ x^{2}+4\bigl(y-0.5\cdot|x|\bigr)^{2}=1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sillke-4 Heart, New-values case:</div>
+      \[ x^{2}+5\bigl(y-0.75\cdot|x|\bigr)^{2}=1 \]
+    </div>    
+    <div class="equation-line">
+      <div class="equation-label">Sillke-4 Heart, Square-root case:</div>
+      \[ x^{2}+4\bigl(y-0.5\cdot|x|^{0.5}\bigr)^{2}=1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sillke-4 Heart, Schroeder case:</div>
+      \[ x^{2}+4\bigl(y-0.5\cdot|x|^{2/3}\bigr)^{2}=1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ueki Heart:</div>
+      \[ \begin{align*}
+      x &= \Biggl(\cos t - \frac{c\cos t}{\sqrt{\cos^{2}t+(\sin t-a)^{2}}}\Biggr)
+      \Biggl(1 - \frac{d}{\sqrt{\Biggl(\cos t - \frac{c\cos t}{\sqrt{\cos^{2}t+(\sin t-a)^{2}}}\Biggr)^{2}
+      + \Biggl(\sin t - \frac{c(\sin t-a)}{\sqrt{\cos^{2}t+(\sin t-a)^{2}}}-b\Biggr)^{2}}}\Biggr) \\[1em]
+      y &= \Biggl(\sin t - \frac{c(\sin t-a)}{\sqrt{\cos^{2}t+(\sin t-a)^{2}}}\Biggr)
+      - \frac{d}{\sqrt{\Biggl(\cos t - \frac{c\cos t}{\sqrt{\cos^{2}t+(\sin t-a)^{2}}}\Biggr)^{2}
+      + \Biggl(\sin t - \frac{c(\sin t-a)}{\sqrt{\cos^{2}t+(\sin t-a)^{2}}}-b\Biggr)^{2}}}
+      \Biggl(\sin t - \frac{c(\sin t-a)}{\sqrt{\cos^{2}t+(\sin t-a)^{2}}}-b\Biggr)
+      \end{align*} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Valentine Heart (parametric):</div>
+      \[ x=-(1+\cos t)\sin t,\quad y=a(1+\cos t)\sin\bigl(3t/4-\pi/4\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Zeitler Heart (polar):</div>
+      \[ r=a\cdot\sin^{7}t\cdot e^{|2t|} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The mathematical heart shape has no single inventor or canonical formula; it is a composite of several traditions—geometric, anatomical, and artistic—that converged into the modern symbol. The earliest examples of the “heart” icon appear in medieval European manuscripts of the 13th–14th centuries, where the almond- or fig-shaped motif symbolized the human soul, sincerity, or charity rather than physical anatomy. Its codification as the symbol of romantic love followed in Renaissance emblem books and playing-card design. Mathematically, however, “heart curves” arise as independent byproducts of quite different analytical investigations.</p>
+    <p>The classical cardioid, derived from rolling-circle kinematics and defined by \( r = a(1 \pm \cos\theta) \) or \( r = a(1 \pm \sin\theta) \), is the oldest truly analytical heart form. It appears in 17th-century studies of epicycloids (La Hire, de Roberval, Bernoulli) and in later optics as the caustic of a circle.<sup>1,2,3</sup> When rotated 90° it yields the familiar heart outline. The name “cardioid” itself was introduced by de Castillon in 1741.</p>
+    <p>The so-called Fourier heart, popular in computer graphics, traces a smooth, closed curve through harmonic summation. It is effectively a truncated Fourier series chosen to approximate a symmetric heart outline; it is widely used for plotting demonstrations, Valentine’s graphics, and CNC engraving patterns.</p>
+    <p>Algebraic and polynomial hearts such as \( (x^{2} + y^{2} - 1)^{3} = x^{2} y^{3} \) (traced to Eugen Beutel, 1909)<sup>4</sup> or Kuriscak’s rational form reemerged in the 1980s–1990s in recreational-mathematics circles, showing that a simple polynomial relation can mimic the heart contour. The algebraic heart is implemented here with a polar conversion of the equation.</p>
+    <p>Dascanio and Samothrace hearts belong to modern generative families derived from trigonometric or logarithmic modulations. Their asymmetry and spiral decay connect more to artistic rendering than to classical geometry. The Samothrace form, with a tangent-based radial modulation, has been used in animation paths and logo design for its soft pointed tip and broad upper lobe.</p>
+    <p>Torsten Sillke’s 1990s exploration on Mathematische Basteleien<sup>5</sup> catalogued several minimal-formula hearts of increasing algebraic simplicity. Sillke-1 is a half-angle cardioid variant. Sillke-2 and -3 are normalized piecewise-linear/quadratic hearts built from \( |\theta| \) polynomials. Sillke-4 serves as a template, with the Schroeder, square-root, and ellipse-heart forms as parameter cases.</p>
+    <p>The Ueki heart is a mechanical linkage-derived form involving two Wittgenstein rods and a circular crank. The Valentine heart is a modern trigonometric composition chosen for balanced proportion when rotated upright; it intentionally reproduces the stylized “Valentine” graphic while preserving smooth curvature near the apex. Zeitler’s exponential-sine form introduces a damping-like amplitude \( e^{|2t|} \) together with \( \sin^{7} \), producing a pointed upper cusp and rapidly vanishing sides that yield a heart-flame pattern popular in mathematical art renderings.</p>
+    <p>Additional named forms present in the code (Boddorf, Bos, Caspar, Pierre-Daniel, Laporte, Log-Modified, Mangaldan) arise from the same recreational and generative sources. Applications remain concentrated in computer graphics, CNC decorative toolpaths, animation and logo design, and mathematical art. The classical cardioid retains its historical roles in epicycloid kinematics and as an optical caustic. No broader industrial engineering applications for the modern algebraic or generative hearts have been identified beyond these decorative and educational uses.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Cardioid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cardioid.html</a> (polar and parametric equations, epicycloid and caustic properties).</li>
+      <li><a href="https://mathworld.wolfram.com/HeartCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/HeartCurve.html</a> (catalogue of algebraic, parametric, and polar heart forms including Dascanio and Kuriscak).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Cardioid/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Cardioid/</a> (cardioid history, La Hire, de Castillon, optical caustic).</li>
+      <li><a href="https://www.mathweb.fr/euclide/2018/09/14/des-equations-de-coeurs/" target="_blank" rel="noopener noreferrer">https://www.mathweb.fr/euclide/2018/09/14/des-equations-de-coeurs/</a> (Beutel, Laporte, Boddorf, and Daniel heart equations).</li>
+      <li><a href="https://mathematische-basteleien.de/heart.htm" target="_blank" rel="noopener noreferrer">https://mathematische-basteleien.de/heart.htm</a> (Sillke series, Bos, Caspar, Beutel algebraic heart, and related minimal formulas).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HEART (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xstep restartflag
+                  id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn kw2)
+  (setq id "Heart Curve"
+        iq ""
+        dcl "HEART"
+        opt '("Algebraic" "Boddorf" "Bos" "Cardioid" "Caspar" "Daniel" "Dascanio-1" "Dascanio-2" "Fourier" "Kuriscak" "Laporte" "Log-Modified"
+              "Mangaldan" "Samothrace" "Sillke-1" "Sillke-2" "Sillke-3" "Sillke-4" "Ueki" "Valentine" "Zeitler")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "a (scale): " 1.0)
+           eq_display (strcat "\nAlgebraic Heart: (r²-" (rtos fa 2 4) "²)³=" (rtos fa 2 4) "·r⁵·cos²θ·sin³θ")
+           rval
+             '(progn
+                (setq fb (eval a2)
+                      fc  (sin fb))
+                (if (< (abs fc) 1e-9)
+                  (setq fd fa)
+                  (progn
+                    (setq fe  (cos fb)
+                          ff  (* fe fe fc fc fc))
+                    (if (not fd) (setq fd fa))
+                    (setq fg 0.0
+                          fh (max (* 2.0 fa) (* 2.0 fd))
+                          fi  0)
+                    (defun f_f (r / r2 u)
+                      (setq r2 (* r r)
+                            u  (- r2 (* fa fa)))
+                      (- (* u u u) (* fa ff (expt r 5))) )
+                    (setq fj (f_f fh))
+                    (while (and (<= fj 0.0) (< fi 40))
+                      (setq fh (* 2.0 fh)
+                            fj (f_f fh)
+                            fi (+ fi 1)))
+                    (setq fi 0)
+                    (while (< fi 60)
+                      (setq fk (* 0.5 (+ fg fh))
+                            fl (f_f fk))
+                      (if (<= fl 0.0)
+                        (setq fg fk)
+                        (setq fh fk))
+                      (setq fi (+ fi 1)))
+                    (setq fd fh)))
+                fd)
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 1)
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\nBoddorf Heart: r=" (rtos fa 2 4) "·|tan θ|^|cot θ|")
+           rval '(progn (setq fc (abs (/ (sin (eval a2)) (avoid_zero (cos (eval a2))))) fd (abs (/ (cos (eval a2)) (avoid_zero (sin (eval a2)))))
+                 fe (alt_expt fc fd T)) (* fa fe))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           paramstep (/ paramstep 2.0)
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 2)
+     (setq eq_display "\nBos Heart: x=cos(t), y=sin(t)+√(|cos(t)|)"
+           xc '(cos (eval a2))
+           yc '(+ (sin (eval a2)) (sqrt (abs (cos (eval a2)))))
+           paramstep (/ (* 2.0 pi) divcount)
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 3)
+     (setq fa (get_real 2 "a (scale)" 0.5)
+           eq_display (strcat "\nCardioid:r=" (rtos fa 2 4) "·(1-sin(θ))")
+           rval '(* fa (- 1.0 (sin (eval a2))))     
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))   
+    ((eq kw 4)
+     (setq eq_display "\nCaspar Heart: r=(-324/π²)*θ²+(396/π)*θ-105"
+           rval '(* 0.0632920431335941 (+ (* -324.0 (/ (expt (eval a2) 2.0) (* pi pi))) (* 396.0 (/ (eval a2) pi)) -105.0))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           paramstep (/ paramstep 6.0)
+           a1 (/ pi 2.0)
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 5)
+     (setq eq_display "\nPierre-Daniel Heart: x=√(cos³(2u)/cos²(u)), y=2sin(2u)-tan²(u), u=θ-45°"
+           xc '(progn (setq fc (- (eval a2) (/ pi 4.0)) fd (cos fc) fe (cos (* 2.0 fc))) (if (< (abs fd) 1e-9) 1e13 (progn (setq fg (/ (alt_expt fe 3.0 T)
+               (alt_expt (avoid_zero fd) 4.0 T))) (if (< (abs fg) 1e-12) 0.0 (if (< fg 0.0) 1e13 (sqrt fg))))))
+           yc '(progn (setq fc (- (eval a2) (/ pi 4.0)) fd (cos fc) fe (/ (sin fc) (avoid_zero fd))) (- (sin (* 2.0 fc)) (/ (alt_expt fe 2.0 T) 2.0)))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 6)
+     (setq eq_display "\nDascanio-1 Heart: x=sin(t)*cos(t)*ln|t|, y=|t|⁰·³·√cos(t)"
+           xc '(if (= (eval a2) 0.0) 0.0 (* 1.469355153968152 (sin (eval a2)) (cos (eval a2)) (log (abs (eval a2)))))
+           yc '(* 1.469355153968152 (expt (abs (eval a2)) 0.3) (sqrt (cos (eval a2))))
+           paramstep (/ 1.0 divcount)
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 7)
+     (setq eq_display "\nDascanio-2 Heart: x=sin(t)·cos(t)·ln|t|, y=√|t|·cos(t)"
+           xc '(if (= (eval a2) 0.0) 0.0 (* 1.469355153968152 (sin (eval a2)) (cos (eval a2)) (log (abs (eval a2)))))
+           yc '(* 1.469355153968152 (sqrt (abs (eval a2))) (cos (eval a2)))
+           paramstep (/ 1.0 divcount)
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 8)
+     (setq eq_display "\nFourier Heart: x=16·sin³(t), y=13·cos(t)-5·cos(2t)-2·cos(3t)-cos(4t)"
+           xc '(* 0.4999999992243888 (expt (sin (eval a2)) 3.0))
+           yc '(* 0.0312499999515243 (+ (* 13.0 (cos (eval a2))) (* -5.0 (cos (* 2.0 (eval a2)))) (* -2.0 (cos (* 3.0 (eval a2)))) (* -1.0 (cos (* 4.0 (eval a2))))))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 9)
+     (setq eq_display "\nKuriscak Heart: x²+[y-2(x²+|x|-6)/(3(x²+|x|+2))]²=36")
+     (prompt eq_display)
+     (setq kw2 (get_keyword 0 "Upper Lower" "portion: Upper Lower" "Upper"))
+     (cond
+       ((eq kw2 "Upper")
+        (setq yc '(+ (/ (/ (* 2.0 (+ (expt (* 12.0 (eval a2)) 2.0) (* 12.0 (eval a2)) -6.0)) (* 3.0 (+ (expt (* 12.0 (eval a2)) 2.0) (* 12.0 (eval a2)) 2.0))) 12.0)
+                  (/ (sqrt (max 0.0 (- 36.0 (expt (* 12.0 (eval a2)) 2.0)))) 12.0))))
+       ((eq kw2 "Lower")
+        (setq yc '(- (/ (/ (* 2.0 (+ (expt (* 12.0 (eval a2)) 2.0) (* 12.0 (eval a2)) -6.0)) (* 3.0 (+ (expt (* 12.0 (eval a2)) 2.0) (* 12.0 (eval a2)) 2.0))) 12.0)
+                  (/ (sqrt (max 0.0 (- 36.0 (expt (* 12.0 (eval a2)) 2.0)))) 12.0)))))
+     (setq xc '(eval a2)
+           paramstep (/ 0.5 divcount)
+           a1 0.0
+           a2 a1
+           x1 0 
+           x2 '(eval xc)))
+    ((eq kw 10)
+     (setq eq_display "\nLaporte Heart: x=sin³(t), y(t)=cos(t)-cos⁴(t)"
+           xc '(* 0.3535533788747483 (sqrt 2.0) (expt (sin (eval a2)) 3.0))
+           yc '(* 0.3535533788747483 (sqrt 2.0) (- (cos (eval a2)) (expt (cos (eval a2)) 4.0)))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 11)
+     (setq eq_display "\nLog-Modified Heart: r=2-2sinθ+(sinθ·√|cosθ|)/(sinθ+1.4)"
+           rval '(+ 2.0 (* -2.0 (sin (eval a2))) (/ (* (sin (eval a2)) (sqrt (abs (cos (eval a2))))) (+ (sin (eval a2)) 1.4)))
+           xc '(* 0.2244033013275930 (eval rval) (cos (eval a2)))
+           yc '(* 0.2244033013275930 (eval rval) (sin (eval a2)))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 12)
+     (setq eq_display "\nMangaldan Heart: x=-√2·sin³(t), y=2cos(t)-cos²(t)-cos³(t)"
+           xc '(* -0.3535533788747483 (sqrt 2.0) (expt (sin (eval a2)) 3.0))
+           yc '(* 0.3535533788747483 (+ (* 2.0 (cos (eval a2))) (* -1.0 (expt (cos (eval a2)) 2.0)) (* -1.0 (expt (cos (eval a2)) 3.0))))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))  
+    ((eq kw 13)
+     (setq eq_display "\nSamothrace Heart: r=tan(θ/2)/(1+0.5·cos(3θ))"
+           rval '(* 0.8555793677911545 (/ (tan (* 0.5 (eval a2))) (avoid_zero (+ 1.0 (* 0.5 (cos (* 3.0 (eval a2))))))))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           paramstep (/ paramstep 2.0)
+           a1 (/ pi -2.0)
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 14)
+     (setq eq_display "\nSillke-1 Heart: r=-1-cos(θ/2+π/4)"
+           rval '(* 1.129668238622270 (- (+ 1.0 (cos (+ (* 0.5 (eval a2)) (/ pi 4.0))))))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           a1 (/ pi 2)
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 15)
+     (setq eq_display "\nSillke-2 Heart: r=(|θ|-π/2)/π"
+           rval '(* 0.8632144416789373 (/ (abs (- (eval a2) (/ pi 2.0))) pi))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           a1 (/ pi -2.0)
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 16)
+     (setq eq_display "\nSillke-3 Heart: r=(1-|θ|)·(1+3|θ|)"
+           rval '(* 0.7905982641974822 (- 1.0 (abs (- (eval a2) (/ pi 2.0)))) (+ 1.0 (* 3.0 (abs (- (eval a2) (/ pi 2.0))))))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))
+           paramstep (/ paramstep pi)
+           a1 (1- (/ pi 2.0))
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 17)
+     (setq eq_prompt "\nSillke-4 Heart: x²+k(y-p·|x|^q)²=1"
+           kw2 (get_keyword 0 "Ellipse-heart square-Root Schroeder New-values" "Which values? Ellipse-heart square-Root Schroeder New-values" "New-values"))
+     (cond
+       ((eq kw2 "Ellipse-heart")
+        (setq fa 4.0 fb 0.5 fc 1.0))
+       ((eq kw2 "square-Root")
+        (setq fa 4.0 fb 0.5 fc 0.5))
+       ((eq kw2 "Schroeder")
+        (setq fa 4.0 fb 0.5 fc (/ 2.0 3.0)))
+       ((eq kw2 "New-values")
+        (setq fa (get_real 2 (strcat eq_prompt ", k (vertical weight)") 5.0)
+              fb (get_real 2 (strcat eq_prompt ", p (vertical stretch)") 0.75)
+              fc (get_real 2 (strcat eq_prompt ", q (lobe sharpness)") 1.0))))
+     (setq kw2 (get_keyword 0 "Upper Lower" "portion: Upper Lower" "Upper"))
+     (cond
+       ((eq kw2 "Upper")
+        (setq yc '(+ (* 0.5 fb (expt (* 2.0 (eval a2)) fc)) (sqrt (max 0.0 (/ (- 1.0 (expt (* 2.0 (eval a2)) 2.0)) fa))))))
+       ((eq kw2 "Lower")
+        (setq yc '(- (* 0.5 fb (expt (* 2.0 (eval a2)) fc)) (sqrt (max 0.0 (/ (- 1.0 (expt (* 2.0 (eval a2)) 2.0)) fa)))))))
+     (setq eq_display (strcat "\nx²+" (rtos fa 2 4) "·(y-" (rtos fb 2 4) "·|x|^" (rtos fc 2 4) ")²=1")
+           xc '(eval a2)
+           paramstep (/ 0.5 divcount)
+           a1 0.0
+           a2 a1
+           x1 0 
+           x2 '(+ x1 paramstep)))
+    ((eq kw 18)
+     (prompt "\nUeki Heart (Nested Conchoids)")
+     (setq fa (get_real 6 "a (1st bearing y)" 0.99)
+           fb (get_real 6 "b (2nd bearing y)" 3.5)
+           fc (get_real 6 "c (intermediate rod length)" 2.0)
+           fd (get_real 6 "d (tracing rod length)" 4.5)
+           eq_display (strcat "\na= "(rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+           xc '(progn (setq fe (cos (eval a2)) ff (sin (eval a2))) (setq fg fe fh (- ff fa) fi (sqrt (avoid_zero (+ (* fg fg) (* fh fh))))) (setq fj (- fe 
+               (* fc (/ fg fi))) fk (- ff (* fc (/ fh fi)))) (setq fl fj fm (- fk fb) fn (sqrt (avoid_zero (+ (* fl fl) (* fm fm))))) (- fj (* fd (/ fl fn))))
+           yc '(progn (- fk (* fd (/ fm fn))))
+           a1 (- paramstep)
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))
+    ((eq kw 19)
+     (setq eq_display "\nValentine Heart: x=-(1+cos(t))·sin(t), y=a·(1+cos(t))·sin(3t/4-π/4)"
+           xc '(* -0.3849001743983328 (+ 1.0 (cos (eval a2))) (sin (eval a2)))
+           yc '(* 0.5470200816946497 (+ 1.0 (cos (eval a2))) (sin (- (* 0.75 (eval a2)) (/ pi 4.0))))
+           a1 0
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc)))  
+    ((eq kw 20)
+     (setq eq_display "Zeitler Heart: r=a·sin⁷(t)·e^|2t|"
+           rval '(* 1.0 (expt (sin (eval a2)) 7.0) (exp (abs (* 2.0 (eval a2)))))
+           xc '(* 0.0413581779705275 (eval rval) (cos (eval a2)))
+           yc '(* 0.0413581779705275 (eval rval) (sin (eval a2)))
+           paramstep (/ paramstep 4.0)
+           a1 (- pi)
+           a2 a1
+           x1 (eval xc)
+           x2 '(eval xc))))
+  (setq skm (if (or (eq kw 4) (eq kw 5) (eq kw 6) (eq kw 7) (eq kw 9) (eq kw 17) (eq kw 20)) '(nil T T T) '(T T T T))
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        y2 '(eval yc))
+  (cc))
+(C:HEART)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

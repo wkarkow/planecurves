@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sacré Biquartic Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sacré Biquartic Curve</h1>
+      <p class="short-description">A trigonometric parametric biquartic (algebraic degree eight) with a triple point at the origin at which all tangents coincide.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Sacre/Sacre01-360.avif"
+           alt="Sacré Curve, a=1">
+      <figcaption>Sacré Curve, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Sacré Biquartic Curve Cartesian equation:</div>
+      \[ x^{8} + 4x^{6}y + y^{3}(y - 1) + 3x^{4}(2y - 3) + 2x^{2}y^{2}(2y + 3) = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sacré Biquartic Curve parametric equations:</div>
+      \[ x = a \cdot \sin(3t)\cos(t),\quad y = a \cdot \sin^{2}(3t)\sin^{2}(t) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Biquartic curves are algebraic plane curves of degree four in both variables when written implicitly (or, more generally, quartics with mixed degrees). They were studied extensively in the late 19th and early 20th centuries, when algebraic geometers were classifying plane curves by degree, singularities, and symmetry. Much of that work focused on cataloging how many nodes, cusps, or higher-order singular points a curve could possess, and how those singularities constrained the global shape. The Sacré curve is a modern contribution in that classical spirit. It was suggested by Carlos Sacré and popularized through MathCurve as an example of a particularly clean biquartic with a triple point at the origin in which all tangents coincide.<sup>1</sup> This makes it more degenerate than the familiar nodal or cuspidal quartics usually shown in textbooks, yet it remains visually simple and highly symmetric. What is especially appealing about this curve is that its parametric form is trigonometric, while its Cartesian form is a high-degree polynomial.</p>
+    <p>The Sacré Biquartic curve is a parametric plane curve of algebraic degree eight. It was suggested by the French mathematician Carlos Sacré, who is best known as co-author with Daniel Lehmann of the textbook <em>Géométrie et topologie des surfaces</em>, first published in 1982 by Presses Universitaires de France.<sup>2</sup> His academic contributions primarily focus on the study of surfaces and manifolds, and his work continues to be a standard reference in university-level mathematics courses. Sacré has been associated with French academic institutions, contributing to the foundational literature used in both French and international mathematical research.</p>
+    <p>No real-life applications in engineering or the natural sciences are documented for this curve.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/biquartic/biquartic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/biquartic/biquartic.shtml</a> (Biquartic curve entry with parametric equations)</li>
+      <li><a href="https://www.researchgate.net/publication/268826719_Geometrie_et_topologie_des_surfaces" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/268826719_Geometrie_et_topologie_des_surfaces</a> (textbook by Carlos Sacré and Daniel Lehmann)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SACRE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                  restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Sacre Curve"
+        iq "x=a·sin(3t)·cos(t), y=a·sin²(3t)·sin²(t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\nx=" (rtos fa 2 4) "·sin(3t)·cos(t), y=" (rtos fa 2 4) "·sin²(3t)·sin²(t)")
+        xc '(* fa (sin (* 3.0 (eval a2))) (cos (eval a2)))
+        yc '(* fa (sin (* 3.0 (eval a2))) (sin (* 3.0 (eval a2))) (sin (eval a2)) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SACRE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

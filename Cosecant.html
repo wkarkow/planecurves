@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cosecant Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cosecant Curve</h1>
+      <p class="short-description">The reciprocal of the sine function, plotted as y = a · csc(b · x), with vertical asymptotes at integer multiples of π/b and symmetric lobes of height |a| between consecutive asymptotes.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Cosecant/Cosecant01-360.avif"
+           alt="Cosecant, a=1,b=2/pi">
+      <figcaption>Cosecant (a,b), a=1,b=2/pi</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant02-360.avif"
+           alt="Cosecant, asymptote x=1.6,a=1.5">
+      <figcaption>Cosecant, asymptote x=1.6,a=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant03-360.avif"
+           alt="Cosecant, trough y=1.1,b=1.25/pi">
+      <figcaption>Cosecant, trough y=1.1,b=1.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant04-360.avif"
+           alt="Cosecant, asymptote x=1.6,trough y=1.1">
+      <figcaption>Cosecant, asymptote x=1.6,trough y=1.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant05-360.avif"
+           alt="Cosecant, trough bottom (0.7,0.7)">
+      <figcaption>Cosecant, trough bottom (0.7,0.7)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant06-360.avif"
+           alt="Cosecant, trough y=1.1, ascending curve pt (1.2,1.8)">
+      <figcaption>Cosecant, trough y=1.1, ascending curve pt (1.2,1.8)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant07-360.avif"
+           alt="Cosecant, trough y=1.1, descending curve pt (1.2,1.8)">
+      <figcaption>Cosecant, trough y=1.1, descending curve pt (1.2,1.8)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant08-360.avif"
+           alt="Cosecant, asymptote x=1.6, curve pt (1.2,1.8)">
+      <figcaption>Cosecant, asymptote x=1.6, curve pt (1.2,1.8)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cosecant/Cosecant09-360.avif"
+           alt="Cosecant, asymptote x=1.6, curve pt (0.2,1.4)">
+      <figcaption>Cosecant, asymptote x=1.6, curve pt (0.2,1.4)</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Cosecant Cartesian equation:</div>
+      \[ y = a \cdot \operatorname{csc}(b x) = \frac{a}{\sin(b x)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Trigonometric identity:</div>
+      \[ \operatorname{csc}(x) = \frac{1}{\sin(x)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The cosecant function emerged as part of the development of trigonometry from classical Greek geometry through medieval Islamic astronomy into early modern European mathematics.<sup>1,2</sup> Greek mathematicians such as Hipparchus and Ptolemy worked primarily with chord tables, but Islamic scholars including Al-Battani (c. 858–929) replaced chords with sine functions and introduced reciprocal relationships to simplify astronomical calculations. The earliest known use of a cosecant-like term appears in the late 16th century, when Bartholomäus Pitiscus formalized trigonometric terminology. More specifically, the name “cosecant” and its notation evolved through the work of mathematicians such as Thomas Fincke (1561–1656), who used the term <em>cotangens sinus</em>, and Samuel Jeake (1623–1690), who helped standardize abbreviated forms of trigonometric functions.<sup>3</sup> By the 17th century, trigonometric functions, including their reciprocals, were firmly established in navigation, surveying, and astronomy.<sup>4</sup> The prefix “co-” denotes a complementary relationship, since \(\operatorname{csc}(x) = \operatorname{sec}(\frac{\pi}{2} - x)\). In the 18th century, Leonhard Euler unified trigonometric functions within analysis, expressing them through infinite series and linking them to exponential functions via identities such as \(e^{ix} = \cos(x) + i\sin(x)\).</p>
+    <p>In real-world applications, the cosecant function appears most prominently in radar and antenna engineering, particularly in the design of cosecant-squared radiation patterns that are used in ground-based radar systems to maintain approximately constant signal strength with altitude over varying distances.<sup>5</sup> Because signal intensity decreases with distance, shaping the transmitted beam according to a \(\operatorname{csc}^{2}(\theta)\) profile compensates for this effect, allowing aircraft at different ranges to be detected with similar intensity. This principle is used in air-traffic control and surveillance radar systems. In wave analysis, vibration problems, and certain boundary-value solutions, reciprocal trigonometric forms arise when sinusoidal quantities appear in denominators. However, compared to sine and cosine, cosecant is used less often as a primary modeling function and more commonly as a derived expression within broader analytical solutions.</p>
+    <p>For such a basic function, it is helpful at times to specify parameters for the curve to fit, hence 7 options are encoded for the user; see the images. Because cosecant rises so fast near asymptotes, be sure to specify enough divisions to the division point to capture high enough y values as desired. Setting maximum x and y values allowed will clip extremes but if set too low will also shorten pline lengths shorter than desired depending on the number of divisions. For even y values, a boundary line and the Trim command will often be required. If one sees connections across asymptotes, redo the curve with a greater number of divisions within spans.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Cosecant.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cosecant.html</a> (definition and historical context).</li>
+      <li><a href="https://www.cuemath.com/trigonometry/cosecant-functions/" target="_blank" rel="noopener noreferrer">https://www.cuemath.com/trigonometry/cosecant-functions/</a> (curve behavior and trigonometric context).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Miller/mathsym/trigonometry/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Miller/mathsym/trigonometry/</a> (Fincke, Jeake, early terminology and notation).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Trigonometric_functions" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Trigonometric_functions</a> (development of reciprocal trigonometric functions).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cosecant/cosecant.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cosecant/cosecant.shtml</a> (radar and engineering applications).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>; COSECANT.LSP - started 6/10/25
+
+(defun C:COSECANT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc p1 p2)
+  (setq id "Cosecant Curve"
+        iq "y=a·csc(b·x)"
+        dcl "COSECANT"
+        opt '("a,b values" "asymptote point, a value" "trough height,b value" "trough height,asymptote point"
+              "trough bottom" "trough height,1 pt on curve" "1st asymptote,1 pt on curve")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 100
+        dpt '(1.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fa (get_real 2 "a value" 1)
+          fb (get_real 2 "b value" 1)
+          fc (get_keyword 0 "Yes No" "Divide pi (half wavelength) by b" "Yes")
+          fb (if (eq fc "Yes") (/ pi fb) fb)))
+   ((eq kw 1)
+    (setq fa (get_real 2 "a value" 1)
+          p1 (get_boundpt "First asymptote point" "Division point" divpt basept nil nil nil nil nil nil)
+          fb (/ pi (get_xspan basept xaxisangle p1))))
+   ((eq kw 2)
+    (setq p1 (get_boundpt "Trough height point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          fb (get_real 2 "b value" 1)
+          fc (get_keyword 0 "Yes No" "Divide pi (half wavelength) by b" "Yes")
+          fb (if (eq fc "Yes") (/ pi fb) fb)))
+   ((eq kw 3)
+    (setq p1 (get_boundpt "Trough height point" "Division point" divpt basept nil nil nil 0 nil T)
+          p2 (get_boundpt "Asymptote point" "Division point" divpt basept 0 nil T nil nil nil)
+          fa (get_yspan basept xaxisangle p1)
+          fb (/ pi (get_xspan basept xaxisangle p2))))
+   ((eq kw 4)
+    (setq p1 (get_boundpt "Trough bottom (1st loop)" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          fb (/ pi 2 (get_xspan basept xaxisangle p1))))
+   ((eq kw 5)
+    (setq p1 (get_boundpt "Trough height point" "Division point" divpt basept nil nil nil 0 nil T)
+          fa (get_yspan basept xaxisangle p1)
+          p2 (get_boundpt "Point on curve" "Division point" divpt basept nil nil nil fa nil T)
+          x2 (get_xspan basept xaxisangle p2)
+          y2 (get_yspan basept xaxisangle p2)
+          fc (get_keyword 0 "A D" "Is point on Ascending or Descending slope?" "A")
+          fb (if (eq fc "A")
+               (/ (- pi (ASIN (/ fa y2))) x2)
+               (/ (ASIN (/ fa y2)) x2))))
+   ((eq kw 6)
+    (setq p1 (get_boundpt "Asymptote point" "Division point" divpt basept nil nil nil 0 nil T)
+          x1 (get_xspan basept xaxisangle p1)
+          fb (/ pi x1)
+          x2 x1)
+    (while (= x1 x2)
+           (setq p2 (get_boundpt "Point on curve" "Division point" divpt basept 0 x1 T nil nil nil)
+                 x2 (get_xspan basept xaxisangle p2)
+                 y2 (get_yspan basept xaxisangle p2)
+                 fa (* y2 (sin (* fb x2)))))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 100)
+        xc '(eval a2)
+        yc '(/ fa (avoid_zero (sin (* fb (eval a2)))))
+        paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:COSECANT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

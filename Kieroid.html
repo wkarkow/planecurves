@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kieroid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Kieroid Curve</h1>
+      <p class="short-description">A rational quartic algebraic curve determined by a circle and two lines.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Kieroid/Kieroid01-360.avif"
+           alt="Kieroid, a=1,b=0.5,c=0.5, cissoid of Diocles">
+      <figcaption>Kieroid, a=1,b=0.5,c=0.5, cissoid of Diocles</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid02-360.avif"
+           alt="Kieroid, a=1,b=1,c=1, conchoid of Nicomedes">
+      <figcaption>Kieroid, a=1,b=1,c=1, conchoid of Nicomedes</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid03-360.avif"
+           alt="Kieroid, a=1, b=-1,c=2, Maclaurin trisectrix">
+      <figcaption>Kieroid, a=1, b=-1,c=2, Maclaurin trisectrix</figcaption>
+    </figure>  
+    <figure>
+      <img src="images/Kieroid/Kieroid04-360.avif"
+           alt="Kieroid, a=1,b=0,c=1, right strophoid">
+      <figcaption>Kieroid, a=1,b=0,c=1, right strophoid</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid05-360.avif"
+           alt="Kieroid, a=1,b=2,c=1, visiera">
+      <figcaption>Kieroid, a=1,b=2,c=1, visiera</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/Kieroid/Kieroid06-360.avif"
+          data-caption="Kieroid, a=1(black),2(red),2.5(blue),3(green),3.5(orange),4(purple),b=1,c=1, Piriform-like"
+          alt="Kieroid, a=1(black),2(red),2.5(blue),3(green),3.5(orange),4(purple),b=1,c=1, Piriform-like">
+      <figcaption>
+        Kieroid, a=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">2.5</span>,
+        <span class="figcap-value" style="color:#009600">3</span>,
+        <span class="figcap-value" style="color:#FF9600">3.5</span>,
+        <span class="figcap-value" style="color:#9600FF">4</span>,
+        b=1,c=1, Piriform-like
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid07-360.avif"
+           alt="Kieroid, a=1,b=1.2,c=4">
+      <figcaption>Kieroid, a=1,b=1.2,c=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid08-360.avif"
+           alt="Kieroid, a=2,b=1,c=3">
+      <figcaption>Kieroid, a=2,b=1,c=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid09-360.avif"
+           alt="Kieroid, a=-2,b=1,c=1">
+      <figcaption>Kieroid, a=-2,b=1,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid10-360.avif"
+           alt="Kieroid, a=-1,b=2,c=2">
+      <figcaption>Kieroid, a=-1,b=2,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid11-360.avif"
+           alt="Kieroid, a=-0.5,b=2,c=2">
+      <figcaption>Kieroid, a=-0.5,b=2,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Kieroid/Kieroid12-360.avif"
+           alt="Kieroid, a=-2,b=1,c=1, + imaginary">
+      <figcaption>Kieroid, a=-2,b=1,c=1, + imaginary</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">Kieroid implicit equation:</div>
+      \[ y^{2}(x-a)^{2} + x^{2}(x-b)^{2} = c^{2}x^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Kieroid polar equation:</div>
+      \[ r = \dfrac{a}{\cos t} + (b-a)\cos t \pm \sqrt{c^{2}-(a-b)^{2}\sin^{2}t} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Kieroid curve<sup>1</sup> was studied by P. J. Kiernan in 1945 and named after him in R. C. Yates’ <em>A Handbook on Curves and Their Properties</em> (1947).<sup>2</sup> It is a rational quartic algebraic curve constructed as the locus of intersection points of a circle of fixed radius c centered at point P (moving vertically on the line x = b) with the line ON, where N moves vertically on the parallel line x = a and shares the same ordinate with P. The resulting curve has a singular point at the origin and lies in the strip between x = a and x = b (or is bounded otherwise if a &lt; b), with x = a as an asymptote when a &lt; b. The general polar equation unifies several classical curves through parameter selection. When a = b + c, the curve decomposes into a right rational circular cubic plus the asymptote x = a; all such cubics arise this way. Specific cases include the Cissoid of Diocles (when a = 2b = 2c), the right strophoid (a = c, b = 0), the Maclaurin trisectrix (2a = −2b = c), Visiera (when a = b − c), conchoids of lines (when a = b), and piriform-like shapes (when b = c and a ≫ 2b). These special cases trace to ancient Greek geometry. Diocles (c. 180 BC) invented the Cissoid of Diocles<sup>3</sup> to solve the Delian problem of doubling the cube. Nicomedes (c. 200 BC) introduced the Conchoid of Nicomedes<sup>4</sup> for neusis constructions including angle trisection and cube duplication; it later appeared in 17th-century mechanics. Colin Maclaurin examined the trisectrix<sup>5</sup> bearing his name in 1742 for the same trisection task.</p>
+    <p>No real-life applications in engineering or the natural sciences were identified for the Kieroid curve itself. Its value lies in the unified parametric generation of the classical special cases, useful in geometric constructions and CAD.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/kieroide/kieroide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/kieroide/kieroide.shtml</a> (definition, construction, special cases, and history reference to Kiernan 1945).</li>
+      <li><a href="https://archive.org/details/YatesHandbookCurves1947/page/n75/mode/2up" target="_blank" rel="noopener noreferrer">https://archive.org/details/YatesHandbookCurves1947/page/n75/mode/2up</a> (Yates, R. C., <em>A Handbook on Curves and Their Properties</em> page on Kieroid).</li>
+      <li><a href="https://mathworld.wolfram.com/CissoidofDiocles.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CissoidofDiocles.html</a> (history of Cissoid of Diocles).</li>
+      <li><a href="https://mathworld.wolfram.com/ConchoidofNicomedes.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ConchoidofNicomedes.html</a> (history of Conchoid of Nicomedes).</li>
+      <li><a href="https://mathworld.wolfram.com/MaclaurinTrisectrix.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/MaclaurinTrisectrix.html</a> (history of Maclaurin trisectrix).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:KIEROID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh maxdraw)
+  (setq id "Kieroid"
+        iq "r=a/cos(θ)+(b-a)cos(θ)±√(c²-(a-b)²sin²(θ))"
+        dcl "KIEROID"
+        opt '("Cissoid of Diocles" "Conchoid of Nicomedes" "Maclaurin Trisectrix" "Piriform-like" "Right Strophoid" "Visiera" "New Values")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (setq fa (get_real 2 "\na" 1.0)
+          fb (* fa 0.5)
+          fc (* fa 0.5)
+          fg 0.0
+          fd T
+          skm '(T T T)))
+   ((eq kw 1)
+    (setq fa (get_real 2 "\na" 1.0)
+          fc (get_real 2 "\nc" 1.0)
+          fb fa
+          fg 0.0
+          fd T
+          skm '(T T T)))
+   ((eq kw 2)
+    (setq fa (get_real 2 "\na" 1.0)
+          fb (- fa)
+          fc (* fa 2.0)
+          fg 0.0
+          fd T
+          skm '(T T T)))
+   ((eq kw 3)
+    (setq fa (get_real 2 "\na" 3.0)
+          fb (get_real 0 "\nb" 1.0)
+          fc fb
+          ff (if (equal fa fb 1e-12) 0.0 (asin (abs (/ fc (- fa fb)))))
+          fe (get_keyword 0 "Outer Inner" "\nOuter or Inner part?" "Outer")
+          fg (if (eq fe "Outer") 0.0 (- pi ff))
+          fh (if (eq fe "Outer") ff pi)
+          paramstep (/ (- fh fg) divcount)
+          fd T
+          skm '(T nil T)))
+   ((eq kw 4)
+    (setq fa (get_real 2 "\na" 1.0)
+          fb 0.0
+          fc fa
+          fg 0.0
+          fd T
+          skm '(T T T)))
+   ((eq kw 5)
+    (setq fa (get_real 2 "\na" 1.0)
+          fc (get_real 2 "\nc" 1.0)
+          fb (+ fc fa)
+          fg 0.0
+          fd T
+          skm '(T T T)))
+   ((eq kw 6)
+    (setq fa (get_real 0 "\na" 1.0)
+          fb (get_real 0 "\nb" 1.0)
+          fc (get_real 0 "\nc" 1.0)
+          fd (if (eq (get_keyword 0 "Real Imaginary" "\nReal or with Imaginary values?" "Real") "Real") T nil)
+          fg 0.0)
+    (if (and fd (> (abs (- fa fb)) fc))
+    (setq fe (if (eq (get_keyword 0 "Outer Inner" "\nOuter or Inner part?" "Outer") "Outer") 1.0 -1.0)
+          fg (if (<= (abs (- fa fb)) fc) 0.0 (- (asin (/ fc (abs (- fa fb))))))
+          paramstep (if (= fg 0) paramstep (/ (- (+ fg fg)) divcount))))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        rval (if (and (eq kw 6) fd (> (abs (- fa fb)) fc))
+             '(+ (/ fa (avoid_zero (cos (eval a2)))) (* (- fb fa) (cos (eval a2))) (if (< (setq rad (- (* fc fc) (* (- fa fb) (- fa fb)
+              (expt (sin (eval a2)) 2)))) -1e-12) 1e7 (* fe (alt_expt (max rad 0.0) 0.5 T))))
+             '(+ (/ fa (avoid_zero (cos (eval a2)))) (* (- fb fa) (cos (eval a2))) (alt_expt (if (< (abs (- (* fc fc) (* (- fa fb) (- fa fb)
+              (expt (sin (eval a2)) 2)))) 1e-9) 0.0 (- (* fc fc) (* (- fa fb) (- fa fb) (expt (sin (eval a2)) 2)))) 0.5 fd)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 20)
+        a1 fg
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:KIEROID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booth Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Booth Curve</h1>
+      <p class="short-description">A bicircular quartic plane algebraic curve that morphs continuously between near-circular and lemniscate-like regimes as the ratio a/b varies; the generalized polar form replaces the classical double-angle term with nθ.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Booth/Booth01-360.avif"
+           alt="Booth Curve, a=0,b=1,n=2">
+      <figcaption>Booth Curve, a=0,b=1,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth02-360.avif"
+           alt="Booth Curve, a=1,b=0,n=2">
+      <figcaption>Booth Curve, a=1,b=0,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth03-360.avif"
+          data-caption="a/b=1/0(black),0.9/0.1(red),0.8/0.2(blue),0.7/0.3(green),0.6/0.4(orange),0.5/0.5(purple),0.4/0.6(cyan),0.3/0.7(brown),0.2/0.8(lime),0.1/0.9(magenta),0/1(teal),n=2(black)"
+          alt="Booth Curve, multiple a and b values, n=2">
+      <figcaption>
+        Booth Curve, a=1,b=
+        <span class="figcap-value" style="color:#000000">1/0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.9/0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.8/0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.7/0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.6/0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5/0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.4/0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.3/0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.2/0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.1/0.9</span>,
+        <span class="figcap-value" style="color:#009696">0/1</span>,
+        n=2
+    </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth04-360.avif"
+           alt="Booth Curve, a=1,b=1,n=2">
+      <figcaption>Booth Curve, a=1,b=1,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth05-360.avif"
+           alt="Booth Curve, a=1,b=1,n=3">
+      <figcaption>Booth Curve, a=1,b=1,n=3</figcaption>
+    </figure><figure>
+      <img src="images/Booth/Booth06-360.avif"
+           alt="Booth Curve, a=1,b=1,n=5">
+      <figcaption>Booth Curve, a=1,b=1,n=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth07-360.avif"
+           alt="Booth Curve, a=1,b=0.25,n=2">
+      <figcaption>Booth Curve, a=1,b=0.25,n=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth08-360.avif"
+           alt="Booth Curve, a=1,b=0.25,n=3">
+      <figcaption>Booth Curve, a=1,b=0.25,n=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth09-360.avif"
+           alt="Booth Curve, a=1,b=0.25,n=5">
+      <figcaption>Booth Curve, a=1,b=0.25,n=5</figcaption>
+    </figure><figure>
+      <img src="images/Booth/Booth10-360.avif"
+           alt="Booth Curve, a=1,b=0.25,n=5.05">
+      <figcaption>Booth Curve, a=1,b=0.25,n=5.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth11-360.avif"
+           alt="Booth Curve, a=1,b=0.25,n=5.05">
+      <figcaption>Booth Curve, a=1,b=0.25,n=5.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth12-360.avif"
+           alt="Booth Curve, a=1,b=1.5,n=5.05">
+      <figcaption>Booth Curve, a=1,b=1.5,n=5.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Booth/Booth13-360.avif"
+           alt="Booth Curve, a=1,b=2.25,n=5.05">
+      <figcaption>Booth Curve, a=1,b=2.25,n=5.05</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Booth Curve polar equation:</div>
+      \[ r = \sqrt{\dfrac{a^{2} \cos(2\theta) + \sqrt{a^{4} \cos^{2}(2\theta) + 4 b^{4}}}{2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Booth Curve polar equation:</div>
+      \[ r = \sqrt{\dfrac{a^{2} \cos(n\theta) + \sqrt{a^{4} \cos^{2}(n\theta) + 4 b^{4}}}{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Booth curve implemented here is the classical bicircular quartic version in the sense of Loria (1911)<sup>1</sup> and Salmon<sup>2</sup> (1869). This polar form is obtained by solving the classical bicircular quartic for r. It differs from the hippopede variant labeled “Booth oval” and “Booth lemniscate” on modern sites such as MathCurve<sup>3</sup> and 2dcurves.com, which is covered separately under Hippopede. Long before Booth, the ancient hippopede was known to Greek geometers such as Eudoxus and Proclus as the toric intersection curve. James Booth (1810–1878), a British mathematician, revisited these curves in the 19th century, analyzing the oval and lemniscate regimes. However, Loria and Salmon applied Booth’s name instead to this distinct bicircular quartic family.<sup>1,2,3</sup></p>
+    <p>The curve changes continuously with the ratio a/b. When a/b → 0, it tends to a circle of radius b. When a/b → ∞, it approaches the polar form of the lemniscate of Bernoulli. The generalization with parameter n replaces the classical cos(2θ) term with cos(nθ). This makes the curve a useful illustration of how a single algebraic family can interpolate between qualitatively different conic and quartic behaviors through elementary trigonometric substitution.</p>
+    <p>No real-life applications in engineering or the natural sciences were identified for this exact polar form in the sources consulted (the related hippopede variant has limited use in physics modeling of radial spin waves in magnetic materials).<sup>4</sup> It remains primarily of interest in classical algebraic geometry and as a teaching example of bicircular quartics.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>Loria, G. <em>Curve algebriche speciali algebriche e trascendenti</em> (1911) (quartic families).</li>
+      <li>Salmon, G. <em>A Treatise on the Higher Plane Curves</em>, 2nd ed. (1879) (bicircular quartics).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/booth/booth.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/booth/booth.shtml</a> (naming distinction and hippopede variant).</li>
+      <li><a href="https://link.aps.org/doi/10.1103/PhysRevB.102.104430" target="_blank" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevB.102.104430</a> (hippopede spin-wave application in magnetic materials).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BOOTH (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb fc)
+  (setq id "Booth Curve"
+        iq "r=√[(a²·cos(2θ)+√(a⁴·cos²(2θ)+4·b⁴))/2]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (scale)" 1.0)
+        fb (get_real 0 "b (b→∞ circle, b→0, lemniscate)" 0.1)
+        fc (get_real 2 "n (θ multiplier)" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", n=" (rtos fc 2 4))
+        rval '(if (<= (/ (+ (* fa fa (cos (* fc (eval a2)))) (alt_expt (+ (* fa fa fa fa (cos (* fc (eval a2))) (cos (* fc (eval a2))))
+              (* 4.0 fb fb fb fb)) 0.5 nil)) 2.0) 1e-9) 0.0 (alt_expt (/ (+ (* fa fa (cos (* fc (eval a2)))) (alt_expt (+ (* fa fa fa fa
+              (cos (* fc (eval a2))) (cos (* fc (eval a2)))) (* 4.0 fb fb fb fb)) 0.5 nil)) 2.0) 0.5 nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BOOTH)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

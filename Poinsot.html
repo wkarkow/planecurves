@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poinsot Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Poinsot Spiral</h1>
+      <p class="short-description">Polar spirals corresponding to orbits under an inverse-cube central force.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Poinsot/Poinsot01-360.avif"
+           alt="Poinsot Spiral, Canonical cosh, a=1,α=1,k=0.2096">
+      <figcaption>Poinsot Spiral, Canonical cosh, a=1,α=1,k=0.2096</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot02-360.avif"
+           data-caption="Poinsot Spiral, Canonical cosh, a=1,α=1,k=0.1(black),0.2(red),0.4(blue),0.6(green),0.8(orange),1.0(purple)"
+           alt="Poinsot Spiral, Canonical cosh, a=1,α=1,k=0.1(black),0.2(red),0.4(blue),0.6(green),0.8(orange),1.0(purple)">
+      <figcaption>
+        Poinsot Spiral, Canonical cosh, a=1,α=1,k=0.1(black),0.2(red),0.4(blue),0.6(green),0.8(orange),1.0(purple)
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.2</span>,
+        <span class="figcap-value" style="color:#0000FF">0.4</span>,
+        <span class="figcap-value" style="color:#009600">0.6</span>,
+        <span class="figcap-value" style="color:#FF9600">0.8</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>,
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot03-360.avif"
+           data-caption="Poinsot Spiral, Canonical cosh, a=1,α=1,k=1(black),2(red),3(blue),4(green),5(orange),6(purple),7(cyan),8(brown)"
+           alt="Poinsot Spiral, Canonical sinh, a=1, k variation">
+      <figcaption>
+        k =
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">6</span>,
+        <span class="figcap-value" style="color:#0096FF">7</span>,
+        <span class="figcap-value" style="color:#AA5555">8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot04-360.avif"
+           alt="Poinsot Spiral, Canonical sinh, a=1,β=1,k=0.2096">
+      <figcaption>Poinsot Spiral, Canonical sinh, a=1,β=1,k=0.2096</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot05-360.avif"
+           data-caption="Poinsot Spiral, Canonical sinh, a=1,β=1,β=0.2(black),0.4(red),0.6(blue),0.8(green),1.0(orange)"
+           alt="Poinsot Spiral, Canonical sinh, a=1,β=1,β=0.2(black),0.4(red),0.6(blue),0.8(green),1.0(orange)">
+      <figcaption>
+        Poinsot Spiral, Canonical sinh, a=1,β=1,β=
+        <span class="figcap-value" style="color:#000000">0.2</span>,
+        <span class="figcap-value" style="color:#FF0000">0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">0.6</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot06-360.avif"
+           data-caption="Poinsot Spiral, Canonical sinh, a=1,β=1,β=1(black),2(red),3(blue),4(green),5(orange),6(purple)"
+           alt="Poinsot Spiral, Canonical sinh, a=1,β=1,β=1(black),2(red),3(blue),4(green),5(orange),6(purple)">
+      <figcaption>
+        Poinsot Spiral, Canonical sinh, a=1,β=1,β=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">6</span>,
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot07-360.avif"
+           data-caption="Logarithmic Spiral, a=1,α=1,β=1(black),-1(red),k=0.1"
+           alt="Logarithmic Spiral, a=1,α=1,β=1(black),-1(red),k=0.1">
+      <figcaption>Logarithmic Spiral, a=1,α=1,β=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">-1</span>,
+        k=0.1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot08-360.avif"
+           data-caption="Poinsot Spiral, Canonical cosh, a=1(black),α=1(black),k=1(black), vs Logarithmic Spiral, a=1(red),α=1(red),β=1(red),k=1(red)"
+           alt="Poinsot Spiral, Canonical cosh, a=1(black),α=1(black),k=1(black), vs Logarithmic Spiral, a=1(red),α=1(red),β=1(red),k=1(red)">
+      <figcaption>
+        Poinsot Spiral, Canonical cosh, 
+        <span class="figcap-value" style="color:#000000">a=1</span>,
+        <span class="figcap-value" style="color:#000000">α=1</span>,
+        <span class="figcap-value" style="color:#000000">k=1</span>,
+        vs Logarithmic Spiral, 
+        <span class="figcap-value" style="color:#FF0000">a=1</span>,
+        <span class="figcap-value" style="color:#FF0000">α=1</span>,
+        <span class="figcap-value" style="color:#FF0000">β=1</span>,
+        <span class="figcap-value" style="color:#FF0000">k=1</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Poinsot/Poinsot09-360.avif"
+           alt="Poinsot Spiral, Generalized, a=1,α=1,β=−1.25,j=0.1,k=0.2">
+      <figcaption>Poinsot Spiral, Generalized, a=1,α=1,β=−1.25,j=0.1,k=0.2</figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Poinsot Spiral Curve polar equation:</div>
+      \[ r = \dfrac{a}{\alpha\cdot\cosh(j\theta)+\beta\cdot\sinh(k\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Canonical Poinsot cosh polar equation:</div>
+      \[ r = \dfrac{a}{\cosh(k\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Canonical Poinsot sinh polar equation:</div>
+      \[ r = \dfrac{a}{\sinh(k\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Logarithmic spiral limit polar equation:</div>
+      \[ r = \dfrac{a\cdot e^{\pm k\theta}}{\alpha} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Poinsot spiral, also known as Cotes' spiral, was determined by Roger Cotes in 1722. It is named after French mathematician Louis Poinsot (1777–1859). The curve and its generalizations solve the central-force problem for a particle moving under an attractive or repulsive force directed toward the origin and proportional to the inverse cube of the distance. Binet's formula from orbital mechanics reduces this force law to the following polar equations.<sup>1,2</sup> The two canonical cases are \( r = a/\cosh(k\theta) \) and \( r = a/\sinh(k\theta) \). In the combined, generalized equation, when \( \alpha = \pm\beta \) and \( j = k \) the equation reduces to the logarithmic spiral \( r = a\cdot e^{\mp k\theta}/\alpha \). The bounded form is the orthogonal projection onto the equatorial plane of a rhumb line (loxodrome) traced on a sphere.<sup>1</sup></p>
+    <p>In the natural sciences the Poinsot family models trajectories of a particle under an inverse-cube central force. While gravity and electrostatic forces follow the inverse-square law and produce conic sections, the inverse-cube law produces these spirals. The spirals also arise as the inverse of the path traced by a marble rolling inside a uniformly rotating tube.<sup>1</sup> No additional engineering or industrial applications beyond the classical-mechanics context were identified in the primary references.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/poinsot/poinsot.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/poinsot/poinsot.shtml</a> (Cotes 1722 determination, central-force interpretation, loxodrome projection, marble-in-tube inverse path)</li>
+      <li><a href="https://mathworld.wolfram.com/PoinsotsSpirals.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PoinsotsSpirals.html</a> (definition and polar forms)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:POINSOT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe ff)
+  (setq id "Poinsot Spiral"
+        iq "r=a/(α·cosh(jθ)+β·sinh(kθ))"
+        dcl "POINSOT"
+        opt '("Canonical Poinsot cosh" "Canonical Poinsot sinh" "Logarithmic Spiral" "Generalized Poinsot")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+      (princ "\nPoinsot Spiral: r=a/cosh(kθ)")
+      (setq fa (get_real 2 "a (scale)" 1.0)
+            fb (get_real 2 "k (θ multiplier)" 0.2096003591394913)
+            fc 1.0
+            fd 0.0
+            fe fb
+            ff fb
+            eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))))
+   ((eq kw 1)
+      (princ "\nPoinsot Spiral: r=a/sinh(kθ)")
+      (setq fa (get_real 2 "a (scale)" 1.0)
+            fb (get_real 2 "k (θ multiplier)" 0.2096003591394913)
+            fc 0.0
+            fd 1.0
+            fe fb
+            ff fb
+            eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))))
+   ((eq kw 2)
+      (princ "\nPoinsot Limit (Logarithmic): r=a/(α·cosh(kθ)+β·sinh(kθ)), α=±β")
+      (setq fa (get_real 2 "a (scale)" 1.0)
+            fb (get_real 2 "k (theta multiplier)" 0.1)
+            fc (get_real 2 "α (nonzero)" 1.0)
+            fd (get_keyword 0 "Plus Minus" "β = Plus or Minus α?" "Plus")
+            fe fb
+            ff fb
+            fd (if (eq fd "Minus") (- fc) fc)
+            eq_display (strcat "\na=" (rtos fa 2 4) ", α=" (rtos fc 2 4) ", k=" (rtos fb 2 4) ", β=" (rtos fd 2 4))))
+   ((eq kw 3)
+      (princ "\nGeneralized Poinsot: r=a/(α·cosh(jθ)+β·sinh(kθ))")
+      (setq fa (get_real 2 "a (scale)" 1.0)
+            fc (get_real 2 "α (cosh weight)" 1.0)
+            fd (get_real 2 "β (sinh weight)" -1.25)
+            fe (get_real 2 "j (cosh rate)" 0.1)
+            ff (get_real 2 "k (sinh rate)" 0.2)
+            maxdraw (get_real 2 "Maximum x and y values allowed?" 50)
+            eq_display (strcat "\na=" (rtos fa 2 4) ", α=" (rtos fc 2 4) ", β=" (rtos fd 2 4) ", j=" (rtos fe 2 4) ", k=" (rtos ff 2 4)))))
+  (setq rval '(/ fa (avoid_zero (+ (* fc (* 0.5 (+ (exp (* fe (eval a2))) (exp (- (* fe (eval a2))))))) (* fd (* 0.5 (- (exp (* ff (eval a2))) (exp (- (* ff (eval a2))))))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm (if (eq kw 1) '(nil T T) (if (eq kw 3) '(nil nil nil) '(T nil T)))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:POINSOT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

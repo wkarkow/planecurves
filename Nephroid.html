@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nephroid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Nephroid</h1>
+      <p class="short-description">A two-cusped epicycloid formed when a circle of radius \(r\) rolls externally around a fixed circle of radius \(2r\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Nephroid/Nephroid01-360.avif"
+           alt="Nephroid, r=1">
+      <figcaption>Nephroid, r=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Nephroid parametric equations:</div>
+      \[ x = 3r\cos\theta - r\cos(3\theta),\quad y = 3r\sin\theta - r\sin(3\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The nephroid<sup>1,2,3</sup> is a two-cusped epicycloid formed when a circle of radius \(a\) rolls externally around a fixed circle of radius \(2a\). Christiaan Huygens demonstrated in 1678 that the nephroid is the catacaustic envelope of parallel light rays reflected from the interior of a circle; he published the observation in <em>Traité de la lumière</em> in 1690. The curve was also studied by Tschirnhausen in 1679, Jacques Bernoulli in 1692, and Daniel Bernoulli in 1725. Richard A. Proctor first applied the name “nephroid” (from the Greek for kidney-shaped) to this specific curve in 1878. George Biddell Airy supplied the theoretical explanation using wave optics in 1838.</p>
+    <p>In optics and the natural sciences, the nephroid appears as the bright caustic curve visible on the surface of liquid inside a cylindrical cup (such as a coffee cup) when illuminated by parallel rays such as sunlight reflecting from the curved inner wall.</p>
+    <p>In the parametric equations and in the AutoLISP routine, \(r\) is the rolling-circle radius (the same quantity as \(a\) in the construction above). The fixed circle then has radius \(2r\). The curve is the two-cusp case of the epicycloid family treated separately under Epicycloid.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Nephroid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Nephroid.html</a> (history, parametric equations, catacaustic properties)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Nephroid/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Nephroid/</a> (historical details and naming by Proctor)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/nephroid/nephroid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/nephroid/nephroid.shtml</a> (epicycloid construction and optical properties)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:NEPHROID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Nephroid Curve"
+        iq "x=3r·cos(θ)−r·cos(3θ), y=3r·sin(θ)−r·sin(3θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "r (rolling circle radius)" 1.0)
+        eq_display (strcat "\nr=" (rtos fa 2 4))
+        xc '(- (* 3.0 fa (cos (eval a2))) (* fa (cos (* 3.0 (eval a2)))))
+        yc '(- (* 3.0 fa (sin (eval a2))) (* fa (sin (* 3.0 (eval a2)))))
+        skm '(T T T)a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:NEPHROID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

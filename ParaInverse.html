@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabola Inverse Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Parabola Inverse Curve</h1>
+      <p class="short-description">The image of the standard parabola \(X=at^{2}\), \(Y=2at\) under inversion in a circle centered at (0,0).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Parainverse/Parainverse01-360.avif"
+           data-caption="Parabola Inverse Curve, a=1,k=1, pedal point=(-3.0;0)(black),(-2.0;0)(red),(-1.0;0)(blue),(0:0)(green),(1;0)(orange),(2;0)(purple),(3;0)(cyan),(4;0)(brown),(5;0)(lime)"
+           alt="Parabola Inverse Curve, a=1,k=1, pedal point=(-3.0;0)(black),(-2.0;0)(red),(-1.0;0)(blue),(0:0)(green),(1;0)(orange),(2;0)(purple),(3;0)(cyan),(4;0)(brown),(5;0)(lime)">
+      <figcaption>
+        Parabola Inverse Curve, a=1,k=1, pedal point=
+        <span class="figcap-value" style="color:#000000">(-3,0)</span>,
+        <span class="figcap-value" style="color:#FF0000">(-2,0)</span>,
+        <span class="figcap-value" style="color:#0000FF">(-1,0)</span>,
+        <span class="figcap-value" style="color:#009600">(0,0)</span>,
+        <span class="figcap-value" style="color:#FF9600">(1,0)</span>,
+        <span class="figcap-value" style="color:#9600FF">(2,0)</span>,
+        <span class="figcap-value" style="color:#0096FF">(3,0)</span>,
+        <span class="figcap-value" style="color:#AA5555">(4,0)</span>,
+        <span class="figcap-value" style="color:#00FF00">(5,0)</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parainverse/Parainverse02-360.avif"
+           data-caption="Parabola Inverse Curve, Paisley, a=1,k=1(black),2(red),pedal point=(-10,5)"
+           alt="Parabola Inverse Curve, Paisley, a=1,k=1(black),2(red),pedal point=(-10,5)">
+      <figcaption>
+        Parabola Inverse Curve, Paisley, a=1,k=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        pedal point=(-10,5)
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parainverse/Parainverse03-360.avif"
+           data-caption="Parabola Inverse Curve, a=1,k=1, pedal point=(-3.0;2)(black),(-2.0;2)(red),(-1.0;2)(blue),(0:2)(green),(1;2)(orange),(2;2)(purple),(3;2)(cyan),(4;2)(brown),(5;2)(lime)"
+           alt="Parabola Inverse Curve, a=1,k=1, pedal point=(-3.0;2)(black),(-2.0;2)(red),(-1.0;2)(blue),(0:2)(green),(1;2)(orange),(2;2)(purple),(3;2)(cyan),(4;2)(brown),(5;2)(lime)">
+      <figcaption>
+        Parabola Inverse Curve, a=1,k=1, pedal point=
+        <span class="figcap-value" style="color:#000000">(-3,2)</span>,
+        <span class="figcap-value" style="color:#FF0000">(-2,2)</span>,
+        <span class="figcap-value" style="color:#0000FF">(-1,2)</span>,
+        <span class="figcap-value" style="color:#009600">(0,2)</span>,
+        <span class="figcap-value" style="color:#FF9600">(1,2)</span>,
+        <span class="figcap-value" style="color:#9600FF">(2,2)</span>,
+        <span class="figcap-value" style="color:#0096FF">(3,2)</span>,
+        <span class="figcap-value" style="color:#AA5555">(4,2)</span>,
+        <span class="figcap-value" style="color:#00FF00">(5,2)</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Parabola Inverse Curve parametric equations:</div>
+      \[ x = x_{0} + \dfrac{k(a t^{2}-x_{0})}{(a t^{2}-x_{0})^{2}+(2 a t-y_{0})^{2}},\quad y = y_{0} + \dfrac{k(2 a t-y_{0})}{(a t^{2}-x_{0})^{2}+(2 a t-y_{0})^{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Parabola Inverse Curve<sup>1,2</sup> is obtained by applying geometric inversion to a standard parabola with respect to a circle. Given a parabola parametrized by \(x(t)=at^{2}\), \(y(t)=2at\), and inversion with respect to a circle of center \((x_{0},y_{0})\) and radius \(k\), each point P on the parabola is mapped to a point P′ lying on the same ray from the center such that the product of the distances from the center to P and to P′ equals \(k^{2}\). This transformation belongs to inversive geometry<sup>3</sup>, which maps generalized circles (circles and straight lines) to generalized circles while preserving angles—a property useful for simplifying certain constructions in plane geometry. Inversive geometry<sup>3</sup> was explored sporadically in antiquity but received systematic study in the nineteenth century by mathematicians such as Jakob Steiner. Special positions of the inversion center yield classical curves. When the center coincides with the parabola vertex, the inverse is the cissoid of Diocles. When it coincides with the focus, the result is a cardioid.</p>
+    <p>Real-life applications specifically of the general Parabola Inverse Curve in engineering and the natural sciences are not documented in the primary mathematical references consulted. The underlying inversion technique, however, enables practical mechanisms such as the Peaucellier–Lipkin linkage in mechanical engineering, which converts circular motion into exact straight-line motion. The special-case cardioid appears in acoustics as the directional sensitivity pattern of cardioid microphones.</p>
+    <p>In applied settings, inverse curves appear most naturally in problems involving conformal mapping, optical ray tracing, and geometric constructions where distance relationships relative to a fixed point are central. For the art world, the inverse of a parabola, for appropriate parameter values, gives rise to a paisley-like form.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/ParabolaInverseCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ParabolaInverseCurve.html</a> (definition, parametric equations, special cases)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/inverse/inverse.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/inverse/inverse.shtml</a> (inverses of conics including the parabola)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Inversive_geometry" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Inversive_geometry</a> (history of inversive geometry and Peaucellier–Lipkin linkage)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PARAINVERSE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                        restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe)
+  (setq id "Parabola Inverse Curve"
+        iq "x=x₀+k·(a·t²-x₀)/((a·t²+x₀)²+(2a·t-y₀)²),y=y₀+k·(2a·t-y₀)/((a·t²+x₀)²+(2a·t-y₀)²)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions along parameter t"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (parabola scale)" 1.0)
+        fb (get_real 0 "x0 (inversion center x-coordinate)" 1.0)
+        fc (get_real 0 "y0 (inversion center y-coordinate)" 0.0)
+        fd (get_real 2 "k (inversion radius)" 1.0)
+        paramstep (if (= (get_keyword 0 "Plus Minus" "\nsweep in Plus or Minus direction?" "Plus") "Minus") (- paramstep) paramstep)
+        eq_display (strcat "\na= " (rtos fa 2 4) ", x0=" (rtos fb 2 4) ", y0=" (rtos fc 2 4) ", k=" (rtos fd 2 4))
+        fe '(+ (* (- (* fa (* (eval a2) (eval a2))) fb) (- (* fa (* (eval a2) (eval a2))) fb)) (* (- (* 2.0 fa (eval a2)) fc) (- (* 2.0 fa (eval a2)) fc)))
+        xc '(if (= (eval fe) 0.0) 1e9 (+ fb (/ (* fd (- (* fa (* (eval a2) (eval a2))) fb)) (eval fe))))
+        yc '(if (= (eval fe) 0.0) 1e9 (+ fc (/ (* fd (- (* 2.0 fa (eval a2)) fc)) (eval fe))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PARAINVERSE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

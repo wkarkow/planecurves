@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nielsen's Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Nielsen's Spiral</h1>
+      <p class="short-description">Parametric plot of the cosine and sine integrals.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/NielsonSpiral/NielsonSpiral01-360.avif"
+           alt="Nielsen's Spiral, a=1">
+      <figcaption>Nielsen's Spiral, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Nielsen's Spiral parametric equations:</div>
+      \[ x = a\cdot\operatorname{ci}(t)=\gamma+\ln t+\int_{0}^{t}\frac{\cos u-1}{u}\,du \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label"></div>
+      \[ y = a\cdot\operatorname{si}(t)=\int_{0}^{t}\frac{\sin u}{u}\,du-\frac{\pi}{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Nielsen’s spiral<sup>1,2</sup>, sometimes called the sici spiral (from sine and cosine integrals), arises from the late-19th / early-20th-century study of special functions defined by integrals, particularly the sine and cosine integrals. These functions had already appeared naturally in problems involving oscillatory behavior with slowly decaying amplitude, such as diffraction, wave propagation, and asymptotic analysis of integrals. The spiral itself is most commonly attributed to Niels Nielsen<sup>3</sup> (1865–1931), a Danish mathematician known for his work on special functions and integral representations. Nielsen’s broader research program was focused on understanding how integral-defined functions behave globally, especially their convergence, asymptotics, and geometric structure when interpreted parametrically. By plotting the sine and cosine integrals, one obtains a curve whose geometry directly reflects the accumulation of oscillatory contributions weighted by \(1/t\). The spiral emerges naturally as the cumulative geometry of the sine and cosine integrals when viewed as a trajectory in a plane. Its curvature increases linearly with the parameter and its arc length grows logarithmically, properties that were of direct interest in asymptotic analysis. The direction of the tangent advances essentially linearly with the parameter and the curve winds infinitely many times while converging toward a limiting point. The decay of the integrands as \(1/t\) produces slow convergence and long-range memory, which is visible in the spiral’s gradual tightening. The constant \(\gamma \approx 0.5772156649\) is Euler’s constant (the Euler–Mascheroni constant).</p>
+    <p>Real-life applications in engineering and the natural sciences are documented in acoustic design. The spiral serves as a profile function for horns in loudspeaker systems, where its geometry supports favorable impedance matching, moderate beaming, and acceptable radiation patterns.<sup>4</sup> It also provides an intuitive geometric picture of the sine and cosine integrals, which engineers and physicists encounter as \(\int \sin(t)/t\,dt\) and \(\int \cos(t)/t\,dt\) in signal processing, diffraction theory, and transient response analysis.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/NielsensSpiral.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/NielsensSpiral.html</a> (definition, equations, and properties)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sici/sici.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sici/sici.shtml</a> (naming origin and comparisons)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Niels_Nielsen_(mathematician)" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Niels_Nielsen_(mathematician)</a> (biography of Niels Nielsen)</li>
+      <li><a href="https://sphericalhorns.net/2020/07/20/spiral-functions-for-horns-the-sici-spiral/" target="_blank" rel="noopener noreferrer">https://sphericalhorns.net/2020/07/20/spiral-functions-for-horns-the-sici-spiral/</a> (application in acoustic horn design)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:NIELSENSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                          restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fe ff fg fh fi fj)
+  (setq id "Nielsen's Spiral"
+        iq "x=a·ci(t), y=a·si(t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb 0.5772156649015329
+        fc 1e-15
+        fe 0.0
+        ff nil
+        fg 0.0
+        fh 0.0
+        fi nil
+        fj 0.0
+        xc '(* fa (+ fb (log (eval a2)) (progn (setq fj (/ (- (cos (eval a2)) 1.0) (avoid_zero (eval a2)))) (if fi (setq fh (+ fh (* 0.5 
+            (+ fi fj) paramstep))) (setq fh 0.0)) (setq fi fj) fh)))
+        yc '(* fa (- (progn (setq fg (/ (sin (eval a2)) (avoid_zero (eval a2)))) (if ff (setq fe (+ fe (* 0.5 (+ ff fg) paramstep))) (setq fe 0.0))
+            (setq ff fg) fe) (/ pi 2.0)))
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        skm '(T T T)
+        a1 fc
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:NIELSENSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

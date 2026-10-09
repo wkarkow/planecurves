@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ampersand Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ampersand Curve</h1>
+      <p class="short-description">A quartic algebraic curve constructed by Julius Plücker in 1839, notable for possessing the maximum 28 real bitangents and for its ampersand-like shape when the appropriate mirror is applied.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Ampersand/Ampersand01-360.avif"
+           alt="Ampersand Curve – main view with mirror bottom applied for full shape">
+      <figcaption>Ampersand Curve – full “&amp;” shape using mirror “bottom”</figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Ampersand Curve implicit equation:</div>
+      \[ (y^{2} - x^{2})(x - 1)(2x - 3) = 4(x^{2} + y^{2} - 2x)^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ampersand Curve Cartesian equation:</div>
+      \[ 4y^{4} + y^{2}(6x^{2} - 11x - 3) + 6x^{4} - 21x^{3} + 19x^{2} = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ampersand Curve polar equation:</div>
+      \[ r^{2}(2\cos^{2}(\theta) + \cos^{4}(\theta) + 9) - r(37\cos(\theta) + 5\cos^{3}(\theta)) + (22\cos^{2}(\theta) + 16) = 0 \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Ampersand curve, also known as Plücker’s quartic, was constructed by Julius Plücker in 1839 as an example of a quartic curve with the maximum 28 real bitangents<sup>1</sup>, a line that touches the curve at two distinct points, like a double tangent. Plücker (1801–1868), a German mathematician and physicist, advanced analytic geometry with innovations like Plücker coordinates for lines in space and homogeneous coordinates, while his physics work included discovering cathode rays, foundational to modern electronics like CRT displays. He served as a professor at Bonn and Halle universities, blending math and experimental physics. The curve gained its ampersand name, due to its “&amp;” shape, from Henry Martyn Cundy and Arthur Philip Rollett in their 1989 book <em>Mathematical Models</em><sup>2</sup>. In algebraic geometry, bitangents are key for studying curve tangency; for a general quartic, there are 28 complex bitangents, but the Ampersand curve is notable for all being real<sup>3</sup>. Self-intersections, called crunodes, points where the curve crosses itself like a figure-eight knot, occur at (0,0), (1,1), and (1,−1)<sup>4</sup>. For the full curve, use mirror “bottom” when prompted.</p>
+    <p>No confirmed real-life applications in engineering or natural sciences were found beyond its role in illustrating algebraic properties.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/AmpersandCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/AmpersandCurve.html</a> (Plücker's construction and bitangents)</li>
+      <li>Cundy, H. and Rollett, A. <em>Mathematical Models</em>, 3rd ed. Stradbroke, England: Tarquin Pub., p. 72, 1989 (Naming and description)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/quarticdeplucker/quarticdeplucker.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/quarticdeplucker/quarticdeplucker.shtml</a> (Bitangents and properties)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Ampersand_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Ampersand_curve</a> (Crunodes and genus)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:AMPERSAND (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                      id iq dcl opt kw mode dpr dct dpt span skm eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff rval)
+  (setq id "Ampersand Curve"
+        iq "r²(2cos²θ+cos⁴θ+9)-r(37cosθ+5cos³θ)+(22cos²θ+16)=0"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in window"
+        dct 360
+        dpt nil
+        fa 0.50973967883151
+        fb 2.6318529747582837
+        span (* (- fb fa) (/ 180.0 pi))
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        eq_display ""
+        fc '(+ 9 (cos (* 4 (eval a2))) (* 2 (cos (* 2 (eval a2)))))
+        fd '(+ (* 5 (cos (* 3 (eval a2)))) (* 37 (cos (eval a2))))
+        fe '(+ 16 (* 22 (cos (* 2 (eval a2)))))
+        ff '(- (* (eval fd) (eval fd)) (* 4 (eval fc) (eval fe)))
+        rval '(if (< (abs (eval ff)) 1e-9) (/ (eval fd) (* 2 (eval fc))) (/ (+ (eval fd) (alt_expt (if (< (eval ff) 0.0) (if (> (eval ff) -1e-9) 0.0
+                  (eval ff)) (eval ff)) 0.5 T)) (* 2 (eval fc))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        paramstep (/ (- fb fa) divcount)
+        skm '(T nil T)
+        a1 fa
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(if (>= paramstep 0.0) (if (> (+ a1 paramstep) fb) fb (+ a1 paramstep)) (if (< (+ a1 paramstep) fb) fb (+ a1 paramstep)))
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:AMPERSAND)</code></pre>
+  </section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of Ampersand Curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

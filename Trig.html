@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trig Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Trig Curve</h1>
+      <p class="short-description">A polar playground form with an offset, a power of the polar angle, and powered sine and cosine factors.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Trig/Trig01-360.avif"
+           alt="Trig Curve, a=0,b=1,c=1,d=1,e=1,f=1,g=0.5,Real">
+      <figcaption>Trig Curve, a=0,b=1,c=1,d=1,e=1,f=1,g=0.5,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trig/Trig02-360.avif"
+           alt="Trig Curve, a=0,b=4,c=-0.25,d=1,e=0.5,f=1,g=0.5,Real">
+      <figcaption>Trig Curve, a=0,b=4,c=-0.25,d=1,e=0.5,f=1,g=0.5,Real</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Trig/Trig03-360.avif"
+           alt="Trig Curve, a=0,b=1,c=1,d=1.5,e=1.5,f=1.5,g=0.5,Imaginary">
+      <figcaption>Trig Curve, a=0,b=1,c=1,d=1.5,e=1.5,f=1.5,g=0.5,Imaginary</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 180px;">
+    <div class="equation-line">
+      <div class="equation-label">Trig polar equation:</div>
+      \[ r = a + b \cdot \theta^{c} \cdot [\sin(d \cdot \theta)]^{e} \cdot [\cos(f \cdot \theta)]^{g} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Trig curve is an original polar playground equation developed for systematic experimentation with combinations of power-law radial growth and powered trigonometric angular modulations. Extensive searches across major curve compendia and literature on generalized spirals and modulated polar forms found no identical general equation matching \( r = a + b \cdot \theta^{c} \cdot [\sin(d \cdot \theta)]^{e} \cdot [\cos(f \cdot \theta)]^{g} \) with independent real parameters \( a \) through \( g \).</p>
+    <p>Conceptual precedents exist in two separate directions. The classical Archimedean spiral has been extended to the broader family \( r = a + b \cdot \theta^{1/c} \), recovering the linear case when \( c = 1 \), Fermat's spiral when \( c = 2 \), the lituus when \( c = -2 \), and the hyperbolic spiral when \( c = -1 \).<sup>1</sup> This supplies the variable power on the polar angle. Pure rose (rhodonea) curves supply the trigonometric modulation idea. More recently, Gielis transformations, powered trigonometric factors conceptually parallel to the \( [\sin(\cdot)]^{e} \) and \( [\cos(\cdot)]^{g} \) terms, have been applied to Archimedean base spirals to generate families of varied spiral-like shapes.<sup>2</sup></p>
+    <p>No applications in engineering or the natural sciences for this exact general multi-parameter Trig form are known to exist. However, its building blocks and close analogs have established uses. Archimedean spirals and their power generalizations appear in scroll compressors (interleaved spirals for gas compression), spiral antennas (broadband operation), watch balance springs, early gramophone record grooves (constant spacing), inductor coils, spiral heat exchangers, microfluidic devices, and clinical drawing tests for quantifying tremor in neurological diagnosis. Gielis-based transformations and the related superformula have been applied in biological shape modeling (botanical forms, diatoms, and other natural outlines), physics, computer graphics, antenna and metamaterial design, and various engineering fields.<sup>3</sup> The Trig equation therefore assembles proven elements into a new, highly flexible experimental tool. (To emphasize this fact, "it is sometimes humorously said that, given eight or so free parameters, it is possible to describe an elephant."<sup>4</sup>) For a more extreme playground, see the <a href="GenPolar.html">GenPolar</a> entry, or more extreme, the <a href="GenTrig.html">GenTrig</a> entry.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Archimedean_spiral" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Archimedean_spiral</a> (generalized Archimedean power forms and real-world applications in engineering and medicine)</li>
+      <li><a href="https://www.semanticscholar.org/paper/Gielis-Transformation-of-the-Archimedean-Spiral-Sp%C3%A1chal/c22ae836b5bbf6ecf8179bea9a5ed7a2da73c663" target="_blank" rel="noopener noreferrer">https://www.semanticscholar.org/paper/Gielis-Transformation-of-the-Archimedean-Spiral-Sp%C3%A1chal/c22ae836b5bbf6ecf8179bea9a5ed7a2da73c663</a> (Gielis transformation applied to Archimedean spirals)</li>
+      <li><a href="https://researchoutreach.org/articles/superellipses-superformula-impact-gielis-transformations/" target="_blank" rel="noopener noreferrer">https://researchoutreach.org/articles/superellipses-superformula-impact-gielis-transformations/</a> (broad applications of Gielis/superformula)</li>
+      <li><a href="https://mathworld.wolfram.com/Superellipse.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Superellipse.html</a> (humorous remark on the descriptive power of multiparameter polar forms)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TRIG (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                 restartflag rval id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd fe ff fg fh)
+  (setq id "Trig"
+        iq "r=a+b·θ^c·[sin(d·θ)]^e·[cos(f·θ)]^g"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (r offset)" 0.0)
+        fb (get_real 0 "b (θ term multiplier)" 1.0)
+        fc (get_real 0 "c (θᶜ exponent)" 1.0)
+        fd (get_real 0 "d (sin frequency multiplier)" 1.0)
+        fe (get_real 0 "e (sin(d·θ)ᵉ exponent)" 1.0)
+        ff (get_real 0 "f (cos frequency multiplier)" 1.0)
+        fg (get_real 0 "g (cos(f·θ)ᵍ exponent)" 0.5)
+        fh (get_keyword 0 "Real Imaginary" "Real or +Imaginary values?" "Real")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", e=" (rtos fe 2 4) ", f=" (rtos ff 2 4) ", g=" (rtos fg 2 4) ", fh=" fh))
+  (setq rval '(+ fa (* fb (alt_expt (eval a2) fc (eq fh "Real")) (alt_expt (sin (* (eval a2) fd)) fe (eq fh "Real")) (alt_expt (cos (* (eval a2) ff)) fg (eq fh "Real"))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TRIG)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

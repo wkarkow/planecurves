@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astroid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Astroid</h1>
+      <p class="short-description">A hypocycloid with four cusps, the locus of a point on a circle of radius r rolling inside a fixed circle of radius 4r.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Astroid/Astroid01-360.avif"
+           alt="Astroid standard form: a=1,b=3,c=1,d=3">
+      <figcaption>Astroid, a=1,b=3,c=1,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Astroid/Astroid02-360.avif"
+           alt="'Kiss' curve: a=1,b=1,c=0.5,d=3">
+      <figcaption>'Kiss' curve, a=1,b=1,c=0.5,d=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Astroid/Astroid03-360.avif"
+           alt="Generalized Astroid with multiple b and dvalues">
+      <figcaption>
+        Generalized Astroid, a=c=1,b=d=
+        <span class="figcap-value" style="color:#FF0000">-2</span>,
+        <span class="figcap-value" style="color:#0000FF">-1</span>,
+        <span class="figcap-value" style="color:#009600">-0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">-0.1</span>,
+        <span class="figcap-value" style="color:#9600FF">0.1</span>,
+        <span class="figcap-value" style="color:#0096FF">0.5</span>,
+        <span class="figcap-value" style="color:#AA5555">1</span>,
+        <span class="figcap-value" style="color:#00FF00">2</span>,
+        <span class="figcap-value" style="color:#000000">3</span>,
+        <span class="figcap-value" style="color:#FF00FF">6</span>
+        <span class="figcap-value" style="color:#960096">10</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- EQUATION RIBBON -->
+  <!-- ============================================================ -->
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Astroid Cartesian equation:</div>
+      \[ x^{2/3} + y^{2/3} = a^{2/3} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Astroid polar equation:</div>
+      \[ r = \frac{a}{(\cos^{2/3} \theta + \sin^{2/3} \theta)^{3/2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Astroid parametric equations:</div>
+      \[ x = a \cos^3 t, \quad y = a \sin^3 t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = a \cos^b t, \quad y = c \sin^d t \]
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- HISTORY AND APPLICATIONS -->
+  <!-- ============================================================ -->
+  <section>
+    <h2>History and Applications</h2>
+    <p>The astroid<sup>1,2</sup> is a hypocycloid with four cusps, the locus of a point on a circle of radius r rolling inside a fixed circle of radius 4r. By double generation it is also the locus of a point on a circle rolling inside a fixed circle of radius 4r/3. It is the envelope of a line segment with one end on each coordinate axis and therefore the envelope of the moving bar in the Trammel of Archimedes<sup>3</sup>. Its modern name, from the Greek for “star,” was proposed as “Astroid” by Joseph Johann von Littrow in 1838; earlier names include tetracuspid, cubocycloid, and paracycle<sup>1</sup>. Ole Rømer studied the curve in 1674 while seeking the best form for gear teeth. Johann Bernoulli worked on it in 1691, Leibniz corresponded about it in 1715, Daniel Bernoulli noted double generation in 1725, and d’Alembert examined it in 1748. All these mathematicians focused on tangent properties and caustics (envelopes of reflected light rays) useful in billiards and optics. The astroid is nearly identical to the evolute of an ellipse and belongs to the family of curves that generalize to the superellipse (Lamé curve).</p>
+    <p>In engineering the hypocycloid family, including the astroid, appears in gear tooth profiles and cam mechanisms that give smooth motion with controlled acceleration. The Trammel of Archimedes itself is a mechanical device with a fixed bar sliding on two perpendicular tracks; a point fixed on the bar traces part of an ellipse while the envelope of the bar is the astroid, making it a glissette used in latitude-independent sundials. In optics the reflection of parallel rays inside a circular mirror produces an astroid caustic in the focal region.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- REFERENCES -->
+  <!-- ============================================================ -->
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Astroid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Astroid.html</a> (relations to other curves and hypocycloid parameters)</li>
+      <li><a href="https://www.2dcurves.com/roulette/roulettea.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/roulettea.html</a> (parametric and Cartesian equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/astroid/astroid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/astroid/astroid.shtml</a> (Trammel of Archimedes and optics applications)</li>
+    </ol>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- AUTOLISP CODE -->
+  <!-- ============================================================ -->
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ASTROID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Astroid"
+        iq "x=a·cosᵇ(t), y=c·sinᵈ(t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (outer radius)" 1.0)
+        fb (get_real 2 "b (cos exponent)" 3.0)
+        fc (get_real 2 "c (y-scale)" 1.0)
+        fd (get_real 2 "d (sin exponent)" 3.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(* fa (alt_expt (cos (eval a2)) fb nil))
+        yc '(* fc (alt_expt (sin (eval a2)) fd nil))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ASTROID)</code></pre>
+  </section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

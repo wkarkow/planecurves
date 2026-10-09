@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bow Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bow Curve</h1>
+      <p class="short-description">A quartic plane algebraic curve resembling a decorative bow or ribbon with a triple point at the origin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/BowCurve/BowCurve01-360.avif"
+           alt="Bow Curve, a=2,tmax=1.125">
+      <figcaption>Bow Curve, a=2,tmax=1.125</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Bow Curve implicit equation:</div>
+      \[ x^{4} = a (x^{2} y - y^{3}) \]
+    </div>    <div class="equation-line">
+      <div class="equation-label">Bow Curve parametric equations:</div>
+      \[ x = a (t - t^{3}), \quad y = a (t^{2} - t^{4}) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The bow curve<sup>1</sup> is a quartic plane curve named for its resemblance to a decorative bow or ribbon. It has a triple point at the origin where three branches meet and is therefore a rational curve of genus zero<sup>2</sup>. It does not appear to be associated with any particular historical mathematician. Instead, it is one of many plane algebraic curves collected in the 20th century for their interesting shapes and properties. It is listed in Cundy and Rollett’s Mathematical Models<sup>3</sup> among other quartic curves suitable for physical models or drafting study.</p>
+    <p>The curve is included in catalogues of quartic and ornamental curves<sup>4</sup>. Its parametric representation makes it straightforward to generate with computer drafting tools such as AutoCAD using basic AutoLISP. The implicit Cartesian equation confirms its degree-four algebraic character. Detailed properties, including locations of horizontal and vertical tangents and the area enclosed by its loops, are available for the unit case (a = 1)<sup>1</sup>.</p>
+    <p>No real-life applications in engineering or the natural sciences were found in the primary mathematical references or broader searches.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Bow.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Bow.html</a> (equations, tangents, area).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Quartic_plane_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Quartic_plane_curve</a> (triple point and genus).</li>
+      <li>Cundy, H. and Rollett, A. <em>Mathematical Models</em>, 3rd ed., p. 72 (primary collection reference).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/ornementales/ornementales.shtml</a> (ornamental curves).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BOWCURVE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Bow Curve"
+        iq "x=a·(t-t³), y=a·(t²-t⁴)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions for t from 0 to tmax"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 2.0)
+        fb (get_real 2 "t max (>1 adds downward tails)" 1.125)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", t max=" (rtos fb 2 4))
+        xc '(* fa (- (eval a2) (* (eval a2) (eval a2) (eval a2))))
+        yc '(* fa (- (* (eval a2) (eval a2)) (* (eval a2) (eval a2) (eval a2) (eval a2))))
+        span fb
+        paramstep (/ span divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BOWCURVE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

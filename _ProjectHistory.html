@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For AutoCAD Users - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <nav class="main-nav left-nav">
+      <a href="_Main.html">Home</a>
+      <a href="_CurveIndex.html">Curve Lookup</a>
+      <a href="_AliasIndex.html">Alias Lookup</a>
+    </nav>
+    <h2 class="site-title">
+      <a href="_Main.html">Plane Curves with AutoCAD</a>
+    </h2>
+    <nav class="main-nav right-nav">
+      <a href="_EquationIndex.html">Equation Lookup</a>
+      <a href="_ImageIndex.html">Image Lookup</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="curve-header">
+    <div class="curve-title-block">
+      <h1>Project History</h1>
+      <p class="short-description">
+        The origin and development of the AutoCAD Curves project since its beginning in 1985.
+      </p>
+    </div>
+  </section>
+
+  <div style="max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.65;">
+
+	<p>
+		This project began in 1985 when AutoCAD 2.17 was the current version available. The goal was to capture and expand a list of 2D curves and create them in AutoCAD using AutoLISP so that they could be tailored to various artistic and design purposes. Many curves are then generalized by adding variables. I have not used VLISP or any other add-ons but instead have stuck to core AutoLISP using quoted 	expressions and the eval() function in order to calculate the coordinates of points. These points are then gathered into a list and the PLINE command invoked to link them into a polyline, which is then smoothed using the PEDIT command. Lastly, the user is often given a choice to MIRROR the polyline either horizontally, vertically, or rotationally 180 degrees via the ARRAY command.
+		<strong>All is offered free to the public domain.</strong>
+		Each curve as given in AutoLISP should function on its own, provided the user also loads the Curvecore.lsp file, which holds functions common to the library of curves. These curves are useful if one employs AutoCAD for 	designing CNC patterns, for example in woodworking. I should also give abundant credit to https://mathcurve.com/ that currently lists the bulk of these curves, as well as https://mathworld.wolfram.com/ and https://www.2dcurves.com/ for the vast majority of curve equations, history, and many curve attributes and other details.
+	</p>
+	<p>
+		Over the course of this work, a variety of solution techniques have been employed that go well beyond closed-form formulas. Some curves are generated directly from algebraic or trigonometric expressions, while others rely on polynomial or rational approximations to transcendental functions. Several entries use discrete “stairstep” constructions, in which a curve emerges from incremental geometric rules rather than a single equation. In other cases, curves are obtained through numerical approximation of integrals, or through the step-by-step solution of differential equations for which no practical closed-form solution is available. This expanding toolbox was not part of the original plan, but arose naturally as different curves demanded different treatments. 	The result is less a uniform method applied to many problems than a collection of techniques, each chosen because it reflects the underlying mathematics or physics of the curve itself.
+	</p>
+
+  </div>
+</main>
+
+<footer>
+  <div style="text-align:center; padding:28px 20px; background:#eaf6f9; font-size:1.45rem; line-height:1.45; color:#1a3a42;">
+    Comments, questions, corrections, suggestions, new curves? I'd love to hear from you!<br>
+    <a href="mailto:karkowbs@yahoo.com" style="color:#1a3a42; font-weight:600;">karkowbs@yahoo.com</a><br>
+    All content is offered free to the public domain.
+  </div>
+</footer>
+
+</body>
+</html>

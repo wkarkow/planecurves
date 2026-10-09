@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drawbridge Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Drawbridge Curve</h1>
+      <p class="short-description">Path traced by the counterweight of a Bélidor bascule drawbridge so that bridge + counterweight remain in equilibrium at every angle; a portion of a Cartesian oval.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Drawbridge/Drawbridge01-360.avif"
+           data-caption="Drawbridge Curve, L=4.0(red),h=3.5(red),b=3.5(red),l=5.0(red),d=0.0(red),q=1.0(red)"
+           alt="Drawbridge Curve, L=4.0,h=3.5,b=3.5,l=5.0,d=0.0,q=1.0">
+      <figcaption>
+        Drawbridge Curve,
+        <span class="figcap-value" style="color:#FF0000">L=4.0,h=3.5,b=3.5,l=5.0,d=0.0,q=1.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Drawbridge/Drawbridge02-360.avif"
+           alt="Drawbridge Curve, L=4,h=4,b=4,d=0,q=1, changing rope length">
+      <figcaption>
+        Drawbridge Curve, L=4,h=4,b=4,d=0,q=1, changing rope length: l=
+        <span class="figcap-value" style="color:#000000">5.6569</span>,
+        <span class="figcap-value" style="color:#FF0000">6.0</span>,
+        <span class="figcap-value" style="color:#0000FF">8.0</span>,
+        <span class="figcap-value" style="color:#009600">10.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Drawbridge/Drawbridge03-360.avif"
+           alt="Drawbridge Curve, L=4,b=4,d=0,q=1, changing pulley height/min. rope length">
+      <figcaption>
+        Drawbridge Curve, L=4,b=4,d=0,q=1, changing pulley height/min. rope length, h;l=
+        <span class="figcap-value" style="color:#000000">4.0;5.6569</span>,
+        <span class="figcap-value" style="color:#FF0000">5.0;6.4031</span>,
+        <span class="figcap-value" style="color:#0000FF">6.0;7.2111</span>,
+        <span class="figcap-value" style="color:#009600">7.0;8.0623</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Drawbridge/Drawbridge04-360.avif"
+           alt="Drawbridge Curve, L=4,h=4,d=0,q=1, changing attachment point/min. rope length)">
+      <figcaption>
+        Drawbridge Curve, L=4,h=4,d=0,q=1, changing attachment point/min. rope length, b;l=
+        <span class="figcap-value" style="color:#000000">4.0;5.6569</span>,
+        <span class="figcap-value" style="color:#FF0000">3.5;5.3151</span>,
+        <span class="figcap-value" style="color:#0000FF">3.0;5.0</span>,
+        <span class="figcap-value" style="color:#009600">2.5;4.7170</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Drawbridge/Drawbridge05-360.avif"
+           alt="Drawbridge Curve, L=4,h=4,d=0, changing weight ratio/min. attachment/rope length">
+      <figcaption>
+        Drawbridge Curve, L=4,h=4,d=0, changing weight ratio/min. attachment/rope length, q;b;l=
+        <span class="figcap-value" style="color:#000000">1.0;2.3094;4.6188</span>,
+        <span class="figcap-value" style="color:#FF0000">0.9;2.6726;4.8107</span>,
+        <span class="figcap-value" style="color:#0000FF">0.8;3.2026;5.1241</span>,
+        <span class="figcap-value" style="color:#009600">0.72;3.8646;5.5591</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Drawbridge/Drawbridge06-360.avif"
+           alt="Drawbridge Curve, L=4,h=4,b=4,d=0,l=8,q=1, changing counterweight drop below the pulley when the bridge is down">
+      <figcaption>
+        Drawbridge Curve, L=4,h=4,b=4,d=0,l=8,q=1, changing counterweight drop below the pulley when the bridge is down: d=
+        <span class="figcap-value" style="color:#000000">0.5</span>,
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.5</span>,
+        <span class="figcap-value" style="color:#009600">2.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Drawbridge Curve parametric equations:</div>
+      \[ x = \sqrt{\bigl(l - \sqrt{b^{2} + h^{2} - 2bh\cos\alpha}\bigr)^{2} - \bigl(d + \tfrac{L\cos\alpha}{2q}\bigr)^{2}},\quad
+         y = h - d - \tfrac{L\cos\alpha}{2q} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Parameters:</div>
+      \[ \begin{align*}
+      b &= \text{hinge-to-attachment distance } AB,\\
+      d &= \text{counterweight drop below pulley when bridge is down},\\
+      \alpha &= \text{bridge angle from the vertical},\\
+      h &= \text{pulley height above hinge } AC,\\
+      L &= \text{total bridge length (centroid arm } = L/2\text{)},\\
+      l &= \text{total hoist rope length } BC + CM,\\
+      q &= \text{counterweight / bridge weight ratio } Q/P
+      \end{align*} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The drawbridge curve<sup>1,2</sup>, also known as the "courbe du pont-levis" in French, refers to the mathematical path traced by the counterweight in a specific type of bascule (drawbridge) mechanism designed to maintain equilibrium throughout its operation. This curve ensures that the bridge remains balanced as it lifts and lowers, minimizing the force required to operate it. It was popularized in the context of military engineering and later applied to civilian bridges. The concept of the drawbridge curve emerged in the late 17th and early 18th centuries amid advancements in mechanics and fortification design in Europe, particularly France. Credit for the initial mathematical analysis is often given to French mathematician Guillaume de l’Hôpital (1661–1704), who corresponded with Swiss mathematician Johann I Bernoulli (1667–1748) around 1695. Their work described the curve as a cardioid (a type of limaçon), derived from equations balancing forces in a counterweighted drawbridge system. This was initially explored for military applications, such as drawbridges in fortresses where quick, balanced operation was critical.</p>
+    <p>The curve and mechanism gained prominence through Bernard Forest de Bélidor (1698–1761), a French military and civil engineer. Bélidor, orphaned young and raised by adoptive family in the military, became a self-taught mathematician and engineer. He served in sieges from age 15, later becoming a professor at the École d’Artillerie de La Fère and a member of academies in France, England, and Prussia. In his influential 1729 book La Science des Ingénieurs dans la conduite des travaux de fortification et d’architecture civile, Bélidor detailed the "drawbridge with a sinusoid" (though it’s not actually sinusoidal), attributing the design to himself while building on earlier ideas. He analyzed the path of the counterweight rolling along a curved track to provide variable lifting force, ensuring the bridge stays in equilibrium without excessive manual effort or machinery. Beyond bridges, he advanced artillery trajectories, geodetics, and retaining wall design (e.g., earth pressure theories with 45° repose angle), impacting civil engineering globally.</p>
+    <p>Early implementations appeared in 18th-century European fortresses (possibly predating Bélidor’s publication in some cases). The earliest known example is at the fortress of Bonifacio in Corsica (late 17th century). Other notable sites include Königstein Fortress in Germany, Exilles Fortress in Italy, Esseillon Fortress in France, and Fort l’Écluse near Geneva, France (built around the 1700s and still featuring a working Bélidor-system drawbridge). These were primarily for defensive moats, allowing rapid raising and lowering. The design spread beyond military use in the 19th and early 20th centuries, influencing civil engineering. In Australia, engineer Harvey Dare adapted it for bridges like the McFarlane Bridge in Maclean (1906) and Telegraph Point Bridge (1904), using approximated circular arcs to mimic the cardioid curve for practicality in fabrication. In the U.S., the Glimmer Glass Bridge in New Jersey (built 1898, modified 1938) is a rare surviving example on the National Register of Historic Places, employing rolling counterweights on curved tracks. Similar bridges appeared in England (e.g., Yarmouth) and other regions, often for waterways. By the mid-20th century, more efficient bascule bridge designs (like the Scherzer rolling lift) largely replaced it. While obsolete for new builds, it influenced bascule bridge evolution and appears in engineering history texts. Surviving examples, like Fort l’Écluse, are tourist attractions demonstrating 18th-century ingenuity.</p>
+    <p>The drawbridge curve is a portion of a Cartesian oval, a curve defined by points where the weighted sum of distances to two fixed foci is constant. In Bélidor’s system, with the bridge length \(L\), hoist rope or chain length \(l\), bridge weight \(P\), and counterweight \(Q\). Equilibrium requires constant potential energy, leading to an equation eliminable with the law of cosines to yield the oval. The track’s curvature ensures the vertical component of the counterweight’s force decreases as the bridge rises, matching the shifting center of gravity.</p>
+  </section>
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/pontlevis/pontlevis.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/pontlevis/pontlevis.shtml</a> (drawbridge mechanism and Cartesian-oval relation)</li>
+      <li><a href="https://divisbyzero.com/2024/05/24/cardioid-drawbridges/" target="_blank" rel="noopener noreferrer">https://divisbyzero.com/2024/05/24/cardioid-drawbridges/</a> (cardioid special case of the Bélidor bascule design)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DRAWBRIDGE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                       id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj dk fl fm fn )
+  (setq id "Drawbridge Curve"
+        iq "x=√(r²−v²), y=h−v, v=d+L·cos(α)/(2q), r=l−√(b²+h²−2bh·cos(α))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 90
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "\nL (full bridge length): " 4.0)
+        fb (get_real 2 "\nh (pulley height): " 4.0)
+        fi (/ fa (* 2.0 fb))
+        fc (get_boundr 6 (strcat "\nq = counterweight/bridge weight > " (rtos fi 2 4) ": ") (max 1.0 fi) fi nil nil nil)
+        fj (/ (* fa fb) (sqrt (- (* 4.0 fc fc fb fb) (* fa fa))))
+        fd (get_boundr 6 (strcat "\nb (hinge to attachment point) >= " (rtos fj 2 4) " and <= " (rtos fa 2 4) ": ") fj fj fa T T)
+        dk (sqrt (+ (* fd fd) (* fb fb)))
+        fe (get_boundr 6 (strcat "\nl (hoist length) >= " (rtos dk 2 4) ": ") dk dk nil T nil)
+        fl (- fe dk)
+        ff (get_boundr 6 (strcat "\nd (counterweight drop below pulley when bridge is down) < " (rtos fl 2 4) ": ") 0.0 0.0 fl T T)
+        fm (- fe (abs (- fd fb)))
+        fn (/ fa (* 2.0 (- fm ff))))
+  (if (< fc fn) (setq fc (get_boundr 6 (strcat "\nq = counterweight/bridge weight >= " (rtos fn 2 4) ": ") fn fn nil T nil)))
+  (setq eq_display (strcat "\nL=" (rtos fa 2 4) ", h=" (rtos fb 2 4) ", b=" (rtos fd 2 4) ", l=" (rtos fe 2 4) ", d=" (rtos ff 2 4) ", q=" (rtos fc 2 4))
+        fg '(- fe (alt_expt (- (+ (* fd fd) (* fb fb)) (* 2.0 fd fb (cos (eval a2)))) 0.5 nil))
+        fh '(+ ff (/ (* fa (cos (eval a2))) (* 2.0 fc)))
+        xc '(alt_expt (- (expt (eval fg) 2.0) (expt (eval fh) 2.0)) 0.5 nil)
+        yc '(- fb (eval fh))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DRAWBRIDGE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

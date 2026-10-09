@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Butterfly Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Butterfly Curve</h1>
+      <p class="short-description">Families of polar curves producing four-winged butterfly figures and related multi-lobed forms.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Butterfly/Butterfly01-360.avif"
+           alt="Fay Butterfly, a=1,b=-1,c=90,d=-2,e=4,f=0,g=1,h=5,i=1/12,j=-15">
+      <figcaption>Fay Butterfly, a=1,b=-1,c=90,d=-2,e=4,f=0,g=1,h=5,i=1/12,j=-15</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly02-360.avif"
+           alt="Generalized Fay Butterfly, a=1,b=-1,c=90,d=-2,e=4,f=0,g=1,h=5,i=1/24,j=-7.5">
+      <figcaption>Generalized Fay Butterfly, a=1,b=-1,c=90,d=-2,e=4,f=0,g=1,h=5,i=1/24,j=-7.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly03-360.avif"
+           alt="Generalized Fay Butterfly, a=1,b=-1,c=90,d=-1.5,e=4,f=0,g=1,h=5,i=1/12,j=-15">
+      <figcaption>Generalized Fay Butterfly, a=1,b=-1,c=90,d=-1.5,e=4,f=0,g=1,h=5,i=1/12,j=-15</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly04-360.avif"
+           alt="Generalized Fay Butterfly, a=1,b=-1,c=90,d=-1.5,e=4,f=0,g=1,h=5,i=1/24,j=-7.5">
+      <figcaption>Generalized Fay Butterfly, a=1,b=-1,c=90,d=-1.5,e=4,f=0,g=1,h=5,i=1/24,j=-7.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly05-360.avif"
+           alt="Generalized Fay Butterfly, a=0,b=0,c=0,d=-2.5,e=3,f=0,g=1,h=8,i=1/15,j=0">
+      <figcaption>Generalized Fay Butterfly, a=0,b=0,c=0,d=-2.5,e=3,f=0,g=1,h=8,i=1/15,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly06-360.avif"
+           alt="Generalized Fay Butterfly, a=-0.75,b=0,c=0,d=-2.5,e=3,f=0,g=1,h=8,i=1/15,j=0">
+      <figcaption>Generalized Fay Butterfly, a=-0.75,b=0,c=0,d=-2.5,e=3,f=0,g=1,h=8,i=1/15,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly07-360.avif"
+           alt="Generalized Fay Butterfly, a=1,b=0,c=0,d=-2.5,e=3,f=0,g=1,h=8,i=1/15,j=0">
+      <figcaption>Generalized Fay Butterfly, a=1,b=0,c=0,d=-2.5,e=3,f=0,g=1,h=8,i=1/15,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly08-360.avif"
+           alt="Generalized Fay Butterfly, a=1,b=4,c=0,d=-2,e=2,f=0,g=1,h=5,i=1/12,j=0">
+      <figcaption>Generalized Fay Butterfly, a=1,b=4,c=0,d=-2,e=2,f=0,g=1,h=5,i=1/12,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly09-360.avif"
+           alt="Generalized Fay Butterfly, a=5,b=4,c=0,d=-2,e=2,f=0,g=1,h=5,i=1/25,j=0">
+      <figcaption>Generalized Fay Butterfly, a=5,b=4,c=0,d=-2,e=2,f=0,g=1,h=5,i=1/25,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly10-360.avif"
+           alt="Generalized Fay Butterfly, a=2,b=2,c=0,d=-1,e=3,f=0,g=1,h=5,i=1/12,j=0">
+      <figcaption>Generalized Fay Butterfly, a=2,b=2,c=0,d=-1,e=3,f=0,g=1,h=5,i=1/12,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly11-360.avif"
+           alt="Generalized Fay Butterfly, a=2,b=0.5,c=0,d=-2,e=2,f=0,g=1,h=5,i=1/12,j=0">
+      <figcaption>Generalized Fay Butterfly, a=2,b=0.5,c=0,d=-2,e=2,f=0,g=1,h=5,i=1/12,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly12-360.avif"
+           alt="Generalized Fay Butterfly, a=0,b=0,c=0,d=-2.5,e=6,f=0,g=1,h=8,i=1/25,j=0">
+      <figcaption>Generalized Fay Butterfly, a=0,b=0,c=0,d=-2.5,e=6,f=0,g=1,h=8,i=1/25,j=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly13-360.avif"
+           alt="Sextic Butterfly, a=1,b=0,c=2,d=1,e=0,f=6,g=1,h=0,i=6,j=0.25">
+      <figcaption>Sextic Butterfly, a=1,b=0,c=2,d=1,e=0,f=6,g=1,h=0,i=6,j=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly14-360.avif"
+           alt="Generalized Sextic Butterfly, a=3,b=0,c=2,d=3,e=0,f=6,g=3,h=0,i=6,j=0.25">
+      <figcaption>Generalized Sextic Butterfly, a=3,b=0,c=2,d=3,e=0,f=6,g=3,h=0,i=6,j=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly15-360.avif"
+           alt="Generalized Sextic Butterfly, a=3,b=0,c=2,d=6,e=0,f=6,g=6,h=0,i=6,j=0.25">
+      <figcaption>Generalized Sextic Butterfly, a=3,b=0,c=2,d=6,e=0,f=6,g=6,h=0,i=6,j=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly16-360.avif"
+           alt="Generalized Sextic Butterfly, a=2,b=0,c=2,d=2,e=0,f=6,g=2,h=0,i=6,j=0.25">
+      <figcaption>Generalized Sextic Butterfly, a=2,b=0,c=2,d=2,e=0,f=6,g=2,h=0,i=6,j=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly17-360.avif"
+           alt="Generalized Sextic Butterfly, a=2,b=0,c=4,d=2,e=0,f=0.5,g=1,h=0,i=6,j=0.25">
+      <figcaption>Generalized Sextic Butterfly, a=2,b=0,c=4,d=2,e=0,f=0.5,g=1,h=0,i=6,j=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly18-360.avif"
+           alt="Generalized Abs. Sextic Butterfly, a=1.5,b=0,c=2,d=1.5,e=0,f=2,g=3,h=0,i=1.5,j=0.5">
+      <figcaption>Generalized Abs. Sextic Butterfly, a=1.5,b=0,c=2,d=1.5,e=0,f=2,g=3,h=0,i=1.5,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly19-360.avif"
+           alt="Generalized Abs. Sextic Butterfly, a=2.5,b=0,c=2,d=2.5,e=0,f=2,g=5,h=0,i=2.5,j=0.5">
+      <figcaption>Generalized Abs. Sextic Butterfly, a=2.5,b=0,c=2,d=2.5,e=0,f=2,g=5,h=0,i=2.5,j=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly20-360.avif"
+           alt="Sautereau-1, a=1,b=5,c=3,d=1">
+      <figcaption>Sautereau-1, a=1,b=5,c=3,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly21-360.avif"
+           alt="Sautereau-2, a=-3,b=2,c=1,d=7,e=-1">
+      <figcaption>Sautereau-2, a=-3,b=2,c=1,d=7,e=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Butterfly/Butterfly22-360.avif"
+           alt="Beetle Butterfly, a=1">
+      <figcaption>Beetle Butterfly, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Fay Butterfly polar equation:</div>
+      \[ r = e^{\sin(\theta)} - 2\cos(4\theta) + \sin^{5}\left( \frac{2\theta-\pi}{24} \right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Fay polar equation:</div>
+      \[ r = a\,e^{\cos(b\theta+c)} + d\,\cos(e\theta+f) + g\,\sin^{h}(i\theta+j) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Classic Butterfly implicit equation:</div>
+      \[ y^{6} = x^{2} - x^{6} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized classic polar equation:</div>
+      \[ r = \left( \frac{\cos^{c}(a\theta+b)}{\sin^{f}(d\theta+e) + \cos^{i}(g\theta+h)} \right)^{j} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized |cos| polar equation:</div>
+      \[ r = \left( \frac{\cos^{c}(a\theta+b)}{\sin^{f}(d\theta+e) + |\cos|^{i}(g\theta+h)} \right)^{j} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sautereau-1 polar equation:</div>
+      \[ r = a\sin(b\theta) + c\cos(d\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sautereau-2 polar equation:</div>
+      \[ r = -3\cos(2\theta) + \sin(7\theta)-1 \]
+    </div>    
+    <div class="equation-line">
+      <div class="equation-label">Generalized Sautereau polar equation:</div>
+      \[ r = a\cos(b\theta) + c\sin(d\theta) + e \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Beetle Butterfly polar equation:</div>
+      \[ r = \sin(\theta + \pi/4) - \sin(2\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The transcendental butterfly curve was introduced by Temple H. Fay<sup>1</sup>, a mathematician at the University of Southern Mississippi, in a short 1989 note published in the American Mathematical Monthly<sup>2</sup>. Fay was exploring families of petal-like curves suitable for classroom demonstrations of polar and parametric plotting. His original equation produces a four-winged figure whose full symmetry appears only after the parameter θ reaches 24π (or 4320°), a range far beyond the usual 2π used for most polar plots. The generalized exponential form in the code lets the draftsman adjust each coefficient independently while keeping the essential shape and the long closure interval.</p>
+    <p>A second, purely algebraic butterfly is the sextic curve given in Cartesian form by y⁶ = x² − x⁶.<sup>3</sup> It appears in classic collections of plane algebraic curves such as Cundy and Rollett’s <em>Mathematical Models</em> (1989). When converted to the polar form used in the code, it draws without gaps and reveals the same bilateral symmetry, but with sharper cusps at the origin. The two Sautereau forms are simpler sums of sine and cosine terms in polar coordinates; they are listed in some French curve compendia but carry no detailed published history. The final variant, the Beetle Butterfly, is the user’s own creation. It is derived directly from the classical Beetle (scarabée) curve first appearing in 1857 in a French textbook prepared for applicants to the École Polytechnique by Catalan and later included in Laurent’s treatise on analysis.<sup>4</sup> The Beetle is a rational sextic that is the pedal of an astroid; the user’s modification yields a compact, four-lobed figure that closes after a single 2π rotation and reflection.</p>
+    <p>Real-life applications in engineering and the natural sciences are limited for these exact curves. The Fay form and its generalizations appear in calculus textbooks and computer-algebra demonstrations as striking examples of how small changes in frequency or phase can alter global symmetry. The algebraic sextic has been used occasionally in computer-graphics algorithms that require compact, closed algebraic boundaries. No documented uses were found for the Sautereau or Beetle variants beyond mathematical recreation. In applied fields, the term “butterfly curve” sometimes refers instead to hysteresis loops in control systems or to diffraction patterns, but those are unrelated to the geometric shapes.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)</a> (Fay 1989 discovery and original equation)</li>
+      <li><a href="https://mathworld.wolfram.com/ButterflyCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ButterflyCurve.html</a> (Fay history and sextic comparison)</li>
+      <li>Cundy, H. and Rollett, A. <em>Mathematical Models</em>, 3rd ed., p. 72 (algebraic butterfly sextic)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/scarabee/scarabee.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/scarabee/scarabee.shtml</a> (Beetle curve 1857 origin and pedal relation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BUTTERFLY (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj)
+  (setq id "Butterfly Curve"
+        iq ""
+        dcl "BUTTERFLY"
+        opt '("Fay" "Sextic" "Sextic-|abs|" "Sautereau 1" "Sautereau 2" "Beetle")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "r=a·e^cos(bθ+c)+d·cos(eθ+f)+g·sinʰ(iθ+j), 4320 segments needed for default Fay")
+     (setq fa (get_real 0 "a (overall scale)" 1.0)
+           fb (get_real 0 "b (cos frequency)" -1.0)
+           fc (get_real 0 "c (phase shift in degrees)" 90.0)
+           fd (get_real 0 "d (cos amplitude)" -2.0)
+           fe (get_real 0 "e (cos frequency)" 4.0)
+           ff (get_real 0 "f (phase shift in degrees)" 0.0)
+           fg (get_real 0 "g (sin amplitude)" 1.0)
+           fh (get_real 0 "h (sin power)" 5.0)
+           fi (get_real 0 "i (sin frequency)" (/ 1.0 12.0))
+           fj (get_real 0 "j (phase shift in degrees)" -15.0)
+           eq_display (strcat "\nr=" (rtos fa 2 4) "e^cos(" (rtos fb 2 4) "θ+" (rtos fc 2 4) ")+" (rtos fd 2 4) "cos(" (rtos fe 2 4) "θ+" (rtos ff 2 4)
+                              ")+" (rtos fg 2 4) "sin^" (rtos fh 2 4) "(" (rtos fi 2 4) "θ+" (rtos fj 2 4) ")")
+           rval '(+ (* fa (exp (cos (+ (* fb (eval a2)) (* fc (/ pi 180.0)))))) (* fd (cos (+ (* fe (eval a2)) (* ff (/ pi 180.0)))))
+                    (* fg (alt_expt (sin (+ (* fi (eval a2)) (* fj (/ pi 180.0)))) fh nil)))
+           skm '(T T T)
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))))
+    ((eq kw 1)
+     (princ "r=((cos(aθ+b))ᶜ/((sin(dθ+e)ᶠ+(cos(gθ+h)ⁱ))ʲ), 360 segments needed for default Sextic")
+     (setq fa (get_real 0 "a (cos frequency)" 1.0)
+           fb (get_real 0 "b (phase shift in degrees)" 0.0)
+           fc (get_real 0 "c (cos power)" 2.0)
+           fd (get_real 0 "d (sin frequency)" 1.0)
+           fe (get_real 0 "e (phase shift in degrees)" 0.0)
+           ff (get_real 0 "f (sin power)" 6.0)
+           fg (get_real 0 "g (cos frequency)" 1.0)
+           fh (get_real 0 "h (phase shift in degrees)" 0.0)
+           fi (get_real 0 "i (cos power)" 6.0)
+           fj (get_real 0 "j (outer power)" 0.25)
+           eq_display (strcat "\nr=((cos(" (rtos fa 2 4) "θ+" (rtos fb 2 4) "))^" (rtos fc 2 4) "/((sin(" (rtos fd 2 4) "θ+" (rtos fe 2 4)
+                              ")^" (rtos ff 2 4) "+(cos(" (rtos fg 2 4) "θ+" (rtos fh 2 4) ")^" (rtos fi 2 4) "))^" (rtos fj 2 4) ")")
+           rval '(alt_expt (/ (alt_expt (cos (+ (* fa (eval a2)) (* fb (/ pi 180.0)))) fc nil) (+ (alt_expt (sin (+ (* fd (eval a2))
+                 (* fe (/ pi 180.0)))) ff nil) (alt_expt (cos (+ (* fg (eval a2)) (* fh (/ pi 180.0)))) fi nil))) fj nil)
+           skm '(T T T T)
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))))
+    ((eq kw 2)
+     (princ "r=((cos(aθ+b))ᶜ/((sin(dθ+e)ᶠ+|(cos(gθ+h)ⁱ)|)ʲ), 360 segments needed for default Sextic")
+     (setq fa (get_real 0 "a (cos frequency)" 1.0)
+           fb (get_real 0 "b (phase shift in degrees)" 0.0)
+           fc (get_real 0 "c (cos power)" 2.0)
+           fd (get_real 0 "d (sin frequency)" 1.0)
+           fe (get_real 0 "e (phase shift in degrees)" 0.0)
+           ff (get_real 0 "f (sin power)" 6.0)
+           fg (get_real 0 "g (cos frequency)" 1.0)
+           fh (get_real 0 "h (phase shift in degrees)" 0.0)
+           fi (get_real 0 "i (cos power)" 6.0)
+           fj (get_real 0 "j (outer power)" 0.25)
+           eq_display (strcat "\nr=((cos(" (rtos fa 2 4) "θ+" (rtos fb 2 4) "))^" (rtos fc 2 4) "/((sin(" (rtos fd 2 4) "θ+" (rtos fe 2 4)
+                              ")^" (rtos ff 2 4) "+|cos(" (rtos fg 2 4) "θ+" (rtos fh 2 4) ")|^" (rtos fi 2 4) "))^" (rtos fj 2 4) ")")
+           rval '(alt_expt (/ (alt_expt (cos (+ (* fa (eval a2)) (* fb (/ pi 180.0)))) fc nil) (+ (alt_expt (sin (+ (* fd (eval a2))
+                 (* fe (/ pi 180.0)))) ff nil) (alt_expt (abs (cos (+ (* fg (eval a2)) (* fh (/ pi 180.0))))) fi nil))) fj nil)
+           skm '(T T T T)
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))))
+    ((eq kw 3)
+     (princ "r=a·sin(bθ)+c·cos(dθ), 360 segments needed for default Sautereau 1")
+     (setq fa (get_real 0 "a (sin amplitude)" 1.0)
+           fb (get_real 0 "b (sin frequency)" 5.0)
+           fc (get_real 0 "c (cos amplitude)" 3.0)
+           fd (get_real 0 "d (cos frequency)" 1.0)
+           eq_display (strcat "\nr=" (rtos fa 2 4) "·sin(" (rtos fb 2 4) "θ)+" (rtos fc 2 4) "·cos(" (rtos fd 2 4) "θ)")
+           rval '(+ (* fa (sin (* fb (eval a2)))) (* fc (cos (* fd (eval a2)))))
+           skm '(nil T)
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))))
+    ((eq kw 4)
+     (princ "r=a·cos(bθ)+c·sin(dθ)+e, 360 segments needed for default Sautereau 2")
+     (setq fa (get_real 0 "a (cos amplitude)" -3.0)
+           fb (get_real 0 "b (cos frequency)" 2.0)
+           fc (get_real 0 "c (sin amplitude)" 1.0)
+           fd (get_real 0 "d (sin frequency)" 7.0)
+           fe (get_real 0 "e (constant)" -1.0)
+           eq_display (strcat "\nr=" (rtos fa 2 4) "·cos(" (rtos fb 2 4) "θ)+" (rtos fc 2 4) "·sin(" (rtos fd 2 4) "θ)+" (rtos fe 2 4))
+           rval '(+ (* fa (cos (* fb (eval a2)))) (* fc (sin (* fd (eval a2)))) fe)
+           skm '(T T T)
+           xc '(* 0.5 (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))))
+    ((eq kw 5)
+     (princ "r=sin(θ+π/4)−sin(2θ), 360 segments needed for default Beetle")
+     (setq fa (get_real 2 "a (scale factor)" 1.0)
+           eq_display (strcat "\nr=" (rtos fa 2 4) "·(sin(θ+π/4)−sin(2θ))")
+           rval '(* fa (- (sin (+ (eval a2) (/ pi 4.0))) (sin (* 2.0 (eval a2)))))
+           skm '(nil T T)
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2))))))
+  (setq a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BUTTERFLY)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

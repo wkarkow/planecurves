@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maltese Cross - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Maltese Cross</h1>
+      <p class="short-description">Four-lobed plane curves named for their resemblance to the eight-pointed heraldic Maltese cross.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Maltese/Maltese01-360.avif"
+           alt="Maltese Cross, Parametric horizontal 'Bow Tie', a=1">
+      <figcaption>Maltese Cross, Parametric horizontal 'Bow Tie', a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Maltese/Maltese02-360.avif"
+           alt="Maltese Cross, Parametric vertical, a=1">
+      <figcaption>Maltese Cross, Parametric vertical, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Maltese/Maltese03-360.avif"
+           alt="Maltese Cross, Parametric combined, a=1">
+      <figcaption>Maltese Cross, Parametric combined, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Maltese/Maltese04-360.avif"
+           alt="Maltese Cross, Quartic, a=1">
+      <figcaption>Maltese Cross, Quartic, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Maltese/Maltese05-360.avif"
+           alt="Maltese Cross, Rotated Quartic, a=1">
+      <figcaption>Maltese Cross, Rotated Quartic, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 400px;">
+    <div class="equation-line">
+      <div class="equation-label">Maltese Cross parametric horizontal equations:</div>
+      \[ x = a\cos(t)\,(\cos^{2}(t)-2),\qquad y = a\sin(t)\,\cos^{2}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Maltese Cross parametric vertical equations:</div>
+      \[ x = -a\sin(t)\,\cos^{2}(t),\qquad y = a\cos(t)\,(\cos^{2}(t)-2) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Maltese Cross quartic Cartesian equation:</div>
+      \[ xy(x^{2}-y^{2}) = a^{2}(x^{2}+y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Maltese Cross quartic polar equation:</div>
+      \[ r = \dfrac{2a}{\sqrt{\sin(4\theta)}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Maltese Cross rotated quartic polar equation:</div>
+      \[ r = \dfrac{2a}{\sqrt{-\cos(4\theta)}}\quad\text{where }-\cos(4\theta)>0 \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Maltese cross curve is named for its strong visual resemblance to the eight-pointed heraldic Maltese cross.<sup>1,2</sup> Two algebraic objects share that name in the curve literature, and both are implemented here. The polar form \(r=2a/\sqrt{\sin(4\theta)}\) (and the implicit quartic \(xy(x^{2}-y^{2})=a^{2}(x^{2}+y^{2})\)) is the four-armed Cundy–Rollett quartic recorded by MathWorld.<sup>1</sup> The parametric pair \(x=a\cos(t)(\cos^{2}(t)-2)\), \(y=a\sin(t)\cos^{2}(t)\) is the bow-tie, or half-cross, studied by the English mathematician W. H. Besant in 1870, by the French mathematician Maurice d’Ocagne in 1884, and by W. Gaedecke in 1917; that locus is a rational sextic.<sup>2</sup> A 90-degree interchange of the parametric pair produces the vertical orientation. A 45-degree rotation of the quartic is written in polar form as \(r=2a/\sqrt{-\cos(4\theta)}\) on the arcs where \(-\cos(4\theta)>0\).</p>
+    <p>Geometrically, the Besant–d’Ocagne curve is the envelope of a straight line drawn perpendicular to one end of a segment of constant length whose endpoints slide along two perpendicular axes. The sliding segment itself envelopes an astroid. The same curve is one of the involutes of the astroid and therefore one of its parallel curves.<sup>2</sup> The quartic polar form is the plot that most closely matches the eight-pointed heraldic outline: four arms, each flared, meeting at the origin along the lines where \(\sin(4\theta)=0\) is excluded because the radius becomes infinite there.</p>
+    <p>Documented real-life applications of these specific algebraic equations in engineering or the natural sciences were not found in the primary mathematical references.<sup>1,2</sup> The distinctive four-lobed shape has, however, inspired the design of the Geneva drive (commonly called the Maltese-cross mechanism), a device that converts continuous rotary motion into precise intermittent motion. That mechanism has been used since the late nineteenth century in motion-picture film projectors and cameras, mechanical watches, CNC machine-tool changers, indexing tables, and other automated equipment that requires controlled start-stop rotation. The Maltese-cross pattern also appears in modern metamaterial designs for inducing tunable electromagnetic anisotropy.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/MalteseCrossCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/MalteseCrossCurve.html</a> (definition, polar and Cartesian quartic equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/croixdemalte/croixdemalte.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/croixdemalte/croixdemalte.shtml</a> (Besant 1870, d’Ocagne 1884, Gaedecke 1917; envelope property and astroid relation; Cundy–Rollett quartic noted as the closer heraldic match)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:MALTESE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Maltese Cross"
+        iq ""
+        dcl "MALTESE"
+        opt '("Parametric horizontal" "Parametric vertical" "Quartic" "Rotated quartic")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\nParametric horizontal: x=a·cos(t)·(cos²(t)-2), y=a·sin(t)·cos²(t)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\na= " (rtos fa 2 4))
+           xc '(* fa (cos (eval a2)) (- (* (cos (eval a2)) (cos (eval a2))) 2.0))
+           yc '(* fa (sin (eval a2)) (* (cos (eval a2)) (cos (eval a2))))))
+    ((eq kw 1)
+     (princ "\nParametric vertical: x=-a·sin(t)·cos²(t), y=a·cos(t)·(cos²(t)-2)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\na= " (rtos fa 2 4))
+           xc '(- (* fa (sin (eval a2)) (* (cos (eval a2)) (cos (eval a2)))))
+           yc '(* fa (cos (eval a2)) (- (* (cos (eval a2)) (cos (eval a2))) 2.0))))
+    ((eq kw 2)
+     (princ "\nMaltese Cross (Quartic): r=2a/√(sin(4θ))")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\na= " (rtos fa 2 4))
+           rval '(if (&lt;= (sin (* 4.0 (eval a2))) 1e-9) 1e15 (* fa (/ 2.0 (alt_expt (sin (* 4.0 (eval a2))) 0.5 nil))))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2)))))
+    ((eq kw 3)
+     (princ "\nMaltese Cross (Rotated Quartic): r=2a/√(|cos(4θ)|)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           eq_display (strcat "\na= " (rtos fa 2 4))
+           rval '(* fa (if (&lt; (cos (* 4.0 (eval a2))) 0.0) (/ 2.0 (alt_expt (avoid_zero (- (cos (* 4.0 (eval a2))))) 0.5 T)) 1e15))
+           xc '(* (eval rval) (cos (eval a2)))
+           yc '(* (eval rval) (sin (eval a2))))))
+  (setq skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:MALTESE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

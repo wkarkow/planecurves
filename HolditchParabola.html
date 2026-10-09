@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holditch Parabola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Holditch Parabola</h1>
+      <p class="short-description">The locus of the midpoint of a chord of fixed length 2c that slides with its endpoints along a standard parabola of focal length f.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/HolditchParabola/HolditchParabola01-360.avif"
+           alt="Holditch Parabola, f=1,multiple values of c">
+      <figcaption>
+        Holditch Parabola, f=1,c=
+        <span class="figcap-value" style="color:#000000">0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">1</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2</span>,
+        <span class="figcap-value" style="color:#9600FF">2.5</span>,
+        <span class="figcap-value" style="color:#0096FF">3</span>,
+        <span class="figcap-value" style="color:#AA5555">3.5</span>,
+        <span class="figcap-value" style="color:#00FF00">4.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">4.5</span>,
+        <span class="figcap-value" style="color:#009696">5.0</span>,
+        <span class="figcap-value" style="color:#960096">5.5</span>,
+        <span class="figcap-value" style="color:#969600">6.0</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/HolditchParabola/HolditchParabola02-360.avif"
+           alt="Holditch Parabola,multiple values of f,c=4">
+      <figcaption>
+        Holditch Parabola, f=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.2</span>,
+        <span class="figcap-value" style="color:#0000FF">0.3</span>,
+        <span class="figcap-value" style="color:#009600">0.4</span>,
+        <span class="figcap-value" style="color:#FF9600">0.5</span>,
+        <span class="figcap-value" style="color:#9600FF">0.6</span>,
+        <span class="figcap-value" style="color:#0096FF">0.7</span>,
+        <span class="figcap-value" style="color:#AA5555">0.8</span>,
+        <span class="figcap-value" style="color:#00FF00">0.9</span>,
+        <span class="figcap-value" style="color:#FF00FF">1.0</span>,
+        <span class="figcap-value" style="color:#009696">1.5</span>,
+        <span class="figcap-value" style="color:#960096">2.0</span>,
+        <span class="figcap-value" style="color:#969600">4.0</span>,
+        c=4
+      </figcaption>
+    </figure>
+    </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Holditch Parabola equation:</div>
+      \[ x = \dfrac{y^{2}}{4f} + \dfrac{f\,c^{2}}{y^{2}+4f^{2}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Holditch parabola is the locus of the midpoint of a chord of fixed length 2c that slides with its endpoints along a standard parabola of focal length \(f\) (vertex to focus). It is a special case of the Holditch curves that arise from the construction in Holditch’s theorem. Rev. Hamnet Holditch (1800–1867), an English mathematician and president of Gonville and Caius College, Cambridge, published the theorem in 1858.<sup>1,2</sup> The theorem states that if a chord of constant length slides inside a closed convex curve, the area between the original curve and the locus of a point dividing the chord into segments of lengths \(p\) and \(q\) equals \(\pi \cdot p \cdot q\), independent of the shape or size of the base curve. For the midpoint case treated here, \(p=q=c\).</p>
+    <p>Historically these constructions belong to the broader nineteenth-century study of glissettes—loci generated by constrained sliding motions. The parabolic case shows how the sliding constraint interacts with curvature: the parameter \(f\) sets the focal scale of the generating parabola, and the ratio \( \frac{c}{f}\) governs whether the induced quartic remains convex or develops inflection and dimpling.</p>
+    <p>Real-life applications of Holditch curves and the underlying theorem appear in computational geometry and computer-aided design. The theorem has been used to compute areas between Bézier curves and quadratic uniform B-spline curves in CAGD/CAM systems.<sup>3</sup> Generalized versions appear in kinematic analysis of mechanisms that contain a rigid link whose endpoints move along a prescribed guide.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Holditch%27s_theorem" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Holditch%27s_theorem</a> (theorem history and statement)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/holditch/holditch.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/holditch/holditch.shtml</a> (Holditch curve for parabola, equation and construction)</li>
+      <li><a href="https://www.mdpi.com/2297-8747/6/3/169" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2297-8747/6/3/169</a> (application to Bézier and B-spline curves in CAGD/CAM)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HOLDITCHPARABOLA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                             restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Holditch Parabola"
+        iq "x=y²/(4·f)+(f·c²)/(y²+4·f²)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions for y from 0 to 1"
+        dct 100
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "f (focal length, vertex to focus)" 1.0)
+        fb (get_real 0 "c (half-chord length)" 1.0)
+        eq_display (strcat "\nf=" (rtos fa 2 4) ", c=" (rtos fb 2 4))
+        xc '(progn (setq fc (eval a2)) (+ (/ (* fc fc) (* 4.0 fa)) (/ (* 2 fa fb fb) (* 2.0 (+ (* fc fc) (* 4 fa fa))))))
+        yc '(eval a2)
+        paramstep (/ 1.0 divcount)
+        skm '(T nil T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HOLDITCHPARABOLA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

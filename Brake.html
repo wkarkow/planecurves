@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Braked Parabola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Braked Parabola</h1>
+      <p class="short-description">Trajectory of a projectile under quadratic air resistance (braked/ballistic parabola) obtained by 4th-order Runge-Kutta integration of the coupled ODEs; ideal parabola recovered exactly in the vacuum limit.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Brake/Brake01-360.avif"
+           alt="Braked Parabola, M16 Bullet, V₀=2102 mph (940 m/s) at 45°, mass 4 g, drag coefficient 0.3, diam 5.56 mm">
+      <figcaption>Braked Parabola, M16 Bullet, V₀=2102 mph (940 m/s) at 45°, mass 4 g, drag coefficient 0.3, diam 5.56 mm, <span class="figcap-value" style="color:#000000">2211 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">90071 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake02-360.avif"
+           alt="Braked Parabola, M16 Bullet, V₀=2102 mph (940 m/s) at 45°, mass 4 g, drag coefficient 0.3, diam 5.56 mm">
+      <figcaption>Braked Parabola, M16 Bullet, V₀=2102 mph (940 m/s) at 45°, mass 4 g, drag coefficient 0.3, diam 5.56 mm, <span class="figcap-value" style="color:#000000">2211 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">90071 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake03-360.avif"
+           alt="Braked Parabola, Golf ball, V₀=170 mph (76 m/s) at 45°, mass 46 g, drag coefficient 0.25, diam 42.7 mm">
+      <figcaption>Braked Parabola, Golf ball, V₀=170 mph (76 m/s) at 45°, mass 46 g, drag coefficient 0.25, diam 42.7 mm, <span class="figcap-value" style="color:#000000">213 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">589 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake04-360.avif"
+           alt="Braked Parabola, Golf ball, V₀=170 mph (76 m/s) at 45°, mass 46 g, drag coefficient 0.25, diam 42.7 mm">
+      <figcaption>Braked Parabola, Golf ball, V₀=170 mph (76 m/s) at 45°, mass 46 g, drag coefficient 0.25, diam 42.7 mm, <span class="figcap-value" style="color:#000000">213 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">589 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake05-360.avif"
+           alt="Braked Parabola, MLB baseball, V₀=89 mph (40 m/s) at 45°, mass 140 g, drag coefficient 0.5, diam 73 mm">
+      <figcaption>Braked Parabola, MLB baseball, V₀=89 mph (40 m/s) at 45°, mass 140 g, drag coefficient 0.5, diam 73 mm, <span class="figcap-value" style="color:#000000">81 meters meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">163 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake06-360.avif"
+           alt="Braked Parabola, MLB baseball, V₀=89 mph (40 m/s) at 45°, mass 140 g, drag coefficient 0.5, diam 73 mm">
+      <figcaption>Braked Parabola, MLB baseball, V₀=89 mph (40 m/s) at 45°, mass 140 g, drag coefficient 0.5, diam 73 mm, <span class="figcap-value" style="color:#000000">81 meters meters(air)</span> vs <span class="figcap-value" style="color:#FF0000">163 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake07-360.avif"
+           alt="Braked Parabola, Ping Pong ball, V₀=40 mph (18 m/s) at 45°, mass 2.7 g, drag coefficient 0.47, diam 40 mm">
+      <figcaption>Braked Parabola, Ping Pong ball, V₀=40 mph (18 m/s) at 45°, mass 2.7 g, drag coefficient 0.47, diam 40 mm, <span class="figcap-value" style="color:#000000">9.1 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">33 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake08-360.avif"
+           alt="Braked Parabola, Ping Pong ball, V₀=40 mph (18 m/s) at 45°, mass 2.7 g, drag coefficient 0.47, diam 40 mm">
+      <figcaption>Braked Parabola, Ping Pong ball, V₀=40 mph (18 m/s) at 45°, mass 2.7 g, drag coefficient 0.47, diam 40 mm, <span class="figcap-value" style="color:#000000">9.1 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">33 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake09-360.avif"
+           alt="Braked Parabola, NBA basketball, V₀=7.5 m/s, mass 0.62 kg, drag coefficient 0.55, diam 0.24 m">
+      <figcaption>Braked Parabola, NBA basketball, V₀=7.5 m/s, mass 0.62 kg, drag coefficient 0.55, diam 0.24 m, <span class="figcap-value" style="color:#000000">7.21 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">8.33 meters (vacuum)</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/Brake/Brake10-360.avif"
+           alt="Braked Parabola, NBA basketball, V₀=7.5 m/s, mass 0.62 kg, drag coefficient 0.55, diam 0.24 m">
+      <figcaption>Braked Parabola, NBA basketball, V₀=7.5 m/s, mass 0.62 kg, drag coefficient 0.55, diam 0.24 m, <span class="figcap-value" style="color:#000000">7.21 meters (air)</span> vs <span class="figcap-value" style="color:#FF0000">8.33 meters (vacuum)</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Braked Parabola differential equations (quadratic drag):</div>
+      \[ \frac{dx}{dt}=v_x,\quad \frac{dy}{dt}=v_y,\quad \frac{dv_x}{dt}=-\frac{g}{V_t^2}v\cdot v_x,\quad \frac{dv_y}{dt}=-g-\frac{g}{V_t^2}v\cdot v_y,\quad v=\sqrt{v_x^2+v_y^2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Vacuum (ideal) Parabola differential equations:</div>
+      \[ \frac{dx}{dt}=V_0\cos\theta,\quad \frac{dy}{dt}=V_0\sin\theta-gt \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The braked parabola<sup>1,2</sup> trajectory of a projectile subject to air resistance, often called a ballistic curve, has been studied since the early development of calculus. While the idealized parabola (no drag) was understood in the 17th century through the work of Galileo Galilei<sup>3</sup>, incorporating air resistance proved far more difficult. Early mathematicians including Johann Bernoulli<sup>4</sup>, Leonhard Euler<sup>5</sup>, Adrien-Marie Legendre<sup>6</sup>, and Carl Gustav Jacob Jacobi<sup>7</sup> analyzed projectile motion with resistive forces. In the simplest case, where drag is proportional to velocity, closed-form solutions can be derived. However, for real-world projectiles where drag is proportional to the square of velocity, the governing equations become nonlinear and must be solved numerically<sup>8</sup>. Historically, this limitation shaped practical ballistics. Before digital computation, artillery tables were produced using laborious numerical methods or mechanical analog computers<sup>9</sup>. Systems aboard warships such as the USS Iowa (BB-61) used electromechanical fire-control computers to approximate solutions of these same differential equations in real time, enabling accurate long-range targeting despite the absence of closed-form formulas<sup>10</sup>. In modern terms, the motion is governed by a coupled system of ordinary differential equations (ODEs) where drag depends on instantaneous speed. Without explicit solutions, numerical methods such as Runge–Kutta are used to generate the trajectory<sup>11</sup> by step-by-step integration of velocity and position.</p>
+    <p>Applications of this model are widespread. It describes the flight of bullets, artillery shells, and sports projectiles such as baseballs, golf balls, and basketballs. It also appears in engineering contexts such as re-entry trajectories, debris motion, and particle transport in fluids<sup>12</sup>. Compared to the ideal parabola, the ballistic curve shows reduced range, lower peak height, and a noticeably steeper descent, especially for objects with high drag relative to their mass.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/flight-equations-with-drag/" target="_blank" rel="noopener noreferrer">https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/flight-equations-with-drag/</a> (NASA derivation of analytical forms for drag-modified trajectories).</li>
+      <li><a href="https://www.2dcurves.com/exponential/exponentialli.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/exponential/exponentialli.html</a> (origin of the “braked parabola” name and description of quadratic-drag modification).</li>
+      <li>Galileo Galilei, <em>Two New Sciences</em> (1638) – parabolic motion without drag.</li>
+      <li>Johann Bernoulli, <em>Mechanica</em> – differential equations of motion with resistance.</li>
+      <li>Leonhard Euler, <em>Mechanica</em> – differential equations of motion with resistance.</li>
+      <li>Adrien-Marie Legendre – ballistic analysis with resistance.</li>
+      <li>Carl Gustav Jacob Jacobi – analytical mechanics and ballistic formulations.</li>
+      <li>Classical fluid dynamics (quadratic drag formulations, e.g., Taylor, <em>Classical Mechanics</em>).</li>
+      <li>Historical artillery tables (pre-computed ballistic solutions; see McCoy, <em>Modern Exterior Ballistics</em>).</li>
+      <li>U.S. Navy fire-control systems (USS Iowa BB-61 analog fire-control computer for real-time approximate solutions).</li>
+      <li>Runge–Kutta methods (Butcher, <em>Numerical Methods for Ordinary Differential Equations</em>).</li>
+      <li>Anderson, <em>Fundamentals of Aerodynamics</em> – aerodynamics of projectiles, sports, and engineering applications.</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BRAKE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                  id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr
+                  fs ft fu fv fw fx fy fz)
+  (setq id "Braked Parabola"
+      iq "dx/dt=vₓ, dy/dt=vᵧ, dvₓ/dt=-(g/Vₜ²)·v·vₓ, dvᵧ/dt=-g-(g/Vₜ²)·v·vᵧ"
+      dcl "BRAKE"
+      opt '("air M16 Bullet" "vacuum M16 Bullet" "air Golf ball" "vacuum Golf ball" "air MLB baseball" "vacuum MLB baseball" "air Ping Pong ball"
+            "vacuum Ping Pong ball"  "air New Values" "vacuum New Values")
+      kw 0
+      mode 'param
+      dpr "# of divisions to draw"
+      dct 300
+      dpt nil
+      span nil
+      kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((or (eq kw 0) (eq kw 1)) (setq fa (get_real 2 "Initial velocity V0 (m/s)" 940.0) fc 0.004 fd 0.3 fe 0.0057)) 
+    ((or (eq kw 2) (eq kw 3)) (setq fa (get_real 2 "Initial velocity V0 (m/s)" 76.0) fc 0.0459 fd 0.25 fe 0.0427))
+    ((or (eq kw 4) (eq kw 5)) (setq fa (get_real 2 "Initial velocity V0 (m/s)" 40.0) fc 0.140 fd 0.5 fe 0.073))
+    ((or (eq kw 6) (eq kw 7)) (setq fa (get_real 2 "Initial velocity V0 (m/s)" 18.0) fc 0.0027 fd 0.47 fe 0.04))
+    ((eq kw 8)
+     (setq fa (get_real 2 "Initial velocity V0 (m/s)" 7.5)
+           fc (get_real 2 "Mass (kg)" 0.62)
+           fd (get_boundr 4 "Drag coefficient Cd" 0.55 0.0 1.0 nil nil)
+           fe (get_real 2 "Diameter (m)" 0.24)))
+    ((eq kw 9) (setq fa (get_real 2 "Initial velocity V0 (m/s)" 7.5) fc 1.0 fd 1.0 fe 1.0)))
+  (setq fb (* (get_boundr 4 "Launch angle (deg)" 45.0 0.0 90.0 nil nil) (/ pi 180.0))
+	eq_display (strcat "\nV0=" (rtos fa 2 4) " m/s, θ=" (rtos (* fb (/ 180.0 pi)) 2 4) "°, m=" (rtos fc 2 4) " kg, Cd=" (rtos fd 2 4) ", d=" (rtos fe 2 4) " m")
+	ff 1.225
+	fg 9.81)
+  (if (or (eq kw 0) (eq kw 2) (eq kw 4) (eq kw 6) (eq kw 8))
+      (setq fh (* pi 0.25 fe fe)
+            fi (* 0.5 ff fd fh)
+            fj (* fa (cos fb))
+            fk (sqrt (/ (* fc fg) fi))
+            fl (* 0.76 (/ (* fk fk) fg))
+            fm (/ (* fg fj) (* fk fk))
+            paramstep (/ (* 1.5 (/ (min (* fa (sin fb)) fk) fg)) divcount)
+            fo 1
+            fp 0.0
+            fq 0.0
+            fr 0.0
+            fs (* fa (cos fb))
+            ft (* fa (sin fb))
+            xc 'fq
+            yc 'fr
+            a1 0.0
+            a2 '(progn (if (= fo 1) (setq fo 0) (progn
+                  (setq fu (list fs ft (* (- (/ fi fc)) (sqrt (+ (* fs fs) (* ft ft))) fs) (+ (- fg) (* (- (/ fi fc)) (sqrt (+ (* fs fs) (* ft ft))) ft))))
+                  (setq fv (list (+ fs (* 0.5 paramstep (nth 2 fu))) (+ ft (* 0.5 paramstep (nth 3 fu))) (* (- (/ fi fc)) (sqrt (+ (* (+ fs
+			(* 0.5 paramstep (nth 2 fu))) (+ fs (* 0.5 paramstep (nth 2 fu)))) (* (+ ft (* 0.5 paramstep (nth 3 fu))) (+ ft
+			(* 0.5 paramstep (nth 3 fu)))))) (+ fs (* 0.5 paramstep (nth 2 fu)))) (+ (- fg) (* (- (/ fi fc)) (sqrt (+ (* (+ fs
+			(* 0.5 paramstep (nth 2 fu))) (+ fs (* 0.5 paramstep (nth 2 fu)))) (* (+ ft (* 0.5 paramstep (nth 3 fu))) (+ ft
+			(* 0.5 paramstep (nth 3 fu)))))) (+ ft (* 0.5 paramstep (nth 3 fu)))))))
+                  (setq fw (list (+ fs (* 0.5 paramstep (nth 2 fv))) (+ ft (* 0.5 paramstep (nth 3 fv))) (* (- (/ fi fc)) (sqrt (+ (* (+ fs
+			(* 0.5 paramstep (nth 2 fv))) (+ fs (* 0.5 paramstep (nth 2 fv)))) (* (+ ft (* 0.5 paramstep (nth 3 fv))) (+ ft
+			(* 0.5 paramstep (nth 3 fv)))))) (+ fs (* 0.5 paramstep (nth 2 fv)))) (+ (- fg) (* (- (/ fi fc)) (sqrt (+ (* (+ fs
+			(* 0.5 paramstep (nth 2 fv))) (+ fs (* 0.5 paramstep (nth 2 fv)))) (* (+ ft (* 0.5 paramstep (nth 3 fv))) (+ ft
+			(* 0.5 paramstep (nth 3 fv)))))) (+ ft (* 0.5 paramstep (nth 3 fv)))))))
+                  (setq fx (list (+ fs (* paramstep (nth 2 fw))) (+ ft (* paramstep (nth 3 fw))) (* (- (/ fi fc)) (sqrt (+ (* (+ fs (* paramstep
+			(nth 2 fw))) (+ fs (* paramstep (nth 2 fw)))) (* (+ ft (* paramstep (nth 3 fw))) (+ ft (* paramstep (nth 3 fw))))))
+			(+ fs (* paramstep (nth 2 fw)))) (+ (- fg) (* (- (/ fi fc)) (sqrt (+ (* (+ fs (* paramstep (nth 2 fw))) (+ fs
+			(* paramstep (nth 2 fw)))) (* (+ ft (* paramstep (nth 3 fw))) (+ ft (* paramstep (nth 3 fw))))))
+			(+ ft (* paramstep (nth 3 fw)))))))
+                  (setq fq (+ fq (* (/ paramstep 6.0) (+ (car fu) (* 2.0 (car fv)) (* 2.0 (car fw)) (car fx))))
+			fr (+ fr (* (/ paramstep 6.0) (+ (cadr fu) (* 2.0 (cadr fv)) (* 2.0 (cadr fw)) (cadr fx))))
+			fs (+ fs (* (/ paramstep 6.0) (+ (nth 2 fu) (* 2.0 (nth 2 fv)) (* 2.0 (nth 2 fw)) (nth 2 fx))))
+			ft (+ ft (* (/ paramstep 6.0) (+ (nth 3 fu) (* 2.0 (nth 3 fv)) (* 2.0 (nth 3 fw)) (nth 3 fx))))
+			fp (+ fp paramstep)))) fp)
+            x1 (eval xc)
+            y1 (eval yc))
+    (setq paramstep (/ (/ (* 2.0 fa (sin fb)) fg) divcount)
+          xc '(* fa (cos fb) (eval a2))
+          yc '(- (* fa (sin fb) (eval a2)) (* 0.5 fg (eval a2) (eval a2)))
+          a1 0.0
+          a2 a1
+          x1 (eval xc)
+          y1 (eval yc)
+          a2 '(+ a1 paramstep)))
+  (setq skm '(T T T)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BRAKE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

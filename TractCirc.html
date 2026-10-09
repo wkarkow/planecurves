@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tractrix of a Circle - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Tractrix of a Circle</h1>
+      <p class="short-description">Path of a point pulled by a taut leash of fixed length \( a \) while the other end travels on a circle of radius \( R \).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/TractCirc/TractCirc01-360.avif"
+           alt="Tractrix of a Circle, Inside branch,R=2,a=0.25">
+      <figcaption>Tractrix of a Circle, Inside branch,R=2,a=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc02-360.avif"
+           alt="Tractrix of a Circle, Inside branch,R=2,a=1.0">
+      <figcaption>Tractrix of a Circle, Inside branch,R=2,a=1.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc03-360.avif"
+           alt="Tractrix of a Circle, Inside branch,R=2,a=1.9">
+      <figcaption>Tractrix of a Circle, Inside branch,R=2,a=1.9</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc04-360.avif"
+           alt="Tractrix of a Circle, Outside branch,R=2,a=0.25">
+      <figcaption>Tractrix of a Circle, Outside branch,R=2,a=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc05-360.avif"
+           alt="Tractrix of a Circle, Outside branch,R=2,a=1.0">
+      <figcaption>Tractrix of a Circle, Outside branch,R=2,a=1.0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc06-360.avif"
+           alt="Tractrix of a Circle, Outside branch,R=2,a=1.9">
+      <figcaption>Tractrix of a Circle, Outside branch,R=2,a=1.9</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc07-360.avif"
+           alt="Tractrix of a Circle, Long,R=2,a=2.1,k=0">
+      <figcaption>Tractrix of a Circle, Long,R=2,a=2.1,k=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc08-360.avif"
+           alt="Tractrix of a Circle, Long,R=2,a=4.0,k=0">
+      <figcaption>Tractrix of a Circle, Long,R=2,a=4.0,k=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc09-360.avif"
+           alt="Tractrix of a Circle, Long,R=2,a=6.0,k=0">
+      <figcaption>Tractrix of a Circle, Long,R=2,a=6.0,k=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc10-360.avif"
+           alt="Tractrix of a Circle, Symmetric,R=1,n=3,c=1,a=1.25">
+      <figcaption>Tractrix of a Circle, Symmetric,R=1,n=3,c=1,a=1.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc11-360.avif"
+           alt="Tractrix of a Circle, Symmetric,R=1,n=4,c=1,a=1.3416">
+      <figcaption>Tractrix of a Circle, Symmetric,R=1,n=4,c=1,a=1.3416</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc12-360.avif"
+           alt="Tractrix of a Circle, Symmetric,R=1,n=5,c=1,a=1.4289">
+      <figcaption>Tractrix of a Circle, Symmetric,R=1,n=5,c=1,a=1.4289</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc13-360.avif"
+           alt="Tractrix of a Circle, Symmetric,R=1,n=13,c=1,a=2.0045">
+      <figcaption>Tractrix of a Circle, Symmetric,R=1,n=13,c=1,a=2.0045</figcaption>
+    </figure>    
+    <figure>
+      <img src="images/TractCirc/TractCirc14-360.avif"
+           alt="Tractrix of a Circle, Symmetric,R=1,n=3,c=4,a=1.25">
+      <figcaption>ractrix of a Circle, Symmetric,R=1,n=3,c=4,a=1.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc15-360.avif"
+           alt="Tractrix of a Circle, Symmetric,R=1,n=3,c=12,a=1.25">
+      <figcaption>Tractrix of a Circle, Symmetric,R=1,n=3,c=12,a=1.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TractCirc/TractCirc16-360.avif"
+           alt="Tractrix of a Circle, Symmetric,R=1,n=3,c=48,a=1.25">
+      <figcaption>Tractrix of a Circle, Symmetric,R=1,n=3,c=48,a=1.25</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Tractrix of a Circle differential equation:</div>
+      \[ \frac{d\theta}{dr} = \frac{\sqrt{4R^{2}r^{2} - (r^{2} + R^{2} - a^{2})^{2}}}{r(r^{2} - R^{2} + a^{2})} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The tractrix of a circle<sup>1</sup> is the path traced by a point that is pulled by a taut leash of fixed length \( a \) while the other end of the leash (the “puller”) moves steadily along a circle of radius \( R \). When \( 0 < a < R \), two distinct branches exist: an inner branch that begins at distance \( R - a \) from the center and spirals inward toward the same caustic circle of radius \( \sqrt{R^{2} - a^{2}} \), and an outer branch that begins at distance \( R + a \) and spirals inward toward the same caustic. When \( a > R \), the curve crosses inside the pulling circle and generates multiple sheets indexed by an integer parameter \( k \), with a characteristic angular offset \( 2k\theta_{0} \) where \( \theta_{0} = \pi\left(\dfrac{a}{\sqrt{a^{2} - R^{2}}} - 1\right) \). The curve belongs to the broader family of tractrices and pursuit curves whose study began with Christiaan Huygens in 1692 for the classic (straight-line) tractrix.<sup>2</sup> The same notes include the special circular case in which the string equals the radius of the directing circle; the 1905 editors remark that Huygens stated, without a calculation, that this spiral approaches the center of that circle.<sup>2</sup> The circular variant appears in later classical differential geometry as an example of a curve possessing a circular caustic and as a roulette generated by a circle rolling inside or outside another circle under appropriate length constraints. It also arises naturally in kinematics as the path of a trailer being towed by a vehicle that travels in a circular arc. In the following code, when \( a \) is small enough that the curve fails to complete at least a full circular arc, it may be necessary to add in the caustic (asymptotic) circle whose radius \( = \sqrt{R^{2} - a^{2}} \) for visual completeness due to the exponentially shortening segments that are drawn by the code. When choosing options, 'Long' is one petal at an arbitrary angle, which may or may not close when upon repeating various $k$ branches. The Symmetric option draws a petal with the leash chosen so the copies close.</p>
+    <p>In engineering the tractrix of a circle models the motion of wheeled trailers or towed vehicles when the towing point moves along a curved path, aiding the design of steering and path-planning algorithms for articulated vehicles.<sup>3</sup> In geometry and optics the inner caustic circle is the envelope of the leash positions; this property has been used in the study of reflection caustics and in the design of certain curved mirrors or reflective surfaces. The multi-sheeted forms that appear when \( a > R \) provide visual examples of curves with rotational symmetry and have been employed in decorative patterns and in the graphical exploration of roulettes and epicycloidal motion.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d/tractrice/tractoiredecercle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d/tractrice/tractoiredecercle.shtml</a> (equations, movement gifs)</li>
+      <li><a href="https://www.dbnl.org/tekst/huyg003oeuv10_01/huyg003oeuv10_01_0140.php" target="_blank" rel="noopener noreferrer">https://www.dbnl.org/tekst/huyg003oeuv10_01/huyg003oeuv10_01_0140.php</a> (Huygens, 29 Oct. 1692 notes on the straight tractrix; editors’ footnote 13: circular case with string equal to the directing-circle radius, asymptotic to the center)</li>
+      <li><a href="https://archive.org/details/bookofcurves0000lock/page/118/mode/2up" target="_blank" rel="noopener noreferrer">https://archive.org/details/bookofcurves0000lock/page/118/mode/2up</a> (Lockwood, E. H. <em>A Book of Curves</em>. Cambridge University Press, 1961, discussion of tractrices and related roulettes, may be borrow-restricted)</li>
+roulettes)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TRACTCIRC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                      id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr)
+  (defun f_t (a b c / d)
+    (setq d (avoid_zero (* a (+ (* a a) (- (* b b) (* c c))))) d (if (eq kw 0) (min d -1e-15) d))
+    (if (<= (abs d) 1e-15) 0.0 (/ (sqrt (max 0.0 (- (* 4.0 c c a a) (expt (- (+ (* a a) (* c c)) (* b b)) 2.0)))) d)))
+  (setq id "Tractrix of a Circle"
+        iq "dθ/dr=√[4R²r²-(r²+R²-a²)²]/[r(r²-R²+a²)]"
+        dcl "TRACTCIRC"
+        opt '("Inside branch" "Outside branch" "Long" "Symmetric")
+        kw 0
+        mode 'param
+        dpr "# of divisions in curve"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        xc '(* fe (cos ff))
+        yc '(* fe (sin ff))
+        skm '(T nil T))
+  (cond
+    ((= kw 0)
+     (setq fb (get_real 2 "R (circle radius)" 2.0)
+           fa (get_boundr 2 "a (leash length)" (* fb 0.5) 0 fb nil nil)
+           eq_display (strcat "\nR=" (rtos fb 2 4) ", a=" (rtos fa 2 4))
+           fc (- fb fa)
+           fd (sqrt (max 0.0 (- (* fb fb) (* fa fa))))
+           paramstep (/ (- fd fc) divcount)
+           fe fc
+           ff 0.0
+           fg 1
+           a1 fc
+           a2 a1
+           x1 (eval xc)
+           y1 (eval yc)
+           a2 '(progn (if (= fg 1) (progn (setq fg 0) fe) (progn (setq fh (- fd fe) fi (max 1e-15 (* fh 0.08)) fj (min (+ fe fi) (- fd 1e-15)) fk (- fj fe)
+               fl (+ fe (/ fk 2.0)) fm (f_t fl fa fb) fn (* fm fk) ff (+ ff fn) fe fj) fe)))))
+    ((= kw 1)
+     (setq fb (get_real 2 "R (circle radius)" 2.0)
+           fa (get_boundr 2 "a (leash length)" (* fb 0.5) 0 (* 2 fb) nil nil)
+           eq_display (strcat "\nR=" (rtos fb 2 4) ", a=" (rtos fa 2 4))
+           fo (+ fb fa)
+           fp   (sqrt (max 0.0 (- (* fb fb) (* fa fa))))
+           paramstep (/ (- fo fp) divcount)
+           fe fo
+           ff 0.0
+           fg 1
+           a1 fo
+           a2 a1
+           x1 (eval xc)
+           y1 (eval yc)
+           a2 '(progn (if (= fg 1) (progn (setq fg 0) fe) (progn (setq fh (- fe fp) fi (max 1e-15 (* fh 0.08)) fj (max (- fe fi) (+ fp 1e-15)) fk (- fe fj)
+               fl (- fe (/ fk 2.0)) fm (f_t fl fa fb) fn (* fm fk) ff (+ ff fn) fe fj) fe)))))
+    ((= kw 2)
+     (setq fb (get_real 2 "R (circle radius)" 2.0)
+           fa (get_boundr 2 "a (leash length > R)" (* fb 1.1) fb (* 5 fb) nil nil)
+           fk (get_integer 0 "k (branch index, can be negative)" 0)
+           ff (* 2.0 fk (* pi (- (/ fa (sqrt (max 1e-15 (- (* fa fa) (* fb fb))))) 1.0)))
+           eq_display (strcat "\nR=" (rtos fb 2 4) ", a=" (rtos fa 2 4) ", k=" (itoa fk))
+           fo (+ fb fa)
+           fp (max 0.001 (abs (- fb fa)))
+           paramstep (/ (- fo fp) divcount)
+           fe fo
+           fg 1
+           a1 fo
+           a2 a1
+           x1 (eval xc)
+           y1 (eval yc)
+           a2 '(progn (if (= fg 1) (progn (setq fg 0) fe) (progn (setq fh (- fe fp) fi (max 1e-15 (* fh 0.08)) fj (max (- fe fi) (+ fp 1e-15)) fk (- fe fj)
+               fl (- fe (/ fk 2.0)) fm (f_t fl fa fb) fn (* fm fk) ff (+ ff fn) fe fj) fe)))))
+    ((= kw 3)
+     (setq fb (get_real 2 "R (circle radius)" 1.0)
+           fr (get_integer 6 "n (number of leaves / fold symmetry, n≥3)" 5)
+           fc (get_integer 6 "c (petal multiple, total = n*c)" 1)
+           fq (/ 2.0 fr)
+           fa (* (/ (+ 1.0 fq) (sqrt (* fq (+ 2.0 fq)))) fb)
+           eq_display (strcat "\nR=" (rtos fb 2 4) ", n=" (itoa fr) ", c=" (itoa fc) ", a=" (rtos fa 2 4))
+           fo (+ fb fa)
+           fp (max 0.001 (abs (- fb fa)))
+           paramstep (/ (- fo fp) divcount)
+           fe fo
+           ff 0.0
+           fg 1
+           a1 fo
+           a2 a1
+           x1 (eval xc)
+           y1 (eval yc)
+           a2 '(progn (if (= fg 1) (progn (setq fg 0) fe) (progn (setq fh (- fe fp) fi (max 1e-15 (* fh 0.12)) fj (max (- fe fi) (+ fp 1e-15)) fk (- fe fj)
+               fl (- fe (/ fk 2.0)) fm (f_t fl fa fb) fn (* fm fk) ff (+ ff fn) fe fj)
+                      fe))))))
+  (setq x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (setq cd (getvar "CMDECHO"))
+  (setvar "CMDECHO" 0)
+  (if (eq kw 3) (command "array" plineents "" "po" basept (* fr fc) "" ""))
+  (setvar "CMDECHO" cd)
+  (princ))
+(C:TRACTCIRC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

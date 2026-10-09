@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paracycloid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Paracycloid</h1>
+      <p class="short-description">A pseudocycloidal curve, paired with the hypercycloid, whose differential equations for the radius of curvature result in the use of hyperbolic functions.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Paracycloid/Paracycloid01-360.avif"
+           alt="Paracycloid, a=1,ω=0.125">
+      <figcaption>Paracycloid, a=1,ω=0.125</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid02-360.avif"
+           alt="Paracycloid, a=1,ω=0.25">
+      <figcaption>Paracycloid, a=1,ω=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid03-360.avif"
+           alt="Paracycloid, a=1,ω=0.5">
+      <figcaption>Paracycloid, a=1,ω=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid04-360.avif"
+           alt="Paracycloid, a=1,ω=1">
+      <figcaption>Paracycloid, a=1,ω=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid05-360.avif"
+           alt="Hypercycloid, a=1,ω=0.125">
+      <figcaption>Hypercycloid, a=1,ω=0.125</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid06-360.avif"
+           alt="Hypercycloid, a=1,ω=0.25">
+      <figcaption>Hypercycloid, a=1,ω=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid07-360.avif"
+           alt="Hypercycloid, a=1,ω=0.5">
+      <figcaption>Hypercycloid, a=1,ω=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid08-360.avif"
+           alt="Hypercycloid, a=1,ω=1">
+      <figcaption>Hypercycloid, a=1,ω=1</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Paracycloid/Paracycloid09-360.avif"
+           alt="Hypercycloid, a=1,ω=0.1">
+      <figcaption>Hypercycloid, a=1,ω=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paracycloid/Paracycloid10-360.avif"
+           data-caption="Hypercycloid, a=1(black),ω=0.1(black), Logarithmic Spiral, a=1(red),b=0.0912(red)""
+           alt="Hypercycloid, a=1(black),ω=0.1(black), Logarithmic Spiral, a=1(red),b=0.0912(red)">
+      <figcaption>
+        Hypercycloid, 
+        <span class="figcap-value" style="color:#000000">a=1</span>,
+        <span class="figcap-value" style="color:#000000">ω=0.1</span>,
+        Logarithmic Spiral, 
+        <span class="figcap-value" style="color:#FF0000">a=1</span>,
+        <span class="figcap-value" style="color:#FF0000">b=0.0912</span>
+    </figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Intrinsic equation (pseudocycloidal family):</div>
+      \[ \dfrac{d\rho}{ds} = k\cdot\rho \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Paracycloid parametric equations:</div>
+      \[ x = a\bigl(\omega\cosh(\omega t)\cos t + \sinh(\omega t)\sin t\bigr),\quad y = a\bigl(\omega\cosh(\omega t)\sin t - \sinh(\omega t)\cos t\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hypercycloid parametric equations:</div>
+      \[ x = a\bigl(\omega\sinh(\omega t)\cos t + \cosh(\omega t)\sin t\bigr),\quad y = a\bigl(\omega\sinh(\omega t)\sin t - \cosh(\omega t)\cos t\bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The paracycloid and hypercycloid<sup>1</sup> (collectively known as pseudocycloidal curves) satisfy the intrinsic equation \(d\rho/ds = k\cdot\rho\) with \(k&lt;0\) relating radius of curvature to arc length that is analogous to the relation for ordinary cycloids, which have \(k=-1\). They employ hyperbolic functions and were studied by Leonhard Euler in papers from 1750 and 1783 and later examined by Ernesto Cesàro in 1887. Mathematically, the paracycloid is the negative pedal curve of the hyperbolic sine spiral, while the hypercycloid is the negative pedal of the hyperbolic cosine spiral; the two curves are evolutes of each other.</p>
+    <p>No specific real-life applications in engineering or the natural sciences for these exact curves were identified in the primary mathematical references. The word hypercycloid is also used in some texts as a synonym for epicycloid; that usage is unrelated to the hyperbolic form implemented here.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/pseudocycloide/pseudocycloide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/pseudocycloide/pseudocycloide.shtml</a> (history, definitions, equations, paracycloid and hypercycloid properties)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PARACYCLOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                        divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Paracycloid/Hypercycloid"
+        iq "x=a·(ω·[cosh/sinh](ω·t)·cos(t)+[sinh/cosh](ω·t)·sin(t)), y=a·(ω·[cosh/sinh](ω·t)·sin(t)-[sinh/cosh](ω·t)·cos(t))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions per revolution"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "ω (aspect ratio, >0)" 0.125)
+        fc (get_keyword 0 "Paracycloid Hypercycloid" "\nParacycloid or Hypercycloid?" "Paracycloid")
+        eq_display (strcat "\nwith a=" (rtos fa 2 4) ", ω=" (rtos fb 2 4) ", type=" fc))
+  (if (eq fc "Paracycloid")
+    (setq xc '(* fa (+ (* fb (cosh (* fb (eval a2))) (cos (eval a2))) (* (sinh (* fb (eval a2))) (sin (eval a2)))))
+          yc '(* fa (- (* fb (cosh (* fb (eval a2))) (sin (eval a2))) (* (sinh (* fb (eval a2))) (cos (eval a2)))))
+          skm '(T nil T))
+    (setq xc '(* fa (+ (* fb (sinh (* fb (eval a2))) (cos (eval a2))) (* (cosh (* fb (eval a2))) (sin (eval a2)))))
+          yc '(* fa (- (* fb (sinh (* fb (eval a2))) (sin (eval a2))) (* (cosh (* fb (eval a2))) (cos (eval a2)))))
+          skm '(nil T T)))
+  (setq  a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PARACYCLOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

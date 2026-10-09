@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garfield Curve - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Garfield Curve</h1>
+      <p class="short-description">An informally named polar curve that resembles the face of the cartoon cat Garfield.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Garfield/Garfield01-360.avif"
+           alt="Garfield Curve, a=1,b=1,c=1,d=1,e=1">
+      <figcaption>Garfield Curve, a=1,b=1,c=1,d=1,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield02-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=3,c=2,d=1,e=1">
+      <figcaption>Generalized Garfield Curve, a=1,b=3,c=2,d=1,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield03-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=3,c=-2,d=1,e=1">
+      <figcaption>Generalized Garfield Curve, a=1,b=3,c=-2,d=1,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield04-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=0.25,c=0.5,d=1,e=1">
+      <figcaption>Generalized Garfield Curve, a=1,b=0.25,c=0.5,d=1,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield05-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=1/3,c=-0.5,d=1,e=1">
+      <figcaption>Generalized Garfield Curve, a=1,b=1/3,c=-0.5,d=1,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield06-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=-0.75,c=-0.5,d=1,e=1">
+      <figcaption>Generalized Garfield Curve, a=1,b=-0.75,c=-0.5,d=1,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield07-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=1,c=2,d=3,e=1">
+      <figcaption>Generalized Garfield Curve, a=1,b=1,c=2,d=3,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield08-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=1,c=5/4,d=2,e=1">
+      <figcaption>Generalized Garfield Curve, a=1,b=1,c=5/4,d=2,e=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield09-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=3,c=2,d=3,e=2, reflected">
+      <figcaption>Generalized Garfield Curve, a=1,b=3,c=2,d=3,e=2, reflected</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield10-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=3,c=-2,d=3,e=2">
+      <figcaption>Generalized Garfield Curve, a=1,b=3,c=-2,d=3,e=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield11-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=-0.25,c=-0.25,d=0.25,e=0.25">
+      <figcaption>Generalized Garfield Curve, a=1,b=-0.25,c=-0.25,d=0.25,e=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield12-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=-0.5,c=-0.5,d=0.95,e=1.1">
+      <figcaption>Generalized Garfield Curve, a=1,b=-0.5,c=-0.5,d=0.95,e=1.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield13-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=0.5,c=-0.5,d=0.5,e=-0.5">
+      <figcaption>Generalized Garfield Curve, a=1,b=0.5,c=-0.5,d=0.5,e=-0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield14-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=0.5,c=-0.5,d=3,e=-0.5">
+      <figcaption>Generalized Garfield Curve, a=1,b=0.5,c=-0.5,d=3,e=-0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Garfield/Garfield15-360.avif"
+           alt="Generalized Garfield Curve, a=1,b=0.25,c=-0.95,d=0.95,e=0.95">
+      <figcaption>Generalized Garfield Curve, a=1,b=0.25,c=-0.95,d=0.95,e=0.95</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">Garfield Curve polar equation:</div>
+      \[ r = \theta \cos \theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r = a \cdot (b \theta)^{c} \cdot \cos^{e} (d \theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Garfield curve<sup>1</sup> is an informally named polar curve that first appeared in calculus textbooks as an exercise illustrating graphing in polar coordinates. When the basic form r = θ cos θ is plotted from θ = −2π to 2π, the resulting figure bears a striking resemblance to the face of the cartoon cat Garfield, with two prominent “ears” formed by the lobes of the curve. The name derives solely from this visual similarity rather than from any historical mathematician or classical treatment. The AutoLISP implementation generalizes the curve to the family r = a · (bθ)<sup>c</sup> · cos<sup>e</sup>(dθ), permitting controlled variation of the five parameters while preserving the essential character of the original plot. No earlier historical development or named predecessors are documented; the curve functions primarily as a modern pedagogical example for demonstrating how the product of a linear term in θ and a trigonometric term in θ generates distinctive polar shapes.</p>
+    <p>Real-life applications in engineering or the natural sciences have not been documented for the Garfield curve or its generalizations.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/GarfieldCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/GarfieldCurve.html</a> (definition, plot range from −2π to 2π, and origin of the name resembling Garfield the cat).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GARFIELD (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                     restartflag id iq dcl opt kw mode dct dpt span rval xc yc a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd fe maxdraw)
+  (setq id "Garfield Curve"
+        iq "r=a·(bθ)ᶜ·cos(dθ)ᵉ"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (scale): " 1.0)
+        fb (get_real 2 "b (angle multiplier): " 1.0)
+        fc (get_real 2 "c (angle exponent): " 1.0)
+        fd (get_real 2 "d (cosine multiplier): " 1.0)
+        fe (get_real 2 "e (cosine exponent): " 1.0)
+        eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4) ", d= " (rtos fd 2 4) ", e= " (rtos fe 2 4))
+        rval '(* fa (alt_expt (* fb (eval a2)) fc nil) (alt_expt (cos (* fd (eval a2))) fe nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GARFIELD)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

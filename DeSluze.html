@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DeSluze Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>DeSluze Curve</h1>
+      <p class="short-description">A rational circular cubic with asymptotes and loops.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/DeSluze/DeSluze01-360.avif"
+          alt="DeSluze Curve, multiple values of a">
+      <figcaption>
+        DeSluze Curve, a=
+        <span class="figcap-value" style="color:#000000">-5</span>,
+        <span class="figcap-value" style="color:#FF0000">-4</span>,
+        <span class="figcap-value" style="color:#0000FF">-3</span>,
+        <span class="figcap-value" style="color:#009600">-2</span>,
+        <span class="figcap-value" style="color:#FF9600">-1</span>,
+        <span class="figcap-value" style="color:#9600FF">1</span>,
+        <span class="figcap-value" style="color:#0096FF">2</span>,
+        <span class="figcap-value" style="color:#AA5555">3</span>,
+        <span class="figcap-value" style="color:#00FF00">4</span>,
+        <span class="figcap-value" style="color:#FF00FF">5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze02-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=1,c=2">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=1,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze03-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=2,c=2">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=2,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze04-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=3,c=2">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=3,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze05-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=5,c=2">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=5,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze06-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=-1,c=2">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=-1,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze07-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=-3,c=2">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=-3,c=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze08-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=2,c=-1">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=2,c=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze09-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=2,c=1">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=2,c=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DeSluze/DeSluze10-360.avif"
+           alt="Generalized DeSluze Curve, a=-3,b=2,c=3">
+      <figcaption>Generalized DeSluze Curve, a=-3,b=2,c=3</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">DeSluze Curve implicit equation:</div>
+      \[ (x - 1) (x^2 + y^2) = a x^2 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">DeSluze Curve polar equation:</div>
+      \[ r = \dfrac{1}{\cos\theta} + a \cos\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized DeSluze Curve polar equation:</div>
+      \[ r = \dfrac{1}{\cos^{b}\theta} + a \cos^{c}\theta \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The DeSluze curve<sup>1,2,3</sup>, also known as the Conchoid of de Sluze or Sluze cubic, is a rational circular cubic and derives its name from a resemblance to the conchoid of Nicomedes and was first constructed in 1662. René François Walter de Sluze (1622–1685) was a Belgian mathematician and canon of the cathedral of Liège, who made notable contributions to the geometry of curves in the mid-17th century. His studies centered on what were then called "geometrical loci", curves defined by algebraic equations, especially those of degree three (cubics). He investigated properties such as tangents, inflection points, and curvature, building on methods pioneered by Fermat and Descartes and anticipating ideas of calculus. De Sluze also corresponded with Christiaan Huygens, and his work influenced later mathematicians, including Newton and Leibniz, who were both keenly interested in cubic and higher-order curves during the development of calculus. In Newton's classification of cubic curves (1704), De Sluze's family appeared as examples of rational curves with asymptotes and loops, illustrating how different parameter values could yield drastically different shapes. In the options implemented here with the generalized equation, the Real vs. Imaginary difference appears only when b is an integer while c is a non-integer.</p>
+    <p>Real-life applications of the specific DeSluze conchoid are limited and mostly mathematical in nature. The broader class of conchoids has been applied in mechanical engineering, optics, electromagnetism, fluid mechanics, and architectural construction.<sup>4</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/ConchoidofdeSluze.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/ConchoidofdeSluze.html</a> (history and equations).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cubicsluze/cubicsluze.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cubicsluze/cubicsluze.shtml</a> (history and equations).</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubiccs.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubiccs.html</a> (history and equations).</li>
+      <li><a href="https://oa.upm.es/44926/1/Sendra-Gomez-Moran.pdf" target="_blank" rel="noopener noreferrer">https://oa.upm.es/44926/1/Sendra-Gomez-Moran.pdf</a> (applications of conchoids in engineering and sciences).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DESLUZE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                    xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc maxdraw)
+  (setq id "DeSluze Curve"
+        iq ""
+        dcl "DESLUZE"
+        opt '("DeSluze Curve" "New Real Values" "New Imaginary Values")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((= kw 0)
+     (princ "\nr=1/cos(θ)+a·cos(θ)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           fb 1.0
+           fc 1.0))
+    ((= kw 1)
+     (princ "\nReal: r=1/cosᵇ(θ)+a·cosᶜ(θ)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           fb (get_real 2 "b (exponent on cos in denominator)" 1.0)
+           fc (get_real 2 "c (exponent on cos in second term)" 1.0)))
+    ((= kw 2)
+     (princ "\nImaginary: r=1/cosᵇ(θ)+a·cosᶜ(θ)")
+     (setq fa (get_real 2 "a (scale)" 1.0)
+           fb (get_real 2 "b (exponent on cos in denominator)" 1.0)
+           fc (get_real 2 "c (exponent on cos in second term)" 1.0))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4))
+        rval (if (= kw 2) '(+ (/ 1.0 (avoid_zero (alt_expt (cos (eval a2)) fb T))) (* fa (alt_expt (cos (eval a2)) fc nil)))
+             '(+ (/ 1.0 (avoid_zero (alt_expt (cos (eval a2)) fb T))) (* fa (alt_expt (cos (eval a2)) fc T))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 50)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DESLUZE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

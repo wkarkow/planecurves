@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Rose Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Super Rose Curve</h1>
+      <p class="short-description">A polar rose whose radius is a sine factor of frequency \(b\) multiplied by a Gielis-style sum of powered absolute cosine and sine terms of frequency \(c\).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/SuperRose/SuperRose01-360.avif"
+           alt="Super Rose Curve, a=1,b=2,c=3,d=1,e=1,f=1">
+      <figcaption>Super Rose Curve, a=1,b=2,c=3,d=1,e=1,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose02-360.avif"
+           alt="Super Rose Curve, a=1,b=3,c=3,d=0.5,e=1,f=1">
+      <figcaption>Super Rose Curve, a=1,b=3,c=3,d=0.5,e=1,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose03-360.avif"
+           alt="Super Rose Curve, a=1,b=3,c=3,d=2,e=4,f=1">
+      <figcaption>Super Rose Curve, a=1,b=3,c=3,d=2,e=4,f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose04-360.avif"
+           alt="Super Rose Curve, a=1,b=1.4,c=2.1,d=1.5,e=1.5,f=1.5">
+      <figcaption>Super Rose Curve, a=1,b=1.4,c=2.1,d=1.5,e=1.5,f=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose05-360.avif"
+           alt="Super Rose Curve, a=1,b=1.2,c=4,d=1,e=1,f=2">
+      <figcaption>Super Rose Curve, a=1,b=1.2,c=4,d=1,e=1,f=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose06-360.avif"
+           alt="Super Rose Curve, a=1,b=5/8,c=3,d=1,e=1,f=-1">
+      <figcaption>Super Rose Curve, a=1,b=5/8,c=3,d=1,e=1,f=-1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose07-360.avif"
+           alt="Super Rose Curve, a=1,b=0.6,c=0.6,d=1.5,e=1.5,f=-1.5">
+      <figcaption>Super Rose Curve, a=1,b=0.6,c=0.6,d=1.5,e=1.5,f=-1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose08-360.avif"
+           alt="Super Rose Curve, a=1,b=0.3,c=0.3,d=-0.5,e=-0.5,f=2">
+      <figcaption>Super Rose Curve, a=1,b=0.3,c=0.3,d=-0.5,e=-0.5,f=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose09-360.avif"
+           alt="Super Rose Curve, a=1,b=0.3,c=0.3,d=-0.5,e=-0.5,f=2,trimmed">
+      <figcaption>Super Rose Curve, a=1, b=2, c=3, d=1, e=1, f=2,trimmed</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose10-360.avif"
+           alt="Super Rose Curve, a=1,b=0.7,c=0.35,d=-0.5,e=-0.5,f=1.5">
+      <figcaption>Super Rose Curve, a=1,b=0.7,c=0.35,d=-0.5,e=-0.5,f=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose11-360.avif"
+           alt="Super Rose Curve, a=1,b=0.35,c=0.35,d=2/3,e=2/3,f=1.5">
+      <figcaption>Super Rose Curve, a=1,b=0.35,c=0.35,d=2/3,e=2/3,f=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/SuperRose/SuperRose12-360.avif"
+           alt="Super Rose Curve, a=1,b=0.35,c=0.35,d=-2/3,e=-2/3,f=1.5">
+      <figcaption>Super Rose Curve, a=1,b=0.35,c=0.35,d=-2/3,e=-2/3,f=1.5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Super Rose Curve polar equation:</div>
+      \[ r = a \cdot \sin(b \cdot \theta)\,\bigl(\lvert\cos(c \cdot \theta)\rvert^{d} + \lvert\sin(c \cdot \theta)\rvert^{e}\bigr)^{f} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Super Rose Curve is a modern extension of the classical rose (or rhodonea) curves, realized as a further generalization of the Gielis superformula by using a Gielis-like powered term as a multiplicative prefactor on a sinusoidal rose component. Classical rose curves were introduced and systematically studied by the Italian mathematician and Camaldolese monk Guido Grandi (1671–1742), professor of mathematics at the University of Pisa. Between 1723 and 1728 Grandi explored these polar curves for their visual resemblance to rose petals and rosettes, publishing observations in his geometric works; he named them rhodonea (from the Greek for rose). The basic forms \(r = a \cdot \cos(n\theta)\) or \(r = a \cdot \sin(n\theta)\) generate \(n\) or \(2n\) petals according to the parity of the frequency parameter \(n\), and remain a standard example of hypotrochoidal motion.<sup>1,2,3</sup> In 2003 Belgian botanist Johan Gielis proposed the superformula, a polar generalization of Lamé’s superellipses (1818) that introduces independent exponents to control the “pinching” or squareness of lobes. Gielis explicitly demonstrated its use as a prefactor or multiplier applied to other polar curves, including roses, to produce richer families of organic forms.<sup>4</sup> The Super Rose curve, catalogued on 2dcurves.com<sup>1</sup>, embodies this extension by modulating an outer sine rose with an inner sum of absolute-value trigonometric terms raised to separate exponents, thereby allowing independent control of outer lobe count, inner angular frequency, and the width/asymmetry of individual lobes through the exponents. In the present implementation the curve takes the form with overall scale \(a\), outer sine frequency \(b\), inner frequency \(c\), and exponents \(d\), \(e\), and \(f\) on the absolute cosine, absolute sine, and summed terms respectively. When any exponent is negative the curve develops asymptotic branches that are clipped in plotting by a scaled max-draw limit to preserve visual continuity without infinite excursions.</p>
+    <p>Real-life applications in engineering and natural sciences derive from the curve’s lineage in rose mechanisms and Gielis shape modeling. Historically, rhodonea-based cam profiles were embodied in rose engines (ornamental turning lathes), precision mechanical devices that used radial modulation to cut intricate periodic “rose” patterns on ivory, metal, and wood workpieces. In contemporary engineering the Gielis superformula component has been adopted for the design of high-performance dielectric resonator antennas and multi-band circularly polarized patch antennas<sup>5,6</sup>; the parametric freedom allows single-equation shaping of radiators that achieve superior efficiency, gain, bandwidth, and low-loss characteristics compared with conventional geometries. In the natural sciences Gielis transformations have been applied to quantitative morphological analysis of botanical structures, including the modeling and classification of plant cross-sections (e.g., square bamboo) and other organic forms, providing a compact parametric language for scientific description rather than purely visual representation. The specific Super Rose parametrization itself appears chiefly in mathematical curve collections and visualization tools; its practical uses are realized through the established Gielis rose multiplier framework in antenna engineering and biological morphometrics.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/roulette/rouletters.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/rouletters.html</a> (definition and description as extension of rose / further generalization of Gielis curve)</li>
+      <li><a href="https://mathworld.wolfram.com/RoseCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/RoseCurve.html</a> (history, Grandi naming, hypotrochoid relation, Gielis prefactor note)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Rhodonea/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Rhodonea/</a> (Grandi biography and rhodonea naming)</li>
+      <li><a href="https://researchoutreach.org/articles/superellipses-superformula-impact-gielis-transformations/" target="_blank" rel="noopener noreferrer">https://researchoutreach.org/articles/superellipses-superformula-impact-gielis-transformations/</a> (Gielis 2003 development, botanical origins, impact)</li>
+      <li><a href="https://www.antennacompany.com/applications/technology/" target="_blank" rel="noopener noreferrer">https://www.antennacompany.com/applications/technology/</a> (commercial antenna engineering use of Gielis transformations for shaped radiators)</li>
+      <li><a href="https://www.nature.com/articles/s41598-025-34433-1" target="_blank" rel="noopener noreferrer">https://www.nature.com/articles/s41598-025-34433-1</a> (recent scientific paper on Gielis super-formula patch antennas)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SUPERROSE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                      rval id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb fc fd fe ff fg)
+  (setq id "Super Rose Curve"
+        iq "r=a·sin(b·θ)(|cos(c·θ)|ᵈ+|sin(c·θ)|ᵉ)ᶠ"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (overall scale)" 1.0)
+        fb (get_real 2 "b (outer sine frequency multiplier, affects lobe count)" 2.0)
+        fc (get_real 2 "c (inner angle frequency multiplier)" 3.0)
+        fd (get_real 2 "d (|cos(c·θ)| exponent)" 1.0)
+        fe (get_real 2 "e (|sin(c·θ)| exponent)" 1.0)
+        ff (get_real 2 "f (summed term exponent)" 1.0)
+        fg (get_keyword 0 "Curved Decurved" "\nCurved or Decurved?" "Curved")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", e=" (rtos fe 2 4) ", f=" (rtos ff 2 4))
+        maxdraw (if (or (&lt; fd 0.0) (&lt; fe 0.0) (&lt; ff 0.0)) (get_real 2 "Maximum x and y values allowed?" (* fa 50.0)) nil)
+        rval '(* fa (sin (* fb (eval a2))) (alt_expt (+ (alt_expt (abs (cos (* fc (eval a2)))) fd nil) (alt_expt (abs (sin (* fc (eval a2)))) fe nil)) ff nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm (if (eq fg "Curved") '(T T T) '(T T T T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SUPERROSE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

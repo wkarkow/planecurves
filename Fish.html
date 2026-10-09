@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fish Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Fish Curve</h1>
+      <p class="short-description">Two curves named for their visual resemblance to a fish silhouette; a classic single form and a Siamese form.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Fish/Fish01-360.avif"
+           alt="Fish Curve, single, a=1,k=2">
+      <figcaption>Fish Curve, single, a=1,k=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fish/Fish02-360.avif"
+           alt="Fish Curve, single, a=1,k=√2">
+      <figcaption>Fish Curve, single, a=1,k=√2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fish/Fish03-360.avif"
+           alt="Fish Curve, single, a=1,k=1">
+      <figcaption>Fish Curve, single, a=1,k=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fish/Fish04-360.avif"
+           alt="Fish Curve, single, a=1,k=3">
+      <figcaption>Fish Curve, single, a=1,k=3</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fish/Fish05-360.avif"
+           alt="Fish Curve, single, a=1,k=0.5">
+      <figcaption>Fish Curve, single, a=1,k=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fish/Fish06-360.avif"
+           alt="Fish Curve, single, a=1,k=0.25">
+      <figcaption>Fish Curve, single, a=1,k=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Fish/Fish07-360.avif"
+           alt="Fish Curve, Siamese, a=1">
+      <figcaption>Fish Curve, Siamese, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Single Fish Curve parametric equations:</div>
+      \[ x = a(\cos(t) + 2k \cdot \cos(t/2)),\quad y = a \cdot \sin(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Siamese Fish Curve parametric equations:</div>
+      \[ x = a\bigl(5\cos(t) - (\sqrt{2}-1)\cos(5t)\bigr),\quad y = a \cdot \sin(4t) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Fish Curve is a quartic plane curve named for its visual resemblance to a fish silhouette. British mathematician E. H. Lockwood described the negative pedal curve of an ellipse taken with respect to one focus in his 1957 paper, establishing the mathematical basis for the classic form when the squared eccentricity equals 1/2 and produces the characteristic cusp and loop.<sup>1</sup> A separate geometric construction for the general fish curve with fin factor <em>k</em> defines it as the locus of intersection points between a variable circle (centered at point N on a fixed base circle with radius <em>k</em> times distance ON) and a fixed straight line parallel to a reference diameter; this generalizes the strophoid and yields the Single Fish variant when <em>k</em> = √2.<sup>2</sup> The curve is also the projection of Viviani’s space curve onto planes passing through the y-axis. The Siamese Fish is a specific harmonic variant within the same family.</p>
+    <p>No applications in engineering or the natural sciences are documented for these parametric forms.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/FishCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/FishCurve.html</a> (Lockwood 1957 negative pedal curve definition and parametric equations).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/poisson/poisson.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/poisson/poisson.shtml</a> (k-parameter construction, Siamese variant, and homemade name).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FISH (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                 xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Fish Curve"
+        iq ""
+        dcl "FISH"
+        opt '("Single" "Siamese")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+    (princ "\nSingle Fish: x=a·(cos(t)+2·k·cos(t/2)), y=a·sin(t)")
+    (setq fa (get_real 2 "a (scale)" 1.0)
+          fb (get_real 2 "k (fin factor)" (sqrt 2.0))
+          eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+          paramstep (* paramstep 2.0)
+          xc '(* fa (+ (cos (eval a2)) (* 2.0 fb (cos (* 0.5 (eval a2))))))
+          yc '(* fa (sin (eval a2)))))
+   ((eq kw 1)
+    (princ "\nSiamese Fish: x=a·(5·cos(t)-(√2-1)·cos(5·t)), y=a·sin(4·t)")
+    (setq fa (get_real 2 "a (scale)" 1.0)
+          eq_display (strcat "\na=" (rtos fa 2 4))
+          xc '(* fa (- (* 5.0 (cos (eval a2))) (* (- (sqrt 2.0) 1.0) (cos (* 5.0 (eval a2))))))
+          yc '(* fa (sin (* 4.0 (eval a2)))))))
+  (setq skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (command "pedit" "l" "d" "")
+  (princ))
+(C:FISH)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

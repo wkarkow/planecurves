@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teardrop Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Teardrop Curve</h1>
+      <p class="short-description">A pear-shaped parametric curve, also called the Larme curve, drawn in two branches with a loop and hyperbolic branch.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Teardrop/Teardrop01-360.avif"
+           alt="Teardrop Curve, loop, a=1, multiple values of n&gt;=1">
+      <figcaption>
+        Teardrop Curve, loop, a=1,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">1.5</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">3</span>,
+        <span class="figcap-value" style="color:#FF9600">4</span>,
+        <span class="figcap-value" style="color:#9600FF">5</span>,
+        <span class="figcap-value" style="color:#0096FF">6</span>,
+        <span class="figcap-value" style="color:#AA5555">7</span>,
+        <span class="figcap-value" style="color:#00FF00">8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Teardrop/Teardrop02-360.avif"
+           alt="Teardrop Curve, full curve, a=1, multiple values of n&gt;=1">
+      <figcaption>
+        Teardrop Curve, full curve, a=1,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">1.5</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">3</span>,
+        <span class="figcap-value" style="color:#FF9600">4</span>,
+        <span class="figcap-value" style="color:#9600FF">5</span>,
+        <span class="figcap-value" style="color:#0096FF">6</span>,
+        <span class="figcap-value" style="color:#AA5555">7</span>,
+        <span class="figcap-value" style="color:#00FF00">8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Teardrop/Teardrop03-360.avif"
+           alt="Teardrop Curve, loop, a=1, multiple values of n&lt;=1">
+      <figcaption>
+        Teardrop Curve, loop, a=1,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.9/span>,
+        <span class="figcap-value" style="color:#0000FF">0.8</span>,
+        <span class="figcap-value" style="color:#009600">0.7</span>,
+        <span class="figcap-value" style="color:#FF9600">0.6</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.4</span>,
+        <span class="figcap-value" style="color:#AA5555">0.3</span>,
+        <span class="figcap-value" style="color:#00FF00">0.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.1</span>,
+        <span class="figcap-value" style="color:#009696">0.001</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Teardrop/Teardrop04-360.avif"
+           alt="Teardrop Curve, full curve, a=1, multiple values of n&lt;=1">
+      <figcaption>
+        Teardrop Curve, full curve, a=1,n=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.9/span>,
+        <span class="figcap-value" style="color:#0000FF">0.8</span>,
+        <span class="figcap-value" style="color:#009600">0.7</span>,
+        <span class="figcap-value" style="color:#FF9600">0.6</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.4</span>,
+        <span class="figcap-value" style="color:#AA5555">0.3</span>,
+        <span class="figcap-value" style="color:#00FF00">0.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.1</span>,
+        <span class="figcap-value" style="color:#009696">0.001</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Teardrop/Teardrop05-360.avif"
+           alt="Teardrop Curve, loop, a=1, multiple values of n&lt;=-1">
+      <figcaption>
+        Teardrop Curve, loop, a=1,n=
+        <span class="figcap-value" style="color:#000000">-1</span>,
+        <span class="figcap-value" style="color:#FF0000">-1.5</span>,
+        <span class="figcap-value" style="color:#0000FF">-2</span>,
+        <span class="figcap-value" style="color:#009600">-3</span>,
+        <span class="figcap-value" style="color:#FF9600">-4</span>,
+        <span class="figcap-value" style="color:#9600FF">-5</span>,
+        <span class="figcap-value" style="color:#0096FF">-6</span>,
+        <span class="figcap-value" style="color:#AA5555">-7</span>,
+        <span class="figcap-value" style="color:#00FF00">-8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Teardrop/Teardrop06-360.avif"
+           alt="Teardrop Curve, full curve, a=1, multiple values of n&lt;=-1">
+      <figcaption>
+        Teardrop Curve, full curve, a=1,n=
+        <span class="figcap-value" style="color:#000000">-1</span>,
+        <span class="figcap-value" style="color:#FF0000">-1.5</span>,
+        <span class="figcap-value" style="color:#0000FF">-2</span>,
+        <span class="figcap-value" style="color:#009600">-3</span>,
+        <span class="figcap-value" style="color:#FF9600">-4</span>,
+        <span class="figcap-value" style="color:#9600FF">-5</span>,
+        <span class="figcap-value" style="color:#0096FF">-6</span>,
+        <span class="figcap-value" style="color:#AA5555">-7</span>,
+        <span class="figcap-value" style="color:#00FF00">-8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Teardrop/Teardrop07-360.avif"
+           alt="Teardrop Curve, loop, a=1, multiple values of n&gt;=-1">
+      <figcaption>
+        Teardrop Curve, loop, a=1,n=
+        <span class="figcap-value" style="color:#000000">-1</span>,
+        <span class="figcap-value" style="color:#FF0000">-0.9/span>,
+        <span class="figcap-value" style="color:#0000FF">-0.8</span>,
+        <span class="figcap-value" style="color:#009600">-0.7</span>,
+        <span class="figcap-value" style="color:#FF9600">-0.6</span>,
+        <span class="figcap-value" style="color:#9600FF">-0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">-0.4</span>,
+        <span class="figcap-value" style="color:#AA5555">-0.3</span>,
+        <span class="figcap-value" style="color:#00FF00">-0.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">-0.1</span>,
+        <span class="figcap-value" style="color:#009696">-0.001</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Teardrop/Teardrop08-360.avif"
+           alt="eardrop Curve, full curve, a=1, multiple values of n&gt;=-1">
+      <figcaption>
+        Teardrop Curve, full curve, a=1,n=
+        <span class="figcap-value" style="color:#000000">-1</span>,
+        <span class="figcap-value" style="color:#FF0000">-0.9/span>,
+        <span class="figcap-value" style="color:#0000FF">-0.8</span>,
+        <span class="figcap-value" style="color:#009600">-0.7</span>,
+        <span class="figcap-value" style="color:#FF9600">-0.6</span>,
+        <span class="figcap-value" style="color:#9600FF">-0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">-0.4</span>,
+        <span class="figcap-value" style="color:#AA5555">-0.3</span>,
+        <span class="figcap-value" style="color:#00FF00">-0.2</span>,
+        <span class="figcap-value" style="color:#FF00FF">-0.1</span>,
+        <span class="figcap-value" style="color:#009696">-0.001</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Teardrop Curve Cartesian equation:</div>
+      \[ (2a)^{n} y^{2} = (a + x)(a - x)^{n+1}, \quad -a \le x \le a \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Teardrop Curve parametric loop equations:</div>
+      \[ x = a \cdot \cos(t), \quad y = a \cdot \sin(t) \cdot \sin^{n}\!\left(\frac{t}{2}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Teardrop Curve parametric branch equations:</div>
+      \[ x = a \cdot \cosh(t), \quad y = \pm a \cdot \sinh(t) \cdot \sinh^{n}\!\left(\frac{t}{2}\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Teardrop curve (also called the Larme curve) belongs to a family of pear-shaped or tear-drop parametric curves that produce a characteristic pointed tip and rounded body.<sup>1</sup> It is presented in two selectable branches. The loop branch generates a closed or unicursal teardrop form whose shape is controlled by the exponent \( n \): for positive integer \( n \ge 1 \) the curve is algebraic of degree \( n + 2 \). Special cases are well-known: \( n = 1 \) recovers the loop of the right parabolic folium, while \( n = 2 \) yields (up to homothety) the classical piriform quartic.<sup>2</sup> The hyperbolic branch supplies a real-valued continuation that remains useful when \( n \) is negative or near singularities at the origin in parameter space, employing hyperbolic functions to handle the corresponding blow-up or extension behavior. The piriform (pear-shaped) quartic itself was studied by G. de Longchamps in 1886; the name derives from the Latin <em>pirum</em> (pear) + <em>forma</em> (shape).<sup>3</sup> The broader tear-drop family appears in modern curve catalogs as a convenient trigonometric parametrization that captures the essential geometry through the power \( n \) modulating the transverse component. The loop traces a single continuous path; depending on \( n \) the tip may be cusped or smoothly rounded, and the curve is symmetric about the x-axis for the standard orientation.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In micro-robotics and biomedical device design, teardrop and pear-shaped profiles are used for the bodies of light-actuated or untethered microbots to optimize drag, propulsion, and maneuverability in low-Reynolds-number microfluidic flows.<sup>4</sup> In computer-aided manufacturing, the parametric teardrop form serves as a standard test curve for real-time CNC interpolation algorithms, where curvature variation, chord-error bounds, and feed-rate scheduling are evaluated for precision tool-path generation.<sup>5</sup> The piriform/teardrop shape also appears in analyses of flexible rope and net geometries in marine engineering, notably in the dynamics of anchor-seine systems where pear-shaped cross-sections influence deployment tension and shape.<sup>6</sup> No specific documented engineering or scientific applications were identified for the hyperbolic branch beyond its role as a mathematical extension for plotting singular or negative-exponent cases.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/larme/larme.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/larme/larme.shtml</a> (definition of the tear-drop / Larme family, special cases for n=1 and n=2)</li>
+      <li><a href="https://mathworld.wolfram.com/PiriformCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PiriformCurve.html</a> (piriform as special case of pear/teardrop shapes; parametric form and properties)</li>
+      <li><a href="https://mathworld.wolfram.com/PiriformCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PiriformCurve.html</a> (studied by G. de Longchamps in 1886; naming origin)</li>
+      <li><a href="https://www.mdpi.com/2673-3161/3/4/71" target="_blank" rel="noopener noreferrer">https://www.mdpi.com/2673-3161/3/4/71</a> (and related 2024 follow-up) (application in light-actuated microbot body design for microfluidic propulsion)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0890695517301736" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S0890695517301736</a> (use in real-time CNC interpolation testing and curvature/feedrate analysis)</li>
+      <li><a href="https://academic.oup.com/icesjms/article/78/1/125/6017348" target="_blank" rel="noopener noreferrer">https://academic.oup.com/icesjms/article/78/1/125/6017348</a> (piriform/teardrop profiles in marine rope and seine-net geometry and dynamics)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TEARDROP (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Teardrop Curve"
+        iq ""
+        dcl "TEARDROP"
+        opt '("Teardrop loop" "Hyperbolic branch")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (princ (if (= kw 0) "\nTeardrop loop: x=a·cos(t), y=a·sin(t)·sinⁿ(t/2)" "\nTeardrop hyperbolic branch: x=a·cosh(t), y=±a·sinh(t)·sinhⁿ(t/2)"))
+  (setq fa (get_real 6 "a (scale)" 1.0)
+        fb (get_real 2 "n (exponent)" 2)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (rtos fb 2 4))
+        xc (if (= kw 0) '(* fa (cos (eval a2))) '(* fa (cosh (eval a2))))
+        yc (if (= kw 0) '(progn (setq fc (sin (/ (eval a2) 2.0))) (if (and (< fb 0.0) (< (abs fc) 1e-6)) 1e13 (* fa (sin (eval a2)) (alt_expt (abs fc) fb T))))
+           '(progn (setq fc (sinh (/ (eval a2) 2.0))) (if (and (< fb -1.0) (< (abs fc) 1e-6)) 1e13 (* fa 2.0 (cosh (/ (eval a2) 2.0)) (alt_expt (abs fc) (+ fb 1.0) T)))))
+        skm (if (= kw 0) '(T T T) '(T nil T))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TEARDROP)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

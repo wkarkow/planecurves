@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tightrope Walker Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Tightrope Walker Curve</h1>
+      <p class="short-description">Locus of a tightrope walker’s feet on a weightless, frictionless rope fixed at one end, passed over a pulley at the same height, and held by a counterweight.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Tightrope/Tightrope01-360.avif"
+           alt="Tightrope Walker Curve, a=10,multiple values of k">
+      <figcaption>
+        Tightrope Walker Curve, a=10,k=
+        <span class="figcap-value" style="color:#000000">10</span>,
+        <span class="figcap-value" style="color:#FF0000">4</span>,
+        <span class="figcap-value" style="color:#0000FF">2</span>,
+        <span class="figcap-value" style="color:#009600">1.5</span>,
+        <span class="figcap-value" style="color:#FF9600">1.25</span>,
+        <span class="figcap-value" style="color:#9600FF">1</span>,
+        <span class="figcap-value" style="color:#0096FF">0.9</span>,
+        <span class="figcap-value" style="color:#AA5555">0.8</span>,
+        <span class="figcap-value" style="color:#00FF00">0.7</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.6</span>,
+        <span class="figcap-value" style="color:#009696">0.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="https://mathcurve.com/courbes2d.gb/danseur/danseur.shtml" target="_blank" rel="noopener noreferrer">
+        <img src="images/Tightrope/Tightrope02-360.avif"
+             alt="MathCurve view of the tightrope-walker layout"
+             class="external"
+             data-skip-modal>
+      </a>
+      <figcaption>MathCurve view of the tightrope-walker layout</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Tightrope Walker Curve Cartesian equation:</div>
+      \[ y = -\frac{x(a-x)}{\sqrt{b^{2}-x^{2}}},\quad b = ka \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Tightrope Walker Curve (also known as the curve of the tightrope walker or <em>danseur de corde</em>) was studied and named by the French mathematician J.-B. Bérard in his 1810 work <em>Opuscules mathématiques, contenant plusieurs méthodes nouvelles de construire l’équation aux sections coniques</em>. In Problem XV, Bérard models the path traced by the feet of a tightrope dancer walking along a weightless, frictionless rope fixed at one end (B), passing over a small pulley (A) at the same height, and tensioned at the free end by a suspended counterweight (R).<sup>1,2</sup> Bérard considers the dancer of mass \( m \) (represented by the vertical segment \( Mm \)) in equilibrium at a point M on the rope. The weight is resolved into two components, \( Ma \) and \( Mb \); the component \( Mb \) is balanced by the reaction at the fixed support B, while \( Ma \) must exactly equal the counterweight force \( r \) for equilibrium. Using similar triangles formed by the geometry (APM, MaK, BPM, and Mak) and substituting the lengths \( AP = x \), \( PM = y \), \( BP = a - x \), and \( AM = \sqrt{x^{2}+y^{2}} \), Bérard eliminates the auxiliary segments and obtains the relation \( r = Ma = \dfrac{m(a-x)\sqrt{x^{2}+y^{2}}}{ay} \). Solving for the ordinate then yields the explicit form of the locus \( y = \pm \dfrac{mx(a-x)}{\sqrt{a^{2}r^{2}-m^{2}(a-x)^{2}}} \).<sup>3</sup> The shape of the curve depends on the mass ratio \( k = r/m \) (counterweight to dancer). When \( k < 1 \), the expression under the radical becomes imaginary near \( x = a \), so the curve possesses a vertical asymptote and the dancer cannot reach the pulley; when \( k \ge 1 \) the curve forms a continuous arc from the fixed end to the pulley. The special case \( k = 1 \) reduces to a right strophoid. It is amusing to note that in real life if \( k = 1 \), the final step would require nearly vertical ascent and is mechanically unattainable. As \( k \to \infty \) the curve approaches a kappa curve.<sup>3</sup> Mathcurve presents an algebraically equivalent Cartesian form in which the horizontal coordinate is measured from the fixed support rather than from the pulley: \( y = \dfrac{x(a-x)}{\sqrt{b^{2}-x^{2}}} \), \( b = ka \), where \( a \) is the horizontal span and \( k \) is the mass ratio of counterweight to dancer (the negative sign in some implementations simply orients the curve below the x-axis).<sup>3</sup></p>
+    <p>Applications in engineering and the natural sciences are limited. The curve serves primarily as a classic didactic example in classical mechanics and analytic geometry, illustrating the resolution of concurrent forces in static equilibrium, the use of similar triangles to derive a locus, and the effect of a movable load on cable geometry. It appears in historical treatments of conic sections and loci problems but has no documented widespread use in modern engineering design or natural-science modeling beyond its role as an illustrative statics exercise.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://gallica.bnf.fr/ark:/12148/bpt6k109522n/f158.image" target="_blank" rel="noopener noreferrer">https://gallica.bnf.fr/ark:/12148/bpt6k109522n/f158.image</a> (Bérard’s original 1810 derivation and Problem XV).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/danseur/danseur.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/danseur/danseur.shtml</a> (naming, coordinate conventions, parameter k, special cases, and equation forms).</li>
+      <li><a href="http://en.quetes.free.fr/archives/la-chute/articles/chutepeutetre.htm" target="_blank" rel="noopener noreferrer">http://en.quetes.free.fr/archives/la-chute/articles/chutepeutetre.htm</a> (historical reference confirming Bérard’s 1810 description).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TIGHTROPE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc skm)
+  (setq id "Tightrope Walker"
+        iq "y = x·(a-x)/sqrt(b²-x²), b=k·a, k=(counterweight)/(man)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in span"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (horizontal span)" 10.0)
+        fb (get_real 2 "k (counterweight/man)" 1.0)
+        fc (* fa fb)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4) ", b=" (rtos fc 2 4))
+        span fa
+        paramstep (/ span divcount)
+        xc '(eval a2)
+        yc '(- (/ (* (eval a2) (- fa (eval a2))) (avoid_zero (sqrt (max 0.0 (- (* fc fc) (* (eval a2) (eval a2))))))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TIGHTROPE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

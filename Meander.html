@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meander Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Meander Curve</h1>
+      <p class="short-description">The sine-generated curve whose curvature varies as a sine of arc length.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Meander/Meander01-360.avif"
+           alt="Meander Curve, a=0.25,L=2π,S=6π">
+      <figcaption>Meander Curve, a=0.25,L=2π,S=6π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander02-360.avif"
+           alt="Meander Curve, a=0.5,L=2π,S=6π">
+      <figcaption>Meander Curve, a=0.5,L=2π,S=6π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander03-360.avif"
+           alt="Meander Curve, a=1.0,L=2π,S=6π">
+      <figcaption>Meander Curve, a=1.0,L=2π,S=6π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander04-360.avif"
+           alt="Meander Curve, a=2.0,L=2π,S=6π">
+      <figcaption>Meander Curve, a=2.0,L=2π,S=6π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander05-360.avif"
+           alt="Meander Curve, a=2.40482556,L=2π,S=6π (first J₀ zero)">
+      <figcaption>Meander Curve, a=2.40482556,L=2π,S=6π (first J₀ zero)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander06-360.avif"
+           alt="Meander Curve, a=4.0,L=2π,S=6π">
+      <figcaption>Meander Curve, a=4.0,L=2π,S=6π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander07-360.avif"
+           alt="Meander Curve, a=5.52007811,L=2π,S=6π, (second J₀ zero)">
+      <figcaption>Meander Curve, a=5.52007811,L=2π,S=6π (second J₀ zero)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander08-360.avif"
+           alt="Meander Curve, a=2π,L=2π,S=6π">
+      <figcaption>Meander Curve, a=2π,L=2π,S=6π</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Meander/Meander09-360.avif"
+           alt="Meander Curve, a=6π,L=2π,S=6π">
+      <figcaption>Meander Curve, a=6π,L=2π,S=6π</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Meander Curve intrinsic equations:</div>
+      \[ \dfrac{d\phi}{ds}=a\sin\left(\dfrac{2\pi s}{L}\right),\qquad \dfrac{dx}{ds}=\cos\phi,\qquad \dfrac{dy}{ds}=\sin\phi \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Initial heading (mean advance along \(+x\)):</div>
+      \[ \phi_{0}=-\dfrac{aL}{2\pi} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Integrated heading:</div>
+      \[ \phi(s)=-\dfrac{aL}{2\pi}\cos\left(\dfrac{2\pi s}{L}\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Net advance per wavelength:</div>
+      \[ \Delta x = L\,J_{0}\!\left(\dfrac{aL}{2\pi}\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The sine-generated meander curve, also called the meander curve, is defined intrinsically through its curvature as a function of arc length rather than by explicit Cartesian, polar, or parametric equations in \(x\) and \(y\). Curvature \(\kappa(s)\) equals the rate of change of the tangent angle \(\phi\) with distance along the curve, so \(\dfrac{d\phi}{ds}=a\cdot\sin\!\left(\dfrac{2\pi s}{L}\right)\). Here \(a\) controls the amplitude of curvature variation (tightness of bends) and \(L\) is the wavelength measured along the arc length itself. The position is then obtained by integrating \(\dfrac{dx}{ds}=\cos(\phi)\) and \(\dfrac{dy}{ds}=\sin(\phi)\), with an initial phase offset \(\phi_{0}=-a\cdot\dfrac{L}{2\pi}\) chosen so the average direction of advance aligns with the positive \(x\)-axis. This intrinsic formulation belongs to 19th-century differential geometry. It gained practical importance through the 1966 work of W. B. Langbein and Luna B. Leopold.<sup>1,2,3</sup> They showed that, among simple periodic curves, the sine-generated curve minimizes the sum of the squares of changes in direction per unit length, a property consistent with the stable, energy-minimizing planform of natural rivers. Field observations confirmed that real river channels exhibit curvature that varies smoothly and sinusoidally along the channel path. Unlike most curves in this book, the meander curve requires numerical integration of the direction angle (itself the integral of curvature) to recover \(x(s)\) and \(y(s)\). A non-obvious property is that the net downstream advance per wavelength is governed by the zero-order Bessel function of the first kind \(J_{0}\!\left(\dfrac{aL}{2\pi}\right)\). When \(\dfrac{aL}{2\pi}\) equals a zero of \(J_{0}\) (approximately 2.4048, 5.5201, 8.6537, \(\ldots\)), the net forward progress per wavelength approaches zero and the curve forms closed loops or reverses direction.</p>
+    <p>The primary real-life applications are in fluvial geomorphology and river engineering. The curve supplies an idealized centerline model for meandering rivers and is used in studies of river sinuosity, hydraulic modeling of flow in meandering channels, and sediment dynamics. Engineers also employ it as a reference template in stream restoration projects and the design of drainage channels and floodways to achieve smooth curvature transitions that reduce localized bank erosion and flow separation.<sup>4</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://pubs.usgs.gov/pp/0422h/report.pdf" target="_blank" rel="noopener noreferrer">https://pubs.usgs.gov/pp/0422h/report.pdf</a> (seminal 1966 reference; sine-generated curve model for river meanders and minimum-variance theory)</li>
+      <li><a href="https://www.2dcurves.com/trig/trigm.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/trig/trigm.html</a> (meander curve description, curvature relation, and historical note on Leopold and Langbein)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/giration/motifs.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/giration/motifs.shtml</a> (intrinsic definition and 1966 Leopold–Langbein reference)</li>
+      <li><a href="https://www.americanscientist.org/article/up-a-lazy-river" target="_blank" rel="noopener noreferrer">https://www.americanscientist.org/article/up-a-lazy-river</a> (real-world use in river planform geometry and engineering models)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:MEANDER (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                    restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg)
+  (setq id "Meander curve"
+        iq "dφ/ds=a·sin(2πs/L), dx/ds=cos(φ), dy/ds=sin(φ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions per arc-length"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (curvature amplitude)" 0.5)
+        fb (get_real 6 "L (wavelength in arc-length units)" (* 2.0 pi))
+        fc (get_real 6 "S (total arc-length to trace)" (* 6.0 pi))
+        fd (/ (* 2.0 pi) fb)
+        fe (- (* fa (/ fb (* 2.0 pi))))
+        ff 0.0
+        fg 0.0
+        paramstep (/ fc divcount)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", L=" (rtos fb 2 4) ", S=" (rtos fc 2 4))
+        xc '(progn (setq fe (+ fe (* (* fa (sin (* fd (eval a2)))) paramstep)) ff (+ ff (* paramstep (cos fe))) fg (+ fg (* paramstep (sin fe)))) ff)
+        yc 'fg
+        skm '(T T nil)
+        a1 0.0
+        a2 a1
+        x1 0.0 
+        y1 0.0
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:MEANDER)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

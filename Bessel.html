@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bessel Function - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bessel Function</h1>
+      <p class="short-description">Parametric approximations to Bessel functions of the first kind J₀(x) and J₁(x).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Bessel/Bessel01-360.avif"
+           alt="Bessel J₀ approximation, a=10">
+      <figcaption>Bessel J₀ approximation, a=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bessel/Bessel02-360.avif"
+           alt="Bessel J₁ approximation, a=10">
+      <figcaption>Bessel J₁ approximation, a=10</figcaption>
+    </figure>
+    <figure>
+        <img src="images/Bessel/Bessel03-360.avif"
+             alt="Bessel J₀, J₁ in black, overlaid on Wikipedia plot, a=10">
+      <figcaption>Bessel J₀, J₁ in black, overlaid on Wikipedia plot, a=10</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bessel/Bessel04-360.avif"
+           alt="Bessel J₀ approximation, a=10, mirrored">
+      <figcaption>Bessel J₀ approximation, a=10, mirrored</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Bessel/Bessel05-360.avif"
+           alt="Bessel J₁ approximation, a=10, mirrored">
+      <figcaption>Bessel J₁ approximation, a=10, mirrored</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Bessel J₀ approximation:</div>
+      \[ J_0(x) \approx \frac{1}{(1 + \lambda^4 x^2)^{1/4} (1 + q x^2)} \left[ (p_0 + p_1 x^2 + p_2 \sqrt{1 + \lambda^4 x^2}) \cos x + \left( (\tilde{p}_0 + \tilde{p}_1 x^2) \sqrt{1 + \lambda^4 x^2} + \tilde{p}_2 x^2 \right) \frac{\sin x}{x} \right] \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bessel J₁ approximation:</div>
+      \[ J_1(x) \approx \frac{(0.1601 x^2 + 0.8660) \sin x}{(1 + 0.3489 x^2) (1 + 0.4181 x^2)^{1/4}} - \frac{x (0.1007 x^2 + 0.3718) \cos x}{(1 + 0.4181 x^2)^{3/4} (1 + 0.3489 x^2)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Bessel functions of the first kind<sup>1</sup>, denoted J₀(x) and J₁(x), are named after Friedrich Wilhelm Bessel (1784–1846), a German astronomer and mathematician who directed the Königsberg Observatory. Bessel developed the functions systematically in papers published between 1816 and 1824 while studying perturbations in planetary orbits and solutions to Kepler's equation<sup>2</sup>. Special cases had appeared earlier in Daniel Bernoulli's 1732 work on vibrating rectangular membranes and Joseph Fourier's 1807 analysis of heat conduction in cylinders, but Bessel supplied the first comprehensive treatment, including recursion formulas and series expansions. These functions are solutions to Bessel's differential equation \( x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + (x^2 - \alpha^2) y = 0 \) where α is the order (J₀ = 0, J₁ = 1, etc.) and arise in any physical system exhibiting cylindrical symmetry. The graphs of Bessel functions look roughly like oscillating sine or cosine functions that decay proportionally to \( 1/\sqrt{x} \), although their roots are not generally periodic, except asymptotically for large x. The code uses compact analytic approximations<sup>3,4</sup> in place of the traditional infinite series.</p>
+    <p>Real-life applications abound in engineering and the natural sciences. In acoustics and mechanical engineering, J₀ governs the radial vibration modes of circular drumheads and thin membranes, which is essential for designing musical instruments, speaker cones, and structural components. In heat transfer, the functions model temperature distribution in long cylinders during cooling processes used in metallurgy and nuclear reactor fuel rods. In electromagnetics, J₀ and J₁ determine cutoff frequencies and field patterns in circular waveguides and coaxial cables, as well as radiation patterns from circular antennas. J₁ appears in diffraction patterns such as the Airy disk that limit resolution of optical systems and mechanical stress and strain behavior in circular plates.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.2dcurves.com/gamma/gammabs.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/gamma/gammabs.html</a> (Bessel function overview)</li>
+      <li><a href="https://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html</a> (history and equations)</li>
+      <li><a href="https://www.researchgate.net/publication/342990833_An_approximation_to_Bessel_function_J_0x" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/342990833_An_approximation_to_Bessel_function_J_0x</a> (J₀ approximation used in code)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S2211379718300111" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S2211379718300111</a> (J₁ approximation used in code)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BESSEL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt restartflag xspan xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa)
+  (setq id "Bessel Function"
+        iq "y=a·Jn(x) (approx)"
+        dcl "BESSEL"
+        opt '("J0" "J1")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 10.0)
+        fb (if (eq kw 0) "J0" "J1")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", " fb " approximation"))
+  (cond
+    ((eq kw 0)
+     (setq yc '(* fa (/ (+ (* (+ 0.6312725339 (* 0.3500347951 (alt_expt (eval a2) 2 nil))
+                                              (* -0.06207747907 (alt_expt (+ 1 (* 0.55984065062 (alt_expt (eval a2) 2 nil))) 0.5 nil)))
+                              (cos (eval a2))) (* (if (< (abs (eval a2)) 1e-10) 1.0 (/ (sin (eval a2)) (eval a2)))
+                                                  (+ (* (+ 0.4308049446 (* 0.4678202347 (alt_expt (eval a2) 2 nil)))
+                                                        (alt_expt (+ 1 (* 0.55984065062 (alt_expt (eval a2) 2 nil))) 0.5 nil))
+                                                     (* 0.04253832927 (alt_expt (eval a2) 2 nil)))))
+                        (* (alt_expt (+ 1 (* 0.55984065062 (alt_expt (eval a2) 2 nil))) 0.25 nil)
+                           (+ 1 (* 0.7172491568 (alt_expt (eval a2) 2 nil))))))))
+    ((eq kw 1)
+     (setq yc '(* fa (- (/ (* (+ (* 0.1601 (alt_expt (eval a2) 2 nil)) 0.8660) (sin (eval a2)))
+                           (* (+ 1 (* 0.3489 (alt_expt (eval a2) 2 nil))) (alt_expt (+ 1 (* 0.4181 (alt_expt (eval a2) 2 nil))) 0.5 nil)))
+                        (/ (* (eval a2) (+ (* 0.1007 (alt_expt (eval a2) 2 nil)) 0.3718) (cos (eval a2)))
+                           (* (alt_expt (+ 1 (* 0.4181 (alt_expt (eval a2) 2 nil))) 0.75 nil)
+                              (+ 1 (* 0.3489 (alt_expt (eval a2) 2 nil))))))))))
+  (setq xc '(eval a2)
+        paramstep (/ xspan divcount)
+        skm (if (= kw 0) '(nil T T) '(T T nil))
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BESSEL)</code></pre>
+  </section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

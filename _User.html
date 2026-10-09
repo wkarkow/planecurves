@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For AutoCAD Users - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <nav class="main-nav left-nav">
+      <a href="_Main.html">Home</a>
+      <a href="_CurveIndex.html">Curve Lookup</a>
+      <a href="_AliasIndex.html">Alias Lookup</a>
+    </nav>
+    <h2 class="site-title">
+      <a href="_Main.html">Plane Curves with AutoCAD</a>
+    </h2>
+    <nav class="main-nav right-nav">
+      <a href="_EquationIndex.html">Equation Lookup</a>
+      <a href="_ImageIndex.html">Image Lookup</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-title-block">
+      <h1>For AutoCAD Users</h1>
+      <p class="short-description">
+        How to incorporate any of these curves into AutoCAD.
+      </p>
+    </div>
+  </section>
+
+  <div style="max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.6;">
+
+    <h2>Three support files, plus the curve file</h2>
+    <p>
+      Each curve page has its own AutoLISP listing. Copy that listing into a file such as Parabola.lsp.
+      The command will not run without the shared file, and it will not offer a dialog unless that curve asks for one.
+    </p>
+    <ol>
+      <li>
+        <a href="Curvecore.lsp" download>Curvecore.lsp</a>
+        — required for every curve. Save it under that name. Do not rename it. Each curve loads it by that name.
+      </li>
+      <li>
+        <a href="_Curvelist.lsp" download>_Curvelist.lsp</a>
+        — optional command list for the whole set. Loading it defines the curve names. The first time you type a name, AutoCAD loads that curve’s .lsp file. Skip this file if you want only one curve: load that curve’s .lsp directly.
+      </li>
+      <li>
+        A dialog file, only when the curve names one. In the opening lines of the curve code, <code>dcl nil</code> means no dialog file. <code>dcl "PARABOLA"</code> means AutoCAD will look for Parabola.dcl. The word in quotes is the file name, without the extension.
+      </li>
+    </ol>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>On the curve page, copy the AutoLISP listing into a text file whose name matches the load name in _Curvelist.lsp. Yin-Yang is YinYang.lsp. Parabola is Parabola.lsp.</li>
+      <li>Save Curvecore.lsp in the same folder.</li>
+      <li>If <code>dcl</code> is nil, stop here. If it is a name, copy the Parabola specimen below, change the dialog name and the label, and save it as that name with a .dcl extension.</li>
+      <li>Put the folder on the Support File Search Path, and on Trusted Locations if AutoCAD warns that the file is not trusted. Options, Files tab.</li>
+      <li>The support path lets AutoCAD find a file. It does not run it. Use APPLOAD on _Curvelist.lsp. To have the names ready each session, add that file to the Startup Suite from the same dialog.</li>
+      <li>Type the curve name at the command line.</li>
+      <li>Be circumspect with generalized variables. A non-integer exponent on a negative value can produce an imaginary result. The curve then breaks the polyline and starts a new one.</li>
+      <li>PEDIT Fit, which the command may offer at the end, can add extra spans and loops at sharp cusps. Trim or Decurve if the fitted result is not what you want.</li>
+      <li>For dramatic zig-zag polar effects, try changing the span value to a very large number (e.g. 1e6) before running certain curves. Also see <a href="_Caveats.html">Caveats</a></li>
+      <li>You are free to reformat or modify the code. This material is public domain.</li>
+    </ol>
+
+    <h2>Dialog specimen</h2>
+    <p>
+      <a href="Parabola.dcl" download>Parabola.dcl</a>
+      is the whole file. The name before the colon must match the <code>dcl</code> string, and <code>key="list_col"</code> must stay. The curve code fills that list. The label is the title on the dialog and can be the curve’s name.
+    </p>
+    <pre style="background:#f4f7f8; border:1px solid #ccc; padding:12px; overflow:x auto;">//PARABOLA.DCL
+PARABOLA:dialog {label="Parabola"; :list_box {key="list_col"; allow_accept=true; height=8; width=15;} ok_button;}</pre>
+    <p>
+      A sine dialog is the same file with three edits: the comment, the dialog name, and the label. The width and height settings will often need adjustment.
+    </p>
+    <pre style="background:#f4f7f8; border:1px solid #ccc; padding:12px; overflow:x auto;">//SINE.DCL
+SINE:dialog {label="Sine Curve"; :list_box {key="list_col"; allow_accept=true; height=8; width=15;} ok_button;}</pre>
+
+  </div>
+</main>
+
+<footer>
+  <div style="text-align:center; padding:12px 0; font-size:0.9rem; color:#555;">
+    Comments or questions? Email: karkowbs@yahoo.com &nbsp;·&nbsp; All content offered free to the public domain.
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tanh Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Tanh Spiral</h1>
+      <p class="short-description">A polar curve that starts at the pole and approaches a circle of radius \( |a| \) as \( \theta \) tends to \( \pm\infty \).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral01-360.avif"
+           alt="Tanh Spiral, a=1,b=10, mirrored left">
+      <figcaption>Tanh Spiral, a=1,b=10, mirrored left</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral02-360.avif"
+           alt="Tanh Spiral, a=1,b=4, mirrored left">
+      <figcaption>Tanh Spiral, a=1,b=4, mirrored left</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral03-360.avif"
+           alt="Tanh Spiral, a=1,b=2, mirrored left">
+      <figcaption>Tanh Spiral, a=1,b=2, mirrored left</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral04-360.avif"
+           alt="Tanh Spiral, a=1,b=1, mirrored left">
+      <figcaption>Tanh Spiral, a=1,b=12, mirrored left</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral05-360.avif"
+           alt="Tanh Spiral, a=1,b=0.5, mirrored left">
+      <figcaption>Tanh Spiral, a=1,b=0.5, mirrored left</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral06-360.avif"
+           alt="Tanh Spiral, a=1,b=0.25, mirrored left">
+      <figcaption>Tanh Spiral, a=1,b=0.25, mirrored left</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral07-360.avif"
+           alt="Tanh Spiral, a=1,b=0.1, mirrored left">
+      <figcaption>Tanh Spiral, a=1,b=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral08-360.avif"
+           alt="Tanh Spiral, a=1,b=0.01, mirrored left">
+      <figcaption>TTanh Spiral, a=1,b=0.01, mirrored left</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral09-360.avif"
+           alt="Tanh Spiral, a=1,b=10, mirrored opposite">
+      <figcaption>Tanh Spiral, a=1,b=10, mirrored opposite</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral10-360.avif"
+           alt="Tanh Spiral, a=1,b=4, mirrored opposite">
+      <figcaption>Tanh Spiral, a=1,b=4, mirrored opposite</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral11-360.avif"
+           alt="Tanh Spiral, a=1,b=2, mirrored opposite">
+      <figcaption>Tanh Spiral, a=1,b=2, mirrored opposite</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral12-360.avif"
+           alt="Tanh Spiral, a=1,b=1, mirrored opposite, Yin Yang">
+      <figcaption>Tanh Spiral, a=1,b=12, mirrored opposite, Yin Yang</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral13-360.avif"
+           alt="Tanh Spiral, a=1,b =0.5, mirrored opposite">
+      <figcaption>Tanh Spiral, a =  0.5, mirrored opposite</figcaption> 
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral14-360.avif"
+           alt="Tanh Spiral, a=1,b=0.25, mirrored opposite">
+      <figcaption>Tanh Spiral, a=1,b=0.25, mirrored opposite</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral15-360.avif"
+           alt="Tanh Spiral, a=1,b=0.1, mirrored opposite">
+      <figcaption>Tanh Spiral, a=1,b=0.1, mirrored opposite</figcaption>
+    </figure>
+    <figure>
+      <img src="images/TanhSpiral/TanhSpiral16-360.avif"
+           alt="Tanh Spiral, a=1,b=0.01, mirrored opposite">
+      <figcaption>TTanh Spiral, a=1,b=0.01, mirrored opposite</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Tanh Spiral Cartesian equation:</div>
+      \[ r = a \cdot \tanh(b\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Tanh Spiral, also known as the Spiral of the hyperbolic tangent,<sup>1</sup> is a polar curve that originates at the pole and asymptotically approaches a circle of radius \( |a| \) as the polar angle \( \theta \) tends to \( \pm\infty \). It is documented in modern catalogs of special plane curves as an example of a spiral possessing an asymptotic circle and emerged in the era of computational visualization and curve databases rather than in 18th- or 19th-century analytic geometry.</p>
+    <p>The equation produces a smooth, monotonic radial growth that begins steeply near the origin and rapidly levels off toward the limiting radius \( |a| \). The single parameter \( b \) governs the rapidity of this saturation: larger \( |b| \) causes the curve to reach nearly its full radial extent within a smaller angular range, after which the path continues to wind tightly around the asymptotic circle. This non-oscillatory transition from radial to essentially circular motion is a direct consequence of the hyperbolic tangent function’s well-known decay to its horizontal asymptotes and distinguishes the curve from spirals that oscillate or cross their limiting forms.</p>
+    <p>Real-life applications in engineering and natural sciences remain limited in the published literature. One documented use occurs in geometrical acoustics, where the hyperbolic tangent spiral supplies exact analytical ray paths for selected problems of sound propagation in oceanic waveguides.<sup>2</sup> Variants that combine a logarithmic term with the hyperbolic tangent spiral (log-tanh spirals) have been implemented in professional astronomical image-analysis packages for decomposing and modeling barred spiral structures in galaxy images, including strongly lensed systems.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/spiraletangente%20hyperbolique/spiraletangente%20hyperbolique.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/spiraletangente hyperbolique/spiraletangente hyperbolique.shtml</a> (equation; asymptotic circle property)</li>
+      <li><a href="https://pubs.aip.org/asa/jasa/article-pdf/53/1/147/18777007/147_1_online.pdf" target="_blank" rel="noopener noreferrer">https://pubs.aip.org/asa/jasa/article-pdf/53/1/147/18777007/147_1_online.pdf</a> (hyperbolic tangent spiral ray paths in underwater acoustics)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TANHSPIRAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       restartflag rval id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Tanh Spiral"
+        iq "r=a·tanh(b·θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions per turn"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (limiting circle radius)" 1.0)
+        fb (get_real 2 "b (approach rate to limit)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        rval '(* fa (tanh (* fb (eval a2))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(nil T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TANHSPIRAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

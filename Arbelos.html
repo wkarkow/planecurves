@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arbelos - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Arbelos</h1>
+      <p class="short-description">A classical geometric figure formed by three semicircles sharing a common diameter, known as the shoemaker's knife, with notable Archimedean properties including the Pappus chain.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Arbelos/Arbelos01-360.avif"
+           alt="Arbelos, r-outer=5,r-left=2">
+      <figcaption>Arbelos, r-outer=5,r-left=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Arbelos/Arbelos02-360.avif"
+           alt="Arbelos, r-outer=5,r-left=1">
+      <figcaption>Arbelos, r-outer=5,r-left=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Arbelos/Arbelos03-360.avif"
+           alt="Arbelos, r-outer=5,r-left=4">
+      <figcaption>Arbelos, r-outer=5,r-left=4</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Arbelos/Arbelos04-360.avif"
+           alt="Arbelos, r-outer=2,r-left=5">
+      <figcaption>Arbelos, r-outer=2,r-left=5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Arbelos/Arbelos05-360.avif"
+           alt="Arbelos, r-outer=3,r-left=5">
+      <figcaption>Arbelos, r-outer=3,r-left=5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Arbelos figure:</div>
+      Three semicircles sharing a common diameter (shoemaker's knife figure)
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Parametric equations (each semicircle):</div>
+      \[ x(\theta) = x_c + r \cos(\theta),\quad y(\theta) = y_c + r \sin(\theta) \quad (\theta \in [0,\pi]) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Arbelos, meaning “shoemaker’s knife” in Greek, is a classical geometric figure introduced by Archimedes in his <em>Book of Lemmas</em> around 250 BCE<sup>1</sup>. The name reflects its resemblance to the blade used by ancient cobblers. The arbelos is formed by three semicircles: two smaller ones nestled inside a larger semicircle, all sharing a common baseline. Archimedes explored several properties of this figure, including the area enclosed by the semicircles and the construction of inscribed circles now known as Archimedean circles. He proved that the area of the arbelos equals that of a circle whose diameter is the perpendicular from the point where the two smaller semicircles meet to the arc of the large semicircle<sup>2</sup>. A sequence of circles, each tangent to the two smaller semicircles and its immediate neighbors, can be inscribed within the arbelos. This configuration is known as the Pappus chain and has centers lying on an ellipse<sup>3</sup>.</p>
+    <p>Real-life applications include the design of mechanical components that need to distribute stress evenly in engineering and the modeling of wave patterns in optics for lens and mirror surfaces<sup>4</sup>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Arbelos.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Arbelos.html</a> (history, properties, and equations)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Arbelos" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Arbelos</a> (history, geometric properties, and proofs)</li>
+      <li><a href="https://www.2dcurves.com/conicsection/conicsectioncm.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/conicsection/conicsectioncm.html</a> (history, visualization, and Pappus chain)</li>
+      <li><a href="https://www.geeksforgeeks.org/maths/application-of-an-arbelos-in-real-life" target="_blank" rel="noopener noreferrer">https://www.geeksforgeeks.org/maths/application-of-an-arbelos-in-real-life</a> (real-life applications in engineering)</li>
+    </ol>
+    <p><small>Note: Application examples extend from the geometric properties documented in the cited sources.</small></p>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ARBELOS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 id iq dcl opt kw mode dpr dct dpt span fa fb fc eq_display
+                  sr a1 a2 d3 xc yc x1 y1 x2 y2 e1 sn a3 x3 y3)
+  (setq id "Arbelos Curve"
+        iq "Each semicircle: x(θ)=r·cos(θ)+x₀, y(θ)=r·sin(θ)+y₀ for θ∈[0,π]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of segments per semicircle"
+        dct 60
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "Outer radius" 5.0)
+        fb (get_real 6 "Left inner radius" 2.0)
+        fc (- fa fb)
+        eq_display (strcat "\nOuter radius = " (rtos fa 2 16) ", left inner radius = " (rtos fb 2 16) ", right inner radius = " (rtos fc 2 16))
+        sr T
+        a1 0
+        a2 0
+        d3 3
+        xc '(cond ((= d3 3) (* fa (cos (eval a2)))) ((= d3 2) (+ (* fb (cos (eval a2))) (- fa) fb)) (T (- fa fc (- (* fc (cos (- pi (eval a2))))))))
+        yc '(cond ((= d3 3) (* fa (sin (eval a2)))) ((= d3 2) (* fb (sin (- (eval a2))))) (T (* fc (sin (eval a2)))))
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc)
+        e1 (ssadd))
+  (prompt baseinfo) (prompt eq_display) (setvar "osmode" 0)
+  (command "pline" (list (+ x0 (* x1 cosangle) (- (* y1 sinangle))) (+ y0 (* y1 cosangle) (* x1 sinangle))))
+  (setq sn divcount)
+  (repeat 3
+    (repeat sn
+      (setq a3 (eval a2) x3 (eval x2) y3 (eval y2) a1 a3 x1 x3 y1 y3)
+      (command (list (+ x0 (* x3 cosangle) (- (* y3 sinangle))) (+ y0 (* y3 cosangle) (* x3 sinangle)))))
+    (setq d3 (- d3 1) e1 (ssadd (entlast) e1)))
+  (command "" "pedit" "l" "j" e1 "l" "" "d" "")
+  (setvar "osmode" os) (setvar "orthomode" om) (setvar "snapmode" sm)
+  (setvar "snapbase" sb) (setvar "snapang" sa) (setvar "cmdecho" cd) (princ))
+(C:ARBELOS)</code></pre>
+</section>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

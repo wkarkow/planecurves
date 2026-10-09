@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Laplace Limit - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Laplace Limit</h1>
+      <p class="short-description">A parametric plane curve that visualizes the domain of convergence of the power-series solution to Kepler’s equation in celestial mechanics.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/LaPlaceLimit/LaPlaceLimit01-360.avif"
+           alt="Laplace Limit Curve">
+      <figcaption>Laplace Limit Curve</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Laplace Limit parametric equations:</div>
+      \[ x = \sqrt{t \bigl(\coth t - t\bigr)},\quad y = \sqrt{t \bigl(t - \tanh t\bigr)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Domain:</div>
+      \[ 0 \le t \le \mu \approx 1.19967864 \quad ( \coth\mu = \mu ) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Laplace limit curve<sup>1,2</sup> is a parametric plane curve tied directly to the convergence analysis of power series solutions for Kepler’s equation in celestial mechanics. Pierre-Simon Laplace (1749–1827), the French mathematician and astronomer, examined the power series expansion of the eccentric anomaly E in terms of the eccentricity ε in Kepler’s equation M = E − ε sin(E), where M is the mean anomaly. He identified the critical eccentricity value beyond which the series diverges for mean anomalies other than multiples of π. Earlier work by Italian astronomer Francesco Carlini (circa 1820) gave an approximate value near 0.66, while Augustin-Louis Cauchy refined it to approximately 0.66274 in 1829. The limit, e = 0.662743419\ldots, now known as the Laplace limit, equals the maximum value of the function x / cosh(x) for real x &gt; 0 and corresponds to the unique positive real solution μ ≈ 1.19967864 of the transcendental equation derived from setting the derivative of that function to zero, which is equivalent to a fixed-point relation involving coth(μ) = μ. The parametric equations x(t) = √[t (coth(t) − t)], y(t) = √[t (t − tanh(t))] for t from 0 to μ trace the curve up to this special parameter value, where boundary clamping ensures the plot reaches the origin without gaps. This visualization connects the hyperbolic functions in the limit derivation to a plotted path in the plane.</p>
+    <p>Real-life applications exist in astronomy and orbital mechanics. The Laplace limit determines the range of eccentricities for which series methods reliably compute planetary, comet, and satellite positions without divergence, supporting ephemeris generation and trajectory predictions. Space agencies apply it when validating analytical orbit solutions before switching to numerical iteration for higher-eccentricity cases, as in solar system dynamics and spacecraft navigation.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Laplace_limit" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Laplace_limit</a> (history, Kepler’s equation definition, and maximum of x/cosh(x))</li>
+      <li><a href="https://mathworld.wolfram.com/LaplaceLimit.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/LaplaceLimit.html</a> (parametric context, relation to Kepler’s equation divergence and Bessel/Kapteyn series)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LAPLACELIMIT (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                         divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2)
+  (setq id "Laplace Limit"
+        iq "x(t)=√[t·(coth(t)−t)], y(t)=√[t·(t−tanh(t))]"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions along parameter t"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        eq_display "\nx(t)=√[t·(coth(t)−t)], y(t)=√[t·(t−tanh(t))]"
+        xc '(if (= (eval a2) 0) 1.0 (if (equal (eval a2) 1.199678640257734 1e-5) 0.0 (alt_expt (* (eval a2) (- (/ (cosh (eval a2)) (sinh (eval a2))) (eval a2))) 0.5 nil)))
+        yc '(alt_expt (* (eval a2) (- (eval a2) (tanh (eval a2)))) 0.5 nil)
+        paramstep (/ 1.199678640257734 divcount)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LAPLACELIMIT)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

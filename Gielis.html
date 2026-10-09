@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gielis Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Gielis Curve</h1>
+      <p class="short-description">Polar form of the superformula that generalizes the Lamé superellipse to arbitrary rotational symmetries.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Gielis/Gielis01-360.avif"
+           alt="Gielis Curve, Nuphar luteum, Water Lily a=10,b=10,c=-2/9,d=0.75">
+      <figcaption>Gielis Curve, Nuphar luteum, Water Lily a=10,b=10,c=-2/9,d=0.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis02-360.avif"
+           alt="Gielis Curve, Scrophularia nodosa, Figwort a=15,b=15,c=-1/12,d=1">
+      <figcaption>Gielis Curve, Scrophularia nodosa, Figwort a=15,b=15,c=-1/12,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis03-360.avif"
+           alt="Gielis Curve, Equisetum, Horsetail a=4,b=4,c=-0.25,d=1.25">
+      <figcaption>Gielis Curve, Equisetum, Horsetail a=4,b=4,c=-0.25,d=1.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis04-360.avif"
+           alt="Gielis Curve, Raspberry Stem, a=6,b=6,c=-0.1,d=1.75">
+      <figcaption>Gielis Curve, Raspberry Stem, a=6,b=6,c=-0.1,d=1.75</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis05-360.avif"
+           alt="Gielis Curve, New Values, a=6,b=6,c=-0.125,d=1.5">
+      <figcaption>Gielis Curve, New Values, a=6,b=6,c=-0.125,d=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis06-360.avif"
+           alt="Gielis Curve, New Values, a=10,b=10,c=-0.25,d=1.25">
+      <figcaption>Gielis Curve, New Values a=10,b=10,c=-0.25,d=1.25</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis07-360.avif"
+           alt="Gielis Curve, New Values, a=6,b=6,c=-2.0,d=0.5">
+      <figcaption>Gielis Curve, New Values a=6,b=6,c=-2.0,d=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis08-360.avif"
+           alt="Gielis Curve, New Values, a=1,b=1,multiple values of c,d=1.5">
+      <figcaption>
+        Gielis Curve, New Values a=1,b=1,c=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">4.0</span>,
+        <span class="figcap-value" style="color:#0096FF">8.0</span>,
+        d=1.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis09-360.avif"
+           data-caption="Gielis Curve, New Values, a=b=0.1(black),0.25(red),0.5(blue),1.0(green),c=10,d=1.5"
+           alt="Gielis Curve, New Values, multiple values of a and b,c=10,d=1.5">
+      <figcaption>
+        Gielis Curve, New Values a=b=
+        <span class="figcap-value" style="color:#000000">0.1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">1.0</span>,
+        c=10,d=1.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis10-360.avif"
+           alt="Gielis Curve, New Values, a=11,b=4,c=-0.75,d=1.05">
+      <figcaption>Gielis Curve, New Values, a=11,b=4,c=-0.75,d=1.05</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Gielis/Gielis11-360.avif"
+           alt="Gielis Curve, New Values, a=11,b=4,c=0.75,d=1.05">
+      <figcaption>Gielis Curve, New Values, a=11,b=4,c=0.75,d=1.05</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Modified Gielis polar equation:</div>
+      \[ r = \bigl(|\cos(d\theta)|^{a} + |\sin(d\theta)|^{b}\bigr)^{c} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Gielis curve, also known as the superformula, was introduced by Belgian botanist Johan Gielis. The origin of Johan Gielis’ “superformula” is firmly tied to plant morphology. He began with the observation that Lamé’s superellipses could model square-like botanical cross-sections such as the square bamboo, but were limited to fourfold symmetry. To capture the broader symmetries found in leaves, flowers, seeds, and other organs, he recast the idea in polar form, introduced a symmetry parameter to extend beyond fourfold cases, and published the result as an invited Special Paper in the American Journal of Botany in 2003.<sup>1</sup> Gielis developed the equation as a generalization of the superellipse (Lamé curves from 1818 and Piet Hein’s supercircles) by converting it to polar coordinates and adding powers to unify a wide range of natural and abstract shapes under a single compact form.<sup>2</sup></p>
+    <p>Real-life applications exist in the natural sciences and engineering. In biology, the curve accurately models plant structures including petioles (e.g., <em>Nuphar luteum</em>), stems (e.g., <em>Scrophularia nodosa</em> and <em>Equisetum</em>), raspberries, leaves, seeds, diatoms, and starfish cross-sections. It has been validated on more than 50,000 biological specimens and used to compute leaf areas across varied shapes, with direct implications for forest management and plant growth studies.<sup>3</sup> Gielis framed the equation as a compact description of plant forms, but subsequent work has shown good fits to diatoms, pollen grains, echinoderms such as starfish, and a variety of leaves and floral organs, often with a single parameter set per specimen. He later published a book-length treatment outlining this lineage entitled <em>The Geometrical Beauty of Plants</em>,<sup>4</sup> positioning “Gielis curves” as a unifying language for shapes across botanical scales. In electromagnetic engineering, “supershape” or “Gielis” antennas tune bandwidth and radiation patterns, with commercial implementations reporting performance advantages over conventional patch designs. In engineering, it enables compact parametric descriptions for computer-aided geometric design (CAGD), CAD/CAM file optimization, and shape synthesis in manufacturing and computer graphics.<sup>5</sup></p>
+    <p>These uses underscore the practical value of a compact parametric family that spans rounded polygons, star-like forms, and smooth transitions among them.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://bsapubs.onlinelibrary.wiley.com/doi/10.3732/ajb.90.3.333" target="_blank" rel="noopener noreferrer">https://bsapubs.onlinelibrary.wiley.com/doi/10.3732/ajb.90.3.333</a> (original 2003 paper by Gielis)</li>
+      <li><a href="https://www.2dcurves.com/power/powergc.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/power/powergc.html</a> (Gielis curve definition, polar form, and exact plant examples matching presets)</li>
+      <li><a href="https://researchoutreach.org/articles/superellipses-superformula-impact-gielis-transformations/" target="_blank" rel="noopener noreferrer">https://researchoutreach.org/articles/superellipses-superformula-impact-gielis-transformations/</a> (biological validation on 50,000+ specimens)</li>
+      <li><a href="https://content.e-bookshelf.de/media/reading/L-5007778-26f3eba324.pdf" target="_blank" rel="noopener noreferrer">https://content.e-bookshelf.de/media/reading/L-5007778-26f3eba324.pdf</a> (Gielis’ paper, The Geometrical Beauty of Plants)</li>
+      <li><a href="https://mathworld.wolfram.com/Superellipse.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Superellipse.html</a> (Gielis 2003 generalization and superformula equation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:GIELIS (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                   restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd rval)
+  (setq id "Gielis Curve"
+        iq "r=(|cos(d·θ)|ᵃ + |sin(d·θ)|ᵇ)^ᶜ"
+        dcl "GIELIS"
+        opt '("Water Lily" "Figwort" "Horsetail" "Raspberry" "New Values")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+       (setq fa 10.0
+             fb 10.0
+             fc (/ -2.0 9.0)
+             fd 0.75))
+    ((eq kw 1)
+       (setq fa 15.0
+             fb 15.0
+             fc (/ -1.0 12.0)
+             fd 1.0))
+    ((eq kw 2)
+       (setq fa 4.0
+             fb 4.0
+             fc -0.25
+             fd 1.25))
+    ((eq kw 3)
+       (setq fa 6.0
+             fb 6.0
+             fc -0.1
+             fd 1.75))
+    ((eq kw 4)
+       (setq fa (get_real 0 "a (stem horizontal radius): " 6.0)
+             fb (get_real 0 "b (stem vertical radius): " 6.0)
+             fc (get_real 2 "c (lobe expansion): " -0.125)
+             fd (get_real 2 "d (lobe multiplier): " 1.5))))
+  (setq eq_display (strcat "\na= " (rtos fa 2 4) ", b= " (rtos fb 2 4) ", c= " (rtos fc 2 4) ", d= " (rtos fd 2 4))
+        rval '(* (alt_expt (+ (alt_expt (abs (cos (* fd (eval a2)))) fa nil) (alt_expt (abs (sin (* fd (eval a2)))) fb nil)) fc nil))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:GIELIS)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

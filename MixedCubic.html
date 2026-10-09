@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mixed Cubic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Mixed Cubic</h1>
+      <p class="short-description">A rational cubic with an isolated point at the origin, the cissoid of a straight line and a parabola.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/MixedCubic/MixedCubic01-360.avif"
+           data-caption="Mixed Cubic, a=1,b=1(black) and parabola, y²=x(red)"
+           alt="Mixed Cubic, a=1,b=1(black) and parabola, y²=x(red)">
+      <figcaption>
+        Mixed Cubic,
+        <span class="figcap-value" style="color:#000000">a=1,b=1</span>
+        and parabola,
+        <span class="figcap-value" style="color:#FF0000">y²=x</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Mixed Cubic Curve implicit equation:</div>
+      \[ (x - a)y^{2} = b x^{2} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Mixed Cubic Curve polar equation:</div>
+      \[ r = \dfrac{a}{\cos(\theta)} + \dfrac{b\cdot\cos(\theta)}{\sin^{2}(\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The mixed cubic, also known as the Longchamps curve or cubic mixte, was studied and named by the French mathematician Gaston Albert Gohierre de Longchamps (1842–1906) in 1890.<sup>1</sup> De Longchamps contributed to synthetic geometry and is also known for the de Longchamps point of a triangle. This rational cubic curve has an isolated point at the origin. It can be generated geometrically as the cissoid of a straight line and a parabola: the locus of point M on a variable line through the origin that intersects the parabola at P' and the line at Q' such that MP' = MQ'. It possesses both a linear asymptote and a parabolic asymptote.</p>
+    <p>No specific real-life applications in engineering or the natural sciences are documented for the mixed cubic in standard mathematical references on plane curves.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cubicmixte/cubicmixte.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cubicmixte/cubicmixte.shtml</a> (history, name, geometric construction, Cartesian and polar equations, asymptotes).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:MIXEDCUBIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                       restartflag id iq dcl opt kw mode dpr dct dpt span eq_display eq_prompt rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Mixed Cubic (Longchamps)"
+        iq "r=a/cos(θ)+b·cos(θ)/sin²(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 0 "a (x-shift)" 1.0)
+        fb (get_real 0 "b (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        rval '(+ (/ fa (avoid_zero (cos (eval a2)))) (/ (* fb (cos (eval a2))) (avoid_zero (* (sin (eval a2)) (sin (eval a2))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 50)
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:MIXEDCUBIC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

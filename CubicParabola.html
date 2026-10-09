@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubic Parabola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cubic Parabola</h1>
+      <p class="short-description">A cubic polynomial curve with an inflection point, with symmetric and triple-root variants.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/CubicParabola/CubicParabola01-360.avif"
+           alt="Symmetric Cubical Parabola, a=1,multiple values of b"
+      <figcaption>
+        Symmetric Cubical Parabola, a=1,b=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0</span>,
+        <span class="figcap-value" style="color:#009600">-0.5</span>,
+        <span class="figcap-value" style="color:#9600FF">-1</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/CubicParabola/CubicParabola02-360.avif"
+           alt="Triple Root Cubical Parabola, a=1,multiple values of b"
+      <figcaption>
+        Triple Root Cubical Parabola, a=1,b=
+        <span class="figcap-value" style="color:#000000">-1.0</span>,
+        <span class="figcap-value" style="color:#FF0000">-0.5</span>,
+        <span class="figcap-value" style="color:#0000FF">0</span>,
+        <span class="figcap-value" style="color:#009600">0.5</span>,
+        <span class="figcap-value" style="color:#9600FF">1.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Symmetric Cubic Parabola Cartesian equation:</div>
+      \[ y = \dfrac{x^{3} + b x}{a^{2}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Triple Root Cubic Parabola Cartesian equation:</div>
+      \[ y = a (x - b)^{3} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The cubical parabola, also known as the cubic parabolas, is the graph of a cubic polynomial. These curves were studied by Isaac Newton and Gottfried Wilhelm Leibniz as early as 1675<sup>1</sup>. The presence of an inflection point, where the curvature changes sign smoothly, makes the cubic parabola particularly useful in engineering. The Symmetric variant includes a linear term to adjust the initial slope while preserving odd symmetry. The Triple Root variant centers the inflection point at a chosen x-value.</p>
+    <p>Real-life applications center on transportation infrastructure. Cubic parabolas have been employed in railway alignment design since the mid-19th century and remain in use today for transition spirals in many railway systems<sup>2</sup>. In railway and highway design, the cubic parabola serves as a transition curve between straight sections and circular curves<sup>2,3</sup>. Known in some contexts as the Nördling parabola, it provides a gradual change in curvature. This gradual change reduces lateral jerk, improving passenger comfort and reducing wear on tracks and vehicles. The curve is popular because offsets from the tangent can be calculated easily as they vary with the cube of the distance along the curve.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/parabolecubic/parabolecubic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/parabolecubic/parabolecubic.shtml</a> (history and Nördling parabola).</li>
+      <li><a href="https://railwaytrackblog.com/2023/10/30/the-cubic-parabola-a-complicated-simplification/" target="_blank" rel="noopener noreferrer">https://railwaytrackblog.com/2023/10/30/the-cubic-parabola-a-complicated-simplification/</a> (railway engineering context).</li>
+      <li><a href="https://mathworld.wolfram.com/CubicalParabola.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CubicalParabola.html</a> (mathematical properties).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CUBICPARABOLA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                          xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc shiftx shifty)
+  (setq id "Cubic Parabola"
+        iq ""
+        dcl "CUBICPARABOLA"
+        opt '("Symmetric" "Triple Root")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\ny=(x³+b·x)/a²")
+     (setq fa (get_real 2 "a (vertical scale factor)" 1.0)
+           fb (get_real 0 "b (initial slope)" 0.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+           xc '(eval a2)
+           yc '(/ (+ (alt_expt (eval a2) 3 nil) (* fb (eval a2))) (alt_expt fa 2 nil))))
+    ((eq kw 1)
+     (princ "\ny=a·(x-b)³")
+     (setq fa (get_real 2 "a (vertical scale factor)" 1.0)
+           fb (get_real 0 "b (inflection point x value)" 0.0)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+           xc '(eval a2)
+           yc '(* fa (alt_expt (eval a2) 3 nil))
+           x0 (+ x0 (* fb cosangle))
+           y0 (+ y0 (* fb sinangle)))))
+  (setq paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CUBICPARABOLA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

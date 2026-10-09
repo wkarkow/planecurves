@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardioid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cardioid</h1>
+      <p class="short-description">A heart-shaped plane curve traced by a point fixed on the circumference of a circle rolling without slipping around a fixed circle of equal radius.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Cardioid/Cardioid01-360.avif"
+           alt="Cardioid, a=1,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Cardioid, a=1,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid02-360.avif"
+           alt="Generalized, a=2,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=2,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid03-360.avif"
+           alt="Generalized, a=0.5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid04-360.avif"
+           alt="Generalized, a=0.25,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.25,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid05-360.avif"
+           alt="Generalized, a=0.75,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.75,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid06-360.avif"
+           alt="Generalized, a=1.5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1.5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid07-360.avif"
+           alt="Generalized, a=2.5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=2.5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid08-360.avif"
+           alt="Generalized, a=1.25,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1.25,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid09-360.avif"
+           alt="Generalized, a=5/6,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=5/6,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid10-360.avif"
+           alt="Generalized, a=3,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=3,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid11-360.avif"
+           alt="Generalized, a=4,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=4,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid12-360.avif"
+           alt="Generalized, a=5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=5,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid13-360.avif"
+           alt="Generalized, a=6,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=6,b=0°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid14-360.avif"
+           alt="Generalized, a=1,b=45°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=45°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid15-360.avif"
+           alt="Generalized, a=1,b=60°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=60°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid16-360.avif"
+           alt="Generalized, a=0.5,b=60°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.5,b=60°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid17-360.avif"
+           alt="Generalized, a=1.5,b=60°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1.5,b=60°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid18-360.avif"
+           alt="Generalized, a=0.5,b=30°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.5,b=30°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid19-360.avif"
+           alt="Generalized, a=0.25,b=75°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.25,b=75°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid20-360.avif"
+           alt="Generalized, a=0.75,b=45°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.75,b=45°,c=1,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid21-360.avif"
+           alt="Generalized, a=1,b=90°,c=1,d=1,e=1,f=1,g=0°,h=1, i=0.75,j=-45°,k=1,l=√2,m=√2,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=90°,c=1,d=1,e=1,f=1,g=0°,h=1, i=0.75,j=-45°,k=1,l=√2,m=√2,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid22-360.avif"
+           alt="Generalized, a=1,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid23-360.avif"
+           alt="Generalized, a=1.5,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1.5,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+        <figure>
+      <img src="images/Cardioid/Cardioid24-360.avif"
+           alt="Generalized, a=0.5,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.5,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid25-360.avif"
+           alt="Generalized, a=2,b=0°,c=0.5,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=2,b=0°,c=0.5,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    </figure>
+        <figure>
+      <img src="images/Cardioid/Cardioid26-360.avif"
+           alt="Generalized, a=0.75,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.75,b=0°,c=2,d=1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid27-360.avif"
+           alt="Generalized, a=2,b=0°,c=0.5,d=0,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=2,b=0°,c=0.5,d=0,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    </figure>
+        <figure>
+      <img src="images/Cardioid/Cardioid28-360.avif"
+           alt="Generalized, a=2,b=0°,c=1,d=-1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=2,b=0°,c=1,d=-1,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid29-360.avif"
+           alt="Generalized, a=1,b=0°,c=2,d=0,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=0°,c=2,d=0,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid30-360.avif"
+           alt="Generalized, a=0.5,b=0°,c=2,d=0,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.5,b=0°,c=2,d=0,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    </figure>
+        <figure>
+      <img src="images/Cardioid/Cardioid31-360.avif"
+           alt="Generalized, a=0.5,b=0°,c=2,d=-0.5,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=0.5,b=0°,c=2,d=-0.5,e=1,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid32-360.avif"
+           alt="Generalized, a=1,b=0°,c=1,d=-0.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=0°,c=1,d=-0.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid33-360.avif"
+           alt="Generalized, a=1,b=0°,c=1,d=-1,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=0°,c=1,d=-1,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    </figure>
+        <figure>
+      <img src="images/Cardioid/Cardioid34-360.avif"
+           alt="Generalized, a=1,b=0°,c=1,d=-1.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=0°,c=1,d=-1.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid35-360.avif"
+           alt="Generalized, a=1,b=0°,c=2,d=0,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1,b=0°,c=2,d=0,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid36-360.avif"
+           alt="Generalized, a=1.5,b=0°,c=2,d=0.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1.5,b=0°,c=2,d=0.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    </figure>
+        <figure>
+      <img src="images/Cardioid/Cardioid37-360.avif"
+           alt="Generalized, a=1.5,b=0°,c=1,d=0.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1">
+      <figcaption>Generalized, a=1.5,b=0°,c=1,d=0.5,e=0.5,f=1,g=0°,h=1, i=1,j=0°,k=1,l=1,m=1,n=1,o=0°,p=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Cardioid/Cardioid38-360.avif"
+           alt="Generalized, a=1,b=0°,c=1,d=1,e=1,f=2,g=45°,h=1, i=1,j=0°,k=1,l=1,m=1,n=2,o=45°,p=1">
+      <figcaption>Generalized, a=1,b=0°,c=1,d=1,e=1,f=2,g=45°,h=1, i=1,j=0°,k=1,l=1,m=1,n=2,o=45°,p=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cardioid polar equation:</div>
+      \[ r = a(1 + \cos \theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = \cos(a\theta + b)^c \left( d + e \cos(f\theta + g)^h \right),  y = \sin(i\theta + j)^k \left( l + m \cos(n\theta + o)^p \right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The cardioid is a heart-shaped plane curve traced by a point fixed on the circumference of a circle that rolls without slipping around the outside of a fixed circle of the same radius. Engineers, architects, and draftsmen recognize it immediately as the one-cusped epicycloid<sup>1</sup> generated by that rolling motion. It is also a special case of the limaçon of Pascal, a broader family of curves defined by r(θ) = a + b cos θ.</p>
+    <p>Ole Rømer first examined the curve in 1674. Vaumesle studied it in 1678, and Philippe de La Hire calculated its arc length in 1708. Giovanni Francesco Melchiorre Salvemini de Castillon gave the curve its name “cardioid” (from the Greek kardia, heart) in a paper published in the Philosophical Transactions of the Royal Society in 1741.<sup>2</sup> The cardioid is the catacaustic, the envelope of reflected light rays, formed when rays originate from a point on the circumference of a reflecting circle.<sup>2</sup> This property is accessible through basic calculus: the caustic is the envelope of the family of reflected rays, each obeying the law of reflection (angle of incidence equals angle of reflection). Its equation, r(θ) = a(1 + cos θ), is a special case of an epicycloid, and also of a limaçon of Pascal.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In acoustics, the cardioid polar pattern is the directional response used in most studio, stage, and broadcast microphones. Sound arriving from the front (0°) is captured at full sensitivity while sound from the rear (180°) is attenuated by 20–30 dB; this directivity isolates the desired source and suppresses feedback and ambient noise.<sup>3</sup> In radar and antenna design, some directional arrays use cardioid-shaped radiation patterns to enhance directionality.<sup>3</sup> The cardioid also arises as the boundary of the main bulb of the Mandelbrot set in complex dynamics.<sup>4</sup> In optics the same caustic appears whenever light reflects inside a circular surface such as the inner wall of a cup of coffee or tea; the bright heart-shaped curve is the visible result of the reflected rays converging along the cardioid envelope. The nature of its generation from a rolling circle spurred interest in drawing machines like the spirograph.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cardioid/cardioid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cardioid/cardioid.shtml</a> (history, generation as epicycloid and caustic)</li>
+      <li><a href="https://mathworld.wolfram.com/Cardioid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cardioid.html</a> (naming by de Castillon, arc length by La Hire, catacaustic property)</li>
+      <li><a href="https://www.mathworks.com/help/phased/ref/phased.cardioidantennaelement-system-object.html" target="_blank" rel="noopener noreferrer">https://www.mathworks.com/help/phased/ref/phased.cardioidantennaelement-system-object.html</a> (cardioid antenna patterns in directional arrays)</li>
+      <li><a href="https://mathworld.wolfram.com/MandelbrotSet.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/MandelbrotSet.html</a> (main cardioid boundary of Mandelbrot set)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CARDIOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp)
+  (setq id "Cardioid"
+        iq "x(θ)=cos(aθ+b)ᶜ[d+e·cos(fθ+g)ʰ], y(θ)=sin(iθ+j)ᵏ[l+m·cos(nθ+o)ᵖ]"
+        dcl "CARDIOID"
+        opt '("Cardioid" "New values" )
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+      (setq fa 1.0 fb 0.0 fc 1.0 fd 1.0 fe 1.0 ff 1.0 fg 0.0 fh 1.0
+            fi 1.0 fj 0.0 fk 1.0 fl 1.0 fm 1.0 fn 1.0 fo 0.0 fp 1.0))
+    ((eq kw 1)
+      (setq fa (get_real 2 "a (θ multiplier for x-cos)" 1.0)
+            fb (* (get_real 0 "b (phase shift x in °)" 0.0) (/ pi 180.0))
+            fc (get_real 0 "c (power of x-cos)" 1.0)
+            fd (get_real 0 "d (x base term)" 1.0)
+            fe (get_real 0 "e (x inner-cos coefficient)" 1.0)
+            ff (get_real 0 "f (θ multiplier for x-inner-cos)" 1.0)
+            fg (* (get_real 0 "g (inner phase shift x in °)" 0.0) (/ pi 180.0))
+            fh (get_real 0 "h (power of x-inner-cos)" 1.0)
+            fi (get_real 2 "i (θ multiplier for y-sin)" 1.0)
+            fj (* (get_real 0 "j (phase shift y in °)" 0.0) (/ pi 180.0))
+            fk (get_real 0 "k (power of y-sin)" 1.0)
+            fl (get_real 0 "l (y base term)" 1.0)
+            fm (get_real 0 "m (y inner-cos coefficient)" 1.0)
+            fn (get_real 0 "n (θ multiplier for y-inner-cos)" 1.0)
+            fo (* (get_real 0 "o (inner phase shift y in °)" 0.0) (/ pi 180.0))
+            fp (get_real 0 "p (power of y-inner-cos)" 1.0))))
+  (setq eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos (* fb (/ 180.0 pi)) 2 2) "°, c=" (rtos fc 2 4) ", d=" (rtos fd 2 4) ", e=" (rtos fe 2 4)
+                           ", f=" (rtos ff 2 4) ", g=" (rtos (* fg (/ 180.0 pi)) 2 2) "°, h=" (rtos fh 2 4) "\ni=" (rtos fi 2 4) ", j=" (rtos (* fj (/ 180.0 pi))
+                           2 2) "°, k=" (rtos fk 2 4) ", l=" (rtos fl 2 4) ", m=" (rtos fm 2 4) ", n=" (rtos fn 2 4) ", o=" (rtos (* fo (/ 180.0 pi)) 2 2) "°"
+                           ", p=" (rtos fp 2 4))
+        xc '(* (alt_expt (cos (+ (* fa (eval a2)) fb)) fc nil) (+ fd (* fe (alt_expt (cos (+ (* ff (eval a2)) fg)) fh nil))))
+        yc '(* (alt_expt (sin (+ (* fi (eval a2)) fj)) fk nil) (+ fl (* fm (alt_expt (cos (+ (* fn (eval a2)) fo)) fp nil))))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CARDIOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

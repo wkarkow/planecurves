@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paschen Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Paschen Curve</h1>
+      <p class="short-description">Breakdown voltage \(V_B\) of a gas as a function of the product \(pd\) (pressure times electrode gap).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <a href="https://en.wikipedia.org/wiki/Paschen%27s_law#/media/File:Paschen_curves.svg" target="_blank" rel="noopener">
+        <img src="images/Paschen/Paschen01-360.avif" alt="Wikipedia multi-gas Paschen Curve">
+      </a>
+    <figcaption>Wikipedia multi-gas Paschen Curve</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Paschen/Paschen02-360.avif"
+           data-caption="Paschen Curve, Air(black), Helium(blue), Neon(green), Argon(red), Hydrogen(lime), Nitrogen(purple)"
+           alt="Paschen Curve, Air(black), Helium(blue), Neon(green), Argon(red), Hydrogen(lime), Nitrogen(purple)">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Air</span>,
+        <span class="figcap-value" style="color:#0000FF">Helium</span>,
+        <span class="figcap-value" style="color:#009600">Neon</span>,
+        <span class="figcap-value" style="color:#FF0000">Argon</span>,
+        <span class="figcap-value" style="color:#00FF00">Hydrogen</span>,
+        <span class="figcap-value" style="color:#9600FF">Nitrogen</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Paschen Curve Cartesian equation:</div>
+      \[ V_{B} = \dfrac{B \cdot pd}{\ln(A \cdot pd)-\ln\bigl[\ln\bigl(1+\frac{1}{\gamma}\bigr)\bigr]} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Paschen minimum Cartesian equation:</div>
+      \[ pd_{\min} = \dfrac{e \cdot \ln\bigl(1+\frac{1}{\gamma}\bigr)}{A} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Friedrich Paschen (1865–1947), a German physicist, published the empirical relationship now known as Paschen’s law in 1889<sup>1</sup> after systematic experiments measuring the voltage required to produce sparks in air, hydrogen, and carbon dioxide at various pressures and electrode gaps. His work built on earlier observations of gas discharges and provided the first quantitative description of breakdown voltage as a function of the product <em>pd</em> (pressure times gap distance). Paschen’s law is an approximation derived from the Townsend avalanche mechanism, in which electrons gain enough energy between collisions to ionize gas molecules, with secondary emission from the cathode (coefficient γ) sustaining the discharge.<sup>2</sup></p>
+    <p>The equation has been widely adopted in high-voltage engineering and plasma science because it predicts the striking voltage of gas-filled devices with good accuracy over a practical range of pressures and gaps. Real-life applications include the design of high-voltage switchgear, transformers, and circuit breakers (to avoid unintended arcing by choosing safe <em>pd</em> values), gas-discharge lamps such as neon signs and fluorescent tubes, spark-gap switches and lightning arrestors, vacuum-tube electronics (historical), and modern plasma-processing equipment used in semiconductor manufacturing for etching and deposition. In natural sciences it appears in studies of atmospheric electricity, lightning initiation models, and gas-discharge phenomena in astrophysical plasmas.</p>
+    <p>The plotted curves have the correct mathematical form but appear slightly displaced relative to the Wikipedia multi-gas image because the A, B, and γ parameter sets used here were taken directly from the two published experimental tables<sup>3,4</sup> rather than from the Lieberman &amp; Lichtenberg values employed for the Wikipedia figure.<sup>5</sup> As in the Wikipedia figure, the same log/log plot and axis values in powers of 10 have been employed by the code.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>Paschen, F. (1889). “Ueber die zum Funkenübergang in Luft, Wasserstoff und Kohlensäure bei verschiedenen Drucken erforderliche Potentialdifferenz”. <em>Annalen der Physik</em> 273 (5): 69–96. (original empirical discovery)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Paschen%27s_law" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Paschen%27s_law</a> (history, equation, and Wikipedia multi-gas image)</li>
+      <li><a href="https://pe2bz.philpem.me.uk/Power/-%20HV/Site-101-Information-HV/paschen.htm" target="_blank" rel="noopener noreferrer">https://pe2bz.philpem.me.uk/Power/-%20HV/Site-101-Information-HV/paschen.htm</a> (experimental <em>pd</em><sub>min</sub> and γ values)</li>
+      <li><a href="https://www.researchgate.net/publication/262880855_In-depth_treatment_of_discharge_ignition_data_during_undergraduate_laboratory_work" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/262880855_In-depth_treatment_of_discharge_ignition_data_during_undergraduate_laboratory_work</a> (typical A and B constants table)</li>
+      <li>Lieberman, M. A.; Lichtenberg, A. J. (2005). <em>Principles of Plasma Discharges and Materials Processing</em>, 2nd ed. (A/B values used in the Wikipedia image)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PASCHEN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                    xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg)
+  (setq id "Paschen Curve"
+        iq "V=B·pd/(ln(A·pd)-ln[ln(1+1/γ)])"
+        dcl "PASCHEN"
+        opt '("Air" "Argon (Ar)" "Helium (He)" "Hydrogen (H2)" "Neon (Ne)" "Nitrogen (N2)")
+        kw 0
+        mode 'param
+        dpr "# of divisions along log(pd) axis"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        ff 0.0
+        fg 0.0)
+  (cond
+    ((= kw 0)
+     (setq fa (get_real 2 "A (ionization coeff. in (Torr·cm)^-1)" 15.0)
+           fb (get_real 2 "B (V/(Torr·cm))" 365.0)
+           fc (get_real 2 "γ (secondary emission coeff.)" 0.0458)
+           fd "Air"))
+    ((= kw 1)
+     (setq fa 12.0 fb 180.0 fc 0.0192 fd "Argon (Ar)"))
+    ((= kw 2)
+     (setq fa 3.0 fb 34.0 fc 0.0123 fd "Helium (He)"))
+    ((= kw 3)
+     (setq fa 5.0 fb 130.0 fc 0.1371 fd "Hydrogen (H2)"))
+    ((= kw 4)
+     (setq fa 4.4 fb 111.0 fc 0.00154 fd "Neon (Ne)"))
+    ((= kw 5)
+     (setq fa 12.0 fb 342.0 fc 0.0548 fd "Nitrogen (N2)")))
+  (setq fe (log (log (+ 1.0 (/ 1.0 fc))))
+        eq_display (strcat "\n" fd ": A=" (rtos fa 2 4) ", B=" (rtos fb 2 4) ", γ=" (rtos fc 2 5) ", start log₁₀(pd)=-2.0")
+        xc '(+ -2.0 (eval a2))
+        yc '(progn (setq ff (alt_expt 10.0 (+ -2.0 (eval a2)) nil)) (setq fg (- (log (* fa ff)) fe)) (if (<= fg 1e-9)
+            (progn (setq restartflag T) 7.0) (/ (log (/ (* fb ff) fg)) (log 10.0))))
+        paramstep (/ xspan divcount)
+        skm '(T T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PASCHEN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

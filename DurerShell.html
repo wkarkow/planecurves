@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dürer's Shell Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Dürer's Shell Curve</h1>
+      <p class="short-descri.ption">A glissette of a point on a line segment sliding between a parabola and one of its tangents.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+        <figure>
+      <img src="images/DurerShell/DurerShell01-360.avif"
+           alt="Dürer's Shell Curve construction, a=13,b=1, curve, line segments (P + Q = 13),offset distance b=1">
+      <figcaption>
+        Dürer's Shell Curve construction, a=13,b=1, 
+        <span class="figcap-value" style="color:#FF0000">curve</span>,
+        <span class="figcap-value" style="color:#0000FF">line segments (P + Q = 13)</span>,
+        <span class="figcap-value" style="color:#009600">offset distance b=1</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell02-360.avif"
+           alt="Dürer's Shell Curve, a=1,b=1">
+      <figcaption>Dürer's Shell Curve, a=1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell03-360.avif"
+           alt="Dürer's Shell Curve, a=2,b=1">
+      <figcaption>Dürer's Shell Curve, a=2,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell04-360.avif"
+           alt="Dürer's Shell Curve, a=10,b=1">
+      <figcaption>Dürer's Shell Curve, a=10,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell05-360.avif"
+           alt="Dürer's Shell Curve, a=0.5,b=1">
+      <figcaption>Dürer's Shell Curve, a=0.5,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell06-360.avif"
+           alt="Dürer's Shell Curve, a=0.1,b=1">
+      <figcaption>Dürer's Shell Curve, a=0.1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell07-360.avif"
+           alt="Dürer's Shell Curve, a=0.01,b=1">
+      <figcaption>Dürer's Shell Curve, a=0.01,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell08-360.avif"
+           alt="Dürer's Shell Curve, a=-1,b=1">
+      <figcaption>Dürer's Shell Curve, a=-1,b=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell09-360.avif"
+           alt="Dürer's Shell Curve, a=1,b=2">
+      <figcaption>Dürer's Shell Curve, a=1,b=2</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DurerShell/DurerShell10-360.avif"
+           alt="Dürer's Shell Curve, a=0.1,b=2">
+      <figcaption>Dürer's Shell Curve, a=0.1,b=2</figcaption>
+    </figure>    
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Dürer's Shell Curve implicit equation:</div>
+      \[ 2y^{2}(x^{2}+y^{2})-2a y^{2}(x+y)+(a^{2}-3b^{2})y^{2}-b^{2}x^{2}+2ab^{2}(x+y)+b^{2}(b^{2}-a^{2})=0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Dürer's Shell Curve parametric equations:</div>
+      \[ x = a \dfrac{\cos\theta}{\cos\theta - \sin\theta} + b \cos\theta,\quad y = b \sin\theta \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The curve known as Dürer's Shell Curve<sup>1,2,3,4</sup> is attributed to Albrecht Dürer (1471–1528), a central figure of the Northern Renaissance who combined artistic mastery with a deep interest in geometry. In his 1525 treatise <em>Underweysung der Messung mit dem Zirkel und Richtscheyt</em> (Instruction in Measurement with Compass and Ruler), Dürer presented numerous geometric constructions intended for artists, craftsmen, and architects. Among these was a shell-like curve produced not from algebraic derivation, but from a mechanical drawing process involving constrained motion. The construction described in later analyses<sup>1,2</sup> involves a line segment whose endpoints \(Q = (q,0)\) and \(R = (0,r)\) slide along the coordinate axes under the constraint \(q+r=a\). Points \(P\) and \(P\)' lying a fixed distance \(b\) from \(Q\) on the line \(QR\) are then traced as the segment moves. As \(Q\) travels from \((a,0)\) to \((0,0)\), \(R\) travels from \((0,0)\) to \((0,a)\). The locus of \(P\) and \(P'\) is Dürer’s shell curve. This places Dürer's curve within the broader class of linkage-generated curves, predating the formal study of kinematic mechanisms. Unlike the classical conchoid of Nicomedes, which is defined radially from a fixed point, Dürer's construction is linear and mechanical, reinforcing that it is not a true conchoid despite historical naming conventions. Multiple algebraic representations of the curve exist today<sup>1,2,3</sup>, reflecting different interpretations of Dürer's construction. These include implicit quartic equations and parametric forms derived from the geometry of the sliding mechanism. The parametric form used here expresses the curve in terms of an angular parameter <em>θ</em>, corresponding to the orientation of the moving segment, and directly models the mechanical linkage that likely inspired Dürer's original figure.</p>
+    <p>In terms of applications, Dürer's Shell Curve does not appear in modern engineering or physical modeling. Its significance lies instead in the history of geometric construction and mechanical drawing systems. It represents an early example of generating curves through constrained motion, a concept that later evolved into formal linkage theory and mechanical curve tracing in the 17th–19th centuries. Dürer's work also helped establish geometry as a practical tool in art and design, influencing architectural drafting and proportional systems for centuries.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/durer/durer.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/durer/durer.shtml</a> (mechanical construction and parametric form).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Durers/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Durers/</a> (historical description and linkage interpretation).</li>
+      <li><a href="https://mathworld.wolfram.com/DuerersConchoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/DuerersConchoid.html</a> (alternate algebraic forms and classification).</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticdu.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticdu.html</a> (history, definition as variation on conchoid, and parameter dependence).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DURERSHELL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                       divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Dürer's Shell Curve"
+        iq "x=a·cos(θ)/(cos(θ)-sin(θ))+b·cos(θ),y=b·sin(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 720
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (x+y segment length)" 1.0)
+        fb (get_real 2 "b (fixed distance from Q)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4))
+        xc '(+ (* fa (/ (cos (eval a2)) (avoid_zero (- (cos (eval a2)) (sin (eval a2)))))) (* fb (cos (eval a2))))
+        yc '(* fb (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:DURERSHELL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

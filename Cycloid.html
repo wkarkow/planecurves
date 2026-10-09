@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cycloid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cycloid</h1>
+      <p class="short-description">The plane curve traced by a point fixed on a circle of radius r that rolls without slipping along a straight line.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Cycloid/Cycloid01-360.avif"
+           alt="Cycloid, a=b=c=d=e=f=1">
+      <figcaption>Cycloid, a=b=c=d=e=f=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid02-360.avif"
+           alt="Curtate Cycloid, a=c=d=f=1,b=e=0.5">
+      <figcaption>Curtate Cycloid, a=c=d=f=1,b=e=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid03-360.avif"
+           alt="Prolate Cycloid, a=c=d=f=1,b=e=1.5">
+      <figcaption>Prolate Cycloid, a=c=d=f=1,b=e=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid04-360.avif"
+           alt="Prolate Cycloid with touching tangents, a=c=d=f=1,b=e≈4.60333884875">
+      <figcaption>Prolate Cycloid with touching tangents, a=c=d=f=1,b=e≈4.60333884875</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid05-360.avif"
+           alt="Prolate Cycloid with touching tangents, a=c=d=f=1,b=e≈7.7897057">
+      <figcaption>Prolate Cycloid with touching tangents, a=c=d=f=1,b=e≈7.7897057</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid06-360.avif"
+           alt="Brachistochrone through (0.3,-0.4), r=0.2900">
+      <figcaption>Brachistochrone through (0.3,-0.4), r=0.2900</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid07-360.avif"
+           alt="Brachistochrone through (1.3,-1.0), r=0.5116">
+      <figcaption>Brachistochrone through (1.3,-1.0), r=0.5116</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid08-360.avif"
+           alt="Brachistochrone through (1.6,-0.2), r=0.2694">
+      <figcaption>Brachistochrone through (1.6,-0.2), r=0.2694</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid09-360.avif"
+           alt="Generalized cycloid, a=1.5,b=1.25,c=0.75,d=2.5,e=1.75,f=0.25">
+      <figcaption>Generalized cycloid, a=1.5,b=1.25,c=0.75,d=2.5,e=1.75,f=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid10-360.avif"
+           alt="Generalized cycloid, a=0.5,b=0.75,c=0.25,d=2.5,e=0.25,f=0.5">
+      <figcaption>Generalized cycloid, a=0.5,b=0.75,c=0.25,d=2.5,e=0.25,f=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Cycloid/Cycloid11-360.avif"
+           alt="Generalized cycloid, a=0.25,b=1.25,c=0.5,d=0.5,e=1.75,f=0.75">
+      <figcaption>Generalized cycloid, a=0.25,b=1.25,c=0.5,d=0.5,e=1.75,f=0.75</figcaption>
+    </figure>
+    <figure>
+      <a href="https://www.semanticscholar.org/paper/Unsteady-Hydrodynamic-Modeling-of-a-Cycloidal-Atanu-Halder-Walther/dca13247db660fcde1a98b9f8830fe8962ec6e57" target="_blank" rel="noopener">
+        <img src="Images/Cycloid/Cycloid12-360.avif" alt="Voith-Schneider cycloidal propellers installed under a ship hull">
+      </a>
+      <figcaption>
+        Voith-Schneider cycloidal propellers installed under a ship hull. <small>Source: SemanticScholar</small>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cycloid parametric equations:</div>
+      \[ x = r(t - k \sin t),\quad y = r(1 - k \cos t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized parametric equations:</div>
+      \[ x = a(t - b \sin(c t)),\quad y = d(1 - e \cos(f t)) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The cycloid<sup>1,2</sup> is the curve traced by a point on the circumference of a circle of radius r rolling along a straight line without slipping. Galileo Galilei named the curve and studied its properties around 1599. Earlier references include work by Charles de Bouvelles in 1501. In the 17th century it was investigated by Mersenne, Roberval, Descartes, Torricelli, and Pascal, who determined the area under one arch. Christiaan Huygens showed in 1673 that the cycloid is the tautochrone curve: the time taken for a bead to slide without friction under gravity to the lowest point is independent of its starting position. He applied this property to improve pendulum clocks by using cycloidal cheeks to guide the pendulum bob, achieving isochronous oscillation. This finding even made its way into Melville’s story, Moby Dick. The brachistochrone problem, posed by Johann Bernoulli in 1696, seeks the curve of fastest descent between two points under gravity. The solution is an inverted cycloid.<sup>3</sup> In the parametric equations for a cycloid, r = the radius of the generating circle and k represents the fractional distance from the circle’s center to its circumference or beyond where the curve is generated, such that the curve is a cycloid if k = 1, curtate if k &lt; 1 and prolate if k &gt; 1.</p>
+    <p>Cycloidal and trochoidal curves have numerous verified applications in engineering and physics. Cycloidal gear profiles were widely used in horology because they reduce sliding friction compared to involute gears, improving efficiency in clocks and watches.<sup>4</sup> Modern cycloidal drives apply similar geometry in robotics and heavy machinery to achieve high torque transmission with minimal backlash.<sup>5</sup> In physics, the cycloid governs both the tautochrone and brachistochrone problems, influencing the design of pendulum clocks and optimal descent paths. Trochoidal motion also appears in mechanical linkages, rotating machinery, and trochoidal milling, where looping toolpaths reduce cutting forces and heat buildup.<sup>6</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Cycloid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cycloid.html</a> (history, properties, gear applications)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cycloid/cycloid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cycloid/cycloid.shtml</a> (history and curve properties)</li>
+      <li><a href="https://mathworld.wolfram.com/BrachistochroneProblem.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/BrachistochroneProblem.html</a> (brachistochrone problem details)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Cycloid_gear" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Cycloid_gear</a> (horology friction reduction vs involute)</li>
+      <li><a href="https://howtomechatronics.com/how-it-works/harmonic-vs-cycloidal-drive-designing-3d-printing-testing/" target="_blank" rel="noopener noreferrer">https://howtomechatronics.com/how-it-works/harmonic-vs-cycloidal-drive-designing-3d-printing-testing/</a> (robotics torque and backlash)</li>
+      <li><a href="https://www.harveyperformance.com/in-the-loupe/introduction-trochoidal-milling/" target="_blank" rel="noopener noreferrer">https://www.harveyperformance.com/in-the-loupe/introduction-trochoidal-milling/</a> (trochoidal milling force/heat reduction)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CYCLOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                  divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg p1)
+  (setq id "Cycloid"
+        iq ""
+        dcl "CYCLOID"
+        opt '("Cycloid" "Brachistochrone Pt" "General")
+        kw 0
+        mode 'param
+        dpr "# of divisions"
+        dct 360
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\nCycloid: x=r(t-k·sin(t)), y=r(1-k·cos(t))")
+     (setq fa (get_real 2 "r (radius of generating circle)" 1.0)
+           fb (get_real 2 "k (offset ratio, 1 for standard cycloid)" 1.0)
+           fc (get_keyword 0 "Yes No" "Cycle length: Divide r by 2 pi?" "Yes")
+           fa (if (eq fc "Yes") (/ fa (* 2 pi)) fa)
+           fc 1
+           fd fa
+           fe fb
+           ff 1
+           eq_display (strcat "\nr=" (rtos fa 2 4) ",k=" (rtos fb 2 4))
+           xc '(* fa (- (eval a2) (* fb (sin (* fc (eval a2))))))
+           yc '(* fd (- 1 (* fe (cos (* ff (eval a2))))))
+           span (* 2 pi)))
+    ((eq kw 1)
+     (princ "\nBrachistochrone: x=r(t-sin(t)), y=-r(1-cos(t))")
+     (defun solve-brachistochrone (px py / u su cu f df tol iter max_iter)
+       (setq u 2.0 tol 1e-8 max_iter 50 iter 0 f 1.0)
+       (while (and (< iter max_iter) (> (abs f) tol))
+         (setq su (sin u) cu (cos u)
+               f (- (/ (- u su) (- 1 cu)) (/ px (- py)))
+               df (- 1 (/ (- (* u su) (* su su)) (* (- 1 cu) (- 1 cu))))
+               u (- u (/ f df))
+               iter (1+ iter))
+         (if (< u 0) (setq u (abs u)))
+         (if (> u (* 2 pi)) (setq u (- u (* (fix (/ u (* 2 pi))) (* 2 pi))))))
+       (if (< (abs f) tol) (list (/ (- py) (- 1 (cos u))) u) nil))
+     (setq p1 (get_point 0 "Brachistochrone point" '(1.0 -1.0) basept)
+           fg (solve-brachistochrone (car p1) (cadr p1))
+           fa (car fg)
+           span (cadr fg)
+           fb 1 fc 1 fd fa fe 1 ff 1
+           eq_display (strcat "\nr=" (rtos fa 2 4))
+           xc '(* fa (- (eval a2) (* fb (sin (* fc (eval a2))))))
+           yc '(* fd -1.0 (- 1 (* fe (cos (* ff (eval a2))))))))
+    ((eq kw 2)
+     (princ "\nGeneral: x=a(t-b·sin(c·t)), y=d(1-e·cos(f·t))")
+     (setq fa (get_real 2 "a (x radial value)" 1.0)
+           fb (get_real 2 "b (x offset value)" 1.0)
+           fc (get_real 2 "c (x angle multiplier)" 1.0)
+           fd (get_real 2 "d (y radial value)" fa)
+           fe (get_real 2 "e (y offset value)" fb)
+           ff (get_real 2 "f (y angle multiplier)" fc)
+           eq_display (strcat "\na=" (rtos fa 2 4) ",b=" (rtos fb 2 4) ",c=" (rtos fc 2 4) ",d=" (rtos fd 2 4) ",e=" (rtos fe 2 4) ",f=" (rtos ff 2 4))
+           xc '(* fa (- (eval a2) (* fb (sin (* fc (eval a2))))))
+           yc '(* fd (- 1 (* fe (cos (* ff (eval a2))))))
+           span (* 2 pi))))
+  (setq paramstep (/ span divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CYCLOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

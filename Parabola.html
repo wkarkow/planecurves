@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Parabola</h1>
+      <p class="short-description">Classical conic section of eccentricity 1.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Parabola/Parabola01-360.avif"
+           data-caption="Parabola, a=4.0(black),2.0(red),1.0(blue),0.5(green),0.25(orange)"
+           alt="Parabola, a=4.0(black),2.0(red),1.0(blue),0.5(green),0.25(orange)">
+      <figcaption>
+        Parabola, a=
+        <span class="figcap-value" style="color:#000000">4.0</span>,
+        <span class="figcap-value" style="color:#FF0000">2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">1.0</span>,
+        <span class="figcap-value" style="color:#009600">0.5</span>,
+        <span class="figcap-value" style="color:#FF9600">0.25</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parabola/Parabola02-360.avif"
+           alt="Parabola, focus at (0.7,3.1), curve pt at (2.8,2.1), a=0.150333, vertex at (0.7000,1.4370)">
+      <figcaption>Parabola, focus at (0.7,3.1), curve pt at (2.8,2.1), a=0.150333, vertex at (0.7000,1.4370)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parabola/Parabola03-360.avif"
+           alt="Parabola, vertex at (-0.6,-0.7), curve pt at (2.8,2.1), a=0.242215">
+      <figcaption>Parabola, vertex at (-0.6,-0.7), curve pt at (2.8,2.1), a=0.242215</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parabola/Parabola04-360.avif"
+           alt="Parabola, focus at (0.7,3.1),vertex at (-0.6,-0.7),a=0.062248">
+      <figcaption>Parabola, focus at (0.7,3.1),vertex at (-0.6,-0.7),a=0.062248</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parabola/Parabola05-360.avif"
+           alt="Parabola, curve pts at (-2.2,3.1), (-0.3,0.8),(2.8,2.1),a=0.325976, vertex at (0.6068,0.5320)">
+      <figcaption>Parabola, curve pts at (-2.2,3.1), (-0.3,0.8),(2.8,2.1),a=0.325976, vertex at (0.6068,0.5320)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parabola/Parabola06-360.avif"
+           alt="Parabola, curve pts at (-2.2,3.1), (-1.5,1.3),(-0.3,0.8),(2.8,2.1),a=0.325976, vertex at (-1.1129,0.9948), axis=61.1600°">
+      <figcaption>Parabola, curve pts at (-2.2,3.1), (-1.5,1.3),(-0.3,0.8),(2.8,2.1),a=0.325976, vertex at (-1.1129,0.9948), axis=61.1600°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/Parabola/Parabola07-360.avif"
+           alt="Parabola, curve pts at (-2.2,3.1), (-0.6,3.6),(1.2,3.9),(2.8,2.1),a=-0.533500, vertex at (2.6388,3.4379), axis=218.3773°">
+      <figcaption>Parabola, curve pts at (-2.2,3.1), (-0.6,3.6),(1.2,3.9),(2.8,2.1),a=-0.533500, vertex at (2.6388,3.4379), axis=218.3773°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Parabola Cartesian equation:</div>
+      \[ y = a \cdot x^{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The parabola<sup>1,2,3</sup>, one of the three classical conic sections with eccentricity exactly equal to 1, was first investigated by the Greek mathematician Menaechmus (c. 380–320 BCE) in the 4th century BC. Menaechmus employed the curve in geometric constructions while attempting to solve the ancient problem of duplicating the cube (finding two mean proportionals between given lengths). Euclid later discussed the parabola in his lost treatise on conic sections. Apollonius of Perga (c. 262–190 BCE) systematized the study of conics in his eight-book work <em>Conics</em> and assigned the name “parabola” (from the Greek <em>parabolê</em>, meaning “application” or “comparison” beside a line) based on the curve’s defining properties relative to the cone. Archimedes (c. 287–212 BCE) computed the area of a parabolic segment using the method of exhaustion in <em>The Quadrature of the Parabola</em>, proving it equals four-thirds the area of the inscribed triangle with the same base and height. Pappus of Alexandria (c. 290–350 CE) further described the focus–directrix property. In the 17th century, analytic geometry allowed algebraic treatment of the curve. René Descartes and Pierre de Fermat advanced its study through coordinate methods, while Galileo Galilei experimentally showed that the trajectory of a projectile under uniform gravity (neglecting air resistance) traces a parabola. James Gregory and Isaac Newton examined the reflective (catacaustic) property: rays parallel to the axis reflect through the focus, and rays emanating from the focus reflect parallel to the axis.</p>
+    <p>Real-life applications of the parabola abound in engineering and the natural sciences. In optics and telecommunications, the reflective property concentrates parallel incoming rays (light, radio waves, or microwaves) to a single focal point or collimates rays from the focus into a parallel beam. This underpins parabolic reflectors in satellite dishes, radio telescopes, automobile headlights, parabolic microphones, and solar ovens. Parabolic trough collectors harness solar energy in concentrated solar power plants. In civil engineering and architecture, parabolic arches distribute compressive forces efficiently, enabling strong, material-efficient designs for bridges (such as the Garabit viaduct) and large structures; the upper cable of a suspension bridge under uniform load closely approximates a parabola. In physics, projectile motion follows a parabolic path under constant gravity, with direct use in ballistics, sports science, and space trajectory calculations. A rotating liquid in a cylindrical vessel forms a parabolic surface whose parameter depends on gravitational acceleration and angular velocity, a principle applied in liquid-mirror telescopes.</p>
+    <p>Unlike the other construction modes, fitting a parabola through four arbitrary points with unknown vertex and orientation has no closed-form solution. In this case, the curve is obtained by Gauss–Newton iteration, which minimizes the squared distance of the points from the ideal parabola in a rotated coordinate frame. The result is therefore a numerical approximation, but for well-spaced points it converges rapidly and is visually indistinguishable from an exact fit. The code for that takes up the majority of the code below.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Parabola.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Parabola.html</a> (history and equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/parabole/parabole.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/parabole/parabole.shtml</a> (history, definitions, and applications)</li>
+      <li><a href="https://www.2dcurves.com/conicsection/conicsectionp.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/conicsection/conicsectionp.html</a> (history and properties)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PARABOLA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan restartflag
+                     id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr p1 p2 p3 p4)
+  (defun set_nth (n val lst / i out)
+    (setq i 0 out nil)
+    (foreach e lst
+      (setq out (cons (if (= i n) val e) out)
+            i (1+ i)))
+    (reverse out))
+  (defun swap_nth (i j lst / vi vj)
+    (setq vi (nth i lst)
+          vj (nth j lst)
+          lst (set_nth i vj lst)
+          lst (set_nth j vi lst)) lst)
+  (defun solve4x4 (m b / i j k p piv mi mj bi bj f row x sum)
+    (setq m (mapcar '(lambda (r) (append r nil)) m)
+          b (append b nil)
+          i 0)
+    (while (< i 4)
+      (setq p i piv (abs (nth i (nth i m))) j (1+ i))
+      (while (< j 4)
+        (if (> (abs (nth i (nth j m))) piv) (setq piv (abs (nth i (nth j m))) p j))
+        (setq j (1+ j)))
+      (if (/= p i) (setq m (swap_nth i p m) b (swap_nth i p b)))
+      (setq piv (avoid_zero (nth i (nth i m))))
+      (setq j (1+ i))
+      (while (< j 4)
+        (setq f (/ (nth i (nth j m)) piv)
+              row (nth j m)
+              k i)
+        (while (< k 4)
+          (setq row (set_nth k (- (nth k row) (* f (nth k (nth i m)))) row)
+                k (1+ k)))
+        (setq m (set_nth j row m)
+              b (set_nth j (- (nth j b) (* f (nth i b))) b)
+              j (1+ j)))
+      (setq i (1+ i)))
+    (setq x '(0.0 0.0 0.0 0.0)
+          i 3)
+    (while (>= i 0)
+      (setq sum (nth i b)
+            j (1+ i))
+      (while (< j 4)
+        (setq sum (- sum (* (nth j (nth i m)) (nth j x)))
+              j (1+ j)))
+      (setq x (set_nth i (/ sum (avoid_zero (nth i (nth i m)))) x)
+            i (1- i))) x)
+  (defun parab4_solve (p1 p2 p3 p4 / pts pa pb pc pd pe pf pg ph pi pj pk vx vy th a c s dx dy x y r j11 j12 j13 j14 jtjr1 jtjr2 jtjr3 jtjr4
+                       jtj11 jtj12 jtj13 jtj14 jtj22 jtj23 jtj24 jtj33 jtj34 jtj44 mat rhs sol it)
+    (setq pts (list p1 p2 p3 p4))
+    (setq vx (/ (+ (car p1) (car p2) (car p3) (car p4)) 4.0)
+          vy (/ (+ (cadr p1) (cadr p2) (cadr p3) (cadr p4)) 4.0)
+          pa p1 pb p2 pc p3 pd p4
+          pe 0.0 th 0.0)
+    (defun d2 (u v) (+ (expt (- (car u) (car v)) 2) (expt (- (cadr u) (cadr v)) 2)))
+    (if (> (d2 pa pb) pe) (setq pe (d2 pa pb) th (angle pa pb)))
+    (if (> (d2 pa pc) pe) (setq pe (d2 pa pc) th (angle pa pc)))
+    (if (> (d2 pa pd) pe) (setq pe (d2 pa pd) th (angle pa pd)))
+    (if (> (d2 pb pc) pe) (setq pe (d2 pb pc) th (angle pb pc)))
+    (if (> (d2 pb pd) pe) (setq pe (d2 pb pd) th (angle pb pd)))
+    (if (> (d2 pc pd) pe) (setq pe (d2 pc pd) th (angle pc pd)))
+    (setq c (cos th) s (sin th) a 0.0 pf 0.0)
+    (foreach pi pts
+      (setq dx (- (car pi) vx) dy (- (cadr pi) vy)
+            x (+ (* c dx) (* s dy))
+            y (+ (* (- s) dx) (* c dy)))
+      (if (> (abs x) 1e-6) (setq a (+ a (/ y (* x x))) pf (1+ pf))))
+    (if (> pf 0.0) (setq a (/ a pf)) (setq a 1.0))
+    (if (<= (abs a) 1e-9) (setq a 1.0))
+    (setq it 0)
+    (while (< it 25)
+      (setq c (cos th) s (sin th)
+            jtj11 0.0 jtj12 0.0 jtj13 0.0 jtj14 0.0
+            jtj22 0.0 jtj23 0.0 jtj24 0.0
+            jtj33 0.0 jtj34 0.0
+            jtj44 0.0
+            jtjr1 0.0 jtjr2 0.0 jtjr3 0.0 jtjr4 0.0)
+      (foreach pi pts
+        (setq dx (- (car pi) vx) dy (- (cadr pi) vy)
+              x (+ (* c dx) (* s dy))
+              y (+ (* (- s) dx) (* c dy))
+              r (- y (* a x x))
+              j11 (+ s (* 2.0 a x c))
+              j12 (+ (- c) (* 2.0 a x s))
+              j13 (- (* x (+ 1.0 (* 2.0 a y))))
+              j14 (- (* x x))
+              jtj11 (+ jtj11 (* j11 j11))
+              jtj12 (+ jtj12 (* j11 j12))
+              jtj13 (+ jtj13 (* j11 j13))
+              jtj14 (+ jtj14 (* j11 j14))
+              jtj22 (+ jtj22 (* j12 j12))
+              jtj23 (+ jtj23 (* j12 j13))
+              jtj24 (+ jtj24 (* j12 j14))
+              jtj33 (+ jtj33 (* j13 j13))
+              jtj34 (+ jtj34 (* j13 j14))
+              jtj44 (+ jtj44 (* j14 j14))
+              jtjr1 (+ jtjr1 (* j11 r))
+              jtjr2 (+ jtjr2 (* j12 r))
+              jtjr3 (+ jtjr3 (* j13 r))
+              jtjr4 (+ jtjr4 (* j14 r))))
+      (setq mat (list (list jtj11 jtj12 jtj13 jtj14)
+                      (list jtj12 jtj22 jtj23 jtj24)
+                      (list jtj13 jtj23 jtj33 jtj34)
+                      (list jtj14 jtj24 jtj34 jtj44))
+            rhs (list (- jtjr1) (- jtjr2) (- jtjr3) (- jtjr4))
+            sol (solve4x4 mat rhs)
+            vx (+ vx (nth 0 sol))
+            vy (+ vy (nth 1 sol))
+            th (+ th (nth 2 sol))
+            a  (+ a  (nth 3 sol)))
+      (if (< (+ (abs (nth 0 sol)) (abs (nth 1 sol)) (abs (nth 2 sol)) (abs (nth 3 sol))) 1e-9) (setq it 25) (setq it (1+ it))))
+    (setq c (cos th) s (sin th) pg 0.0)
+    (foreach pi pts
+      (setq dx (- (car pi) vx) dy (- (cadr pi) vy)
+            x (+ (* c dx) (* s dy))
+            y (+ (* (- s) dx) (* c dy))
+            r (- y (* a x x))
+            pg (+ pg (* r r))))
+    (setq pg (sqrt (/ pg 4.0)))
+    (list a (list vx vy) th pg))
+  (setq id "Parabola"
+        iq "y=a·x²"
+        dcl "PARABOLA"
+        opt '("a known" "Curve pt, Focus" "Curve pt, Vertex" "Focus, Vertex" "3 Points" "4 Points")
+        kw 0
+        mode 'cart
+        dpr "# of divisions to division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+     (setq fa (get_real 2 "\nParabola: y = a·x², a value: " 1.0)
+           eq_display (strcat "\ny=" (rtos fa 2 4) "x²")))
+   ((eq kw 1)
+    (setq p1 (get_point 0 "Curve point" divpt basept)
+          p2 (get_point 0 "Focus" divpt basept)
+          fb (get_xspan p2 xaxisangle p1)
+          fc (get_yspan p2 xaxisangle p1)
+          fd (sqrt (+ (* fc fc) (* fb fb)))
+          fe (/ (+ (- fc) fd) 2.0)
+          fe (avoid_zero fe)
+          fa (/ 1.0 (* 4.0 fe))
+          basept (polar p2 (+ xaxisangle (/ pi 2.0)) (- fe))
+          cosangle (cos xaxisangle)
+          sinangle (sin xaxisangle)
+          x0 (car basept)
+          y0 (cadr basept)
+          divpt (polar basept xaxisangle 1.0)
+          eq_display (strcat "\ny=" (rtos fa 2 6) "x²\nVertex at (" (rtos (car basept) 2 4) "," (rtos (cadr basept) 2 4) ")\nFocus at ("
+                      (rtos (car p2) 2 4) "," (rtos (cadr p2) 2 4) ")\nPoint at ("  (rtos (car p1) 2 4) "," (rtos (cadr p1) 2 4) ")")))
+   ((eq kw 2)
+    (setq p1 (get_point 0 "Curve point" divpt basept)
+          p2 (get_point 0 "Vertex" divpt basept)
+          fb (get_xspan p2 xaxisangle p1)
+          fc (get_yspan p2 xaxisangle p1)
+          fa (/ fc (* (avoid_zero fb) (avoid_zero fb)))
+          basept p2
+          cosangle (cos xaxisangle)
+          sinangle (sin xaxisangle)
+          x0 (car basept)
+          y0 (cadr basept)
+          divpt (polar basept xaxisangle 1.0)
+          eq_display (strcat "\ny=" (rtos fa 2 6) "x²\nVertex at (" (rtos (car p2) 2 4) "," (rtos (cadr p2) 2 4) ")\nPoint at ("
+                      (rtos (car p1) 2 4) "," (rtos (cadr p1) 2 4) ")")))
+   ((eq kw 3)
+    (setq p1 (get_point 0 "Center (vertex)" divpt basept)
+          p2 (get_point 0 "Focus" divpt basept)
+          fa (/ 1.0 (* 4.0 (avoid_zero (distance p1 p2))))
+          basept p1
+          xaxisangle (- (angle p1 p2) (/ pi 2.0))
+          cosangle (cos xaxisangle)
+          sinangle (sin xaxisangle)
+          x0 (car basept)
+          y0 (cadr basept)
+          divpt (polar basept xaxisangle 1.0)
+          eq_display (strcat "\ny=" (rtos fa 2 6) "x²\nVertex at (" (rtos (car p1) 2 4) "," (rtos (cadr p1) 2 4) ")\nFocus at (" (rtos (car p2) 2 4)
+                      "," (rtos (cadr p2) 2 4) ")")))
+   ((eq kw 4)
+    (setq p1 (get_point 0 "Point 1" divpt basept)
+          p2 (get_point 0 "Point 2" divpt basept)
+          p3 (get_point 0 "Point 3" divpt basept)
+          fd (get_xspan basept xaxisangle p1)  fe (get_yspan basept xaxisangle p1)
+          ff (get_xspan basept xaxisangle p2)  fg (get_yspan basept xaxisangle p2)
+          fh (get_xspan basept xaxisangle p3)  fi (get_yspan basept xaxisangle p3)
+          fj (* fd fd)  fk (* ff ff)  fl (* fh fh)
+          fm (- (+ (* fj (- ff fh)) (* fk (- fh fd)) (* fl (- fd ff))))
+          fn (- (+ (* fe (- ff fh)) (* fg (- fh fd)) (* fi (- fd ff))))
+          fo (- (+ (* fj (- fg fi)) (* fk (- fi fe)) (* fl (- fe fg))))
+          fp (- (+ (* fj (- (* ff fi) (* fg fh))) (* fk (- (* fh fe) (* fi fd))) (* fl (- (* fd fg) (* fe ff)))))
+          fm (avoid_zero fm)
+          fa (/ fn fm)
+          fb (/ fo fm)
+          fc (/ fp fm)
+          fq (/ (- fb) (* 2.0 (avoid_zero fa)))
+          fr (- fc (/ (* fb fb) (* 4.0 (avoid_zero fa))))
+          basept (polar (polar basept xaxisangle fq) (+ xaxisangle (/ pi 2.0)) fr)
+          x0 (car basept)
+          y0 (cadr basept)
+          cosangle (cos xaxisangle)
+          sinangle (sin xaxisangle)
+          divpt (polar basept xaxisangle 1.0)
+          fb 0.0
+          fc 0.0
+          eq_display (strcat "\ny=" (rtos fa 2 6) "x²\nVertex at (" (rtos (car basept) 2 4) "," (rtos (cadr basept) 2 4) ")\nP1 (" (rtos (car p1) 2 4)
+                      "," (rtos (cadr p1) 2 4) ")\nP2 (" (rtos (car p2) 2 4) "," (rtos (cadr p2) 2 4) ")\nP3 (" (rtos (car p3) 2 4) "," (rtos (cadr p3) 2 4) ")")))
+   ((eq kw 5)
+    (setq p1 (get_point 0 "Point 1" divpt basept)
+          p2 (get_point 0 "Point 2" divpt basept)
+          p3 (get_point 0 "Point 3" divpt basept)
+          p4 (get_point 0 "Point 4" divpt basept)
+          fd (parab4_solve p1 p2 p3 p4)
+          fa (car fd)
+          basept (cadr fd)
+          xaxisangle (caddr fd)
+          fb (cadddr fd)
+          fc (list (/ (+ (car p1) (car p2) (car p3) (car p4)) 4.0) (/ (+ (cadr p1) (cadr p2) (cadr p3) (cadr p4)) 4.0))
+          fe (max (distance fc p1) (distance fc p2) (distance fc p3) (distance fc p4))
+          fe (avoid_zero fe))
+    (if (or (> fb (* 1e-3 fe)) (> (distance fc basept) (* 1e4 fe)) (< (abs fa) 1e-12))
+        (progn
+         (prompt (strcat "\n4-point parabola cannot fit those points. Try different points.\n% error = " (rtos (* 100.0 (/ fb fe)) 2 4) "% of point spread)"))
+         (exit)))
+    (setq fb 0.0
+          fc 0.0
+          fe (if (> fa 0.0) (+ xaxisangle (/ pi 2.0)) (+ (+ xaxisangle (/ pi 2.0)) pi))
+          cosangle (cos xaxisangle)
+          sinangle (sin xaxisangle)
+          x0 (car basept)
+          y0 (cadr basept)
+          divpt (polar basept xaxisangle 1.0)
+          fb 0.0
+          fc 0.0
+          eq_display (strcat "\ny=" (rtos fa 2 6) "x²\nVertex at (" (rtos (car basept) 2 4) "," (rtos (cadr basept) 2 4) ")\nParabola axis = " (angtos fe 0 4)
+                      " deg\nP1 (" (rtos (car p1) 2 4) "," (rtos (cadr p1) 2 4) ")\nP2 (" (rtos (car p2) 2 4) "," (rtos (cadr p2) 2 4) ")\nP3 ("
+                      (rtos (car p3) 2 4) "," (rtos (cadr p3) 2 4) ")\nP4 (" (rtos (car p4) 2 4) "," (rtos (cadr p4) 2 4) ")"))))
+  (setq paramstep (/ xspan divcount)
+        xc '(eval a2)
+        yc '(* fa (eval a2) (eval a2))
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PARABOLA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

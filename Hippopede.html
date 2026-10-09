@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hippopede - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Hippopede</h1>
+      <p class="short-description">Bicircular rational quartic also known as the horse fetter, Booth’s oval (ε &gt; 0) or Booth’s lemniscate (ε &lt; 0).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Hippopede/Hippopede01-360.avif"
+           alt="Hippopede, a=0.5,ε=1,multiple values of b">
+      <figcaption>
+        Hippopede, a=0.5,ε=1,b=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>,
+        <span class="figcap-value" style="color:#009696">1.0</span>,
+        <span class="figcap-value" style="color:#960096">1.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/Hippopede/Hippopede02-360.avif"
+           data-caption="Hippopede, a=0.5,ε=-1,b=0(black),0.1(red),0.2(blue),0.3(green),0.4(orange),0.5(purple),0.6(cyan),0.8(brown),1.0(lime),2.0(magenta),4.0(teal),10.0(plum)"
+           alt="Hippopede, a=0.5,ε=-1,multiple values of b">
+      <figcaption>
+        Hippopede, a=0.5,ε=-1,b=
+        <span class="figcap-value" style="color:#000000">0.0</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.8</span>,
+        <span class="figcap-value" style="color:#00FF00">1.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">2.0</span>,
+        <span class="figcap-value" style="color:#009696">4.0</span>,
+        <span class="figcap-value" style="color:#960096">10.0</span>
+        
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">Hippopede polar equation:</div>
+      \[ r^{2} = a^{2} \cos^{2}(\theta) + \varepsilon \cdot b^{2} \sin^{2}(\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hippopede Cartesian equation:</div>
+      \[ (x^{2} + y^{2})^{2} = a^{2} x^{2} + \varepsilon \cdot b^{2} y^{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The hippopede<sup>1,2,3</sup>, known as the horse fetter from the Ancient Greek ἱπποπέδη due to its resemblance to a shackle placed on a horse’s foot, is a bicircular rational quartic algebraic curve symmetric about both axes. Proclus (c. 410–485 AD) investigated related spiric sections of the torus, giving the plane curve his name. Eudoxus of Cnidus (c. 408–355 BC) employed the spherical version (sphere-cylinder intersection) in his model of planetary retrograde motion using nested rotating spheres. Algebraic study of the plane form advanced with Fagnano (1750), Euler (1751), and especially British mathematician James Booth (1810–1878).</p>
+    <p>The curve is a special spiric section of a torus cut by a plane parallel to the axis and tangent to the interior. When ε &gt; 0 it forms a closed oval (Booth’s oval); when ε &lt; 0 it forms a figure-eight lemniscate (Booth’s lemniscate). Special cases yield the lemniscate of Bernoulli.</p>
+    <p>In astronomy, Eudoxus and Proclus used the hippopede to represent the apparent planetary paths in the homocentric-sphere system—a forerunner to Ptolemaic epicycles. As a Watt’s curve, it traces the midpoint locus in three-bar linkage mechanisms. In physics it models radial spin waves propagating from the core in asymmetric magnetic nanostructures.<sup>4</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/Hippopede.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Hippopede.html</a> (definition and polar equation)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quartich.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quartich.html</a> (history and properties)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/booth/booth.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/booth/booth.shtml</a> (Booth history, spiric section, Watt’s curve linkage applications)</li>
+      <li><a href="https://arxiv.org/abs/2007.02646" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2007.02646</a> (hippopede modeling of radial spin waves from vortex core in asymmetric magnetic nano-patches)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:HIPPOPEDE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 rval fa fb fc)
+  (setq id "Hippopede"
+        iq "r²=a²·cos²(θ)+ε·b²·sin²(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (half-x-span)" 0.5)
+        fb (get_real 0 "b (y-constriction)" 0.5)
+        fc (get_real 2 "ε (-1=lemniscate, +1=oval)" 1.0)
+        eq_display (strcat "a=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", ε=" (rtos fc 2 4))
+        rval '(if (&lt; (abs (+ (* fa fa (expt (cos (eval a2)) 2.0)) (* fc (* fb fb) (expt (sin (eval a2)) 2.0)))) 1e-9) 0.0
+                  (sqrt (max 0.0 (+ (* fa fa (expt (cos (eval a2)) 2.0)) (* fc (* fb fb) (expt (sin (eval a2)) 2.0))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:HIPPOPEDE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

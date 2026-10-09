@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Divergent Parabola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Diverging Parabola of Newton</h1>
+      <p class="short-description">The family of real plane curves defined by y² = a·x³ + b·x² + c·x + d encompassing the semicubical parabola, crunodal and acnodal forms.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/DivergParab/DivergParab01-360.avif"
+           alt="Diverging Parabola, single root, a=1,b=0,c=1,d=0">
+      <figcaption>Diverging Parabola, single root, a=1,b=0,c=1,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab02-360.avif"
+           alt="Diverging Parabola, single root, a=1,b=1,c=1,d=1">
+      <figcaption>Diverging Parabola, single root, a=1,b=1,c=1,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab03-360.avif"
+           alt="Diverging Parabola, single root, a=0.5,b=2,c=1,d=1">
+      <figcaption>Diverging Parabola, single root, a=0.5,b=2,c=1,d=1</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab04-360.avif"
+           alt="Diverging Parabola, crunodal double root, a=1,b=2,c=1,d=0.1481">
+      <figcaption>Diverging Parabola, crunodal double root, a=1,b=2,c=1,d=0.1481</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab05-360.avif"
+           alt="Diverging Parabola, crunodal double root, a=1,b=1,c=0,d=0">
+      <figcaption>Diverging Parabola, crunodal double root, a=1,b=1,c=0,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab06-360.avif"
+           alt="Diverging Parabola, crunodal double root, a=0.5,b=5,c=2,d=0.2042">
+      <figcaption>Diverging Parabola, crunodal double root, a=0.5,b=5,c=2,d=0.2042</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab07-360.avif"
+           alt="Diverging Parabola, acnodal, a=1,b=2,c=1,d=0">
+      <figcaption>Diverging Parabola, acnodal, a=1,b=2,c=1,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab08-360.avif"
+           alt="Diverging Parabola, acnodal, a=0.5,b=2,c=1,d=2.2083">
+      <figcaption>Diverging Parabola, acnodal, a=0.5,b=2,c=1,d=2.2083</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab09-360.avif"
+           alt="Diverging Parabola, acnodal, a=0.5,b=5,c=2,d=60.9449">
+      <figcaption>Diverging Parabola, acnodal, a=0.5,b=5,c=2,d=60.9449</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab10-360.avif"
+           alt="Diverging Parabola, semicubical, a=1,b=0,c=0,d=0">
+      <figcaption>Diverging Parabola, semicubical, a=1,b=0,c=0,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab11-360.avif"
+           alt="Diverging Parabola, semicubical, a=4,b=0,c=0,d=0">
+      <figcaption>Diverging Parabola, semicubical, a=4,b=0,c=0,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab12-360.avif"
+           alt="Diverging Parabola, semicubical, a=0.25,b=0,c=0,d=0">
+      <figcaption>Diverging Parabola, semicubical, a=0.25,b=0,c=0,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab13-360.avif"
+           alt="Diverging Parabola, triple root, a=1,b=5,c=2,d=0">
+      <figcaption>Diverging Parabola, triple root, a=1,b=5,c=2,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab14-360.avif"
+           alt="Diverging Parabola, triple root, a=1,b=6,c=1,d=0">
+      <figcaption>Diverging Parabola, triple root, a=1,b=6,c=1,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab15-360.avif"
+           alt="Diverging Parabola, triple root, a=1,b=0,c=-4,d=0">
+      <figcaption>Diverging Parabola, triple root, a=1,b=0,c=-4,d=0</figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab16-360.avif"
+           alt="Diverging Parabola, semicubical, multiple values of a,b=0,c=0,d=0">
+      <figcaption>
+        Diverging Parabola, semicubical, a=
+        <span class="figcap-value" style="color:#000000">4.0</span>,
+        <span class="figcap-value" style="color:#FF0000">3.5</span>,
+        <span class="figcap-value" style="color:#0000FF">3.0</span>,
+        <span class="figcap-value" style="color:#009600">2.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0</span>,
+        <span class="figcap-value" style="color:#AA5555">0.5</span>,
+        <span class="figcap-value" style="color:#00FF00">0.25</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.125</span>,
+        b=0,c=0,d=0
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/DivergParab/DivergParab17-360.avif"
+           alt="Diverging Parabola, crunodal double root, a=1,multiple values of b,c=0,d=0">
+      <figcaption>
+        Diverging Parabola, crunodal double root, a=1,b=
+        <span class="figcap-value" style="color:#000000">5.0</span>,
+        <span class="figcap-value" style="color:#FF0000">4.0</span>,
+        <span class="figcap-value" style="color:#0000FF">3.0</span>,
+        <span class="figcap-value" style="color:#009600">2.5</span>,
+        <span class="figcap-value" style="color:#FF9600">2.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.0</span>,
+        <span class="figcap-value" style="color:#AA5555">0.5</span>,
+        <span class="figcap-value" style="color:#00FF00">0.25</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.125</span>,
+        c=0,d=0
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Diverging Parabola of Newton Cartesian equation:</div>
+      \[ y^{2} = a \cdot x^{3} + b \cdot x^{2} + c \cdot x + d \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The divergent parabola family consists of all real plane curves defined by a cubic polynomial on the right-hand side. Isaac Newton (1643–1727) first classified all cubic curves systematically in his 1704 appendix to <em>Opticks</em>, “Enumeratio linearum tertii ordinis.”<sup>1</sup> Newton showed that every cubic can be obtained as the central projection (shadow) of one of five basic “divergent parabolas.” The equation y² = a · x³ + b · x² + c · x + d is precisely the general affine form that arises in Newton’s third class of diverging parabolas once the leading term is normalized. The four cases handled in the code—single real root, crunodal double root, acnodal double root, and the semicubical parabola (a = b = c = d = 0)—correspond exactly to the different root structures of the cubic and the resulting node, isolated point, or cusp geometries.<sup>2,3,4,5</sup> The semicubical parabola y² = a · x³ itself was discovered earlier by William Neile in 1659 and studied by Christiaan Huygens and Isaac Newton for its cusp singularity. In the 18th and 19th centuries these curves appeared in classical treatises on algebraic geometry by Euler, Maclaurin, and Cramer.</p>
+    <p>Real-life applications exist in engineering and the natural sciences. In structural mechanics the semicubical parabola describes the exact deflection curve of a cantilever beam under a concentrated end load (Euler-Bernoulli beam theory).<sup>6</sup> Cubic transition curves derived from this family are used in highway and railway design to provide smooth curvature change between straight and circular sections, reducing lateral jerk. In computer-aided geometric design the parametrizations of the nodal and cuspidal cases serve as building blocks for smooth splines and surface patches. The acnodal and crunodal forms appear in the study of singular points in algebraic surfaces and in certain optical caustics.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://archive.org/details/sirisaacnewtons00newtgoog/page/n31/mode/2up" target="_blank" rel="noopener noreferrer">https://archive.org/details/sirisaacnewtons00newtgoog/page/n31/mode/2up</a> (Newton’s classification of the five species of diverging parabolas on p.31/173)</li>
+      <li><a href="https://mathworld.wolfram.com/CubicCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/CubicCurve.html</a> (Newton classification and cubic-curve examples)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cubic/cubic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cubic/cubic.shtml</a> (discriminant classification into crunodal, acnodal, and cuspidal forms)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Newtons/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Newtons/</a> (Newton’s classification of cubic curves)</li>
+      <li><a href="https://www.2dcurves.com/cubic/cubicd.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubicd.html</a> (divergent parabola page and Newton’s five basic cases)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Euler–Bernoulli_beam_theory" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Euler–Bernoulli_beam_theory</a> (deflection of cantilever beam under Euler-Bernoulli theory)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DIVERGPARAB (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag
+                        id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp)
+  (defun cubd (a b c d)
+    (+ (* 18 a b c d)
+      (* -4 b b b d)
+      (* b b c c)
+      (* -4 a c c c)
+      (* -27 a a d d)))
+  (defun crund (a b c / d e f g)
+    (setq d (* -27 a a))
+    (setq e (+ (* 18 a b c) (* -4 b b b)))
+    (setq f (cubd a b c 0))
+    (setq g (- (* e e) (* 4 d f)))
+    (if (>= g 0)
+      (list
+        (/ (+ (- e) (sqrt g)) (* 2 d))
+        (/ (- (- e) (sqrt g)) (* 2 d)))
+      nil))
+  (defun singr (a b c d e f / g h i j k  l )
+    (setq g 0
+          h e
+          i f)
+    (while (and (< g 100) (> (- i h) 1e-10))
+      (setq j (/ (+ h i) 2.0)
+            k (+ (* a (* h h h)) (* b (* h h)) (* c h) d)
+            l (+ (* a (* j j j)) (* b (* j j)) (* c j) d))
+      (if (<= (abs l) 1e-10) (setq h j i j))
+      (if (< (* k l) 0.0) (setq i j) (setq h j))
+      (setq g (1+ g)))
+    j)
+  (defun crundr (a b c d / e f g h i j k)
+    (setq e (sqrt (- (* 4.0 b b) (* 12.0 a c)))
+          f (/ (+ (* -2.0 b) e) (* 6.0 a))
+          g (/ (- (* -2.0 b) e) (* 6.0 a))
+          h (+ (* a (* f f f)) (* b (* f f)) (* c f) d)
+          i (+ (* a (* g g g)) (* b (* g g)) (* c g) d))
+    (if (< (abs h) (abs i)) (setq j f) (setq j g))
+    (setq k (- (/ (- b) a) (* 2.0 j)))
+    k)
+  (setq id "Divergent Parabola"
+        iq "y²=a·x³+b·x²+c·x+d"
+        dcl "DIVERGPARAB"
+        opt '("Single Root" "Crunodal Double Root" "Acnodal Double Root" "Semicubical Parabola" "Triple Root")
+        kw 0
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 100
+        dpt '(1.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+   ((eq kw 0)
+     (setq fa (get_real 2 "a (coeff of x³)" 1.0)
+           fb (get_real 0 "b (coeff of x²)" 0.0)
+           fc (get_real 0 "c (coeff of x)" 1.0))
+     (if (<= (* fb fb) (* 3.0 fa fc))
+         (setq fd (get_real 0 "d (constant term)" 0.0))
+         (progn
+           (setq fe (crund fa fb fc))
+           (if (and fe (= (length fe) 2))
+               (progn
+                 (setq ff (min (car fe) (cadr fe))
+                       fg (max (car fe) (cadr fe)))
+                 (setq fh (get_keyword 0 "Lower Upper" "Choose Upper or Lower region for d" "Upper"))
+                 (if (eq fh "Upper")
+                     (setq fd (get_boundr 0 (strcat "d (must > " (rtos fg 2 4) ")") (+ fg 1.0) fg nil nil nil))
+                     (setq fd (get_boundr 0 (strcat "d (must < " (rtos ff 2 4) ")") (- ff 1.0) nil ff nil nil))))
+               (setq fd (get_real 0 "d (constant term)" 0.0)))))
+     (setq root1 (singr fa fb fc fd -1e8 1e8)))
+    ((eq kw 1)
+     (setq fa (get_real 2 "a (coeff of x³)" 1.0)
+           fc (get_real 0 "c (coeff of x)" 1.0))
+     (setq fe (* 3.0 fa fc))
+     (if (<= fe 0.0)
+         (setq fb (get_real 0 "b (coeff of x²)" -2.0))
+         (setq fb (get_real 0 (strcat "b (coeff of x², b² must > " (rtos fe 2 4) ")") -2.0)))
+     (while (<= (* fb fb) fe)
+       (setq fb (get_real 0 "b² must exceed 3·a·c, try again" fb)))
+     (setq fd (cadr (crund fa fb fc))
+           root1 (crundr fa fb fc fd)
+           ff (/ (- (/ (- fb) fa)) 2.0)
+           xspan (abs (- ff root1)))
+     (princ (strcat "\nCrunodal d = " (rtos fd 2 6)
+                    "\nSimple root (start here) = " (rtos root1 2 6))))
+      ((eq kw 2)
+     (setq fa (get_real 2 "a (coeff of x³)" 1.0)
+           fc (get_real 0 "c (coeff of x)" 1.0))
+     (setq fe (* 3.0 fa fc))
+     (if (<= fe 0.0)
+         (setq fb (get_real 0 "b (coeff of x²)" 1.0))
+         (setq fb (get_real 0 (strcat "b (coeff of x², b² must > " (rtos fe 2 4) ")") 2.0)))
+     (while (<= (* fb fb) fe)
+       (setq fb (get_real 0 "b² must exceed 3·a·c, try again" fb)))
+     (setq fd (car (crund fa fb fc))
+           root1 (crundr fa fb fc fd)
+           ff (/ (- (/ (- fb) fa) root1) 2.0)
+           fg ff
+           xspan (abs (- ff root1)))
+     (princ (strcat "\nAcnodal d = " (rtos fd 2 6) "\nSimple root s (bell start) = " (rtos root1 2 6) "\nAcnode x = " (rtos fg 2 6))))
+   ((eq kw 3)
+    (setq fa (get_real 2 "a (coeff of x³)" 1.0)
+          fb 0
+          fc 0
+          fd 0
+          root1 0.0))
+   ((eq kw 4)
+     (setq fa (get_real 2 "a (coeff of x³)" 1.0)
+           fc (get_real 0 "c (coeff of x)" 1.0))
+     (setq fe (* 3.0 fa fc))
+     (if (<= fe 0.0)
+         (setq fb (get_real 0 "b (coeff of x²)" 0.0))
+         (setq fb (get_real 0 (strcat "b (coeff of x², b² must > " (rtos fe 2 4) ")") 2.0)))
+     (while (<= (* fb fb) fe)
+       (setq fb (get_real 0 "b² must exceed 3·a·c, try again" fb)))
+     (setq ff (crund fa fb fc))
+     (if (and ff (= (length ff) 2))
+         (progn
+           (setq fg (min (car ff) (cadr ff))
+                 fh (max (car ff) (cadr ff)))
+           (princ (strcat "\nCritical d-values for three roots: " (rtos fg 2 4) " < d < " (rtos fh 2 4)))
+           (setq fd (get_boundr 0 (strcat "d (must be strictly between the two critical values)") (/ (+ fg fh) 2.0) fg fh T T)))
+         (setq fd (get_real 0 "d (constant term)" 0.0)))
+     (setq fi (- (* 4.0 fb fb) (* 12.0 fa fc)))
+     (if (> fi 0)
+         (setq fj (/ (+ (* -2.0 fb) (sqrt fi)) (* 6.0 fa))
+               fk (/ (- (* -2.0 fb) (sqrt fi)) (* 6.0 fa)))
+         (setq fj 0 fk 0))
+     (if (> fj fk)
+         (setq fl fj fj fk fk fl))
+     (setq fm (singr fa fb fc fd -100.0 fj)
+           fn (singr fa fb fc fd fj fk)
+           fo (singr fa fb fc fd fk 100.0))
+     (setq fp (get_keyword 0 "Oval Bell" "Draw Oval or Bell?" "Oval"))
+     (princ (strcat "\nRoots r1=" (rtos fm 2 6) " r2=" (rtos fn 2 6) " r3=" (rtos fo 2 6)))
+     (if (eq fp "Oval")
+           (if (> fa 0.0)
+               (setq root1 fm xspan (- fn fm))
+               (setq root1 fn xspan (- fo fn)))
+           (if (> fa 0.0)
+               (setq root1 fo)
+               (setq root1 fm))
+           )))
+  (setq paramstep (/ xspan divcount)
+        paramstep (if (< fa 0.0) (- paramstep) paramstep)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", d=" (rtos fd 2 4))
+        xc '(eval a2)
+        yc '(* (alt_expt (max (+ (* fa (alt_expt (eval a2) 3 nil)) (* fb (alt_expt (eval a2) 2 nil)) (* fc (eval a2)) fd) 0.0) 0.5 T))
+        skm (if (eq kw 1) '(T nil T T) '(T nil T))
+        a1 root1
+        a2 a1
+        x1 root1
+        y1 0.0
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (if (eq kw 2)
+    (progn
+      (setvar "cmdecho" 0)
+      (command "point" (list (+ x0 (* fg cosangle)) (+ y0 (* fg sinangle))))
+      (setvar "cmdecho" cd)
+      (prompt (strcat "\nAcnode (isolated point) at x = " (rtos fg 2 6) "\n"))))
+  (princ))
+(C:DIVERGPARAB)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bicuspid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bicuspid Curve</h1>
+      <p class="short-description">A quartic algebraic plane curve resembling a human bicuspid (premolar) tooth.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/Bicuspid/Bicuspid01-360.avif"
+           alt="Bicuspid Curve, a=1">
+      <figcaption>Bicuspid Curve, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Bicuspid implicit equation (standard):</div>
+      \[ (x^{2} - a^{2})(x - a)^{2} + (y^{2} - a^{2})^{2} = 0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bicuspid implicit equation (rotated upright for code):</div>
+      \[ (y^{2} - a^{2})(y + a)^{2} + (x^{2} - a^{2})^{2} = 0 \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Bicuspid Curve<sup>1</sup> is a quartic algebraic plane curve named for its resemblance to a human bicuspid (premolar) tooth. In the rotated 90° counterclockwise orientation used in this code, it produces the characteristic tooth shape with a broad, smooth upper crown and a sharp downward-pointing central cusp. Although the curve has no single famous discoverer, it appears in modern collections of special plane curves<sup>2</sup> and is frequently used in algebraic geometry and curve-tracing exercises to demonstrate implicit quartic equations and the study of cusps and singularities<sup>3</sup>. It has been documented in mathematical handbooks since at least the mid-20th century.</p>
+    <p>Real-world applications in engineering and the natural sciences remain very limited. The primary use of the Bicuspid Curve is educational, as a pedagogical example in mathematics courses and as a test case in studies of real algebraic varieties and singularities. No significant practical applications in design, optics, biology, or industry have been documented beyond its visual similarity to a tooth.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/BicuspidCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/BicuspidCurve.html</a> (definition, naming, and properties)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticbic.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticbic.html</a> (equation and image)</li>
+      <li><a href="https://people.math.carleton.ca/~cingalls/studentProjects/Katie%27s%20Site/html/Bicuspid%20Curve%20.html" target="_blank" rel="noopener noreferrer">https://people.math.carleton.ca/~cingalls/studentProjects/Katie%27s%20Site/html/Bicuspid%20Curve%20.html</a> (algebraic properties and singularities)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BICUSPID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fc fd fb fe)
+  (setq id "Bicuspid Curve"
+        iq "(y²−a²)(y+a)²+(x²−a²)²=0"
+        dcl "BICUSPID"
+        opt '("Upper Outer portion" "Upper Inner portion" "Lower Outer portion" "Lower Inner portion")
+        kw 0
+        mode 'param
+        dpr "# of divisions"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (* 0.839286755214161 fa)
+        fc (if (or (= kw 1) (= kw 3)) -1.0 1.0)
+        fd (if (or (= kw 2) (= kw 3)) -1.0 1.0)
+        span (if (= kw 1) (- fa fb) fa)
+        paramstep (/ span divcount)
+        fe (* 0.55 (abs paramstep))
+        eq_display (strcat "\na = " (rtos fa 2 4))
+        xc '(cond ((and (or (= kw 0) (= kw 2)) (< (abs (eval yc)) fe)) (* (sqrt 2.0) fa)) ((and (= kw 1) (< (abs (- (eval yc) fb)) fe)) 0.0)
+            ((and (= kw 3) (< (abs (eval yc)) fe)) 0.0) ((< (abs (- (abs (eval yc)) fa)) fe) fa) (T (alt_expt (+ (* fa fa) (* fc (* (+ (eval yc) fa)
+            (alt_expt (- (* fa fa) (* (eval yc) (eval yc))) 0.5 T)))) 0.5 T)))
+        yc '(* fd (eval a2))
+        skm '(nil T T)
+        a1 (if (= kw 1) fb 0.0)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BICUSPID)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>
