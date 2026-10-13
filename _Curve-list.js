@@ -2062,9 +2062,9 @@ const curveList = [
     eqFind: ["x=", "x =", "y=", "y =","sin^", "cos^", "theta^"],
     imgSortKey: "121",
     images: {
-      canonical: "Images/Gentrig/Gentrig01-360.avif",
-      variant1: "Images/Gentrig/Gentrig02-360.avif",
-      variant2: "Images/Gentrig/Gentrig04-360.avif"      
+      canonical: "Images/GenTrig/GenTrig01-360.avif",
+      variant1: "Images/GenTrig/GenTrig02-360.avif",
+      variant2: "Images/GenTrig/GenTrig04-360.avif"      
     }
   },
   {
