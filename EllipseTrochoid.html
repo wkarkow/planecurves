@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ellipse Trochoid - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ellipse Trochoid</h1>
+      <p class="short-description">No-slip roulette of a circle on an elliptical base, and free-ratio central-curve variant with independent spin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid01-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=3,d=1.5,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=3,d=1.5,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid02-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=3,d=1.5,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=3,d=1.5,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid03-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=4,d=1.5,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=4,d=1.5,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid04-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=4,d=1.5,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=4,d=1.5,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid05-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=3,d=1,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=3,d=1,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid06-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=3,d=1,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=3,d=1,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid07-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=-1,q=3,d=1,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=-1,q=3,d=1,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid08-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=-1,q=3,d=1,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=-1,q=3,d=1,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid09-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=4,d=1,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=4,d=1,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid10-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=4,d=1,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=4,d=1,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid11-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=-1,q=4,d=1,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=-1,q=4,d=1,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid12-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=-1,q=4,d=1,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=-1,q=4,d=1,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid13-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=4,d=2.5,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=4,d=2.5,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid14-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=4,d=-1,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=4,d=-1,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid15-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=4,d=-1,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=4,d=-1,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid16-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=24,d=3,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=25,d=3,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid17-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=1,q=24,d=3,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=1,q=24,d=3,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid18-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=-1,q=24,d=3,Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=-1,q=24,d=3,Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid19-360.avif"
+           alt="Ellipse trochoid, no-slip, A=4,B=2,p=-1,q=24,d=3,Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, A=4,B=2,p=-1,q=24,d=3,Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid20-360.avif"
+           alt="Ellipse trochoid, free-ratio, A=4,B=2,p=1,q=24,d=0.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, A=4,B=2,p=1,q=24,d=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid21-360.avif"
+           alt="Ellipse trochoid, free-ratio, A=4,B=2,p=29,q=5,d=0.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, A=4,B=2,p=29,q=5,d=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid22-360.avif"
+           alt="Ellipse trochoid, free-ratio, A=4,B=2,p=29,q=5,d=0.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, A=4,B=2,p=29,q=5,d=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid23-360.avif"
+           alt="Ellipse trochoid, free-ratio, A=4,B=2,p=29,q=5,d=2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, A=4,B=2,p=29,q=5,d=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/EllipseTrochoid/EllipseTrochoid24-360.avif"
+           alt="Ellipse trochoid, free-ratio, A=4,B=2,p=19,q=-5,d=1.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, A=4,B=2,p=19,q=-5,d=1.5
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">No-slip (ellipse-base) equations:</div>
+      \[ \mathbf{M}=M_0+a\mathbf{N}+d\mathbf{U},\quad\phi=s/a,\quad\mathbf{U}=\mathrm{rot}(\phi)\mathbf{N} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ellipse and arc length:</div>
+      \[ M_0=(A\cos t,\,B\sin t),\quad s=\int\sqrt{A^2\sin^2 t+B^2\cos^2 t}\,dt \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Free-ratio (central) equations:</div>
+      \[ \mathbf{M}=M_0+d\,(\cos(ks),\sin(ks)),\quad k=(p/q)\cdot(2\pi/P) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The ellipse-base trochoid (no-slip) and the ellipse-central trochoid (free-ratio) are modern generalizations of the classical trochoid.<sup>1</sup> The classical trochoid itself—the path of a point fixed to a circle that rolls without slipping on a straight line—was studied by Albrecht Dürer (1525) and Ole Rømer (1674); Gilles de Roberval coined the name from the Greek <em>trochos</em> (wheel) in connection with the cycloid.<sup>2</sup> The broader theory of roulettes (curves traced by a point attached to one curve as it rolls on another) developed in the seventeenth century around the cycloid and its relatives, with contributions from Roberval, Pascal, Huygens, Leibniz, Newton, and the Bernoullis.<sup>3</sup></p>
+    <p>When the fixed base is a circle one obtains the centered trochoids (epitrochoids and hypotrochoids). When the fixed base is an arbitrary curve and the rolling curve is a circle, the result is the any-based trochoid presented by Robert Ferréol on MathCurve.<sup>1</sup> The elliptical-base specimen is the special case in which the fixed curve is an ellipse; the free-ratio (central-curve) variant on the same page is the related construction in which the center of the disk follows a prescribed path while the disk spins at an independent constant ratio.<sup>1</sup></p>
+    <p>No classical attribution attaches specifically to the elliptical-base case. The construction appears in modern computational and educational contexts (Wolfram Demonstrations, MathStackExchange discussions of the elliptic integral that arises for the arc length) rather than in the historical literature of named curves.<sup>4</sup> Because the exact perimeter of an ellipse is an elliptic integral with no elementary closed form, the code uses Ramanujan’s second approximation<sup>5</sup>
+
+\[
+P\approx\pi(A+B)\Bigl(1+\frac{3h}{10+\sqrt{4-3h}}\Bigr),\qquad
+h=\Bigl(\frac{A-B}{A+B}\Bigr)^2
+\]
+
+to obtain a rapidly computable estimate of \(P\). This permits the rolling radius (or the free-ratio speed \(k\)) to be set so that the circumference ratio is exactly a chosen rational \(p/q\), guaranteeing that the generated curve closes after a known number of circuits.</p>
+    <p>Real-life applications of the exact ellipse-base roulette are not documented. Broader trochoidal and epitrochoidal paths appear in the design of rotary pumps, Wankel-type engines, and certain gear-generation processes, and elliptical tool-paths have been investigated in contemporary CNC trochoidal milling to raise material-removal rates.<sup>5</sup> These uses, however, employ circular-base or free-form trochoids, not the pure no-slip roulette of a circle on an elliptical base. The free-ratio central-curve version likewise lacks specific engineering applications beyond its role as a kinematic illustration.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml</a> (any-based trochoid definition and elliptical example)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Trochoid" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Trochoid</a> (classical trochoid)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Roulette_(curve)" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Roulette_(curve)</a> (roulette theory)</li>
+      <li><a href="https://math.stackexchange.com/questions/1308195/circle-rolling-on-ellipse" target="_blank" rel="noopener noreferrer">https://math.stackexchange.com/questions/1308195/circle-rolling-on-ellipse</a> (elliptic-integral formulation)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Perimeter_of_an_ellipse" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Perimeter_of_an_ellipse</a> (Ramanujan’s second approximation to the ellipse perimeter)</li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S1755581723001517" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S1755581723001517</a> (elliptical paths in trochoidal milling)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ELLIPSETROCHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                         id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2
+                         fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr
+                         fs ft fu fv)
+
+  (setq id "Ellipse-based trochoid"
+        iq "No-slip: M=M0+a N+d U, φ=s/a;  Free-ratio: center on ellipse, spin k·s"
+        dcl "ELLIPSETROCHOID"
+        opt '("No-slip" "Free-ratio")
+        kw 0
+        mode 'param
+        dpr "# of divisions in 2π"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "A (semi-major)" 4.0)
+           fb (get_real 2 "B (semi-minor)" 2.0)
+           fs (if (and (> fa 0.0) (> fb 0.0))
+                (progn
+                  (setq ft (/ (- fa fb) (+ fa fb))
+                        ft (* ft ft)
+                        fs (* pi (+ fa fb)
+                              (+ 1.0 (/ (* 3.0 ft)
+                                        (+ 10.0 (sqrt (- 4.0 (* 3.0 ft))))))))
+                  fs)
+                (* 2.0 pi (max fa fb)))
+           ft (- (get_integer 2 "p (numerator of fraction of perimeter)" 1))
+           fu (get_integer 2 "q (denominator of fraction of perimeter)" 3)
+           fv (if (and (/= fu 0) (> fs 0.0))
+                (/ (* fs (float ft)) (* 2.0 pi (float fu)))
+                0.5)
+           fc (get_real 2 "a (rolling radius)" fv)
+           fd (- (get_real 0 "d/a (tracing distance as multiple of a)" 1.5))
+           fd (* fd fc)
+           fe (get_keyword 0 "Positive Negative" "Positive or Negative side of normal?" "Negative")
+           eq_display (strcat "\nA=" (rtos fa 2 4) ", B=" (rtos fb 2 4)
+                              ", P≈" (rtos fs 2 4)
+                              ", a=" (rtos fc 2 4) " (circ.≈" (itoa ft) "/" (itoa fu) "·P)"
+                              ", d=" (rtos fd 2 4) " (d/a=" (rtos (/ fd fc) 2 4) ")"
+                              ", normal side=" fe)
+           ff 0.0
+           fg 0.0
+           fh (if (eq fe "Positive") 1.0 -1.0)
+           fi (sqrt (+ (* fa fa (sin ff) (sin ff)) (* fb fb (cos ff) (cos ff))))
+           fj (* fh (/ (- (* fb (cos ff))) fi))
+           fk (* fh (/ (- (* fa (sin ff))) fi))
+           fl (/ fg fc)
+           fm (cos fl)
+           fn (sin fl)
+           fo (- (* fm fj) (* fn fk))
+           fp (+ (* fn fj) (* fm fk))
+           fq (- (+ (* fa (cos ff)) (* fc fj) (* fd fo)))
+           fr (+ (* fb (sin ff)) (* fc fk) (* fd fp))
+           skm '(T T T)
+           a1 0.0
+           a2 '(progn
+                 (setq ff (+ ff paramstep)
+                       fi (sqrt (+ (* fa fa (sin ff) (sin ff)) (* fb fb (cos ff) (cos ff))))
+                       fg (+ fg (* fi paramstep))
+                       fh (if (eq fe "Positive") 1.0 -1.0)
+                       fj (* fh (/ (- (* fb (cos ff))) fi))
+                       fk (* fh (/ (- (* fa (sin ff))) fi))
+                       fl (/ fg fc)
+                       fm (cos fl)
+                       fn (sin fl)
+                       fo (- (* fm fj) (* fn fk))
+                       fp (+ (* fn fj) (* fm fk))
+                       fq (- (+ (* fa (cos ff)) (* fc fj) (* fd fo)))
+                       fr (+ (* fb (sin ff)) (* fc fk) (* fd fp)))
+                 ff)
+           xc 'fq
+           yc 'fr))
+    ((eq kw 1)
+     (setq fa (get_real 2 "A (semi-major)" 4.0)
+           fb (get_real 2 "B (semi-minor)" 2.0)
+           fs (if (and (> fa 0.0) (> fb 0.0))
+                (progn
+                  (setq ft (/ (- fa fb) (+ fa fb))
+                        ft (* ft ft)
+                        fs (* pi (+ fa fb)
+                              (+ 1.0 (/ (* 3.0 ft)
+                                        (+ 10.0 (sqrt (- 4.0 (* 3.0 ft))))))))
+                  fs)
+                (* 2.0 pi (max fa fb)))
+           ft (get_integer 2 "p (numerator)" 1)
+           fu (get_integer 2 "q (denominator)" 1)
+           fc (if (and (/= fu 0) (> fs 0.0))
+                (/ (* 2.0 pi (float ft)) (* fs (float fu)))
+                1.0)
+           fd (get_real 2 "d (tracing distance)" 1.0)
+           eq_display (strcat "\nA=" (rtos fa 2 4) ", B=" (rtos fb 2 4)
+                              ", P≈" (rtos fs 2 4)
+                              ", k=" (rtos fc 2 4) " (=" (itoa ft) "/" (itoa fu) "·2π/P)"
+                              ", d=" (rtos fd 2 4))
+           ff 0.0
+           fg 0.0
+           fl (* fc fg)
+           fm (cos fl)
+           fn (sin fl)
+           fq (+ (* fa (cos ff)) (* fd fm))
+           fr (+ (* fb (sin ff)) (* fd fn))
+           skm '(T T T)
+           a1 0.0
+           a2 '(progn
+                 (setq ff (+ ff paramstep)
+                       fi (sqrt (+ (* fa fa (sin ff) (sin ff)) (* fb fb (cos ff) (cos ff))))
+                       fg (+ fg (* fi paramstep))
+                       fl (* fc fg)
+                       fm (cos fl)
+                       fn (sin fl)
+                       fq (+ (* fa (cos ff)) (* fd fm))
+                       fr (+ (* fb (sin ff)) (* fd fn)))
+                 ff)
+           xc 'fq
+           yc 'fr)))
+  (setq x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ELLIPSETROCHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

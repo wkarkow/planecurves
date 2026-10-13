@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2D Basin Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>2D Basin Curve</h1>
+      <p class="short-description">Projection of a 3D basin traced on a paraboloid of revolution; associated with Lissajous curves.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/2DBasin/2DBasin01-360.avif"
+           alt="2D Basin, a=1,b=1,n=2,φ=0">
+      <figcaption>2D Basin, a=1,b=1,n=2,φ=0° (rational quartic)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin02-360.avif"
+           alt="2D Basin, a=1,b=1,n=3,φ=90">
+      <figcaption>2D Basin, a=1,b=1,n=3,φ=90° (rational sextic)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin03-360.avif"
+           alt="2D Basin, a=1,b=1,n=1.5,φ=0">
+      <figcaption>2D Basin, a=1,b=1,n=1.5,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin04-360.avif"
+           alt="2D Basin, a=1,b=1,n=1.5,φ=90">
+      <figcaption>2D Basin, a=1,b=1,n=1.5,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin05-360.avif"
+           alt="2D Basin, a=1,b=1,n=5/3,φ=90">
+      <figcaption>2D Basin, a=1,b=1,n=5/3,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin06-360.avif"
+           alt="2D Basin, a=1,b=1,n=7/5,φ=90">
+      <figcaption>2D Basin, a=1,b=1,n=7/5,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin07-360.avif"
+           alt="2D Basin, a=1,b=1,n=9/7,φ=90">
+      <figcaption>2D Basin, a=1,b=1,n=9/7,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin08-360.avif"
+           alt="2D Basin, a=1,b=1,n=15/14,φ=90">
+      <figcaption>2D Basin, a=1,b=1,n=15/14,φ=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin09-360.avif"
+           alt="2D Basin, a=1,b=2,n=23/22,φ=0">
+      <figcaption>2D Basin, a=1,b=2,n=23/22,φ=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="images/2DBasin/2DBasin10-360.avif"
+           alt="2D Basin, a=2,b=1,n=23/22,φ=0">
+      <figcaption>2D Basin, a=2,b=1,n=23/22,φ=0°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">2D Basin Curve parametric equations:</div>
+      \[ x = a \cdot \cos(t + \phi) \cdot \cos(n t),\quad y = b \cdot \cos^{2}(n t) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The 2D basin curve<sup>1,2</sup> (French: vasque 2D; also Brunnenbecken 2D) is a homemade name introduced by Robert Ferréol on the MathCurve site (French page 2011<sup>3</sup>, English translation 2017). It is not a classical named curve associated with an earlier mathematician. The name refers to the basin-like shape obtained as the orthogonal projection, onto any plane containing the vertical <em>Oz</em> axis, of a 3D basin curve traced on a paraboloid of revolution. Geometrically, the parent 3D basin is the image of a cylindrical sine wave under the map that sends a point to the corresponding point on the paraboloid \( z = (x^{2} + y^{2})/(2a) \); equivalently, it is the central projection from the origin of that cylindrical wave onto the paraboloid. The projection of the same 3D curve onto the horizontal <em>xOy</em> plane is a rose curve. For the special case \( n = 1 \) the 3D basin reduces to an ellipse lying in a plane through the origin.</p>
+    <p>The parametric equations show that every 2D basin lies between the parabola \( y = b \) (more precisely, the curve is traced on or between a parabola of that form and the horizontal line \( y = b \)). Special algebraic cases appear for integer or half-integer frequencies: when \( n = 2 \) and \( \phi = 0 \) the curve is a rational quartic; when \( n = 3 \) and \( \phi = \pi/2 \) it is a rational sextic. Each 2D basin is associated with a Lissajous curve of the same frequency parameter; the two curves share the underlying cylindrical-sine-wave construction and can be displayed together for comparison.</p>
+    <p>No documented applications in engineering or the natural sciences have been found for this parametric family. The curve remains a modern geometric construction catalogued for its relation to the paraboloid projection, the cylindrical sine wave, roses, and Lissajous figures.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/vasques/vasques.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/vasques/vasques.shtml</a> (definition, projection from 3D basin on paraboloid, special cases, Lissajous association; English page © 2017)</li>
+      <li><a href="https://mathcurve.com/courbes3d.gb/vasque3d/vasque3d.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes3d.gb/vasque3d/vasque3d.shtml</a> (3D basin, cylindrical sine wave, rose projection, n=1 ellipse; homemade name)</li>
+      <li><a href="https://mathcurve.com/courbes2d/vasques/vasques.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d/vasques/vasques.shtml</a> (original French page, © 2011; aliases Basin / Brunnenbecken 2D)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:2DBASIN (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                    divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "2D Basin Curve"
+        iq "x=a·cos(t+φ)·cos(n·t), y=b·cos²(n·t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt '(5.0 0.0)
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "a (x-scale)" 1.0)
+        fb (get_real 6 "b (y-scale)" 1.0)
+        fc (get_real 6 "n (frequency)" 2.0)
+        fd (get_real 0 "φ (phase in °)" 0.0)
+        eq_display (strcat "\na=" (rtos fa 2 4)
+                          " b=" (rtos fb 2 4)
+                          " n=" (rtos fc 2 4)
+                          " phi=" (rtos fd 2 4))
+        xc '(* fa (cos (+ (eval a2) (* fd (/ pi 180.0)))) (cos (* fc (eval a2))))
+        yc '(* fb (expt (cos (* fc (eval a2))) 2))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:2DBASIN)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

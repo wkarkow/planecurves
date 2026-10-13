@@ -2,7 +2,24 @@
 // Sorted alphabetically by title. filename values are placeholders.
 // Update filename when the corresponding .html page is created.
 const curveList = [
-{
+ {
+    id: "2dbasin",
+    title: "2D Basin Curve",
+    filename: "2DBasin.html",
+    aliases: [""],
+    eqSortKey: "000.5",
+    done: true,
+    imgCount: 10,
+    equation: "x = a \\cdot \\cos(t + \\phi) \\cdot \\cos(n t),\\quad y = b \\cdot \\cos^{2}(n t)",
+    eqFind: ["x=", "x =", "y=", "y =", "phi", "cos^2"],
+    imgSortKey: "000.5",
+    images: {
+      canonical: "Images/2DBasin/2DBasin01-360.avif",
+      variant1: "Images/2DBasin/2DBasin06-360.avif",
+      variant2: "Images/2DBasin/2DBasin09-360.avif"
+    }
+  },
+  {
     id: "airy",
     title: "Airy Disk",
     filename: "Airy.html",
@@ -57,11 +74,28 @@ const curveList = [
     eqSortKey: "004",
     done: true,
     imgCount: 1,
-    equation: "(y^{2} - x^{2})(x - 1)(2x - 3) = 4(x^{2} + y^{2} - 2x)^{2}, \\quad 4y^{4} + y^{2}(6x^{2} - 11x - 3) + 6x^{4} - 21x^{3} + 19x^{2} = 0, \\quad r^{2}(2\\cos^{2}(\\theta) + \\cos^{4}(\\theta) + 9) - r(37\\cos(\\theta) + 5\\cos^{3}(\\theta)) + (22\\cos^{2}(\\theta) + 16) = 0 ",
+    equation: "(y^{2} - x^{2})(x - 1)(2x - 3) = 4(x^{2} + y^{2} - 2x)^{2}, \\quad 4y^{4} + y^{2}(6x^{2} - 11x - 3) + 6x^{4} - 21x^{3} + 19x^{2} = 0, \\quad r^{2}(2\\cos^{2}(\\theta) + \\cos^{4}(\\theta) + 9) - r(37\\cos(\\theta) + 5\\cos^{3}(\\theta)) + (22\\cos^{2}(\\theta) + 16) = 0",
     eqFind: ["y^2", "x^2", "y^4", "x^4", "x^3", "r^2", "cos^2", "theta"],
     imgSortKey: "004",
     images: {
       canonical: "Images/Ampersand/Ampersand01-360.avif"
+    }
+  },
+    {
+    id: "anallgamatic-spiral",
+    title: "Anallagmatic Spiral",
+    filename: "Anallagmatic.html",
+    aliases: [],
+    eqSortKey: "004.5",
+    done: true,
+    imgCount: 5,
+    equation: "2n\\theta = \\left(\\dfrac{r}{a}\\right)^n + \\left(\\dfrac{a}{r}\\right)^n, \\quad r^n = a^n\\left(n\\theta \\pm \\sqrt{n^2\\theta^2 - 1}\\right), \\quad r = a\\,e^{t/n}, n\\theta = \\cosh t",
+    eqFind: ["r=", "r =", "theta", "r^n", "sqrt", "e^", "cosh"],
+    imgSortKey: "004.5",
+    images: {
+      canonical: "Images/Anallagmatic/Anallagmatic01-360.avif",
+      variant1: "Images/Anallagmatic/Anallagmatic02-360.avif",
+      variant2: "Images/Anallagmatic/Anallagmatic05-360.avif"
     }
   },
   {
@@ -862,8 +896,8 @@ const curveList = [
     eqFind: ["x^2", "y^2", "r=", "r =", "sin^2", "cos^2", "theta"],
     imgSortKey: "052",
     images: {
-      canonical: "Images/CircularRadialSextic/CircularRadialSextic01-360.avif",
-      variant1: "Images/CircularRadialSextic/CircularRadialSextic02-360.avif"
+      canonical: "Images/CircRadialSextic/CircRadialSextic01-360.avif",
+      variant1: "Images/CircRadialSextic/CircRadialSextic02-360.avif"
     }
   },
   {
@@ -1630,6 +1664,23 @@ const curveList = [
     }
   },
   {
+    id: "ellipse-trochoid",
+    title: "Ellipse Trochoid",
+    filename: "EllipseTrochoid.html",
+    aliases: ["Trochoid of the Ellipse"],
+    eqSortKey: "098.5",
+    done: true,
+    imgCount: 24,
+    equation: "\\mathbf{M}=M_0+a\\mathbf{N}+d\\mathbf{U},\\phi=s/a,\\mathbf{U}=\\mathrm{rot}(\\phi)\\mathbf{N}, \\quad M_0=(A\\cos t,\\,B\\sin t), s=\\int\\sqrt{A^2\\sin^2 t+B^2\\cos^2 t}\\,dt, \\quad \\mathbf{M}=M_0+d\\,(\\cos(ks),\\sin(ks)), k=(p/q)\\cdot(2\\pi/P)",
+    eqFind: ["phi", "cos^2", "sin^2", "int", "dt", "cos^2", "sqrt"],
+    imgSortKey: "098.5",
+    images: {
+      canonical: "Images/EllipseTrochoid/EllipseTrochoid01-360.avif",
+      variant1: "Images/EllipseTrochoid/EllipseTrochoid07-360.avif",
+      variant2: "Images/EllipseTrochoid/EllipseTrochoid22-360.avif"
+    }
+  },
+    {
     id: "ellipse-negative-pedal-curve",
     title: "Ellipse Negative Pedal Curve",
     filename: "ENPedal.html",
@@ -3061,7 +3112,7 @@ const curveList = [
     aliases: ["Kappa Curve", "Windmill Curve", "Right Strophoid"],
     eqSortKey: "185",
     done: true,
-    imgCount: 1,
+    imgCount: 15,
     equation: "r = a \\cdot \\tan(n\\theta), \\quad r = a \\cdot \\tan^{b}(c\\theta)",
     eqFind: ["r=", "r =", "tan^", "theta"],
     imgSortKey: "185",
@@ -3214,6 +3265,23 @@ const curveList = [
       canonical: "Images/ParaPedal/ParaPedal01-360.avif",
       variant1: "Images/ParaPedal/ParaPedal02-360.avif",
       variant2: "Images/ParaPedal/ParaPedal03-360.avif"
+    }
+  },
+  {
+    id: "parabola-trochoid",
+    title: "Parabola Trochoid",
+    filename: "ParabolaTrochoid.html",
+    aliases: ["Trochoid of the Parabola"],
+    eqSortKey: "194.5",
+    done: true,
+    imgCount: 3,
+    equation: "\\mathbf{M}=M_0+a\\mathbf{N}+d\\mathbf{U},\\quad\\phi=s/a,\\quad\\mathbf{U}=\\mathrm{rot}(\\phi)\\mathbf{N}, \\quad \\mathbf{M}=M_0+d\\,(\\cos(ks),\\sin(ks))",
+    eqFind: ["phi", "cos", "sin"],
+    imgSortKey: "194.5",
+    images: {
+      canonical: "Images/ParabolaTrochoid/ParabolaTrochoid03-360.avif",
+      variant1: "Images/ParabolaTrochoid/ParabolaTrochoid08-360.avif",
+      variant2: "Images/ParabolaTrochoid/ParabolaTrochoid19-360.avif"
     }
   },
   {
@@ -4585,6 +4653,21 @@ const curveList = [
     imgSortKey: "276",
     images: {
       canonical: "Images/Tukey/Tukey01-360.avif"
+    }
+  },
+  {
+    id: "visiera",
+    title: "Visiera",
+    filename: "Visiera.html",
+    aliases: [],
+    eqSortKey: "276.5",
+    done: true,
+    imgCount: 1,
+    equation: "r = a \\left( \\frac{1}{\\sin \\theta} + \\sin \\theta \\right), \\quad x(x^{2} + y^{2}) = a(x^{2} + 2y^{2}), \\quad x = \\pm y \\sqrt{\\frac{2a - y}{y - a}}",
+    eqFind: ["x^2", "y^2", "x=", "x =", "r=", "r =", "sin", "theta"],
+    imgSortKey: "276.5",
+    images: {
+      canonical: "Images/Visiera/Visiera01-360.avif"
     }
   },
   {

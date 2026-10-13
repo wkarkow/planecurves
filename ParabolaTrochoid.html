@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabola Trochoid - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Parabola Trochoid</h1>
+      <p class="short-description">No-slip roulette of a circle on a parabolic base, and free-ratio central-curve variant with independent spin.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid01-360.avif"
+           alt="Parabola trochoid, no-slip, a=0.25, radius=1, d=0.5, Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, a=0.25, radius=1, d=0.5, Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid02-360.avif"
+           alt="Parabola trochoid, no-slip, a=0.25, radius=1, d=1, Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, a=0.25, radius=1, d=1, Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid03-360.avif"
+           alt="Parabola trochoid, no-slip, a=0.25, radius=1, d=2, Negative">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, a=0.25, radius=1, d=2, Negative
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid04-360.avif"
+           alt="Parabola trochoid, no-slip, a=0.25, radius=1, d=0.5, Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, a=0.25, radius=1, d=0.5, Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid05-360.avif"
+           alt="Parabola trochoid, no-slip, a=0.25, radius=1, d=1, Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, a=0.25, radius=1, d=1, Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid06-360.avif"
+           alt="Parabola trochoid, no-slip, a=0.25, radius=1, d=2, Positive">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        no-slip, a=0.25, radius=1, d=2, Positive
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid07-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=0.5, d=0.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=0.5, d=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid08-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=0.5, d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=0.5, d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid09-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=0.5, d=2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=0.5, d=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid10-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=1, d=0.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=1, d=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid11-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=1, d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=1, d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid12-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=1, d=2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=1, d=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid13-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=2, d=0.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=2, d=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid14-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=2, d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=2, d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid15-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=2, d=2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=2, d=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid16-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=2, d=-2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=2, d=-2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid17-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=-2, d=2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=-2, d=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid18-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=-2, d=-2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=-2, d=-2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid19-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=-20, d=-2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=-20, d=-2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="images/ParabolaTrochoid/ParabolaTrochoid20-360.avif"
+           alt="Parabola trochoid, free-ratio, a=0.25, k=-10, d=-1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Parabola</span>
+        <span class="figcap-value" style="color:#FF0000">trochoid</span>,
+        free-ratio, a=0.25, k=-10, d=-1
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">No-slip (parabola-base) equations:</div>
+      \[ \mathbf{M}=M_0+a\mathbf{N}+d\mathbf{U},\quad\phi=s/a,\quad\mathbf{U}=\mathrm{rot}(\phi)\mathbf{N} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Parabola and arc length:</div>
+      \[ M_0=(t,\,a t^{2}),\quad s=\int\sqrt{1+(2 a t)^{2}}\,dt \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Free-ratio (central) equations:</div>
+      \[ \mathbf{M}=M_0+d\,(\cos(ks),\sin(ks)) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The parabola-base trochoid (no-slip) and the parabola-central trochoid (free-ratio) are modern generalizations of the classical trochoid.<sup>1</sup> The classical trochoid itself—the path of a point fixed to a circle that rolls without slipping on a straight line—was studied by Albrecht Dürer (1525) and Ole Rømer (1674); Gilles de Roberval coined the name from the Greek <em>trochos</em> (wheel) in connection with the cycloid.<sup>2</sup> The broader theory of roulettes (curves traced by a point attached to one curve as it rolls on another) developed in the seventeenth century around the cycloid and its relatives, with contributions from Roberval, Pascal, Huygens, Leibniz, Newton, and the Bernoullis.<sup>3</sup></p>
+    <p>When the fixed base is a circle one obtains the centered trochoids (epitrochoids and hypotrochoids). When the fixed base is an arbitrary curve and the rolling curve is a circle, the result is the any-based trochoid presented by Robert Ferréol on MathCurve.<sup>1</sup> The parabolic-base specimen is the special case in which the fixed curve is a parabola; the free-ratio (central-curve) variant on the same page is the related construction in which the center of the disk follows a prescribed path while the disk spins at an independent constant ratio.<sup>1</sup></p>
+    <p>No classical attribution attaches specifically to the parabolic-base case. The construction appears in modern computational and educational contexts (Wolfram Demonstrations, MathStackExchange discussions of the elementary arc-length formula that arises for the parabola) rather than in the historical literature of named curves.<sup>4,5</sup> Related classical roulettes involving the parabola are well known and distinct: the focus of a parabola rolling on a straight line traces a catenary, and the vertex of one parabola rolling on an equal parabola traces the cissoid of Diocles.<sup>6</sup> Those constructions are not the circle-on-parabola roulette drawn here.</p>
+    <p>Real-life applications of the exact no-slip circle-on-parabola roulette (or of its free-ratio central variant) are not documented. Broader trochoidal and epitrochoidal paths appear in the design of rotary pumps, Wankel-type engines, and certain gear-generation processes, and looping tool-paths derived from the classical trochoid family are used in contemporary CNC trochoidal (or cycloidal) milling to raise material-removal rates while limiting tool engagement.<sup>7</sup> These uses, however, employ circular-base or free-form trochoids, not the pure no-slip roulette of a circle on a parabolic base. The free-ratio central-curve version likewise lacks specific engineering applications beyond its role as a kinematic illustration.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml</a> (any-based trochoid definition and parabolic examples)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Trochoid" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Trochoid</a> (classical trochoid)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Roulette_(curve)" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Roulette_(curve)</a> (roulette theory)</li>
+      <li><a href="https://math.stackexchange.com/questions/32629/a-circle-rolls-along-a-parabola" target="_blank" rel="noopener noreferrer">https://math.stackexchange.com/questions/32629/a-circle-rolls-along-a-parabola</a> (parabolic-trochoid formulation)</li>
+      <li><a href="https://demonstrations.wolfram.com/RollingACircleOnAParabola/" target="_blank" rel="noopener noreferrer">https://demonstrations.wolfram.com/RollingACircleOnAParabola/</a> (computational demonstration)</li>
+      <li><a href="https://mathworld.wolfram.com/Roulette.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Roulette.html</a> (classical parabola roulettes: catenary and cissoid)</li>
+      <li><a href="https://glcncmachining.com/do-you-understand-cycloid-milling/" target="_blank" rel="noopener noreferrer">https://glcncmachining.com/do-you-understand-cycloid-milling/</a> (trochoidal milling tool-paths)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PARABOLATROCHOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                         id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2
+                         fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr
+                         fs ft fu fv)
+
+  (setq id "Parabola-based trochoid"
+        iq "No-slip: M=M0+a N+d U, φ=s/a;  Free-ratio: center on parabola, spin k·s"
+        dcl "PARABOLATROCHOID"
+        opt '("No-slip" "Free-ratio")
+        kw 1
+        mode 'param
+        dpr "# of divisions to division point"
+        dct 500
+        dpt '(5.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (setq paramstep (/ xspan divcount))
+  (cond
+    ((eq kw 0)
+     (setq fa (get_real 2 "a (y = a·x²)" 0.25)
+           fc (get_real 2 "a (rolling radius)" 1.0)
+           fd (- (get_real 0 "d/a (tracing distance as multiple of a)" 1.0))
+           fd (* fd fc)
+           fe (get_keyword 0 "Positive Negative" "Positive or Negative side of normal?" "Negative")
+           eq_display (strcat "\na=" (rtos fa 2 4)
+                              ", rolling a=" (rtos fc 2 4)
+                              ", d=" (rtos fd 2 4) " (d/a=" (rtos (/ fd fc) 2 4) ")"
+                              ", normal side=" fe)
+           ff 0.0
+           fg 0.0
+           fh (if (eq fe "Positive") 1.0 -1.0)
+           fs (if (eq fe "Positive") -1.0 1.0)   ; reverse spin on Positive so cusps land on the base
+           fi (sqrt (+ 1.0 (* 4.0 fa fa ff ff)))
+           fj (* fh (/ (- (* 2.0 fa ff)) fi))   ; Nx = fh * (-Ty)
+           fk (* fh (/ 1.0 fi))                 ; Ny = fh * Tx
+           fl (* fs (/ fg fc))
+           fm (cos fl)
+           fn (sin fl)
+           fo (- (* fm fj) (* fn fk))
+           fp (+ (* fn fj) (* fm fk))
+           fq (+ ff (* fc fj) (* fd fo))
+           fr (+ (* fa ff ff) (* fc fk) (* fd fp))
+           skm '(nil T T)
+           a1 0.0
+           a2 '(progn
+                 (setq ff (+ ff paramstep)
+                       fi (sqrt (+ 1.0 (* 4.0 fa fa ff ff)))
+                       fg (+ fg (* fi paramstep))
+                       fh (if (eq fe "Positive") 1.0 -1.0)
+                       fs (if (eq fe "Positive") -1.0 1.0)
+                       fj (* fh (/ (- (* 2.0 fa ff)) fi))
+                       fk (* fh (/ 1.0 fi))
+                       fl (* fs (/ fg fc))
+                       fm (cos fl)
+                       fn (sin fl)
+                       fo (- (* fm fj) (* fn fk))
+                       fp (+ (* fn fj) (* fm fk))
+                       fq (+ ff (* fc fj) (* fd fo))
+                       fr (+ (* fa ff ff) (* fc fk) (* fd fp)))
+                 ff)
+           xc 'fq
+           yc 'fr))
+    ((eq kw 1)
+     (setq fa (get_real 2 "a (y = a·x²)" 0.25)
+           fc (get_real 2 "k (spin ratio, angle = k·s)" 1.0)
+           fd (get_real 2 "d (tracing distance)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4)
+                              ", k=" (rtos fc 2 4)
+                              ", d=" (rtos fd 2 4))
+           ff 0.0
+           fg 0.0
+           fl (+ (* fc fg) (/ pi 2.0))
+           fm (cos fl)
+           fn (sin fl)
+           fq (+ ff (* fd fm))
+           fr (+ (* fa ff ff) (* fd fn))
+           skm '(nil T T)
+           a1 0.0
+           a2 '(progn
+                 (setq ff (+ ff paramstep)
+                       fi (sqrt (+ 1.0 (* 4.0 fa fa ff ff)))
+                       fg (+ fg (* fi paramstep))
+                       fl (+ (* fc fg) (/ pi 2.0))
+                       fm (cos fl)
+                       fn (sin fl)
+                       fq (+ ff (* fd fm))
+                       fr (+ (* fa ff ff) (* fd fn)))
+                 ff)
+           xc 'fq
+           yc 'fr)))
+  (setq x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PARABOLATROCHOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>
