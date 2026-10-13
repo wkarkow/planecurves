@@ -2053,7 +2053,7 @@ const curveList = [
   {
     id: "gentrig-curve",
     title: "Gentrig Curve",
-    filename: "Gentrig.html", 
+    filename: "GenTrig.html", 
     aliases: ["SuperTrig Curve", "Madness Curve", "Tractor Tread Curve", "Volcano Curve", "Klein Ball Curve"],
     eqSortKey: "121",
     done: true,
@@ -2398,7 +2398,7 @@ const curveList = [
   {
     id: "hydrogen-2p-orbital-contour-curve",
     title: "Hydrogen 2p Orbital Contour Curve",
-    filename: "Hydrogen2p.html",
+    filename: "Hydrogen2P.html",
     aliases: ["Atomic 2p Orbital Curve"],
     eqSortKey: "142",
     done: true,

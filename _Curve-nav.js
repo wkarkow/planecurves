@@ -2,8 +2,8 @@
 
 function setupCurveNavigation() {
   // Get current filename (e.g. "Alysoid.html")
-  const currentPath = window.location.pathname.split("/").pop();
-  const currentFilename = currentPath || "Airy.html"; // fallback
+const currentPath = window.location.pathname.split("/").pop() || "Airy.html";
+const currentFilename = currentPath.endsWith(".html") ? currentPath : currentPath + ".html";
 
   // Find current curve index
   const currentIndex = curveList.findIndex(curve => curve.filename === currentFilename);
