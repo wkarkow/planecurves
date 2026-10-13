@@ -2407,9 +2407,9 @@ const curveList = [
     eqFind: ["psi", "r^2", "cos^2", "e^", "y^2", "x^2", "theta"],
     imgSortKey: "142",
     images: {
-      canonical: "Images/Hydrogen2P/Hydrogen2P01-360.avif",
-      variant1: "Images/Hydrogen2P/Hydrogen2P02-360.avif",
-      variant2: "Images/Hydrogen2P/Hydrogen2P03-360.avif"
+      canonical: "Images/Hydrogen2p/Hydrogen2p01-360.avif",
+      variant1: "Images/Hydrogen2p/Hydrogen2p02-360.avif",
+      variant2: "Images/Hydrogen2p/Hydrogen2p03-360.avif"
 
     }
   },
