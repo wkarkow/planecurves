@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cissoid Evolute - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cissoid Evolute</h1>
+      <p class="short-description">The evolute of the cissoid of Diocles: the locus of its centers of curvature, a rational quartic.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/CissoidEvolute/CissoidEvolute01-360.avif"
+           alt="Cissoid of Diocles (black) and its evolute (red), a=1"
+      <figcaption>
+        Cissoid of Diocles, a=1,
+        <span class="figcap-value" style="color:#000000">cissoid</span>,
+        <span class="figcap-value" style="color:#FF0000">evolute</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cissoid Evolute Cartesian equation:</div>
+      \[ y^{4} + \frac{32}{3} a^{2} y^{2} + \frac{512}{27} a^{3} x = 0 \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The evolute of the cissoid of Diocles<sup>1,2</sup> is the locus of the centers of curvature of the parent cubic. It is a rational quartic that meets the origin with a horizontal tangent and opens leftward (negative \(x\)) in the conventional orientation of the cissoid (cusp at the origin, vertical asymptote at \(x=2a\)).</p>
+    <p>The parent cissoid was introduced by Diocles (c. 180 BC) to solve the Delian problem of doubling the cube. Its evolute appears in modern curve catalogues rather than in the classical literature. Robert Ferréol records the explicit quartic on MathCurve and notes that the paired figure of cissoid plus evolute must not be confused with the visually similar tractrix and its evolute, the catenary. The same distinction is illustrated in Alfred Gray’s differential-geometry text, which computes the first three iterated evolutes of the cissoid and observes that the first evolute is smooth even though the original curve has a cusp.<sup>2</sup></p>
+    <p>No applications of this evolute itself have been identified in engineering or the natural sciences. The parent cissoid remains a classical construction curve; the evolute is a purely derived geometric object.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cissoiddroite/cissoiddroite.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cissoiddroite/cissoiddroite.shtml</a> (equation of the evolute and figure note)</li>
+      <li><a href="https://archive.org/details/moderndifferenti0000gray/page/80/mode/2up" target="_blank" rel="noopener noreferrer">https://archive.org/details/moderndifferenti0000gray/page/80/mode/2up</a> (Gray, Modern Differential Geometry of Curves and Surfaces with Mathematica, 2nd ed.; iterated evolutes of the cissoid, comparison with tractrix–catenary)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CISSOIDEVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                           divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa ymax)
+  (setq id "Cissoid Evolute"
+        iq "y⁴+(32/3)a²y²+(512/27)a³x = 0"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 200
+        dpt '(2.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(* (/ (* -27.0) (* 512.0 (expt fa 3.0)))
+               (+ (expt (eval a2) 4.0)
+                  (* (/ 32.0 3.0) (expt fa 2.0) (expt (eval a2) 2.0))))
+        yc '(eval a2)
+        skm '(T nil T)
+        a1 0
+        paramstep (/ xspan divcount)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CISSOIDEVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

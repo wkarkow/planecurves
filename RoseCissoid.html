@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoseCissoid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Rose Cissoid Curve</h1>
+      <p class="short-description">Cissoid of a circle through the origin and a rose of equal amplitude; fills the interior of a cardioid.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid01-360.avif"
+           alt="RoseCissoid Curve, a=1,p=55,q=17">
+      <figcaption>RoseCissoid Curve, a=1,p=55,q=17</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid02-360.avif"
+           alt="RoseCissoid Curve, a=1,p=3,q=5">
+      <figcaption>RoseCissoid Curve, a=1,p=3,q=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid03-360.avif"
+           alt="RoseCissoid Curve, a=1, p=5,q=3">
+      <figcaption>RoseCissoid Curve, a=1,p=5,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid04-360.avif"
+           alt="RoseCissoid Curve, a=1,p=1,q=2">
+      <figcaption>RoseCissoid Curve, a=1,p=1,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid05-360.avif"
+           alt="RoseCissoid Curve, a=1,p=2,q=1">
+      <figcaption>RoseCissoid Curve, a=1,p=2,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid06-360.avif"
+           alt="RoseCissoid Curve, a=1,p=1,q=3">
+      <figcaption>RoseCissoid Curve, a=1,p=1,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid07-360.avif"
+           alt="RoseCissoid Curve, a=1,p=3,q=1">
+      <figcaption>RoseCissoid Curve, a=1,p=3,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid08-360.avif"
+           alt="RoseCissoid Curve, a=1,p=1,q=4">
+      <figcaption>RoseCissoid Curve, a=1,p=1,q=4</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid09-360.avif"
+           alt="RoseCissoid Curve, a=1,p=4,q=1">
+      <figcaption>RoseCissoid Curve, a=1,p=4,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/RoseCissoid/RoseCissoid10-360.avif"
+           alt="RoseCissoid Curve, a=1,p=17,q=55">
+      <figcaption>RoseCissoid Curve, a=1,p=17,q=55</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">RoseCissoid polar equation:</div>
+      \[ r = a \cdot \bigl(\cos\bigl(\tfrac{p}{q}\theta\bigr) + \cos\theta\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Enclosing cardioid equation:</div>
+      \[ r = a \cdot (1 + \cos\theta) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The RoseCissoid is the cissoid (pole at the origin) of the circle \( r = a\cos\theta \) (diameter \( a \), through the origin) and the rose \( r = a\cos(k\theta) \) of matching amplitude.<sup>1,2</sup> The general cissoid construction, dating to Diocles of Carystus (c. 240–180 BC), generates a locus from two curves and a fixed pole: a ray from the pole meets the curves at points \( M_1 \) and \( M_2 \), and the cissoid point \( M \) on the same ray satisfies the vector relation \( \overrightarrow{OM} = \overrightarrow{OM_1} + \overrightarrow{OM_2} \).<sup>3</sup> In polar form this reduces exactly to addition of the radial functions. Roses (rhodoneae) were named and studied by Guido Grandi (1671–1742) between 1723 and 1728.<sup>4</sup></p>
+    <p>The family is of modern interest primarily for a geometric observation recorded on MathCurve and credited to Thierry Legay: because \( |\cos(k\theta)| \le 1 \), every member satisfies \( r \le a(1 + \cos\theta) \), with equality wherever \( \cos(k\theta) = 1 \). The cardioid \( r = a(1 + \cos\theta) \) is therefore the outer envelope.<sup>5</sup> For rational \( k = p/q \) of sufficiently high order the curves densely fill the cardioid interior. No earlier independent catalogue entry for this specific family has been identified.</p>
+    <p>No documented applications in engineering or the natural sciences specific to this family were found. The enclosing cardioid itself appears in optics as the catacaustic of a circle with source on the circumference and as the boundary of the central bulb of the Mandelbrot set, but those properties belong to the envelope.<sup>6</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cardioid/cardioid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cardioid/cardioid.shtml</a> (Legay filling observation)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cissoidale/cissoidale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cissoidale/cissoidale.shtml</a> (polar definition of cissoid of two curves)</li>
+      <li><a href="https://mathworld.wolfram.com/Cissoid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Cissoid.html</a> (general cissoid construction)</li>
+      <li><a href="https://mathworld.wolfram.com/RoseCurve.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/RoseCurve.html</a> (Grandi roses)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Cardioid" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Cardioid</a> (cardioid as envelope and caustic)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/caustic/causticdecercle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/caustic/causticdecercle.shtml</a> (circle caustic yielding cardioid)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:ROSECISSOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep paramstep
+                        restartflag rval id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fe ff)
+  (setq id "RoseCissoid Curve"
+        iq "r=a·(cos((p/q)θ)+cos θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_integer 2 "p (integer for (p/q)θ)" 55)
+        fc (get_integer 2 "q (integer for (p/q)θ)" 17)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", p=" (itoa fb) ", q=" (itoa fc))
+        fe (/ fc (gcd fb fc))
+        ff (fix (/ (* (if (and (= (rem (/ fb (gcd fb fc)) 2) 1) (= (rem fe 2) 1)) (* 180 fe) (* 360 fe)) divcount) span))
+        divcount (get_integer 2 "divisions to close the curve" ff)
+        rval '(* fa (+ (cos (* (/ (float fb) (float fc)) (eval a2))) (cos (eval a2))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:ROSECISSOID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

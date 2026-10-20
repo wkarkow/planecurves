@@ -6,7 +6,7 @@ const curveList = [
     id: "2dbasin",
     title: "2D Basin Curve",
     filename: "2DBasin.html",
-    aliases: [""],
+    aliases: [],
     eqSortKey: "000.5",
     done: true,
     imgCount: 10,
@@ -187,7 +187,7 @@ const curveList = [
     id: "astroid",
     title: "Astroid",
     filename: "Astroid.html",
-    aliases: ["Tetracuspid", "Cubocycloid", "Four-cusped Hypocycloid", "Hypocycloid of four cusps"],
+    aliases: ["Tetracuspid", "Cubocycloid", "Four-cusped Hypocycloid", "Hypocycloid of four cusps", "Kiss Curve"],
     eqSortKey: "010",
     done: true,
     imgCount: 3,
@@ -238,7 +238,7 @@ const curveList = [
     id: "atzema-spiral",
     title: "Atzema spiral",
     filename: "Atzema.html",
-    aliases: ["Pritch-Atzema Spiral", "Spiral of Atzema"],
+    aliases: ["Pritch-Atzema Spiral", "Spiral of Atzema", "Inverse Caustic of a Circle"],
     eqSortKey: "013",
     done: true,
     imgCount: 9,
@@ -268,6 +268,23 @@ const curveList = [
       canonical: "Images/Avrami/Avrami01-360.avif",
       variant1: "Images/Avrami/Avrami02-360.avif",
       variant2: "Images/Avrami/Avrami04-360.avif"
+    }
+  },
+  {
+    id: "balance-spring-curve",
+    title: "Balance Spring Curve",
+    filename: "BalanceSpring.html",
+    aliases: ["Balance Spring Spiral"],
+    eqSortKey: "014.5",
+    done: true,
+    imgCount: 4,
+    equation: "r = \\dfrac{a}{1 + k \\, e^{m \\theta}}",
+    eqFind: ["r=", "r =", "e^", "theta"],
+    imgSortKey: "014.5",
+    images: {
+      canonical: "Images/BalanceSpring/BalanceSpring01-360.avif",
+      variant1: "Images/BalanceSpring/BalanceSpring02-360.avif",
+      variant2: "Images/BalanceSpring/BalanceSpring04-360.avif"
     }
   },
   {
@@ -446,9 +463,9 @@ const curveList = [
     aliases: ["Bifoliate", "Double Folium", "Longchamps Bifolium", "Regular Bifolium", "Rabbit Ear Curve"],
     eqSortKey: "025",
     done: true,
-    imgCount: 30,
-    equation: "r = a \\cdot \\cos^{2}(\\theta) \\cdot \\sin(\\theta), \\quad (x^{2} + y^{2})^{2} = 4 a x^{2} y, \\quad r = \\cos^{2}(\\theta) \\cdot (a \\cdot \\cos(\\theta) + b \\cdot \\sin(\\theta)), \\quad r = a \\cdot (\\sin^{b}(c\\theta) - d) \\cdot (\\cos^{e}(f\\theta) - g)",
-    eqFind: ["r=", "r =", "theta", "cos^2", "sin^", "x^2", "y^2", "cos^", "theta"],
+    imgCount: 34,
+    equation: "r = a \\cdot \\cos^{2}(\\theta) \\cdot \\sin(\\theta), \\quad (x^{2} + y^{2})^{2} = 4 a x^{2} y, \\quad r = \\cos^{2}(\\theta) \\cdot (a \\cdot \\cos(\\theta) + b \\cdot \\sin(\\theta)), \\quad r = a \\cdot (\\sin^{b}(c\\theta) - d) \\cdot (\\cos^{e}(f\\theta) - g), \\quad r = a \\cdot \\frac{\\sin^{2}(n\\theta)}{\\sin(\\theta)}",
+    eqFind: ["r=", "r =", "theta", "cos^2", "sin^2", "x^2", "y^2", "cos^", "theta"],
     imgSortKey: "025",
     images: {
       canonical: "Images/Bifolium/Bifolium02-360.avif",
@@ -488,6 +505,22 @@ const curveList = [
       canonical: "Images/Booth/Booth03-360.avif",
       variant1: "Images/Booth/Booth06-360.avif",
       variant2: "Images/Booth/Booth11-360.avif"
+    }
+  },
+  {
+    id: "bouligand-contour-curve",
+    title: "Bouligand Contour Curve",
+    filename: "Bouligand.html",
+    aliases: ["Bouligand's Contour Curve"],
+    eqSortKey: "027.5",
+    done: true,
+    imgCount: 2,
+    equation: "(x^{2}-a^{2})(y^{2}-a^{2})=k a^{4}, \\quad r^{2}=\\dfrac{2a^{2}\\bigl(1\\pm\\sqrt{1-(1-k)\\sin^{2}(2\\theta)}\\bigr)}{\\sin^{2}(2\\theta)}",
+    eqFind: ["r=", "r =", "theta", "sqrt", "sin^2", "x^2", "y^2"],
+    imgSortKey: "027.5",
+    images: {
+      canonical: "Images/Bouligand/Bouligand01-360.avif",
+      variant1: "Images/Bouligand/Bouligand02-360.avif"
     }
   },
   {
@@ -671,6 +704,22 @@ const curveList = [
       canonical: "Images/Cardioid/Cardioid01-360.avif",
       variant1: "Images/Cardioid/Cardioid21-360.avif",
       variant2: "Images/Cardioid/Cardioid37-360.avif"
+    }
+  },
+  {
+    id: "cardioid-parallel-curve",
+    title: "Cardioid Parallel Curve",
+    filename: "CardioidParallel.html",
+    aliases: [],
+    eqSortKey: "038.5",
+    done: true,
+    imgCount: 2,
+    equation: "x = a\\cos t\\,(1+\\cos t) + d\\cos\\frac{3t}{2}, \\quad y = a\\sin t\\,(1+\\cos t) + d\\sin\\frac{3t}{2}",
+    eqFind: ["x=", "x =", "y=", "y =", "cos", "sin"],
+    imgSortKey: "038.5",
+    images: {
+      canonical: "Images/CardioidParallel/CardioidParallel01-360.avif",
+      variant1: "Images/CardioidParallel/CardioidParallel02-360.avif"
     }
   },
   {
@@ -915,6 +964,21 @@ const curveList = [
       canonical: "Images/Diocles/Diocles01-360.avif",
       variant1: "Images/Diocles/Diocles09-360.avif",
       variant2: "Images/Diocles/Diocles10-360.avif"
+    }
+  },
+  {
+    id: "cissoid-evolute",
+    title: "Cissoid Evolute",
+    filename: "CissoidEvolute.html",
+    aliases: [],
+    eqSortKey: "053.5",
+    done: true,
+    imgCount: 1,
+    equation: "y^{4} + \\frac{32}{3} a^{2} y^{2} + \\frac{512}{27} a^{3} x = 0",
+    eqFind: ["y^4", "y^2"],
+    imgSortKey: "053.5",
+    images: {
+      canonical: "Images/CissoidEvolute/CissoidEvolute01-360.avif",
     }
   },
   {
@@ -1247,6 +1311,23 @@ const curveList = [
       canonical: "Images/CurvedStar/CurvedStar01-360.avif",
       variant1: "Images/CurvedStar/CurvedStar02-360.avif",
       variant2: "Images/CurvedStar/CurvedStar09-360.avif"
+    }
+  },
+  {
+    id: "curve-of-constant-gyration",
+    title: "Curve of Constant Gyration",
+    filename: "Gyration.html",
+    aliases: [],
+    eqSortKey: "73.5",
+    done: true,
+    imgCount: 15,
+    equation: "x = \\frac{a}{k}\\int_0^t \\cos\\Bigl(u + \\frac{1-\\cos u}{k}\\Bigr)\,du, y = \\frac{a}{k}\\int_0^t \\sin\\Bigl(u + \\frac{1-\\cos u}{k}\\Bigr)\\,du, \\quad x = \\frac{a}{k}\\int_0^t \\cos\\Bigl(\\frac{1-\\cos u}{k}\\Bigr)\\cos u\\,du, y = \\frac{a}{k}\\int_0^t \\sin\\Bigl(\\frac{1-\\cos u}{k}\\Bigr)\\cos u\\,du",
+    eqFind: ["y=", "y =", "x=", "x =", "int", "cos", "sin"],
+    imgSortKey: "73.6",
+    images: {
+      canonical: "Images/Gyration/Gyration01-360.avif",
+      variant1: "Images/Gyration/Gyration02-360.avif",
+      variant2: "Images/Gyration/Gyration04-360.avif"  
     }
   },
   {
@@ -2691,12 +2772,29 @@ const curveList = [
     aliases: [],
     eqSortKey: "159",
     done: true,
-    imgCount: 6,
+    imgCount: 1,
     equation: "y = a \\cdot \\ln\\left|\\dfrac{\\sin x}{x}\\right|",
     eqFind: ["y=", "y =", "ln", "log", "sin^"],
     imgSortKey: "159",
     images: {
       canonical: "Images/Kilroy/Kilroy01-360.avif"
+    }
+  },
+  {
+    id: "kiss-curve",
+    title: "Kiss Curve",
+    filename: "Kiss.html",
+    aliases: ["Mouth Curve", "Inverse Nephroid"],
+    eqSortKey: "159.5",
+    done: true,
+    imgCount: 6,
+    equation: "x = \\cos t, y = a \\sin^3 t, \\quad \\rho = k - 1 - \\cos t, \\theta = t - 2\\sqrt{\\frac{k}{k-2}}\\arctan\\left(\\sqrt{\\frac{k}{k-2}}\\tan\\frac{t}{2}\\right), \\quad x = \\sin(t/2), y = \\frac{\\cos^3(t/2)\\cdot(2 + \\cos t)}{g}",
+    eqFind: ["y=", "y =", "x=", "x =", "rho=", "rho =", "theta=", "theta =", "cos^3", "sin^3", "arctan", "tan", "sqrt"],
+    imgSortKey: "159.5",
+    images: {
+      canonical: "Images/Kiss/Kiss04-360.avif",
+      variant1: "Images/Kiss/Kiss05-360.avif",
+      variant2: "Images/Kiss/Kiss06-360.avif"
     }
   },
   {
@@ -3797,6 +3895,23 @@ const curveList = [
     }
   },
   {
+    id: "rose-cissoid-curve",
+    title: "Rose Cissoid Curve",
+    filename: "RoseCissoid.html",
+    aliases: ["Legay Curve"],
+    eqSortKey: "225.5",
+    done: true,
+    imgCount: 9,
+    equation: "r = a \\cdot \\bigl(\\cos\\bigl(\\tfrac{p}{q}\\theta\\bigr) + \\cos\\theta\\bigr)",
+    eqFind: ["theta", "r=", "r =", "cos"],
+    imgSortKey: "225.5",
+    images: {
+      canonical: "Images/RoseCissoid/RoseCissoid01-360.avif",
+      variant1: "Images/RoseCissoid/RoseCissoid05-360.avif",
+      variant2: "Images/RoseCissoid/RoseCissoid10-360.avif"
+    }
+  },
+  {
     id: "rose-curve",
     title: "Rose Curve",
     filename: "Rose.html",
@@ -4279,7 +4394,7 @@ const curveList = [
     done: true,
     imgCount: 2,
     equation: "\\left\\lvert\\dfrac{x}{a}\\right\\rvert^{n} + \\left\\lvert\\dfrac{y}{b}\\right\\rvert^{n} = 1, \\quad x = \\pm a\\,\\lvert\\cos t\\rvert^{2/n}, y = \\pm b\\,\\lvert\\sin t\\rvert^{2/n}",
-    eqFind: ["x=", "x =", "y=", "y =", "x^", "cos^2", "y^", "sin^2"],
+    eqFind: ["x=", "x =", "y=", "y =", "x^n", "cos^n", "y^n", "sin^n"],
     imgSortKey: "254",
     images: {
       canonical: "Images/Superellipse/Superellipse01-360.avif",
@@ -4291,7 +4406,23 @@ const curveList = [
     }
   }
   },
+  {
+    id: "superhyperbola",
+    title: "SuperHyperbola",
+    filename: "SuperHyperbola.html",
+    aliases: ["Lamé Curve"],
+    eqSortKey: "254.5",
+    done: true,
+    imgCount: 2,
+    equation: "\\left\\lvert\\dfrac{x}{a}\\right\\rvert^{n} - \\left\\lvert\\dfrac{y}{b}\\right\\rvert^{n} = 1, \\quad \\left\\lvert\\dfrac{y}{b}\\right\\rvert^{n} - \\left\\lvert\\dfrac{x}{a}\\right\\rvert^{n} = 1, \\quad x = a\\cdot\\operatorname{sgn}(\\sec t)\\cdot\\lvert\\sec t\\rvert^{2/n},\\, y = b\\cdot\\operatorname{sgn}(\\tan t)\\cdot\\lvert\\tan t\\rvert^{2/n}",
+    eqFind: ["x=", "x =", "y=", "y =", "x^n", "sec^", "y^n", "tan^"],
+    imgSortKey: "254.5",
+    images: {
+      canonical: "Images/SuperHyperbola/SuperHyperbola01-360.avif",
+      variant1: "Images/SuperHyperbola/SuperHyperbola02-360.avif"
 
+  }
+  },
   {
     id: "swastika-curve",
     title: "Swastika Curve",

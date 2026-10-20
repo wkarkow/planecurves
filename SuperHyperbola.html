@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Superhyperbola - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Superhyperbola</h1>
+      <p class="short-description">The Lamé difference family with unbounded branches.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/SuperHyperbola/SuperHyperbola01-360.avif"
+           alt="Superhyperbola Horizontal, a=2,b=1,multiple values of n">
+      <figcaption>
+        Superhyperbola Horizontal, a=2,b=1,n=
+        <span class="figcap-value" style="color:#000000">-32</span>,
+        <span class="figcap-value" style="color:#FF0000">-8</span>,
+        <span class="figcap-value" style="color:#0000FF">-4</span>,
+        <span class="figcap-value" style="color:#009600">-3</span>,
+        <span class="figcap-value" style="color:#FF9600">-2</span>,
+        <span class="figcap-value" style="color:#9600FF">-1</span>,
+        <span class="figcap-value" style="color:#0096FF">-0.5</span>,
+        <span class="figcap-value" style="color:#AA5555">-0.25</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SuperHyperbola/SuperHyperbola02-360.avif"
+           alt="Superhyperbola Vertical, a=2,b=1,multiple values of n">
+      <figcaption>
+        Superhyperbola Vertical, a=2,b=1,n=
+        <span class="figcap-value" style="color:#000000">0.2</span>,
+        <span class="figcap-value" style="color:#FF0000">0.4</span>,
+        <span class="figcap-value" style="color:#0000FF">0.6</span>,
+        <span class="figcap-value" style="color:#009600">0.8</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.25</span>,
+        <span class="figcap-value" style="color:#0096FF">1.5</span>,
+        <span class="figcap-value" style="color:#AA5555">2</span>,
+        <span class="figcap-value" style="color:#00FF00">4</span>,
+        <span class="figcap-value" style="color:#FF00FF">8</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Superhyperbola Horizontal implicit equation:</div>
+      \[ \left\lvert\dfrac{x}{a}\right\rvert^{n} - \left\lvert\dfrac{y}{b}\right\rvert^{n} = 1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Superhyperbola Vertical implicit equation:</div>
+      \[ \left\lvert\dfrac{y}{b}\right\rvert^{n} - \left\lvert\dfrac{x}{a}\right\rvert^{n} = 1 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Superhyperbola Horizontal parametric equations:</div>
+      \[ x = a\cdot\operatorname{sgn}(\sec t)\cdot\lvert\sec t\rvert^{2/n},\quad y = b\cdot\operatorname{sgn}(\tan t)\cdot\lvert\tan t\rvert^{2/n} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The superhyperbola (Lamé \(\overline{L}_\alpha^-\))<sup>1,2,3</sup> is the difference counterpart of the superellipse. Gabriel Lamé (1795–1870), a French mathematician and engineer, introduced the broader family of curves \(\lvert x/a\rvert^\alpha \pm \lvert y/b\rvert^\alpha = 1\) in his 1818 memoir on geometric methods. He examined both the sum and difference cases for rational and irrational exponents, noting that rational exponents yield algebraic curves while irrational exponents yield transcendental ones.<sup>1</sup> The sum form later acquired the name superellipse through the work of the Danish designer Piet Hein in the mid-twentieth century; the difference form received less attention and has no comparably widespread popular name. Special cases already familiar include the ordinary rectangular hyperbola (\(\alpha = 2\)) and the bullet-nose curve (\(\alpha = -2\)).</p>
+    <p>No independent engineering or natural-science applications of the general difference equation have been located beyond those already associated with its named special cases. The rectangular hyperbola appears in optics (reflecting telescopes, grazing-incidence mirrors) and in certain kinematic linkages; the bullet-nose curve has been used as a simple model for certain flow or potential contours. The general superhyperbola itself remains primarily a mathematical generalization. When the exponent \(n < 0\), the visual opening direction of the branches is opposite the keyword label (Horizontal draws the up–down family and Vertical the left–right family); the equations themselves remain correct.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/lame/lame.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/lame/lame.shtml</a> (Lamé 1818, both sum and difference families, special cases)</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Curves/Lame" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Curves/Lame</a> (historical summary of Lamé curves)</li>
+      <li><a href="https://www.johndcook.com/blog/2025/03/27/superhyperbola/" target="_blank" rel="noopener noreferrer">https://www.johndcook.com/blog/2025/03/27/superhyperbola/</a> (modern note on the name and relation to the superellipse)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SUPERHYPERBOLA (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep
+                           paramstep restartflag id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd)
+  (setq id "Superhyperbola"
+        iq "|x/a|ⁿ-|y/b|ⁿ=1"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 3600
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (x semi-axis)" 2.0)
+        fb (get_real 2 "b (y semi-axis)" 1.0)
+        fc (get_real 2 "n (exponent: 2=hyperbola, large→blunt)" 4.0)
+        fd (get_keyword 0 "Horizontal Vertical" "Horizontal or Vertical branches?" "Horizontal")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", n=" (rtos fc 2 4) ", " fd)
+        xc (if (= fd "Horizontal") '(* fa (if (< (abs (cos (eval a2))) 1e-13) 1e13 (* (if (< (cos (eval a2)) 0.0) -1.0 1.0) (alt_expt (abs (/ 1.0 (cos (eval a2))))
+           (/ 2.0 fc) T)))) '(* fa (if (< (abs (sin (eval a2))) 1e-13) 1e13 (* (if (< (* (cos (eval a2)) (sin (eval a2))) 0.0) -1.0 1.0) (alt_expt (abs (/ (cos
+           (eval a2)) (sin (eval a2)))) (/ 2.0 fc) T)))))
+        yc (if (= fd "Horizontal") '(* fb (if (< (abs (cos (eval a2))) 1e-13) 1e13 (* (if (< (* (sin (eval a2)) (cos (eval a2))) 0.0) -1.0 1.0) (alt_expt (abs (/
+           (sin (eval a2)) (cos (eval a2)))) (/ 2.0 fc) T)))) '(* fb (if (< (abs (sin (eval a2))) 1e-13) 1e13 (* (if (< (sin (eval a2)) 0.0) -1.0 1.0) (alt_expt
+           (abs (/ 1.0 (sin (eval a2)))) (/ 2.0 fc) T)))))
+        skm '(T T T)
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 100.0)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SUPERHYPERBOLA)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

@@ -186,7 +186,7 @@
            alt="Generalized, a=1,b=3,c=23/24,d=0,e=1,f=1,g=0">
       <figcaption>Generalized, a=1,b=3,c=23/24,d=0,e=1,f=1,g=0</figcaption>
     </figure>
-        <figure>
+    <figure>
       <img src="Images/Bifolium/Bifolium28-360.avif"
            alt="Generalized, a=1,b=3,c=23/24,d=180,e=1,f=1,g=0">
       <figcaption>Generalized, a=1,b=3,c=23/24,d=180,e=1,f=1,g=0</figcaption>
@@ -200,6 +200,27 @@
       <img src="Images/Bifolium/Bifolium30-360.avif"
            alt="Generalized, a=1,b=2,c=23/24,d=90,e=3,f=1,g=180">
       <figcaption>Generalized, a=1,b=2,c=23/24,d=90,e=3,f=1,g=180</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Bifolium/Bifolium31-360.avif"
+           alt="n-folium, a=1,b=3">
+      <figcaption>n-folium, a=1,b=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Bifolium/Bifolium32-360.avif"
+           alt="n-folium, a=1,b=4">
+      <figcaption>n-folium, a=1,b=4</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Bifolium/Bifolium33-360.avif"
+           alt="n-folium, a=1,b=5">
+      <figcaption>n-folium, a=1,b=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Bifolium/Bifolium34-360.avif"
+           alt="n-folium, a=1,b=6">
+      <figcaption>n-folium, a=1,b=6</figcaption>
+    </figure>  
   </section>
 
   <section class="equation-ribbon" style="--label-min-width: 280px;">
@@ -219,12 +240,16 @@
       <div class="equation-label">Generalized Longchamps (polar):</div>
       \[ r = a \cdot (\sin^{b}(c\theta) - d) \cdot (\cos^{e}(f\theta) - g) \]
     </div>
+    <div class="equation-line">
+      <div class="equation-label">n-folium (polar):</div>
+      \[ r = a \cdot \frac{\sin^{2}(n\theta)}{\sin(\theta)} \]
+    </div>
   </section>
 
   <section>
     <h2>History and Applications</h2>
     <p>The bifolium curve, also known as the double folium or bifoliate curve, was studied by French mathematicians Gaston Albert Gohierre de Longchamps<sup>1</sup> in 1886 and Henri Brocard<sup>1</sup> in 1887. It is a quartic plane curve<sup>2</sup> and the pedal curve of the deltoid (tricuspoid) with the pedal point at the midpoint of one of the three curved sides.<sup>2,3</sup> The regular bifolium is the special case obtained when the pedal point is at a cusp of the deltoid<sup>4</sup>; it can also be generated as the locus of points <em>M</em> on the perpendicular to a fixed diameter <em>OA</em> through variable points <em>N</em> on the circle of diameter <em>OA</em>, where <em>NM = ON</em>.<sup>4</sup></p>
-    <p>The Longchamps bifolium introduces separate scaling coefficients for the cosine and sine terms, while the generalized form further extends the equation with variable exponents, frequencies, and offsets. Another “bifolium” in the sense of a two-lobed, leaf-like shape is the “half-quadrifolium” (r = a · sin(2θ), 0 ≤ θ ≤ π), included in the implementation for comparison.</p>
+    <p>The Longchamps bifolium introduces separate scaling coefficients for the cosine and sine terms, while the generalized form further extends the equation with variable exponents, frequencies, and offsets. Another “bifolium” in the sense of a two-lobed, leaf-like shape is the “half-quadrifolium” (r = a · sin(2θ), 0 ≤ θ ≤ π), included in the implementation for comparison.The “n-folium” option comes from mathcurve.com.<sup>1</sup></p>
     <p>No real-life applications in engineering or the natural sciences have been documented in the primary references. The generalized form can be adjusted to resemble a peacock’s tail or a sea scallop.</p>
   </section>
 
@@ -245,8 +270,8 @@
   (setq id "Bifolium"
         iq ""
         dcl "BIFOLIUM"
-        opt '("Half-quadrifolium" "Regular Bifolium" "Longchamps Bifolium" "Generalized Longchamps")
-        kw 0
+        opt '("Half-quadrifolium" "Regular Bifolium" "Longchamps Bifolium" "Generalized Longchamps" "n-folium")
+        kw 3
         mode 'polar
         dpr "# of divisions around circle"
         dct 360
@@ -284,7 +309,14 @@
           fi (* fg (/ pi 180.0))
           eq_display (strcat "\nr=" (rtos fa 2 4) "·(sin^" (rtos fb 2 4) "(" (rtos fc 2 4) "θ)-" (rtos fd 2 4) "°)·(cos^"
                                     (rtos fe 2 4) "(" (rtos ff 2 4) "θ)-" (rtos fg 2 4) "°)")
-          rval '(* fa (- (alt_expt (sin (* fc (eval a2))) fb nil) fh) (- (alt_expt (cos (* ff (eval a2))) fe nil) fi)))))
+          rval '(* fa (- (alt_expt (sin (* fc (eval a2))) fb nil) fh) (- (alt_expt (cos (* ff (eval a2))) fe nil) fi))))
+  ((eq kw 4)
+   (setq fa (get_real 2 "a (size)" 1.0)
+        fb (get_real 2 "n (integer number of leaves)" 2.0)
+        eq_display (strcat "\nr=" (rtos fa 2 4) "·sin²(" (rtos fb 2 0) "θ)/sin(θ)")
+        rval '(* fa (alt_expt (sin (* fb (eval a2))) 2 nil)
+                    (/ 1.0 (avoid_zero (sin (eval a2)))))))
+  )
   (setq xc '(* (eval rval) (cos (eval a2)))
         yc '(* (eval rval) (sin (eval a2)))
         skm '(T T T)

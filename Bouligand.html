@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bouligand - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Bouligand</h1>
+      <p class="short-description">Contour lines of Bouligand’s cushion; closed for 0 &lt; k &lt; 1, rectangular crosscurve at k=1, outer branches for k &gt; 1.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Bouligand/Bouligand01-360.avif"
+           alt="Bouligand contours, a=1, multiple values of k">
+      <figcaption>
+        Bouligand contours, a=1,k=
+        <span class="figcap-value" style="color:#000000">0.001</span>,
+        <span class="figcap-value" style="color:#FF0000">0.1</span>,
+        <span class="figcap-value" style="color:#0000FF">0.2</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>,
+        <span class="figcap-value" style="color:#FF9600">0.4</span>,
+        <span class="figcap-value" style="color:#9600FF">0.5</span>,
+        <span class="figcap-value" style="color:#0096FF">0.6</span>,
+        <span class="figcap-value" style="color:#AA5555">0.7</span>,
+        <span class="figcap-value" style="color:#00FF00">0.8</span>,
+        <span class="figcap-value" style="color:#FF00FF">0.9</span>
+        <span class="figcap-value" style="color:#009696">0.999</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Bouligand/Bouligand02-360.avif"
+           alt="Bouligand contours, a=1, k from 1 to 38">
+      <figcaption>
+        Bouligand contours, a=1,k=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">4</span>,
+        <span class="figcap-value" style="color:#009600">7</span>,
+        <span class="figcap-value" style="color:#FF9600">11</span>,
+        <span class="figcap-value" style="color:#9600FF">16</span>,
+        <span class="figcap-value" style="color:#0096FF">22</span>,
+        <span class="figcap-value" style="color:#AA5555">29</span>,
+        <span class="figcap-value" style="color:#00FF00">37</span>,
+        <span class="figcap-value" style="color:#FF00FF">46</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Bouligand implicit equation:</div>
+      \[ (x^{2}-a^{2})(y^{2}-a^{2})=k a^{4} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Bouligand polar equation:</div>
+      \[ r^{2}=\dfrac{2a^{2}\bigl(1\pm\sqrt{1-(1-k)\sin^{2}(2\theta)}\bigr)}{\sin^{2}(2\theta)} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The family of curves with equation \((x^2-a^2)(y^2-a^2)=k a^4\) appears as the horizontal contour lines of a surface studied by Georges Bouligand (1889–1979) in 1928.<sup>1</sup> Bouligand, a French mathematician who worked in analysis, differential geometry, and mathematical physics, included the surface as an exercise or example in the second edition of his <em>Cours de géométrie analytique</em> (p. 487). MathCurve later gave it the descriptive name “Bouligand’s cushion” (or pillow). The surface itself is the locus of points whose sum of distances to two fixed perpendicular lines (the diagonals of the cushion) is constant; the complete algebraic surface includes the loci of constant difference as well. It is a quartic surface with four conical points. Horizontal sections \(z=\) constant are precisely the quartics under discussion; they generalize the classical crosscurve, which is recovered exactly when \(k=1\).<sup>2</sup></p>
+    <p>For \(0&lt;k&lt;1\) the contours are closed, simple curves lying between the square of side \(2a\) and the crosscurve. At \(k=1\) the contour degenerates into the rectangular crosscurve (the equal-axis Lamé curve of exponent \(-2\)). For \(k>1\) the contours open outward and become unbounded. The origin is an isolated point of the algebraic curve when \(k=1\). The same family can be viewed as the boundaries of balls for a certain norm on the plane, but this interpretation remains purely geometric.</p>
+    <p>No documented applications of these contour curves in engineering or the natural sciences have been found. The parent surface is likewise known only as a mathematical example. The special case \(k=1\) (the rectangular crosscurve) possesses classical geometric constructions—as the biaxial inverse of an ellipse, as the locus of the focus of a parabola constrained to stay tangent to the two axes, and as a plane section of a sinusoidal cone—but these remain within pure geometry.<sup>2</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.mathcurve.com/surfaces.gb/coussin/coussin.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/surfaces.gb/coussin/coussin.shtml</a> (Bouligand 1928, definition as constant-sum locus, level curves are crosscurve generalizations)</li>
+      <li><a href="https://www.mathcurve.com/courbes2d.gb/cruciforme/cruciforme.shtml" target="_blank" rel="noopener noreferrer">https://www.mathcurve.com/courbes2d.gb/cruciforme/cruciforme.shtml</a> (family of quartics, crosscurve recovered at \(k=1\), relation to Lamé curve)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Georges_Bouligand" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Georges_Bouligand</a> (biographical outline)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:BOULIGAND (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xstep
+                      paramstep restartflag id iq dcl opt kw mode dpr dct dpt span xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb rval
+                      s2 disc sq u)
+  (setq id "Bouligand"
+        iq "(x²-a²)(y²-a²)=k·a⁴"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (semi-axis of the reference square)" 1.0)
+        fb (get_real 2 "k (0<k<1 closed; k=1 crosscurve; k>1 outer)" 0.5)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4))
+        rval '(progn
+                (setq restartflag nil)
+                (setq s2 (sin (* 2.0 (eval a2))))
+                (cond
+                  ((< (abs s2) 1e-8)
+                   (if (< fb 1.0)
+                     (* fa (alt_expt (max 0.0 (- 1.0 fb)) 0.5 T))
+                     (progn (setq restartflag T) 1e7)))
+                  (T
+                   (setq disc (- 1.0 (* (- 1.0 fb) (* s2 s2))))
+                   (if (< disc 0.0)
+                     (progn (setq restartflag T) 1e7)
+                     (progn
+                       (setq sq (alt_expt disc 0.5 T)
+                             u (if (< fb 1.0)
+                                 (/ (* 2.0 fa fa (- 1.0 sq)) (avoid_zero (* s2 s2)))
+                                 (/ (* 2.0 fa fa (+ 1.0 sq)) (avoid_zero (* s2 s2)))))
+                       (if (<= u 0.0)
+                         (progn (setq restartflag T) 1e7)
+                         (alt_expt u 0.5 T)))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:BOULIGAND)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>
