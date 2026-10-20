@@ -4397,10 +4397,10 @@ const curveList = [
     eqFind: ["x=", "x =", "y=", "y =", "x^n", "cos^n", "y^n", "sin^n"],
     imgSortKey: "254",
     images: {
-      canonical: "Images/Superellipse/Superellipse01-360.avif",
-      variant1: "Images/Superellipse/Superellipse02-360.avif",
+      canonical: "Images/SuperEllipse/SuperEllipse01-360.avif",
+      variant1: "Images/SuperEllipse/SuperEllipse02-360.avif",
       variant2: {
-        thumbnail: "Images/Superellipse/Superellipse03-360.avif",
+        thumbnail: "Images/SuperEllipse/SuperEllipse03-360.avif",
         url: "https://en.wikipedia.org/wiki/Pittsburgh_Steelers",
         external: true
     }
