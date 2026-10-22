@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toroid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Toroid</h1>
+      <p class="short-description">Parallel (offset) curves of the ellipse at fixed normal distance \(d\); the visible outlines of a torus.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Toroid/Toroid01-360.avif"
+           alt="Toroids, a=2,b=1,d=0.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=0.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid02-360.avif"
+           alt="Toroids, a=2,b=1,d=0.75">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroid</span>,
+        a=2,b=1,d=0.75
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid03-360.avif"
+           alt="Toroids, a=2,b=1,d=5/6">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=5/6
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid04-360.avif"
+           alt="Toroids, a=2,b=1,d=11/12">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=11/12
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid05-360.avif"
+           alt="Toroids, a=2,b=1,d=1">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid06-360.avif"
+           alt="Toroids, a=2,b=1,d=1.05">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=1.05
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid07-360.avif"
+           alt="Toroids, a=2,b=1,d=1.25">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=1.25
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid08-360.avif"
+           alt="Toroids, a=2,b=1,d=1.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=1.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid09-360.avif"
+           alt="Toroids, a=2,b=1,d=1.75">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=1.75
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid10-360.avif"
+           alt="Toroids, a=2,b=1,d=2">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=2
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid11-360.avif"
+           alt="Toroids, a=2,b=1,d=2.25">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=2.25
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid12-360.avif"
+           alt="Toroids, a=2,b=1,d=2.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=2.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid13-360.avif"
+           alt="Toroids, a=2,b=1,d=2.75">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=2.75
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid14-360.avif"
+           alt="Toroids, a=2,b=1,d=3">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=3
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid15-360.avif"
+           alt="Toroids, a=2,b=1,d=3.5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=3.5
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid16-360.avif"
+           alt="Toroids, a=2,b=1,d=4">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=4
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Toroid/Toroid17-360.avif"
+           alt="Toroids, a=2,b=1,d=5">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Ellipse</span>,
+        <span class="figcap-value" style="color:#FF0000">Toroids</span>,
+        a=2,b=1,d=5
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Toroid parametric equations:</div>
+      \[ x = \left( a \pm \dfrac{b d}{\sqrt{a^{2}\sin^{2}t + b^{2}\cos^{2}t}} \right) \cos t, \quad y = \left( b \pm \dfrac{a d}{\sqrt{a^{2}\sin^{2}t + b^{2}\cos^{2}t}} \right) \sin t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ellipse parametric equations:</div>
+      \[ x = a \cos t, \quad y = b \sin t \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The toroid is the parallel curve of the ellipse at a fixed distance \(d\) measured along the normal. It was studied by Cauchy in 1841 and by Catalan and Breton des Champs (who named it) in 1844. The name comes from the torus: the toroids are the visible outlines of a torus.<sup>1</sup> The parallel curves of a given curve are the involutes of its evolute. For the ellipse the evolute is an astroid-like curve (stretched). Cusps of the parallel appear when \(d\) equals the local radius of curvature; those points lie on the evolute. The radii of curvature of the ellipse range from \(b^{2}/a\) (at the ends of the major axis) to \(a^{2}/b\) (at the ends of the minor axis). When \(d\) lies between these extrema one of the components has four cusps on the evolute.<sup>1</sup> In general the toroid consists of two ovals. Special cases include curves of constant width; MathCurve illustrates one for \(d=2a\) that has the same diameter as the ellipse and resembles a Reuleaux triangle (distinct from the circumscribed circle).<sup>1</sup> Algebraically the parallel of the ellipse is a biquartic curve.<sup>1</sup></p>
+    <p>In computer-aided design the construction is an offset curve. AutoCAD’s OFFSET command generates the practical version used for tool-path compensation, border generation, and tolerance zones around elliptical paths. The mathematical locus retains cusps and self-intersections that the drafting command typically resolves. No specialized engineering application unique to the named toroid (beyond general ellipse offsets and the geometric relation to the torus silhouette) was found.<sup>2</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/toroid/toroid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/toroid/toroid.shtml</a> (definition, history Cauchy 1841 / Catalan–Breton 1844, parametric equations, properties, torus outlines, constant-width example)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Parallel_curve" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Parallel_curve</a> (offset curves in CAD and machining)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TOROID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd)
+  (setq id "Toroid"
+        iq "x=(a±b*d/sqrt(a²sin²t+b²cos²t))cos(t), y=(b±a*d/sqrt(a²sin²t+b²cos²t))sin(t)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (semi-major axis)" 2.0)
+        fb (get_real 2 "b (semi-minor axis)" 1.0)
+        fc (get_real 0 "d (offset distance)" 0.5)
+        fd (if (eq (get_keyword 0 "Outer Inner" "Outer or Inner curve?" "Outer") "Outer") 1.0 -1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", d=" (rtos fc 2 4) ", " (if (eq fd 1.0) "Outer" "Inner"))
+        xc '(* (+ fa (* fd (/ (* fb fc) (sqrt (+ (* (* fa fa) (expt (sin (eval a2)) 2)) (* (* fb fb) (expt (cos (eval a2)) 2))))))) (cos (eval a2)))
+        yc '(* (+ fb (* fd (/ (* fa fc) (sqrt (+ (* (* fa fa) (expt (sin (eval a2)) 2)) (* (* fb fb) (expt (cos (eval a2)) 2))))))) (sin (eval a2)))
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TOROID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

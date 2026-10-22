@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pirondini Pseudospiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Pirondini Pseudospiral</h1>
+      <p class="short-description">The plane curve whose curvature is proportional to the n-th power of arc length; a generalisation of the clothoid (n = 1).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Pirondini/Pirondini01-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=1, clothoid">
+      <figcaption>Pirondini Pseudospiral, a=1,n=1, clothoid</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Pirondini/Pirondini02-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=-0.1">
+      <figcaption>Pirondini Pseudospiral, a=1,n=-0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Pirondini/Pirondini03-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=-0.4">
+      <figcaption>Pirondini Pseudospiral, a=1,n=-0.4</figcaption>
+    </figure>
+      <figure>
+      <img src="Images/Pirondini/Pirondini04-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=-0.5,involute of a circle">
+      <figcaption>Pirondini Pseudospiral, a=1,n=-0.5,involute of a circle</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Pirondini/Pirondini05-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=-0.6">
+      <figcaption>Pirondini Pseudospiral, a=1,n=-0.6</figcaption>
+    </figure>
+      <figure>
+      <img src="Images/Pirondini/Pirondini06-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=0.1">
+      <figcaption>Pirondini Pseudospiral, a=1,n=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Pirondini/Pirondini07-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=0.5">
+      <figcaption>Pirondini Pseudospiral, a=1,n=0.5</figcaption>
+    </figure>
+      <figure>
+      <img src="Images/Pirondini/Pirondini08-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=1.5">
+      <figcaption>Pirondini Pseudospiral, a=1,n=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Pirondini/Pirondini09-360.avif"
+           alt="Pirondini Pseudospiral, a=1,n=-1.5">
+      <figcaption>Pirondini Pseudospiral, a=1,n=-1.5</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Pirondini Pseudospiral parametric integral equations:</div>
+      \[ x = a \int_{0}^{t} \cos\left( \frac{u^{n+1}}{n+1} \right) \, du , \quad y = a \int_{0}^{t} \sin\left( \frac{u^{n+1}}{n+1} \right) \, du \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Intrinsic equation (defining property):</div>
+      \[ s^{n} R_{c} = a^{n+1} \quad (n \neq -1,\ s = at) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Pirondini pseudospiral<sup>1</sup> (also called the pseudo-spiral of Pirondini) is the plane curve whose curvature is proportional to the \(n\)-th power of its arc length \(s\), where the real index \(n\) is different from \(-1\). It was examined by Victor Puiseux in a 1844 memoir<sup>2</sup> on the evolutes and involutes of plane curves and later by Geminiano Pirondini (1857–1914) in papers of 1892 and 1905; the curve is named after the Italian mathematician. Pirondini, who taught analytic and descriptive geometry at the University of Parma, published extensively on surfaces of revolution, helicoids, and intrinsic properties of curves.</p>
+    <p>The defining relation may be written \(R_c = a^{n+1}/s^n\) (or equivalently \((n+1)\varphi=(s/a)^{n+1}\)), where \(R_c\) is the radius of curvature and \(\varphi\) is the tangential angle. Integration of the unit tangent then supplies the parametric form used in the AutoLISP code. Special values of the index recover familiar curves: \(n=1\) is the clothoid (Cornu spiral), \(n=0\) is a circle, \(n=-1\) is the logarithmic spiral (but is forbidden by these equations that would result in division by zero), \(n=-1/2\) is an involute of a circle, and \(n=-2\) is a limiting case of an alysoid. An important geometric property is that the evolute of a pseudospiral of index \(n\) is again a pseudospiral (of a related index).</p>
+    <p>No engineering or scientific applications have been found that are peculiar to a general index \(n\). The clothoid special case (\(n=1\)) is widely used for transition curves in highway and railway alignment, where curvature must change linearly with arc length in order to avoid abrupt changes in lateral acceleration. In contemporary computer-aided geometric design the broader family of curves with monotonic curvature (of which the pure-power pseudospirals form a subclass) appears in aesthetic-curve and fair-curve literature for shape modeling, but these uses rest on the monotonicity property rather than on the specific power law.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/pseudospirale/pseudospirale.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/pseudospirale/pseudospirale.shtml</a> (definition, equations, special cases, properties)</li>
+      <li><a href="https://www.numdam.org/item/JMPA_1844_1_9__377_0/" target="_blank" rel="noopener noreferrer">https://www.numdam.org/item/JMPA_1844_1_9__377_0/</a> (Puiseux 1844 memoir on evolutes)</li>
+      <li><a href="https://arxiv.org/abs/1305.1473" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1305.1473</a> (pseudospirals as monotonic-curvature curves in geometric modeling)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PIRONDINI (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh ft)
+  (setq id "Pirondini Pseudospiral"
+        iq "x=a∫₀ᵗ cos(u^{n+1}/(n+1)) du, y=a∫₀ᵗ sin(u^{n+1}/(n+1)) du"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in t-span"
+        dct 1440
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb -1.0
+        fb (while (equal fb -1.0 1e-8) (setq fb (get_real 0 "n (index, ≠ -1)" 1.0)))
+        fc (+ fb 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (rtos fb 2 4))
+        fd 0.0
+        fe 0.0
+        ff 0.0
+        xc 'fe
+        yc 'ff
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(progn (setq fg fd fd (+ fd paramstep) fh (+ fg (* 0.5 paramstep))) (setq ft (/ (alt_expt fh fc nil) (avoid_zero fc)) fe
+            (+ fe (* fa (cos ft) paramstep)) ff (+ ff (* fa (sin ft) paramstep))) fd)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PIRONDINI)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

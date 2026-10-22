@@ -853,6 +853,21 @@ const curveList = [
     }
   },
   {
+    id: "catenary-of-equal-strength-evolute",
+    title: "Catenary of Equal Strength Evolute",
+    filename: "CatEqualEvolute.html",
+    aliases: ["Evolute of the Catenary of Equal Strength"],
+    eqSortKey: "046.5",
+    done: true,
+    imgCount: 1,
+    equation: "x = a(t - \\tan t),\\quad y = a\\bigl(1 - \\ln(\\cos t)\\bigr)",
+    eqFind: ["x=", "x =", "y=", "y =", "cos", "ln", "tan"],
+    imgSortKey: "046.5",
+    images: {
+      canonical: "Images/CatEqualEvolute/CatEqualEvolute01-360.avif"
+    }
+  },
+  {
     id: "cayley-oval",
     title: "Cayley Oval",
     filename: "CayleyOval.html",
@@ -2860,6 +2875,21 @@ const curveList = [
     }
   },
   {
+    id: "Lazennec-curve",
+    title: "Lazennec Curve",
+    filename: "Lazennec.html",
+    aliases: [],
+    eqSortKey: "163.5",
+    done: true,
+    imgCount: 1,
+    equation: "x=4a\\frac{\\cos t\\ (2-\\sin t\\cos^{2}t)}{2+\\sin t+2\\cos^{2}t}, \\, y=-4a\\frac{1+\\cos^{2}t+\\cos^{4}t}{2+\\sin t+2\\cos^{2}t}",
+    eqFind: ["x=", "x =", "y=", "y =", "cos^2", "cos^4", "sin"],
+    imgSortKey: "163.5",
+    images: {
+      canonical: "Images/Lazennec/Lazennec01-360.avif"
+    }
+  },
+  {
     id: "lemniscate-of-bernoulli",
     title: "Lemniscate of Bernoulli",
     filename: "LemniscateBernoulli.html",
@@ -3221,6 +3251,23 @@ const curveList = [
     }
   },
   {
+    id: "notched-wheel-curve",
+    title: "Notched Wheel Curve",
+    filename: "NotchWheel.html",
+    aliases: ["Kappa Curve", "Windmill Curve", "Right Strophoid"],
+    eqSortKey: "185.5",
+    done: true,
+    imgCount: 16,
+    equation: "r = a\left(1 + \dfrac{\tanh(k\sin n\theta)}{q}\right)",
+    eqFind: ["r=", "r =", "tanh", "theta", "sin"],
+    imgSortKey: "185.5",
+    images: {
+      canonical: "Images/NotchWheel/NotchWheel01-360.avif",
+      variant1: "Images/NotchWheel/NotchWheel02-360.avif",
+      variant2: "Images/NotchWheel/NotchWheel03-360.avif"
+    }
+  },
+  {
     id: "ochoa-curve",
     title: "Ochoa Curve",
     filename: "Ochoa.html",
@@ -3514,6 +3561,23 @@ const curveList = [
       canonical: "Images/Piriform/Piriform01-360.avif",
       variant1: "Images/Piriform/Piriform02-360.avif",
       variant2: "Images/Piriform/Piriform04-360.avif"
+    }
+  },
+  {
+    id: "pirondini-pseudospiral",
+    title: "Pirondini Pseudospiral",
+    filename: "Pirondini.html",
+    aliases: ["Pseudospiral of Pirondini"],
+    eqSortKey: "202",
+    done: true,
+    imgCount: 9,
+    equation: "x = a \\int_{0}^{t} \\cos\\left( \\frac{u^{n+1}}{n+1} \\right) \\, du , \\quad y = a \\int_{0}^{t} \\sin\\left( \\frac{u^{n+1}}{n+1} \\right) \\, du",
+    eqFind: ["x=", "x =", "cos", "sin", "y=", "y =", "int", "du"],
+    imgSortKey: "202",
+    images: {
+      canonical: "Images/Pirondini/Pirondini02-360.avif",
+      variant1: "Images/Pirondini/Pirondini03-360.avif",
+      variant2: "Images/Pirondini/Pirondini05-360.avif"
     }
   },
   {
@@ -4590,6 +4654,23 @@ const curveList = [
         url: "https://mathcurve.com/courbes2d.gb/danseur/danseur.shtml",
         external: true
     }
+    }
+  },
+  {
+    id: "toroid",
+    title: "Toroid",
+    filename: "Toroid.html",
+    aliases: ["Ellipse Parallel Curve"],
+    eqSortKey: "264.5",
+    done: true,
+    imgCount: 17,
+    equation: "x = \\left( a \\pm \\dfrac{b d}{\\sqrt{a^{2}\\sin^{2}t + b^{2}\\cos^{2}t}} \\right) \\cos t, \\quad y = \\left( b \\pm \\dfrac{a d}{\\sqrt{a^{2}\\sin^{2}t + b^{2}\\cos^{2}t}} \\right) \\sin t",
+    eqFind: ["x=", "x =", "y=", "y =", "sqrt", "sin^2", "cos^2"],
+    imgSortKey: "264.5",
+    images: {
+      canonical: "Images/Toroid/Toroid03-360.avif",
+      variant1: "Images/Toroid/Toroid08-360.avif",
+      variant2: "Images/Toroid/Toroid16-360.avif"
     }
   },
   {

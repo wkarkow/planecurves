@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catenary of Equal Strength Evolute - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Catenary of Equal Strength Evolute</h1>
+      <p class="short-description">The locus of the centers of curvature of the catenary of equal strength; the envelope of its normals.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure style="display: flex; flex-direction: column; align-items: center;">
+      <img src="Images/CatEqualEvolute/CatEqualEvolute01-360.avif"
+           alt="Catenary of equal strength (black) and its evolute (red) at matching scales"
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Catenary of equal strength, a=π;</span>
+        <span class="figcap-value" style="color:#FF0000">Evolute, a=1</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 460px;">
+    <div class="equation-line">
+      <div class="equation-label">Catenary of Equal Strength Evolute parametric equations:</div>
+      \[ x = a(t - \tan t),\quad y = a\bigl(1 - \ln(\cos t)\bigr),\quad |t| < \pi/2 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Matching scale with parent (Catequal.lsp):</div>
+      \[ a_{\text{evolute}} = \dfrac{a_{\text{parent}}}{\pi} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The evolute of the catenary of equal strength is the locus of the centers of curvature of that parent curve. The parent was studied in 1826 by Davies Gilbert in connection with the design of the Menai Strait suspension bridge, where he considered a hanging cable whose cross-section varies so that its resistance to breaking remains constant along its length. Independently in the same year, Finck and Bobillier examined the curve, and Coriolis returned to it in 1836 (apparently unaware of the earlier work). Other names for the parent include Coriolis’ catenary, the longitudinal curve, and the curve of the log cosine.<sup>1,2</sup></p>
+    <p>Physically, the parent is the shape taken by a flexible, inextensible wire hanging under its own weight when the linear density is made proportional to the local tension. In that case the stress is uniform, so the wire is equally likely to fail at any point. The same profile, inverted, describes a vault or arch that carries only its own weight. More recently the parent has been used as a building block for electromagnetic metasurfaces under the name “catenary of equal phase gradient.”<sup>3,4</sup> One architectural realization is the “arco limite” (limit arch) employed by Sergio Musmeci in the Basento Bridge (Potenza, 1967–69).</p>
+    <p>The evolute itself has no independent engineering or scientific applications recorded in the literature. Like any evolute it is the envelope of the normals to its parent and the locus of centers of curvature; those geometric properties are useful in general studies of parallel curves, caustics, and rolling motion, but no specific use of this particular evolute has been identified.</p>
+    <p>In the parent curve as coded, the parameter \( a \) is the full horizontal span between the two vertical asymptotes. That span equals \( \pi c \), where \( c \) is the characteristic length that appears in the standard form \( y = -c \ln(\cos(x/c)) \). Derivation of the evolute shows that its own scale parameter is exactly this \( c \). Consequently the two curves match in physical size when \( a_{\text{evolute}} = a_{\text{parent}} / \pi \). (The parameter \( t \) on the evolute is the same angle that appears as \( \phi = x/c \) on the parent.)</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/chainettedegaleresistance/chainettedegaleresistance.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/chainettedegaleresistance/chainettedegaleresistance.shtml</a> (history, equations, and evolute parametrization)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Catenary#Catenary_of_equal_strength" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Catenary#Catenary_of_equal_strength</a> (Davies Gilbert 1826, Coriolis 1836, physical derivation)</li>
+      <li><a href="https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.2014.0346" target="_blank" rel="noopener noreferrer">https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.2014.0346</a> (Gilbert’s 1826 paper and Menai Bridge context)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Catenary" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Catenary</a> (electromagnetic metasurface application; also notes vault use)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CATEQUALEVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                           divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Catenary of Equal Strength Evolute"
+        iq "x=a(t-tan t), y=a(1-ln(cos t))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in t-span"
+        dct 400
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 2 "t-span (< pi/2 ≈1.57; larger=closer to asymptotes)" 1.5)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", t-span=" (rtos fb 2 4))
+        xc '(* fa (- (eval a2) (tan (eval a2))))
+        yc '(* fa (- 1.0 (log (cos (eval a2)))))
+        paramstep (/ fb divcount)
+        skm '(nil T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CATEQUALEVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

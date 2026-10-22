@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notched Wheel - Plane Curves</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Notched Wheel</h1>
+      <p class="short-description">Closed polar curve obtained by making variably rounded notches in a circle.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel01-360.avif"
+           alt="Notched Wheel, a=1,k=10,n=5,q=2">
+      <figcaption>Notched Wheel, a=1,k=10,n=5,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel02-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=5,q=2">
+      <figcaption>Notched Wheel, a=1,k=1,n=5,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel03-360.avif"
+           alt="Notched Wheel, a=1,k=0.1,n=5,q=2">
+      <figcaption>Notched Wheel, a=1,k=0.1,n=5,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel04-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=2,q=2">
+      <figcaption>Notched Wheel, a=1,k=1,n=2,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel05-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=3,q=2">
+      <figcaption>Notched Wheel, a=1,k=1,n=3,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel06-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=4,q=1">
+      <figcaption>Notched Wheel, a=1,k=1,n=4,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel07-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=5,q=10">
+      <figcaption>Notched Wheel, a=1,k=1,n=5,q=10</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel08-360.avif"
+           alt="Notched Wheel, a=2,k=1,n=5,q=0.1">
+      <figcaption>Notched Wheel, a=2,k=1,n=5,q=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel09-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=5,q=0.5">
+      <figcaption>Notched Wheel, a=1,k=1,n=5,q=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel10-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=5,q=tanh(1)=0.7615941559557649">
+      <figcaption>Notched Wheel, a=1,k=1,n=5,q=tanh(1)=0.7615941559557649</figcaption>
+    </figure>
+      <figure>
+      <img src="Images/NotchWheel/NotchWheel11-360.avif"
+           alt="Notched Wheel+Rose, r=a·cos^c(5θ),c=1,0.5,0.3">
+      <figcaption>
+        <span class="figcap-value" style="color:#000000">Notched Wheel</span>
+        + Rose, r=a·cosᶜ(5θ),c=
+        <span class="figcap-value" style="color:#FF0000">1.0</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.3</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel12-360.avif"
+           alt="Notched Wheel, a=1,k=20,n=24,q=20">
+      <figcaption>Notched Wheel, a=1,k=20,n=24,q=20</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel13-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=24,q=20">
+      <figcaption>Notched Wheel, a=1,k=1,n=24,q=20</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel14-360.avif"
+           alt="Notched Wheel, a=1,multiple values of k,n=1,q=1">
+      <figcaption>
+        Notched Wheel, a=1,k=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">4</span>,
+        <span class="figcap-value" style="color:#009600">8</span>,
+        <span class="figcap-value" style="color:#FF9600">16</span>,
+        <span class="figcap-value" style="color:#9600FF">32</span>,
+        n=1,q=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel15-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=1,q=0.7615941559557649 versus Cardioid">
+      <figcaption>
+        Notched Wheel, a=1,k=1,n=1,q=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">0.7615941559557649</span>
+        versus
+        <span class="figcap-value" style="color:#0000FF">Cardioid</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/NotchWheel/NotchWheel16-360.avif"
+           alt="Notched Wheel, a=1,k=1,n=2,q=0.7615941559557649">
+      <figcaption>Notched Wheel, a=1,k=1,n=2,q=0.7615941559557649</figcaption>
+    </figure>  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Notched Wheel polar equation:</div>
+      \[ r = a\left(1 + \dfrac{\tanh(k\sin n\theta)}{q}\right) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Notched Wheel is the circle case of the general notching construction given on MathCurve.<sup>1</sup> A non-decreasing odd function \(h\) with range \([-1,1]\) (the page cites \(\tanh\)) is used to form \(H(\theta)=h(k\sin n\theta)/q\). The radius of a circle of radius \(a\) is then modulated by \(1+H(\theta)\), producing \(n\) external notches and \(n\) internal notches. Depth is controlled by \(k\) and relative height by \(q\). The construction can be applied to any central curve by offsetting along the normal; when the central curve is a circle the result is called the notched wheel and has the polar equation shown above.</p>
+    <p>No earlier attribution or independent catalogue entry has been found. No applications in engineering or the natural sciences are documented for this exact form. Actual mechanical gear teeth use involute or cycloidal profiles chosen for constant velocity ratio and manufacturability; the notched wheel remains an illustrative polar construction.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/dentelee/dentelee.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/dentelee/dentelee.shtml</a> (definition, general construction, and notched-wheel polar equation)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:NOTCHWHEEL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                      xspan restartflag rval xc yc skm a1 a2 x1 y1 x2 y2 eq_display fa fb fc fd id iq dcl opt kw mode dpr dct dpt span)
+  (setq id "Notched Wheel"
+        iq "r=a(1+tanh(k·sin(n·θ))/q)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (base radius)" 1.0)
+        fb (get_real 2 "k (notch sharpness, larger = deeper)" 10.0)
+        fc (get_integer 6 "n (notch count)" 5)
+        fd (get_real 2 "q (relative height, larger = shallower)" 2.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", k=" (rtos fb 2 4) ", n=" (itoa fc) ", q=" (rtos fd 2 4))
+        rval '(* fa (+ 1 (/ (tanh (* fb (sin (* fc (eval a2))))) fd)))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:NOTCHWHEEL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>
