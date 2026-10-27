@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lemoine Septic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Lemoine Septic</h1>
+      <p class="short-description">Rational septic of degree 7; locus of the concurrence point of an altitude, a median, and a bisector when the altitude vertex is fixed at (0, a) and the median vertex at (0, 0).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Lemoine/Lemoine01-360.avif"
+           alt="Lemoine Septic, a=1"
+      <figcaption>Lemoine Septic, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Lemoine/Lemoine02-360.avif"
+           alt="Lemoine Septic, a=1"
+      <figcaption>Lemoine Septic, a=1</figcaption>
+    </figure>    
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 300px;">
+    <div class="equation-line">
+      <div class="equation-label">Lemoine Septic implicit equation:</div>
+      \[ x(x^{2}+y^{2})^{3}-(3x^{2}-7y^{2})(x^{2}+y^{2})^{2}+x(3x^{2}-19y^{2})(x^{2}+y^{2})-(x^{4}-18x^{2}y^{2}-5y^{4})-7xy^{2}+y^{2}=0 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Lemoine Septic parametric equations:</div>
+      \[ x=a\frac{\cos t\,(3\cos^{2}t-3\cos t+1)}{2\cos^{3}t-2\cos t+1},\qquad y=a\frac{\cos^{2}t\sin t}{2\cos^{3}t-2\cos t+1}\tan^{2}\frac{t}{2} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Lemoine septic<sup>1</sup> arises as the locus of the point of concurrence of an altitude, a median, and an angle bisector in a triangle, under the condition that these three lines are concurrent. Émile Lemoine (1840–1912) considered such triangles in 1885. Lemoine, a French civil engineer who later rose to chief inspector responsible for the gas supply of Paris, is best known for initiating the modern study of the triangle through his 1873–74 work on the symmedian point (the Lemoine point, the isogonal conjugate of the centroid).<sup>2</sup> In the construction fixed by MathCurve, the vertex from which the altitude is drawn is held at (0, a) and the vertex from which the median is drawn is held at (0, 0); the locus of their common intersection with the bisector is the septic. The curve is rational of degree 7 and possesses a vertical asymptote at \(x = -7a\).</p>
+    <p>No applications of this particular septic have been identified in engineering or the natural sciences. Lemoine’s broader geometric results (the Lemoine point and the associated circles) remain of interest in pure triangle geometry and in the cataloguing of concurrent cevians, but the septic itself appears only as an algebraic locus answering the 1885 concurrency question.<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/septic/septic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/septic/septic.shtml</a> (definition as rational septic, geometric construction with fixed points (0,1) and (0,0), association with Lemoine 1885 Mathesis)</li>
+      <li><a href="https://en.wikipedia.org/wiki/%C3%89mile_Lemoine" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/%C3%89mile_Lemoine</a> (biography, Lemoine point and modern triangle geometry)</li>
+      <li><a href="https://hrcak.srce.hr/file/390435" target="_blank" rel="noopener noreferrer">https://hrcak.srce.hr/file/390435</a> (Odehnal 2021, noting the rational septic of Lemoine among rare septics of triangle geometry)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:LEMOINE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                     divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc maxdraw skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Lemoine Septic"
+        iq "x=a·cos(t)(3cos²(t)-3cos(t)+1)/(2cos³(t)-2cos(t)+1), y=a·cos²(t)sin(t)·tan²(t/2)/(2cos³(t)-2cos(t)+1)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (overall scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(* fa (/ (* (cos (eval a2)) (+ (* 3.0 (expt (cos (eval a2)) 2)) (* -3.0 (cos (eval a2))) 1.0)) (+ (* 2.0 (expt (cos (eval a2)) 3)) (* -2.0 (cos (eval a2))) 1.0)))
+        yc '(* fa (/ (* (expt (cos (eval a2)) 2) (sin (eval a2))) (+ (* 2.0 (expt (cos (eval a2)) 3)) (* -2.0 (cos (eval a2))) 1.0))
+            (if (equal (cos (/ (eval a2) 2.0)) 0.0 1e-8) 1e8 (expt (tan (/ (eval a2) 2.0)) 2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 10.0)
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:LEMOINE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

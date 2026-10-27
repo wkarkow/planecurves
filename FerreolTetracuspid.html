@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ferréol Tetracuspid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Ferréol Tetracuspid</h1>
+      <p class="short-description">Four-lobed tetracuspid family with inward cusps, distinct from an epicycloid. </p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/FerreolTetracuspid/FerreolTetracuspid01-360.avif"
+           alt="Ferréol Tetracuspid, a=1,n=1 to 9">
+      <figcaption>
+        Ferréol Tetracuspid,
+        <span class="figcap-value" style="color:#000000">n=1,rₘₐₓ=1</span>,
+        <span class="figcap-value" style="color:#FF0000">n=3,rₘₐₓ=2</span>,
+        <span class="figcap-value" style="color:#0000FF">n=5,rₘₐₓ=4</span>,
+        <span class="figcap-value" style="color:#009600">n=7,rₘₐₓ=8</span>,
+        <span class="figcap-value" style="color:#FF9600">n=9,rₘₐₓ=16</span>,
+        a=1
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/FerreolTetracuspid/FerreolTetracuspid02-360.avif"
+           alt="Ferréol Tetracuspid, r_max=1,n=1 to 9">
+      <figcaption>
+        Ferréol Tetracuspid, rₘₐₓ=1,
+        <span class="figcap-value" style="color:#000000">n=1,a=1</span>,
+        <span class="figcap-value" style="color:#FF0000">n=3,a=1/2</span>,
+        <span class="figcap-value" style="color:#0000FF">n=5,a=1/4</span>,
+        <span class="figcap-value" style="color:#009600">n=7,a=1/8</span>,
+        <span class="figcap-value" style="color:#FF9600">n=9,a=1/16</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/FerreolTetracuspid/FerreolTetracuspid03-360.avif"
+           alt="Ferréol Tetracuspid, r_max=1, multiple values of n and a">
+      <figcaption>
+        Ferréol Tetracuspid, rₘₐₓ=1,
+        <span class="figcap-value" style="color:#000000">n=1,a=1</span>,
+        <span class="figcap-value" style="color:#FF0000">n=1.25,a=0.9170</span>,
+        <span class="figcap-value" style="color:#0000FF">n=1.5,a=0.8409</span>,
+        <span class="figcap-value" style="color:#009600">n=1.75,a=0.7711</span>,
+        <span class="figcap-value" style="color:#FF9600">n=2.0,a=0.7071</span>,
+        <span class="figcap-value" style="color:#9600FF">n=2.25,a=0.6484</span>,
+        <span class="figcap-value" style="color:#0096FF">n=2.5,a=0.5946</span>,
+        <span class="figcap-value" style="color:#AA5555">n=2.75,a=0.5453</span>,
+        <span class="figcap-value" style="color:#00FF00">n=3,a=0.5</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/FerreolTetracuspid/FerreolTetracuspid04-360.avif"
+           alt="Ferréol Tetracuspid, r_max=1, multiple values of n and a">
+      <figcaption>
+        Ferréol Tetracuspid, rₘₐₓ=1,
+        <span class="figcap-value" style="color:#000000">n=1,a=1</span>,
+        <span class="figcap-value" style="color:#FF0000">n=0.9,a=1.0353</span>,
+        <span class="figcap-value" style="color:#0000FF">n=0.8,a=1.0718</span>,
+        <span class="figcap-value" style="color:#009600">n=0.7,a=1.1096</span>,
+        <span class="figcap-value" style="color:#FF9600">n=0.6,a=1.1487</span>,
+        <span class="figcap-value" style="color:#9600FF">n=0.5,a=1.1892</span>,
+        <span class="figcap-value" style="color:#0096FF">n=0.4,a=1.2311</span>,
+        <span class="figcap-value" style="color:#AA5555">n=0.3,a=1.2746</span>,
+        <span class="figcap-value" style="color:#00FF00">n=0.2,a=1.3195</span>,
+        <span class="figcap-value" style="color:#FF00FF">n=0.1,a=1.3660</span>,
+        <span class="figcap-value" style="color:#009696">n=0.001,a=1.4137</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/FerreolTetracuspid/FerreolTetracuspid05-360.avif"
+           alt="Ferréol Tetracuspid, small negative n at r_max=1">
+      <figcaption>
+        Ferréol Tetracuspid, rₘₐₓ=1,
+        <span class="figcap-value" style="color:#000000">n=-1.0,a=2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">n=-0.9,a=1.9319</span>,
+        <span class="figcap-value" style="color:#0000FF">n=-0.8,a=1.8661</span>,
+        <span class="figcap-value" style="color:#009600">n=-0.9,a=1.8025</span>,
+        <span class="figcap-value" style="color:#FF9600">n=-0.6,a=1.7411</span>,
+        <span class="figcap-value" style="color:#9600FF">n=-0.5,a=1.6818</span>,
+        <span class="figcap-value" style="color:#0096FF">n=-0.4,a=1.6245</span>,
+        <span class="figcap-value" style="color:#AA5555">n=-0.3,a=1.5692</span>,
+        <span class="figcap-value" style="color:#00FF00">n=-0.2,a=0.5157</span>,
+        <span class="figcap-value" style="color:#FF00FF">n=-0.1,a=0.4641</span>,
+        <span class="figcap-value" style="color:#009696">n=-0.001,a=0.4147</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/FerreolTetracuspid/FerreolTetracuspid06-360.avif"
+           alt="Ferréol Tetracuspid,negative n at r_max=1">
+      <figcaption>
+        Ferréol Tetracuspid, rₘₐₓ=1,
+        <span class="figcap-value" style="color:#000000">n=-1,a=2.0</span>,
+        <span class="figcap-value" style="color:#FF0000">n=-1.25,a=2.1810</span>,
+        <span class="figcap-value" style="color:#0000FF">n=-1.5,a=2.3784</span>,
+        <span class="figcap-value" style="color:#009600">n=-1.75,a=2.5937</span>,
+        <span class="figcap-value" style="color:#FF9600">n=-2.0,a=2.8284</span>,
+        <span class="figcap-value" style="color:#9600FF">n=-2.25,a=3.0844</span>,
+        <span class="figcap-value" style="color:#0096FF">n=-2.5,a=3.3636</span>,
+        <span class="figcap-value" style="color:#AA5555">n=-2.75,a=3.6680</span>,
+        <span class="figcap-value" style="color:#00FF00">n=-3.0,a=4.0</span>,
+        <span class="figcap-value" style="color:#FF00FF">n=-5.0,a=8.0</span>,
+        <span class="figcap-value" style="color:#009696">n=-7.0,a=16.0</span>,
+        <span class="figcap-value" style="color:#960096">n=-9.0,a=32.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Ferréol Tetracuspid Cartesian equation:</div>
+      \[ a^\alpha \bigl(|x|^\alpha + |y|^\alpha\bigr) = (x^2 + y^2)^\alpha, \quad \alpha = 1/n \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Ferréol Tetracuspid parametric equations:</div>
+      \[ x = a \dfrac{\cos^n(t)}{\cos^{2n}(t) + \sin^{2n}(t)}, \quad y = a \dfrac{\sin^n(t)}{\cos^{2n}(t) + \sin^{2n}(t)} \]
+    </div>
+
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Ferréol tetracuspid (also four-lobed tetracuspid) is the one-parameter family of closed curves isolated on the MathCurve tetracuspide page under the heading of huddled (inward-cusped) tetracuspids.<sup>1</sup> MathCurve presents the parametric equations for odd positive integers \(n\) and notes that the absolute-value Cartesian form extends the family to any real exponent \(\alpha=1/n\in(0,1]\). The case \(n=3\) is identified there as the orthoptic of the cross curve.<sup>1,2</sup> No earlier source assigns a proper name to the general family; the designation Ferréol tetracuspid records the sole published isolation of the parametric form.</p>
+    <p>Robert Ferréol, a French mathematician and professeur agrégé, taught in the classes préparatoires (mathématiques supérieures) at the Lycée Fénelon in Paris. In 1993 he began MathCurve (the Encyclopédie des formes mathématiques remarquables) as a modest summary of classical curves intended for his students; the site has since grown into a comprehensive online reference containing roughly 550 plane curves, 150 space curves, 300 surfaces, 90 fractals and more than 250 polyhedra, with an English translation by David Michel. His work was recognized in 2008 by the Anatole-Decerf Prize of the Société mathématique de France for contributions to the teaching and popularization of mathematics. Ferréol continues to publish on curves, surfaces and related topics in Tangente and other outlets,and his ongoing correspondence has encouraged the systematic expansion of the present collection.</p>
+    <p>A tetracuspid is any simple closed curve possessing exactly four cusps. The classical (protruding) specimen is the astroid; the present family is the huddled counterpart in which the cusps, when they exist, point inward. True cusps appear only for odd positive integers \(n\); for other real values the four lobes remain but the corners are rounded. The four-cusped epicycloid is a distinct curve.</p>
+    <p>No engineering or natural-science applications peculiar to the general family have been located. The special case \(n=3\) inherits whatever uses may attach to the orthoptic of the cross curve, but none are documented for that orthoptic beyond its geometric definition.<sup>2,3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/tetracuspide/tetracuspide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/tetracuspide/tetracuspide.shtml</a> (parametric family, Cartesian form, \(n=3\) orthoptic of the cross curve).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/orthoptic/orthoptic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/orthoptic/orthoptic.shtml</a> (definition of orthoptic; cross-curve case).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/cruciforme/cruciforme.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/cruciforme/cruciforme.shtml</a> (cross curve).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:FERREOLTETRACUSPID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                               divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj)
+  (setq id "Ferréol Tetracuspid"
+        iq "x=a·cos^n(t)/(cos^{2n}t+sin^{2n}t), y=a·sin^n(t)/(cos^{2n}t+sin^{2n}t)  (n real)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in quadrant"
+        dct 360
+        dpt nil
+        span 90
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "n (exponent)" 3.0)
+        fb (expt 2.0 (/ (- fa 1.0) 2.0))
+        fc (get_real 2 "rₘₐₓ" fb)
+        fd (/ fc fb)
+        eq_display (strcat "\nn=" (rtos fa 2 4) ", rₘₐₓ=" (rtos fc 2 4) ", a=" (rtos fd 2 4))
+        xc '(progn (setq fe (eval a2)) (cond ((< (abs fe) 1e-13) (if (> fa 0.0) fd 0.0)) ((< (abs (- fe (/ pi 2.0))) 1e-13) 0.0) (T (setq ff (cos fe) fg (sin fe)
+            fh (alt_expt ff fa nil) fi (alt_expt fg fa nil) fj (avoid_zero (+ (alt_expt ff (* 2.0 fa) nil) (alt_expt fg (* 2.0 fa) nil)))) (* fd (/ fh fj)))))
+        yc '(progn (setq fe (eval a2)) (cond ((< (abs fe) 1e-13) 0.0) ((< (abs (- fe (/ pi 2.0))) 1e-13) (if (> fa 0.0) fd 0.0)) (T (* fd (/ fi fj)))))
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc)
+  (if (and plineents (= (type plineents) 'PICKSET) (> (sslength plineents) 0)) (command "array" plineents "" "p" (list x0 y0) 4 360.0 "y"))
+  (princ))
+(C:FERREOLTETRACUSPID)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

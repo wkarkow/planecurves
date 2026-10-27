@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Torpedo - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Torpedo</h1>
+      <p class="short-description">Rational quartic; the right trifolium of Longchamps 1884 with a generalized polar form.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Torpedo/Torpedo01-360.avif"
+       alt="Torpedo, a=1,b/c=1/1,d/e=2/1">
+      <figcaption>Torpedo, a=1,b/c=1/1,d=1,e/f=2/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo02-360.avif"
+       alt="Torpedo variant 1, a=1">
+      <figcaption>Torpedo variant 1, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo03-360.avif"
+       alt="Torpedo variant 2, a=1">
+      <figcaption>Torpedo variant 2, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo04-360.avif"
+       alt="Torpedo variant 3, a=1">
+      <figcaption>Torpedo variant 3, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo05-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/1,d/e=1/1, Double Egg">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/1,d/e=1/1, Double Egg</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo06-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/1,d/e=3/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/1,d/e=3/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo07-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=2/1,d/e=2/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=2/1,d/e=2/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo08-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/2,d/e=2/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/2,d/e=2/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo09-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=3/2,d/e=2/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=3/2,d/e=2/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo10-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=3/2,d/e=3/2">
+      <figcaption>Generalized Torpedo, a=1,b/c=3/2,d/e=3/2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo11-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/1,d/e=3/2">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/1,d/e=3/2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo12-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/2,d/e=1/2, cardioid">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/2,d/e=1/2, cardioid</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo13-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/2,d/e=1/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/2,d/e=1/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo14-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/3,d/e=1/2">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/3,d/e=1/2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo15-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/3,d/e=1/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/3,d/e=1/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo16-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/3,d/e=2/3">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/3,d/e=2/3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo17-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/3,d/e=1/3">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/3,d/e=1/3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo18-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/2,d/e=2/3">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/2,d/e=2/3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo19-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=2/3,d/e=2/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=2/3,d/e=2/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo20-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=2/1,d/e=3/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=2/1,d/e=3/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo21-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=3/1,d/e=5/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=3/1,d/e=5/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo22-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=4/1,d/e=8/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=4/1,d/e=8/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo23-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=8/1,d/e=8/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=8/1,d/e=8/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo24-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/8,d/e=8/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/8,d/e=8/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo25-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/64,d/e=8/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/64,d/e=8/1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Torpedo/Torpedo26-360.avif"
+       alt="Generalized Torpedo, a=1,b/c=1/27,d/e=3/1">
+      <figcaption>Generalized Torpedo, a=1,b/c=1/27,d/e=3/1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 240px;">
+    <div class="equation-line">
+      <div class="equation-label">Classical Cartesian:</div>
+      \[ (x^{2}+y^{2})^{2}=a x(x^{2}-y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Classical polar:</div>
+      \[ r=a\cos\theta\cos 2\theta \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar:</div>
+      \[ r=a\cdot\cos\left(\frac{b}{c}\theta\right)\cdot d\cdot\cos\left(\frac{e}{f}\theta\right) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Variant 1 implicit:</div>
+      \[ x^{4}+y^{4}=a\,xy(x+y) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Variant 1 polar:</div>
+      \[ r=a\frac{\cos\theta\sin\theta(\cos\theta+\sin\theta)}{\cos^{4}\theta+\sin^{4}\theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Variant 2 implicit (blend):</div>
+      \[ x^{6}+y^{6}+\alpha(x^{4}y^{2}+x^{2}y^{4})=a\,xy(x+y) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Variant 2 polar:</div>
+      \[ r=a\frac{\cos\theta\sin\theta(\cos\theta+\sin\theta)}{\alpha(\cos^{4}\theta+\sin^{4}\theta)+(1-\alpha)(\cos^{6}\theta+\sin^{6}\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Variant 3 implicit:</div>
+      \[ x^{6}+y^{6}=a\,xy(x+y) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Variant 3 polar:</div>
+      \[ r=a\frac{\cos\theta\sin\theta(\cos\theta+\sin\theta)}{\cos^{6}\theta+\sin^{6}\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Torpedo curve was studied by G. Gohierre de Longchamps in 1884 in his <em>Cours de mathématiques spéciales. Deuxième partie. Géométrie analytique à deux dimensions</em> (Paris: Ch. Delagrave), where the construction begins on page 512.<sup>1</sup> Longchamps called the curve the <em>right trifolium</em>; the name “torpedo” is a later descriptive label used to avoid confusion with the classical trifolium family. It is a rational quartic. The curve is the strophoid of a circle centered at \((a/4,0)\) and passing through the origin, taken with respect to a point on the circle and the point at infinity along the diameter through the origin. It is also a special case of the right trifolium (the pedal of a deltoid with respect to a point on the inscribed circle symmetric to a vertex), a special case of the fish curve, and a tritrochoid. It arises as the locus of the isobarycenter of three circular motions of equal radius, two of opposite angular speed and one of double speed. Like other fish curves it is a planar projection of Viviani’s window, and it can be obtained as the orthopolar of a circle. A closely related rational quartic is Cramer’s trifolium.<sup>2</sup></p>
+    <p>No applications in engineering or the natural sciences specific to this curve have been located. The geometric constructions above (strophoid, pedal, orthopolar, projection of Viviani’s window) remain the documented contexts in which the curve appears. MathCurve displays several algebraic variants of related appearance; the three closed forms retained here (degree-4, degree-6, and a one-parameter blend of the two) preserve the torpedo character. For some obscure reason, such variants have been named "dickoids".</p>  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://archive.org/details/coursdemathmati00longgoog/page/512/mode/2up" target="_blank" rel="noopener noreferrer">https://archive.org/details/coursdemathmati00longgoog/page/512/mode/2up</a> (Longchamps 1884 construction)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/torpille/torpille.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/torpille/torpille.shtml</a> (history, equations, and geometric constructions)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:TORPEDO (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                    id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm)
+  (setq id "Torpedo"
+        iq ""
+        dcl "TORPEDO"
+        opt '("Classical"
+              "x4+y4=xy(x+y)"
+              "x4::x6 α blend"
+              "x6+y6=xy(x+y)")
+        kw 0
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\nr=a·cos((b/c)θ)·d·cos((e/f)θ)")
+     (setq fa (get_real 6 "a (scale)" 1.0)
+           fb (get_integer 6 "b (numerator of first frequency)" 1)
+           fc (get_integer 6 "c (denominator of first frequency)" 1)
+           fd (get_integer 6 "d (numerator of second frequency)" 2)
+           fe (get_integer 6 "e (denominator of second frequency)" 1)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b/c=" (itoa fb) "/" (itoa fc) ", d/e=" (itoa fd) "/" (itoa fe)))
+     (setq ff (gcd (abs fb) (abs fc))
+           fg (/ fb ff)
+           fh (/ fc ff)
+           fi (gcd (abs fd) (abs fe))
+           fj (/ fd fi)
+           fk (/ fe fi)
+           fl (abs (/ (* fh fk) (gcd fh fk))))
+     (if (> fl 1)
+       (progn
+         (setq fm (* divcount fl)
+               divcount (get_integer 6 (strcat "# of divisions (closes in " (itoa fl) " revolutions)") fm)
+               span (* 360.0 fl)
+               paramstep (/ (* span (/ pi 180.0)) divcount)
+               eq_display (strcat eq_display "  [closes in " (itoa fl) " turns]"))))
+     (setq rval '(* fa fd (cos (* (/ (float fb) fc) (eval a2))) (cos (* (/ (float fd) fe) (eval a2))))))
+    ((eq kw 1)
+     (princ "\nx⁴+y⁴=xy(x+y)")
+     (setq fa (get_real 4 "a (scale)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           rval '(* fa (/ (* (cos (eval a2)) (sin (eval a2)) (+ (cos (eval a2)) (sin (eval a2)))) (+ (alt_expt (cos (eval a2)) 4 nil) (alt_expt (sin (eval a2)) 4 nil))))))
+    ((eq kw 2)
+     (princ "\nIntermediate: blend of degree-4 and degree-6")
+     (setq fa (get_real 4 "a (scale)" 1.0)
+           fb (get_real 2 "alpha (1=x⁴ ... 0=x⁶)" 0.5)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", alpha=" (rtos fb 2 4))
+           rval '(* fa (/ (* (cos (eval a2)) (sin (eval a2)) (+ (cos (eval a2)) (sin (eval a2)))) (+ (* fb (+ (alt_expt (cos (eval a2)) 4 nil)
+                 (alt_expt (sin (eval a2)) 4 nil))) (* (- 1.0 fb) (+ (alt_expt (cos (eval a2)) 6 nil) (alt_expt (sin (eval a2)) 6 nil))))))))
+    ((eq kw 3)
+     (princ "\nx⁶+y⁶=xy(x+y)")
+     (setq fa (get_real 4 "a (scale)" 1.0)
+           eq_display (strcat "\na=" (rtos fa 2 4))
+           rval '(* fa (/ (* (cos (eval a2)) (sin (eval a2)) (+ (cos (eval a2)) (sin (eval a2)))) (+ (alt_expt (cos (eval a2)) 6 nil) (alt_expt (sin (eval a2)) 6 nil)))))))
+  (setq xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:TORPEDO)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

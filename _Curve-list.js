@@ -1245,6 +1245,21 @@ const curveList = [
     }
   },
   {
+    id: "cramer-trifolium",
+    title: "Cramer Trifolium",
+    filename: "CramerTrifolium.html",
+    aliases: [],
+    eqSortKey: "068.5",
+    done: true,
+    imgCount: 1,
+    equation: "x^{4}+y^{4}=a x(x^{2}-y^{2}), \\quad r=a\\frac{\\cos\\theta\\cos 2\\theta}{\\cos^{4}\\theta+\\sin^{4}\\theta}",
+    eqFind: ["r=", "r =", "cos^4", "sin^4", "theta", "x^4", "x^2", "y^4", "y^2"],
+    imgSortKey: "068.5",
+    images: {
+      canonical: "Images/CramerTrifolium/CramerTrifolium01-360.avif"
+    }
+  },  
+  {
     id: "cranioid",
     title: "Cranioid",
     filename: "Cranioid.html",
@@ -1929,6 +1944,23 @@ const curveList = [
     }
   },
   {
+    id: "ferreol-tetracuspid",
+    title: "Ferreol Tetracuspid",
+    filename: "FerreolTetracuspid.html",
+    aliases: ["Four-lobed Tetracuspid"],
+    eqSortKey: "107.5",
+    done: true,
+    imgCount: 6,
+    equation: "a^\\alpha \\bigl(|x|^\\alpha + |y|^\\alpha\\bigr) = (x^2 + y^2)^\\alpha, \\quad x = a \\dfrac{\\cos^n(t)}{\\cos^{2n}(t) + \\sin^{2n}(t)}, y = a \\dfrac{\\sin^n(t)}{\\cos^{2n}(t) + \\sin^{2n}(t)}",
+    eqFind: ["x=", "x =", "y=", "y =", "x^2", "y^2", "alpha", "cos^n", "sin^n"],
+    imgSortKey: "107.5",
+    images: {
+      canonical: "Images/FerreolTetracuspid/FerreolTetracuspid02-360.avif",
+      variant1: "Images/FerreolTetracuspid/FerreolTetracuspid04-360.avif",
+      variant2: "Images/FerreolTetracuspid/FerreolTetracuspid06-360.avif"      
+    }
+  },
+  {
     id: "fermat-spiral",
     title: "Fermat Spiral",
     filename: "Fermat.html",
@@ -2600,7 +2632,7 @@ const curveList = [
     eqSortKey: "148",
     done: true,
     imgCount: 16,
-    equation: "x = (R-r)\\cos\\theta + d\\cos\\left(\\frac{R-r}{r}\\theta\\right) - \\dfrac{r\\bigl(r^{2}-2rd\\cos(\\frac{R}{r}\\theta)+d^{2}\\bigr)}{r^{3}+(r-R)d^{2}+rd(R-2r)\\cos(\\frac{R}{r}\\theta)} \\left[(R-r)\\cos\\theta - \\frac{R-r}{r}\\,d\\cos\\left(\\frac{R-r}{r}\\theta\\right)\\right], \\\\ y = (R-r)\\sin\\theta - d\\sin\\left(\\frac{R-r}{r}\\theta\\right) - \\dfrac{r\\bigl(r^{2}-2rd\\cos(\\frac{R}{r}\\theta)+d^{2}\\bigr)}{r^{3}+(r-R)d^{2}+rd(R-2r)\\cos(\\frac{R}{r}\\theta)} \\left[(R-r)\\sin\\theta + \\frac{R-r}{r}\\,d\\sin\\left(\\frac{R-r}{r}\\theta\\right)\\right]",
+    equation: "x = (R-r)\\cos\\theta + d\\cos\\left(\\frac{R-r}{r}\\theta\\right) - \\dfrac{r\\bigl(r^{2}-2rd\\cos(\\dfrac{R}{r}\\theta)+d^{2}\\bigr)}{r^{3}+(r-R)d^{2}+rd(R-2r)\\cos(\\dfrac{R}{r}\\theta)} \\left[(R-r)\\cos\\theta - \\dfrac{R-r}{r}\\,d\\cos\\left(\\dfrac{R-r}{r}\\theta\\right)\\right], \\\\ y = (R-r)\\sin\\theta - d\\sin\\left(\\dfrac{R-r}{r}\\theta\\right) - \\dfrac{r\\bigl(r^{2}-2rd\\cos(\\dfrac{R}{r}\\theta)+d^{2}\\bigr)}{r^{3}+(r-R)d^{2}+rd(R-2r)\\cos(\\dfrac{R}{r}\\theta)} \\left[(R-r)\\sin\\theta + \\dfrac{R-r}{r}\\,d\\sin\\left(\\dfrac{R-r}{r}\\theta\\right)\\right]",
     eqFind: ["x=", "x =", "y=", "y =", "theta", "cos^", "sin^"],
     imgSortKey: "148",
     images: {
@@ -2624,6 +2656,21 @@ const curveList = [
       canonical: "Images/InvEvolutoidCircle/InvEvolutoidCircle01-360.avif",
       variant1: "Images/InvEvolutoidCircle/InvEvolutoidCircle06-360.avif",
       variant2: "Images/InvEvolutoidCircle/InvEvolutoidCircle10-360.avif"
+    }
+  },
+  {
+    id: "inverse-gudermannian",
+    title: "Inverse Gudermannian",
+    filename: "InvGud.html",
+    aliases: ["Anti-Gudermannian", "Lambertian Function", "Mercator Function", "Meridional Function"],
+    eqSortKey: "149.5",
+    done: true,
+    imgCount: 1,
+    equation: "y = a \\cdot \\ln\\bigl(\\sec(x) + \\tan(x)\\bigr)",
+    eqFind: [ "y=", "y =", "ln", "sec", "tan" ],
+    imgSortKey: "149.5",
+    images: {
+      canonical: "Images/InvGud/InvGud01-360.avif"
     }
   },
   {
@@ -2660,7 +2707,6 @@ const curveList = [
       variant1: "Images/Irradiance/Irradiance02-360.avif"
     }
   },
-
   {
     id: "jerabek-curve",
     title: "Jerabek Curve",
@@ -2679,20 +2725,19 @@ const curveList = [
     }
   },
   {
-    id: "joukowski-curve",
-    title: "Joukowski Curve",
-    filename: "Joukowski.html",
-    aliases: ["Zhukovsky Airfoil", "Joukowski Airfoil", "WK-27 Airfoil"],
-    eqSortKey: "153",
+    id: "joachimsthal-tetracuspid-curve",
+    title: "Joachimsthal Tetracuspid Curve",
+    filename: "Joachimsthal.html",
+    aliases: ["Tetracuspid of Joachimsthal", "Iron Cross Curve"],
+    eqSortKey: "153.5",
     done: true,
-    imgCount: 10,
-    equation: "x = \\dfrac{a}{4}\\,(b + \\sqrt{(1 - b)^{2} + c^{2}}\\cos\\theta)\\left(1 + \\dfrac{1}{(b + \\sqrt{(1 - b)^{2} + c^{2}}\\cos\\theta)^{2} + (c + \\sqrt{(1 - b)^{2} + c^{2}}\\sin\\theta)^{2}}\\right), y = \\dfrac{a}{4}\\,(c + \\sqrt{(1 - b)^{2} + c^{2}}\\sin\\theta)\\left(1 - \\dfrac{1}{(b + \\sqrt{(1 - b)^{2} + c^{2}}\\cos\\theta)^{2} + (c + \\sqrt{(1 - b)^{2} + c^{2}}\\sin\\theta)^{2}}\\right), \\\\ r = e^{a\\theta}",
-    eqFind: ["r=", "r =", "theta", "cos", "sin", "sqrt", "e^"],
-    imgSortKey: "153",
+    imgCount: 2,
+    equation: "x=a\\cos\\alpha\\,(u+v)\\bigl(1-2uv\\sin^2\\alpha\\bigr), \\quad y=a\\sin\\alpha\\,(v-u)\\bigl(1+2uv\\cos^2\\alpha\\bigr), \\quad x=\\dfrac{a^2}{2}\\sin\\theta\\Bigl(\\dfrac{2}{\\tan\\alpha}-\\dfrac{a^2}{\\tan\\alpha}+\\dfrac{a^2\\cos^2\\theta}{\\sin\\alpha\\cos\\alpha}\\Bigr), \\quad y=\\dfrac{a^2}{2}\\cos\\theta\\Bigl(2\\tan\\alpha-a^2\\tan\\alpha+\\dfrac{a^2\\sin^2\\theta}{\\sin\\alpha\\cos\\alpha}\\Bigr)",
+    eqFind: ["x=", "x =", "y=", "y =", "theta", "cos^2", "sin^2", "tan"],
+    imgSortKey: "153.5",
     images: {
-      canonical: "Images/Joukowski/Joukowski01-360.avif",
-      variant1: "Images/Joukowski/Joukowski03-360.avif",
-      variant2: "Images/Joukowski/Joukowski08-360.avif"
+      canonical: "Images/Joachimsthal/Joachimsthal01-360.avif",
+      variant1: "Images/Joachimsthal/Joachimsthal02-360.avif"
     }
   },
   {
@@ -2803,7 +2848,7 @@ const curveList = [
     eqSortKey: "159.5",
     done: true,
     imgCount: 6,
-    equation: "x = \\cos t, y = a \\sin^3 t, \\quad \\rho = k - 1 - \\cos t, \\theta = t - 2\\sqrt{\\frac{k}{k-2}}\\arctan\\left(\\sqrt{\\frac{k}{k-2}}\\tan\\frac{t}{2}\\right), \\quad x = \\sin(t/2), y = \\frac{\\cos^3(t/2)\\cdot(2 + \\cos t)}{g}",
+    equation: "x = \\cos t, y = a \\sin^3 t, \\quad \\rho = k - 1 - \\cos t, \\theta = t - 2\\sqrt{\\dfrac{k}{k-2}}\\arctan\\left(\\sqrt{\\dfrac{k}{k-2}}\\tan\\dfrac{t}{2}\\right), \\quad x = \\sin(t/2), y = \\dfrac{\\cos^3(t/2)\\cdot(2 + \\cos t)}{g}",
     eqFind: ["y=", "y =", "x=", "x =", "rho=", "rho =", "theta=", "theta =", "cos^3", "sin^3", "arctan", "tan", "sqrt"],
     imgSortKey: "159.5",
     images: {
@@ -2904,6 +2949,23 @@ const curveList = [
       canonical: "Images/LemniscateBernoulli/LemniscateBernoulli01-360.avif"
     }
   },
+  {
+    id: "lemoine-septic-curve",
+    title: "Lemoine Septic Curve",
+    filename: "Lemoine.html",
+    aliases: [],
+    eqSortKey: "164.5",
+    done: true,
+    imgCount: 2,
+    equation: "x(x^{2}+y^{2})^{3}-(3x^{2}-7y^{2})(x^{2}+y^{2})^{2}+x(3x^{2}-19y^{2})(x^{2}+y^{2})-(x^{4}-18x^{2}y^{2}-5y^{4})-7xy^{2}+y^{2}=0, \\quad x=a\\frac{\\cos t\\,(3\\cos^{2}t-3\\cos t+1)}{2\\cos^{3}t-2\\cos t+1}, y=a\\frac{\\cos^{2}t\\sin t}{2\\cos^{3}t-2\\cos t+1}\\tan^{2}\\frac{t}{2}",
+    eqFind: ["x=", "x =", "y=", "y =", "cos^2", "tan^2", "cos^3", "x^2", "x^3", "x^7", "y^6", "sin"],
+    imgSortKey: "164.5",
+    images: {
+      canonical: "Images/Lemoine/Lemoine01-360.avif",
+      variant1: "Images/Lemoine/Lemoine02-360.avif"
+
+    }
+  },  
   {
     id: "limacon",
     title: "Limaçon",
@@ -4180,7 +4242,7 @@ const curveList = [
     aliases: ["Spiral of the hyperbolic sine"],
     eqSortKey: "238",
     done: true,
-    imgCount: 26,
+    imgCount: 3,
     equation: "r = a \\cdot \\sinh(b\\theta)",
     eqFind: ["r=", "r =","sinh", "theta"],
     imgSortKey: "238",
@@ -4673,6 +4735,23 @@ const curveList = [
       variant2: "Images/Toroid/Toroid16-360.avif"
     }
   },
+  {
+    id: "torpedo",
+    title: "Torpedo",
+    filename: "Torpedo.html",
+    aliases: ["Right Trifolium of Longchamps"],
+    eqSortKey: "264.6",
+    done: true,
+    imgCount: 26,
+    equation: "(x^{2}+y^{2})^{2}=a x(x^{2}-y^{2}), \\quad r=a\\cos\\theta\\cos 2\\theta, \\quad r=a\\cdot\\cos\\left(\\frac{b}{c}\\theta\\right)\\cdot d\\cdot\\cos\\left(\\frac{e}{f}\\theta\\right), \\quad x^{4}+y^{4}=a\\,xy(x+y), \\quad r=a\\frac{\\cos\\theta\\sin\\theta(\\cos\\theta+\\sin\\theta)}{\\cos^{4}\\theta+\\sin^{4}\\theta}, \\\\ x^{6}+y^{6}+\\alpha(x^{4}y^{2}+x^{2}y^{4})=a\\,xy(x+y), \\quad r=a\\frac{\\cos\\theta\\sin\\theta(\\cos\\theta+\\sin\\theta)}{\\alpha(\\cos^{4}\\theta+\\sin^{4}\\theta)+(1-\\alpha)(\\cos^{6}\\theta+\\sin^{6}\\theta)}, \\quad x^{6}+y^{6}=a\\,xy(x+y), \\quad r=a\\frac{\\cos\\theta\\sin\\theta(\\cos\\theta+\\sin\\theta)}{\\cos^{6}\\theta+\\sin^{6}\\theta}",
+    eqFind: ["r=", "r =", "x^2=", "y^2", "cos^6", "cos^4", "cos^2", "sin^2", "sin^4", "sin^6", "theta", "x^6", "x^4", "y^6", "y^4", "alpha"],
+    imgSortKey: "264.6",
+    images: {
+      canonical: "Images/Torpedo/Torpedo01-360.avif",
+      variant1: "Images/Torpedo/Torpedo20-360.avif",
+      variant2: "Images/Torpedo/Torpedo25-360.avif"
+    }
+  },  
   {
     id: "tractrix",
     title: "Tractrix",

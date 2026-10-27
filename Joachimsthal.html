@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joachimsthal Tetracuspid - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Joachimsthal Tetracuspid</h1>
+      <p class="short-description">Envelope of a fixed-length segment whose ends slide on two lines at angle α to the x-axis; reduces to an astroid when α=45°.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Joachimsthal/Joachimsthal01-360.avif"
+           alt="Joachimsthal Tetracuspid, multiple α values,a=1">
+      <figcaption>
+        Joachimsthal Tetracuspid, a=1,α=
+        <span class="figcap-value" style="color:#000000">10°</span>,
+        <span class="figcap-value" style="color:#FF0000">20°</span>,
+        <span class="figcap-value" style="color:#0000FF">30°</span>,
+        <span class="figcap-value" style="color:#009600">40°</span>,
+        <span class="figcap-value" style="color:#FF9600">45° astroid</span>,
+        <span class="figcap-value" style="color:#9600FF">50°</span>,
+        <span class="figcap-value" style="color:#0096FF">60°</span>,
+        <span class="figcap-value" style="color:#AA5555">70°</span>,
+        <span class="figcap-value" style="color:#00FF00">80°</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Joachimsthal/Joachimsthal02-360.avif"
+           alt="Joachimsthal 'Iron Cross', a=1,α=22.5,67.5°">
+      <figcaption>Joachimsthal 'Iron Cross', a=1,α=22.5,67.5°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Joachimsthal tetracuspid equation:</div>
+      \[ x=a\cos\alpha\,(u+v)\bigl(1-2uv\sin^2\alpha\bigr), \quad y=a\sin\alpha\,(v-u)\bigl(1+2uv\cos^2\alpha\bigr), \quad (u+v)^2=1+4uv\cos^2\alpha. \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Single-parameter form:</div>
+      \[ x=\frac{a^2}{2}\sin\theta\Bigl(\frac{2}{\tan\alpha}-\frac{a^2}{\tan\alpha}+\frac{a^2\cos^2\theta}{\sin\alpha\cos\alpha}\Bigr), \quad y=\frac{a^2}{2}\cos\theta\Bigl(2\tan\alpha-a^2\tan\alpha+\frac{a^2\sin^2\theta}{\sin\alpha\cos\alpha}\Bigr)\]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Joachimsthal tetracuspid is the envelope of a line segment of fixed length \(a\) whose endpoints slide on two fixed lines that intersect at an angle \(2\alpha\).<sup>1</sup> The problem was posed by Merlieux in 1842 and solved by Ferdinand Joachimsthal in 1847.<sup>1</sup> Joachimsthal (1818–1861), a German mathematician, is also remembered for his work on the theory of surfaces and for notations used in the study of conics.<sup>2</sup> When the two guiding lines are perpendicular (\(\alpha=45^\circ\)), the envelope reduces to an astroid (a four-cusped hypocycloid).<sup>1</sup> For other angles the curve remains a rational sextic with four outward-pointing cusps located at \((\pm a\cos\alpha,\pm a\sin\alpha)\). Points fixed on the moving segment itself trace ellipses aligned with the coordinate axes.<sup>1</sup> The original parametric equations are expressed in the auxiliary quantities \(u\) and \(v\) linked by the length constraint. Substituting the explicit solution of that constraint in terms of the segment angle \(\theta\), \(u=\frac a2\Bigl(\frac{\sin\theta}{\sin\alpha}-\frac{\cos\theta}{\cos\alpha}\Bigr)\), \(v=\frac a2\Bigl(\frac{\sin\theta}{\sin\alpha}+\frac{\cos\theta}{\cos\alpha}\Bigr)\) and simplifying produces the single-parameter form shown above, free of \(u\) and \(v\).</p>
+    <p>No engineering or scientific applications peculiar to the general-\(\alpha\) Joachimsthal tetracuspid appear in the literature. The special case \(\alpha=45^\circ\) inherits the well-known uses of the astroid (e.g., as a caustic, in certain linkage mechanisms, and as the evolute of an ellipse).<sup>3</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/tetracuspide/tetracuspide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/tetracuspide/tetracuspide.shtml</a> (definition, history, equations).</li>
+      <li><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Joachimsthal/" target="_blank" rel="noopener noreferrer">https://mathshistory.st-andrews.ac.uk/Biographies/Joachimsthal/</a> (biography).</li>
+      <li><a href="https://mathworld.wolfram.com/Astroid.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Astroid.html</a> (astroid special case and applications).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:JOACHIMSTHAL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt xspan
+                         restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn)
+  (setq id "Joachimsthal"
+        iq "x=a·cos(α)·(u+v)·(1-2uv sin²α), y=a·sin(α)·(v-u)·(1+2uv cos²α)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions in curve"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (segment length)" 1.0)
+        fb (get_real 2 "α in °" 30.0)
+        fc (* fb (/ pi 180.0))
+        fd (cos fc)
+        fe (sin fc)
+        ff (fix (/ fb (gcd (fix fb) 90)))
+        fg (fix (+ 0.5 (/ (float divcount) ff)))
+        fh (* fg ff)
+        divcount (get_integer 6 "Adjust curve count to land on cusps to " fh)
+        paramstep (/ (* 2.0 pi) (float divcount))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", α=" (rtos fb 2 2) "°  (θ: -α..+α)")
+        xc '(progn (setq fi (eval a2) fj (* (/ fa 2.0) (- (/ (sin fi) fe) (/ (cos fi) fd))) fk (* (/ fa 2.0) (+ (/ (sin fi) fe) (/ (cos fi) fd)))
+            fl (* fj fk) fm (+ fj fk)) (* fa fd fm (- 1.0 (* 2.0 fl fe fe))))
+        yc '(progn (setq fn (- fk fj)) (* fa fe fn (+ 1.0 (* 2.0 fl fd fd))))
+        skm '(T T T)
+        a1 (- fc)
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:JOACHIMSTHAL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

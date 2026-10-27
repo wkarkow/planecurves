@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inverse Gudermannian - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Inverse Gudermannian</h1>
+      <p class="short-description">Graph of the inverse Gudermannian function; supplies the vertical coordinate (isometric latitude) of the Mercator map projection from geographic latitude.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/InvGud/InvGud01-360.avif"
+           alt="Inverse Gudermannian, a=1">
+      <figcaption>Inverse Gudermannian, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Inverse Gudermannian Cartesian equation:</div>
+      \[ y = a \cdot \ln\bigl(\sec(x) + \tan(x)\bigr) \qquad \bigl(|x| < \pi/2\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Integral form:</div>
+      \[ y = a \int_0^x \sec(t)\,dt \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Equivalent closed form:</div>
+      \[ y = a \cdot \operatorname{arsinh}\bigl(\tan(x)\bigr) \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The inverse Gudermannian<sup>1,2</sup> is the real-valued function that undoes the Gudermannian. Its defining expression is the classical antiderivative of the secant function. Gerardus Mercator introduced his map projection in 1569 so that lines of constant compass bearing (rhumb lines) would appear as straight lines. The vertical coordinate required for that property is proportional to the integral of the secant of the latitude. Edward Wright (1599) showed how to construct the projection numerically from ordinary trigonometric tables; James Gregory published the closed form in 1668.</p>
+    <p>Johann Heinrich Lambert studied the same integral while developing the hyperbolic functions in the 1760s and called the related function the “transcendent angle.” Christoph Gudermann (1798–1852) examined the detailed connections between circular and hyperbolic functions in the 1830s. In 1862 Arthur Cayley named the function after Gudermann, introduced the notation gd, and noted that the Gudermannian is the inverse of the integral of the secant. The inverse itself is therefore sometimes called the Lambertian or the anti-gudermannian. In navigation and geodesy the quantity \(\operatorname{gd}^{-1}(\phi)\) (scaled by a constant) was long known as the meridional part or isometric latitude of the geographic latitude \(\phi\).</p>
+    <p>The graph of the inverse Gudermannian appears among the classical transition curves used for railway and highway alignments. When curvature must change continuously from a straight line to a circular arc, one of the traditional radioids is precisely this curve (the pseudo-elliptic radioid).<sup>3</sup> Its arc length can be expressed with elementary functions.</p>
+    <p>The principal modern use remains the Mercator projection and its variants in cartography and navigation. On a standard Mercator chart the vertical distance from the equator to a parallel of latitude \(\phi\) is proportional to \(\operatorname{gd}^{-1}(\phi)\). The same relation converts between geographic latitude and isometric latitude in conformal map projections. Secondary appearances occur in the geometry of hyperbolic space and in the classical tables that once allowed a single set of circular-function values to serve also for hyperbolic functions.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathworld.wolfram.com/InverseGudermannian.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/InverseGudermannian.html</a> (definition, Mercator role)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Gudermannian_function" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Gudermannian_function</a> (history from Mercator through Cayley, navigation use)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/radioide/radioide.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/radioide/radioide.shtml</a> (pseudo-elliptic radioid as the graph of the inverse Gudermannian)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:INVGUD (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt restartflag xspan id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Inverse Gudermannian"
+        iq "y=a·ln(sec(x)+tan(x))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in positive half-curve"
+        dct 360
+        dpt '(1.570796326794897 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (y-scale factor)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        xc '(eval a2)
+        yc '(* fa (log (+ (/ 1.0 (cos (eval a2))) (/ (sin (eval a2)) (cos (eval a2))))))
+        paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:INVGUD)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cramer Trifolium - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cramer Trifolium</h1>
+      <p class="short-description">Rational quartic; close variation of the torpedo curve (right trifolium of Longchamps 1884).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/CramerTrifolium/CramerTrifolium01-360.avif"
+       alt="Cramer Trifolium, a=1">
+      <figcaption>Cramer Trifolium, a=1</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cramer Trifolium Cartesian equation:</div>
+      \[ x^{4}+y^{4}=a x(x^{2}-y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cramer Trifolium polar equation:</div>
+      \[ r=a\frac{\cos\theta\cos 2\theta}{\cos^{4}\theta+\sin^{4}\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Cramer trifolium is a rational quartic that MathCurve identifies as a very close variation of the torpedo curve (also called the right trifolium by Gaston Albert Gohierre de Longchamps).<sup>1</sup> Longchamps (1842–1906) examined the right trifolium in volume 2 of his <em>Géométrie analytique</em> (1884, pp. 511–515). He presented it as a special case within the family of folia, which are pedals of the deltoid with respect to an interior point; when the pedal pole lies on the inscribed circle of the deltoid in a particular position, the right trifolium results.<sup>1,2</sup></p>
+    <p>The name “Cramer trifolium” appears on MathCurve for the stated Cartesian and polar forms. Gabriel Cramer (1704–1752) is known for his 1750 <em>Introduction à l’analyse des lignes courbes algébriques</em>, which systematically classified algebraic curves by degree and discussed the number of points needed to determine a curve of given degree (leading to Cramer’s paradox for cubics and higher). No source examined attributes the specific equation \(x^{4}+y^{4}=a x(x^{2}-y^{2})\) directly to Cramer; the designation appears to place the curve in the tradition of cataloguing quartics that Cramer advanced.</p>
+    <p>Geometrically, the parent torpedo is the strophoid of a circle (center at \(a/4\), 0, passing through the origin) with respect to a point \(O\) on the circle and a point at infinity in the direction of the diameter through \(O\). It is also a special case of a right trifolium (pedal of a deltoid), a fish curve, and a tritrochoid. It is the locus of the isobarycenter of three circular motions of equal radius in which two motions have opposite speeds and the third has double speed. Like other fish curves, it is a planar projection of Viviani’s window, and it can be obtained as the orthopolar of a circle.<sup>1</sup> The Cramer variant shares the same rational-quartic character and the same denominator structure in polar form, differing only by the absence of the cross term that appears when the equation is rewritten in the equivalent \((x^{2}+y^{2})^{2}\) form used for the classical torpedo.</p>
+    <p>No applications in engineering or the natural sciences were found for the Cramer trifolium or its immediate torpedo variants. The constructions listed above remain purely geometric. Related but distinct curves such as the regular trifolium (the three-petaled rose) admit hypotrochoid generation, yet that property is not documented for the Cramer equation.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/torpille/torpille.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/torpille/torpille.shtml</a> (torpedo and Cramer trifolium equations, Longchamps 1884, geometric constructions)</li>
+      <li><a href="https://www.2dcurves.com/quartic/quarticfo.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/quartic/quarticfo.html</a> (torpedo as special case of folium family; related Cartesian form)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CRAMERTRIFOLIUM (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                            restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa)
+  (setq id "Cramer Trifolium"
+        iq "ρ=a·cos(θ)·cos(2θ)/(cos⁴(θ)+sin⁴(θ))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 4 "a (scale)" 1.0)
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        rval '(* fa (/ (* (cos (eval a2)) (cos (* 2.0 (eval a2)))) (+ (alt_expt (cos (eval a2)) 4 nil) (alt_expt (sin (eval a2)) 4 nil))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:CRAMERTRIFOLIUM)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>
