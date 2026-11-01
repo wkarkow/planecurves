@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabolic Trifolium - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Parabolic Trifolium</h1>
+      <p class="short-description">Rational quartic with a triple point at the origin and is asymptotic to a parabola; not a true trifolium.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/ParaTrifol/ParaTrifol01-360.avif"
+           alt="Parabolic Trifolium, a=1,n=2,classical"
+      <figcaption>Parabolic Trifolium, a=1,n=2,classical</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/ParaTrifol/ParaTrifol02-360.avif"
+           alt="Generalized Parabolic Trifolium, a=1, multiple integer values of n=m"
+      <figcaption>
+        Generalized Parabolic Trifolium, a=1,n=m=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/ParaTrifol/ParaTrifol03-360.avif"
+           alt="Generalized Parabolic Trifolium, a=1,n=2,m=1,2,3,4"
+      <figcaption>
+        Generalized Parabolic Trifolium, a=1,n=2,m=
+        <span class="figcap-value" style="color:#000000">1</span>,
+        <span class="figcap-value" style="color:#FF0000">2</span>,
+        <span class="figcap-value" style="color:#0000FF">3</span>,
+        <span class="figcap-value" style="color:#009600">4</span>,
+        <span class="figcap-value" style="color:#FF9600">5</span>,
+        <span class="figcap-value" style="color:#9600FF">6</span>
+      </figcaption>
+    </figure>
+    <figure style="display: flex; flex-direction: column; align-items: center;">
+      <img src="Images/ParaTrifol/ParaTrifol04-360.avif"
+           alt="Generalized Parabolic Trifolium, a=1,n=m=1.1"
+      <figcaption>Generalized Parabolic Trifolium, a=1,n=m=1.1</figcaption>
+    </figure>
+    <figure style="display: flex; flex-direction: column; align-items: center;">
+      <img src="Images/ParaTrifol/ParaTrifol05-360.avif"
+           alt="Generalized Parabolic Trifolium, a=1,n=m=1.5"
+      <figcaption>Generalized Parabolic Trifolium, a=1,n=m=1.1</figcaption>
+    </figure>
+    <figure style="display: flex; flex-direction: column; align-items: center;">
+      <img src="Images/ParaTrifol/ParaTrifol06-360.avif"
+           alt="Generalized Parabolic Trifolium, a=1,n=2.5,m=2"
+      <figcaption>Generalized Parabolic Trifolium, a=1,n=m=1.1</figcaption>
+    </figure>
+
+   </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 320px;">
+    <div class="equation-line">
+      <div class="equation-label">Cartesian equation (classical):</div>
+      \[ x^{2}(x^{2}+y^{2})=a y(x^{2}-y^{2}) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Polar equation (classical):</div>
+      \[ r=a\dfrac{\sin\theta\cos 2\theta}{\cos^{2}\theta} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cartesian parametrization (classical):</div>
+      \[ x=a\cos 2t\tan t,\quad y=a\cos 2t\tan^{2}t \quad (t=\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Rational Cartesian parametrization (classical):</div>
+      \[ x=at\dfrac{1-t^{2}}{1+t^{2}},\quad y=tx \quad (t=\tan\theta) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Asymptotic parabola (a=1):</div>
+      \[ y=-x^{2}-2 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized polar equation:</div>
+      \[ r=a\dfrac{\sin\theta\cos(n\theta)}{\cos^{m}\theta} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The parabolic trifolium is a rational quartic plane curve studied by Gaston Albert Gohierre de Longchamps in 1888 (Loria, p. 136).<sup>1</sup> It possesses a triple point at the origin and an asymptotic parabola, from which the name derives. MathCurve records the classical Cartesian equation \(x^{2}(x^{2}+y^{2})=a y(x^{2}-y^{2})\), the polar form \(\rho=a\sin\theta\cos 2\theta/\cos^{2}\theta\), and the two parametrizations shown above. For the scale a=1 the asymptotic parabola is given as \(y=-x^{2}-2\).<sup>1</sup> MathCurve notes that, just as the parabolic folium is not a folium, the parabolic trifolium is not a trifolium.<sup>1</sup> The ordinary trifolium (three-petaled rose) is a different rational quartic arising as a pedal of the deltoid; the parabolic specimen shares only the historical association with Longchamps and the presence of a triple point.</p>
+    <p>No applications in engineering or the natural sciences were found for this curve. The constructions remain purely geometric.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trifoliumparabolic/trifoliumparabolic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trifoliumparabolic/trifoliumparabolic.shtml</a> (equations, Longchamps 1888, asymptotic parabola, remark on nomenclature)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:PARATRIFOL (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display rval xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Parabolic Trifolium"
+        iq "r=a·sin(θ)·cos(nθ)/cos^m(θ)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 4 "a (scale)" 1.0)
+        fb (get_real 4 "n (angle multiplier)" 2.0)
+        fc (get_real 4 "m (denominator power)" fb)
+        fd (get_keyword 0 "Real Imaginary" "Real or +Imaginary?" "Real")
+        eq_display (strcat "\na=" (rtos fa 2 4) ", n=" (rtos fb 2 4) ", m=" (rtos fc 2 4) ", " fd)
+        rval '(if (and (< (abs (cos (eval a2))) 1e-12) (< (abs (cos (* fb (eval a2)))) 1e-12)) (* fa (sin (eval a2))) (* fa
+              (/ (* (sin (eval a2)) (cos (* fb (eval a2)))) (avoid_zero (alt_expt (cos (eval a2)) fc (if (= fd "Imaginary") nil T))))))
+        xc '(* (eval rval) (cos (eval a2)))
+        yc '(* (eval rval) (sin (eval a2)))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 50.0)
+        skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:PARATRIFOL)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

@@ -2741,6 +2741,23 @@ const curveList = [
     }
   },
   {
+    id: "joukowski-airfoil-curve",
+    title: "Joukowski Airfoil Curve",
+    filename: "Joukowski.html",
+    aliases: ["Zhukovsky Airfoil", "Karkow Airfoil", "WK=27 Airfoil"],
+    eqSortKey: "153.6",
+    done: true,
+    imgCount: 10,
+    equation: "x = \\dfrac{a}{4}\\,(b + \\sqrt{(1 - b)^{2} + c^{2}}\\cos\\theta)\\left(1 + \\dfrac{1}{(b + \\sqrt{(1 - b)^{2} + c^{2}}\\cos\\theta)^{2} + (c + \\sqrt{(1 - b)^{2} + c^{2}}\\sin\\theta)^{2}}\\right), y = \\dfrac{a}{4}\\,(c + \\sqrt{(1 - b)^{2} + c^{2}}\\sin\\theta)\\left(1 - \\dfrac{1}{(b + \\sqrt{(1 - b)^{2} + c^{2}}\\cos\\theta)^{2} + (c + \\sqrt{(1 - b)^{2} + c^{2}}\\sin\\theta)^{2}}\\right), \\\\r = e^{a\\theta},\\qquad x = e^{a\\theta}\\cos\\theta, y = e^{a\\theta}\\sin\\theta",
+    eqFind: ["x=", "x =", "y=", "y =", "theta", "cos^2", "sin^2", "e^a theta", "x=", "x =", "y=", "y ="],
+    imgSortKey: "153.6",
+    images: {
+      canonical: "Images/Joukowski/Joukowski01-360.avif",
+      variant1: "Images/Joukowski/Joukowski02-360.avif",
+      variant2: "Images/Joukowski/Joukowski03-360.avif"
+    }
+  },
+  {
     id: "kampyle-of-eudoxus",
     title: "Kampyle of Eudoxus",
     filename: "Kampyle.html",
@@ -3509,6 +3526,23 @@ const curveList = [
     }
   },
   {
+    id: "parabolic-trifolium",
+    title: "Parabolic Trifolium",
+    filename: "ParaTrifol.html",
+    aliases: [],
+    eqSortKey: "195.5",
+    done: true,
+    imgCount: 6,
+    equation: "x^{2}(x^{2}+y^{2})=a y(x^{2}-y^{2}), \\quad r=a\\dfrac{\\sin\\theta\\cos 2\\theta}{\\cos^{2}\\theta}, \\quad x=a\\cos 2t\\tan t, y=a\\cos 2t\\tan^{2}t, \\quad x=at\\dfrac{1-t^{2}}{1+t^{2}}, y=tx, (t=\\tan\\theta), \\quad r=a\\dfrac{\\sin\\theta\\cos(n\\theta)}{\\cos^{m}\\theta}",
+    eqFind: ["r=", "r =", "tan^2", "theta", "x=", "x =", "y=", "y =", "x^2", "x^4", "y^2", "y^3", "cos^2", "sin"],
+    imgSortKey: "195.5",
+    images: {
+      canonical: "Images/ParaTrifol/ParaTrifol01-360.avif",
+      variant1: "Images/ParaTrifol/ParaTrifol02-360.avif",
+      variant2: "Images/ParaTrifol/ParaTrifol06-360.avif"
+    }
+  },
+  {
     id: "paracycloid",
     title: "Paracycloid",
     filename: "Paracycloid.html",
@@ -4121,6 +4155,23 @@ const curveList = [
     }
   },
   {
+    id: "scyphoid-curve",
+    title: "Scyphoid Curve",
+    filename: "Scyphoid.html",
+    aliases: [],
+    eqSortKey: "230.5",
+    done: true,
+    imgCount: 31,
+    equation: "x^{4}-y^{4}-4axy^{2}=0, \\quad r=2a\\tan(2\\theta)\\sin\\theta, \\quad x=a\\tan t\\sin t, y=a(\\tan t-\\sin t), \\quad x=a\\tan t\\sin(\\dfrac{b}{c}t), y=a(\\tan t-\\sin(\\dfrac{b}{c}t)), \\\\ x=a\\tan(\\dfrac{b}{c}t)\\sin t, y=a(\\tan(\\dfrac{b}{c}t)-\\sin t), \\quad r=2a\\tan(2t)\\sin(\\dfrac{b}{c}t), \\quad r=2a\\tan(2\\cdot\\dfrac{b}{c}t)\\sin t",
+    eqFind: ["x=", "y=", "x =", "y =", "cos", "sin^2", "x^8", "x^6", "x^4", "x^2", "y^2", "y^3"],
+    imgSortKey: "230.5",
+    images: {
+      canonical: "Images/Scyphoid/Scyphoid01-360.avif",
+      variant1: "Images/Scyphoid/Scyphoid08-360.avif",
+      variant2: "Images/Scyphoid/Scyphoid31-360.avif"
+    }
+  },
+  {
     id: "secant-curve",
     title: "Secant Curve",
     filename: "Secant.html",
@@ -4581,6 +4632,24 @@ const curveList = [
     images: {
       canonical: "Images/SwimmingDog/SwimmingDog01-360.avif"
     }  
+  },
+  {
+    id: "syncochleoid",
+    title: "Syncochleoid",
+    filename: "Syncochleoid.html",
+    aliases: [],
+    eqSortKey: "256.5",
+    done: true,
+    imgCount: 13,
+    equation: "r = \\frac{a \\cos \\theta}{\\theta}, \\quad r = \\frac{a \\lvert\\cos^{b} (c \\theta)\\rvert}{\\theta^{d}}",
+    eqFind: ["r=", "r =", "cos^", "theta^",
+    ],
+    imgSortKey: "256.5",
+    images: {
+      canonical: "Images/Syncochleoid/Syncochleoid01-360.avif",
+      variant1: "Images/Syncochleoid/Syncochleoid12-360.avif",
+      variant2: "Images/Syncochleoid/Syncochleoid13-360.avif"
+    }
   },
   {
     id: "syntractrix",
