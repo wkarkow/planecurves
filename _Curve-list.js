@@ -169,7 +169,7 @@ const curveList = [
   {
     id: "arcs-of-samothrace",
     title: "Arcs of Samothrace",
-    filename: "ArcsOfSamothrace.html",
+    filename: "ArcsofSamothrace.html",
     aliases: [],
     eqSortKey: "009",
     done: true,
@@ -1924,6 +1924,21 @@ const curveList = [
       canonical: "Images/Exponential/Exponential01-360.avif",
       variant1: "Images/Exponential/Exponential02-360.avif",
       variant2: "Images/Exponential/Exponential03-360.avif"      
+    }
+  },
+  {
+    id: "exponential-involute",
+    title: "Exponential Involute",
+    filename: "ExponInvolute.html",
+    aliases: [],
+    eqSortKey: "106.5",
+    done: true,
+    imgCount: 1,
+    equation: "x = a\\left(t - \\frac{I}{\\sqrt{1+e^{2t}}}\\right), y = a e^{t}\\left(1 - \\frac{I}{\\sqrt{1+e^{2t}}}\\right), I = \\int_{t_0}^{t}\\sqrt{1+e^{2s}}\\,ds",
+    eqFind: ["y=", "y =", "e^2", "x=", "x =", "sqrt", "int", "ds"],
+    imgSortKey: "106.5",
+    images: {
+      canonical: "Images/ExponInvolute/ExponInvolute01-360.avif"
     }
   },
   {
@@ -4508,6 +4523,24 @@ const curveList = [
     }
   },
   {
+    id: "sturm-roulette",
+    title: "Sturm Roulette",
+    filename: "SturmRoulette.html",
+    aliases: [],
+    eqSortKey: "250.5",
+    done: true,
+    imgCount: 22,
+    equation: "",
+    eqFind: ["x=", "x =", "y=", "y =", "r=", "r =", "cos^2", "sqrt", "sin", "theta", "tan", "cosh", "e^2",
+    ],
+    imgSortKey: "250.5",
+    images: {
+      canonical: "Images/SturmRoulette/SturmRoulette01-360.avif",
+      variant1: "Images/SturmRoulette/SturmRoulette02-360.avif",
+      variant2: "Images/SturmRoulette/SturmRoulette03-360.avif"
+    }
+  },
+  {
     id: "sturm-spiral",
     title: "Sturm Spiral",
     filename: "SturmSpiral.html",
@@ -4525,7 +4558,6 @@ const curveList = [
       variant2: "Images/SturmSpiral/SturmSpiral03-360.avif"
     }
   },
-
   {
     id: "super-rose-curve",
     title: "Super Rose Curve",
