@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Involute of the Exponential Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Involute of the Exponential Curve</h1>
+      <p class="short-description">An involute of the exponential curve; the path of the free end of a taut string unwound from \( y = a e^{x/a} \).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure style="display: flex; flex-direction: column; align-items: center;">
+      <img src="Images/ExponInvolute/ExponInvolute01-360.avif"
+           alt="Exponential involute, multiple values of contact x">
+      <figcaption style="text-align: center; white-space: normal; margin-top: 0.4em;">
+        <span class="figcap-value" style="color:#000000">Exponential curve, x axis</span>,
+        Exponential involute, contact x=
+        <span class="figcap-value" style="color:#FF0000">-2.0</span>,
+        <span class="figcap-value" style="color:#0000FF">-1.0</span>,
+        <span class="figcap-value" style="color:#009600">0.0</span>,
+        <span class="figcap-value" style="color:#FF9600">1.0</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">1.75</span>,
+        <span class="figcap-value" style="color:#AA5555">2.0</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Exponential Involute parametric equations:</div>
+      \[ x = a\left(t - \frac{I}{\sqrt{1+e^{2t}}}\right),\quad y = a e^{t}\left(1 - \frac{I}{\sqrt{1+e^{2t}}}\right) \quad \text{where} \quad I = \int_{t_0}^{t}\sqrt{1+e^{2s}}\,ds \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Closed-form integral:</div>
+      \[ I = \bigl[\sqrt{1+e^{2t}} - \ln(1+\sqrt{1+e^{2t}}) + t\bigr] - \bigl[\text{same at }t_0\bigr] \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Asymptote of superior branch:</div>
+      \[ y_{\text{asymp}} = a\bigl(\sqrt{1+e^{2t_0}} + \ln(\sqrt{1+e^{2t_0}}-1)\bigr) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Stopping point of inferior branch:</div>
+      \[ x_{\text{stop}} = a\bigl(\sqrt{1+e^{2t_0}} + \ln(\sqrt{1+e^{2t_0}}-1) - t_0 + \ln 2\bigr) \]
+    </div>
+
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The curve is presented on MathCurve under the homemade English heading “Involute of the exponential curve” (French: développante de l’exponentielle). No earlier named appearance in the classical literature of special curves has been identified. The general notions of involute and evolute were introduced by Christiaan Huygens in 1673 in connection with the cycloidal pendulum; an involute is the path traced by the free end of a taut inextensible string as it is unwound from a given curve (the evolute of that involute). The parent exponential curve, \( x = a t \), \( y = a e^{t} \) is smooth for all real \( t \). Attachment may therefore be made at any point. The inferior branch (parameter decreasing from the contact value) approaches a finite stopping point on or near the positive \( x \)-axis; the superior branch (parameter increasing) tends to a horizontal asymptote.</p>
+    <p>No engineering or scientific applications peculiar to this particular involute have been recorded. Involutes in general appear in the design of gear-tooth profiles (constant pressure angle), in cam mechanisms, and in the study of parallel curves and caustics, but those uses rely on the involute of a circle or of other standard profiles rather than on the involute of the exponential curve.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/developpantedexponentielle/developpantedexponentielle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/developpantedexponentielle/developpantedexponentielle.shtml</a> (definition, parametric equations, stopping point and asymptote)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Involute" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Involute</a> (general construction and history)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:EXPONINVOLUTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                          divpt restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fc fe)
+  (defun I_EI (a b / c d)
+    (setq d (sqrt (+ 1.0 (exp (* 2.0 a)))) c (sqrt (+ 1.0 (exp (* 2.0 b)))))
+    (- (+ d (- (log (+ 1.0 d))) a) (+ c (- (log (+ 1.0 c))) b)))
+  (setq id "Involute of the Exponential Curve"
+        iq "x=a(t-∫_{t0}^t sqrt(1+e^{2s})ds/sqrt(1+e^{2t})), y=a·e^t(1-∫_{t0}^t sqrt(1+e^{2s})ds/sqrt(1+e^{2t}))"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions in branch"
+        dct 500
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_real 0 "contact x on exponential" 0.0)
+        fc (/ fb fa)
+        fd (get_keyword 0 "Superior Inferior" "draw Superior or Inferior branch?" "Inferior")
+        fe (* (if (eq fd "Inferior") -1.0 1.0) (+ 25.0 (max 0.0 fc)))
+        ff (* 0.003 (exp (max fc 0.0)))
+        eq_display (strcat "\na=" (rtos fa 2 4) ", contact x=" (rtos fb 2 4) fd)
+        fg (+ (sqrt (+ 1.0 (exp (* 2.0 fc)))) (- (log (+ 1.0 (sqrt (+ 1.0 (exp (* 2.0 fc))))))) fc)
+        xc '(* fa (+ (- (eval a2) 1.0) (/ (+ (log (+ 1.0 (setq fh (sqrt (+ 1.0 (exp (* 2.0 (eval a2)))))))) (- (eval a2)) fg) fh)))
+        yc '(* fa (exp (eval a2)) (/ (+ (log (+ 1.0 fh)) (- (eval a2)) fg) fh))
+        paramstep (/ fe divcount)
+        skm '(T T T)
+        a1 fc
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 (if (&lt; fe 0.0) '(progn (setq fi (* 0.2 (if (&gt; paramstep 0.0) 1.0 -1.0)) fj (+ a1 fi) fk (I_EI fj fc) fi (max (min fi 2.0) -2.0)) (+ a1 fi)) '(+ a1 (* 5.0 paramstep)))
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:EXPONINVOLUTE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

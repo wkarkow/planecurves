@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sturm Roulette - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sturm Roulette</h1>
+      <p class="short-description">Locus of the center of an ellipse or hyperbola rolling without slipping on a straight line.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette01-360.avif" alt="Sturm Roulette elliptic e=0.1">
+      <figcaption>Elliptic, a=1, e=0.1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette02-360.avif" alt="Sturm Roulette elliptic e=0.25">
+      <figcaption>Elliptic, a=1, e=0.25</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette03-360.avif" alt="Sturm Roulette elliptic e=0.4">
+      <figcaption>Elliptic, a=1, e=0.4</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette04-360.avif" alt="Sturm Roulette elliptic e=0.5">
+      <figcaption>Elliptic, a=1, e=0.5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette05-360.avif" alt="Sturm Roulette elliptic e=0.6">
+      <figcaption>Elliptic, a=1, e=0.6</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette06-360.avif" alt="Sturm Roulette elliptic e=0.75">
+      <figcaption>Elliptic, a=1, e=0.75</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette07-360.avif" alt="Sturm Roulette elliptic e=0.9">
+      <figcaption>Elliptic, a=1, e=0.9</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette08-360.avif" alt="Sturm Roulette elliptic e=0.95">
+      <figcaption>Elliptic, a=1, e=0.95</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette09-360.avif" alt="Sturm Roulette elliptic e=0.999">
+      <figcaption>Elliptic, a=1, e=0.999</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette10-360.avif" alt="Sturm Roulette hyperbolic e=1.001">
+      <figcaption>Hyperbolic, a=1, e=1.001</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette11-360.avif" alt="Sturm Roulette hyperbolic e=1.05">
+      <figcaption>Hyperbolic, a=1, e=1.05</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette12-360.avif" alt="Sturm Roulette hyperbolic e=1.1">
+      <figcaption>Hyperbolic, a=1, e=1.1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette13-360.avif" alt="Sturm Roulette hyperbolic e=1.25">
+      <figcaption>Hyperbolic, a=1, e=1.25</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette14-360.avif" alt="Sturm Roulette hyperbolic e=1.5">
+      <figcaption>Hyperbolic, a=1, e=1.5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette15-360.avif" alt="Sturm Roulette hyperbolic e=2">
+      <figcaption>Hyperbolic, a=1, e=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette16-360.avif" alt="Sturm Roulette hyperbolic e=4">
+      <figcaption>Hyperbolic, a=1, e=4</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette17-360.avif" alt="Sturm Roulette hyperbolic e=8">
+      <figcaption>Hyperbolic, a=1, e=8</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SturmRoulette/SturmRoulette18-360.avif" alt="Sturm Roulette hyperbolic e=16">
+      <figcaption>Hyperbolic, a=1, e=16</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Elliptic case (0 ≤ e < 1):</div>
+      \[ x = a(1-e^{2})\int_{0}^{t}\dfrac{du}{(1-e^{2}\sin^{2}u)^{3/2}},\quad y = a\sqrt{\dfrac{1-e^{2}}{1-e^{2}\sin^{2}t}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Hyperbolic case (e > 1):</div>
+      \[ x = a(e^{2}-1)\int_{0}^{t}\dfrac{\sin^{2}u\,du}{(e^{2}-\sin^{2}u)^{3/2}},\quad y = a\sqrt{\dfrac{e^{2}-1}{e^{2}-\sin^{2}t}}\,\sin t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">where</div>
+      \[ e = \dfrac{c}{a} \quad \text {is the eccentricity of the rolling conic} \].</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Sturm roulette is the path traced by the center of a centered conic (ellipse or hyperbola) that rolls without slipping on a fixed straight line. It is called elliptic or hyperbolic according to the type of the rolling conic. The curve was studied by Jacques Charles François Sturm in 1841.<sup>1</sup> Sturm was a Swiss and French mathematician<sup>2</sup>, primarily known for Sturm's theorem that calculates the number of distinct real roots of a polynomial within an interval.<sup>3</sup> With the major axis held fixed, the Sturmian roulette elliptic family passes from a straight line (rolling circle, e = 0) to a chain of semicircles (degenerate “rolling segment,” e = 1). The hyperbolic family passes from a chain of semicircles (e = 1) to a straight segment (e → ∞). The special case of a rectangular hyperbola yields the rectangular Sturm roulette, which is simultaneously a lintearia and a Ribaucour curve.<sup>1</sup> The related Delaunay roulette is the path of a focus (rather than the center) of the same rolling conic; its parabolic member is the ordinary catenary. One classical use of the elliptic Sturm roulette is the determination of the road profile on which an elliptic wheel will roll with its center moving horizontally.<sup>1</sup> No other independent engineering applications are recorded for the general curve.</p>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sturm/sturm.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sturm/sturm.shtml</a> (Sturm roulette equations and .gif movement)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Jacques_Charles_Fran%C3%A7ois_Sturm" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Jacques_Charles_Fran%C3%A7ois_Sturm</a> (Sturm biography)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Sturm's_theorem" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Sturm's_theorem</a> (History and use of Sturm's theorem)</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:STURMROULETTE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt restartflag id iq
+                          dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu)
+  (setq id "Sturm Roulette"
+        iq "locus of center of centered conic rolling on a line (elliptic / hyperbolic)"
+        dcl "STURMROULETTE"
+        opt '("Elliptic" "Hyperbolic")
+        kw 0
+        mode 'param
+        dpr "# of divisions per hump/cycle (approx.)"
+        dct 400
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale / semi-major)" 1.0))
+  (cond
+    ((eq kw 0)
+     (setq fb (get_real 2 "e (eccentricity, 0 ≤ e < 1)" 0.5)
+           fc (* 0.5 pi)
+           fd (* fa (- 1.0 (* fb fb)))
+           eq_display (strcat "\nElliptic, a=" (rtos fa 2 4) ", e=" (rtos fb 2 4))
+           fe 500
+           ff (/ fc fe)
+           fg 0.0
+           fh (* 0.5 ff))
+     (repeat fe (setq fi (sin fh) fg (+ fg (* ff (expt (- 1.0 (* fb fb (expt fi 2))) -1.5))) fh (+ fh ff)))
+     (setq fj (/ (* fd fg) divcount)
+           fk 0.0
+           fl 0.0
+           fm nil
+           xc '(* fd fl)
+           yc '(* fa (sqrt (/ (- 1.0 (* fb fb)) (- 1.0 (* fb fb (expt (sin (eval a2)) 2))))))
+           skm '(T T T)
+           a1 0.0
+           a2 a1
+           x1 (eval xc)
+           y1 (eval yc)
+           a2 '(progn (setq fi (sin fk) fn (expt (- 1.0 (* fb fb (expt fi 2))) -1.5) fo (/ fj (max 1e-8 (* fd fn))) fo (min fo 0.2) fp fk fk (+ fk fo))
+               (if (> fo 1e-12) (progn (setq fq (+ fp (* 0.5 fo)) fr (sin fq) ft (- 1.0 (* fb fb (expt fr 2))) fs (expt ft -1.5) fr (sin fk) ft (- 1.0
+               (* fb fb (expt fr 2))) fu (expt ft -1.5) fv (if fm fm fn) fl (+ fl (* (/ fo 6.0) (+ fv (* 4.0 fs) fu))) fm fu))) fk)
+           x2 '(eval xc)
+           y2 '(eval yc)))
+    ((eq kw 1)
+     (setq fb (get_real 2 "e (eccentricity, e > 1)" 1.5)
+           fc (/ pi 2.0)
+           fd (* fa (- (* fb fb) 1.0))
+           eq_display (strcat "\nHyperbolic, a=" (rtos fa 2 4) ", e=" (rtos fb 2 4))
+           fe 500
+           ff (/ fc fe)
+           fg 0.0
+           fh (* 0.5 ff))
+     (repeat fe (setq fi (sin fh) fg (+ fg (* ff (/ (expt fi 2) (expt (- (* fb fb) (expt fi 2)) 1.5)))) fh (+ fh ff)))
+     (setq fj (/ (* fd fg) divcount)
+           fk 0.0
+           fl 0.0
+           fm nil
+           xc '(* fd fl)
+           yc '(* fa (sqrt (/ (- (* fb fb) 1.0) (- (* fb fb) (expt (sin (eval a2)) 2)))) (sin (eval a2)))
+           skm '(T T T)
+           a1 0.0
+           a2 a1
+           x1 (eval xc)
+           y1 (eval yc)
+           a2 '(progn (setq fi (sin fk) fn (/ (expt fi 2) (expt (- (* fb fb) (expt fi 2)) 1.5)) fo (/ fj (max 1e-8 (* fd fn))) fo (min fo 0.2) fp fk fk (+ fk fo))
+               (if (> fo 1e-12) (progn (setq fq (+ fp (* 0.5 fo)) fr (sin fq) ft (- (* fb fb) (expt fr 2)) fs (/ (expt fr 2) (expt ft 1.5)) fr (sin fk)
+               ft (- (* fb fb) (expt fr 2)) fu (/ (expt fr 2) (expt ft 1.5)) fv (if fm fm fn) fl (+ fl (* (/ fo 6.0) (+ fv (* 4.0 fs) fu))) fm fu))) fk)
+           x2 '(eval xc)
+           y2 '(eval yc))))
+  (cc))
+(C:STURMROULETTE)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+</body>
+</html>

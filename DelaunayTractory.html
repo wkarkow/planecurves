@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delaunay Tractory - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Delaunay Tractory</h1>
+      <p class="short-description">The path of the rear end of a fixed-length leash whose front end follows a Delaunay roulette (elliptic or hyperbolic).</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory01-360.avif"
+           alt="Elliptic a=3,b=2,leash=0.5,alpha=0°"
+      <figcaption>Elliptic, a=3,b=2,leash=0.5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory02-360.avif"
+           alt="Elliptic a=3,b=2,leash=1,alpha=0°"
+      <figcaption>Elliptic, a=3,b=2,leash=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory03-360.avif"
+           alt="Elliptic a=3,b=2,leash=3,alpha=0°"
+      <figcaption>Elliptic, a=3,b=2,leash=3,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory04-360.avif"
+           alt="Elliptic a=3,b=2,leash=5,alpha=0°"
+      <figcaption>Elliptic, a=3,b=2,leash=5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory05-360.avif"
+           alt="Elliptic a=3,b=2,leash=9,alpha=0°"
+      <figcaption>Elliptic, a=3,b=2,leash=9,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory06-360.avif"
+           alt="Elliptic a=3,b=2,leash=5,alpha=90°"
+      <figcaption>Elliptic, a=3,b=2,leash=5,α=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory07-360.avif"
+           alt="Elliptic a=4.5,b=0.5,leash=0.5,alpha=0°"
+      <figcaption>Elliptic, a=4.5,b=0.5,leash=0.5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory08-360.avif"
+           alt="Elliptic a=4.5,b=0.5,leash=1,alpha=0°"
+      <figcaption>Elliptic, a=4.5,b=0.5,leash=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory09-360.avif"
+           alt="Elliptic a=4.5,b=0.5,leash=3,alpha=0°"
+      <figcaption>Elliptic, a=4.5,b=0.5,leash=3,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory10-360.avif"
+           alt="Elliptic a=4.5,b=0.5,leash=5,alpha=0°"
+      <figcaption>Elliptic, a=4.5,b=0.5,leash=5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory11-360.avif"
+           alt="Elliptic a=4.5,b=0.5,leash=9,alpha=0°"
+      <figcaption>Elliptic, a=4.5,b=0.5,leash=9,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory12-360.avif"
+           alt="Elliptic a=4.5,b=0.5,leash=5,alpha=90°"
+      <figcaption>Elliptic, a=4.5,b=0.5,leash=5,α=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory13-360.avif"
+           alt="Hyperbolic a=3,b=2,leash=0.5,alpha=0°"
+      <figcaption>Hyperbolic, a=3,b=2,leash=0.5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory14-360.avif"
+           alt="Hyperbolic a=3,b=2,leash=1,alpha=0°"
+      <figcaption>Hyperbolic, a=3,b=2,leash=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory15-360.avif"
+           alt="Hyperbolic a=3,b=2,leash=3,alpha=0°"
+      <figcaption>Hyperbolic, a=3,b=2,leash=3,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory16-360.avif"
+           alt="Hyperbolic a=3,b=2,leash=5,alpha=0°"
+      <figcaption>Hyperbolic, a=3,b=2,leash=5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory17-360.avif"
+           alt="Hyperbolic a=3,b=2,leash=9,alpha=0°"
+      <figcaption>Hyperbolic, a=3,b=2,leash=9,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory18-360.avif"
+           alt="Hyperbolic a=3,b=2,leash=5,alpha=90°"
+      <figcaption>Hyperbolic, a=3,b=2,leash=5,α=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory19-360.avif"
+           alt="Hyperbolic a=1,b=4,leash=0.5,alpha=0°"
+      <figcaption>Hyperbolic, a=1,b=4,leash=0.5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory20-360.avif"
+           alt="Hyperbolic a=1,b=4,leash=1,alpha=0°"
+      <figcaption>Hyperbolic, a=1,b=4,leash=1,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory21-360.avif"
+           alt="Hyperbolic a=1,b=4,leash=3,alpha=0°"
+      <figcaption>Hyperbolic, a=1,b=4,leash=3,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory22-360.avif"
+           alt="Hyperbolic a=1,b=4,leash=5,alpha=0°"
+      <figcaption>Hyperbolic, a=1,b=4,leash=5,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory23-360.avif"
+           alt="Hyperbolic a=1,b=4,leash=9,alpha=0°"
+      <figcaption>Hyperbolic, a=1,b=4,leash=9,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/DelaunayTractory/DelaunayTractory24-360.avif"
+           alt="Hyperbolic a=1,b=4,leash=5,alpha=90°"
+      <figcaption>Hyperbolic, a=1,b=4,leash=5,α=90°</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 340px;">
+    <div class="equation-line">
+      <div class="equation-label">Delaunay Tractory differential equations:</div>
+      \[
+      \begin{cases}
+      (x-x_0)\,dy=(y-y_0)\,dx \\
+      (x-x_0)^2+(y-y_0)^2=a^2 \\
+      f(x_0,y_0)=0
+      \end{cases}
+      \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cartesian parametrization:</div>
+      \[
+      \begin{cases}
+      x=x_0-a\cos(\varphi_0-\alpha) \\
+      y=y_0-a\sin(\varphi_0-\alpha)
+      \end{cases}
+      \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">where \(\varphi_0\) is the base tangential angle and</div>
+      \[
+      \dfrac{d\alpha}{ds_0}=\dfrac{1}{R_{c0}}-\dfrac{\sin\alpha}{a}
+      \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The Delaunay tractory is the path traced by the rear end of a leash of fixed length whose front end travels along a Delaunay roulette.<sup>1,2</sup> A Delaunay roulette is itself the locus of one focus of a conic that rolls without slipping on a straight line. Charles-Eugène Delaunay (1816–1872), a French astronomer and mathematician, identified these roulettes in 1841 while classifying the surfaces of revolution of constant mean curvature.<sup>3</sup> The elliptic case arises from a rolling ellipse and the hyperbolic case from a rolling hyperbola; the parabolic case recovers the ordinary catenary. Lorenz Lindelöf examined the same curves in 1861 and noted their elliptic-integral parametrizations.<sup>4</sup></p>
+    <p>The underlying tractory construction is older. In the 1670s Claude Perrault posed the problem of the curve traced by a watch dragged by a chain of constant length whose free end moves along a straight edge. Christiaan Huygens named the resulting curve the tractrix in 1692 and supplied its analytic description; Gottfried Wilhelm Leibniz and the Bernoulli brothers studied it shortly afterward.<sup>5</sup> The general tractory replaces the straight base by an arbitrary curve: the leash remains of fixed length and is always tangent to the path of the rear point. When the base is a Delaunay roulette the rear path therefore inherits the periodic undulation of the elliptic roulette or the alternating bulges and necks of the hyperbolic roulette, swinging above and below the base exactly as a rigid stick dragged along a tracing of the roulette will do.</p>
+    <p>No independent engineering applications peculiar to the tractory of a Delaunay roulette have been recorded. The parent roulettes, however, generate the Delaunay surfaces (unduloids from the elliptic roulette, nodoids from the hyperbolic roulette) that appear as equilibrium shapes of soap films, liquid bridges between plates, and certain capillary or membrane configurations.<sup>6,7</sup> Ordinary tractrices (straight base) appear in sheet-metal deep-drawing dies and as the meridian of the pseudosphere; the same tangent-length property governs the rear-wheel tracks of a vehicle whose front wheels follow a prescribed path.<sup>8</sup></p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/delaunay/delaunay.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/delaunay/delaunay.shtml</a> (Delaunay roulette definition and history)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/tractrice/tractoire.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/tractrice/tractoire.shtml</a> (general tractory definition)</li>
+      <li><a href="https://www.numdam.org/item/JMPA_1841_1_6__309_0/" target="_blank" rel="noopener noreferrer">https://www.numdam.org/item/JMPA_1841_1_6__309_0/</a> (Delaunay 1841 paper)</li>
+      <li><a href="https://www.2dcurves.com/roulette/roulettede.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/roulette/roulettede.html</a> (Lindelöf 1861)</li>
+      <li><a href="https://mathworld.wolfram.com/Tractrix.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/Tractrix.html</a> (tractrix history)</li>
+      <li><a href="https://mathcurve.com/surfaces.gb/delaunay/delaunay.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/surfaces.gb/delaunay/delaunay.shtml</a> (Delaunay surfaces)</li>
+      <li><a href="https://arxiv.org/pdf/1305.1551" target="_blank" rel="noopener noreferrer">https://arxiv.org/pdf/1305.1551</a> (colloidal arrays on Delaunay surfaces)</li>
+      <li><a href="https://en.wikipedia.org/wiki/Tractrix" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Tractrix</a> (tractrix applications in forming and vehicles)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:DELAUNAYTRACTORY (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo divpt xspan paramstep restartflag
+                             id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr
+                             fs ft fu fv fw fx fy fz leash alpha0 tt dt base-pts pts pts-out ymin ymax prev-y more first-pass defspan ym dy dx ent ent-before data
+                             item prev-R)
+  (defun DLRN_RAD (y a c / r)
+    (setq r (* (+ y a c) (+ y a (- c)) (+ y (- a) c) (+ (- y) a c)))
+    (max 0.0 r))
+  (defun DLRN_DXDY (y a b c / rad den)
+    (setq rad (DLRN_RAD y a c))
+    (if (<= rad 1e-12) 0.0 (/ (- (* b b) (* y y)) (sqrt rad))))
+  (defun DLRN_RESET ()
+    (setq fe nil ff 0 fg 0.0 fh 0.0 fi 0.0 fj 0.0 fk 0.0 fl 0.0 fm 0 fn 0.0 fo 0 fp 0.0))
+  (defun DELA_F (ang e)
+    (sqrt (- 1.0 (* e e (cos ang) (cos ang)))))
+(defun DRAW_TRACTORY (base-pts leash alpha0 prev-R / R P0 P1 phi0 theta Ux Uy pts-tract
+                                 P_prev P_new dP U dot dR vec len pts-out)
+  (if (and base-pts (> (length base-pts) 1) (> leash 1e-6))
+    (progn
+      (if prev-R
+        (setq R prev-R
+              P_prev (car base-pts))
+        (progn
+          (setq P0 (car base-pts)
+                P1 (cadr base-pts)
+                phi0 (atan (- (cadr P1) (cadr P0)) (- (car P1) (car P0)))
+                theta (- phi0 alpha0)
+                Ux (cos theta)
+                Uy (sin theta)
+                R (list (- (car P0) (* leash Ux))
+                        (- (cadr P0) (* leash Uy)))
+                P_prev P0)))
+      (setq pts-tract (list R))
+      (foreach P_new (cdr base-pts)
+        (setq dP (list (- (car P_new) (car P_prev)) (- (cadr P_new) (cadr P_prev)))
+              U (list (/ (- (car P_prev) (car R)) leash) (/ (- (cadr P_prev) (cadr R)) leash))
+              dot (+ (* (car dP) (car U)) (* (cadr dP) (cadr U)))
+              dR (list (* dot (car U)) (* dot (cadr U)))
+              R (list (+ (car R) (car dR)) (+ (cadr R) (cadr dR)))
+              vec (list (- (car P_new) (car R)) (- (cadr P_new) (cadr R)))
+              len (sqrt (+ (* (car vec) (car vec)) (* (cadr vec) (cadr vec)))))
+        (if (> len 1e-9)
+          (setq R (list (- (car P_new) (* leash (/ (car vec) len))) (- (cadr P_new) (* leash (/ (cadr vec) len))))))
+        (setq pts-tract (cons R pts-tract)
+              P_prev P_new))
+      (setq pts-tract (reverse pts-tract))
+      (setq pts-out (mapcar '(lambda (p) (cons 10 p)) pts-tract))
+      (entmake
+        (append
+          (list '(0 . "LWPOLYLINE")
+                '(100 . "AcDbEntity")
+                '(62 . 1)
+                '(100 . "AcDbPolyline")
+                (cons 90 (length pts-out))
+                '(70 . 0))
+          pts-out
+          '((210 0.0 0.0 1.0))))
+      (last pts-tract))
+    (progn (princ "\nInsufficient base points or leash.") nil)))
+  (setq id "Delaunay Tractory"
+        iq "Elliptical or Hyperbolic"
+        dcl "DELAUNAYTRACTORY"
+        opt '("Elliptical" "Hyperbolic")
+        kw 0
+        mode 'param
+        dpr "# of divisions in span"
+        dct 1800
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((= kw 0)
+     (setq fa (get_real 6 "a (ellipse major semi-axis)" 3.0)
+           fb (get_real 6 "b (ellipse minor semi-axis)" 2.0))
+     (if (< fa fb) (setq tmp fa fa fb fb tmp))
+     (setq leash (get_real 6 "leash length" 5.0)
+           fz (get_real 6 "initial alpha (°)" 0.0)
+           alpha0 (* fz (/ pi 180.0))
+           tt 0.0 fe 0.0 more T first-pass T)
+     (while more
+       (setq defspan (if first-pass 24.0 0.0))
+       (setq span (get_real 4 "parameter span to add (0 or Enter to finish)" defspan))
+       (if (or (null span) (<= span 0.0))
+         (setq more nil)
+         (progn
+           (setq first-pass nil
+                 dt (/ span divcount)
+                 base-pts '()
+                 fc (sqrt (- (* fa fa) (* fb fb)))
+                 fd (/ fc fa))
+           (repeat (1+ divcount)
+             (setq y0 (* fb (sqrt (/ (- 1.0 (* fd (cos tt))) (+ 1.0 (* fd (cos tt)))))))
+             (if (> tt 0.0)
+               (progn
+                 (setq fg (+ (max 0.0 (- tt dt)) (* 0.5 dt))
+                       fh (* (/ dt 6.0) (+ (DELA_F (- tt dt) fd) (* 4.0 (DELA_F fg fd)) (DELA_F tt fd))))
+                 (setq fe (+ fe (* fa fh)))))
+             (setq x0 (- fe (* fc (sin tt) (sqrt (/ (- 1.0 (* fd (cos tt))) (+ 1.0 (* fd (cos tt)))))))
+                   base-pts (cons (list x0 y0) base-pts)
+                   tt (+ tt dt)))
+           (setq pts (reverse base-pts))
+           (if (> (length pts) 1)
+             (progn
+               (setq pts-out (mapcar '(lambda (p) (cons 10 p)) pts))
+               (entmake
+                 (append
+                   (list '(0 . "LWPOLYLINE")
+                         '(100 . "AcDbEntity")
+                         '(62 . 1)
+                         '(100 . "AcDbPolyline")
+                         (cons 90 (length pts-out))
+                         '(70 . 0))
+                   pts-out
+                   '((210 0.0 0.0 1.0))))
+               (setq prev-R (DRAW_TRACTORY pts leash alpha0 prev-R))
+             ))))))
+    ((= kw 1)
+     (DLRN_RESET)
+     (setq fa (get_real 2 "a (hyperbola semi-axis)" 3.0)
+           fb (get_real 2 "b (hyperbola semi-axis)" 2.0)
+           paramstep (/ (* 2.0 pi) divcount)
+           fc (sqrt (+ (* fa fa) (* fb fb)))
+           fw (- fc fa)
+           fx (+ fa fc)
+           fy (- fx fw)
+           eq_display (strcat "\na=" (rtos fa 2 4) ", b=" (rtos fb 2 4) ", c=" (rtos fc 2 4) ", ymin=" (rtos fw 2 4) ", ymax=" (rtos fx 2 4))
+           xc
+       '(- (progn
+             (setq fq (eval a2) fr (* 2.0 pi))
+             (if (< fq 0.0)
+               (progn (DLRN_RESET) (setq ff 1 fg fw fk fw fe fq) fj)
+               (if (and fe (<= (abs (- fq fe)) 1e-12))
+                 fj
+                 (progn
+                   (setq fe fq)
+                   (if (= fo 1) (setq ff 2 fi fp fg fx fh 0.0 fo 0))
+                   (if (= fo 2) (setq fm (1+ fm) fn fp ff 1 fi fn fg fw fh 0.0 fk fw fj fn fo 0))
+                   (setq fs (- fq (* fr fm)))
+                   (if (and (= ff 1) (>= fs (- pi (* 0.75 paramstep))))
+                     (progn (if (= fl 0.0) (setq fl (- fh)))
+                            (setq fp (+ fn fh) fg fx fk fx fj (+ fn fh) fo 1) fj)
+                     (if (and (= ff 2) (>= fs (- fr (* 0.75 paramstep))))
+                       (progn (if (= fl 0.0) (setq fl (- fh)))
+                              (setq fp (* -2.0 fl (1+ fm)) fg fw fk fw fj (+ fi (- fh)) fo 2) fj)
+                       (progn
+                         (if (= ff 1)
+                           (setq y2 (+ fw (* fy (/ fs pi))))
+                           (setq y2 (- fx (* fy (/ (- fs pi) pi)))))
+                         (if (or (<= (abs (- y2 fw)) 1e-10) (<= (abs (- y2 fx)) 1e-10))
+                           (progn (setq fg y2 fk y2 fj (+ fi (if (= ff 1) fh (- fh)))) fj)
+                           (progn
+                             (setq y1 fg ym (* 0.5 (+ y1 y2)) dy (- y2 y1)
+                                   dx (* (/ dy 6.0) (+ (DLRN_DXDY y1 fa fb fc) (* 4.0 (DLRN_DXDY ym fa fb fc)) (DLRN_DXDY y2 fa fb fc)))
+                                   fh (+ fh dx) fg y2 fk y2
+                                   fj (+ fi (if (= ff 1) fh (- fh))))
+                             fj))))))))))
+           yc 'fk
+           skm '(T T T T)
+           a1 (- paramstep)
+           a2 a1
+           x1 (eval xc)
+           y1 (eval yc)
+           a2 '(+ a1 paramstep)
+           x2 '(eval xc)
+           y2 '(eval yc)
+           ent-before (entlast))
+     (cc)
+					(setq base-pts '()
+											ent (if ent-before (entnext ent-before) (entnext)))
+					(while ent
+							(if (setq data (entget ent))
+									(if (wcmatch (cdr (assoc 0 data)) "*POLYLINE")
+											(foreach item data
+													(if (= (car item) 10)
+															(setq base-pts (append base-pts (list (cdr item))))))))
+							(setq ent (entnext ent)))
+     (princ (strcat "\nHarvested " (itoa (length base-pts)) " points."))
+(if base-pts (princ (strcat "\nFirst point: " (rtos (car (car base-pts)) 2 4) " " (rtos (cadr (car base-pts)) 2 4))))
+     (setq leash (get_real 6 "leash length" 5.0)
+           fz (get_real 6 "initial alpha (°)" 0.0)
+           alpha0 (* fz (/ pi 180.0)))
+     (DRAW_TRACTORY base-pts leash alpha0 nil)))
+  (princ))
+(C:DELAUNAYTRACTORY)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

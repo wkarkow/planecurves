@@ -124,7 +124,7 @@ const curveList = [
     done: true,
     imgCount: 10,
     equation: "(x - 2a)(x^{2} + y^{2}) + b^{2} (\\cos(2\\alpha) \\, x + \\sin(2\\alpha) \\, y) = 0, \\quad r = \\frac{a}{\\cos\\theta} \\pm \\sqrt{\\frac{a^{2} - b^{2} \\cos\\theta \\cdot \\cos(\\theta - 2\\alpha)}{\\cos\\theta}} \\quad (a \\geq 0,\\, b > 0,\\, 0 \\leq \\alpha \\leq \\pi/2)",
-    eqFind: ["cos(theta)", "sqrt", "r=", "r =", "y=", "y =", "alpha", ""],
+    eqFind: ["cos(theta)", "sqrt", "r=", "r =", "y=", "y =", "alpha"],
     imgSortKey: "006",
     images: {
       canonical: "Images/Apollonian/Apollonian01-360.avif",
@@ -445,7 +445,7 @@ const curveList = [
     id: "bifoliate",
     title: "Bifoliate",
     filename: "Bifoliate.html",
-    aliases: ["Double folium", "Bifolium", "Pedal Curve of the Deltoid"],
+    aliases: [],
     eqSortKey: "024",
     done: true,
     imgCount: 1,
@@ -1459,6 +1459,23 @@ const curveList = [
       canonical: "Images/Delaunay/Delaunay01-360.avif",
       variant1: "Images/Delaunay/Delaunay04-360.avif",
       variant2: "Images/Delaunay/Delaunay15-360.avif"      
+    }
+  },
+  {
+    id: "delaunay-tractory",
+    title: "Delaunay Tractory",
+    filename: "DelaunayTractory.html",
+    aliases: [],
+    eqSortKey: "079.5",
+    done: true,
+    imgCount: 24,
+    equation: "(x-x_0)\\,dy=(y-y_0)\\,dx, \\quad (x-x_0)^2+(y-y_0)^2=a^2, \\quad x=x_0-a\\cos(\\varphi_0-\\alpha),\\, y=y_0-a\\sin(\\varphi_0-\\alpha) ",
+    eqFind: ["dy", "dx", "y^2", "x^2", "phi", "alpha"],
+    imgSortKey: "079.5",
+    images: {
+      canonical: "Images/DelaunayTractory/DelaunayTractory10-360.avif",
+      variant1: "Images/DelaunayTractory/DelaunayTractory15-360.avif",
+      variant2: "Images/DelaunayTractory/DelaunayTractory20-360.avif"      
     }
   },
   {
@@ -2682,7 +2699,7 @@ const curveList = [
     done: true,
     imgCount: 1,
     equation: "y = a \\cdot \\ln\\bigl(\\sec(x) + \\tan(x)\\bigr)",
-    eqFind: [ "y=", "y =", "ln", "sec", "tan" ],
+    eqFind: [ "y=", "y =", "ln", "sec", "tan"],
     imgSortKey: "149.5",
     images: {
       canonical: "Images/InvGud/InvGud01-360.avif"
@@ -4529,15 +4546,14 @@ const curveList = [
     aliases: [],
     eqSortKey: "250.5",
     done: true,
-    imgCount: 22,
-    equation: "",
-    eqFind: ["x=", "x =", "y=", "y =", "r=", "r =", "cos^2", "sqrt", "sin", "theta", "tan", "cosh", "e^2",
-    ],
+    imgCount: 18,
+    equation: "x = a(1-e^{2})\\int_{0}^{t}\\dfrac{du}{(1-e^{2}\\sin^{2}u)^{3/2}}, y = a\\sqrt{\\dfrac{1-e^{2}}{1-e^{2}\\sin^{2}t}}, \\quad x = a(e^{2}-1)\\int_{0}^{t}\\dfrac{\\sin^{2}u\\,du}{(e^{2}-\\sin^{2}u)^{3/2}}, y = a\\sqrt{\\dfrac{e^{2}-1}{e^{2}-\\sin^{2}t}}\\,\\sin t",
+    eqFind: ["x=", "x =", "y=", "y =", "sin^2", "sqrt", "int", "du", "e^2"],
     imgSortKey: "250.5",
     images: {
-      canonical: "Images/SturmRoulette/SturmRoulette01-360.avif",
-      variant1: "Images/SturmRoulette/SturmRoulette02-360.avif",
-      variant2: "Images/SturmRoulette/SturmRoulette03-360.avif"
+      canonical: "Images/SturmRoulette/SturmRoulette07-360.avif",
+      variant1: "Images/SturmRoulette/SturmRoulette09-360.avif",
+      variant2: "Images/SturmRoulette/SturmRoulette14-360.avif"
     }
   },
   {
@@ -4548,9 +4564,8 @@ const curveList = [
     eqSortKey: "251",
     done: true,
     imgCount: 22,
-    equation: "x = a\\Bigl(\\cos\\bigl(\\tfrac{m}{n}t-\\sqrt{1-(\\tfrac{m}{n})^{2}}\\bigr)\\cos t+\\tfrac{m}{n}\\sin\\bigl(\\tfrac{m}{n}t\\bigr)\\sin t\\Bigr), y = a\\Bigl(\\cos\\bigl(\\tfrac{m}{n}t-\\sqrt{1-(\tfrac{m}{n})^{2}}\\bigr)\\sin t-\\tfrac{m}{n}\\sin\\bigl(\\tfrac{m}{n}t\\bigr)\\cos t\\Bigr), \\quad r=\\dfrac{a}{\\cos^{2}t},\\quad \\theta=\\tan t-2t, \\\\ x = a\\bigl(\\cosh(t\\sqrt{e^{2}-1}+e)\\cos t-\\sqrt{e^{2}-1}\\sin(t\\sqrt{e^{2}-1})\\sin t\\bigr), y = a\\bigl(\\cosh(t\\sqrt{e^{2}-1}+e)\\sin t+\\sqrt{e^{2}-1}\\sin(t\\sqrt{e^{2}-1})\\cos t\\bigr)",
-    eqFind: ["x=", "x =", "y=", "y =", "r=", "r =", "cos^2", "sqrt", "sin", "theta", "tan", "cosh", "e^2",
-    ],
+    equation: "x = a\\Bigl(\\cos\\bigl(\\tfrac{m}{n}t-\\sqrt{1-(\\tfrac{m}{n})^{2}}\\bigr)\\cos t+\\tfrac{m}{n}\\sin\\bigl(\\tfrac{m}{n}t\\bigr)\\sin t\\Bigr), y = a\\Bigl(\\cos\\bigl(\\tfrac{m}{n}t-\\sqrt{1-(\\tfrac{m}{n})^{2}}\\bigr)\\sin t-\\tfrac{m}{n}\\sin\\bigl(\\tfrac{m}{n}t\\bigr)\\cos t\\Bigr), \\quad r=\\dfrac{a}{\\cos^{2}t},\\quad \\theta=\\tan t-2t, \\\\ x = a\\bigl(\\cosh(t\\sqrt{e^{2}-1}+e)\\cos t-\\sqrt{e^{2}-1}\\sin(t\\sqrt{e^{2}-1})\\sin t\\bigr), y = a\\bigl(\\cosh(t\\sqrt{e^{2}-1}+e)\\sin t+\\sqrt{e^{2}-1}\\sin(t\\sqrt{e^{2}-1})\\cos t\\bigr)",
+    eqFind: ["x=", "x =", "y=", "y =", "r=", "r =", "cos^2", "sqrt", "sin", "theta", "tan", "cosh", "e^2"],
     imgSortKey: "251",
     images: {
       canonical: "Images/SturmSpiral/SturmSpiral01-360.avif",
@@ -4567,8 +4582,7 @@ const curveList = [
     done: true,
     imgCount: 12,
     equation: "r = a \\cdot \\sin(b \\cdot \\theta)\\,\\bigl(\\lvert\\cos(c \\cdot \\theta)\\rvert^{d} + \\lvert\\sin(c \\cdot \\theta)\\rvert^{e}\\bigr)^{f}",
-    eqFind: ["r=", "r =", "cos^", "sin^", "theta",
-    ],
+    eqFind: ["r=", "r =", "cos^", "sin^", "theta"],
     imgSortKey: "252",
     images: {
       canonical: "Images/SuperRose/SuperRose01-360.avif",
@@ -4585,8 +4599,7 @@ const curveList = [
     done: true,
     imgCount: 10,
     equation: "r = e^{a\\theta}\\bigl(\\lvert\\cos(b\\theta)\\rvert^{c} + \\lvert\\sin(b\\theta)\\rvert^{d}\\bigr)^{f}",
-    eqFind: ["r=", "r =", "cos^", "sin^", "theta", "e^",
-    ],
+    eqFind: ["r=", "r =", "cos^", "sin^", "theta", "e^"],
     imgSortKey: "253",
     images: {
       canonical: "Images/SuperSpiral/SuperSpiral06-360.avif",
@@ -4641,8 +4654,7 @@ const curveList = [
     done: true,
     imgCount: 13,
     equation: "r^{2} = \\tan\\left(\\frac{p}{2q}\\,\\theta\\right)",
-    eqFind: ["r=", "r =", "cos^", "sin^", "theta", "e^",
-    ],
+    eqFind: ["r=", "r =", "cos^", "sin^", "theta", "e^"],
     imgSortKey: "255",
     images: {
       canonical: "Images/Swastika/Swastika01-360.avif",
@@ -4674,8 +4686,7 @@ const curveList = [
     done: true,
     imgCount: 13,
     equation: "r = \\frac{a \\cos \\theta}{\\theta}, \\quad r = \\frac{a \\lvert\\cos^{b} (c \\theta)\\rvert}{\\theta^{d}}",
-    eqFind: ["r=", "r =", "cos^", "theta^",
-    ],
+    eqFind: ["r=", "r =", "cos^", "theta^"],
     imgSortKey: "256.5",
     images: {
       canonical: "Images/Syncochleoid/Syncochleoid01-360.avif",
@@ -4707,8 +4718,7 @@ const curveList = [
     done: true,
     imgCount: 5,
     equation: "r = a\\bigl(k - \\cos t\\bigr),\\qquad \\theta(t) = \\int \\frac{\\cos t}{\\cos t - k}\\, dt",
-    eqFind: ["r=", "r =", "cos^", "theta", "int", "dt",
-    ],
+    eqFind: ["r=", "r =", "cos^", "theta", "int", "dt"],
     imgSortKey: "258",
     images: {
       canonical: "Images/Syntrepent/Syntrepent01-360.avif",
@@ -4725,8 +4735,7 @@ const curveList = [
     done: true,
     imgCount: 10,
     equation: "y = a \\cdot \\tan(bx - c) = \\dfrac{a \\cdot \\sin(bx - c)}{\\cos(bx - c)}",
-    eqFind: ["y=", "y =", "cos", "tan", "sin",
-    ],
+    eqFind: ["y=", "y =", "cos", "tan", "sin"],
     imgSortKey: "259",
     images: {
       canonical: "Images/Tangent/Tangent02-360.avif",
@@ -4743,8 +4752,7 @@ const curveList = [
     done: true,
     imgCount: 16,
     equation: "r = a \\cdot \\tanh(b\\theta)",
-    eqFind: ["r=", "r =", "tanh", "theta",
-    ],
+    eqFind: ["r=", "r =", "tanh", "theta"],
     imgSortKey: "260",
     images: {
       canonical: "Images/TanhSpiral/TanhSpiral01-360.avif",
