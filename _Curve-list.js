@@ -4274,7 +4274,7 @@ const curveList = [
     aliases: ["Anguinea", "Right Serpentine"],
     eqSortKey: "234",
     done: true,
-    imgCount: 1,
+    imgCount: 3,
     equation: "y = \\dfrac{a \\cdot d \\cdot x}{x^{2}+d^{2}}, \\quad x = d \\cdot \\tan\\!\\left(\\dfrac{t}{2}\\right), y = \\dfrac{a}{2}\\sin(t), \\quad r^{2} = \\dfrac{d}{\\cos(\\theta)}\\left(\\dfrac{a}{\\sin(\\theta)}-\\dfrac{d}{\\cos(\\theta)}\\right), \\quad y(x+y)^{2}=x, \\quad x=a \\cdot\\dfrac{\\sin^{3}t}{\\cos t}, y=a \\cdot\\sin t\\cos t, \\quad y(x^{2}+y^{2})=a^{2}x, \\quad r^2=a^{2}\\cot\\theta",
     eqFind: ["x=", "y=", "x =", "y =", "x^2", "tan", "sin^3", "r^2", "theta", "cos", "y^2", "cot", "theta"],
     imgSortKey: "234",
