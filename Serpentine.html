@@ -34,8 +34,8 @@
       <a href="#" class="next-link">Next curve</a>
     </div>
     <div class="curve-title-block">
-      <h1>Serpentine Cubic</h1>
-      <p class="short-description">A rational cubic, also called the anguinea, having an odd S-shaped curve with an inflection at the origin.</p>
+      <h1>Serpentine Curve</h1>
+      <p class="short-description">A rational cubic, also called the anguinea, having an odd S-shaped curve with an inflection at the origin, along with 2 other variants.</p>
     </div>
   </section>
 
@@ -52,6 +52,16 @@
         d=1
       </figcaption>
     </figure>
+    <figure>
+      <img src="Images/Serpentine/Serpentine02-360.avif"
+           alt="Right Serpentine 1, a=1">
+      <figcaption>Right Serpentine 1, a=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Serpentine/Serpentine03-360.avif"
+           alt="Right Serpentine 2, a=1">
+      <figcaption>Right Serpentine 2, a=1</figcaption>
+    </figure>
   </section>
 
   <section class="equation-ribbon" style="--label-min-width: 380px;">
@@ -67,12 +77,29 @@
       <div class="equation-label">Serpentine Curve polar equation:</div>
       \[ r^{2} = \dfrac{d}{\cos(\theta)}\left(\dfrac{a}{\sin(\theta)}-\dfrac{d}{\cos(\theta)}\right) \]
     </div>
+    <div class="equation-line">
+      <div class="equation-label">Right Serpentine 1 Cartesian equation:</div>
+      \[ y(x+y)^{2}=x \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Right Serpentine 1 parametric equations:</div>
+      \[ x=a \cdot\dfrac{\sin^{3}t}{\cos t},\quad y=a \cdot\sin t\cos t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Right Serpentine 2 Cartesian equation:</div>
+      \[ y(x^{2}+y^{2})=a^{2}x \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Right Serpentine 2 polar equation:</div>
+      \[ r^2=a^{2}\cot\theta \]
+    </div>
   </section>
 
   <section>
     <h2>History and Applications</h2>
     <p>The Serpentine Cubic<sup>1,2,3</sup>, also known as anguinea from the Latin <em>anguis</em> meaning snake, is a rational cubic curve. It was studied by Guillaume de l'Hôpital and Christiaan Huygens in 1692 and later named and classified by Isaac Newton in 1701 as part of his enumeration of cubic curves. Newton’s work on the curve appeared in John Harris’s <em>Lexicon Technicum</em> (1710). As an odd function, it has 180° rotational symmetry about the origin, an inflection point at the origin where the slope changes sign, and the x-axis as a horizontal asymptote; as \(|x|\) grows large the y-values approach zero, a property familiar to engineers modeling bounded transitions.</p>
     <p>In engineering the serpentine or S-curve is used in surveying and civil design to create smooth easement transitions that connect parallel roads or railway lines intersecting at small angles.<sup>4</sup> It also appears geometrically as the directrix of Plücker’s conoid<sup>5</sup> and as a projection of the horopter in models of binocular vision.</p>
+    <p>Two further curves bearing the serpentine name appear on MathCurve under the headings Right Serpentine 1<sup>6</sup> and Right Serpentine 2<sup>7</sup>. Both names are marked there as homemade. Right Serpentine 1 is the rational cubic given by the Cartesian equation $y(x+y)^2=x$, with parametric equations $x=\sin^3 t/\cos t$, $y=\sin t\cos t$. It has an isolated point at infinity in the direction of the y-axis. Right Serpentine 2 is the elliptic circular cubic given by the polar equation $\rho^2=a^2\cot\theta$, or in Cartesian form $y(x^2+y^2)=a^2 x$. MathCurve notes that it is a special case of a focal circular cubic. Neither variant has documented engineering or natural-science applications distinct from those of the classical serpentine.</p>
   </section>
 
   <section>
@@ -83,32 +110,55 @@
       <li><a href="https://www.2dcurves.com/cubic/cubicse.html" target="_blank" rel="noopener noreferrer">https://www.2dcurves.com/cubic/cubicse.html</a> (properties and history)</li>
       <li><a href="https://www.statisticshowto.com/serpentine-curve/" target="_blank" rel="noopener noreferrer">https://www.statisticshowto.com/serpentine-curve/</a> (surveying and engineering applications)</li>
       <li><a href="https://mathcurve.com/courbes2d.gb/anguinee/anguinee.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/anguinee/anguinee.shtml</a> (properties and Plücker’s conoid)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/serpentinedroite/serpentinedroite1.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/serpentinedroite/serpentinedroite1.shtml</a> (equations)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/serpentinedroite/serpentinedroite2.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/serpentinedroite/serpentinedroite2.shtml</a> (equations)</li>
     </ol>
   </section>
 
 <section class="code-ribbon">
   <h2>AutoLISP Code</h2>
 <pre><code>(defun C:SERPENTINE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
-                       divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
-  (setq id "Serpentine Cubic"
-        iq "y=(a·d·x)/(x²+d²)"
-        dcl nil
-        opt nil
-        kw nil
+                       divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb maxdraw)
+  (setq id "Serpentine Curve"
+        iq ""
+        dcl "SERPENTINE"
+        opt '("Anguinea" "Right Serpentine 1" "Right Serpentine 2")
+        kw 0
         mode 'param
-        dpr "# of divisions to x-span of division point"
+        dpr "# of divisions in curve or to division point"
         dct 500
         dpt '(5.0 0.0)
         span nil
-        kw (ca id iq dcl opt kw mode dpr dct dpt span)
-        fa (get_real 2 "a (half-yₘₐₓ)" 2.0)
-        fb (get_real 2 "d (x peak)" 1.0)
-        eq_display (strcat "\na=" (rtos fa 2 4) ", d=" (rtos fb 2 4))
-        xc '(eval a2)
-        yc '(/ (* fa fb (eval a2)) (+ (* (eval a2) (eval a2)) (* fb fb)))
-        paramstep (/ xspan divcount)
-        skm '(T T nil)
-        a1 0
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "Anguinea, y=(a·d·x)/(x²+d²)")
+     (setq fa (get_real 2 "a (half-yₘₐₓ)" 2.0)
+           fb (get_real 2 "d (x peak)" 1.0)
+           eq_display (strcat "\nAnguinea, a=" (rtos fa 2 4) ", d=" (rtos fb 2 4))
+           xc '(eval a2)
+           yc '(/ (* fa fb (eval a2)) (+ (* (eval a2) (eval a2)) (* fb fb)))
+           paramstep (/ xspan divcount)
+           skm '(T T nil)))
+    ((eq kw 1)
+     (princ "Right Serpentine 1, x=sin³t/cos t, y=sin t cos t")
+     (setq paramstep (/ pi divcount)
+           fa (get_real 2 "a (scale)" 1.0)
+           maxdraw (get_real 2 "Maximum x and y values allowed?" 20.0)
+           eq_display (strcat "\nRight Serpentine 1, a=" (rtos fa 2 4))
+           xc '(* fa (/ (expt (sin (eval a2)) 3) (avoid_zero (cos (eval a2)))))
+           yc '(* fa (sin (eval a2)) (cos (eval a2)))
+           skm '(T T T)))
+    ((eq kw 2)
+    (princ "Right Serpentine 2, ρ²=a² cot θ")
+     (setq paramstep (/ pi 2.0 divcount)
+           fa (get_real 2 "a (scale)" 1.0)
+           maxdraw (get_real 2 "Maximum x and y values allowed??" 20.0)
+           eq_display (strcat "\nRight Serpentine 2, a=" (rtos fa 2 4))
+           xc '(* (alt_expt (cot (eval a2)) 0.5 nil) fa (cos (eval a2)))
+           yc '(if (equal (eval a2) (/ pi 2) 1e-4) 0.0 (* (alt_expt (cot (eval a2)) 0.5 nil) fa (sin (eval a2))))
+           skm '(T T nil))))
+  (setq a1 0
         a2 a1
         x1 (eval xc)
         y1 (eval yc)

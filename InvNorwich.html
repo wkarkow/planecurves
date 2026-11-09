@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inverse Norwich Spiral - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Inverse Norwich Spiral</h1>
+      <p class="short-description">Polar inverse curve with respect to the pole of the Norwich spiral.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/InvNorwich/InvNorwich01-360.avif"
+           alt="Inverse Norwich Spiral, a=1,Fit-curve,full view"
+      <figcaption>Inverse Norwich Spiral, a=1,Fit-curve,full view</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/InvNorwich/InvNorwich02-360.avif"
+           alt="Inverse Norwich Spiral, a=1,Fit-curve,zoomed"
+      <figcaption>Inverse Norwich Spiral, a=1,Fit-curve,zoomed</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/InvNorwich/InvNorwich03-360.avif"
+           alt="Inverse Norwich Spiral, a=1,Discrete,full view"
+      <figcaption>Inverse Norwich Spiral, a=1,Discrete,full view</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/InvNorwich/InvNorwich04-360.avif"
+           alt="Inverse Norwich Spiral,a=1,Discrete,zoomed"
+      <figcaption>Inverse Norwich Spiral,a=1,Discrete,zoomed</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Inverse Norwich Spiral parametric equations:</div>
+      \[ \rho = a \cos^{2} t,\quad \theta = 2t - \tan t,\quad |t| < \pi/2 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Curvilinear abscissa:</div>
+      \[ s = a t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Cartesian tangential angle:</div>
+      \[ \psi = 4t - \tan t + \pi/2 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Radius of curvature:</div>
+      \[ R_{c} = \dfrac{a}{3 - \tan^{2} t} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Length:</div>
+      \[ \pi a \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The inverse Norwich spiral is the polar inverse, with respect to the pole, of the Norwich spiral. The parent Norwich spiral, a case of the Sturm spiral and a radioid, was studied by Riccati (1712), Euler (1781), Sturm (1857) and Sylvester (1868); Sylvester named it after the 1868 British Association meeting in Norwich at which he presented work on successive involutes of a circle.<sup>1,2</sup> The inverse form itself was examined by Christophe Masurel in 2013 in the course of his studies of wheels and grounds under Gregory’s transformation; the designation “inverse Norwich spiral” is a later homemade name given by Robert Ferréol.<sup>3,4</sup>Its polar parametrization is \(\rho = a\cos^{2} t\), \(\theta=2t-\tan t\), \(|t|<\pi/2\), with curvilinear abscissa \(s=at\) and total length \(\pi a\).<sup>4</sup> The ordinary Norwich spiral has the reciprocal radius \(\rho=a/\cos^{2} t\) and the opposite angular sign. The curve has a simple kinematic characterization. When it rolls without slip on a circular road, its hub traces a straight-line tangent to that circle. Conversely, when the same curve rolls on a straight line, its pole traces a cardioid.<sup>4,5</sup> These properties place it among the classical wheel–road pairs studied by Masurel and earlier authors. In this AutoLISP implementation, one does not notice the limitations of computation in the full views of these images processed with 18000 segments. However, when zoomed in, those limitations become apparent as the curve tightens.</p>
+    <p>No independent engineering or scientific applications beyond this kinematic rôle were identified in the sources consulted.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://zenodo.org/records/1948220/files/article.pdf" target="_blank" rel="noopener noreferrer">https://zenodo.org/records/1948220/files/article.pdf</a> (Sylvester J. J. 1866 article on naming and involute context).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sturm/spirale_sturm.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sturm/spirale_sturm.shtml</a> (Norwich spiral history and properties).</li>
+      <li><a href="http://christophe.masurel.free.fr/pdf/CurvesCKNP-PartIII.pdf" target="_blank" rel="noopener noreferrer">http://christophe.masurel.free.fr/pdf/CurvesCKNP-PartIII.pdf</a> (polar form and wheel interpretations).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sturm/norwichinverse.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sturm/norwichinverse.shtml</a> (definition as polar inverse, equations, rolling properties).</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/engrenage/engrenage2.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/engrenage/engrenage2.shtml</a> (wheel–road couple with circular road and tangent hub path).</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+<pre><code>(defun C:INVNORWICH (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                      restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb)
+  (setq id "Inverse Norwich Spiral"
+        iq "ρ=a·cos²(t), θ=2t-tan(t), |t|<π/2"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'polar
+        dpr "# of divisions per half-turn"
+        dct 18000
+        dpt nil
+        span 180
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 2 "a (scale)" 1.0)
+        fb (get_keyword 0 "Fit-curve Discrete" "Fit-curve or Discrete?" "Fit-curve")
+        xc '(* fa (expt (cos (eval a2)) 2) (cos (- (* 2.0 (eval a2)) (tan (eval a2)))))
+        yc '(* fa (expt (cos (eval a2)) 2) (sin (- (* 2.0 (eval a2)) (tan (eval a2)))))
+        eq_display (strcat "\na=" (rtos fa 2 4))
+        skm (if (eq fb "Fit-curve") '(T T T) '(T T T T))
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:INVNORWICH)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_modal.js"></script>
+</body>
+</html>

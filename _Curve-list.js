@@ -1468,7 +1468,7 @@ const curveList = [
     aliases: [],
     eqSortKey: "079.5",
     done: true,
-    imgCount: 24,
+    imgCount: 29,
     equation: "(x-x_0)\\,dy=(y-y_0)\\,dx, \\quad (x-x_0)^2+(y-y_0)^2=a^2, \\quad x=x_0-a\\cos(\\varphi_0-\\alpha),\\, y=y_0-a\\sin(\\varphi_0-\\alpha) ",
     eqFind: ["dy", "dx", "y^2", "x^2", "phi", "alpha"],
     imgSortKey: "079.5",
@@ -2703,6 +2703,21 @@ const curveList = [
     imgSortKey: "149.5",
     images: {
       canonical: "Images/InvGud/InvGud01-360.avif"
+    }
+  },
+  {
+    id: "inverse-norwich-spiral",
+    title: "Inverse Norwich Spiral",
+    filename: "InvNorwich.html",
+    aliases: [],
+    eqSortKey: "149.6",
+    done: true,
+    imgCount: 1,
+    equation: "",
+    eqFind: [ "y=", "y =", "ln", "sec", "tan"],
+    imgSortKey: "149.6",
+    images: {
+      canonical: "Images/InvNorwich/InvNorwich01-360.avif"
     }
   },
   {
@@ -4256,15 +4271,33 @@ const curveList = [
     id: "serpentine-curve",
     title: "Serpentine Curve",
     filename: "Serpentine.html",
-    aliases: ["Anguinea"],
+    aliases: ["Anguinea", "Right Serpentine"],
     eqSortKey: "234",
     done: true,
     imgCount: 1,
-    equation: "y = \\dfrac{a \\cdot d \\cdot x}{x^{2}+d^{2}}, \\quad x = d \\cdot \\tan\\!\\left(\\dfrac{t}{2}\\right), y = \\dfrac{a}{2}\\sin(t), \\quad r^{2} = \\dfrac{d}{\\cos(\\theta)}\\left(\\dfrac{a}{\\sin(\\theta)}-\\dfrac{d}{\\cos(\\theta)}\\right)",
-    eqFind: ["x=", "y=", "x =", "y =", "x^2", "tan", "sin", "r^2", "theta", "cos"],
+    equation: "y = \\dfrac{a \\cdot d \\cdot x}{x^{2}+d^{2}}, \\quad x = d \\cdot \\tan\\!\\left(\\dfrac{t}{2}\\right), y = \\dfrac{a}{2}\\sin(t), \\quad r^{2} = \\dfrac{d}{\\cos(\\theta)}\\left(\\dfrac{a}{\\sin(\\theta)}-\\dfrac{d}{\\cos(\\theta)}\\right), \\quad y(x+y)^{2}=x, \\quad x=a \\cdot\\dfrac{\\sin^{3}t}{\\cos t}, y=a \\cdot\\sin t\\cos t, \\quad y(x^{2}+y^{2})=a^{2}x, \\quad r^2=a^{2}\\cot\\theta",
+    eqFind: ["x=", "y=", "x =", "y =", "x^2", "tan", "sin^3", "r^2", "theta", "cos", "y^2", "cot", "theta"],
     imgSortKey: "234",
     images: {
-      canonical: "Images/Serpentine/Serpentine01-360.avif"
+      canonical: "Images/Serpentine/Serpentine01-360.avif",
+      variant1: "Images/Serpentine/Serpentine02-360.avif",
+      variant2: "Images/Serpentine/Serpentine03-360.avif"
+    }
+  },
+  {
+    id: "sigmoid-curve",
+    title: "Sigmoid Curve",
+    filename: "Sigmoid.html",
+    aliases: ["Softsign Curve"],
+    eqSortKey: "234.5",
+    done: true,
+    imgCount: 2,
+    equation: "y = a\\cdot \\dfrac{x}{\\bigl(|x|^t + 1\\bigr)^{1/t}}",
+    eqFind: ["y=", "y =", "x^t"],
+    imgSortKey: "234.5",
+    images: {
+      canonical: "Images/Sigmoid/Sigmoid01-360.avif",
+      variant1: "Images/Sigmoid/Sigmoid02-360.avif"
     }
   },
   {
@@ -4730,7 +4763,7 @@ const curveList = [
     id: "tangent-curve",
     title: "Tangent Curve",
     filename: "Tangent.html",
-    aliases: [],
+    aliases: ["Tangentoid"],
     eqSortKey: "259",
     done: true,
     imgCount: 10,
@@ -4893,6 +4926,23 @@ const curveList = [
       canonical: "Images/TractCirc/TractCirc06-360.avif",
       variant1: "Images/TractCirc/TractCirc12-360.avif",
       variant2: "Images/TractCirc/TractCirc13-360.avif"
+    }
+  },
+  {
+    id: "tractrix-of-an-ellipse",
+    title: "Tractrix of an Ellipse",
+    filename: "TractEllipse.html",
+    aliases: [],
+    eqSortKey: "266.5",
+    done: true,
+    imgCount: 30,
+    equation: "",
+    eqFind: ["dtheta", "theta", "r^2", "sqrt", "r^4"],
+    imgSortKey: "266.5",
+    images: {
+      canonical: "Images/TractEllipse/TractEllipse01-360.avif",
+      variant1: "Images/TractEllipse/TractEllipse12-360.avif",
+      variant2: "Images/TractEllipse/TractEllipse29-360.avif"
     }
   },
   {

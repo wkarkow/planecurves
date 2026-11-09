@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sigmoid Curve - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sigmoid Curve</h1>
+      <p class="short-description">A member of the sigmoid family, $y = a \cdot \dfrac{x}{\bigl(|x|^t + 1\bigr)^{1/t}}$.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Sigmoid/Sigmoid01-360.avif"
+           alt="Sigmoid Curve, a=1, multiple values of t">
+      <figcaption>
+        Sigmoid Curve, a=1,t=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">1.5</span>,
+        <span class="figcap-value" style="color:#0096FF">2</span>,
+        <span class="figcap-value" style="color:#AA5555">3</span>,
+        <span class="figcap-value" style="color:#00FF00">4</span>,
+        <span class="figcap-value" style="color:#FF00FF">8</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sigmoid/Sigmoid02-360.avif"
+           alt="Sigmoid Curve, multiple values of -t">
+      <figcaption>
+        Negative-t, a=1,t=
+        <span class="figcap-value" style="color:#000000">0.125</span>,
+        <span class="figcap-value" style="color:#FF0000">0.25</span>,
+        <span class="figcap-value" style="color:#0000FF">0.5</span>,
+        <span class="figcap-value" style="color:#009600">0.75</span>,
+        <span class="figcap-value" style="color:#FF9600">1</span>,
+        <span class="figcap-value" style="color:#9600FF">2</span>,
+        <span class="figcap-value" style="color:#0096FF">8</span>,
+        <span class="figcap-value" style="color:#AA5555">32</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 260px;">
+    <div class="equation-line">
+      <div class="equation-label">Sigmoid Curve equation (t > 0):</div>
+      \[ y = a\cdot \dfrac{x}{\bigl(|x|^t + 1\bigr)^{1/t}} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Negative-t equation (t < 0):</div>
+      \[ y = a\cdot \dfrac{x}{\bigl(|x|^t + 1\bigr)^{1/t}} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>The algebraic sigmoid family catalogued by Robert Ferréol on MathCurve is defined as an odd, differentiable function that increases from −1 to +1 and lies between a pair of horizontal asymptotes equidistant from its inflection point at the origin.<sup>1</sup> Members include the <a href="HyperFun.html">hyperbolic tangentoid</a> and <a href="Tangent.html">tangentoid</a>, among others. The specimen treated here is the one-parameter generalization, $ y=\frac{x}{\bigl(|x|^t+1\bigr)^{1/t}}, t>0 $. It recovers two earlier examples on the same page: the softsign \( x/(|x|+1) \) when \( t=1 \), and the algebraic connection of two hyperbolic branches \( x/\sqrt{x^2+1} \) when \( t=2 \). The same page also lists the transcendental hyperbolic tangentoid \( y=\tanh x \) and the ordinary tangentoid \( y=\tan x \) as further normalized sigmoids. No earlier attribution for the general-\( t \) algebraic form is given; the page is a modern catalogue entry. The restriction \( t>0 \) is required for the horizontal asymptotes. When \( t \&lt 0 \) the expression becomes unbounded, asymptotic to the line \( y=x \) at infinity, and discontinuous at the origin (the right- and left-hand limits are \(\pm 1\)). The AutoLISP implementation therefore offers the negative-exponent case under a separate “Negative-t” option that is not claimed to be a sigmoid.</p>
+    <p>The special case \( t=1 \), the softsign curve, was introduced by David L. Elliott in 1993 as an activation function for artificial neural networks.<sup>2</sup> It maps the reals onto (−1, 1), is centered at the origin, and requires only absolute value and division; the absence of exponentials makes it cheaper to evaluate than the hyperbolic tangent while retaining a similar saturating shape. Because it approaches its asymptotes only polynomially rather than exponentially, its derivative decays more slowly, which can mitigate vanishing-gradient effects in some architectures. The case \( t=2 \) supplies a purely algebraic approximation to \( \tanh x \) that has been used in matrix-valued optimizers where transcendental functions are undesirable.<sup>3</sup></p>
+    <p>Broader members of the sigmoid class (most often the logistic function) appear in population dynamics, dose-response curves, and the output layers of neural networks. The algebraic family above is used principally for its computational simplicity in the same neural-network setting and in related numerical work that needs a smooth, odd, saturating map without exponential evaluations. No engineering applications peculiar to arbitrary \( t \) beyond these computational uses have been identified.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sigmoid/sigmoid.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sigmoid/sigmoid.shtml</a> (definition, algebraic generalization, related tangentoids).</li>
+      <li><a href="https://api.drum.lib.umd.edu/server/api/core/bitstreams/fbe46c3c-092e-465f-bc3e-3a92808ae4d5/content" target="_blank" rel="noopener noreferrer">https://api.drum.lib.umd.edu/server/api/core/bitstreams/fbe46c3c-092e-465f-bc3e-3a92808ae4d5/content</a> (Elliott, D. L. 1993, use of softsign curve in artificial neural networks).</li>
+      <li><a href="https://arxiv.org/pdf/2507.06464" target="_blank" rel="noopener noreferrer">https://arxiv.org/pdf/2507.06464</a> (optimizer literature employing the algebraic map \( x/\sqrt{1+x^2} \) (\( t=2 \)) as a transcendental-free substitute for \( \tanh \)).</li>
+    </ol>
+  </section>
+
+  <section class="code-ribbon">
+    <h2>AutoLISP Code</h2>
+    <pre><code>(defun C:SIGMOID (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep divpt
+                    xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 maxdraw fa fb)
+  (setq id "Sigmoid Curve"
+        iq "y=scale·x/(|x|^t+1)^(1/t)"
+        dcl "SIGMOID"
+        opt '("Sigmoid" "Negative-t")
+        kw 0
+        mode 'param
+        dpr "# of divisions to x-span of division point"
+        dct 1000
+        dpt '(10.0 0.0)
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (get_real 6 "scale" 1.0)
+        fb (get_real 6 "t (exponent)" 2.0)
+        fb (if (= kw 1) (- fb) fb)
+        eq_display (strcat "\nscale=" (rtos fa 2 4) ", t=" (rtos fb 2 4))
+        xc '(eval a2)
+        yc '(cond ((and (= (eval a2) 0.0) (= kw 0)) 0.0) ((and (= (eval a2) 0.0) (= kw 1)) 1.0)
+            (T (* fa (/ (eval a2) (alt_expt (+ (alt_expt (abs (eval a2)) fb nil) 1.0) (/ 1.0 fb) nil)))))
+        maxdraw (get_real 2 "Maximum x and y values allowed?" 100)
+        paramstep (/ xspan divcount)
+        skm '(T T nil)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SIGMOID)</code></pre>
+  </section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>
