@@ -54,6 +54,13 @@
     .curve-name a:hover {
       text-decoration: underline;
     }
+    .img-count {
+      font-size: 0.82rem;
+      color: #666;
+      font-weight: normal;
+      margin-top: 2px;
+      font-style: italic;
+    }
     .image-cell {
       text-align: center;
       min-width: 380px;
@@ -205,10 +212,14 @@ document.addEventListener("DOMContentLoaded", function() {
         tr.className = "pending-row";
       }
 
-      // Column 1: Name + link
+      // Column 1: Name + link + image count
       const nameTd = document.createElement("td");
       nameTd.className = "curve-name";
-      nameTd.innerHTML = `<a href="${curve.filename}">${curve.title}</a>`;
+      let nameHtml = `<a href="${curve.filename}">${curve.title}</a>`;
+      if (curve.imgCount && curve.imgCount > 0) {
+        nameHtml += `<div class="img-count">${curve.imgCount} image${curve.imgCount === 1 ? "" : "s"}</div>`;
+      }
+      nameTd.innerHTML = nameHtml;
       tr.appendChild(nameTd);
 
       // Columns 2-4: Images or pending

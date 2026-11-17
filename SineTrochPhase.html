@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sine Trochoid with Phase - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sine Trochoid with Phase</h1>
+      <p class="short-description">Sine trochoid with constant phase angle \(\alpha\) of the tracing arm measured from the normal.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase01-360.avif"
+           alt="Sine Trochoid with Phase, a=0.5,d=1,Positive,α=0°-360°"
+      <figcaption>Sine Trochoid with Phase, a=0.5,d=1,Positive,α =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase02-360.avif"
+           alt="Sine Trochoid with Phase, a=0.5,d=1,Positive,α=0°"
+      <figcaption>Sine Trochoid with Phase, a=0.5,d=1,Positive,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase03-360.avif"
+           alt="Sine Trochoid with Phase, a=0.5,d=1,Positive,α=90°"
+      <figcaption>Sine Trochoid with Phase, a=0.5,d=1,Positive,α=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase04-360.avif"
+           alt="Sine Trochoid with Phase, a=1,d=1,Positive,α=0°-360°"
+      <figcaption>Sine Trochoid with Phase, a=1,d=1,Positive,α =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase05-360.avif"
+           alt="Sine Trochoid with Phase, a=1,d=1,Positive,α=0°"
+      <figcaption>Sine Trochoid with Phase, a=1,d=1,Positive,α=0°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase06-360.avif"
+           alt="Sine Trochoid with Phase, a=1,d=1,Positive,α=180°"
+      <figcaption>Sine Trochoid with Phase, a=1,d=1,Positive,α=180°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase07-360.avif"
+           alt="Sine Trochoid with Phase, a=0.5,d=-2,Negative,α=0°-360°"
+      <figcaption>Sine Trochoid with Phase, a=0.5,d=-2,Negative,α =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase08-360.avif"
+           alt="Sine Trochoid with Phase, a=0.5,d=-2,Negative,α=0°-150°, 'Flowers'"
+      <figcaption>Sine Trochoid with Phase, a=0.5,d=-2,Negative,α =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>, 'Flowers'
+       </figcaption>
+    </figure>    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase09-360.avif"
+           alt="Sine Trochoid with Phase, a=0.5,d=-2,Negative,α=180°"
+      <figcaption>Sine Trochoid with Phase, a=0.5,d=-2,Negative,α=180°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase10-360.avif"
+           alt="Sine Trochoid with Phase, a=1,d=0.5,Negative,α=0°-360°"
+      <figcaption>Sine Trochoid with Phase, a=1,d=0.5,Negative,α =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase11-360.avif"
+           alt="Sine Trochoid with Phase, a=1,d=0.5,Negative,α=90°"
+      <figcaption>Sine Trochoid with Phase, a=1,d=0.5,Negative,α=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochPhase/SineTrochPhase12-360.avif"
+           alt="Sine Trochoid with Phase, a=1,d=0.5,Negative,α=180°"
+      <figcaption>Sine Trochoid with Phase, a=1,d=0.5,Negative,α=180°</figcaption>
+    </figure>  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Sine Trochoid with Phase parametric equations:</div>
+      \[ \mathbf{r}(t)=\begin{pmatrix}t\\ \sin t\end{pmatrix}+a'\,\mathbf{N}(t)+d'\,\mathbf{U}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Unit normal, phase, and rotated tracer:</div>
+      \[ \mathbf{N}(t)=\pm\dfrac{(-\cos t,\,1)}{\sqrt{1+\cos^{2}t}},\qquad
+         \phi=\dfrac{s}{a'}+\alpha\cdot\dfrac{\pi}{180},\qquad
+         \mathbf{U}(t)=\mathrm{rot}(\phi)\,\mathbf{N}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Arc length and input scaling:</div>
+      \[ s=\int\sqrt{1+\cos^{2}t}\,dt,\qquad
+         s_{\text{period}}\approx 7.640395578055424,\qquad
+         k=\dfrac{s_{\text{period}}}{2\pi}\approx 1.21600672342498 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Scaled rolling radius and tracer distance:</div>
+      \[ a'=k\cdot a,\qquad d'=k\cdot d \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>This is one of two modifications of the Sine Trochoid that plots the trochoid of a sine wave. This modification adds a constant phase angle \(\alpha\) (in degrees) to the rolling rotation. Geometrically, \(\alpha\) is the initial angle of the tracing arm measured from the unit normal to the base sine: \(\alpha=0\) recovers the ordinary sine trochoid (arm starts along the normal); a positive value rotates the arm away from the normal at the starting peak. The underlying construction remains the standard no-slip roulette of a circle of radius \(a\) on the base \(y=\sin x\). The circle centre travels on the parallel curve offset by \(a\) along the normal, and the tracing point is held at fixed distance \(d\) from that centre while the arm rotates by the accumulated arc length divided by radius. The phase merely shifts the starting orientation of that arm; the no-slip condition is unchanged. When the user supplies \(a\), \(d\), and \(\alpha\), the code implements the equations above (with the usual scaling so that illustration values match published rolling rates). The finished curve is reflected across the \(x\)-axis to match standard orientation. The classical theory of such roulettes dates to the seventeenth-century study of the cycloid and its variants by Roberval and others; the sinusoidal base itself is a modern illustrative case that yields families of loops and cusps.<sup>1</sup> The same kinematic relation appears in the analysis of mechanisms with undulating guides and in the generation of certain non-circular gear and cam profiles.<sup>2</sup> Related trochoidal paths occur in rotary pumps and engines, where rolling or sliding contact between rotor and housing produces epitrochoidal or hypotrochoidal trajectories.<sup>3</sup> </p>
+    <p>No applications specific to a nonzero phase offset on a sinusoidal base were located; the phase is a geometric parameter of the same family.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml</a> (generalized trochoid parametrization, including sinusoidal example)</li>
+      <li>E. H. Lockwood, <em>A Book of Curves</em> (Cambridge University Press, 1961) (classical treatment of roulettes and trochoids)</li>
+      <li>J. E. Beard et al., “Kinematic analysis of trochoidal rotary pumps,” <em>Mechanism and Machine Theory</em> (papers on trochoidal mechanisms and pumps)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SINETROCHPHASE (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag
+                         id iq dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr)
+  (setq id "Sine trochoid with phase"
+        iq "M=(t,sin t)+(k·a)N+(k·d)U, k≈1.216, s=∫√(1+cos²t)dt, φ=s/(k·a)+α, U=rot(φ)N"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions"
+        dct 2513
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (* 1.21600672342498 (get_real 2 "a (rolling radius)" 0.5))
+        fb (* 1.21600672342498 (get_real 2 "d (tracing distance)" 1.0))
+        fc (get_keyword 0 "Positive Negative" "Positive or Negative side of normal?" "Positive")
+        fr (get_real 0 "α (initial arm angle from the normal, degrees)" 0.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", d=" (rtos fb 2 4) ", normal side=" fc ", α=" (rtos fr 2 4))
+        paramstep 0.01
+        fd (/ pi 2.0)
+        fe 0.0
+        ff (if (eq fc "Positive") 1.0 -1.0)
+        fg (sqrt (+ 1.0 (* (cos fd) (cos fd))))
+        fh (* ff (/ (- (cos fd)) fg))
+        fi (* ff (/ 1.0 fg))
+        fj (+ (/ fe fa) (* fr (/ pi 180.0)))
+        fk (cos fj)
+        fl (sin fj)
+        fm (- (* (- fk) fh) (* fl fi))
+        fn (- (* fl fh) (* fk fi))
+        fo (+ fd (* fa fh) (* fb fm))
+        fp (+ (sin fd) (* fa fi) (* fb fn))
+        skm '(T T T)
+        a1 0.0
+        a2 '(progn (setq fd (+ fd paramstep)
+                         fq (sqrt (+ 1.0 (* (cos fd) (cos fd))))
+                         fe (+ fe (* fq paramstep))
+                         ff (if (eq fc "Positive") 1.0 -1.0)
+                         fg fq
+                         fh (* ff (/ (- (cos fd)) fg))
+                         fi (* ff (/ 1.0 fg))
+                         fj (+ (/ fe fa) (* fr (/ pi 180.0)))
+                         fk (cos fj)
+                         fl (sin fj)
+                         fm (- (* (- fk) fh) (* fl fi))
+                         fn (- (* fl fh) (* fk fi))
+                         fo (+ fd (* fa fh) (* fb fm))
+                         fp (+ (sin fd) (* fa fi) (* fb fn)))
+                   fd)
+        xc 'fo
+        yc '(- fp)
+        x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SINETROCHPHASE)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

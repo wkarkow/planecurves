@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sine Trochoid with Angled Offset - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Sine Trochoid with Angled Offset</h1>
+      <p class="short-description">Angled-offset variation on the sine trochoid. The offset direction makes a constant angle \(\beta\) with the unit tangent.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng01-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=0.5,d=1,Positive,β=0°-360°"
+      <figcaption>Sine Trochoid with Angled Offset, a=0.5,d=1,Positive,β =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng02-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=0.5,d=1,Positive,β=90°"
+      <figcaption>Sine Trochoid with Angled Offset, a=0.5,d=1,Positive,β=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng03-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=0.5,d=1,Positive,β=180°"
+      <figcaption>Sine Trochoid with Angled Offset, a=0.5,d=1,Positive,β=180°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng04-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=1,d=1,Positive,β=0°-360°"
+      <figcaption>Sine Trochoid with Angled Offset, a=1,d=1,Positive,β =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng05-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=1,d=1,Positive,β=90°"
+      <figcaption>Sine Trochoid with Angled Offset, a=1,d=1,Positive,β=90°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng06-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=1,d=1,Positive,β=270°"
+      <figcaption>Sine Trochoid with Angled Offset, a=1,d=1,Positive,β=270°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng07-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=0.5,d=-2,Negative,β=0°-360°"
+      <figcaption>Sine Trochoid with Angled Offset, a=0.5,d=-2,Negative,β =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng08-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=0.5,d=-2,Negative,β=30°-150°, 'Flowers'"
+      <figcaption>Sine Trochoid with Angled Offset, a=0.5,d=-2,Negative,β =
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>, 'Flowers'
+       </figcaption>
+    </figure>    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng09-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=0.5,d=-2,Negative,β=270°"
+      <figcaption>Sine Trochoid with Angled Offset, a=0.5,d=-2,Negative,β=270°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng10-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=1,d=0.5,Negative,β=0°-360°"
+      <figcaption>Sine Trochoid with Angled Offset, a=1,d=0.5,Negative,β =
+        <span class="figcap-value" style="color:#000000">0°</span>,
+        <span class="figcap-value" style="color:#FF0000">30°</span>,
+        <span class="figcap-value" style="color:#0000FF">60°</span>,
+        <span class="figcap-value" style="color:#009600">90°</span>,
+        <span class="figcap-value" style="color:#FF9600">120°</span>,
+        <span class="figcap-value" style="color:#9600FF">150°</span>,
+        <span class="figcap-value" style="color:#0096FF">180°</span>,
+        <span class="figcap-value" style="color:#AA5555">210°</span>,
+        <span class="figcap-value" style="color:#00FF00">240°</span>,
+        <span class="figcap-value" style="color:#FF00FF">270°</span>,
+        <span class="figcap-value" style="color:#009696">300°</span>,
+        <span class="figcap-value" style="color:#960096">330°</span>
+       </figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng11-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=1,d=0.5,Negative,β=180°"
+      <figcaption>Sine Trochoid with Angled Offset, a=1,d=0.5,Negative,β=180°</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/SineTrochAng/SineTrochAng12-360.avif"
+           alt="Sine Trochoid with Angled Offset, a=1,d=0.5,Negative,β=270°"
+      <figcaption>Sine Trochoid with Angled Offset, a=1,d=0.5,Negative,β=270°</figcaption>
+    </figure>  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 420px;">
+    <div class="equation-line">
+      <div class="equation-label">Sine Trochoid with Angled Offset parametric equations:</div>
+      \[ \mathbf{r}(t)=\begin{pmatrix}t\\ \sin t\end{pmatrix}+a'\,\mathbf{V}(t)+d'\,\mathbf{U}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Unit tangent, angled offset, and rotated tracer:</div>
+      \[ \mathbf{T}(t)=\dfrac{(1,\,\cos t)}{\sqrt{1+\cos^{2}t}},\qquad
+         \mathbf{V}(t)=\pm R(\beta)\,\mathbf{T}(t),\qquad
+         \phi=\dfrac{s}{a'},\qquad
+         \mathbf{U}(t)=\mathrm{rot}(\phi)\,\mathbf{V}(t) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Arc length and input scaling:</div>
+      \[ s=\int\sqrt{1+\cos^{2}t}\,dt,\qquad
+         s_{\text{period}}\approx 7.640395578055424,\qquad
+         k=\dfrac{s_{\text{period}}}{2\pi}\approx 1.21600672342498 \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Scaled radius and tracer distance:</div>
+      \[ a'=k\cdot a,\qquad d'=k\cdot d \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>This is an angled-offset modification of the sine trochoid curve constructed on the base curve \(y=\sin t\). The direction from the base point to the “center” is the unit vector \(\mathbf{V}\) obtained by rotating the unit tangent \(\mathbf{T}\) through a fixed angle \(\beta\) (degrees). When \(\beta=90^\circ\) the vector \(\mathbf{V}\) coincides with the unit normal, the construction reduces to the classical no-slip sine trochoid, and the page recovers the ordinary sine-trochoid plots. For every other value of \(\beta\) the center does not travel on the geometric normal of the sine wave, instantaneous contact with the base is lost, and the curve is not a roulette of a circle rolling without slip on \(y=\sin x\). The same \(k\)-scaling used on the related sine-trochoid pages is retained so that the illustration values of \(a\) and \(d\) have identical meaning. The finished curve is reflected across the \(x\)-axis to match the orientation of the parent images. The classical theory of roulettes and trochoids dates to the seventeenth-century study of the cycloid and its variants; the sinusoidal base itself is a modern illustrative case.<sup>1</sup> Related trochoidal paths appear in the kinematic analysis of mechanisms and in rotary pumps and engines.<sup>2,3</sup></p>
+    <p>No applications specific to a non-normal angled offset on a sinusoidal base were located. The family is a geometric generalization; only the special case \(\beta=90^\circ\) is a classical trochoid.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/trochoidgene/trochoidgene.shtml</a> (generalized trochoid parametrization, including sinusoidal example)</li>
+      <li>E. H. Lockwood, <em>A Book of Curves</em> (Cambridge University Press, 1961) (classical treatment of roulettes and trochoids)</li>
+      <li>J. E. Beard et al., “Kinematic analysis of trochoidal rotary pumps,” <em>Mechanism and Machine Theory</em> (papers on trochoidal mechanisms and pumps)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SINETROCHANG (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep restartflag id iq
+                         dcl opt kw mode dpr dct dpt span eq_display xc yc a1 a2 x1 y1 x2 y2 fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft)
+  (setq id "Sine trochoid angled offset"
+        iq "M=(t,sin t)+(k·a)V+(k·d)U, k≈1.216, V=R(β)T, φ=s/(k·a), U=rot(φ)V; β from tangent (90°=normal)"
+        dcl nil
+        opt nil
+        kw nil
+        mode 'param
+        dpr "# of divisions"
+        dct 4399
+        dpt nil
+        span nil
+        kw (ca id iq dcl opt kw mode dpr dct dpt span)
+        fa (* 1.21600672342498 (get_real 2 "a (rolling radius)" 0.5))
+        fb (* 1.21600672342498 (get_real 2 "d (tracing distance)" 1.0))
+        fc (get_keyword 0 "Positive Negative" "Positive or Negative side of offset?" "Positive")
+        fr (get_real 0 "β (offset angle in ° from the tangent; 90°=normal)" 90.0)
+        eq_display (strcat "\na=" (rtos fa 2 4) ", d=" (rtos fb 2 4) ", side=" fc ", β=" (rtos fr 2 4))
+        paramstep 0.01
+        fd (/ pi 2.0)
+        fe 0.0
+        ff (if (eq fc "Positive") 1.0 -1.0)
+        fs (cos (* fr (/ pi 180.0)))
+        ft (sin (* fr (/ pi 180.0)))
+        fg (sqrt (+ 1.0 (* (cos fd) (cos fd))))
+        ; Tx = 1/fg, Ty = cos/fg; V = ff * R(β) T
+        fh (* ff (- (* (/ 1.0 fg) fs) (* (/ (cos fd) fg) ft)))
+        fi (* ff (+ (* (/ 1.0 fg) ft) (* (/ (cos fd) fg) fs)))
+        fj (/ fe fa)
+        fk (cos fj)
+        fl (sin fj)
+        fm (- (* (- fk) fh) (* fl fi))
+        fn (- (* fl fh) (* fk fi))
+        fo (+ fd (* fa fh) (* fb fm))
+        fp (+ (sin fd) (* fa fi) (* fb fn))
+        skm '(T T T)
+        a1 0.0
+        a2 '(progn (setq fd (+ fd paramstep)
+                         fq (sqrt (+ 1.0 (* (cos fd) (cos fd))))
+                         fe (+ fe (* fq paramstep))
+                         ff (if (eq fc "Positive") 1.0 -1.0)
+                         fg fq
+                         fh (* ff (- (* (/ 1.0 fg) fs) (* (/ (cos fd) fg) ft)))
+                         fi (* ff (+ (* (/ 1.0 fg) ft) (* (/ (cos fd) fg) fs)))
+                         fj (/ fe fa)
+                         fk (cos fj)
+                         fl (sin fj)
+                         fm (- (* (- fk) fh) (* fl fi))
+                         fn (- (* fl fh) (* fk fi))
+                         fo (+ fd (* fa fh) (* fb fm))
+                         fp (+ (sin fd) (* fa fi) (* fb fn)))
+                   fd)
+        xc 'fo
+        yc '(- fp)
+        x1 (eval xc)
+        y1 (eval yc)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SINETROCHANG)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>

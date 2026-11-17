@@ -1970,8 +1970,8 @@ const curveList = [
     eqFind: ["y=", "y =", "y^2", "x^2"],
     imgSortKey: "107",
     images: {
-      canonical: "Images/FallingSand/FallingSand01-360.avif",
-      variant1: "Images/FallingSand/FallingSand02-360.avif",
+      canonical: "Images/FallingSand/FallingSand02-360.avif",
+      variant1: "Images/FallingSand/FallingSand01-360.avif",
       variant2: "Images/FallingSand/FallingSand03-360.avif"      
     }
   },
@@ -2092,6 +2092,23 @@ const curveList = [
       canonical: "Images/Freeth/Freeth01-360.avif",
       variant1: "Images/Freeth/Freeth07-360.avif",
       variant2: "Images/Freeth/Freeth12-360.avif"      
+    }
+  },
+  {
+    id: "galactic-spiral",
+    title: "Galactic Spiral",
+    filename: "GalacticSpiral.html", 
+    aliases: ["ROTASE Spiral", "Rotating Sprinkler Spiral"],
+    eqSortKey: "113.5",
+    done: true,
+    imgCount: 8,
+    equation: "\\dfrac{dx}{d\\theta}=R\\cdot\\dfrac{y}{r}, \\dfrac{dy}{d\\theta}=R\\cdot\\Bigl(\\rho-\\dfrac{x}{r}\\Bigr), \\quad r=\\dfrac{R}{1-\\rho\\sin\\alpha}, \\quad \\theta=\\dfrac1R\\Biggl[R\\arcsin s-R\\arcsin\\Biggl(\\dfrac{(1-\\rho^2)R-R}{\\rho R}\\Biggr)-\\dfrac{R\\rho}{1-\\rho^2}\\Biggr],\\quad s=\\dfrac{(1-\\rho^2)r-R}{\\rho R}, \\\\ \\theta=\\dfrac{\\sqrt2}{3\\sqrt R}(r+R)\\sqrt{r-\\frac R2-\\frac23 R}, \\quad \\theta=\\dfrac1R\\Biggl[\\dfrac1{\\sqrt{\\rho^2-1}}\\Biggl(\\sqrt{(\\rho^2-1)r^2+2rR-R^2}-\\dfrac R{\\sqrt{\\rho^2-1}}\\ln\\Biggl|\\dfrac{r\\sqrt{\\rho^2-1}+R}R\\Biggr|\\Biggr)-\\dfrac R{\\rho^2-1}\\Biggl(\\rho-\\dfrac1{\\sqrt{\\rho^2-1}}\\ln\\Biggl|\\dfrac{\\rho^2 R+\\rho R}{\\sqrt{\\rho^2-1}\\,R}\\Biggr|\\Biggr)\\Biggr]",
+    eqFind: ["r=", "r =", "rho^2", "sin", "arcsin", "sqrt", "ln", "theta=", "theta ="],
+    imgSortKey: "113.5",
+    images: {
+      canonical: "Images/GalacticSpiral/GalacticSpiral01-360.avif",
+      variant1: "Images/GalacticSpiral/GalacticSpiral04-360.avif",
+      variant2: "Images/GalacticSpiral/GalacticSpiral08-360.avif"      
     }
   },
   {
@@ -3896,9 +3913,9 @@ const curveList = [
     aliases: ["Quadrifolium", "Four-Leaved Rose", "Four-Leaved Clover"],
     eqSortKey: "213",
     done: true,
-    imgCount: 6,
-    equation: "r = a \\cdot \\sin(2\\theta), \\quad r = a \\cdot \\sqrt{\\lvert\\sin(2\\theta)\\rvert}, \\quad r = a \\cdot \\bigl(\\sin(2\\theta) + \\tfrac{\\sin(6\\theta)}{4}\\bigr), \\quad r = a \\cdot \\bigl(\\lvert\\sin(2\\theta)\\rvert + \\tfrac{\\sin^{2}(4\\theta)}{4}\\bigr), \\quad r = a \\cdot \\bigl(\\sqrt{\\lvert\\sin(2\\theta)\\rvert} + \\tfrac{\\sin^{2}(4\\theta)}{4}\\bigr), \\quad r = a \\cdot \\bigl(\\sin^{2}(2\\theta) + \\tfrac{\\sin^{2}(4\\theta)}{2}\\bigr)",
-    eqFind: ["r=", "r =", "sin^2", "theta"],
+    imgCount: 8,
+    equation: "r = a \\cdot \\sin(2\\theta), \\quad r = a \\cdot \\sqrt{\\lvert\\sin(2\\theta)\\rvert}, \\quad r = a \\cdot \\bigl(\\sin(2\\theta) + \\tfrac{\\sin(6\\theta)}{4}\\bigr), \\quad r = a \\cdot \\bigl(\\lvert\\sin(2\\theta)\\rvert + \\tfrac{\\sin^{2}(4\\theta)}{4}\\bigr), \\quad r = a \\cdot \\bigl(\\sqrt{\\lvert\\sin(2\\theta)\\rvert} + \\tfrac{\\sin^{2}(4\\theta)}{4}\\bigr), \\quad r = a \\cdot \\bigl(\\sin^{2}(2\\theta) + \\tfrac{\\sin^{2}(4\\theta)}{2}\\bigr), \\quad r = a \\cdot \\dfrac{\\cos(4\\theta)}{\\sin(2\\theta)}, \\quad 4x^{2} y^{2} (x^{2} + y^{2})^{3} = a^{2} \\bigl( (x^{2} + y^{2})^{2} - 8x^{2} y^{2} \\bigr)^{2}, \\quad r = a \\cdot \\dfrac{\\cos(3\\theta)}{\\sin(\\theta)}, \\quad y^{2} (x^{2} + y^{2})^{3} = a^{2} x^{2} (x^{2} - 3y^{2})^{2} ",
+    eqFind: ["r=", "r =", "sin^2", "theta", "cos", "x^8", "y^8", "x^6", "y^6"],
     imgSortKey: "213",
     images: {
       canonical: "Images/Quatrefoil/Quatrefoil01-360.avif",
@@ -4285,6 +4302,23 @@ const curveList = [
     }
   },
   {
+    id: "sextic-curve",
+    title: "Sextic Curve",
+    filename: "Sextic.html",
+    aliases: ["Ferreol Sextic", "Lemoine Sextic"],
+    eqSortKey: "234.4",
+    done: true,
+    imgCount: 51,
+    equation: "x = 2\\sin 2t, y = \\cos t + \\cos 3t, \\quad x = a\\cdot\\sin\\bigl(\\dfrac{p}{q}t\\bigr), y = \\dfrac{a}{2}\\bigl[\\cos\\bigl((\\dfrac{p}{q}-1)t\\bigr) + \\cos\\bigl((\\dfrac{p}{q}+1)t\\bigr)\\bigr], \\quad x = \\dfrac{\\cos^{3} t}{2\\cos^{3} t - 2\\cos t + 1}, y = \\dfrac{\\sin 2t\\cdot\\sin^{2}(t/2)}{2\\cos^{3} t - 2\\cos t + 1}, \\\\ x = a\\cdot\\dfrac{\\sin\\bigl(2\\cdot\\dfrac{p}{q}t\\bigr)\\sin^{2}\\bigl(\\dfrac{p}{q}t/2\\bigr)}{2\\cos^{3} t - 2\\cos t + 1}, y = -a\\cdot\\dfrac{\\cos^{3}\\bigl(\\dfrac{p}{q}t\\bigr)}{2\\cos^{3} t - 2\\cos t + 1}, \\quad x = a\\cdot\\dfrac{\\sin 2t\\cdot\\sin^{2}(t/2)}{2\\cos^{3}\\bigl(\\dfrac{p}{q}t\\bigr) - 2\\cos\\bigl(\\dfrac{p}{q}t\\bigr) + 1}, y = -a\\cdot\\dfrac{\\cos^{3}\\bigl(\\dfrac{p}{q}t\\bigr)}{2\\cos^{3}\\bigl(\\dfrac{p}{q}t\\bigr) - 2\\cos\\bigl(\\dfrac{p}{q}t\\bigr) + 1}, \\\\ x = a\\cdot\\dfrac{\\sin\\bigl(2\\cdot\\dfrac{p}{q}t\\bigr)\\sin^{2}\\bigl(\\dfrac{p}{q}t/2\\bigr)}{2\\cos^{3}\\bigl(\\dfrac{p}{q}t\\bigr) - 2\\cos\\bigl(\\dfrac{p}{q}t\\bigr) + 1}, y = -a\\cdot\\dfrac{\\cos^{3} t}{2\\cos^{3}\\bigl(\\dfrac{p}{q}t\\bigr) - 2\\cos\\bigl(\\dfrac{p}{q}t\\bigr) + 1}",
+    eqFind: ["x=", "y=", "x =", "y =", "x^2", "tan", "sin^3", "r^2", "theta", "cos", "y^2", "cot", "theta"],
+    imgSortKey: "234.4",
+    images: {
+      canonical: "Images/Sextic/Sextic01-360.avif",
+      variant1: "Images/Sextic/Sextic27-360.avif",
+      variant2: "Images/Sextic/Sextic09-360.avif"
+    }
+  },
+  {
     id: "sigmoid-curve",
     title: "Sigmoid Curve",
     filename: "Sigmoid.html",
@@ -4315,6 +4349,21 @@ const curveList = [
       canonical: "Images/Sine/Sine07-360.avif",
       variant1: "Images/Sine/Sine09-360.avif",
       variant2: "Images/Sine/Sine11-360.avif"
+    }
+  },
+  {
+    id: "sine-oval-curve",
+    title: "Sine Oval Curve",
+    filename: "SineOval.html",
+    aliases: [],
+    eqSortKey: "235.5",
+    done: true,
+    imgCount: 1,
+    equation: "x = a\\cos t, y = b\\cdot\\dfrac{\\operatorname{nest\\_sin}(t,n)}{\\operatorname{nest\\_sin}(\\pi/2,n)}",
+    eqFind: ["x=", "x =", "y=", "y =", "sin", "cos"],
+    imgSortKey: "235.5",
+    images: {
+      canonical: "Images/SineOval/SineOval01-360.avif"
     }
   },
   {
@@ -4349,6 +4398,40 @@ const curveList = [
       canonical: "Images/SineTrochoid/SineTrochoid01-360.avif",
       variant1: "Images/SineTrochoid/SineTrochoid14-360.avif",
       variant2: "Images/SineTrochoid/SineTrochoid18-360.avif"
+    }
+  },
+  {
+    id: "sine-trochoid-angled-curve",
+    title: "Sine Trochoid Angled Curve",
+    filename: "SineTrochAng.html",
+    aliases: [],
+    eqSortKey: "237.4",
+    done: true,
+    imgCount: 12,
+    equation: "\\mathbf{r}(t)=\\begin{pmatrix}t\\ \\sin t\\end{pmatrix}+a'\\,\\mathbf{V}(t)+d'\\,\\mathbf{U}(t), \\quad \\mathbf{T}(t)=\\dfrac{(1,\\,\\cos t)}{\\sqrt{1+\\cos^{2}t}},\\quad \\mathbf{V}(t)=\\pm R(\\beta)\\,\\mathbf{T}(t), \\quad \\phi=\\dfrac{s}{a'}, \\quad \\mathbf{U}(t)=\\mathrm{rot}(\\phi)\\,\\mathbf{V}(t)",
+    eqFind: ["sin"],
+    imgSortKey: "237.4",
+    images: {
+      canonical: "Images/SineTrochAng/SineTrochAng01-360.avif",
+      variant1: "Images/SineTrochAng/SineTrochAng03-360.avif",
+      variant2: "Images/SineTrochAng/SineTrochAng08-360.avif"
+    }
+  },
+  {
+    id: "sine-trochoid-phase-curve",
+    title: "Sine Trochoid Phase Curve",
+    filename: "SineTrochPhase.html",
+    aliases: [],
+    eqSortKey: "237.5",
+    done: true,
+    imgCount: 12,
+    equation: "\\mathbf{r}(t)=\\begin{pmatrix}t\\ \\sin t\\end{pmatrix}+a'\\,\\mathbf{N}(t)+d'\\,\\mathbf{U}(t), \\quad \\mathbf{N}(t)=\\pm\\dfrac{(-\\cos t,\\,1)}{\\sqrt{1+\\cos^{2}t}},\\quad \\phi=\\dfrac{s}{a'} +\\alpha\\cdot\\dfrac{\\pi}{180},\\quad \\mathbf{U}(t)=\\mathrm{rot}(\\phi)\\,\\mathbf{N}(t)",
+    eqFind: ["sin"],
+    imgSortKey: "237.5",
+    images: {
+      canonical: "Images/SineTrochPhase/SineTrochPhase01-360.avif",
+      variant1: "Images/SineTrochPhase/SineTrochPhase03-360.avif",
+      variant2: "Images/SineTrochPhase/SineTrochPhase08-360.avif"
     }
   },
   {
@@ -4858,6 +4941,22 @@ const curveList = [
         url: "https://mathcurve.com/courbes2d.gb/danseur/danseur.shtml",
         external: true
     }
+    }
+  },
+  {
+    id: "tn-constant-curve",
+    title: "TN Constant Curve",
+    filename: "TNCurve.html",
+    aliases: [],
+    eqSortKey: "264.4",
+    done: true,
+    imgCount: 2,
+    equation: "y\\, y' + \\frac{y}{y'} = a, \\quad x = a\\,(\\cos t - \\ln(1+\\cos t)), y = a\\,\\sin t",
+    eqFind: ["y=", "x =", "y'", "cos", "ln", "sin"],
+    imgSortKey: "264.4",
+    images: {
+      canonical: "Images/TNCurve/TNCurve01-360.avif",
+      variant1: "Images/TNCurve/TNCurve02-360.avif"
     }
   },
   {

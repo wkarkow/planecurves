@@ -88,6 +88,16 @@
         <span class="figcap-value" style="color:#9600FF">r=a·(sin²(2θ)+sin²(4θ)/2)</span>
       </figcaption>
     </figure>
+    <figure>
+      <img src="Images/Quatrefoil/Quatrefoil07-360.avif"
+           alt="Quatrefoil, r=a·cos(4θ)/sin(2θ)">
+      <figcaption>Quatrefoil, r=a·cos(4θ)/sin(2θ)</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Quatrefoil/Quatrefoil08-360.avif"
+           alt="Quatrefoil, r=a·cos(3θ)/sin(θ)">
+      <figcaption>Quatrefoil, r=a·cos(3θ)/sin(θ)</figcaption>
+    </figure>
   </section>
 
   <section class="equation-ribbon" style="--label-min-width: 320px;">
@@ -115,12 +125,28 @@
       <div class="equation-label">Quatrefoil Curve polar equation 6:</div>
       \[ r = a \cdot \bigl(\sin^{2}(2\theta) + \tfrac{\sin^{2}(4\theta)}{2}\bigr) \]
     </div>
+<div class="equation-line">
+      <div class="equation-label">Quatrefoil Curve polar equation 7:</div>
+      \[ r = a \cdot \dfrac{\cos(4\theta)}{\sin(2\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Quatrefoil Curve Cartesian equation 7:</div>
+      \[ 4x^{2} y^{2} (x^{2} + y^{2})^{3} = a^{2} \bigl( (x^{2} + y^{2})^{2} - 8x^{2} y^{2} \bigr)^{2} \]
+    </div>
+<div class="equation-line">
+      <div class="equation-label">Quatrefoil Curve polar equation 8:</div>
+      \[ r = a \cdot \dfrac{\cos(3\theta)}{\sin(\theta)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Quatrefoil Curve Cartesian equation 8:</div>
+      \[ y^{2} (x^{2} + y^{2})^{3} = a^{2} x^{2} (x^{2} - 3y^{2})^{2} \]
+    </div>
   </section>
 
   <section>
     <h2>History and Applications</h2>
-    <p>The quatrefoil<sup>1,2</sup>, also known as the quadrifolium or four-leaved rose, is the four-petaled member of the rhodonea (rose) curves. Italian mathematician Guido Grandi studied and named the rhodonea curves between 1723 and 1728 because they resemble roses.<sup>3</sup> The quatrefoil corresponds to the case that produces exactly four petals and can be generated geometrically as the pedal curve of the astroid with respect to the origin or as a hypotrochoid with a circle of radius \(a/3\) rolling inside a circle of radius \(a\).<sup>1</sup> It is also the orthoptic of the astroid and the view from above of a particular Clelia spherical curve.</p>
-    <p>Real-life applications in engineering and the natural sciences include its symmetrical form in the design of compact quatrefoil-shaped radiators for dual-band circularly polarized antennas operating at millimeter-wave frequencies used in 5G and beyond systems.<sup>4</sup></p>
+    <p>The quatrefoil<sup>1,2</sup>, also known as the quadrifolium or four-leaved rose, is the four-petaled member of the rhodonea (rose) curves. Italian mathematician Guido Grandi studied and named the rhodonea curves between 1723 and 1728 because they resemble roses.<sup>3</sup> The quatrefoil corresponds to the case that produces exactly four petals and can be generated geometrically as the pedal curve of the astroid with respect to the origin or as a hypotrochoid with a circle of radius \(a/3\) rolling inside a circle of radius \(a\).<sup>1</sup> It is also the orthoptic of the astroid and the view from above of a particular Clelia spherical curve. MathCurve also lists two related “quadrifolia with asymptotes.”<sup>1</sup> The first is the decic given in equations 7 above. The second is the octic given in equations 8 above. Both keep a four-lobed outline but open outward toward asymptotic arms instead of closing into finite petals. </p>
+    <p>Real-life applications in engineering and the natural sciences include the first quaterfoil symmetrical form in the design of compact quatrefoil-shaped radiators for dual-band circularly polarized antennas operating at millimeter-wave frequencies used in 5G and beyond systems.<sup>4</sup> The other forms lack documentation of practical use.</p>
   </section>
 
   <section>
@@ -140,7 +166,7 @@
   (setq id "Quatrefoil"
         iq ""
         dcl "QUATREFOIL"
-        opt '("a·sin(2θ)" "√|sin(2θ)| clover" "sin(2θ)+¼sin(6θ)" "|sin(2θ)|+¼sin²(4θ)" "√|sin(2θ)|+¼sin²(4θ)" "sin²(2θ)+½sin²(4θ)")
+        opt '("a·sin(2θ)" "√|sin(2θ)| clover" "sin(2θ)+¼sin(6θ)" "|sin(2θ)|+¼sin²(4θ)" "√|sin(2θ)|+¼sin²(4θ)" "sin²(2θ)+½sin²(4θ)" "cos(4θ)/sin(2θ)" "cos(3θ)/sin(θ)")
         kw 0
         mode 'polar
         dpr "# of divisions around circle"
@@ -167,7 +193,13 @@
     (setq rval '(* fa (+ (alt_expt (abs (sin (* 2.0 (eval a2)))) 0.5 T) (* 0.25 (sin (* 4.0 (eval a2))) (sin (* 4.0 (eval a2))))))))
    ((eq kw 5)
     (princ "\nr=a·(sin²(2θ)+sin²(4θ)/2)")
-    (setq rval '(* fa (+ (* (sin (* 2.0 (eval a2))) (sin (* 2.0 (eval a2)))) (* 0.5 (sin (* 4.0 (eval a2))) (sin (* 4.0 (eval a2)))))))))
+    (setq rval '(* fa (+ (* (sin (* 2.0 (eval a2))) (sin (* 2.0 (eval a2)))) (* 0.5 (sin (* 4.0 (eval a2))) (sin (* 4.0 (eval a2))))))))
+   ((eq kw 6)
+    (princ "\nr=a·(cos(4θ)/sin(2θ))")
+    (setq rval '(* fa (/ (cos (* 4.0 (eval a2))) (avoid_zero (sin (* 2.0 (eval a2))))))))
+   ((eq kw 7)
+    (princ "\nr=a·(cos(3θ)/sin(θ))")
+    (setq rval '(* fa (/ (cos (* 3.0 (eval a2))) (avoid_zero (sin (eval a2))))))))
   (setq eq_display (strcat "\na=" (rtos fa 2 4))
         xc '(* (eval rval) (cos (eval a2)))
         yc '(* (eval rval) (sin (eval a2)))

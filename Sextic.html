@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rational Sextic - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Rational Sextic</h1>
+      <p class="short-description">Two indecomposable rational sextics resembling a circle-plus-eight and a circle-plus-cardioid.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/Sextic/Sextic01-360.avif" alt="Sextic 1, a=1,p=2,q=1">
+      <figcaption>Sextic 1, a=1,p=2,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic02-360.avif" alt="Generalized Sextic 1, a=1,p=1,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic03-360.avif" alt="Generalized Sextic 1, a=1,p=3,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=3,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic04-360.avif" alt="Generalized Sextic 1, a=1,p=4,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=4,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic05-360.avif" alt="Generalized Sextic 1, a=1,p=5,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=5,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic06-360.avif" alt="Generalized Sextic 1, a=1,p=6,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=6,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic07-360.avif" alt="Generalized Sextic 1, a=1,p=7,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=7,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic08-360.avif" alt="Generalized Sextic 1, a=1,p=8,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=8,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic09-360.avif" alt="Generalized Sextic 1, a=1,p=32,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=32,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic10-360.avif" alt="Generalized Sextic 1, a=1,p=64,q=1">
+      <figcaption>Generalized Sextic 1, a=1,p=64,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic11-360.avif" alt="Generalized Sextic 1, a=1,p=1,q=2">
+      <figcaption>Sextic 2a, a=1, p=1, q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic12-360.avif" alt="Generalized Sextic 1, a=1,p=1,q=3">
+      <figcaption>Generalized Sextic 1, a=1,p=1,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic13-360.avif" alt="Generalized Sextic 1, a=1,p=2,q=3">
+      <figcaption>Generalized Sextic 1, a=1,p=2,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic14-360.avif" alt="Generalized Sextic 1, a=1,p=3,q=5">
+      <figcaption>Generalized Sextic 1, a=1,p=3,q=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic15-360.avif" alt="Generalized Sextic 1, a=1,p=3,q=2">
+      <figcaption>Generalized Sextic 1, a=1,p=3,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic16-360.avif" alt="Generalized Sextic 1, a=1,p=5,q=3">
+      <figcaption>Generalized Sextic 1, a=1,p=5,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic17-360.avif" alt="Generalized Sextic 1, a=1,p=1,q=32">
+      <figcaption>Generalized Sextic 1, a=1,p=1,q=32</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic18-360.avif" alt="Generalized Sextic 1, a=1,p=1,q=72">
+      <figcaption>Generalized Sextic 1, a=1,p=1,q=72</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic19-360.avif" alt="Sextic 2a, a=1,p=1,q=1">
+      <figcaption>Generalized Sextic 2a, a=1,p=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic20-360.avif" alt="Generalized Sextic 2a, a=1,p=2,q=1">
+      <figcaption>Generalized Sextic 2a, a=1,p=2,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic21-360.avif" alt="Generalized Sextic 2a, a=1,p=3,q=1">
+      <figcaption>Generalized Sextic 2a, a=1,p=3,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic22-360.avif" alt="Generalized Sextic 2a, a=1,p=2,q=3">
+      <figcaption>Generalized Sextic 2a, a=1,p=2,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic43-360.avif" alt="Generalized Sextic 2a, a=1,p=1,q=2">
+      <figcaption>Generalized Sextic 2a, a=1,p=1,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic44-360.avif" alt="Generalized Sextic 2a, a=1,p=1,q=3">
+      <figcaption>Generalized Sextic 2a, a=1,p=1,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic45-360.avif" alt="Generalized Sextic 2a, a=1,p=3,q=5">
+      <figcaption>Generalized Sextic 2a, a=1,p=3,q=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic23-360.avif" alt="Generalized Sextic 2a, a=1,p=1,q=72">
+      <figcaption>Generalized Sextic 2a, a=1,p=1,q=72</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic24-360.avif" alt="Generalized Sextic 2a, a=1,p=72,q=1">
+      <figcaption>Generalized Sextic 2a, a=1,p=72,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic25-360.avif" alt="Generalized Sextic 2a, a=1,p=5,q=72">
+      <figcaption>Generalized Sextic 2a, a=1,p=7,q=72</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic26-360.avif" alt="Generalized Sextic 2a, a=1,p=72,q=5">
+      <figcaption>Generalized Sextic 2a, a=1,p=72,q=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic27-360.avif" alt="Sextic 2b, a=1,p=1,q=1">
+      <figcaption>Sextic 2b, a=1,p=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic28-360.avif" alt="Generalized Sextic 2b, a=1,p=2,q=1">
+      <figcaption>Generalized Sextic 2b, a=1,p=2,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic29-360.avif" alt="Generalized Sextic 2b, a=1,p=3,q=1">
+      <figcaption>Generalized Sextic 2b, a=1,p=3,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic30-360.avif" alt="Generalized Sextic 2b, a=1,p=2,q=3">
+      <figcaption>Generalized Sextic 2b, a=1,p=2,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic46-360.avif" alt="Generalized Sextic 2b, a=1,p=1,q=2">
+      <figcaption>Generalized Sextic 2b, a=1,p=1,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic47-360.avif" alt="Generalized Sextic 2b, a=1,p=1,q=3">
+      <figcaption>Generalized Sextic 2b, a=1,p=1,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic48-360.avif" alt="Generalized Sextic 2b, a=1,p=3,q=5">
+      <figcaption>Generalized Sextic 2b, a=1,p=3,q=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic31-360.avif" alt="Generalized Sextic 2b, a=1,p=1,q=72">
+      <figcaption>Generalized Sextic 2b, a=1,p=1,q=72</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic32-360.avif" alt="Generalized Sextic 2b, a=1,p=72,q=1">
+      <figcaption>Generalized Sextic 2b, a=72,p=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic33-360.avif" alt="Generalized Sextic 2b, a=1,p=11,q=72">
+      <figcaption>Generalized Sextic 2b, a=1,p=11,q=72</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic34-360.avif" alt="Generalized Sextic 2b, a=1,p=72,q=11">
+      <figcaption>Generalized Sextic 2b, a=1,p=72,q=11</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic35-360.avif" alt="Sextic 2c, a=1,p=1,q=1">
+      <figcaption>Generalized Sextic 2c, a=1,p=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic36-360.avif" alt="Generalized Sextic 2c, a=1,p=2,q=1">
+      <figcaption>Generalized Sextic 2c, a=1,p=2,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic37-360.avif" alt="Generalized Sextic 2c, a=1,p=3,q=1">
+      <figcaption>Generalized Sextic 2c, a=1,p=3,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic38-360.avif" alt="Generalized Sextic 2c, a=1,p=2,q=3">
+      <figcaption>Generalized Sextic 2c, a=1,p=2,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic49-360.avif" alt="Generalized Sextic 2c, a=1,p=1,q=2">
+      <figcaption>Generalized Sextic 2c, a=1,p=1,q=2</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic50-360.avif" alt="Generalized Sextic 2c, a=1,p=1,q=3">
+      <figcaption>Generalized Sextic 2c, a=1,p=1,q=3</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic51-360.avif" alt="Generalized Sextic 2c, a=1,p=3,q=5">
+      <figcaption>Generalized Sextic 2c, a=1,p=3,q=5</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic39-360.avif" alt="Generalized Sextic 2c, a=1,p=1,q=72">
+      <figcaption>Generalized Sextic 2c, a=1,p=1,q=72</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic40-360.avif" alt="Generalized Sextic 2c, a=1,p=72,q=1">
+      <figcaption>Generalized Sextic 2c, a=72,p=1,q=1</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic41-360.avif" alt="Generalized Sextic 2c, a=1,p=11,q=72">
+      <figcaption>Generalized Sextic 2c, a=1,p=11,q=72</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Sextic/Sextic42-360.avif" alt="Generalized Sextic 2c, a=1,p=72,q=11">
+      <figcaption>Generalized Sextic 2c, a=1,p=72,q=11</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 360px;">
+    <div class="equation-line">
+      <div class="equation-label">Sextic 1 parametric equations:</div>
+      \[ x = 2\sin 2t,\quad y = \cos t + \cos 3t \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Sextic 1 parametric equations:</div>
+      \[ x = a\cdot\sin\bigl(\dfrac{p}{q}t\bigr),\quad y = \dfrac{a}{2}\bigl[\cos\bigl((\dfrac{p}{q}-1)t\bigr) + \cos\bigl((\dfrac{p}{q}+1)t\bigr)\bigr] \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Sextic 2 parametric equations:</div>
+      \[ x = \dfrac{\cos^{3} t}{2\cos^{3} t - 2\cos t + 1},\quad y = \dfrac{\sin 2t\cdot\sin^{2}(t/2)}{2\cos^{3} t - 2\cos t + 1} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Sextic 2a parametric equations:</div>
+      \[ x = a\cdot\dfrac{\sin\bigl(2\cdot\dfrac{p}{q}t\bigr)\sin^{2}\bigl(\dfrac{p}{q}t/2\bigr)}{2\cos^{3} t - 2\cos t + 1},\quad y = -a\cdot\dfrac{\cos^{3}\bigl(\dfrac{p}{q}t\bigr)}{2\cos^{3} t - 2\cos t + 1} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Sextic 2b parametric equations:</div>
+      \[ x = a\cdot\dfrac{\sin 2t\cdot\sin^{2}(t/2)}{2\cos^{3}\bigl(\dfrac{p}{q}t\bigr) - 2\cos\bigl(\dfrac{p}{q}t\bigr) + 1},\quad y = -a\cdot\dfrac{\cos^{3}\bigl(\dfrac{p}{q}t\bigr)}{2\cos^{3}\bigl(\dfrac{p}{q}t\bigr) - 2\cos\bigl(\dfrac{p}{q}t\bigr) + 1} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Generalized Sextic 2c parametric equations:</div>
+      \[ x = a\cdot\dfrac{\sin\bigl(2\cdot\dfrac{p}{q}t\bigr)\sin^{2}\bigl(\dfrac{p}{q}t/2\bigr)}{2\cos^{3}\bigl(\dfrac{p}{q}t\bigr) - 2\cos\bigl(\dfrac{p}{q}t\bigr) + 1},\quad y = -a\cdot\dfrac{\cos^{3} t}{2\cos^{3}\bigl(\dfrac{p}{q}t\bigr) - 2\cos\bigl(\dfrac{p}{q}t\bigr) + 1} \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Robert Ferréol’s MathCurve sextic webpage<sup>1</sup> presents a list of rational sextic curves that have been illustrated on this site under their specific names. There are two previously unnamed curves whose sets of equations are given above, along with generalizations here of those equations. Rational sextics are algebraic curves of degree 6 and genus zero. Genus zero means the curve admits a rational parametrization (or a trigonometric parametrization after the Weierstrass substitution \( t = \tan(\theta/2) \)). In the complex projective plane they possess between one and ten singularities that reduce the genus by ten. Only the original curves are sextic, not the generalizations that are of higher powers. The first is an indecomposable rational sextic that nevertheless appears, to the eye, to be the union of a circle and a figure-eight.</p>
+    <p> The second specimen likewise appears to be composed of a circle and a cardioid. Ferréol records that it arises as the locus of the third vertex of a triangle in which an altitude, a median and an angle bisector are concurrent, the vertex of the altitude being fixed at \( (0,1) \) and the vertex of the median at \( (0,0) \). The triangles themselves were studied by the French civil engineer and geometer Émile Lemoine (1840–1912) in the 1885 volume of <em>Mathesis</em>.<sup>1,2</sup> The three coded variants simply move the rational frequency \( p/q \) among the various trigonometric arguments; the common denominator never vanishes. The locus of the concurrency point itself is a rational septic, also listed by Ferréol.<sup>3</sup> Lemoine is better known for the symmedian point (the concurrency of the reflections of the medians in the angle bisectors) and for the Lemoine circle, both of which he introduced in the 1870s; the 1885 note on concurrent altitude-median-bisector triangles is a later, narrower contribution to the same “new triangle geometry.”</p>
+    <p>No engineering or natural-science application peculiar to either of these two rational sextics has been located. They remain catalogue specimens that illustrate the visual and algebraic behaviour of genus-zero sextics and, in the second case, a concrete geometric locus arising from classical triangle geometry.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://mathcurve.com/courbes2d.gb/sextic/sexticrationnelle.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/sextic/sexticrationnelle.shtml</a> (definitions, both specimens, Lemoine attribution)</li>
+      <li>É. Lemoine, <em>Mathesis</em> (1885) (triangles with concurrent altitude, median and bisector; cited by Ferréol)</li>
+      <li><a href="https://mathcurve.com/courbes2d.gb/septic/septic.shtml" target="_blank" rel="noopener noreferrer">https://mathcurve.com/courbes2d.gb/septic/septic.shtml</a> (related septic locus of the concurrency point)</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:SEXTIC (/ basept xaxisangle cd sa sb sm om os divcount cosangle sinangle x0 y0 plineents segcount baseinfo paramstep
+                   divpt xspan restartflag id iq dcl opt kw mode dpr dct dpt span eq_display xc yc skm a1 a2 x1 y1 x2 y2 fa fb fc)
+  (setq id "Rational Sextic"
+        iq ""
+        dcl "SEXTIC"
+        opt '("Sextic 1" "Sextic 2a" "Sextic 2b" "Sextic 2c")
+        kw 0
+        mode 'polar
+        dpr "# of divisions around circle"
+        dct 360
+        dpt nil
+        span 360
+        kw (ca id iq dcl opt kw mode dpr dct dpt span))
+  (cond
+    ((eq kw 0)
+     (princ "\nx=a·sin((p/q)·t), y=(a/2)·[cos(((p/q)-1)·t)+cos(((p/q)+1)·t)]")
+     (setq fa (get_real 6 "a (scale)" 1.0)
+           fb (get_integer 6 "p (numerator of frequency)" 2)
+           fc (get_integer 6 "q (denominator of frequency)" 1)
+           n (/ (float fb) fc)
+           divcount (* divcount (/ fc (gcd fb fc)))
+           eq_display (strcat ", a=" (rtos fa 2 4) ", p=" (itoa fb) ", q=" (itoa fc) ", " (itoa divcount) " segments needed to close")
+           xc '(* fa (sin (* n (eval a2))))
+           yc '(* fa 0.5 (+ (cos (* (- n 1.0) (eval a2))) (cos (* (+ n 1.0) (eval a2)))))))
+    ((eq kw 1)
+     (princ "\nx=a·sin(2·(p/q)·t)·sin²((p/q)·t/2)/[2·cos³(t)-2·cos(t)+1], y=-a·cos³((p/q)·t)/[2·cos³(t)-2·cos(t)+1]")
+     (setq fa (get_real 6 "a (overall scale)" 1.0)
+           fb (get_integer 6 "p (numerator of frequency)" 1)
+           fc (get_integer 6 "q (denominator of frequency)" 1)
+           n (/ (float fb) fc)
+           divcount (* divcount (/ fc (gcd fb fc)))
+           eq_display (strcat "\na=" (rtos fa 2 4) ", p=" (itoa fb) ", q=" (itoa fc) ", " (itoa divcount) " segments needed to close")
+           xc '(* fa (/ (* (sin (* 2.0 n (eval a2))) (expt (sin (/ (* n (eval a2)) 2.0)) 2)) (+ (* 2.0 (expt (cos (eval a2)) 3)) (* -2.0 (cos (eval a2))) 1.0)))
+           yc '(* (- fa) (/ (expt (cos (* n (eval a2))) 3) (+ (* 2.0 (expt (cos (eval a2)) 3)) (* -2.0 (cos (eval a2))) 1.0)))))
+    ((eq kw 2)
+     (princ "\nx=a·sin(2·t)·sin²(t/2)/[2·cos³((p/q)·t)-2·cos((p/q)·t)+1], y=-a·cos³((p/q)·t)/[2·cos³((p/q)·t)-2·cos((p/q)·t)+1]")
+     (setq fa (get_real 6 "a (overall scale)" 1.0)
+           fb (get_integer 6 "p (numerator of frequency)" 1)
+           fc (get_integer 6 "q (denominator of frequency)" 1)
+           n (/ (float fb) fc)
+           divcount (* divcount (/ fc (gcd fb fc)))
+           eq_display (strcat "\na=" (rtos fa 2 4) ", p=" (itoa fb) ", q=" (itoa fc) ", " (itoa divcount) " segments needed to close")
+           xc '(* fa (/ (* (sin (* 2.0 (eval a2))) (expt (sin (/ (eval a2) 2.0)) 2)) (+ (* 2.0 (expt (cos (* n (eval a2))) 3)) (* -2.0 (cos (* n (eval a2)))) 1.0)))
+           yc '(* (- fa) (/ (expt (cos (* n (eval a2))) 3) (+ (* 2.0 (expt (cos (* n (eval a2))) 3)) (* -2.0 (cos (* n (eval a2)))) 1.0)))))
+    ((eq kw 3)
+     (princ "\nx=a·sin(2·(p/q)·t)·sin²((p/q)·t/2)/[2·cos³((p/q)·t)-2·cos((p/q)·t)+1], y=-a·cos³(t)/[2·cos³((p/q)·t)-2·cos((p/q)·t)+1]")
+     (setq fa (get_real 6 "a (overall scale)" 1.0)
+           fb (get_integer 6 "p (numerator of frequency)" 1)
+           fc (get_integer 6 "q (denominator of frequency)" 1)
+           n (/ (float fb) fc)
+           divcount (* divcount (/ fc (gcd fb fc)))
+           eq_display (strcat "\na=" (rtos fa 2 4) ", p=" (itoa fb) ", q=" (itoa fc) ", " (itoa divcount) " segments needed to close")
+           xc '(* fa (/ (* (sin (* 2.0 n (eval a2))) (expt (sin (/ (* n (eval a2)) 2.0)) 2)) (+ (* 2.0 (expt (cos (* n (eval a2))) 3)) (* -2.0 (cos (* n (eval a2)))) 1.0)))
+           yc '(* (- fa) (/ (expt (cos (eval a2)) 3) (+ (* 2.0 (expt (cos (* n (eval a2))) 3)) (* -2.0 (cos (* n (eval a2)))) 1.0))))))
+  (setq skm '(T T T)
+        a1 0.0
+        a2 a1
+        x1 (eval xc)
+        y1 (eval yc)
+        a2 '(+ a1 paramstep)
+        x2 '(eval xc)
+        y2 '(eval yc))
+  (cc))
+(C:SEXTIC)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>
