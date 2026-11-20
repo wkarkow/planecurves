@@ -328,11 +328,11 @@ const curveList = [
     id: "bean-curve",
     title: "Bean Curve",
     filename: "Bean.html",
-    aliases: ["Cundy–Rollett Bean Curve", "Lima Bean Curve", "Wassenaar Bean Curve"],
+    aliases: ["Cundy–Rollett Bean Curve", "Lima Bean Curve", "Wassenaar Bean Curve", "Egg Curve"],
     eqSortKey: "017",
     done: true,
-    imgCount: 18,
-    equation: "x^{4} + x^{2} y^{2} + y^{4} = a x (x^{2} + y^{2}), \\quad r = \\frac{a \\cos(\\theta)}{\\cos^{4}(\\theta) + \\sin^{4}(\\theta) + \\cos^{2}(\\theta) \\cdot \\sin^{2}(\\theta)}, \\quad (x^{2} + y^{2})^{2} = a (x^{3} + y^{3}), \\quad r = \\sin^{3}(\\theta) + \\cos^{3}(\\theta), \\quad r = \\sin^{a}(\\theta) + \\cos^{b}(\\theta) ",
+    imgCount: 37,
+    equation: "x^{4} + x^{2} y^{2} + y^{4} = a x (x^{2} + y^{2}), \\quad r = \\dfrac{a \\cos(\\theta)}{\\cos^{4}(\\theta) + \\sin^{4}(\\theta) + \\cos^{2}(\\theta) \\cdot \\sin^{2}(\\theta)}, \\quad (x^{2} + y^{2})^{2} = a (x^{3} + y^{3}), \\\\ r = \\sin^{3}(\\theta) + \\cos^{3}(\\theta), \\quad r = \\sin^{a}(\\theta) + \\cos^{b}(\\theta), \\quad r = a\\cdot\\cos \\theta (2 - \\cos 2\\theta), \\quad r = a\\cdot\\cos \\theta (b - \\cos c\\theta)",
     eqFind: ["x^2", "x^3", "x^4", "y^2", "y^3", "y^4", "r=", "r =", "theta"],
     imgSortKey: "017",
     images: {
@@ -949,6 +949,23 @@ const curveList = [
     }
   },
   {
+    id: "circular-asymptotic-spiral",
+    title: "Circular Asymptotic Spiral",
+    filename: "AsympCircle.html",
+    aliases: [],
+    eqSortKey: "051.5",
+    done: true,
+    imgCount: 18,
+    equation: "r = \\dfrac{a \\cdot t + b}{t - c}",
+    eqFind: ["r=", "r ="],
+    imgSortKey: "051.5",
+    images: {
+      canonical: "Images/AsympCircle/AsympCircle01-360.avif",
+      variant1: "Images/AsympCircle/AsympCircle08-360.avif",
+      variant2: "Images/AsympCircle/AsympCircle12-360.avif"
+    }
+  },
+  {
     id: "circular-radial-sextic-curve",
     title: "Circular Radial Sextic Curve",
     filename: "CircRadialSextic.html",
@@ -1353,11 +1370,28 @@ const curveList = [
     imgCount: 15,
     equation: "x = \\frac{a}{k}\\int_0^t \\cos\\Bigl(u + \\frac{1-\\cos u}{k}\\Bigr)\,du, y = \\frac{a}{k}\\int_0^t \\sin\\Bigl(u + \\frac{1-\\cos u}{k}\\Bigr)\\,du, \\quad x = \\frac{a}{k}\\int_0^t \\cos\\Bigl(\\frac{1-\\cos u}{k}\\Bigr)\\cos u\\,du, y = \\frac{a}{k}\\int_0^t \\sin\\Bigl(\\frac{1-\\cos u}{k}\\Bigr)\\cos u\\,du",
     eqFind: ["y=", "y =", "x=", "x =", "int", "cos", "sin"],
-    imgSortKey: "73.6",
+    imgSortKey: "73.5",
     images: {
       canonical: "Images/Gyration/Gyration01-360.avif",
       variant1: "Images/Gyration/Gyration02-360.avif",
       variant2: "Images/Gyration/Gyration04-360.avif"  
+    }
+  },
+  {
+    id: "cyclic-polygons",
+    title: "Cyclic Polygons",
+    filename: "CyclicPolygon.html",
+    aliases: ["Regular Polygon Sequence"],
+    eqSortKey: "073.6",
+    done: true,
+    imgCount: 6,
+    equation: "R = \\dfrac{r}{\\cos(\\pi/n)}, \\quad r = R \\cdot \\cos(\\pi/n), \\quad R_N = r_0 \\prod_{n=3}^{N} \\dfrac{1}{\\cos(\\pi/n)}, \\quad r_N = R_0 \\prod_{n=3}^{N} \\cos(\\pi/n), \\quad \\prod_{n=3}^{\\infty} \\dfrac{1}{\\cos(\\pi/n)} \\approx 8.7000366252\\ldots, \\quad \\prod_{n=3}^{\\infty} \\cos(\\pi/n) \\approx 0.1149420448\\ldots",
+    eqFind: ["cos", "r=", "r =","prod"],
+    imgSortKey: "073.6",
+    images: {
+      canonical: "Images/CyclicPolygon/CyclicPolygon01-360.avif",
+      variant1: "Images/CyclicPolygon/CyclicPolygon03-360.avif",
+      variant2: "Images/CyclicPolygon/CyclicPolygon05-360.avif"
     }
   },
   {

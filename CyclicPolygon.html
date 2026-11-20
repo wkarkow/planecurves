@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyclic Polygon - Plane Curves with AutoCAD</title>
+  <link rel="stylesheet" href="_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <nav class="main-nav left-nav">
+        <a href="_Main.html">Home</a>
+        <a href="_CurveIndex.html">Curve Lookup</a>
+        <a href="_AliasIndex.html">Alias Lookup</a>
+      </nav>
+      <h2 class="site-title">
+        <a href="_Main.html">Plane Curves with AutoCAD</a>
+      </h2>
+      <nav class="main-nav right-nav">
+        <a href="_EquationIndex.html">Equation Lookup</a>
+        <a href="_ImageIndex.html">Image Lookup</a>
+      </nav>
+    </div>
+  </header>
+<main>
+
+  <section class="curve-header">
+    <div class="curve-nav">
+      <a href="#" class="prev-link">Previous curve</a>
+      <a href="#" class="next-link">Next curve</a>
+    </div>
+    <div class="curve-title-block">
+      <h1>Cyclic Polygon</h1>
+      <p class="short-description">Iterative sequence of regular polygons of increasing number of sides, either circumscribed about or inscribed in successive circles.</p>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <figure>
+      <img src="Images/CyclicPolygon/CyclicPolygon01-360.avif"
+           alt="Cyclic Polygon, initial r=1,n=3-50,circles on,circumsribed">
+      <figcaption>Cyclic Polygon, initial r=1,n=3-50,circles on,circumscribed</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicPolygon/CyclicPolygon02-360.avif"
+           alt="Cyclic Polygon, initial r=1,n=3-50, polygons only,circumscribed">
+      <figcaption>Cyclic Polygon, initial r=1,n=3-50, polygons only,circumscribed</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicPolygon/CyclicPolygon03-360.avif"
+           alt="Cyclic Polygon, initial r=1,n=3-50,circles on,inscribed">
+      <figcaption>Cyclic Polygon, initial r=1,n=3-50,circles on,inscribed</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicPolygon/CyclicPolygon04-360.avif"
+           alt="Cyclic Polygon, initial r=1,n=3-50, polygons only,inscribed">
+      <figcaption>Cyclic Polygon, initial r=1,n=3-50, polygons only,inscribed</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicPolygon/CyclicPolygon05-360.avif"
+           alt="Cyclic Polygon, initial r=1,n=3-50,circles on,both">
+      <figcaption>Cyclic Polygon, initial r=1,n=3-50,circles on,both</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/CyclicPolygon/CyclicPolygon06-360.avif"
+           alt="Cyclic Polygon, initial r=1,n=3-50, polygons only,both">
+      <figcaption>Cyclic Polygon, initial r=1,n=3-50, polygons only,both</figcaption>
+    </figure>
+  </section>
+
+  <section class="equation-ribbon" style="--label-min-width: 280px;">
+    <div class="equation-line">
+      <div class="equation-label">Radius ratio (circumscribed):</div>
+      \[ R = \dfrac{r}{\cos(\pi/n)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Radius ratio (inscribed):</div>
+      \[ r = R \cdot \cos(\pi/n) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Successive radius (circumscribed):</div>
+      \[ R_N = r_0 \prod_{n=3}^{N} \dfrac{1}{\cos(\pi/n)} \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Successive radius (inscribed):</div>
+      \[ r_N = R_0 \prod_{n=3}^{N} \cos(\pi/n) \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Polygon circumscribing constant:</div>
+      \[ \prod_{n=3}^{\infty} \dfrac{1}{\cos(\pi/n)} \approx 8.7000366252\ldots \]
+    </div>
+    <div class="equation-line">
+      <div class="equation-label">Kepler–Bouwkamp constant:</div>
+      \[ \prod_{n=3}^{\infty} \cos(\pi/n) \approx 0.1149420448\ldots \]
+    </div>
+  </section>
+
+  <section>
+    <h2>History and Applications</h2>
+    <p>Two dual constructions are available. In the circumscribed sequence a circle of given radius is drawn and a regular triangle is circumscribed about it so that each side is tangent to the circle. The circumcircle of that triangle is then drawn, a regular square is circumscribed about the new circle, its circumcircle is drawn, a regular pentagon is circumscribed about that, and so on.<sup>1</sup> The circumradius of each successive regular \(n\)-gon is the previous radius divided by \(\cos(\pi/n)\). The sequence of radii converges to the polygon circumscribing constant, approximately 8.7000366252 times the initial radius (OEIS A051762).<sup>2</sup> In the inscribed sequence a regular triangle is inscribed in the initial circle (vertices on the circle). The incircle of that triangle is drawn, a square is inscribed in the new circle, its incircle is drawn, a pentagon is inscribed, and so on. The inradius of each successive polygon is the previous radius multiplied by \(\cos(\pi/n)\). The sequence converges to the Kepler–Bouwkamp constant, approximately 0.1149420448 times the initial radius (OEIS A085365).<sup>3</sup> All figures remain concentric in both sequences.</p>
+    <p>Christoffel Bouwkamp computed the infinite product and derived accelerated series involving the Riemann zeta function in 1965.<sup>4</sup> An earlier popular estimate of roughly 12 for the reciprocal appeared in Kasner and Newman’s <i>Mathematics and the Imagination</i> and was later corrected.<sup>5</sup> Johannes Kepler’s 1596 <i>Mysterium Cosmographicum</i> nested regular polyhedra between planetary spheres; the two-dimensional polygonal nesting is related only by analogy and by the later naming of the constant. The irrationality of the constant remains open.<sup>3</sup></p>
+    <p>The construction is a mathematical curiosity that illustrates the convergence of an infinite product and the successive approximation of a circle by regular polygons of increasing side count. It has no documented applications peculiar to engineering or the natural sciences beyond general uses of regular polygons and circles in design, approximation, and visualization of geometric iteration. Related iterative nestings appear in the literature on nested polygons; see the <a href="Whirl.html">Whirl curve</a>.</p>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://en.wikipedia.org/wiki/Concyclic_points" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Concyclic_points</a> (Polygon circumscribing constant section and construction).</li>
+      <li><a href="https://mathworld.wolfram.com/PolygonCircumscribing.html" target="_blank" rel="noopener noreferrer">https://mathworld.wolfram.com/PolygonCircumscribing.html</a> (definition, constant, Bouwkamp formulas).</li>
+      <li><a href="https://en.wikipedia.org/wiki/Kepler%E2%80%93Bouwkamp_constant" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Kepler–Bouwkamp_constant</a> (reciprocal constant, naming, open irrationality).</li>
+      <li>Bouwkamp, C. J. (1965). “An Infinite Product.” <i>Indagationes Mathematicae</i> 27, 40–46.</li>
+      <li>Kasner, E. and Newman, J. R. <i>Mathematics and the Imagination</i>. (incorrect estimate noted by Pickover and others).</li>
+    </ol>
+  </section>
+
+<section class="code-ribbon">
+  <h2>AutoLISP Code</h2>
+<pre><code>(defun C:CYCLICPOLYGON (/ fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw)
+  (defun m_p (a b c d e f g / h i j k l)
+    (setq l nil h 0)
+    (while (< h c)
+      (setq i (+ b (* h (/ (* 2.0 pi) c)))
+            j (* a (cos i))
+            k (* a (sin i))
+            l (cons (list (+ d (* j f) (- (* k g))) (+ e (* k f) (* j g))) l)
+            h (1+ h)))
+    (setq l (reverse l))
+    (entmake (append (list '(0 . "LWPOLYLINE") '(100 . "AcDbEntity") '(67 . 0) '(410 . "Model")
+                           (cons 8 (getvar "clayer")) '(62 . 256) '(100 . "AcDbPolyline")
+                           (cons 90 c) '(70 . 1) '(43 . 0.0) '(38 . 0.0) '(39 . 0.0))
+                     (mapcar '(lambda (p) (cons 10 p)) l)
+                     '((210 0.0 0.0 1.0)))))
+  (defun m_c (a b c / )
+    (entmake (list '(0 . "CIRCLE") '(100 . "AcDbEntity") '(67 . 0) '(410 . "Model")
+                   (cons 8 (getvar "clayer")) '(62 . 256) '(100 . "AcDbCircle")
+                   (cons 10 (list b c 0.0)) (cons 40 a) '(210 0.0 0.0 1.0))))
+  (setq fv (get_point 0 "Cyclic Polygon: Center" '(0.0 0.0) nil)
+        fw (get_angle 0 "X-axis angle (degrees)" 0.0 fv)
+        fa (cos fw)
+        fb (sin fw)
+        fc (car fv)
+        fd (cadr fv)
+        fo (get_keyword 0 "Circumscribed Inscribed" "Circumscribed or Inscribed sequence?" "Circumscribed")
+        fe (get_real 2 "Initial circle radius" 1.0)
+        ff (get_integer 6 "Initial maximum number of sides n (>=3)" 8)
+        fg (get_keyword 0 "Yes No" "Draw intermediate circles?" "Yes")
+        fh (get_real 2 "Starting angle offset for polygons (degrees)" 0.0)
+        fi (/ (* fh pi) 180.0))
+  (if (< ff 3) (setq ff 3))
+  (setq fj fe
+        fk 3)
+  (princ (strcat "\nCyclic Polygon " fo " sequence: start r=" (rtos fe 2 4) ", initial max n=" (itoa ff)))
+  (if (eq fg "Yes") (m_c fj fc fd))
+  (if (eq fo "Circumscribed")
+    (progn
+      (while (<= fk ff)
+        (setq fl (/ pi fk)
+              fm (cos fl)
+              fn (/ fj fm))
+        (m_p fn fi fk fc fd fa fb)
+        (setq fj fn)
+        (if (eq fg "Yes") (m_c fj fc fd))
+        (princ (strcat "\n  n=" (itoa fk) ", R=" (rtos fn 2 6)))
+        (setq fk (1+ fk)))
+      (setq ft T)
+      (while ft
+        (setq fu (get_integer 4 "Additional polygons to add (0=quit)" 0))
+        (if (<= fu 0)
+          (setq ft nil)
+          (progn
+            (repeat fu
+              (setq fl (/ pi fk)
+                    fm (cos fl)
+                    fn (/ fj fm))
+              (m_p fn fi fk fc fd fa fb)
+              (setq fj fn)
+              (if (eq fg "Yes") (m_c fj fc fd))
+              (princ (strcat "\n  n=" (itoa fk) ", R=" (rtos fn 2 6)))
+              (setq fk (1+ fk))))))
+      (princ (strcat "\nFinal radius ≈ " (rtos fj 2 6) " (limit ≈ " (rtos (* fe 8.700036625) 2 6) ")")))
+    (progn
+      (while (<= fk ff)
+        (setq fl (/ pi fk)
+              fm (cos fl)
+              fn (* fj fm))
+        (m_p fj fi fk fc fd fa fb)
+        (setq fj fn)
+        (if (eq fg "Yes") (m_c fj fc fd))
+        (princ (strcat "\n  n=" (itoa fk) ", r=" (rtos fn 2 6)))
+        (setq fk (1+ fk)))
+      (setq ft T)
+      (while ft
+        (setq fu (get_integer 4 "Additional polygons to add (0=quit)" 0))
+        (if (<= fu 0)
+          (setq ft nil)
+          (progn
+            (repeat fu
+              (setq fl (/ pi fk)
+                    fm (cos fl)
+                    fn (* fj fm))
+              (m_p fj fi fk fc fd fa fb)
+              (setq fj fn)
+              (if (eq fg "Yes") (m_c fj fc fd))
+              (princ (strcat "\n  n=" (itoa fk) ", r=" (rtos fn 2 6)))
+              (setq fk (1+ fk))))))
+      (princ (strcat "\nFinal radius ≈ " (rtos fj 2 6) " (limit ≈ " (rtos (* fe 0.114942045) 2 6) ")"))))
+  (princ))
+(C:CYCLICPOLYGON)</code></pre>
+</section>
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div id="imageModal" class="modal">
+  <span class="close-button">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Large view of curve">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+</div>
+<!-- ==================== END MODAL ==================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ]
+    });
+  });
+</script>
+<script src="_Curve-list.js"></script>
+<script src="_Curve-nav.js"></script>
+<script src="_Modal.js"></script>
+</body>
+</html>
